@@ -1,0 +1,10 @@
+﻿l_english:
+ ###########
+ ##PARTIES##
+ ###########
+ BLZ_social_democracy_party:0 "PDP"
+ BLZ_social_democracy_party_long:0 "People's Democratic Party"
+ BLZ_liberal_democracy_party:0 "CDP"
+ BLZ_liberal_democracy_party_long:0 "Christian Democratic Party"
+ BLZ_conservative_democracy_party:0 "NIP"
+ BLZ_conservative_democracy_party_long:0 "National Independence Party"

@@ -1,0 +1,45 @@
+﻿l_english:
+
+ ## Country Names ##
+ FRD_fascism:0 "French State"
+ FRD_fascism_DEF:0 "French State"
+ FRD_liberal_democracy:0 "French Republic"
+ FRD_liberal_democracy_DEF:0 "The French Republic"
+ FRD_conservative_democracy:0 "French Republic"
+ FRD_conservative_democracy_DEF:0 "The French Republic"
+ FRD_authoritarian_democracy:0 "French Republic"
+ FRD_authoritarian_democracy_DEF:0 "The French Republic"
+ FRD_despotism:0 "French State"
+ FRD_despotism_DEF:0 "The French State"
+ FRD_communist:0 "French Resistance"
+ FRD_communist_DEF:0 "The French Resistance"
+ FRD_socialist:0 "French Resistance"
+ FRD_socialist_DEF:0 "The French Resistance"
+ FRD_ultranationalism:0 "French State"
+ FRD_ultranationalism_DEF:0 "The French State"
+ FRD_ultranationalism_ADJ:0 "French Resistance"
+ FRD_fascism_ADJ:0 "French Resistance"
+ FRD_liberal_democracy_ADJ:0 "French Resistance"
+ FRD_conservative_democracy_ADJ:0 "French Resistance"
+ FRD_authoritarian_democracy_ADJ:0 "French Resistance"
+ FRD_despotism_ADJ:0 "French Resistance"
+ FRD_communist_ADJ:0 "French Resistance"
+ 
+ ## Party Names ##
+
+ ## Ministers ##
+
+ ## Ideas ##
+ 
+ ## Factions ##
+ 
+ ## Decisions ##
+ 
+ ## Tooltips ##
+ 
+ ## Leader Bios ##
+
+ ## Focus Tree ##
+
+ ## Events ##
+ 

@@ -1,0 +1,56 @@
+﻿l_english:
+ ### Party Names ###
+ GOR_communist_party: "Gorkovskiy Sovet"
+ GOR_communist_party_long: "Gorkovskiy Sovet"
+ GOR_socialist_party: "Klika Zhukova"
+ GOR_socialist_party_long: "Klika Zhukova"
+ GOR_social_democracy_party: "DSNP"
+ GOR_social_democracy_party_long: "Demokraticheskaya Sotsialisticheskaya Narodnaya Partiya"
+ GOR_liberal_democracy_party: "Industrialisty"
+ GOR_liberal_democracy_party_long: "Industrialisty"
+ GOR_conservative_democracy_party: "Demokraticheskiy Vybor Rossii"
+ GOR_conservative_democracy_party_long: "Demokraticheskiy Vybor Rossii"
+ GOR_authoritarian_democracy_party: "Industrialisty"
+ GOR_authoritarian_democracy_party_long: "Industrialisty"
+ GOR_fascism_party: "KONR"
+ GOR_fascism_party_long: "Komitet Osvobozhdeniya Narodov Rossii"
+ GOR_despotism_party: "KGT"
+ GOR_despotism_party_long: "Klika Gorkovskih Tankistov"
+ GOR_national_socialism_party: "RNSD"
+ GOR_national_socialism_party_long: "Rossiskoye Natsional Sotsialisticheskoye Dvizheniye"
+ GOR_ultranationalism_party: "Passionariyy-Evraziytsy"
+ GOR_ultranationalism_party_long: "Passionariyy-Evraziytsy"
+ 
+ ### Leader Bios ###
+ POLITICS_NIKOLAI_AVERIN_DESC: "Know, oh listener, that after the fall of the Soviet Union and its armies, as the lands of Russia trembled under the German might, there was an age undreamed of, when warring states lay spread across Russia like blue mantles beneath the stars - Vologda, Onega, Arkhangelsk, Komi with its fledgling democracy and its struggling paramilitaries, Samara with its collaborators guarded by Germans. But the proudest state of all was Moskowien, reigning supreme over the Russian West. Hither came Nikolay Stepanovich Averin, from Gorky, black-hearted, sullen-eyed, gun in hand, a thief, a reaver, a slayer, with gigantic ambitions and gigantic mirth, to overwhelm the Nazi garrisons of Moskowien under the treads of his tanks.\n\nThe master of terror in Western Russia, Averin first became infamous among the Germans in the time of the West Russian War, as he led the fiercest tank army under Voroshilov's command. In the chaotic days following the conflict, Averin gathered the bulk of what was left of the Russian armored forces for a last stand near Gorky, where he repelled the assaulting Wehrmacht to allow the remaining Russian troops to retreat safely. After the collapse of the West Russian Revolutionary Front, Gorky was left standing, and Averin stood with her.\n\nOver the years, Averin's tank fleet has been both his greatest strength and his greatest weakness. To keep it operational, he soon had to resort to large scale raids into German territory, reaping from the vast and overstretched territories of the German settlers all the fuel, parts and prisoners he needed to keep his army operational. Soon, Averin started to enjoy his new life as a raider, and soon all ideological pretense was lost - the only thing Averin cares about now is to crush the Germans, see them driven before him, and hear the lamentations of their women!"
+ 
+ POLITICS_MIKHAIL_KATUKOV_DESC: "Mikhail Yefimovich Katukov is a deservingly proud Soviet soldier. A loyal Soviet soldier, not a match for bandit traitors with who he once served along. A distinguished tank officer since the days of the Great Patriotic War, he first made his fame in the inglorious and tragic 1941, when he managed to hold the onslaught of the German Panzer divisions under Tula, greatly impressing Heinz Guderian, the general who commanded them. The will of one man was not enough to save the Union from the tread of the Fascist beast, but even in the wake of the Soviet defeat, Katukov refused to surrender.\n\nAlong with General Averin, he spearheaded the tank wedges of the Red Army during the West Russian War, successfully driving the occupiers out of the Gorky Oblast, but his great victories were to no avail, as his divisions were cut off from the military government in Arkhangelsk by reactionary insurgent forces and his men found themselves isolated in the newly reclaimed city. While the rest of the forces stationed in Gorky under Averin found their new calling in piracy and debauchery, Katukov and his men abstained from their activities, waiting for their opportunity to come.\n\nOnly when the bandit warlords were forced to succumb to the whims of the begotten urban bourgeoisie of Gorky, the aged Soviet general saw his last chance to serve the Soviet Union. Bringing with himself every loyalist he could gather, Katukov dealt a swift blow against the weak and capitalist government, raising the Soviet banner over Gorky once again. And this time, the sacred Red Banner will not fall to the enemy, nor it will be disgraced by the crimes against the Soviet people, as long as the faithful sons of the Motherland will not perish."
+
+ POLITICS_ONEGA_KONSTANTIN_KATUSHEV_DESC: "Much like most people in the city, the life of Konstantin Fedorovich Katushev was definitively shaped by the Gorky Automobile Plant. Even in his childhood, he lived near the factory, while his father had worked there for almost his entire life. No one was surprised when Konstantin grew up to become a leading engineer of GAZ, designing and perfecting plans for new and better vehicles.\n\nTruth be told, he was never satisfied with who he worked for. The warmongering tank pirates of Gorky were no fit for a quiet and intelligent man like Katushev, and neither were the new rulers of the city.\n\nHowever, the Northern Russian Republic proved to be the perfect match: combining the newly found stability with the capabilities of GAZ, Katushev now proudly runs not only the factory, but the entire city, bringing many profits to the Republic, and achieving his life's dream."
+ 
+ ### Ideas ###
+ GOR_armor_expertise: "Armor Expertise"
+ GOR_armor_expertise_desc: "We are in possession of the fabled Automotive Plant of Gorky, where the Old Union's tank fleet was being produced... at least before the Great Calamity, that is. Fortunately, enough tanks have survived to ensure our survival, at least for now. We must maintain our expertise in this field."
+ GOR_mobile_bandits: "Mobile Bandits"
+ GOR_mobile_bandits_desc: "Our unmatched expertise in armor production and maintenance gives us an advantage over all our competitors in the ruins of what was once Russia. No enemy, and no enemy supply line will be out of our armored units' reach."
+ GOR_mad_marxists: "Mad Marxists"
+ GOR_mad_marxists_desc: "With our ignoble leadership toppled, we will maintain our city's allegiance to the Soviet Union. It is bound to return, and when it will, our tank armies will be its spearhead towards the Liberation of the Motherland."
+ GOR_work_at_night_idea: "Work at Night"
+ 
+ ### Ministers ###
+ #Literal tankies
+ GOR_Nikolai_Averin_hog: "Nikolai Averin"
+ GOR_Alexander_Alexandrovich_Morozov_eco: "Alexander Morozov"
+ GOR_Pyotr_Norytsyin_for: "Pyotr Noritsyn"
+ GOR_Semyon_Krivoshein_sec: "Semyon Krivoshein"
+ #Post-Onega Collapse
+ GOR_Ivan_Kiselyov_hog: "Ivan Kiselyov"
+ GOR_Vasily_Semyonov_for: "Vasily Semyonov"
+ GOR_Gennady_Yanayev_eco: "Gennady Yanayev"
+ GOR_Anatoly_Burmistrov_sec: "Anatoly Burmistrov"
+
+ ### Focuses ###
+ 
+
+ ### Events ###
+ 

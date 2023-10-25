@@ -1,0 +1,31 @@
+﻿l_english:
+ ### Halloween zombie event rules
+ ZOMBIE_EASTEREGG_STATUS:0 "Halloween Event"
+ RULE_OPTION_DEFAULT_ZOMBIES:0 "Disabled"
+ RULE_OPTION_DEFAULT_ZOMBIES_DESC:0 "§GDisable the undead event.§!"
+ RULE_OPTION_ZOMBIES_ACTIVE:0 "§RBreak the Seal§!"
+ RULE_OPTION_ZOMBIES_ACTIVE_DESC:0 "§REnable the undead event.§!"
+
+### WW3 Chains Detente
+SUPERPOWER_TENSION_STATUS:0 "Superpower Tension"
+RULE_OPTION_TENSION_DEFAULT:0 "Normal"
+RULE_OPTION_TENSION_DEFAULT_DESC:0 "§WA player superpower and a player-led §YOrdensstaat Burgund§! can cause §RWorld War Three.§!§!"
+RULE_OPTION_TENSION_DISABLED:0 "WW3 Disabled"
+RULE_OPTION_TENSION_DISABLED_DESC:0 "§WSuperpower tension can never cause §RWorld War Three.§!§!"
+RULE_OPTION_TENSION_TENSION_FULLY_ENABLED:0 "WW3 Enabled"
+RULE_OPTION_TENSION_TENSION_FULLY_ENABLED_DESC:0 "§WThe AI can through tension cause §RWorld War Three.§!§!"
+
+#Burgundian Collapse
+BURGUNDY_COLLAPSE_STATUS:0 "AI Burgundian Collapse"
+BURGUNDY_COLLAPSE_DEFAULT:0 "Default"
+BURGUNDY_COLLAPSE_DEFAULT_DESC:0 "§W§YOrdensstaat Burgund§! will collapse in 1970 §Y50%§! of the time.§!"
+BURGUNDY_COLLAPSE_ENSURED:0 "Ensured"
+BURGUNDY_COLLAPSE_ENSURED_DESC:0 "§W§YOrdensstaat Burgund§! will collapse in 1970 §Yall the time.§!§!"
+BURGUNDY_COLLAPSE_DISABLED:0 "Disabled"
+BURGUNDY_COLLAPSE_DISABLED_DESC:0 "§W§YOrdensstaat Burgund§! will §Ynot§! collapse.§!"
+##SuperEvent silence##
+SuperMusic_status: "Mute Music on Superevent"
+RULE_OPTION_DEFAULT_SuperSilent: "Interrupt Music"
+RULE_OPTION_DEFAULT_SuperSilent_DESC: "§WThe current track will be interrupted every time a superevent is triggered.§!"
+RULE_OPTION_No_Silence: "Do Not Interrupt Music"
+RULE_OPTION_No_Silence_DESC: "§WThe current track will not be interrupted when a superevent is triggered. This setting is recommended if you play with game music paused.§!"

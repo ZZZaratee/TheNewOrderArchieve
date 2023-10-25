@@ -1,0 +1,31 @@
+﻿l_english:
+ ## Country Names ##
+ SLF_authoritarian_democracy:0 "South African Liberation Front"
+ SLF_authoritarian_democracy_DEF:0 "The South African Liberation Front"
+ SLF_authoritarian_democracy_ADJ:0 "South African"
+
+ SLF_FEDERATION_authoritarian_democracy:0 "South African Federation"
+ SLF_FEDERATION_authoritarian_democracy_DEF:0 "The South African Federation"
+ SLF_FEDERATION_authoritarian_democracy_ADJ:0 "South African"
+ 
+ ####Party Names#####
+
+ SLF_authoritarian_democracy_party:0 "AuthDem Party"
+ SLF_authoritarian_democracy_party_long:0 "AuthDem Party"
+
+ ## Ministers ##
+ 
+ ## Ideas ##
+ 
+ SLF_lessons_first_civil_war:0 "Lessons of the First Civil War"
+ SLF_governmental_rivalries:0 "Governmental Rivalries"
+
+ ## Decisions ##
+ 
+ ## Tooltips ##
+ 
+ ## Focus Tree ##
+ 
+ ## Events ##
+
+ 

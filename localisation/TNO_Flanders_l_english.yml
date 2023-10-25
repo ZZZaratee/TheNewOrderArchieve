@@ -1,0 +1,68 @@
+﻿l_english:
+
+ ## Country Names ##
+ FLR_fascism:0 "Flemish State"
+ FLR_fascism_DEF:0 "Flemish State"
+ FLR_liberal_democracy:0 "Republic of Flanders"
+ FLR_liberal_democracy_DEF:0 "The Republic of Flanders"
+ FLR_conservative_democracy:0 "Republic of Flanders"
+ FLR_conservative_democracy_DEF:0 "The Republic of Flanders"
+ FLR_authoritarian_democracy:0 "Republic of Flanders"
+ FLR_authoritarian_democracy_DEF:0 "The Republic of Flanders"
+ FLR_despotism:0 "Duchy of Flanders"
+ FLR_despotism_DEF:0 "The Duchy of Flanders"
+ FLR_communist:0 "Revolutionary Flanders"
+ FLR_communist_DEF:0 "Revolutionary Flanders"
+ FLR_socialist:0 "Revolutionary Flanders"
+ FLR_socialist_DEF:0 "Revolutionary Flanders"
+ FLR_ultranationalism:0 "Vlaamse Nationale Staat"
+ FLR_ultranationalism_DEF:0 "Vlaamse Nationale Staat"
+ FLR_ultranationalism_ADJ:0 "Flemish"
+ FLR_esoteric_nazism:0 "SS-Ordensstaat Flandern"
+ FLR_esoteric_nazism_DEF:0 "SS-Ordensstaat Flandern"
+ FLR_esoteric_nazism_ADJ:0 "Flemish"
+ FLR_fascism_ADJ:0 "Flemish"
+ FLR_liberal_democracy_ADJ:0 "Flemish"
+ FLR_conservative_democracy_ADJ:0 "Flemish"
+ FLR_authoritarian_democracy_ADJ:0 "Flemish"
+ FLR_despotism_ADJ:0 "Flemish"
+ FLR_communist_ADJ:0 "Flemish"
+ 
+ ## Party Names ##
+
+ FLR_ultranationalism_party:0 "SS Langemarck"
+ FLR_ultranationalism_party_long:0 "SS Langemarck Division"
+ FLR_communist_party:0 "KP"
+ FLR_communist_party_long:0 "Kommunistische Partij"
+ 
+ ## Ministers ##
+ FLR_Ward_Hermans_hog:0 "Ward Hermans"
+ FLR_Rene_Lagrou_for:0 "René Lagrou"
+ FLR_Albert_Luykx_eco:0 "Albert Luykx"
+ FLR_Jef_Francois_sec:0 "Jef François"
+ 
+ ### Leader Bios ###
+ POLITICS_BERT_ERIKSSON_DESC:0 "In Flanders fields, the Langemarck Division re-asserts their control over territories they had lost- and prepares to rejoin their Reichsführer.\n\nBert Eriksson is an anomaly in the SS in many ways. The youngest of the major figures in Burgundy today, Eriksson joined the SS as soon as he could, swiftly making his way through the ranks of the Langemarck Division. Even if the troubles of the 50's have blunted his once favorable views towards the economic side of things, he remains one of the most driven collaborators in Burgundy today- reliable, useful, and loyal.\n\nHowever, this loyalty is less driven by a personal liking of Himmler, nor even a particular attachment to the System that the Reichsführer endorses, but rather an intense dislike of his southern counterpart, Leon Degrelle. Eriksson knows that, should he be removed from his position of power, Degrelle and the Walloons will waste no time in seizing Flanders for themselves- something that he refuses to allow. As such, the leader of the Langemarck Division has used shadier methods to boost his division's strength, making under-the-table deals with Breton traders and falsifying resistance attacks to gain aid and strengthen his side.\n\nNow, with Heydrich's split and Degrelle seemingly wavering on the edge of outright treason, Eriksson sees his opportunity arise- and he has no intention of letting it slip away. Soon, he and his men shall join Himmler's forces in one final, crushing strike against Degrelle and his pack of dogs. Then, and only then, will Eriksson know that he has succeeded in keeping the Flemish way of life safe."
+ 
+ POLITICS_BERT_ERIKSSON_1972_DESC:0 "In Flanders fields, the Langemarck Division re-asserts their control over territories they had lost- and prepares for the final struggle.\n\nBert Eriksson is an anomaly in the SS in many ways. The youngest of the major figures in Burgundy today, Eriksson joined the SS as soon as he could, swiftly making his way through the ranks of the Langemarck Division. Even if the troubles of the 50's have blunted his once favorable views towards the economic side of things, he remains one of the most driven collaborators in Burgundy today- reliable, useful, and loyal.\n\nHowever, this loyalty is less driven by a personal liking of Himmler, nor even a particular attachment to the System that the Reichsführer endorses, but rather an intense dislike of his southern counterpart, Leon Degrelle. Eriksson knows that, should he be removed from his position of power, Degrelle and the Walloons will waste no time in seizing Flanders for themselves- something that he refuses to allow. As such, the leader of the Langemarck Division has used shadier methods to boost his division's strength, making under-the-table deals with Breton traders and falsifying resistance attacks to gain aid and strengthen his side.\n\nNow, with Burgundy's collapse and Degrelle coming out to war, Eriksson sees his opportunity arise- and he has no intention of letting it slip away. Soon, he and his men shall crush both Himmler's and Degrelle's pitiful forces in one final, crushing strike. Then, and only then, will Eriksson know that he has succeeded in keeping the Flemish way of life safe."
+
+ POLITICS_BERT_ERIKSSON_COLLAPSE_DESC:0 "In hindsight, Eriksson never would have aligned himself with Himmler. He accepted the Greater German ideal, but not the eradication of his Flemish heritage and identity. They were supposed to be one of the many Germanic peoples, standing side-by-side against international Jewry and its plutocratic-Bolshevik puppets. If not for the damned coup attempt, which forever sullied the glory of the SS, he could have found succor in the camp of Reichsmarschall Göring, or perhaps the militarist camps of distant Ostland. Too late now, though.\n\nDegrelle and de la Mazière have made their moves, and the French resistance has returned to haunt the SS. There is no hope for the Ordensstaat to survive, and Eriksson knows that his Walloon 'comrade' has designs on Flanders. As if that wasn't enough, Germany will doubtless be looking to reclaim its western conquests, and the Flemish themselves are not enamored of the Langemarck Division.\n\nBert Eriksson had better think of a plan quickly, lest he become a mere footnote in history."
+ 
+ ## Ideas ##
+ 
+ FLR_fearful_victory:0 "The Fearful Victory"
+ FLR_fearful_victory_desc:0 "The triumph over degenerated National Socialism was a welcome development to the Flemish SS - but not for long. Now that the final struggle is over, Eriksson has suddenly realized that Flanders is surrounded by prowling wolves, and feels very, very alone."
+ 
+ FLR_eyes_on_the_border:0 "Eyes on the Border"
+ FLR_eyes_on_the_border_desc:0 "Leon Degrelle makes no bones about his ambitions; he wants Belgium back together. The Walloon Legion is quite the force to be reckoned with, something Eriksson is acutely aware of. He has thus prepared his SS to defend Flanders at all costs."
+ 
+ ## Factions ##
+ 
+ ## Decisions ##
+ 
+ ## Tooltips ##
+ 
+ ## Focus Tree ##
+
+ ## Events ##
+ 

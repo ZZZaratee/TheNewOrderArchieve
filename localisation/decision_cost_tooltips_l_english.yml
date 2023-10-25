@@ -1,0 +1,99 @@
+﻿l_english:
+
+ decision_cost_3_cp: "£command_power §Y3§!"
+ decision_cost_3_cp_blocked: "£command_power §R3§!"
+
+ decision_cost_5_cp: "£command_power §Y5§!"
+ decision_cost_5_cp_blocked: "£command_power §R5§!"
+
+ decision_cost_10_cp: "£command_power §Y10§!"
+ decision_cost_10_cp_blocked: "£command_power §R10§!"
+
+ decision_cost_15_cp: "£command_power §Y15§!"
+ decision_cost_15_cp_blocked: "£command_power §R15§!"
+
+ decision_cost_20_cp: "£command_power §Y20§!"
+ decision_cost_20_cp_blocked: "£command_power §R20§!"
+ 
+ decision_cost_25_cp: "£command_power §Y25§!"
+ decision_cost_25_cp_blocked: "£command_power §R25§!"
+
+ decision_cost_30_cp: "£command_power §Y30§!"
+ decision_cost_30_cp_blocked: "£command_power §R30§!"
+
+ decision_cost_50_cp: "£command_power §Y50§!"
+ decision_cost_50_cp_blocked: "£command_power §R50§!"
+ 
+ decision_cost_5_cp_20_pp: "£command_power §Y5§! £political_power_texticon §Y20§!"
+ decision_cost_5_cp_20_pp_blocked: "£command_power §R5§! £political_power_texticon §R20§!"
+ 
+ decision_cost_5_cp_15_pp: "£command_power §Y5§! £political_power_texticon §Y15§!"
+ decision_cost_5_cp_15_pp_blocked: "£command_power §R5§! £political_power_texticon §R15§!"
+
+ decision_cost_10_cp_10_pp: "£command_power §Y10§! £political_power_texticon §Y10§!"
+ decision_cost_10_cp_10_pp_blocked: "£command_power §R10§! £political_power_texticon §R10§!"
+
+ decision_cost_10_cp_20_pp: "£command_power §Y10§! £political_power_texticon §Y20§!"
+ decision_cost_10_cp_20_pp_blocked: "£command_power §R10§! £political_power_texticon §R20§!"
+
+ decision_cost_10_cp_25_pp: "£command_power §Y10§! £political_power_texticon §Y25§!"
+ decision_cost_10_cp_25_pp_blocked: "£command_power §R10§! £political_power_texticon §R25§!"
+
+ decision_cost_10_cp_30_pp: "£command_power §Y10§! £political_power_texticon §Y30§!"
+ decision_cost_10_cp_30_pp_blocked: "£command_power §R10§! £political_power_texticon §R30§!"
+ 
+ decision_cost_15_cp_15_pp: "£command_power §Y15§! £political_power_texticon §Y15§!"
+ decision_cost_15_cp_15_pp_blocked: "£command_power §R15§! £political_power_texticon §R15§!"
+ 
+ decision_cost_15_cp_25_pp:"£command_power §Y15§! £political_power_texticon §Y25§!"
+ decision_cost_15_cp_25_pp_blocked: "£command_power §R15§! £political_power_texticon §R25§!"
+
+ decision_cost_15_cp_30_pp:"£command_power §Y15§! £political_power_texticon §Y30§!"
+ decision_cost_15_cp_30_pp_blocked: "£command_power §R15§! £political_power_texticon §R30§!"
+
+ decision_cost_15_cp_50_pp: "£command_power §Y15§! £political_power_texticon §Y50§!"
+ decision_cost_15_cp_50_pp_blocked: "£command_power §R15§! £political_power_texticon §R50§!"
+
+
+ decision_cost_20_cp_20_pp: "£command_power §Y20§! £political_power_texticon §Y20§!"
+ decision_cost_20_cp_20_pp_blocked: "£command_power §R20§! £political_power_texticon §R20§!"
+ 
+ decision_cost_20_cp_25_pp: "£command_power §Y20§! £political_power_texticon §Y25§!"
+ decision_cost_20_cp_25_pp_blocked: "£command_power §R20§! £political_power_texticon §R25§!"
+
+ decision_cost_20_cp_100_pp: "£command_power §Y20§! £political_power_texticon §Y100§!"
+ decision_cost_20_cp_100_pp_blocked: "£command_power §R20§! £political_power_texticon §R100§!"
+
+
+ decision_cost_30_cp_30_pp: "£command_power §Y30§! £political_power_texticon §Y30§!"
+ decision_cost_30_cp_30_pp_blocked: "£command_power §R30§! £political_power_texticon §R30§!"
+
+ decision_cost_30_cp_40_pp: "£command_power §Y30§! £political_power_texticon §Y40§!"
+ decision_cost_30_cp_40_pp_blocked: "£command_power §R30§! £political_power_texticon §R40§!"
+
+ decision_cost_50_pp_25_cp: "£political_power_texticon §Y50§! £command_power §Y25§!"
+ decision_cost_50_pp_25_cp_blocked: "£political_power_texticon §R50§! £command_power §R25§!"
+ 
+ decision_cost_50_cp_25_pp: "£command_power §Y50§! £political_power_texticon §Y25§!"
+ decision_cost_50_cp_25_pp_blocked: "£command_power §R50§! £political_power_texticon §R25§!"
+
+ decision_cost_50_cp_50_pp: "£command_power §Y50§! £political_power_texticon §Y50§!"
+ decision_cost_50_cp_50_pp_blocked: "£command_power §R50§! £political_power_texticon §R50§!"
+
+ decision_cost_50_m_50_pp: "§Y$50M§! £political_power_texticon §Y50§!"
+ decision_cost_50_m_50_pp_blocked: "§R$50M§! £political_power_texticon §R50§!"
+
+ decision_cost_25_m_10_cp: "§Y$25M§! £command_power §Y10§!"
+ decision_cost_25_m_10_cp_blocked: "§R$25M§! £command_power §R10§!"
+
+ decision_cost_40_pp_10_m: "§Y$10M§! £political_power_texticon §Y40§!"
+ decision_cost_40_pp_10_m_blocked: "§R$10M§! £political_power_texticon §R40§!"
+
+ decision_cost_40_pp_150_m: "§Y$150M§! £political_power_texticon §Y40§!"
+ decision_cost_40_pp_150_m_blocked: "§R$150M§! £political_power_texticon §R40§!"
+
+ decision_cost_15_pp_10_m: "§Y$10M§! £political_power_texticon §Y15§!"
+ decision_cost_15_pp_10_m_blocked: "§R$10M§! £political_power_texticon §R15§!"
+
+ decision_cost_15_pp_25_m: "§Y$25M§! £political_power_texticon §Y15§!"
+ decision_cost_15_pp_25_m_blocked: "§R$25M§! £political_power_texticon §R15§!"

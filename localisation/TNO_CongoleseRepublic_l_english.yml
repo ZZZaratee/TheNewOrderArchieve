@@ -1,0 +1,37 @@
+﻿l_english:
+ ## Country Names ##
+ CFS_:0 "Congolese Republic"
+ CFS_DEF:0 "the Congolese Republic"
+ CFS_ADJ:0 "Congolese"
+ CFS_liberal_democracy:0 "Congolese Republic"
+ CFS_liberal_democracy_DEF:0 "the Congolese Republic"
+ CFS_liberal_democracy_ADJ:0 "Congolese"
+ CFS_conservative_democracy:0 "Congolese Republic"
+ CFS_conservative_democracy_DEF:0 "the Congolese Republic"
+ CFS_conservative_democracy_ADJ:0 "Congolese"
+ CFS_despotism:0 "Congo State"
+ CFS_despotism:0 "the Congo State"
+ CFS_despotism:0 "Congolese"
+ ####Party Names#####
+
+ CFS_liberal_democracy_party:0 "MNC"
+ CFS_liberal_democracy_party_long:0 "Mouvement National Congolais"
+
+ ## Ministers ##
+ 
+ CFS_Joseph_Okito_hog:0 "Joseph Okito"
+ CFS_Albert_Kalonji_for:0 "Albert Kalonji"
+ CFS_Godefroid_Munongo_eco:0 "Godefroid Munongo"
+ CFS_Victor_Lundula_sec:0 "Victor Lundula"
+
+ ## Ideas ##
+ 
+ ## Decisions ##
+ 
+ ## Tooltips ##
+ 
+ ## Focus Tree ##
+ 
+ ## Events ##
+
+ 
