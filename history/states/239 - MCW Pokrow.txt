@@ -1,0 +1,25 @@
+
+state={
+	id=239
+	name="STATE_239"
+
+	history={
+		owner = MCW
+		victory_points = { 11523 10 }
+		victory_points = { 326 5 }
+		buildings = {
+			infrastructure = 5
+			air_base = 4
+
+		}
+		add_core_of = MCW
+
+	}
+
+	provinces={
+		326 353 483 499 3316 3343 3372 3477 3490 3551 6366 6574 6601 9432 9577 11308 11421 11460 11523 13286 13292 13296 
+	}
+	manpower=1646231
+	buildings_max_level_factor=1.000
+	state_category=town
+}

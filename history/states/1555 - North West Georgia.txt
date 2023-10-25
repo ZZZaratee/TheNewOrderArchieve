@@ -1,0 +1,25 @@
+###POP DONE 
+state={
+	id=1555
+	name="STATE_1555"
+
+	history={
+		owner = CAU
+		victory_points = { 9626 1 }
+		buildings = {
+			infrastructure = 3
+
+		}
+		
+		add_core_of = GEO
+		add_core_of = CAU
+
+	}
+
+	provinces={
+		654 672 9626
+	}
+	manpower=2102800
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

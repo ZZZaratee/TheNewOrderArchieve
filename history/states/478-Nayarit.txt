@@ -1,0 +1,30 @@
+
+state={
+	id=478
+	name="STATE_478" # Nayarit
+	manpower = 197189
+	
+	state_category = rural
+	
+	resources={
+		tungsten=6
+	}
+
+	history={
+		owner = MEX
+		victory_points = { 12873 5 }
+		buildings = {
+			infrastructure = 3
+			radar_station = 1
+			barracks = 2
+			prisons = 1
+		}
+		add_core_of = MEX
+
+	}
+
+	provinces={
+		12873 
+	}
+	
+}

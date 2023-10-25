@@ -1,0 +1,152 @@
+﻿##Leftovers
+
+add_namespace = BRT
+
+country_event = { #Célestin Lainé
+	id = BRT.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRT.15"}
+	title = BRT.15.t
+	desc = BRT.15.desc
+	picture = GFX_report_event_brittany_flag
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = BRT.15.a
+		ai_chance = { factor = 100 }
+
+		kill_country_leader = yes
+
+		hidden_effect = {
+			create_country_leader = {
+				name = "Célestin Lainé"
+				desc = "POLITICS_CELESTIN_LAINE_DESC"
+				picture = "Portrait_Brittany_Celestin_Laine.dds"
+				expire = "1994.4.20"
+				ideology = national_socialism_subtype
+				traits = {
+					dictator
+					terrorizer
+					the_merchant_of_death
+				}
+			}
+		}
+
+		set_politics = {
+			ruling_party = national_socialism
+		}
+
+		hidden_effect = {
+		#remove_ideas = BRT_Celestin_Laine_sec
+			add_ideas = BRT_Yann_Goulet_sec
+			add_ideas = BRT_Herve_Le_Boterf_eco
+			add_ideas = BRT_Alain_Guel_for
+			add_ideas = BRT_Celestin_Laine_hog
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "No Leadership"
+				desc = "POLITICS_RAYMOND_DELAPORTE_DESC"
+				picture = "Portrait_Brittany_Raymond_Delaporte.dds"
+				expire = "1986.10.12"
+				ideology = fascism_subtype
+				traits = {
+
+				}
+			}
+		}
+		clr_country_flag = BRT_mordrel_in_charge
+		clr_country_flag = BRT_SAV_exists
+		set_country_flag = BRT_laine_in_charge
+		custom_effect_tooltip = BRT_laine_gov_change
+		hidden_effect = {
+			create_country_leader = {
+				name = "No Leadership"
+				desc = "POLITICS_RAYMOND_DELAPORTE_DESC"
+				picture = "Portrait_Brittany_Raymond_Delaporte.dds"
+				expire = "1986.10.12"
+				ideology = fascism_subtype
+				traits = {
+
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Delaporte
+	id = BRT.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRT.14"}
+	title = BRT.14.t
+	desc = BRT.14.desc
+	picture = GFX_report_event_brittany_flag
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = BRT.14.a
+		ai_chance = { factor = 100 }
+
+		retire_country_leader = yes
+
+		hidden_effect = {
+			create_country_leader = {
+				name = "Raymond Delaporte"
+				desc = "POLITICS_RAYMOND_DELAPORTE_DESC"
+				picture = "Portrait_Brittany_Raymond_Delaporte.dds"
+				expire = "1994.4.20"
+				ideology = authoritarian_democracy_subtype
+				traits = {
+					democratic_reformer
+					ideological_crusader
+				}
+			}
+		}
+
+		set_politics = {
+			ruling_party = authoritarian_democracy
+		}
+
+		hidden_effect = {
+			#remove_ideas = BRT_Francois_Debeauvais_hog
+			add_ideas = BRT_Yann_Fouere_the_second_hog
+			#remove_ideas = BRT_Yann_Fouere_for
+			add_ideas = BRT_Edouard_Queau_for
+			#remove_ideas = BRT_Yann_Bricler_eco
+			add_ideas = BRT_Loeiz_Andouard_eco
+		}
+		clr_country_flag = BRT_mordrel_in_charge
+		clr_country_flag = BRT_SBB_exists
+		set_country_flag = BRT_delaporte_in_charge
+		set_country_flag = BRT_black_market_lockdown
+		custom_effect_tooltip = BRT_delaporte_gov_change
+	}
+}
+
+country_event = { #Brittany asks for membership in OFN
+	id = BRT.74
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRT.74"}
+	title = BRT.74.t
+	desc = BRT.74.desc
+	picture = GFX_report_event_brittany_flag
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Ask other members
+		name = BRT.74.a
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			set_country_flag = BRT_ofn_delaporte_membership
+			set_variable = { OFN_candidate = BRT.id }
+			USA_OFN_start_vote_on_candidate = yes
+		}
+	}
+}

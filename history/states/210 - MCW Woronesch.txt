@@ -1,0 +1,25 @@
+
+state={
+	id=210
+	name="STATE_210"
+	resources = {
+		steel = 30
+	}
+	history={
+		owner = MCW
+		victory_points = { 413 15 }
+		buildings = {
+			infrastructure = 7
+
+		}
+		add_core_of = MCW
+
+	}
+
+	provinces={
+		413 3527 6477 9448 11396 11540 
+	}
+	manpower=1939433
+	buildings_max_level_factor=1.000
+	state_category=city
+}

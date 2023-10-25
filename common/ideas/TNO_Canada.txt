@@ -1,0 +1,267 @@
+ideas = {
+
+
+	country = {
+		tno_minor_quebecois_terrorism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_unaddressed_quebecois_terrorism"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = 
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				army_org_factor = -0.05
+				conscription_factor = -0.01
+			}
+		}
+	}
+
+	country = {
+		tno_mild_quebecois_terror = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_unaddressed_quebecois_terrorism"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = 
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.08
+				army_org_factor = -0.08
+				conscription_factor = -0.02
+			}
+		}
+	}
+
+	country = {
+		tno_extreme_quebecois_terrorism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_unaddressed_quebecois_terrorism"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = 
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.1
+				army_org_factor = -0.1
+				conscription_factor = -0.03
+			}
+		}
+	}
+
+	country = {
+		tno_bad_native_reserves = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_bad_native_reserves"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = CAN_bad_natives
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = -0.01
+			}
+		}
+	}
+
+	country = {
+		tno_CAN_quebecois_conscription = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_quebecois_conscription"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = 
+			modifier = {
+				war_support_factor = -0.20
+				conscription_factor = 0.2
+			}
+		}
+	}
+
+	country = {
+		tno_CAN_no_federal_action = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_no_federal_action"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = CAN_no_intervention
+			modifier = {
+				stability_factor = 0.1
+
+			}
+		}
+	}
+
+	country = {
+		tno_CAN_pacific_limited = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_pacific_limited"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = 
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_use_modifier = -0.05
+			}
+		}
+	}
+
+	country = {
+		tno_CAN_the_great_flag_debate = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_the_great_flag_debate"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = 
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}
+	}
+
+	country = {
+		tno_CAN_supporting_USA = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_supporting_USA"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = 
+			modifier = {
+				consumer_goods_use_modifier = -0.05
+				conscription_factor = -0.4
+			}
+		}
+	}
+
+	country = {
+		tno_CAN_support_from_canada = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_support_from_canada"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			#picture = 
+			modifier = {
+				consumer_goods_use_modifier = 0.05
+				conscription_factor = 0.1
+			}
+		}
+	}
+	country = {
+		tno_CAN_the_constitution_issue = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_the_constitution_issue"}
+			allowed = { 
+				always = no 
+			}
+			allowed_civil_war = { 
+				always = yes 	
+			}
+			removal_cost = -1
+			picture = CAN_the_constitution_issue
+			modifier = {
+				political_power_gain = -0.15	
+				stability_factor = -0.10
+				war_support_factor = -0.15
+			}
+		}
+		tno_CAN_the_nixon_shock = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_the_nixon_shock"}
+			allowed = { 
+				always = no 
+			}
+			allowed_civil_war = { 
+				always = yes 
+			}
+			removal_cost = -1
+			picture = CAN_the_nixon_shock
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = -0.15
+				gdp_growth_modifier = -0.15
+				production_factory_max_efficiency_factor = -0.15 
+				production_factory_efficiency_gain_factor = -0.15 
+			}
+		}
+		tno_CAN_queen_in_exile = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_queen_in_exile"}
+			allowed = { 
+				always = no 
+			}
+			allowed_civil_war = { 
+				always = yes 
+			}
+			removal_cost = -1
+			picture = CAN_queen_in_exile
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10 
+			}
+		}
+		tno_CAN_western_alienation = {
+			on_add = {
+			log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_western_alienation"}
+			allowed = { 
+				always = no 
+			}
+			allowed_civil_war = { 
+				always = yes 
+			}
+			removal_cost = -1
+			picture = CAN_western_alienation
+			modifier = {
+			}
+		}	
+		tno_CAN_status_of_quebec = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea tno_CAN_status_of_quebec"}
+			allowed = { 
+				always = no 
+			}
+			allowed_civil_war = { 
+				always = yes 
+			}
+			removal_cost = -1
+			picture = CAN_quebec_RA
+			modifier = {}	
+		}
+	}
+}

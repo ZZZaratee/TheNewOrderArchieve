@@ -1,0 +1,25 @@
+state={
+	id=944
+	name="STATE_944"
+	provinces={
+		10993 13685 13706 13726
+	}
+	history={
+		owner = MAD
+		add_core_of = MAD
+		buildings = {
+			infrastructure = 3
+			thermoelectric_plant = 1
+			13706 = {
+				naval_base = 2
+			}
+		}
+
+		victory_points = { 13706 5 }
+	}
+
+
+	manpower=2116782
+	buildings_max_level_factor=1.000
+	state_category=town
+}

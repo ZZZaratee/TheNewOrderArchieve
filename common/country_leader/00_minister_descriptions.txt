@@ -1,0 +1,631 @@
+leader_traits = {
+### Asia ###
+
+	### China ###
+		CHI_Gao_Zongwu_hog_desc = {}
+		CHI_Zhou_Fohai_hog_desc = {}
+		CHI_Tao_Xisheng_for_desc = {}
+		CHI_Xiao_Shuxuan_sec_desc = {}
+
+	### Yunnan ###
+		YUN_Lu_Han_hog_desc = {}
+		YUN_Long_Yun_hog_1_desc = {}
+		YUN_Long_Zehui_for_desc = {}
+		YUN_Wang_Shaoyuan_eco_desc = {}
+		YUN_Zeng_Wangzhong_sec_desc = {}
+
+		YUN_Long_Yun_hog_desc = {}
+		YUN_Song_Xilian_for_desc = {}
+		YUN_Li_Mi_eco_desc = {}
+		YUN_Zhang_Chong_sec_desc = {}
+
+		YUN_Jiang_Jingguo_hog_desc = {}
+		YUN_Sun_Liren_sec_desc = {}
+
+	#Free Indonesia
+		FRI_minister_Mohammad_Natsir_hog_desc = {}
+
+	### Indonesia ###
+		INS_Djuanda_Kartawidjaja_hog_desc = {}
+		INS_Suwiryo_eco_desc = {}
+		INS_General_Abdul_Haris_Nasution_sec_desc = {}
+
+	### Japan ###
+		# POSTS
+		chief_cabinet_secretary = {}
+		# INO
+		JAP_Fujiyama_Aiichiro_for_desc = {}
+		JAP_Kanemaru_Shin_eco_desc = {}
+		JAP_Masanosuke_Ikeda_sec_desc = {}
+		# IKEDA
+		JAP_Hatoyama_Ichiro_dep_desc = {}
+		JAP_Sato_Eisaku_eco_desc = {}
+		# TAKAGI
+		JAP_Kouichi_Kido_dep_desc = {}
+		JAP_Kuranari_Tadashi_for_desc = {}
+		JAP_Nakasone_Yasuhiro_eco_desc = {}
+		JAP_Hokiriki_Zenjiro_sec_desc = {}
+		# KAYA
+		JAP_Aoki_Kazuo_hog_desc = {}
+		JAP_Fukuda_Takeo_eco_desc = {}
+		JAP_Ushiba_Nobuhiko_for_desc = {}
+		JAP_Funada_Naka_sec_desc = {}
+		JAP_Kawashima_Shojiro_sec_desc = {}
+
+		JAP_Shiina_Etsusaburo_hog_desc = {}
+		JAP_Kishi_Nobusuke_eco_desc = {}
+		JAP_Suzuki_Teiichi_for_desc = {}
+		JAP_Tadanori_Nagayama_sec_desc = {}
+	
+		# KISHI
+		JAP_Kishi_Nobusuke_dep_desc = {}
+		JAP_Takeda_Tsuneyoshi_for_desc = {}
+		JAP_Shiina_Etsusaburo_eco_desc = {}
+		JAP_Muto_Akira_sec_desc = {}
+
+		# Jushin
+		JAP_Kouichi_Kido_hog_desc = {}
+		JAP_Sugita_Ichiji_for_desc = {}
+		JAP_Yamigawa_Masamichi_eco_desc = {}
+		JAP_Saito_Noboru_sec_desc = {}
+
+		# Muto
+		JAP_Sato_Kenryo_hog_desc = {}
+		JAP_Kishi_Nobusuke_coup_eco_desc = {}
+		JAP_Iwakuro_Hideo_for_desc = {}
+		JAP_Hattori_Takushiro_sec_desc = {}
+		
+
+	### Guangdong ###
+		# Posts
+		chief_secretary = {}
+		external_secretary = {}
+		financial_secretary = {}
+		guangdong_police_force_commissioner = {}
+
+		GNG_Matsuzawa_Takuji_hog_desc = {}
+		GNG_Ibuka_Masaru_for_desc = {}
+		GNG_Matsushita_Masaharu_eco_desc = {}
+		GNG_Miyazaki_Kiyotaka_sec_desc = {}
+
+		GNG_Matsushita_Masaharu_Yasuda_hog_desc = {}
+		GNG_Morita_Akio_Yasuda_for_desc = {}
+		GNG_Ibuka_Masaru_eco_desc = {}
+
+		GNG_Li_Ka_Shing_hog_desc = {}
+		GNG_Matsushita_Masaharu_for_desc = {}
+		GNG_Stanley_Ho_eco_desc = {}
+		GNG_Kan_Omori_sec_desc = {}
+
+		GNG_Ibuka_Masaru_hog_desc = {}
+		GNG_Morita_Akio_Matsushita_for_desc = {}
+		GNG_Yokoi_Hideki_eco_desc = {}
+		GNG_Tsuchida_Kuniyasu_sec_desc = {}
+
+		GNG_Matsushita_Masaharu_Ibuka_hog_desc = {}
+		GNG_Komai_Kenichiro_for_desc = {}
+
+	### Manchukuo ###
+		### Starting ###
+		MAN_Ruan_Zhenduo_hog_desc = {}
+		MAN_Yu_Jingyuan_eco_desc = {}
+		MAN_Gu_Ciheng_for_desc = {}
+		MAN_Yu_Jingtao_sec_desc ={}
+		### Concordia II ###
+		MAN_Aisin_Gioro_Yuyan_hog_desc = {}
+		MAN_Han_Yunjie_eco_desc = {}
+		MAN_Gobulo_Runqi_sec_desc = {}
+		### Somucho ###
+		MAN_Sakomizu_Hisatsune_hog_desc = {}
+		MAN_Wada_Hiro_eco_desc = {}
+		MAN_Takase_Jiro_for_desc = {}
+		MAN_Katakura_Tadashi_sec_desc = {}
+		### SocB ###
+		MAN_Wada_Hiro_hog_desc = {}
+		MAN_Katsumata_Seiichi_eco_desc = {}
+		MAN_Sejima_Ryuzo_for_desc = {} 
+		MAN_Matsumura_Tomokatsu_sec_desc = {}
+		### InnB ###
+		MAN_Fuji_Soji_eco_desc = {}
+		MAN_Katakura_Tadashi_inn_sec_desc = {}
+		### Sejima Coup ###
+		MAN_Sejima_Ryuzo_hog_desc = {}
+		MAN_Kouda_Chikugen_eco_desc = {}
+		MAN_Wang_Jiashan_for_desc = {}
+		MAN_Jengjuurjab_sec_desc = {}
+
+
+### Russia ###
+
+	### Amur ###
+		AMR_Lev_Okhotin_hog_desc = {}
+		AMR_Nikolay_Zaerko_hog_desc = {}
+		AMR_Mikhail_Spasovsky_for_desc = {}
+		AMR_Georgy_Shekerev_for_desc = {}
+		AMR_Konstantin_Steklov_eco_desc = {}
+		AMR_Alexander_Bolotov_sec_desc = {}
+
+	### Chita ###
+		# Posts
+		ataman_of_the_transbaikal_cossack_host = {}
+
+		# Initial
+		CHT_Grigory_Semyonov_hog_desc = {}
+		CHT_Nikolay_Ukhtomsky_for_desc = {}
+		CHT_Ivan_Mikhailov_eco_desc = {}
+		CHT_Boris_Shepunov_sec_desc = {}
+		# Post-Semyonov
+		CHT_Boris_Shepunov_hog_desc = {}
+		CHT_Nikolay_Kossov_sec_desc = {}
+		CHT_Alexey_Abaza_eco_desc = {}
+		# Mikhail
+		CHT_Ivan_Mikhailov_hog_desc = {}
+		CHT_Anatoly_Sobchak_hog_desc = {}
+		CHT_Dmitry_Volkogonov_sec_desc = {}
+
+	### Magadan ###
+		# Matkovsky
+		MAG_Vladimir_Kibardin_hog_desc = {}
+		MAG_Nikolay_Petlin_for_desc = {}
+		MAG_Igor_Kovalchuk_Koval_for_desc = {}
+		MAG_Vladimir_Goltsov_eco_desc = {}
+		MAG_Alexander_Pavlov_sec_desc = {}
+
+	### Omsk ###
+		# Posts
+		director_of_state_administration = {}
+		director_of_foreign_affairs = {}
+		director_of_state_development = {}
+		director_of_internal_security = {}
+
+		# Start
+		OMS_Dmitry_Yazov_hog_desc = {}
+		OMS_Viktor_Abakumov_for_desc = {}
+		OMS_Alexander_Kharkhardin_eco_desc = {}
+		OMS_Konstantin_Valukhin_sec_desc = {}
+		# Yazov
+		OMS_Evgeny_Savintsev_hog_desc = {}
+		OMS_Aleksandr_Sakharovsky_for_desc = {}
+		OMS_Evgeny_Pitovranov_eco_desc = {}
+		OMS_Yuriy_Drozdov_sec_desc = {}
+
+	### Sverdlovsk ###
+		SVR_Ivan_Bagramyan_hog_desc = {}
+		SVR_Yevgeniy_Primakov_hog_desc = {}
+		SVR_Ivan_Bagramyan_sec_desc = {}
+
+	### Vyatka ###
+		VYT_Vladimir_Kharzhevsky_hog_desc = {}
+		VYT_Roman_Gul_for_desc = {}
+
+	### WRRF ###
+		# Start
+		WRS_Andrey_Grechko_for_desc = {}
+		WRS_Alexander_Altunin_sec_desc = {}
+		# Zhukov
+		WRS_Alexander_Yakovlev_for_desc = {}
+		WRS_Nikolay_Ryzhkov_eco_desc = {}
+		WRS_Sergey_Akhromeyev_sec_desc = {}
+
+### Europe ###
+
+	### Germany ###
+		### General ###
+		GER_Theodor_Oberlander_hog_desc = {}
+		### Göring ###
+		chef_des_oberkommandos_der_wehrmacht = {}
+		reichswirtschaftsminister = {}
+		reichsjugendfuhrer = {}
+		parteiminister = {}
+		GGR_Paul_Korner_eco_desc = {}
+		GGR_Artur_Axmann_for_desc = {}
+		GGR_Kurt_Schmucker_eco_desc = {}
+		GGR_Ferdinand_Schorner_sec_desc = {}
+		GGR_Wilhelm_Stuckart_hog_desc = {}
+		### Speer ###
+		GER_Helmut_Schmidt_desc = {}
+		GER_Kurt_Georg_Kiesinger_desc = {}
+		GER_Kurt_Georg_Kiesinger_fash_desc = {}
+		GER_Otto_Ernst_Remer_fash_desc = {}
+		GER_Ludwig_Erhard_desc = {}
+		GER_Hans_Kehrl_desc = {}
+		GER_Martin_Mussgnug_desc = {}
+		GER_Henning_von_Tresckow_desc = {}
+		GER_Theodor_Oberlander_for_desc = {}
+		GER_Helmut_Schmidt_desc_dem = {}
+		GER_Kurt_Georg_Kiesinger_desc_dem = {}
+		GER_Ludwig_Erhard_desc_dem = {}
+		GER_Henning_von_Tresckow_desc_dem = {}
+		### Bormann ###
+		GER_Baldur_von_Schirach_desc = {}
+		GER_Wilhelm_Burgdorf_desc = {}
+		GER_Walther_Hewel_desc = {}
+		GER_Kurt_Lange_desc = {}
+		GER_Gerhard_Klopfer_desc = {}
+		GER_Heinrich_Mueller_desc = {}
+		### Schörner
+		RNW_Eduard_Wagner_desc = {}
+	
+	### Reichskommissariat Moskowien ###
+		### Starting ###
+		MCW_Wolf_Heinrich_Graf_von_Helldorff_hog_desc = {}
+		MCW_Bronislav_Kaminski_for_desc = {}
+		MCW_Harald_Quandt_eco_desc = {}
+		MCW_Dietrich_von_Saucken_sec_desc = {}
+		
+	### Reichskommissariat Südwestafrika ###
+		### Starting ###
+		ANG_Wolfgang_Schenck_dep_desc = {}
+		ANG_Hellmut_von_Leipzig_mil_desc = {}
+		ANG_Gerhard_Homuth_for_desc = {}
+		ANG_Otto_Herrigel_eco_desc = {}
+	
+	### Reichskommissariat Zentralafrika ###
+		COG_Rolf_Steiner_dep_desc = {}
+		COG_Wilhelm_Ritter_von_Thoma_for_desc = {}
+		COG_Friedrich_Freiherr_von_Broich_eco_desc = {}
+		
+	### Reichskommissariat Ostafrika ###
+		GRO_Arthur_Liebehenschel_dep_desc = {}
+		GRO_Josef_Mengele_for_desc = {}
+		GRO_Karl_Chmielewski_eco_desc = {}
+
+	### OFN Mandates ###
+		### East Africa/CAR ###
+		MZB_USA_William_R_Peers_hog_desc = {}
+		MZB_USA_Kenneth_Rush_for_desc = {}
+		MZB_USA_Paul_Nitze_eco_desc = {}
+		MZB_USA_Paul_D_Harkins_sec_desc = {}
+
+	### England ###
+		# Posts
+		prime_minister = {}
+		deputy_prime_minister = {}
+		party_chairman = {}
+		home_secretary = {}
+		foreign_secretary = {}
+		chancellor_of_the_exchequer = {}
+		secretary_of_state_for_defence = {}
+
+		# General
+		ENG_Alec_Douglas_Home_hog_desc = {}
+		ENG_Reginald_Maudling_hog_desc = {}
+
+		# Free England
+		FEN_David_Eccles_hog_desc = {}
+		FEN_Philip_Toynbee_hog_desc = {}
+
+		# Thatcher
+		ENG_Rab_Butler_hog_desc = {}
+		ENG_Keith_Joseph_hog_desc = {}
+
+		# Chesty
+		ENG_Andrew_Fountaine_hog_desc = {}
+		ENG_Denis_Pirie_eco_desc = {}
+		ENG_Colin_Jordan_for_desc = {}
+		ENG_John_Tyndall_sec_desc = {}
+
+		# Stirling
+		ENG_Pauline_Gower_hog_desc = {}
+		ENG_John_Woodhouse_eco_desc = {}
+		ENG_Arthur_Harris_for_desc = {}
+		ENG_Richard_Hull_sec_desc = {}
+
+	### Ireland ###
+		IRE_Sean_Francis_MacEntee_hog_desc = {}
+		IRE_Jack_Lynch_eco_desc = {}
+		IRE_Frank_Aiken_for_desc = {}
+		IRE_Charles_Haughey_sec_desc = {}
+
+### North America ###
+
+	### USA ###
+		### Posts ###
+		vice_president = {}
+		speaker_of_the_house = {}
+		president_pro_tempore = {}
+		secretary_of_state = {}
+		secretary_of_the_treasury = {}
+		secretary_of_defense = {}
+
+		### Nixon ###
+		USA_John_F_Kennedy_dep_desc = {}
+		USA_John_McCormack_dep_desc = {}
+		USA_Carl_Hayden_dep_desc = {}
+		USA_William_P_Rogers_pol_desc = {}
+		USA_Robert_McNamara_eco_desc = {}
+		USA_Melvin_Laird_mil_desc = {}
+		### Bennett ###
+		USA_Gerald_Ford_dep_desc = {}
+		USA_Edmund_Muskie_pol_desc = {}
+		USA_Absalom_Robertson_eco_desc = {}
+		USA_Clark_Clifford_mil_desc = {}
+		### Johnson ###
+		USA_Edmund_Muskie_dep_desc = {}
+		USA_Henry_Fowler_eco_desc = {}
+		USA_Robert_McNamara_mil_desc = {}
+		USA_Dean_Rusk_pol_desc = {}
+		### RFK ###
+		USA_Hubert_Humphrey_dep_desc = {}
+		USA_Claude_Pepper_pol_desc = {}
+		USA_Maurine_Neuberger_eco_desc = {}
+		USA_Henry_Mucci_mil_desc = {}
+		### Thurmond ###
+		USA_Spiro_Agnew_pol_desc = {}
+		USA_Maxwell_Taylor_dep_desc = {}
+		USA_Russell_Long_eco_desc = {}
+		USA_Mendel_Rivers_mil_desc = {}
+		### Wallace ###
+		USA_Curtis_LeMay_dep_desc = {}
+		USA_J_William_Fulbright_pol_desc = {}
+		USA_Wilbur_Mills_eco_desc = {}
+		USA_Robert_Byrd_mil_desc = {}
+		### LeMay
+		USA_Gerald_Ford_dep_LeMay_desc = {}
+		### Goldwater ###
+		USA_Nelson_Rockefeller_dep_desc = {}
+		USA_Carl_Curtis_pol_desc = {}
+		USA_Donald_Regan_eco_desc = {}
+		USA_Robert_McNamara_mil_gold_desc = {}
+		### Glenn ###
+		USA_Al_Gore_Sr_dep_desc = {}
+		USA_Nelson_Rockefeller_pol_desc = {}
+		USA_Jacob_Javits_eco_desc = {}
+		USA_Cyrus_Vance_mil_desc = {}
+		### Harrington ###
+		USA_Irving_Howe_dep_desc = {}
+		USA_Douglas_Fraser_eco_desc = {}
+		USA_William_Winter_mil_desc = {}
+		### MCS ###
+		USA_Spiro_Agnew_dep_desc = {}
+		USA_Jeane_Kirkpatrick_pol_desc = {}
+		USA_Russell_Long_eco_desc = {}
+		USA_John_Stennis_mil_desc = {}
+		USA_Maxwell_Taylor_mil_desc = {}
+		### McNamara ###
+		USA_Birch_Bayh_dep_desc = {}
+		USA_Donald_Rumsfeld_pol_desc = {}
+		USA_George_Shultz_eco_desc = {}
+		USA_Dean_Rusk_mil_desc = {}
+		USA_Scoop_Jackson_mil_desc = {}
+		### McGovern ###
+		USA_Bob_Dole_dep_desc = {}
+		USA_Henry_Cabot_Lodge_Jr_pol_desc = {}
+		USA_Elliot_Richardson_eco_desc = {}
+		USA_Zbigniew_Brzezinski_mil_desc = {}
+		### Scoop ###
+		USA_Sid_McMath_dep_desc = {}
+		USA_Frank_Church_pol_desc = {}
+		USA_Augustus_Hawkins_eco_desc = {}
+		USA_Arleigh_Burke_mil_desc = {}
+		### Kirkpatrick ###
+		USA_Sam_Yorty_dep_desc = {}
+		USA_Walt_Rostow_pol_desc = {}
+		USA_Caspar_Weinberger_eco_desc = {}
+		USA_John_McCain_Jr_mil_desc = {}
+		### Hall ###
+		USA_Jarvis_Tyner_dep_desc = {}
+		USA_Paul_Robeson_dep_desc = {}
+		USA_Alger_Hiss_pol_desc = {}
+		USA_Larry_Itliong_eco_desc = {}
+		USA_William_Martin_mil_desc = {}
+		### Yockey ###
+		USA_Louis_Byers_dep_desc = {}
+		USA_Revilo_Oliver_pol_desc = {}
+		USA_Harold_Thompson_eco_desc = {}
+		USA_John_Crommelin_mil_desc = {}
+
+### South America ###
+
+	### Argentina ###
+		# Posts
+		legislature_power = {}
+		minister_of_interior = {}
+		minister_of_interior_and_political_affairs = {}
+		minister_of_foreign_affairs = {}
+		minister_of_economy = {}
+		secretary_of_war = {}
+		minister_of_finance = {}
+		minister_of_war = {}
+		minister_of_planning = {}
+		chief_of_the_economic_council = {}
+		president_of_the_central_bank_and_institute_for_foreign_exchange = {}
+		head_of_the_second_prebisch_commission = {}
+		army_commander_in_chief = {}
+		minister_of_defense = {}
+		head_of_side = {}
+		minister_of_social_welfare = {}
+
+
+		Roberto_Alemann_eco_desc = {}
+		Juan_Carlos_Lorio_sec_desc = {}
+		Ortiz_Rozas_for_desc = {}
+		Agustin_Penas_hog_desc = {}
+
+		ARG_Alfredo_Roque_Vitolo_hog_desc = {}
+		ARG_Miguel_Carcano_for_desc = {}
+		ARG_Alvaro_Alsogaray_eco_desc = {}
+		ARG_Rosendo_Fraga_sec_desc = {}
+
+		ARG_Mariano_Grondona_hog_desc = {}
+		ARG_Mario_Amadeo_for_desc = {}
+		ARG_Juan_E_Guglialmelli_eco_desc = {}
+		ARG_Juan_C_Rosas_sec_desc = {}
+
+		ARG_Juan_Palmero_hog_desc = {}
+		ARG_Miguel_Angel_Zavala_Ortiz_for_desc = {}
+		ARG_Juan_Carlos_Pugliese_eco_desc = {}
+		ARG_Ignacio_Avalos_sec_desc = {}
+
+		ARG_Pablo_Gonzales_Berges_hog_desc = {}
+		ARG_Adolfo_Vicchi_for_desc = {}
+		ARG_Miguel_Carcano_hardoy_for_desc = {}
+		ARG_Raul_Prebisch_eco_desc = {}
+		ARG_Rosendo_Fraga_hardoy_sec_desc = {}
+
+		ARG_Juan_Carlos_Coral_hog_desc = {}
+		ARG_Americo_Ghioldi_for_desc = {}
+		ARG_Torcuato_S_Di_Tella_eco_desc = {}
+		ARG_Juan_C_Rosas_romero_sec_desc = {}
+
+		ARG_Silvano_Santander_hog_desc = {}
+		ARG_Adolfo_Vicchi_ud_ii_for_desc = {}
+		ARG_Aldo_Ferrer_eco_desc = {}
+		ARG_Eduardo_R_Castro_Sanchez_sec_desc = {}
+
+		ARG_Mariano_Grondona_martinez_hog_desc = {}
+		ARG_Jose_Maria_Guido_for_desc = {}
+		ARG_Juan_E_Guglialmelli_martinez_eco_desc = {}
+		ARG_Benjamin_Rattenbach_sec_desc = {}
+
+		ARG_Alberto_Maria_Fonrouge_hog_desc = {}
+		ARG_Rogelio_Frigerio_eco_desc = {}
+		ARG_Manuel_Reimundes_sec_desc = {}
+
+		ARG_Isaac_Rojas_hog_desc = {}
+		ARG_Ernesto_Sanmartino_for_desc = {}
+		ARG_Arturo_Mathov_eco_desc = {}
+		ARG_Pedro_Eugenio_Aramburu_sec_desc = {}
+
+		ARG_Junta_Militar_hog_desc = {}
+		ARG_Armando_P_Martineja_for_desc = {}
+		ARG_Adolfo_Vicchi_poggi_eco_desc = {}
+		ARG_Carlos_Eugenio_Moori_Koening_sec_desc = {}
+
+		ARG_Rodolfo_Martinez_hog_desc = {}
+		ARG_Mariano_Jose_Drago_for_desc = {}
+		ARG_Federico_Pinedo_eco_desc = {}
+
+		ARG_Rodolfo_Decker_hog_desc = {}
+
+		ARG_Roman_Subiza_hog_desc = {}
+		ARG_Mario_Amadeo_peron_for_desc = {}
+		ARG_Jorge_Antonio_eco_desc = {}
+		ARG_Miguel_Angel_Iniguez_sec_desc = {}
+
+		ARG_Italo_Luder_hog_desc = {}
+		ARG_Antonio_Cafiero_for_desc = {}
+		ARG_Alvaro_Alsogaray_menem_eco_desc = {}
+		ARG_Jorge_Carcagno_sec_desc = {}
+
+		ARG_Alberto_Eduardo_Ottalagano_hog_desc = {}
+		ARG_Oscar_Ivanissevich_for_desc = {}
+		ARG_Alfredo_Gomez_Morales_eco_desc = {}
+		ARG_Fernando_Amadeo_Baldrich_sec_desc = {}
+
+		ARG_Jose_Lopez_Rega_hog_desc = {}
+		ARG_Alberto_Vignes_for_desc = {}
+		ARG_Celestino_Rodrigo_eco_desc = {}
+		ARG_Jorge_Rafael_Videla_sec_desc = {}
+
+		ARG_Julio_Barbaro_hog_desc = {}
+		ARG_Juan_Carlos_Puig_for_desc = {}
+		ARG_Jose_Luis_Fernandez_Valoni_sec_desc = {}
+
+		ARG_Carlos_Alconada_Aramburu_hog_desc = {}
+		ARG_Carlos_Humberto_Perrette_for_desc = {}
+		ARG_Raul_Prebisch_balbin_eco_desc = {}
+		ARG_Hector_Hidalgo_Sola_sec_desc = {}
+
+		ARG_Hector_Sandler_hog_desc = {}
+		ARG_Americo_Ghioldi_aramburu_for_desc = {}
+		ARG_Raul_Ondarts_eco_desc = {}
+		ARG_Bernardino_Labayru_sec_desc = {}
+
+		ARG_Guillermo_Borda_hog_desc = {}
+		ARG_Nicanor_Costa_Mendez_for_desc = {}
+		ARG_Adalbert_Krieger_Vassena_eco_desc = {}
+		ARG_Eduardo_Senorans_sec_desc = {}
+
+		ARG_Francisco_Manrique_hog_desc = {}
+		ARG_Luis_Maria_de_Pablo_Pardo_for_desc = {}
+		ARG_Aldo_Ferrer_levingston_eco_desc = {}
+		ARG_Jose_Rafael_Caceres_Monie_sec_desc = {}
+
+		ARG_Arturo_Mor_Roig_hog_desc = {}
+		ARG_Eduardo_Mc_Loughlin_for_desc = {}
+		ARG_Cayetano_Antonio_Licciardo_eco_desc = {}
+		ARG_Ezequiel_Alfredo_Martinez_sec_desc = {}
+
+		ARG_Francisco_Gabrielli_hog_desc = {}
+		ARG_Juan_Ramon_Aguirre_Lanari_for_desc = {}
+		ARG_Felipe_Yofre_eco_desc = {}
+		ARG_Eduardo_Juan_Uriburu_sec_desc = {}
+
+		ARG_Eugenio_Conde_hog_desc = {}
+		ARG_Victor_H_Martinez_for_desc = {}
+		ARG_Eduardo_Gamond_eco_desc = {}
+		ARG_Osiris_Guillermo_Villegas_sec_desc = {}
+
+		ARG_Augusto_Vandor_hog_desc = {}
+		ARG_Leopoldo_Bravo_for_desc = {}
+		ARG_Oreste_Popescu_eco_desc = {}
+
+		ARG_Guillermo_Estevez_Boero_hog_desc = {}
+		ARG_Victor_Garcia_Costa_for_desc = {}
+		ARG_Leopoldo_Portnoy_eco_desc = {}
+
+	### Brazil ###
+	    BRA_Kubitschek_hog_desc = {}
+		BRA_Quadros_hog_desc = {}
+		BRA_Salles_pol_desc = {}
+		BRA_Neves_eco_desc = {}
+		BRA_Denys_sec_desc = {}
+		BRA_Goulart_hog_desc = {}
+		BRA_Hermes_pol_desc = {}
+		BRA_Cordeiro_sec_desc = {}
+		BRA_Neves_hog_desc = {}
+		BRA_Celso_eco_desc = {}
+		BRA_Abelardo_sec_desc = {}
+		BRA_Milton_hog_desc = {}
+		BRA_Pinto_pol_desc = {}
+		BRA_Henning_eco_desc = {}
+		BRA_Jose_Guilherme_sec_desc = {}
+		BRA_Alfonso_Arinos_pol_desc = {}
+		BRA_Oscar_Pedroso_sec_desc = {}
+		BRA_Laudol_Natel_hog_desc = {}
+		BRA_Cecila_Prada_pol_desc = {}
+		BRA_Roberto_Campos_eco_desc = {}
+		BRA_Golfredo_Teles_sec_desc = {}
+		BRA_pascoal_ranieri_mazzilli_hog_desc = {}
+		BRA_Juracy_Magalhaes_pol_desc = {}
+		BRA_auro_andrade_hog_desc = {}
+		BRA_filinto_muller_hog_desc = {}
+		BRA_edna_lott_hog_desc = {}
+		BRA_delfim_netto_eco_desc = {}
+		BRA_minister_Siseno_Ramos_Sarmento_sec_desc = {}
+		BRA_Vasco_Leitao_da_Cunha_lacerda_pol_desc = {}
+		BRA_Vasco_Leitao_da_Cunha_adhemar_pol_desc = {}
+		BRA_Francisco_Negrao_de_Lima_pol_desc = {}
+		BRA_Arthur_da_Silva_Bernardes_Filho_eco_desc = {}
+		BRA_Helio_Beltrao_eco_desc = {}
+		BRA_Benedito_Manhaes_Barreto_eco_desc = {}
+		BRA_Golbery_do_Couto_e_Silva_sec_desc = {}
+		BRA_Argemiro_de_Assis_Brasil_sec_desc = {}
+		BRA_Amaury_Kruel_sec_desc = {}
+		BRA_Peri_Constant_Bevilacqua_sec_desc = {}
+		BRA_Ernesto_Geisel_sec_desc = {}
+		BRA_minister_Costa_E_Silva_sec_desc = {}
+
+	### Chile ###
+		CHL_Sotero_del_Rio_hog_desc = {}
+		CHL_Julio_Philippi_hog_desc = {}
+		CHL_Arturo_Maschke_pol_desc = {}
+		CHL_Julio_Philippi_pol_desc = {}
+		CHL_Julio_Philippi_eco_desc = {}
+		CHL_Arturo_Maschke_eco_desc = {}
+		CHL_Roberto_Vergara_eco_desc = {}
+		CHL_Carlos_Vial_sec_desc = {}
+
+	### Paraguay ###
+	    PAR_juan_natalicio_gonzalez_hog_desc = {}
+		PAR_rodney_elipdio_acevedo_for_desc = {}
+	    PAR_epifanio_mendez_fleitas_eco_desc = {}
+		PAR_auguste_ricord_sec_desc = {}
+
+	### Peru ###
+		PRU_Carlos_Moreyra_hog_desc= {}
+  		PRU_Alvarado_Garrido_pol_desc= {}
+  		PRU_Gallo_Porras_eco_desc= {}
+  		PRU_Ricardo_Elias_sec_desc = {}
+}

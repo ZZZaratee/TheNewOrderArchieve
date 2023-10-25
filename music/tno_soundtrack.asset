@@ -1,0 +1,65 @@
+music = {
+	name = "Burgundian Lullaby"
+	file = "Burgundian Lullaby.ogg"
+	volume = 1
+}
+
+music = {
+	name = "The Great Trial"
+	file = "The Great Trial.ogg"
+	volume = 1
+}
+
+music = {
+	name = "I Will Return Remix"
+	file = "I Will Return Remix.ogg"
+	volume = 1
+}
+
+music = {
+	name = "Einigkeit und Recht und Freiheit"
+	file = "Einigkeit und Recht und Freiheit.ogg"
+	volume = 1
+}
+
+music = {
+	name = "The Gun Pointed at the Heart of Africa"
+	file = "The Gun Pointed at the Heart of Africa.ogg"
+	volume = 1
+}
+
+music = {
+	name = "Russian Anarchy Theme"
+	file = "Russian Anarchy Theme.ogg"
+	volume = 1
+}
+
+music = {
+	name = "German Anarchy Theme"
+	file = "German Anarchy Theme.ogg"
+	volume = 1
+}
+
+music = {
+	name = "The Battle Continues!"
+	file = "The Battle Continues!.ogg"
+	volume = 1
+}
+
+music = {
+	name = "Burgund Erwacht!"
+	file = "Burgund Erwacht!.ogg"
+	volume = 1
+}
+
+music = {
+	name = "The Final War"
+	file = "The Final War.ogg"
+	volume = 1
+}
+
+music = {
+	name = "Slave Revolt"
+	file = "Slave Revolt.ogg"
+	volume = 1
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=543
+	name="STATE_543"
+
+	history={
+		owner = MAD
+		add_core_of = MAD
+		buildings = {
+			air_base = 1
+			radar_station = 2
+			infrastructure = 1
+			13793 = {
+				naval_base = 2
+			}
+		}
+
+		victory_points = { 13793 3 }
+		victory_points = { 13764 3 }
+	}
+
+	provinces={
+		5128 5222 13742 13764 13769 13793 
+	}
+	manpower=1314732
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

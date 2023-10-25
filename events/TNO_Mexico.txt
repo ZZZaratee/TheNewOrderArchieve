@@ -1,0 +1,99 @@
+add_namespace = Mexico_Dummy
+
+
+country_event = { # Madrazo
+	id = Mexico_Dummy.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA.3"}
+	title = USA.3.t
+	desc = USA.3.desc
+	picture = GFX_report_event_us_washington_obelisk
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA.3.a
+		every_country = { news_event = { id = WORLD.18002 } }
+		hidden_effect = {
+			MEX = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Carlos Alberto Madrazo"
+					desc = POLITICS_CARLOS_MADRAZO_DESC
+					picture = "Portrait_Mexico_Carlos_Madrazo.dds"
+					expire = "1990.1.1"
+					ideology = authoritarian_democracy_dominant_party_democracy_subtype
+					traits = {
+						master_ideologue
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Lozano
+	id = Mexico_Dummy.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA.3"}
+	title = USA.3.t
+	desc = USA.3.desc
+	picture = GFX_report_event_us_washington_obelisk
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA.3.a
+		every_country = {
+			news_event = { id = WORLD.18001 }
+		}
+		hidden_effect = {
+			MEX = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Raúl Salinas Lozano"
+					desc = POLITICS_RAUL_LOZANO_DESC
+					picture = "Portrait_Mexico_Raul_Lozano.dds"
+					expire = "1990.1.1"
+					ideology = authoritarian_democracy_dominant_party_democracy_subtype
+					traits = {
+						for_japanophile
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Ordaz
+	id = Mexico_Dummy.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA.3"}
+	title = USA.3.t
+	desc = USA.3.desc
+	picture = GFX_report_event_us_washington_obelisk
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA.3.a
+		every_country = {
+			news_event = { id = WORLD.18000 }
+		}
+		hidden_effect = {
+			MEX = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Gustavo Díaz Ordaz"
+					desc = POLITICS_GUSTAVO_ORDAZ_DESC
+					picture = "Portrait_Mexico_Gustavo_Ordaz.dds"
+					expire = "1990.1.1"
+					ideology = authoritarian_democracy_dominant_party_democracy_subtype
+					traits = {
+						master_ideologue
+					}
+				}
+			}
+		}
+	}
+}

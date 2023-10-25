@@ -1,0 +1,420 @@
+﻿capital = 570
+set_country_flag = is_russian_nation
+
+oob = "NOV_1962"
+
+load_focus_tree = NOV_novosibirsk_start
+
+###Playable
+set_country_flag = tno_playable_country
+
+set_country_flag = country_has_gui
+set_country_flag = gui_alert_visible
+set_country_flag = gui_alert_visible_2
+set_country_flag = megacorp_alert_visible
+set_country_flag = compass_alert_visible
+
+add_ideas = {
+	### Standard ###
+	RUS_warlord_manpower
+    RUS_warlord_econ
+	RUS_siberia_plan_startscreen
+	NOV_Disproportionate_Population
+	NOV_The_All_Siberian_Army
+	#NOV_The_Great_Opioid_Epidemic
+	RUS_novosibirsk_aircraft_plant
+
+	### Ministers ###
+	NOV_Vasily_Shukshin_hog
+	NOV_Nikolay_Skomorokhov_for
+	NOV_Georgy_Langemak_eco
+	NOV_Dmitry_Glinka_sec
+
+	### Political ###
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_secularism
+	tno_trade_unions_illegal
+	tno_immigration_encouraged_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_elite_voting
+	tno_refugees_open
+
+	### Military ###
+	tno_conscription_two_year_draft
+	tno_women_noncombat_only
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_none
+
+	### Economic ###
+	tno_trade_laws_export_focus
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_low_pensions
+	tno_unemployment_low_subsidies
+
+	### Social ###
+	tno_safety_minimal_regulations
+	tno_health_care_low_income_protections
+	tno_pollution_few_regulations
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_police
+
+	##SOCIETAL DEVELOPMENT##
+	
+	tno_army_professionalism_cronyism
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_widespread_corruption
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+
+set_technology = {
+	##INFANTRY##
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	night_vision_1 = 1
+	infantry_at = 1
+	motorized_infantry = 1
+	tech_mountaineers = 1
+
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_engineers_flamethrowers_1 = 1
+	tech_recon = 1
+	tech_logistics_company = 1
+	tech_maintenance_company = 1
+
+	##ARMOR##
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+	APC_1950 = 1
+	MBT_1950 = 1
+
+	##ARTY##
+	antiair5 = 1
+	artillery4 = 1
+	artillery_1950 = 1
+
+	##LAND DOCTRINE##
+
+	##NAVAL##
+
+	##NAVAL DOCTRINE##
+
+	##LIGHT AIR##
+	early_fighter = 1
+	interceptor_1945 = 1
+	fighter_1945 = 1
+	CAS_1945 = 1
+
+	##HEAVY AIR##
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	
+	##HELICOPTERS##
+	helicopter_engines = 1
+	very_early_helicopter = 1
+	early_helicopter = 1
+
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	improved_computing_machine = 1
+	improved_encryption = 1
+	improved_decryption = 1
+	advanced_computing_machine = 1
+	advanced_encryption = 1
+
+	##INDUSTRY##
+	ww2_line_production = 1
+	building_construction_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	military_construction_1 = 1
+}
+
+# Policy effectivness
+
+set_country_flag = tno_defined_startup_effectiveness
+
+# ECONOMIC LAWS
+set_variable = { tno_trade_laws_effectiveness = 78 }
+set_variable = { tno_income_taxation_effectiveness = 65 }
+set_variable = { tno_minimum_wage_effectiveness = 43}
+set_variable = { tno_max_workhours_effectiveness = 39 }
+set_variable = { tno_child_labor_effectiveness = 65 }
+set_variable = { tno_pensions_effectiveness = 54 }
+set_variable = { tno_unemployment_effectiveness = 47 }
+
+# SOCIAL LAWS
+set_variable = { tno_safety_effectiveness = 65 }
+set_variable = { tno_health_care_effectiveness = 54 }
+set_variable = { tno_pollution_effectiveness = 34 }
+set_variable = { tno_education_effectiveness = 67 }
+set_variable = { tno_penal_system_effectiveness = 59 }
+set_variable = { tno_lgbt_rights_effectiveness = 75 }
+set_variable = { tno_gender_rights_effectiveness = 69 }
+set_variable = { tno_minorities_effectiveness = 45 }
+set_variable = { tno_security_effectiveness = 47 }
+
+# POLITICAL LAWS
+set_variable = { tno_political_parties_effectiveness = 67 }
+set_variable = { tno_religious_rights_effectiveness = 65 }
+set_variable = { tno_trade_unions_effectiveness = 54 }
+set_variable = { tno_immigration_effectiveness = 72 }
+set_variable = { tno_slavery_effectiveness = 59 }
+set_variable = { tno_public_meetings_effectiveness = 39 }
+set_variable = { tno_press_rights_effectiveness = 45 }
+set_variable = { tno_vote_franchise_effectiveness = 65 }
+set_variable = { tno_refugees_effectiveness = 72 }
+
+# MILITARY LAWS
+set_variable = { tno_conscription_effectiveness = 73 }
+set_variable = { tno_women_effectiveness = 69 }
+set_variable = { tno_military_supervision_effectiveness = 68 }
+set_variable = { tno_training_effectiveness = 63 }
+set_variable = { tno_racial_integration_effectiveness = 56 }
+set_variable = { tno_draft_exemptions_effectiveness = 64 }
+
+
+
+set_variable = { NOV_unitary_federal_x = 153 }
+set_variable = { NOV_corp_collect_y = 123 }
+set_variable = { NOV.NOV_Takeover_Power = 5 }
+
+set_variable = { NOV_megacorp1_loyalty = 65 }
+set_variable = { NOV_megacorp2_loyalty = 55 }
+set_variable = { NOV_megacorp3_loyalty = 45 }
+set_variable = { NOV_megacorp4_loyalty = 70 }
+
+set_variable = { NOV_megacorp1_power = 80 }
+set_variable = { NOV_megacorp2_power = 75 }
+set_variable = { NOV_megacorp3_power = 60 }
+set_variable = { NOV_megacorp4_power = 30 }
+
+
+NOV_update_megacorp_modifiers = yes
+
+add_dynamic_modifier = { modifier = NOV_Feniks_modifier }
+add_dynamic_modifier = { modifier = NOV_Sibir_modifier }
+add_dynamic_modifier = { modifier = NOV_Titan_modifier }
+add_dynamic_modifier = { modifier = NOV_People_modifier }
+
+
+set_politics = {
+	ruling_party = authoritarian_democracy
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 0
+	ultranationalism = 0
+	socialist = 21
+	social_democracy = 0
+	liberal_democracy = 0
+
+	conservative_democracy = 30
+	authoritarian_democracy = 49
+	despotism = 0
+	fascism = 0
+	national_socialism = 0
+	
+}
+
+### Country Leaders ###
+create_country_leader = {
+	name = "Neizvestnyy"
+	desc = "POLITICS_NARODNAYA_VOLYA_NEIZVESTNYY_DESC"
+	picture = "leader_unknown.dds"
+	expire = "1999.1.1"
+	ideology = socialist_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Alexander Pokryshkin"
+	desc = "POLITICS_ALEXANDER_POKRYSHKIN_DESC"
+	picture = "Portrait_Novosibirsk_Alexander_Pokryshkin.dds"
+	expire = "1999.1.1"
+	ideology = authoritarian_democracy_oligarchy_subtype
+	traits = { the_siberian_falcon }
+}
+
+create_country_leader = {
+	name = "Vasily Shukshin"
+	desc = "POLITICS_VASILY_SHUKSHIN_DESC"
+	picture = "Portrait_Novosibirsk_Vasily_Shukshin.dds"
+	expire = "1999.1.1"
+	ideology = conservative_democracy_agrarianism_subtype
+	traits = { }
+}
+
+### Generals ###
+create_field_marshal = {
+	name = "Alexander Novikov"
+	picture = "Portrait_Novosibirsk_Alexander_Novikov.dds"
+	traits = { war_hero brilliant_strategist organisational_leader skilled_staffer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+	id = 3616
+}
+
+create_corps_commander = {
+	name = "Nikolay Skomorokhov"
+	picture = "Portrait_Novosibirsk_Nikolay_Skomorokhov.dds"
+	traits = { politically_connected infantry_leader ambusher }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+	id = 3617
+}
+
+create_corps_commander = {
+	name = "Georgy Langemak"
+	picture = "Portrait_Novosibirsk_Georgy_Langemak.dds"
+	traits = { politically_connected trait_engineer fortress_buster }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+	id = 3618
+}
+
+create_corps_commander = {
+	name = "Ivan Tarasov"
+	picture = "Portrait_Novosibirsk_Ivan_Tarasov.dds"
+	traits = { media_personality urban_assault_specialist }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 3619
+}
+
+create_corps_commander = {
+	name = "Dmitry Glinka"
+	picture = "Portrait_Novosibirsk_Dmitry_Glinka.dds"
+	traits = { politically_connected trait_engineer scavenger }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+	id = 3620
+}
+
+create_corps_commander = {
+	name = "Mikhail Baganov"
+	picture = "Portrait_Novosibirsk_Mikhail_Baganov.dds"
+	traits = { trait_cautious infantry_officer winter_specialist }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+	id = 3621
+}
+
+create_corps_commander = {
+	name = "Valery Polunovsky"
+	picture = "Portrait_Novosibirsk_Valery_Polunovsky.dds"
+	traits = { war_hero trait_engineer trait_reckless }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	id = 3622
+}
+
+create_corps_commander = {
+	name = "Nestor Kozin"
+	picture = "Portrait_Novosibirsk_Nestor_Kozin.dds"
+	traits = { war_hero infantry_leader infantry_expert }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+	id = 3623
+}
+
+create_corps_commander = {
+	name = "Mikhail Evseev"
+	picture = "Portrait_Novosibirsk_Mikhail_Evseev.dds"
+	traits = { career_officer infantry_leader ambusher }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+	id = 3624
+}
+
+create_corps_commander = {
+	name = "Matvei Batrakov"
+	picture = "Portrait_Novosibirsk_Matvei_Batrakov.dds"
+	traits = { infantry_officer hill_fighter trait_mountaineer adaptable }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	id = 3625
+}
+
+create_corps_commander = {
+	name = "Vasily Margelov"
+	picture = "Portrait_Novosibirsk_Vasily_Margelov.dds"
+	traits = { war_hero trickster commando }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 3626
+}
+
+set_variable = {TNO_economy_type = 1}
+set_variable = {TNO_economy_subtype = 9}

@@ -1,0 +1,25 @@
+state = {
+	id = 88 # Krakow
+	name = "STATE_88"
+
+	manpower = 3415000
+	state_category = city
+	resources = { steel = 8 }
+	
+
+	history = {
+		owner = GGN
+		add_core_of = GGN
+
+		victory_points = { 9427 20 }
+		
+		buildings = {
+			infrastructure = 8
+			air_base = 4
+		}
+	}
+
+	provinces = {
+		9427 11398 11413 417
+	}
+}

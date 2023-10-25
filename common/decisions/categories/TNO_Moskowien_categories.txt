@@ -1,0 +1,7 @@
+MSK_DECCAT_dissolution = {
+	allowed = { always = yes }
+	visible = {
+		has_idea = MSK_dissolution_start
+		check_variable = { global.MSK_dissolution_ongoing = 1 }
+	}
+}

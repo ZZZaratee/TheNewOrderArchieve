@@ -1,0 +1,24 @@
+state = {
+	id = 1403
+	name = "STATE_1403"
+	
+	manpower = 351823
+	state_category = town
+	
+	history = {
+		owner = OST
+		add_core_of = OST
+		victory_points = { 406 5 }
+		victory_points = { 14563 3 }
+
+		buildings = {
+			infrastructure = 6
+			prisons = 1
+			offices = 1
+		}
+	}
+
+	provinces = {
+		11342 406 14565 11370 277 6340 14563 11391
+	}
+}

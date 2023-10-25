@@ -1,0 +1,33 @@
+defined_text = {
+	name = IRKGetRulingFaction
+	text = {
+		trigger = {
+			check_variable = { IRK_state_balance > IRK_party_balance }
+		}
+		localization_key = IRK_state_dominance
+	}
+	text = {
+		trigger = {
+			check_variable = { IRK_state_balance < IRK_party_balance }
+		}
+		localization_key = IRK_party_dominance
+	}
+	text = {
+		trigger = {
+			check_variable = { IRK_state_balance = IRK_party_balance }
+		}
+		localization_key = IRK_no_control
+	}
+}
+
+defined_text = {
+	name = IRKGetPlanNumber
+	text = {
+		trigger = { check_variable = { IRK_plan_number = 8 } }
+		localization_key = 8
+	}
+	text = {
+		trigger = { check_variable = { IRK_plan_number = 9 } }
+		localization_key = 9
+	}
+}

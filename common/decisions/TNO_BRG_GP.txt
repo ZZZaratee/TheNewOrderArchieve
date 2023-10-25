@@ -1,0 +1,183 @@
+BRG_globalplan_gui = {
+	BRG_GP_USAInfiltrateNorfolk = { # ID - 0
+
+		icon = GFX_decision_submarines
+
+		allowed = { original_tag = BRG }
+
+		visible = {
+			 is_in_array = { array = BRG_GP_Decisions value = 0 }
+			  NOT = { has_country_flag = NorfolkInfiltrated }
+			  check_variable = { BRG_Foreign_GUI_Selected = 3 }
+			  check_variable = { BRG_CloseUp_Selected = 12 }
+		}
+		cost = 10
+
+		days_re_enable = 30
+
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 7
+		
+		complete_effect = {
+			#BUDGETSPENDLARGE
+		}
+		remove_effect = {
+			set_country_flag = NorfolkInfiltrated
+			add_to_variable = { BRG_GP_NukeCoverage^3 = 10 }
+			custom_effect_tooltip = BRG_GP_3_Med
+			add_tech_bonus = {
+				bonus = 0.85
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+	BRG_GP_USASAWSpreadPropaganda = { # ID - 1
+
+		icon = GFX_decision_generic_civil_support
+
+		allowed = { original_tag = BRG }
+
+		visible = {
+			 is_in_array = { array = BRG_GP_Decisions value = 1 }
+			 #NOT = { has_country_flag = SAWWarProp }
+			 check_variable = { BRG_Foreign_GUI_Selected = 3 }
+			 check_variable = { BRG_CloseUp_Selected = 12 }
+		}
+		cost = 10
+
+		days_remove = 30
+		days_re_enable = 60
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			#BUDGETSPENDMEDIUM
+		}
+		remove_effect = {
+			#set_country_flag = SAWWarProp
+			USA = {
+				custom_effect_tooltip = USA_SAF_WAR_Insurgency_Discontent_Rise_Medium
+				add_to_variable = { USA_SAF_WAR_Discontent = 3 }
+			}
+		}
+	}	
+	## NON ID MISSIONS
+	BRG_GP_MEXDrugLines = { #
+
+		icon = GFX_decision_generic_civil_support
+
+		allowed = { original_tag = BRG }
+
+		visible = {
+			 check_variable = { BRG_Foreign_GUI_Selected = 3 }
+			 check_variable = { BRG_CloseUp_Selected = 10 }
+		}
+		cost = 10
+
+		days_remove = 30
+		days_re_enable = 90
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			#BUDGETSPENDSMALL
+		}
+		remove_effect = {
+			#ADDS TO BUDGETMedium
+			custom_effect_tooltip = BRG_GP_MEXDrugLines_TT
+		}
+	}
+	BRG_GP_CANSwayElectoralResults = { #
+
+		icon = GFX_decision_generic_civil_support
+
+		allowed = { original_tag = BRG }
+
+		visible = {
+			 check_variable = { BRG_Foreign_GUI_Selected = 3 }
+			 check_variable = { BRG_CloseUp_Selected = 11 }
+		}
+		cost = 10
+
+		days_remove = 30
+		days_re_enable = 90
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			#BUDGETSPENDSMALL
+		}
+		remove_effect = {
+			#Sways Electoral Results :lolhd:
+			custom_effect_tooltip = BRG_GP_CANSwayElectoralResults_TT
+		}
+	}
+	BRG_GP_USAMilitaryComplexInfiltrate = { #
+
+		icon = GFX_decision_generic_civil_support
+
+		allowed = { original_tag = BRG }
+
+		visible = {
+			 check_variable = { BRG_Foreign_GUI_Selected = 3 }
+			 check_variable = { BRG_CloseUp_Selected = 12 }
+		}
+		cost = 10
+
+		days_remove = 30
+		days_re_enable = 180
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			#BUDGETSPENDMEDIUM
+		}
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+						category = light_air
+					}
+				}
+				25 = {
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+						category = infantry_weapons
+					}
+				}
+				25 = {
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+						category = armor
+					}
+				}
+				25 = {
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+						category = artillery
+					}
+				}
+			}
+			add_to_variable = { BRG_GP_NukeCoverage^3 = 5 }
+			BRG_GP_NukeCoverage_Update = yes
+			custom_effect_tooltip = BRG_GP_3_Low
+		}
+	}
+	
+}

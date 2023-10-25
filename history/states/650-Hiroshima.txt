@@ -1,0 +1,30 @@
+state={
+	id=650
+	name="STATE_650"
+	manpower=481487
+	state_category = large_city
+	
+	history=
+	{
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 7
+			thermoelectric_plant = 2
+			dockyard = 2
+			hospitals = 1
+			barracks = 3
+			schools = 2
+			offices = 1
+			prisons = 1
+			1092 = {
+				naval_base = 10
+
+			}
+		}
+	victory_points = { 1092 30 }
+	}
+	provinces={
+		1092
+	}
+}

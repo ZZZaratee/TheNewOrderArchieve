@@ -1,0 +1,28 @@
+#POP DONE
+state={
+	id=790
+	name="STATE_790"
+	resources = {
+		steel = 17
+		uranium = 6
+	}
+	state_category = rural
+	provinces={
+		3770 9728 9732 
+	}
+	history={
+		owner = FRA
+		victory_points = { 9732 5 }
+		victory_points = { 3770 1 }
+		buildings = {
+			infrastructure = 5
+			schools = 1
+			hospitals = 1
+			barracks = 1
+		}
+		add_core_of = FRA
+		set_demilitarized_zone = yes
+	}
+	manpower=185000
+	buildings_max_level_factor=1.000
+}

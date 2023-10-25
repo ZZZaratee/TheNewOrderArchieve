@@ -1,0 +1,22 @@
+state={
+	id=445
+	name="STATE_445"
+
+	history={
+		owner = KLT
+		buildings = {
+			infrastructure = 1
+			air_base = 4
+		}
+		add_core_of = PAK
+		add_claim_by = IND
+		add_claim_by = AZH
+	}
+
+	provinces={
+		10813 13483 13484 
+	}
+	manpower=57674
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

@@ -1,0 +1,204 @@
+# RUS_STRAT_NOSTALEMATES = {
+# 	allowed = {
+# 		AND = {
+# 			is_russian_unifier = yes
+# 			NOT = {
+# 				tag = ONG
+# 			}
+# 		}
+# 	}
+# 	enable = {
+# 		has_war = yes
+# 	}
+
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = IRK
+# 		value = 1000
+#   	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = BRY
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = CHT
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = AMR
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = MAG
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = OMO
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = KMC
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = KMC
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = PRC
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = ALT
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = KEM
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = KRS
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = TOM
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = NOV
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = PAV
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = OMS
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = TYM
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = SVR
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = FAV
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = YGR
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = ZLT
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = PRM
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = URL
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = VYT
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = BKR
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = SAM
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = TAR
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = GOR
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = VOL
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = PLS
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = WRS
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = VOR
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = KOM
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = GAY
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = ONG
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = MGN
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = ORE
+# 		value = 1000
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = DRL
+# 		value = 1000
+# 	}
+# }

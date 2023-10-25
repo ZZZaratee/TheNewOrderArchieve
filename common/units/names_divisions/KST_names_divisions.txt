@@ -1,0 +1,88 @@
+﻿KST_Infantry = {
+	name = "Pekhotnaya Diviziya"
+
+	for_countries = { KST }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%dya Pekhotnaya Diviziya"
+
+	ordered = {
+		1 = { "%dya Pekhotnaya Diviziya" }
+		2 = { "%dya Pekhotnaya Diviziya" }
+		3 = { "%dya Pekhotnaya Diviziya" }
+		4 = { "%dya Pekhotnaya Diviziya" }
+		5 = { "%dya Pekhotnaya Diviziya" }
+		6 = { "%dya Pekhotnaya Diviziya" }
+		7 = { "%dya Pekhotnaya Diviziya" }
+		8 = { "%dya Pekhotnaya Diviziya" }
+		9 = { "%dya Pekhotnaya Diviziya" }
+		10 = { "%dya Pekhotnaya Diviziya" }
+		11 = { "%dya Pekhotnaya Diviziya" }
+		12 = { "%dya Pekhotnaya Diviziya" }
+		13 = { "%dya Pekhotnaya Diviziya" }
+		14 = { "%dya Pekhotnaya Diviziya" }
+		15 = { "%dya Pekhotnaya Diviziya" }
+		16 = { "%dya Pekhotnaya Diviziya" }
+		17 = { "%dya Pekhotnaya Diviziya" }
+		18 = { "%dya Pekhotnaya Diviziya" }
+		19 = { "%dya Pekhotnaya Diviziya" }
+		20 = { "%dya Pekhotnaya Diviziya" }
+		21 = { "%dya Pekhotnaya Diviziya" }
+		22 = { "%dya Pekhotnaya Diviziya" }
+		23 = { "%dya Pekhotnaya Diviziya" }
+		24 = { "%dya Pekhotnaya Diviziya" }
+		25 = { "%dya Pekhotnaya Diviziya" }
+		26 = { "%dya Pekhotnaya Diviziya" }
+		27 = { "%dya Pekhotnaya Diviziya" }
+		28 = { "%dya Pekhotnaya Diviziya" }
+		29 = { "%dya Pekhotnaya Diviziya" }
+		30 = { "%dya Pekhotnaya Diviziya" }
+	}
+}
+KST_Conscripts = {
+	name = "Garnizon Podrazdeleniye"
+
+	for_countries = { KST }
+
+	can_use = { always = yes }
+
+	division_types = { "light_infantry" }
+
+	fallback_name = "%dya Narodnaya Militsiya"
+
+	ordered = {
+		1 = { "Kostroma Gorod Oborona" }
+		2 = { "%dya Garnizon Podrazdeleniye" }
+		3 = { "%dya Garnizon Podrazdeleniye" }
+		4 = { "%dya Garnizon Podrazdeleniye" }
+		5 = { "%dya Garnizon Podrazdeleniye" }
+		6 = { "%dya Garnizon Podrazdeleniye" }
+		7 = { "%dya Garnizon Podrazdeleniye" }
+		8 = { "%dya Garnizon Podrazdeleniye" }
+		9 = { "%dya Garnizon Podrazdeleniye" }
+		10 = { "%dya Garnizon Podrazdeleniye" }
+		11 = { "%dya Garnizon Podrazdeleniye" }
+		12 = { "%dya Garnizon Podrazdeleniye" }
+		13 = { "%dya Garnizon Podrazdeleniye" }
+		14 = { "%dya Garnizon Podrazdeleniye" }
+		15 = { "%dya Garnizon Podrazdeleniye" }
+		16 = { "%dya Garnizon Podrazdeleniye" }
+		17 = { "%dya Garnizon Podrazdeleniye" }
+		18 = { "%dya Garnizon Podrazdeleniye" }
+		19 = { "%dya Garnizon Podrazdeleniye" }
+		20 = { "%dya Garnizon Podrazdeleniye" }
+		21 = { "%dya Garnizon Podrazdeleniye" }
+		22 = { "%dya Garnizon Podrazdeleniye" }
+		23 = { "%dya Garnizon Podrazdeleniye" }
+		24 = { "%dya Garnizon Podrazdeleniye" }
+		25 = { "%dya Garnizon Podrazdeleniye" }
+		26 = { "%dya Garnizon Podrazdeleniye" }
+		27 = { "%dya Garnizon Podrazdeleniye" }
+		28 = { "%dya Garnizon Podrazdeleniye" }
+		29 = { "%dya Garnizon Podrazdeleniye" }
+		30 = { "%dya Garnizon Podrazdeleniye" }
+	}
+}

@@ -1,0 +1,239 @@
+PRU_debug_category = { #Peru Debug Decisions
+	PRU_disable_debug = {
+		priority = 600
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_disable_debug"
+			set_country_flag = PRU_disabled_debug
+		}
+	}
+	PRU_kill_prado_debug = {
+		priority = 500
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_kill_prado_debug"
+			kill_country_leader = yes
+
+        	#Vp Assumes Power
+			create_country_leader = {
+				name = "Luis Gallo Porras"
+				picture = "Portrait_PRU_Gallo_Porras.dds"
+				desc = "POLITICS_NOTHING_DESC"
+				expire = "1980.1.1"
+				ideology = conservative_democracy_subtype
+				traits = { presidente_peru_latin }
+			}
+
+			#Shocking News For Peru 
+			set_popularities = {
+				communist = 2
+				socialist = 4
+				social_democracy = 21
+				liberal_democracy = 24
+				conservative_democracy = 20
+				authoritarian_democracy = 24
+				despotism = 3
+				fascism = 2
+			}
+
+			#The World Knows Now
+			every_country = {
+				news_event = {
+					id = WORLD.30050
+				}
+			}
+		}
+	}
+	PRU_early_coup_debug = {
+		priority = 500
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_early_coup_debug"
+			set_politics = { ruling_party = despotism }
+
+			#The Death of the Dream 
+			set_popularities = {
+				communist = 3
+				socialist = 6
+				social_democracy = 22
+				liberal_democracy = 23
+				conservative_democracy = 15
+				authoritarian_democracy = 23
+				despotism = 5
+				fascism = 3
+			}
+			remove_ideas = {
+				PRU_idea_fake_democratic_dream
+			}
+			add_ideas = {
+			    PRU_idea_death_of_dream
+			}
+
+			#The Junta is Here
+			add_country_leader_trait = presidente_junta_latin
+
+			#The World Knows Now
+			every_country = {
+				news_event = {
+					id = WORLD.30051
+				}
+			}
+		}
+	}
+	PRU_president_belaunde_debug = {
+		priority = 400
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_president_belaunde_debug"
+			set_politics = { ruling_party = liberal_democracy }
+			add_country_leader_trait = presidente_peru_latin
+			set_country_flag = PRU_belaunde_president
+			every_country = {
+				news_event = {
+					id = WORLD.30052
+				}
+			}
+			set_party_name = {
+				ideology = liberal_democracy
+				name = PRU_ap_party
+				long_name = PRU_ap_party_long
+			}
+		}
+	}
+	PRU_president_odria_debug = {
+		priority = 400
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_president_odria_debug"
+			set_politics = { ruling_party = authoritarian_democracy }
+			add_country_leader_trait = presidente_peru_latin
+			set_country_flag = PRU_odria_president
+			every_country = {
+				news_event = {
+					id = WORLD.30053
+				}
+			}
+		}
+	}
+	PRU_president_seoane_debug = {
+		priority = 400
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_president_seoane_debug"
+			set_politics = { ruling_party = social_democracy }
+            add_country_leader_trait = presidente_peru_latin
+            set_country_flag = PRU_seoane_president
+            every_country = {
+                news_event = {
+                    id = WORLD.30054
+                }
+            }
+		}
+	}
+	PRU_president_beltran_debug = {
+		priority = 400
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_president_beltran_debug"
+			retire_country_leader = yes
+            create_country_leader = {
+	            name = "Pedro Beltrán Espantoso"
+	            desc = "POLITICS_NOTHING_DESC"
+	            picture = "Portrait_PRU_Pedro_Beltran.dds"
+	            expire = "1980.1.1"
+	            ideology = conservative_democracy_liberal_conservatism_subtype
+	            traits = {
+		            presidente_peru_latin
+	            }
+            }
+            set_country_flag = PRU_beltran_president
+            every_country = {
+                news_event = {
+                    id = WORLD.30055
+                }
+            }
+            set_party_name = {
+                ideology = conservative_democracy
+                name = PRU_an_party
+                long_name = PRU_an_party_long
+            }
+		}
+	}
+	PRU_president_moreyra_debug = {
+		priority = 400
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_president_moreyra_debug"
+			retire_country_leader = yes
+			create_country_leader = {
+	            name = "Carlos Moreyra y Paz Soldán"
+	            desc = "POLITICS_NOTHING_DESC"
+	            picture = "Portrait_PRU_Moreyra_Paz.dds"
+	            expire = "1980.1.1"
+	            ideology = conservative_democracy_subtype
+	            traits = {
+		            presidente_peru_latin
+	            }
+            }
+            set_country_flag = PRU_soldan_president
+            every_country = {
+                news_event = {
+                    id = WORLD.30057
+                }
+            }
+		}
+	}
+	PRU_president_cornejo_debug = {
+		priority = 400
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_president_cornejo_debug"
+			retire_country_leader = yes
+            create_country_leader = {
+	            name = "Héctor Cornejo Chávez"
+	            desc = "POLITICS_NOTHING_DESC"
+	            picture = "Portrait_PRU_Hector_Cornejo.dds"
+	            expire = "1980.1.1"
+	            ideology = conservative_democracy_christian_democracy_subtype
+                traits = {
+		            presidente_peru_latin
+	            }
+            }
+            set_country_flag = PRU_cornejo_president
+            every_country = {
+                news_event = {
+                    id = WORLD.30056
+                }
+            }
+            set_party_name = {
+                ideology = conservative_democracy
+                name = PRU_pdc_party
+                long_name = PRU_pdc_party_long
+            }
+		}
+	}
+	PRU_president_beltran_gamer_debug = {
+		priority = 400
+		icon = GFX_decision_generic_military_parade
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: decision PRU_president_beltran_gamer_debug"
+			retire_country_leader = yes
+            create_country_leader = {
+	            name = "Pedro Beltrán Espantoso"
+	            desc = "POLITICS_NOTHING_DESC"
+	            picture = "Portrait_PRU_Pedro_Beltran.dds"
+	            expire = "1980.1.1"
+	            ideology = conservative_democracy_liberal_conservatism_subtype
+	            traits = {
+		            presidente_peru_latin
+	            }
+            }
+            set_country_flag = PRU_beltran_president
+            every_country = {
+                news_event = {
+                    id = WORLD.30058
+                }
+            }
+		}
+	}
+}

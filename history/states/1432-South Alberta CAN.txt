@@ -1,0 +1,29 @@
+state = {
+	id=1432
+	name = "STATE_1432"
+
+	resources={
+		oil=20
+	}
+	
+	manpower = 1205784
+	state_category = city
+	
+	history = {
+		owner = CAN
+		add_core_of = CAN
+		victory_points = { 14613 5 }
+		victory_points = { 14614 5 }
+
+		buildings = {
+			infrastructure = 5
+			radar_station = 1
+			air_base = 1
+			thermoelectric_plant = 1
+		}
+	}
+
+	provinces = {
+		6726 515 14613 3010 6754 1347 7787 4765 3706 1262 7718 14614 10684
+	}
+}

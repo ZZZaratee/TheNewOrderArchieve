@@ -1,0 +1,31 @@
+
+state={
+	id=1162
+	name="STATE_1162"
+
+	resources={
+		oil=5
+		steel=4
+	}
+
+	history={
+		owner = COG
+		add_core_of = COG
+		buildings = {
+			schools = 1
+			barracks = 1
+		    infrastructure = 3
+		    2115 = {
+		    	naval_base = 1
+		    }
+		}
+		victory_points = { 2115 10 }
+	}
+
+	provinces={
+    	2115 10968 13883 13889
+	}
+	manpower = 1370990
+	buildings_max_level_factor=1.000
+	state_category=town
+}

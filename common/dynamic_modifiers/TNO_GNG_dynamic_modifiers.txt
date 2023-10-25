@@ -1,0 +1,16 @@
+GNG_status_dynmod = {
+	enable = { always = yes }
+	stability_factor = GNG_status_dynmod_stab
+	war_support_factor = GNG_status_dynmod_warsup
+	political_power_gain = GNG_status_dynmod_pp
+}
+
+GNG_corruption_dynmod = {
+	enable = { always = yes }
+	political_power_gain = GNG_corruption_pp_impact
+}
+
+GNG_fiscal_dynmod = {
+	enable = { always = yes }
+	political_power_factor = GNG_fiscal_pp_gain
+}

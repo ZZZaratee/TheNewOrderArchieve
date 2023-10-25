@@ -1,0 +1,533 @@
+ideas = {
+	country = {
+	    tno_public_meetings_outlawed_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_public_meetings_outlawed_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			stability_factor = 0.05
+			}
+			cancel_if_invalid = no
+		}
+		tno_public_meetings_regulated_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_public_meetings_regulated_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    political_power_gain = 0.025
+                stability_factor = 0.025				
+			}
+			cancel_if_invalid = no
+		}
+		tno_public_meetings_allowed_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_public_meetings_allowed_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    political_power_factor = 0.05
+			}
+			cancel_if_invalid = no
+		}
+		tno_press_rights_state_press_only_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_press_rights_state_press_only_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    drift_defence_factor = 0.50 
+			    political_power_factor = 0.15 
+			}
+			cancel_if_invalid = no
+		}
+		tno_press_rights_censored_press_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_press_rights_censored_press_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    drift_defence_factor = 0.25 
+			    political_power_factor = 0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_press_rights_free_press_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_press_rights_free_press_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    drift_defence_factor = 0 
+                political_power_factor = -0.10 
+		        stability_factor = 0.025 
+			}
+			cancel_if_invalid = no
+		}
+		tno_political_parties_one_party_state_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_political_parties_one_party_state_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    drift_defence_factor = 0.5 
+			    political_power_gain = 0.15 
+			}
+			cancel_if_invalid = no
+		}
+		tno_political_parties_controlled_opposition_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_political_parties_controlled_opposition_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    drift_defence_factor = 0.25 
+			    political_power_gain = 0.05 
+			    stability_factor = 0.025 
+			}
+			cancel_if_invalid = no
+		}
+		tno_political_parties_multiparty_system_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_political_parties_multiparty_system_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    stability_factor = 0.05
+			}
+			cancel_if_invalid = no
+		}
+		tno_religious_rights_state_religion_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_religious_rights_state_religion_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    drift_defence_factor = 0.50 
+			    political_power_gain = -0.10 
+			    stability_factor = 0.10 
+			    war_support_factor = 0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_religious_rights_pluralism_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_religious_rights_pluralism_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    drift_defence_factor = 0 
+			    political_power_gain = -0.05
+			    stability_factor = 0.05 
+			    war_support_factor = 0 
+			}
+			cancel_if_invalid = no
+		}
+		tno_religious_rights_secularism_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_religious_rights_secularism_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    stability_factor = 0.025
+			}
+			cancel_if_invalid = no
+		}
+		tno_religious_rights_state_atheism_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_religious_rights_state_atheism_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    drift_defence_factor = 0.50 
+			    political_power_gain = 0.05 
+			    stability_factor = -0.025 
+			    war_support_factor = 0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_trade_unions_illegal_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_trade_unions_illegal_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    industrial_capacity_dockyard = 0.05 
+		        industrial_capacity_factory = 0.05 
+		        industrial_expertise_monthly_rate = -0.5 
+			    production_factory_max_efficiency_factor = -0.05 
+			    stability_factor = -0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_trade_unions_state_controlled_dummy = {
+			on_add = {	
+			   log = "[GetDateText]: [Root.GetName]: add idea tno_trade_unions_state_controlled_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    industrial_capacity_dockyard = 0.025 
+		        industrial_capacity_factory = 0.025 
+			    production_factory_max_efficiency_factor = -0.025 
+			    stability_factor = -0.025 
+			}
+			cancel_if_invalid = no
+		}
+		tno_trade_unions_nonsocialist_allowed_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_trade_unions_nonsocialist_allowed_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    industrial_capacity_dockyard = -0.025 
+			    industrial_capacity_factory = -0.025 
+		        industrial_expertise_monthly_rate = 0.25 
+		        poverty_monthly_rate = 0.025 
+			}
+			cancel_if_invalid = no
+		}
+		tno_trade_unions_all_allowed_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_trade_unions_all_allowed_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    industrial_capacity_dockyard = -0.05 
+			    industrial_capacity_factory = -0.05 
+			    industrial_expertise_monthly_rate = 0.5 
+			    poverty_monthly_rate = 0.050 
+		        production_factory_max_efficiency_factor = 0.025 
+			    stability_factor = 0.025 
+			}
+			cancel_if_invalid = no
+		}
+		tno_immigration_closed_borders_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_closed_borders_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+		        MONTHLY_POPULATION = -0.10 
+		        stability_factor = 0.10 
+			}
+			cancel_if_invalid = no
+		}
+		tno_immigration_quota_immigration_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_quota_immigration_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    MONTHLY_POPULATION = -0.05 
+			    stability_factor = 0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_immigration_open_immigration_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_open_immigration_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			}
+			cancel_if_invalid = no
+		}
+		tno_immigration_naturalization_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_naturalization_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    MONTHLY_POPULATION = 0.05 
+			    stability_factor = -0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_immigration_encouraged_immigration_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_immigration_encouraged_immigration_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    MONTHLY_POPULATION = 0.10 
+			    stability_factor = -0.1 
+			}
+			cancel_if_invalid = no
+		}
+		tno_slavery_allowed_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_slavery_allowed_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    industrial_capacity_dockyard = 0.05 
+			    industrial_capacity_factory = 0.05 
+			    political_power_factor = -0.15 
+			    poverty_monthly_rate = -0.03 
+			    production_speed_buildings_factor = 0.05 
+			    research_speed_factor = -0.05 
+			    stability_factor = -0.10 
+			    taxable_population_modifier = -0.05 
+			    war_support_factor = -0.05 
+			    consumer_goods_use_modifier = -0.05 
+			    consumer_goods_production_factor = 0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_slavery_corvee_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_slavery_corvee_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    industrial_capacity_dockyard = 0.025 
+				industrial_capacity_factory = 0.025 
+				political_power_gain = -0.075
+				poverty_monthly_rate = -0.015
+				production_speed_buildings_factor = 0.025 
+				research_speed_factor = -0.025 
+				stability_factor = -0.05 
+				taxable_population_modifier = -0.025 
+				war_support_factor = -0.025 
+				consumer_goods_use_modifier = -0.025 
+				consumer_goods_production_factor = 0.025 
+			}
+			cancel_if_invalid = no
+		}
+		tno_slavery_outlawed_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_slavery_outlawed_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    research_speed_factor = 0.05
+			    stability_factor = 0.05
+			}
+			cancel_if_invalid = no
+		}
+		tno_vote_franchise_no_voting_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_vote_franchise_no_voting_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    political_power_factor = 0.15 
+			    stability_factor = -0.075 
+			}
+			cancel_if_invalid = no
+		}
+		tno_vote_franchise_elite_voting_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_vote_franchise_elite_voting_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    political_power_factor = 0.10 
+			    stability_factor = -0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_vote_franchise_registered_voting_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_vote_franchise_registered_voting_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    political_power_factor = 0.05 
+			    stability_factor = -0.025 
+			}
+			cancel_if_invalid = no
+		}
+		tno_vote_franchise_universal_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_vote_franchise_universal_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			}
+			cancel_if_invalid = no
+		}
+		tno_vote_franchise_promoted_voting_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_vote_franchise_promoted_voting_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = { 
+			    political_power_factor = -0.05 
+				stability_factor = 0.025 
+			}
+			cancel_if_invalid = no
+		}
+		tno_refugees_banned_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_refugees_banned_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    MONTHLY_POPULATION = -0.10 
+			    academic_base_monthly_rate = -0.25 
+		        industrial_expertise_monthly_rate = -0.25 
+			    political_power_factor = 0.10 
+			}
+			cancel_if_invalid = no
+		}
+		tno_refugees_skilled_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_refugees_skilled_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    MONTHLY_POPULATION = -0.05 
+			    academic_base_monthly_rate = 0.25
+			    industrial_expertise_monthly_rate = 0.25
+			    political_power_factor = 0.05 
+			}
+			cancel_if_invalid = no
+		}
+		tno_refugees_vetted_entry_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_refugees_vetted_entry_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    academic_base_monthly_rate = 0.5 
+			    industrial_expertise_monthly_rate = 0.5 
+			}
+			cancel_if_invalid = no
+		}
+		tno_refugees_open_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_refugees_open_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    MONTHLY_POPULATION = 0.05 
+			    academic_base_monthly_rate = 0.5 
+		        industrial_expertise_monthly_rate = 0.5 
+			    political_power_factor = -0.05 
+			    poverty_monthly_rate = -0.02
+			}
+			cancel_if_invalid = no
+		}
+		tno_refugees_give_me_your_poor_dummy = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_refugees_give_me_your_poor_dummy"
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {
+			    MONTHLY_POPULATION = 0.10 
+			    academic_base_monthly_rate = 0.5 
+		        industrial_expertise_monthly_rate = 0.5 
+			    political_power_factor = -0.10 
+			    poverty_monthly_rate = -0.02 
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

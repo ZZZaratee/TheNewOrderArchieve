@@ -1,0 +1,186 @@
+defined_text = {
+	name = GetGNGStatusStab
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_status_dynmod_stab = 0}}
+		}
+		localization_key = GNG_status_dummy_stability
+	}
+}
+
+defined_text = {
+	name = GetGNGStatusWarsup
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_status_dynmod_warsup = 0}}
+		}
+		localization_key = GNG_status_dummy_warsup
+	}
+}
+
+defined_text = {
+	name = GetGNGStatusPP
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_status_dynmod_pp = 0}}
+		}
+		localization_key = GNG_status_dummy_pp
+	}
+}
+
+defined_text = {
+	name = GetGuangdongStatusIdea
+	text = {
+		trigger = {
+			has_country_flag = chief_executive_suzuki
+		}
+		localization_key = GNG_between_two_worlds_scriptloc
+	}
+	text = {
+		trigger = {
+			has_idea = GNG_yasuda_crisis_dummy
+		}
+		localization_key = GNG_yasuda_crisis_scriptloc
+	}
+	text = {
+		trigger = {
+			has_idea = GNG_silicon_years_dummy
+		}
+		localization_key = GNG_silicon_years_scriptloc
+	}
+}
+
+defined_text = {
+	name = GetGNGCorruptionMonthlyCorruption
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_corruption_monthly_corruption = 0}}
+		}
+		localization_key = GNG_corruption_dummy_monthly_corruption
+	}
+}
+
+defined_text = {
+	name = GetGNGCorruptionPPImpact
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_corruption_pp_impact = 0}}
+		}
+		localization_key = GNG_Corruption_Dummy_PP_Impact
+	}
+}
+defined_text = {
+	name = GetGNGCorruptionrGDPImpact
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_corruption_rGDP_impact = 0}}
+		}
+		localization_key = GNG_Corruption_Dummy_rGDP_Impact
+	}
+}
+defined_text = {
+	name = GetGNGCorruptionGSImpact
+	text = {
+		trigger = {
+			check_variable = {GNG_corruption_Government_Support_Impact < 0}
+		}
+		localization_key = GNG_Corruption_Dummy_Government_Support_Negative
+	}
+	text = {
+		trigger = {
+			check_variable = {GNG_corruption_Government_Support_Impact > 0}
+		}
+		localization_key = GNG_Corruption_Dummy_Government_Support_Positive
+	}
+}
+defined_text = {
+	name = GetGNGCorruptionChineseOpinion
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_corruption_republic_of_china_support_cap = 0}}
+		}
+		localization_key = GNG_corruption_dummy_chinese_opinion
+	}
+}
+
+defined_text = {
+	name = GetGNGFiscalPPGain
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_fiscal_pp_gain = 0}}
+		}
+		localization_key = GNG_fiscal_dummy_pp_gain
+	}
+}
+
+defined_text = {
+	name = GetGNGFiscalCreditRating
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_fiscal_credit_rating = 0}}
+		}
+		localization_key = GNG_fiscal_dummy_credit_rating
+	}
+}
+
+defined_text = {
+	name = GNGFiscalJapaneseOpinion
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_fiscal_japanese_opinion = 0}}
+		}
+		localization_key = GNG_fiscal_dummy_japanese_opinion_cap
+	}
+}
+
+defined_text = {
+	name = GetGNGSecurityChineseZhujinSupportCap
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_security_non_japanese_support_cap = 0}}
+		}
+		localization_key = GNG_security_dummy_chinese_zhujin_support_cap
+	}
+}
+
+defined_text = {
+	name = GetGNGSecurityChinaSupportCap
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_security_republic_of_china_support_cap = 0}}
+		}
+		localization_key = GNG_security_dummy_republic_of_china_support_cap
+	}
+}
+
+defined_text = {
+	name = GetGNGSecurityKenpeitaiSupportCap
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_security_kenpeitai_support_cap = 0}}
+		}
+		localization_key = GNG_security_dummy_kenpeitai_support_cap
+	}
+}
+
+defined_text = {
+	name = GetGNGSecurityPoliceSupportCap
+	text = {
+		trigger = {
+			NOT = {check_variable = {GNG_security_police_support_cap = 0}}
+		}
+		localization_key = GNG_security_dummy_police_support_cap
+	}
+}
+
+defined_text = {
+	name = GetIdeaInGameScriptLoc
+	text = {
+		trigger = {
+			has_country_flag = GNG_startup
+		}
+		localization_key = GNG_natspirit_text_separator
+	}
+}
+
+

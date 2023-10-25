@@ -1,0 +1,84 @@
+ideas = {
+	#############
+    ## SPIRITS ##
+	#############
+	##country = {
+
+		##ARP_placeholder = {
+			##on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARP_placeholder" }
+
+			##allowed = { always = yes }
+			##allowed_civil_war = { always = yes }
+
+			#picture = PAR_bastion_of_latin_american_fascism
+
+			#removal_cost = -1
+
+			#modifier = {
+
+			#}
+		#}
+	#}
+	###############
+	## MINISTERS ##
+	###############
+	head_of_government = {
+		ARP_epifanio_mendez_fleitas_arp_hog = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARP_epifanio_mendez_fleitas_arp_hog" }
+			picture = PAR_Epifano_Mendez_Fleitas_minister
+
+			allowed = { original_tag = ARP }
+			available = { }
+
+			traits = {
+				head_of_government
+				minister_authoritarian_democracy_peronism
+			}
+			cancel_if_invalid = yes
+		}
+	}
+
+	security_minister = {
+		ARP_adolfo_philippeaux_sec = { #peronist version
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARP_adolfo_philippeaux_sec" }
+			picture = ARP_Adolfo_Philippeaux_sec
+
+			allowed = { original_tag = ARP }
+			available = { }
+
+			traits = {
+				security_minister
+				despotism
+			}
+			cancel_if_invalid = yes
+		}
+		
+		ARP_eduardo_uriburu_sec = { #colorado version
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARP_eduardo_uriburu_sec" }
+			picture = ARP_Eduardo_Uriburu_sec
+
+			allowed = { original_tag = ARP }
+			available = { }
+
+			traits = {
+				security_minister
+				despotism
+			}
+			cancel_if_invalid = yes
+		}
+		
+		ARP_benjamin_rattenbach_sec = { #colorado version
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARP_benjamin_rattenbach_sec" }
+			picture = ARP_Benjamin_Rattenbach_sec
+
+			allowed = { original_tag = ARP }
+			available = { }
+
+			traits = {
+				security_minister
+				despotism
+			}
+			cancel_if_invalid = yes
+		}
+	}
+}

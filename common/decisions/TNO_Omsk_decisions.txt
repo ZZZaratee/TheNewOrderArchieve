@@ -1,0 +1,1858 @@
+OMS_yazov_reign_category = {
+	OMS_train_new_recruits = {
+		icon = GFX_decision_generic_military_hat
+		allowed = {
+			original_tag = OMS
+		}
+		
+		available = {
+			NOT = {
+				has_decision = OMS_tackle_tara
+				has_decision = OMS_infiltrate_iskilkul
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		days_remove = 35
+		days_re_enable = 180
+
+		cost = 35
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_train_new_recruits"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_train_new_recruits"
+			add_manpower = 1000
+			army_experience = 5
+			TNO_improve_training_policy_effectiveness_monthly_low = yes
+		}
+	}
+	OMS_silence_dissent = {
+		icon = GFX_decision_arrest
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_decision = OMS_tackle_tara
+				has_decision = OMS_infiltrate_iskilkul
+			}
+		}
+
+		modifier = {
+			political_power_gain = 0.75
+			stability_factor = -0.075
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 35
+		days_re_enable = 180
+
+		cost = 35
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_silence_dissent"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_silence_dissent"
+			TNO_improve_press_rights_policy_effectiveness_monthly_low = yes
+		}
+	}
+	OMS_infiltrate_iskilkul = {
+
+		icon = GFX_decision_revolt
+
+		allowed = {
+			original_tag = OMS
+		}
+
+		visible = {
+			has_country_flag = OMS_the_capital_secured
+		}
+
+		available = {
+			has_country_flag = OMS_the_capital_secured
+			NOT = {
+				has_decision = OMS_tackle_tara
+				has_decision = OMS_silence_dissent
+				has_decision = OMS_train_new_recruits
+				has_decision = OMS_industrial_buildup
+				has_decision = OMS_industrial_investments
+				has_decision = OMS_construction_subsidies
+				has_decision = OMS_resource_extraction
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				factor = 2
+				has_country_flag = OMS_Lock_Warlord
+			}
+		}
+
+		days_remove = 75
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_infiltrate_iskilkul"
+			hidden_effect = {
+				country_event = { id = omskgauntlet.11 days = 3 }
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_infiltrate_iskilkul"
+			custom_effect_tooltip = OMS_infiltrate_iskilkul_tt
+			clr_country_flag = OMS_revolt_in_iskilkul
+			hidden_effect = {
+				country_event = { id = omskgauntlet.12 }
+			}
+		}
+	}
+	OMS_tackle_tara = {
+
+		icon = GFX_decision_revolt
+
+		allowed = {
+			original_tag = OMS
+		}
+
+		visible = {
+			has_country_flag = OMS_the_capital_secured
+		}
+
+		available = {
+			has_country_flag = OMS_the_capital_secured
+			NOT = {
+				has_decision = OMS_infiltrate_iskilkul
+				has_decision = OMS_silence_dissent
+				has_decision = OMS_train_new_recruits
+				has_decision = OMS_industrial_buildup
+				has_decision = OMS_industrial_investments
+				has_decision = OMS_construction_subsidies
+				has_decision = OMS_resource_extraction
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				factor = 2
+				has_country_flag = OMS_Lock_Warlord
+			}
+		}
+
+		days_remove = 75
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_tackle_tara"
+			hidden_effect = {
+				country_event = { id = omskgauntlet.13 days = 3 }
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_tackle_tara"
+			custom_effect_tooltip = OMS_tackle_tara_tt
+			clr_country_flag = OMS_revolt_in_tara
+			hidden_effect = {
+				country_event = { id = omskgauntlet.14 }
+			}
+		}
+	}
+	OMS_signal_the_infiltrators = {
+
+		icon = GFX_decision_generic_assault
+
+		allowed = {
+			original_tag = OMS
+		}
+
+		visible = {
+			AND = {
+				OR = {
+					has_war_with = TYM
+					has_war_with = SVR
+				}
+				has_country_flag = OMS_tyumen_infiltrators
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		days_remove = 7
+
+		fire_only_once = yes
+
+		cost = 75
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_signal_the_infiltrators"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_signal_the_infiltrators"
+			custom_effect_tooltip = OMS_signal_the_infiltrators_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = TYM
+					}
+					load_oob = OMS_infiltrators
+					TYM = {
+						country_event = { id = omsk.37 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_war_with = SVR
+						NOT = {
+							country_exists = TYM
+						}
+					}
+					load_oob = OMS_infiltrators
+					SVR = {
+						country_event = { id = omsk.37 }
+					}
+				}
+			}
+		}
+	}
+	OMS_old_guard_revolt = {
+
+		icon = GFX_decision_revolt
+
+		activation = { always = no }
+
+		visible = {
+			has_country_flag = OMS_old_guard_uprising
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = OMS_old_guard_revolt_trigger
+				NOT = {
+					has_country_flag = OMS_revolt_in_iskilkul
+					has_country_flag = OMS_revolt_in_tara
+				}
+			}
+		}
+
+		days_mission_timeout = 250
+
+		is_good = no
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout OMS_old_guard_revolt"
+			custom_effect_tooltip = OMS_old_guard_revolt_failure_tt
+			hidden_effect = {
+				country_event = { id = omskgauntlet.9 }
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_old_guard_revolt"
+			custom_effect_tooltip = OMS_old_guard_revolt_success_tt
+			hidden_effect = {
+				country_event = { id = omskgauntlet.10 days = 1 }
+			}
+		}
+	}
+}
+
+OMS_industrial_reform_category = {
+	OMS_industrial_buildup = {
+		icon = GFX_decision_generic_heavy_industry
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				if = {
+					limit = {
+						has_country_flag = OMS_revolt_in_iskilkul
+						has_country_flag = OMS_revolt_in_tara
+					}
+					has_decision = OMS_infiltrate_iskilkul
+					has_decision = OMS_tackle_tara
+				}
+				has_decision = OMS_silence_dissent
+				has_decision = OMS_train_new_recruits
+				has_decision = OMS_industrial_investments
+				has_decision = OMS_construction_subsidies
+				has_decision = OMS_resource_extraction
+			}
+		}
+
+		modifier = {
+			consumer_goods_use_modifier = 0.1
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				num_of_factories < 5
+				factor = 10
+			}
+		}
+
+		days_remove = 60
+
+		days_re_enable = 75
+
+		cost = 75
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_industrial_buildup"
+		}
+		fixed_random_seed = no
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_industrial_buildup"
+			set_temp_variable = { temp_econ_GDP_boost_flat = 0.02 }
+			econ_GDP_boost_once_flat = yes
+		}
+	}
+	OMS_industrial_investments = {
+		icon = GFX_decision_generic_money_sign
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				if = {
+					limit = {
+						has_country_flag = OMS_revolt_in_iskilkul
+						has_country_flag = OMS_revolt_in_tara
+					}
+					has_decision = OMS_infiltrate_iskilkul
+					has_decision = OMS_tackle_tara
+				}
+				has_decision = OMS_silence_dissent
+				has_decision = OMS_train_new_recruits
+				has_decision = OMS_industrial_buildup
+				has_decision = OMS_construction_subsidies
+				has_decision = OMS_resource_extraction
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+			consumer_goods_use_modifier = -0.1
+		}
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				factor = 0
+				political_power_growth < 0.15
+			}
+		}
+
+		days_remove = 75
+		days_re_enable = 75
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_industrial_investments"
+		}
+	}
+	OMS_construction_subsidies = {
+		icon = GFX_decision_generic_construction
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				if = {
+					limit = {
+						has_country_flag = OMS_revolt_in_iskilkul
+						has_country_flag = OMS_revolt_in_tara
+					}
+					has_decision = OMS_infiltrate_iskilkul
+					has_decision = OMS_tackle_tara
+				}
+				has_decision = OMS_silence_dissent
+				has_decision = OMS_train_new_recruits
+				has_decision = OMS_industrial_buildup
+				has_decision = OMS_industrial_investments
+				has_decision = OMS_resource_extraction
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+			production_speed_buildings_factor = 0.15
+		}
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				factor = 0
+				political_power_growth < 0.1
+			}
+		}
+
+		days_remove = 75
+		days_re_enable = 75
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construction_subsidies"
+			set_temp_variable = { civilian_costs_temp = 0.01 }
+			econ_civilian_costs_change = yes
+		}
+	}
+	OMS_resource_extraction = {
+		icon = GFX_decision_oil_extraction
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				if = {
+					limit = {
+						has_country_flag = OMS_revolt_in_iskilkul
+						has_country_flag = OMS_revolt_in_tara
+					}
+					has_decision = OMS_infiltrate_iskilkul
+					has_decision = OMS_tackle_tara
+				}
+				has_decision = OMS_silence_dissent
+				has_decision = OMS_train_new_recruits
+				has_decision = OMS_industrial_buildup
+				has_decision = OMS_industrial_investments
+				has_decision = OMS_construction_subsidies
+				has_decision = OMS_resource_extraction
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+			local_resources_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				factor = 0
+				political_power_growth < 0.15
+			}
+		}
+
+		days_remove = 75
+		days_re_enable = 75
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_resource_extraction"
+		}
+	}
+}
+
+OMS_DECCAT_insurgency = {
+	OMS_acquire_more_bases = {
+		icon = GFX_decision_generic_building_army_base
+		allowed = { original_tag = OMS }
+		visible = {
+			check_variable = { OMS_available_new_bases > 0 }
+		}
+		ai_will_do = { factor = 10 }
+		days_remove = 30
+		days_re_enable = 14
+		cost = 40
+		modifier = {
+			political_power_gain = -0.1
+			war_support_weekly = -0.002
+		}
+		complete_effect = {
+			add_stability = -0.05
+			subtract_from_variable = { OMS_available_new_bases = 1 }
+		}
+		remove_effect = {
+			custom_effect_tooltip = OMS_insurgency_increase_free_bases
+			add_to_variable = { AVAILABLE_BASES = 1 }
+			add_to_variable = { insurgency_controller = 1 }
+		}
+	}
+	OMS_build_base = {
+		icon = GFX_decision_generic_destroy_fort
+		allowed = { original_tag = OMS }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = OMS_trigger_available_base
+				check_variable = { AVAILABLE_BASES > 0 }
+			}
+			OMS_has_neighboring_base = yes
+		}
+		visible = {
+			check_variable = { insurgency_state_selected:base_status = 1 }
+		}
+		cost = 30
+		days_remove = 14
+		complete_effect = {
+			set_variable = { OMS_acted_upon_build_i = insurgency_state_selected_i }
+		}
+		remove_effect = {
+			OMS_build_a_base_here = yes
+		}
+	}
+	OMS_dismantle_own_base = {
+		icon = GFX_decision_exfiltrate_state
+		allowed = { original_tag = OMS }
+		#available = { }
+		visible = {
+			check_variable = { insurgency_state_selected:base_status = 2 }
+		}
+		custom_cost_text = decision_cost_10_cp
+		custom_cost_trigger = {
+			hidden_trigger = {
+				command_power > 9.99
+			}
+		}
+		days_remove = 14
+		complete_effect = {
+			set_variable = { OMS_acted_upon_dismantle_i = insurgency_state_selected_i }
+		}
+		remove_effect = {
+			OMS_dismantle_base_here = yes
+		}
+	}
+	OMS_attack_enemy_base = {
+		icon = GFX_decision_generic_border_war
+		allowed = { original_tag = OMS }
+		available = {
+			OMS_has_neighboring_base = yes
+		}
+		visible = {
+			check_variable = { insurgency_state_selected:base_status = 3 }
+		}
+		custom_cost_text = decision_cost_15_cp_25_pp
+		custom_cost_trigger = {
+			hidden_trigger = {
+				has_political_power > 24.99
+				command_power > 14.99
+			}
+		}
+		days_remove = 14
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -25
+				add_command_power = -15
+			}
+			set_variable = { OMS_acted_upon_attack_i = insurgency_state_selected_i }
+		}
+		remove_effect = {
+			OMS_attack_enemy_base = yes
+		}
+	}
+	
+	# Misc decisions
+	OMS_rally_people_against_batov = {
+		icon = GFX_decision_generic_propaganda
+		allowed = { original_tag = OMS }
+		visible = {
+			has_completed_focus = OMS_hunt_down_batovs_bandits
+		}
+		days_remove = 35
+		days_re_enable = 21
+		complete_effect = {
+			add_stability = -0.1
+		}
+		custom_cost_text = decision_cost_10_stability
+		custom_cost_trigger = {
+			hidden_trigger = { always = yes }
+		}
+		modifier = {
+			political_power_gain = 0.3
+		}
+		remove_effect = {
+			add_political_power = 15
+			add_command_power = 10
+			add_war_support = 0.05
+		}
+	}
+	OMS_intensify_operations = {
+		icon = GFX_decision_generic_assault
+		allowed = { original_tag = OMS }
+		visible = {
+			has_completed_focus = OMS_raid_the_mountain_holdouts
+		}
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+		days_remove = 21
+		days_re_enable = 30
+		complete_effect = {
+			add_stability = -0.05
+		}
+		remove_effect = {
+			add_political_power = 10
+			add_to_variable = { OMS_our_base_effectiveness = -0.01 }
+			custom_effect_tooltip = OMS_intensify_operations_tt
+		}
+	}
+	
+	# Purge decisions
+
+	OMS_purge_chelyabinsk = {
+		icon = GFX_decision_generic_tank
+		allowed = { original_tag = OMS }
+		visible = { check_variable = { 754:base_status = 2 } }
+		available = {
+			NOT = {
+				has_country_flag = OMS_counter_insurgency_purge_progress
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		highlight_states = { state = 754 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_purge_chelyabinsk"
+			hidden_effect = { add_command_power = -15 }
+			set_country_flag = OMS_counter_insurgency_purge_progress
+			add_manpower = -2500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = OMS
+			}
+			hidden_effect = { 754 = { set_state_flag = OMS_insurgency_purged } }
+			hidden_effect = { country_event = { id = omskbatov.18 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_purge_chelyabinsk"
+			clr_country_flag = OMS_counter_insurgency_purge_progress
+			custom_effect_tooltip = OMS_purge_chelyabinsk_tt
+			country_event = { id = omskbatov.9 days = 1 }
+		}
+	}
+
+	OMS_purge_zlatoust = {
+		icon = GFX_decision_generic_assault
+		allowed = { original_tag = OMS }
+		visible = { check_variable = { 573:base_status = 2 } }
+		available = {
+			NOT = {
+				has_country_flag = OMS_counter_insurgency_purge_progress
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		highlight_states = { state = 573 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_purge_zlatoust"
+			hidden_effect = { add_command_power = -15 }
+			set_country_flag = OMS_counter_insurgency_purge_progress
+			add_manpower = -2500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = OMS
+			}
+			hidden_effect = { 573 = { set_state_flag = OMS_insurgency_purged } }
+			hidden_effect = { country_event = { id = omskbatov.19 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_purge_zlatoust"
+			clr_country_flag = OMS_counter_insurgency_purge_progress
+			custom_effect_tooltip = OMS_purge_zlatoust_tt
+			country_event = { id = omskbatov.8 days = 1 }
+		}
+	}
+
+	OMS_purge_tyumen = {
+		icon = GFX_decision_generic_assault
+		allowed = {
+			original_tag = OMS
+		}
+		visible = { check_variable = { 403:base_status = 2 } }
+		available = {
+			NOT = {
+				has_country_flag = OMS_counter_insurgency_purge_progress
+			}
+		}
+
+		ai_will_do = {
+			factor = 500
+		}
+
+		days_remove = 30
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		highlight_states = { state = 403 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_purge_tyumen"
+			hidden_effect = { add_command_power = -15 }
+			set_country_flag = OMS_counter_insurgency_purge_progress
+			add_manpower = -2500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = OMS
+			}
+			hidden_effect = { 403 = { set_state_flag = OMS_insurgency_purged } }
+			hidden_effect = { country_event = { id = omskbatov.20 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_purge_tyumen"
+			clr_country_flag = OMS_counter_insurgency_purge_progress
+			custom_effect_tooltip = OMS_purge_tyumen_tt
+			country_event = { id = omskbatov.10 days = 1 }
+		}
+	}
+
+	OMS_purge_sverdlovsk = {
+		icon = GFX_decision_generic_assault
+		allowed = {
+			original_tag = OMS
+		}
+		visible = { check_variable = { 653:base_status = 2 } }
+		available = {
+			NOT = {
+				has_country_flag = OMS_counter_insurgency_purge_progress
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		highlight_states = { state = 653 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_purge_sverdlovsk"
+			hidden_effect = { add_command_power = -15 }
+			set_country_flag = OMS_counter_insurgency_purge_progress
+			add_manpower = -2500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = OMS
+			}
+			hidden_effect = { 653 = { set_state_flag = OMS_insurgency_purged } }
+			hidden_effect = { country_event = { id = omskbatov.21 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_purge_sverdlovsk"
+			clr_country_flag = OMS_counter_insurgency_purge_progress
+			custom_effect_tooltip = OMS_purge_sverdlovsk_tt
+			country_event = { id = omskbatov.11 days = 1 }
+		}
+	}
+
+	OMS_purge_vorkuta = {
+		icon = GFX_decision_generic_assault
+		allowed = {
+			original_tag = OMS
+		}
+		visible = { check_variable = { 863:base_status = 2 } }
+		available = {
+			NOT = {
+				has_country_flag = OMS_counter_insurgency_purge_progress
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		highlight_states = { state = 863 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_purge_vorkuta"
+			hidden_effect = { add_command_power = -15 }
+			set_country_flag = OMS_counter_insurgency_purge_progress
+			add_manpower = -2500
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = OMS
+			}
+			hidden_effect = { 863 = { set_state_flag = OMS_insurgency_purged } }
+			hidden_effect = { country_event = { id = omskbatov.16 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_purge_vorkuta"
+			clr_country_flag = OMS_counter_insurgency_purge_progress
+			custom_effect_tooltip = OMS_purge_vorkuta_tt
+			country_event = { id = omskbatov.17 days = 1 }
+		}
+	}
+
+	OMS_assassinate_batov = {
+		icon = GFX_decision_OMS_assassinate_batov
+		allowed = {
+			original_tag = OMS
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = OMS_assassinate_batov_req_tt
+				check_variable = { insurgency_strength < 15 }
+			}
+		}
+		days_remove = 7
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_assassinate_batov"
+			hidden_effect = { add_command_power = -15 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -250
+				producer = OMS
+			}
+			hidden_effect = { country_event = { id = omskbatov.22 } }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_assassinate_batov"
+			custom_effect_tooltip = OMS_assassinate_batov_tt
+			country_event = { id = omskbatov.2 days = 1 }
+		}
+	}
+	OMS_batov_making_moves = {
+		icon = GFX_decision_revolt
+		allowed = { original_tag = OMS }
+		activation = { always = no }
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		days_mission_timeout = 14
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			log = "[ROOT.Getname] [GetDateText]: OMS_batov_making_moves timeout"
+			hidden_effect = {
+				OMS_insurgency_ai_move_effect = yes
+				remove_mission = OMS_batov_making_moves
+			}
+		}
+	}
+	OMS_put_down_batovs_bandits = {
+		icon = GFX_decision_revolt
+		activation = { always = no }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = OMS_batov_insurgency_trigger
+				NOT = {
+					has_country_flag = OMS_batov_insurgency_active
+				}
+			}
+		}
+		days_mission_timeout = 420
+		is_good = no
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout OMS_put_down_batovs_bandits"
+			custom_effect_tooltip = OMS_batov_insurgency_failure_tt
+			country_event = { id = omskbatov.4 days = 5 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_put_down_batovs_bandits"
+			custom_effect_tooltip = OMS_batov_insurgency_success_tt
+			hidden_effect = {
+				country_event = { id = omskbatov.3 days = 5 }
+			}
+			if = {
+				limit = {
+					has_country_flag = OMS_Lock_Regional
+				}
+				clr_country_flag = OMS_Lock_Regional
+				add_political_power = -150
+			}
+		}
+	}
+}
+
+OMS_national_redoubt_program_category = {
+	OMS_construct_sverdlovsk_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_sverdlovsk_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_sverdlovsk_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			653 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 1821
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 307
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 10189
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_omsk_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_omsk_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_omsk_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			571 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 10696
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 4700
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 10568
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_tyumen_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_tyumen_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_tyumen_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			403 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 1387
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 12521
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_chelyabinsk_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_chelyabinsk_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_chelyabinsk_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			754 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 9292
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_zlatoust_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_zlatoust_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_zlatoust_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			573 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 10329
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 12567
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_nizhny_tagil_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_nizhny_tagil_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_nizhny_tagil_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			871 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 7228
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_arkhangelsk_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		visible = {
+			has_country_flag = OMS_national_redoubt_program_flag
+			has_country_flag = OMS_a_societal_redoubt_flag
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_arkhangelsk_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_arkhangelsk_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			214 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 3338
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 312
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 3168
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_vyatka_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		visible = {
+			has_country_flag = OMS_national_redoubt_program_flag
+			has_country_flag = OMS_a_societal_redoubt_flag
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_vyatka_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_vyatka_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			400 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 6124
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 272
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_izhevsk_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		visible = {
+			has_country_flag = OMS_national_redoubt_program_flag
+			has_country_flag = OMS_a_societal_redoubt_flag
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_izhevsk_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_izhevsk_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			399 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 6278
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6323
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 7359
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_perm_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		visible = {
+			has_country_flag = OMS_national_redoubt_program_flag
+			has_country_flag = OMS_a_societal_redoubt_flag
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_perm_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_perm_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			753 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 7375
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 12216
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 11228
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_nizhny_novgorod_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		visible = {
+			has_country_flag = OMS_national_redoubt_program_flag
+			has_country_flag = OMS_a_societal_redoubt_flag
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_nizhny_novgorod_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_nizhny_novgorod_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			252 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 11375
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6327
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_kazan_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		visible = {
+			has_country_flag = OMS_national_redoubt_program_flag
+			has_country_flag = OMS_a_societal_redoubt_flag
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_kazan_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_kazan_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			249 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 6338
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 260
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_samara_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		visible = {
+			has_country_flag = OMS_national_redoubt_program_flag
+			has_country_flag = OMS_a_societal_redoubt_flag
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_samara_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_samara_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			850 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 11225
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 9299
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 9243
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6275
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	OMS_construct_syzran_bunkers = {
+		allowed = {
+			original_tag = OMS
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = OMS_national_redoubt_construction
+			}
+		}
+
+		visible = {
+			has_country_flag = OMS_national_redoubt_program_flag
+			has_country_flag = OMS_a_societal_redoubt_flag
+		}
+
+		modifier = {
+			civilian_expenditures_factor = 0.10
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		custom_cost_trigger = { command_power > 24.99 }
+		custom_cost_text = decision_cost_25_cp
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OMS_construct_syzran_bunkers"
+			set_country_flag = OMS_national_redoubt_construction
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OMS_construct_syzran_bunkers"
+			clr_country_flag = OMS_national_redoubt_construction
+			250 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6226
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 392
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

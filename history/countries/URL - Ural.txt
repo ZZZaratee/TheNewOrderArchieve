@@ -1,0 +1,302 @@
+﻿capital = 848
+set_country_flag = is_russian_nation
+
+oob = "URL_1962"
+
+load_focus_tree = tno_urals
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment
+	amount = 2500
+	producer = URL
+}
+
+add_manpower = 12000
+
+set_variable = {
+	var = Ural_initiates
+	value = 300
+}
+set_variable = {
+	var = Ural_initiates_cap
+	value = 600
+}
+set_variable = {
+	var = Ural_exploit_weapons
+	value = -60
+}
+set_variable = {
+	var = Ural_exploit_army_xp
+	value = -45
+}
+clamp_variable = {
+	var = Ural_initiates
+	min = 0
+	max = 600
+}
+
+add_ideas = {
+	### National Spirits ###
+	RUS_terror_bombing
+	RUS_warlord_manpower
+    RUS_warlord_econ
+	URL_children_of_vorkuta
+	URL_refugee_crisis
+
+	### Ministers ###
+	URL_Vasily_Zaytsev_hog
+	URL_Alexey_Eisner_for
+	URL_Moisey_Averbakh_eco
+	Generic_Vacant_sec
+
+	### Political Laws ###
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_free_press
+	tno_vote_franchise_registered_voting
+	tno_refugees_open
+
+	### Military Laws ###
+	tno_conscription_volunteer_only
+	tno_women_military_assistance
+	tno_military_supervision_military_policing
+	tno_training_combat_schooling
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_none
+
+	### Social Laws ###
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_police
+
+	### Economic Laws ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+
+	### Social Development ###
+	tno_admin_efficiency_functional_administrative_systems
+	tno_army_professionalism_professional
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_agriculture_centralized
+	tno_research_facilities_basic
+	tno_academic_base_basic_literacy
+
+	### #construction Level ###
+	##construction_level_not_applicable
+}
+
+### Policy Effectiveness
+set_country_flag = tno_defined_startup_effectiveness
+
+### Political
+set_variable = { tno_political_parties_effectiveness = 75 }
+set_variable = { tno_religious_rights_effectiveness = 60 }
+set_variable = { tno_trade_unions_effectiveness = 70 }
+set_variable = { tno_immigration_effectiveness = 100 }
+set_variable = { tno_slavery_effectiveness = 100 }
+set_variable = { tno_public_meetings_effectiveness = 70 }
+set_variable = { tno_press_rights_effectiveness = 80 }
+set_variable = { tno_vote_franchise_effectiveness = 85 }
+set_variable = { tno_refugees_effectiveness = 100 }
+
+### Military
+set_variable = { tno_conscription_effectiveness = 100 }
+set_variable = { tno_women_effectiveness = 85 }
+set_variable = { tno_military_supervision_effectiveness = 90 }
+set_variable = { tno_training_effectiveness = 60 }
+set_variable = { tno_racial_integration_effectiveness = 75 }
+set_variable = { tno_draft_exemptions_effectiveness = 90 }
+
+### Social
+set_variable = { tno_safety_effectiveness = 50 }
+set_variable = { tno_health_care_effectiveness = 60 }
+set_variable = { tno_pollution_effectiveness = 100 }
+set_variable = { tno_education_effectiveness = 35 }
+set_variable = { tno_penal_system_effectiveness = 65 }
+set_variable = { tno_lgbt_rights_effectiveness = 50 }
+set_variable = { tno_gender_rights_effectiveness = 50 }
+set_variable = { tno_minorities_effectiveness = 50 }
+set_variable = { tno_security_effectiveness = 65 }
+
+### Economic
+set_variable = { tno_trade_laws_effectiveness = 30 }
+set_variable = { tno_income_taxation_effectiveness = 35 }
+set_variable = { tno_minimum_wage_effectiveness = 30 }
+set_variable = { tno_max_workhours_effectiveness = 55 }
+set_variable = { tno_child_labor_effectiveness = 60 }
+set_variable = { tno_pensions_effectiveness = 100 }
+set_variable = { tno_unemployment_effectiveness = 100 }
+
+set_technology = {
+	##INFANTRY##
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	infantry_at = 1
+	infantry_at2 = 1
+	motorized_infantry = 1
+	#infantry_aa = 1
+	#infantry_aa2 = 1
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_engineers_flamethrowers_1 = 1
+	tech_recon = 1
+	tech_recon2 = 1
+	##ARTY##
+	artillery4 = 1
+	antiair5 = 1
+	##ARMOR##
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+
+	APC_1950 = 1
+	APC_1950_basic_turret = 1
+	#APC_1950_basic_engine = 1
+
+	IFV_1950 = 1
+
+	MBT_1950 = 1
+
+	##AIRCRAFT##
+	early_fighter = 1
+	fighter_1945 = 1
+	interceptor_1945 = 1
+	CAS_1945 = 1
+	##HEAVY AIRCRAFT##
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	##HELICOPTERS##
+	helicopter_engines = 1
+	very_early_helicopter = 1
+	early_helicopter = 1
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	##INDUSTRY##
+	ww2_line_production = 1
+	batch_production_1 = 1
+	building_construction_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	energy_technology_1 = 1
+	military_construction_1 = 1
+}
+
+set_politics = {
+	ruling_party = authoritarian_democracy
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 13
+	socialist = 11
+	social_democracy = 0
+	liberal_democracy = 0
+
+	conservative_democracy = 0
+	authoritarian_democracy = 76
+	fascism = 0
+	national_socialism = 0
+	ultranationalism = 0
+	
+}
+
+### Country Leader ###
+create_country_leader = {
+	name = "Jānis Mendriks"
+	desc = "POLITICS_JANIS_MENDRIKS_DESC"
+	picture = "Portrait_Ural_League_Janis_Mendriks.dds"
+	expire = "1999.1.1"
+	ideology = authoritarian_democracy_stratocracy_subtype
+}
+
+create_country_leader = {
+	name = "Anton Füssinger"
+	desc = "POLITICS_ANTON_FUSSINGER_DESC"
+	picture = "Portrait_Dirlewanger_Brigade_Anton_Fussinger.dds"
+	expire = "1999.1.1"
+	ideology = national_socialism_subtype
+}
+
+### Generals ###
+
+create_corps_commander = {
+	name = "Hadji-Umar Mamsurov"
+	picture = "Portrait_Ural_League_Hadji_Umar_Mamsurov.dds"
+	traits = { war_hero trait_mountaineer }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+	id = 3507
+}
+
+create_corps_commander = {
+	name = "Ivan Banov"
+	picture = "Portrait_Ural_League_Ivan_Banov.dds"
+	traits = { trait_reckless winter_specialist }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 3508
+}
+
+create_corps_commander = {
+	name = "Vasily Zaytsev"
+	picture = "Portrait_Ural_League_Vasily_Zaytsev.dds"
+	traits = { war_hero trickster expert_improviser }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 3509
+}
+
+create_corps_commander = {
+	name = "Mikhail Maltsev"
+	picture = "Portrait_Ural_League_Mikhail_Maltsev.dds"
+	traits = { trickster expert_improviser }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 3510
+}

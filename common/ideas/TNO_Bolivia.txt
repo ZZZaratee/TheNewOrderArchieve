@@ -1,0 +1,124 @@
+ideas = {
+	head_of_government = {
+		BOL_Luiz_Garcia_Meza_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BOL_Luiz_Garcia_Meza_hogg"}
+			picture = BOL_Luiz_Garcia_Meza_hog
+			allowed = {
+				original_tag = BOL
+			}
+			available = {
+			}
+			traits = {
+				head_of_government
+				authoritarian_democracy
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	foreign_minister = {
+		BOL_Mario_R_Gutierrez_minister = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BOL_Mario_R_Gutierrez_minister"}
+			picture = BOL_Mario_R_Gutierrez_minister
+			allowed = {
+				original_tag = BRA
+			}
+			available = {
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democracy
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+
+	economy_minister = {
+		BOL_Raul_Lema_Pelaez_minister = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BOL_Raul_Lema_Pelaez_minister"}
+			picture = BOL_Raul_Lema_Pelaez_minister
+			allowed = {
+				original_tag = BOL
+			}
+			available = {
+			}
+			traits = {
+				economy_minister
+				authoritarian_democracy
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+
+	security_minister = {
+		BOL_Floriano_Mendieta_minister = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BOL_Floriano_Mendieta_minister"}
+			picture = BOL_Floriano_Mendieta_minister
+			allowed = {
+				original_tag = BOL
+			}
+			available = {
+			
+			}
+			traits = {
+				security_minister
+				authoritarian_democracy
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	country = {
+		BOL_germania_boot = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOL_germania_boot" }
+				
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				consumer_goods_use_modifier = 0.15
+				stability_weekly = -0.01
+				stability_factor = -0.10
+			}
+		}
+		BOL_tokyo_boot = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOL_germania_boot" }
+				
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			
+			modifier = {
+				consumer_goods_use_modifier = 0.15
+				stability_weekly = -0.01
+				stability_factor = -0.10
+			}
+		}
+
+		BOL_anti_nationalist_attitude = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOL_anti_nationalist_attitude" }
+				
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				war_support_factor = -0.10
+				war_support_weekly = -0.01
+				stability_factor = -0.10
+				command_power_gain = -0.2
+			}
+		}
+
+		BOL_german_training = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BOL_delivery_for_barbie" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.05
+				conscription_factor = 0.05
+				army_org_factor = 0.015
+			}
+		}
+	}
+}

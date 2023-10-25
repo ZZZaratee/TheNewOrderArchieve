@@ -1,0 +1,216 @@
+equipments = {
+	IFV_equipment = {
+
+		can_be_produced = {
+			NOT = {
+				has_idea = ENG_Across_The_Channel
+			}
+		}
+
+		is_archetype = yes
+		is_buildable = no
+		picture = archetype_light_tank_equipment
+		type = armor
+		group_by = archetype
+
+		interface_category = interface_category_armor
+
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		#Misc Abilities
+		maximum_speed = 15
+		reliability = 0.7
+
+		#Defensive Abilities
+		defense = 25
+		breakthrough = 56
+		hardness = 0.8
+		armor_value = 55
+
+		#Offensive Abilities
+		soft_attack = 25
+		hard_attack = 11.5
+		ap_attack = 62
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 10
+
+		build_cost_ic = 15
+		resources = {
+			steel = 3
+			rubber = 1
+		}
+		fuel_consumption = 1.2
+
+	}
+
+	IFV_equipment_OG = {
+		archetype = IFV_equipment
+		priority = 1
+		visual_level = 45
+
+		#Misc Abilities
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 6
+		breakthrough = 46
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 22
+		hard_attack = 9
+		ap_attack = 50
+		air_attack = 0
+
+		build_cost_ic = 9
+	}
+
+	IFV_equipment_0 = {
+		archetype = IFV_equipment
+		parent = IFV_equipment_OG
+		priority = 3
+		visual_level = 45
+
+		#Misc Abilities
+		maximum_speed = 12
+
+		#Defensive Abilities
+		defense = 6
+		breakthrough = 42
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 22
+		hard_attack = 9
+		ap_attack = 50
+		air_attack = 0
+
+		build_cost_ic = 10
+	}
+
+	IFV_equipment_1 = {
+		archetype = IFV_equipment
+		parent = IFV_equipment_0
+		priority = 40
+		visual_level = 0
+	}
+
+	IFV_equipment_2 = {
+		archetype = IFV_equipment
+		parent = IFV_equipment_1
+		priority = 40
+		visual_level = 1
+
+		#Misc Abilities
+		maximum_speed = 18
+		reliability = 0.7
+
+		#Defensive Abilities
+		defense = 31
+		breakthrough = 67
+		hardness = 0.8
+		armor_value = 70
+
+		#Offensive Abilities
+		soft_attack = 27
+		hard_attack = 13
+		ap_attack = 75
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 10
+
+		build_cost_ic = 19
+	}
+
+	IFV_equipment_3 = {
+		archetype = IFV_equipment
+		priority = 40
+		visual_level = 2
+		parent = IFV_equipment_2
+
+		#Misc Abilities
+		maximum_speed = 21
+		reliability = 0.7
+
+		#Defensive Abilities
+		defense = 36
+		breakthrough = 85
+		hardness = 0.8
+		armor_value = 78
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 17
+		ap_attack = 86
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 10
+
+		build_cost_ic = 21
+	}
+
+	IFV_equipment_4 = {
+		archetype = IFV_equipment
+		priority = 40
+		visual_level = 3
+		parent = IFV_equipment_3
+
+		#Misc Abilities
+		maximum_speed = 24
+		reliability = 0.7
+
+		#Defensive Abilities
+		defense = 45
+		breakthrough = 97
+		hardness = 0.8
+		armor_value = 95
+
+		#Offensive Abilities
+		soft_attack = 42
+		hard_attack = 24
+		ap_attack = 104
+		air_attack = 14
+
+		#Space taken in convoy
+		lend_lease_cost = 10
+
+		build_cost_ic = 24
+	}
+
+	IFV_equipment_5 = {
+		archetype = IFV_equipment
+		priority = 40
+		visual_level = 4
+		parent = IFV_equipment_4
+
+		#Misc Abilities
+		maximum_speed = 27
+		reliability = 0.7
+
+		#Defensive Abilities
+		defense = 56
+		breakthrough = 129
+		hardness = 0.8
+		armor_value = 105
+
+		#Offensive Abilities
+		soft_attack = 53
+		hard_attack = 30
+		ap_attack = 120
+		air_attack = 18
+
+		#Space taken in convoy
+		lend_lease_cost = 10
+
+		build_cost_ic = 27
+	}
+}

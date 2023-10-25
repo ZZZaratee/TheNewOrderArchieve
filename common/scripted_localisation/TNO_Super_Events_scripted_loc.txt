@@ -1,0 +1,1411 @@
+defined_text = {
+	name = TNOGetSuperEventImage
+	text = {
+		trigger = { check_variable = { TNO_super_event = 1 } }
+		localization_key = "GFX_superevent_nuclearwar"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 2 } }
+		localization_key = "GFX_superevent_german_civil_war"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 3 } }
+		localization_key = "GFX_superevent_ww3"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 4 } }
+		localization_key = "GFX_superevent_south_african_war"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 5 } }
+		localization_key = "GFX_superevent_japanese_economic_war"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 6 } }
+		localization_key = "GFX_superevent_the_hall_inauguration"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 7 } }
+		localization_key = "GFX_superevent_the_yockey_inauguration"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 8 } }
+		localization_key = "GFX_superevent_the_mars_landings"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 9 } }
+		localization_key = "GFX_superevent_indonesian_civil_war"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 10 } }
+		localization_key = "GFX_superevent_great_asian_war"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 11 } }
+		localization_key = "GFX_superevent_piazza_fontana"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 12 } }
+		localization_key = "GFX_superevent_german_italian_invasion"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 13 } }
+		localization_key = "GFX_superevent_iberian_wars"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 14 } }
+		localization_key = "GFX_superevent_oil_crisis"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 15 } }
+		localization_key = "GFX_superevent_Order_44"
+	}
+	# text = {
+	# 	trigger = { check_variable = { TNO_super_event = 16 } }
+	# 	localization_key = ""
+	# }
+	text = {
+		trigger = { check_variable = { TNO_super_event = 17 } }
+		localization_key = "GFX_superevent_SGR_slave_revolt"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 18 } }
+		localization_key = "GFX_superevent_zweite_nacht_der_langen_messer"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 19 } }
+		localization_key = "GFX_superevent_the_june_of_deceit"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 20 } }
+		localization_key = "GFX_superevent_russian_reunification_sverdlovsk_batov"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 21 } }
+		localization_key = "GFX_superevent_russian_unification_wrrf_tukha"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 22 } }
+		localization_key = "GFX_superevent_tno_se_strat_chita_russia_unification"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 23 } }
+		localization_key = "GFX_superevent_russian_unification_amur"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 24 } }
+		localization_key = "GFX_superevent_russian_unification_magadan_matkovsky"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 25 } }
+		localization_key = "GFX_superevent_russian_unification_magadan_petlin"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 26 } }
+		localization_key = "GFX_superevent_russian_unification_chita_imperial"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 27 } }
+		localization_key = "GFX_superevent_british_reunification"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 28 } }
+		localization_key = "GFX_superevent_russian_unification_wrrf_zhukov"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 29 } }
+		localization_key = "GFX_superevent_russian_unification_komi_taboritsky"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 30 } }
+		localization_key = "GFX_superevent_russian_reunification_vyatka_libdem"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 31 } }
+		localization_key = "GFX_superevent_russian_reunification_vyatka_condem"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 32 } }
+		localization_key = "GFX_superevent_russian_reunification_vyatka_authdem"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 33 } }
+		localization_key = "GFX_superevent_russian_reunification_aryan_brotherhood_vagner"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 34 } }
+		localization_key = "GFX_superevent_russian_reunification_aryan_brotherhood_hyperborea"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 35 } }
+		localization_key = "GFX_superevent_russian_unification_samara_zykov"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 36 } }
+		localization_key = "GFX_superevent_russian_unification_samara_bunyachenko"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 37 } }
+		localization_key = "GFX_superevent_russian_unification_samara_oktan"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 38 } }
+		localization_key = "GFX_superevent_russian_reunification_father_men"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 39 } }
+		localization_key = "GFX_superevent_russian_reunification_buryatia_libsoc"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 40 } }
+		localization_key = "GFX_superevent_russian_reunification_buryatia_authsoc"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 41 } }
+		localization_key = "GFX_superevent_russian_reunification_irkutsk_party"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 42 } }
+		localization_key = "GFX_superevent_russian_reunification_irkutsk_state"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 43 } }
+		localization_key = "GFX_superevent_russian_reunification_omsk"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 44 } }
+		localization_key = "GFX_superevent_RUSSIAN_UNIFICATION_TOMSK_HUMANIST"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 45 } }
+		localization_key = "GFX_superevent_russian_reunification_kemerovo_yuriy"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 46 } }
+		localization_key = "GFX_superevent_russian_reunification_kemerovo_lydia"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 47 } }
+		localization_key = "GFX_superevent_russian_reunification_sba_despotist"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 48 } }
+		localization_key = "GFX_superevent_russian_reunification_sba_libsoc"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 49 } }
+		localization_key = "GFX_superevent_russian_reunification_tyumen_kaganovich"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 50 } }
+		localization_key = "GFX_superevent_russian_reunification_tyumen_khrushchev"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 51 } }
+		localization_key = "GFX_superevent_russian_reunification_zhdanov"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 52 } }
+		localization_key = "GFX_superevent_russian_reunification_stalina"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 53 } }
+		localization_key = "GFX_superevent_russian_reunification_bukharina"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 54 } }
+		localization_key = "GFX_superevent_russian_reunification_komi_gummilyov"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 55 } }
+		localization_key = "GFX_superevent_russian_reunification_komi_shafarevich"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 56 } }
+		localization_key = "GFX_superevent_russian_reunification_komi_serov"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 57 } }
+		localization_key = "GFX_superevent_russian_reunification_komi_suslov"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 58 } }
+		localization_key = "GFX_superevent_russian_reunification_komi_democratic"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 59 } }
+		localization_key = "GFX_superevent_russian_reunification_sverdlovsk_yeltsin"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 60 } }
+		localization_key = "GFX_superevent_russian_reunification_tomsk_bastillards"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 61 } }
+		localization_key = "GFX_superevent_russian_reunification_tomsk_modernists"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 62 } }
+		localization_key = "GFX_superevent_russian_reunification_tomsk_decembrists"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 63 } }
+		localization_key = "GFX_superevent_german_warlord_era"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 64 } }
+		localization_key = "GFX_superevent_fall_rockwell"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 65 } }
+		localization_key = "GFX_superevent_fall_schwarz"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 66 } }
+		localization_key = "GFX_superevent_huttig_collapse"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 67 } }
+		localization_key = "GFX_superevent_fall_rot"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 68 } }
+		localization_key = "GFX_superevent_operation_dammerung"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 69 } }
+		localization_key = "GFX_superevent_british_reunification_thatcher"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 70 } }
+		localization_key = "GFX_superevent_british_reunification_mac"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 71 } }
+		localization_key = "GFX_superevent_british_reunification_maudling"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 72 } }
+		localization_key = "GFX_superevent_british_reunification_ches"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 73 } }
+		localization_key = "GFX_superevent_british_reunification_wilson"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 74 } }
+		localization_key = "GFX_superevent_british_reunification_birch"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 75 } }
+		localization_key = "GFX_superevent_british_reunification_jellicoe"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 76 } }
+		localization_key = "GFX_superevent_british_reunification_stirling"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 77 } }
+		localization_key = "GFX_superevent_russian_reunification_novosibirsk_pokryshkin"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 78 } }
+		localization_key = "GFX_superevent_russian_reunification_novosibirsk_shukshin"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 79 } }
+		localization_key = "GFX_superevent_russian_unification_prc"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 80 } }
+		localization_key = "GFX_superevent_russian_reunification_magadan_werbell"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 81 } }
+		localization_key = "GFX_superevent_the_african_devastation"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 82 } }
+		localization_key = "GFX_superevent_the_african_crisis"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 83 } }
+		localization_key = "GFX_superevent_burgundian_spring"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 84 } has_global_flag = WAC_scenario_1 }
+		localization_key = "GFX_superevent_west_africa_1"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 84 } has_global_flag = WAC_scenario_2 }
+		localization_key = "GFX_superevent_west_africa_2"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 84 } has_global_flag = WAC_scenario_3 }
+		localization_key = "GFX_superevent_west_africa_3"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 85 } }
+		localization_key = "GFX_superevent_jushin_coup"
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 86 } }
+		localization_key = "GFX_superevent_mutos_coup"
+	}
+}
+
+defined_text = {
+	name = TNOGetSuperEventTitle
+	text = {
+		trigger = { check_variable = { TNO_super_event = 1 } }
+		localization_key = SE_NUCLEAR_WAR_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 2 } }
+		localization_key = SE_GERMAN_CIVIL_WAR_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 3 } }
+		localization_key = SE_WW3_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 4 } }
+		localization_key = SE_SOUTH_AFRICAN_WAR_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 5 } }
+		localization_key = SE_JAPANESE_ECONOMIC_WAR_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 6 } }
+		localization_key = SE_THE_HALL_INAUGURATION_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 7 } }
+		localization_key = SE_THE_YOCKEY_INAUGURATION_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 8 } }
+		localization_key = SE_THE_MARS_LANDING_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 9 } }
+		localization_key = SE_INDONESIAN_WAR_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 10 } }
+		localization_key = SE_GREAT_ASIAN_WAR_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 11 } }
+		localization_key = SE_PF_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 12 } }
+		localization_key = SE_GERMAN_ITALIAN_INVASION_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 13 } }
+		localization_key = SE_IBERIAN_WARS_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 14 } }
+		localization_key = SE_OIL_CRISIS_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 15 } }
+		localization_key = SE_ORDER_44_T
+	}
+	# text = {
+	# 	trigger = { check_variable = { TNO_super_event = 16 } }
+	# 	localization_key = 
+	# }
+	text = {
+		trigger = { check_variable = { TNO_super_event = 17 } }
+		localization_key = SE_SGR_SLAVE_REVOLT_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 18 } }
+		localization_key = SE_ZWEITE_NACHT_DER_LANGEN_MESSER_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 19 } }
+		localization_key = SE_THE_JUNE_OF_DECEIT_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 20 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 21 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_WRRF_TUKHA_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 22 } }
+		localization_key = SE_TNO_SE_STRAT_CHITA_RUSSIA_UNIFICATION_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 23 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_AMUR_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 24 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_MAGADAN_MATKOVSKY_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 25 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_MAGADAN_PETLIN_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 26 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_CHITA_IMPERIAL_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 27 } }
+		localization_key = SE_BRITISH_REUNIFICATION_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 28 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_WRRF_ZHUKOV_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 29 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_KOMI_TABORITSKY_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 30 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_LIBDEM_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 31 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_CONDEM_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 32 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_AUTHDEM_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 33 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ARYAN_BROTHERHOOD_VAGNER_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 34 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ARYAN_BROTHERHOOD_HYPERBOREA_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 35 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_ZYKOV_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 36 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_BUNYACHENKO_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 37 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_OKTAN_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 38 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_FATHER_MEN_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 39 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BURYATIA_LIBSOC_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 40 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BURYATIA_AUTHSOC_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 41 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_IRKUTSK_PARTY_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 42 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_IRKUTSK_STATE_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 43 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_OMSK_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 44 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_TOMSK_HUMANIST_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 45 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KEMEROVO_YURIY_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 46 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KEMEROVO_LYDIA_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 47 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SBA_DESPOTIST_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 48 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SBA_LIBSOC_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 49 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TYUMEN_KAGANOVICH_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 50 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TYUMEN_KHRUSHCHEV_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 51 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ZHDANOV_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 52 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_STALINA_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 53 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BUKHARINA_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 54 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_GUMMILYOV_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 55 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SHAFAREVICH_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 56 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SEROV_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 57 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SUSLOV_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 58 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_DEMOCRATIC_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 59 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SVERDLOVSK_YELTSIN_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 60 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_BASTILLARDS_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 61 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_MODERNISTS_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 62 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_DECEMBRISTS_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 63 } }
+		localization_key = SE_GERMAN_WARLORD_ERA_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 64 } }
+		localization_key = SE_FALL_ROCKWELL_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 65 } }
+		localization_key = SE_FALL_SCHWARZ_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 66 } }
+		localization_key = SE_HUTTIG_COLLAPSE_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 67 } }
+		localization_key = SE_FALL_ROT_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 68 } }
+		localization_key = SE_OPERATION_DAMMERUNG_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 69 } }
+		localization_key = SE_BRITISH_REUNIFICATION_THATCHER_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 70 } }
+		localization_key = SE_BRITISH_REUNIFICATION_MAC_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 71 } }
+		localization_key = SE_BRITISH_REUNIFICATION_MAUDLING_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 72 } }
+		localization_key = SE_BRITISH_REUNIFICATION_CHES_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 73 } }
+		localization_key = SE_BRITISH_REUNIFICATION_WILSON_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 74 } }
+		localization_key = SE_BRITISH_REUNIFICATION_BIRCH_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 75 } }
+		localization_key = SE_BRITISH_REUNIFICATION_JELLICOE_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 76 } }
+		localization_key = SE_BRITISH_REUNIFICATION_STIRLING_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 77 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_NOVOSIBIRSK_POKRYSHKIN_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 78 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_NOVOSIBIRSK_SHUKSHIN_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 79 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_PRC_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 80 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_MAGADAN_WERBELL_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 81 } }
+		localization_key = SE_THE_AFRICAN_DEVASTATION_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 82 } }
+		localization_key = SE_THE_AFRICAN_CRISIS_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 83 } }
+		localization_key = SE_BURGUNDIAN_SPRING_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 84 } }
+		localization_key = SE_WEST_AFRICAN_WAR_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 85 } }
+		localization_key = SE_JUSHIN_COUP_T
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 86 } }
+		localization_key = SE_MUTOS_COUP_T
+	}
+}
+
+defined_text = {
+	name = TNOGetSuperEventOption
+	text = {
+		trigger = { check_variable = { TNO_super_event = 1 } }
+		localization_key = SE_NUCLEAR_WAR_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 2 } }
+		localization_key = SE_GERMAN_CIVIL_WAR_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 3 } }
+		localization_key = SE_WW3_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 4 } }
+		localization_key = SE_SOUTH_AFRICAN_WAR_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 5 } }
+		localization_key = SE_JAPANESE_ECONOMIC_WAR_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 6 } }
+		localization_key = SE_THE_HALL_INAUGURATION_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 7 } }
+		localization_key = SE_THE_YOCKEY_INAUGURATION_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 8 } }
+		localization_key = SE_THE_MARS_LANDING_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 9 } }
+		localization_key = SE_INDONESIAN_WAR_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 10 } }
+		localization_key = SE_GREAT_ASIAN_WAR_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 11 } }
+		localization_key = SE_PF_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 12 } }
+		localization_key = SE_GERMAN_ITALIAN_INVASION_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 13 } }
+		localization_key = SE_IBERIAN_WARS_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 14 } }
+		localization_key = SE_OIL_CRISIS_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 15 } }
+		localization_key = SE_ORDER_44_A
+	}
+	# text = {
+	# 	trigger = { check_variable = { TNO_super_event = 16 } }
+	# 	localization_key = 
+	# }
+	text = {
+		trigger = { check_variable = { TNO_super_event = 17 } }
+		localization_key = SE_SGR_SLAVE_REVOLT_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 18 } }
+		localization_key = SE_ZWEITE_NACHT_DER_LANGEN_MESSER_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 19 } }
+		localization_key = SE_THE_JUNE_OF_DECEIT_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 20 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 21 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_WRRF_TUKHA_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 22 } }
+		localization_key = SE_TNO_SE_STRAT_CHITA_RUSSIA_UNIFICATION_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 23 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_AMUR_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 24 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_MAGADAN_MATKOVSKY_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 25 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_MAGADAN_PETLIN_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 26 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_CHITA_IMPERIAL_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 27 } }
+		localization_key = SE_BRITISH_REUNIFICATION_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 28 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_WRRF_ZHUKOV_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 29 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_KOMI_TABORITSKY_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 30 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_LIBDEM_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 31 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_CONDEM_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 32 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_AUTHDEM_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 33 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ARYAN_BROTHERHOOD_VAGNER_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 34 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ARYAN_BROTHERHOOD_HYPERBOREA_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 35 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_ZYKOV_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 36 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_BUNYACHENKO_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 37 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_OKTAN_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 38 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_FATHER_MEN_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 39 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BURYATIA_LIBSOC_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 40 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BURYATIA_AUTHSOC_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 41 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_IRKUTSK_PARTY_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 42 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_IRKUTSK_STATE_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 43 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_OMSK_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 44 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_TOMSK_HUMANIST_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 45 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KEMEROVO_YURIY_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 46 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KEMEROVO_LYDIA_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 47 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SBA_DESPOTIST_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 48 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SBA_LIBSOC_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 49 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TYUMEN_KAGANOVICH_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 50 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TYUMEN_KHRUSHCHEV_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 51 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ZHDANOV_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 52 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_STALINA_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 53 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BUKHARINA_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 54 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_GUMMILYOV_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 55 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SHAFAREVICH_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 56 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SEROV_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 57 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SUSLOV_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 58 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_DEMOCRATIC_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 59 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SVERDLOVSK_YELTSIN_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 60 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_BASTILLARDS_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 61 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_MODERNISTS_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 62 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_DECEMBRISTS_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 63 } }
+		localization_key = SE_GERMAN_WARLORD_ERA_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 64 } }
+		localization_key = SE_FALL_ROCKWELL_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 65 } }
+		localization_key = SE_FALL_SCHWARZ_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 66 } }
+		localization_key = SE_HUTTIG_COLLAPSE_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 67 } }
+		localization_key = SE_FALL_ROT_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 68 } }
+		localization_key = SE_OPERATION_DAMMERUNG_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 69 } }
+		localization_key = SE_BRITISH_REUNIFICATION_THATCHER_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 70 } }
+		localization_key = SE_BRITISH_REUNIFICATION_MAC_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 71 } }
+		localization_key = SE_BRITISH_REUNIFICATION_MAUDLING_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 72 } }
+		localization_key = SE_BRITISH_REUNIFICATION_CHES_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 73 } }
+		localization_key = SE_BRITISH_REUNIFICATION_WILSON_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 74 } }
+		localization_key = SE_BRITISH_REUNIFICATION_BIRCH_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 75 } }
+		localization_key = SE_BRITISH_REUNIFICATION_JELLICOE_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 76 } }
+		localization_key = SE_BRITISH_REUNIFICATION_STIRLING_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 77 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_NOVOSIBIRSK_POKRYSHKIN_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 78 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_NOVOSIBIRSK_SHUKSHIN_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 79 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_PRC_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 80 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_MAGADAN_WERBELL_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 81 } }
+		localization_key = SE_THE_AFRICAN_DEVASTATION_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 82 } }
+		localization_key = SE_THE_AFRICAN_CRISIS_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 83 } }
+		localization_key = SE_BURGUNDIAN_SPRING_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 84 } }
+		localization_key = SE_WEST_AFRICAN_WAR_A
+	}	
+	text = {
+		trigger = { check_variable = { TNO_super_event = 85 } }
+		localization_key = SE_JUSHIN_COUP_A
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 86 } }
+		localization_key = SE_MUTOS_COUP_A
+	}
+}
+
+defined_text = {
+	name = TNOGetSuperEventDesc
+	text = {
+		trigger = { check_variable = { TNO_super_event = 1 } }
+		localization_key = SE_NUCLEAR_WAR_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 2 } }
+		localization_key = SE_GERMAN_CIVIL_WAR_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 3 } }
+		localization_key = SE_WW3_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 4 } }
+		localization_key = SE_SOUTH_AFRICAN_WAR_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 5 } }
+		localization_key = SE_JAPANESE_ECONOMIC_WAR_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 6 } }
+		localization_key = SE_THE_HALL_INAUGURATION_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 7 } }
+		localization_key = SE_THE_YOCKEY_INAUGURATION_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 8 } }
+		localization_key = SE_THE_MARS_LANDING_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 9 } }
+		localization_key = SE_INDONESIAN_WAR_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 10 } check_variable = { YUN.YUN_legitimacy_cap > 99 } }
+		localization_key = SE_GREAT_ASIAN_WAR_D_1
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 10 } check_variable = { YUN.YUN_legitimacy_cap < 100 } }
+		localization_key = SE_GREAT_ASIAN_WAR_D_2
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 11 } }
+		localization_key = SE_PF_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 12 } }
+		localization_key = SE_GERMAN_ITALIAN_INVASION_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 13 } }
+		localization_key = SE_IBERIAN_WARS_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 14 } }
+		localization_key = SE_OIL_CRISIS_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 15 } }
+		localization_key = SE_ORDER_44_D
+	}
+	# text = {
+	# 	trigger = { check_variable = { TNO_super_event = 16 } }
+	# 	localization_key = 
+	# }
+	text = {
+		trigger = { check_variable = { TNO_super_event = 17 } }
+		localization_key = SE_SGR_SLAVE_REVOLT_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 18 } }
+		localization_key = SE_ZWEITE_NACHT_DER_LANGEN_MESSER_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 19 } }
+		localization_key = SE_THE_JUNE_OF_DECEIT_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 20 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 21 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_WRRF_TUKHA_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 22 } }
+		localization_key = SE_TNO_SE_STRAT_CHITA_RUSSIA_UNIFICATION_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 23 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_AMUR_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 24 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_MAGADAN_MATKOVSKY_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 25 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_MAGADAN_PETLIN_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 26 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_CHITA_IMPERIAL_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 27 } }
+		localization_key = SE_BRITISH_REUNIFICATION_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 28 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_WRRF_ZHUKOV_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 29 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_KOMI_TABORITSKY_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 30 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_LIBDEM_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 31 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_CONDEM_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 32 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_VYATKA_AUTHDEM_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 33 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ARYAN_BROTHERHOOD_VAGNER_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 34 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ARYAN_BROTHERHOOD_HYPERBOREA_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 35 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_ZYKOV_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 36 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_BUNYACHENKO_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 37 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_SAMARA_OKTAN_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 38 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_FATHER_MEN_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 39 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BURYATIA_LIBSOC_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 40 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BURYATIA_AUTHSOC_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 41 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_IRKUTSK_PARTY_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 42 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_IRKUTSK_STATE_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 43 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_OMSK_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 44 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_TOMSK_HUMANIST_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 45 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KEMEROVO_YURIY_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 46 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KEMEROVO_LYDIA_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 47 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SBA_DESPOTIST_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 48 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SBA_LIBSOC_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 49 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TYUMEN_KAGANOVICH_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 50 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TYUMEN_KHRUSHCHEV_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 51 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_ZHDANOV_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 52 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_STALINA_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 53 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_BUKHARINA_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 54 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_GUMMILYOV_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 55 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SHAFAREVICH_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 56 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SEROV_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 57 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_SUSLOV_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 58 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_KOMI_DEMOCRATIC_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 59 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_SVERDLOVSK_YELTSIN_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 60 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_BASTILLARDS_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 61 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_MODERNISTS_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 62 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_TOMSK_DECEMBRISTS_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 63 } }
+		localization_key = SE_GERMAN_WARLORD_ERA_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 64 } }
+		localization_key = SE_FALL_ROCKWELL_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 65 } }
+		localization_key = SE_FALL_SCHWARZ_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 66 } }
+		localization_key = SE_HUTTIG_COLLAPSE_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 67 } }
+		localization_key = SE_FALL_ROT_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 68 } }
+		localization_key = SE_OPERATION_DAMMERUNG_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 69 } }
+		localization_key = SE_BRITISH_REUNIFICATION_THATCHER_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 70 } }
+		localization_key = SE_BRITISH_REUNIFICATION_MAC_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 71 } }
+		localization_key = SE_BRITISH_REUNIFICATION_MAUDLING_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 72 } }
+		localization_key = SE_BRITISH_REUNIFICATION_CHES_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 73 } }
+		localization_key = SE_BRITISH_REUNIFICATION_WILSON_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 74 } }
+		localization_key = SE_BRITISH_REUNIFICATION_BIRCH_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 75 } }
+		localization_key = SE_BRITISH_REUNIFICATION_JELLICOE_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 76 } }
+		localization_key = SE_BRITISH_REUNIFICATION_STIRLING_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 77 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_NOVOSIBIRSK_POKRYSHKIN_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 78 } }
+		localization_key = SE_RUSSIAN_UNIFICATION_NOVOSIBIRSK_SHUKSHIN_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 79 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_PRC_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 80 } }
+		localization_key = SE_RUSSIAN_REUNIFICATION_MAGADAN_WERBELL_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 81 } }
+		localization_key = SE_THE_AFRICAN_DEVASTATION_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 82 } }
+		localization_key = SE_THE_AFRICAN_CRISIS_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 83 } }
+		localization_key = SE_BURGUNDIAN_SPRING_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 84 } has_global_flag = WAC_scenario_1 }
+		localization_key = SE_WEST_AFRICAN_WAR_D_1
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 84 } has_global_flag = WAC_scenario_2 }
+		localization_key = SE_WEST_AFRICAN_WAR_D_2
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 84 } has_global_flag = WAC_scenario_3 }
+		localization_key = SE_WEST_AFRICAN_WAR_D_3
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 85 } }
+		localization_key = SE_JUSHIN_COUP_D
+	}
+	text = {
+		trigger = { check_variable = { TNO_super_event = 86 } }
+		localization_key = SE_MUTOS_COUP_D
+	}
+}

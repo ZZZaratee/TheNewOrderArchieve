@@ -1,0 +1,22 @@
+state={
+	id=437
+	name="STATE_437"
+
+	history={
+		victory_points = { 2105 3 }
+		victory_points = { 8076 3 }
+		owner = IND
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = AZH
+		add_core_of = IND
+	}
+
+	provinces={
+		2105 4106 7205 8076 11993 11995 12080 13480 
+	}
+	manpower=6060740
+	buildings_max_level_factor=1.000
+	state_category=town
+}

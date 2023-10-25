@@ -1,0 +1,293 @@
+﻿add_namespace = serbia
+
+country_event = { # Garrison attempts to coup collab government, collabs unite with partisans, Tito temporaraly in charge and war vs Garrison starts
+	id = serbia.1
+	title = serbia.1.t
+	desc = serbia.1.d
+	picture = GFX_report_event_austin_cambridge
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {log = "[GetDateText]: [Root.GetName]: event serbia.1"}
+
+	option = {
+		name = serbia.1.a
+		set_global_flag = SER_TestGarrison
+		remove_ideas = {
+			SER_Refugee_Crisis
+			SER_The_Occupation_Regime
+			SER_Widespread_Insurrection
+		}
+		hidden_effect = {
+			set_popularities = {
+				communist = 17
+				socialist = 2
+				social_democracy = 7
+				liberal_democracy = 18
+				conservative_democracy = 9
+				authoritarian_democracy = 32
+				despotism = 15
+			}
+			econ_leave_sphere = yes
+		}
+		set_politics = {
+			ruling_party = authoritarian_democracy
+			elections_allowed = no
+		}
+		set_temp_variable = { TNO_economy_type_temp = 1 }
+		econ_type_change = yes
+		remove_all_ministers = yes
+		add_ideas = {
+			SER_Aleksandar_Rankovic_hog
+			SER_Nikola_Kavaja_sec
+			SER_Dobrica_Cosic_eco
+			SER_Marko_Nikezic_for
+
+			SER_National_Liberation_Army
+			SER_SOPO_Terrorism
+			SER_Generational_Divide
+			SER_Refugee_Question
+		}
+		load_oob = SER_Partisans
+		set_division_template_lock = {
+			division_template = "Communist Partisans"
+			is_locked = yes
+		}
+		set_division_template_lock = {
+			division_template = "Chetnik Partisans"
+			is_locked = yes
+		}
+		GMS = {
+			transfer_state = 1272
+			transfer_state = 968
+			add_state_core = 1272
+			add_state_core = 968
+			load_oob = GMS_Garrison
+			declare_war_on = {
+				target = SER
+				type = annex_everything
+			}
+		}
+		every_country = {
+			news_event = { id = WORLD.566 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = serbia.2
+	title = serbia.2.t
+	desc = serbia.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event serbia.2" }
+
+	option = {
+		name = serbia.2.a
+		remove_ideas = {
+			SER_SOPO_Terrorism
+			SER_Generational_Divide
+		}
+		set_popularities = {
+			communist = 21
+			socialist = 47
+			social_democracy = 8
+			liberal_democracy = 15
+			conservative_democracy = 9
+		}
+		set_politics = {
+			ruling_party = socialist
+			elections_allowed = no
+		}
+		set_temp_variable = { TNO_economy_type_temp = 3 }
+		econ_type_change = yes
+		remove_all_ministers = yes
+		econ_leave_sphere = yes
+		add_ideas = {
+			SER_Mihajlo_Markovic_hog
+			SER_Sejdo_Bajramovic_sec
+			SER_Dragutin_Zelenovic_eco
+			SER_Borka_Vucic_for
+
+			SER_Resurgent_Nationalism
+			SER_SPS_Dominance
+		}
+	}
+	option = {
+		name = serbia.2.b
+		remove_ideas = {
+			SER_SOPO_Terrorism
+			SER_Generational_Divide
+		}
+		set_popularities = {
+			social_democracy = 18
+			liberal_democracy = 10
+			conservative_democracy = 9
+			authoritarian_democracy = 17
+			despotism = 46
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		set_temp_variable = { TNO_economy_type_temp = 3 }
+		econ_type_change = yes
+		econ_leave_sphere = yes
+		remove_all_ministers = yes
+		add_ideas = {
+			SER_Stojiljko_Kajevic_hog
+			SER_Andro_Loncaric_sec
+			SER_Dragisa_Kasikovic_eco
+			SER_Velimir_Piletic_for
+
+			SER_The_Return_of_the_Kingdom
+		}
+	}
+	option = {
+		name = serbia.2.c
+		remove_ideas = {
+			SER_SOPO_Terrorism
+			SER_Generational_Divide
+		}
+		set_popularities = {
+			communist = 65
+			socialist = 21
+			social_democracy = 14
+		}
+		set_politics = {
+			ruling_party = communist
+			elections_allowed = no
+		}
+		set_temp_variable = { TNO_economy_type_temp = 3 }
+		econ_type_change = yes
+		econ_leave_sphere = yes
+		remove_all_ministers = yes
+		add_ideas = {
+			SER_Petar_Stambolic_hog
+			SER_Nikola_Ljubicic_sec
+			SER_Dusan_Ckrebic_eco
+			SER_Milos_Minic_for
+
+			SER_Reactionary_Remnants
+			SER_Yugoslav_Rebirth
+		}
+	}
+}
+
+country_event = {
+	id = serbia.3
+	title = serbia.3.t
+	desc = serbia.3.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event serbia.3" }
+
+	option = {
+		name = serbia.3.a
+		remove_ideas = {
+			SER_National_Liberation_Army
+			SER_SOPO_Terrorism
+			SER_Generational_Divide
+			SER_Refugee_Question
+		}
+		set_popularities = {
+			social_democracy = 4
+			liberal_democracy = 8
+			conservative_democracy = 8
+			authoritarian_democracy = 23
+			despotism = 26
+			fascism = 31
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		set_temp_variable = { TNO_economy_type_temp = 2 }
+		econ_type_change = yes
+		remove_all_ministers = yes
+		add_ideas = {
+			SER_Ratko_Parezanin_hog
+			SER_Konstantin_Musicki_sec
+			SER_Velibor_Jonic_eco
+			SER_Jakov_Ljotic_for
+
+			SER_Refugee_Crisis
+			SER_The_Occupation_Regime
+			SER_Widespread_Insurrection
+		}
+	}
+}
+
+country_event = {
+	id = serbia.4
+	title = serbia.4.t
+	desc = serbia.4.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event serbia.4" }
+
+	option = {
+		name = serbia.4.a
+		set_cosmetic_tag = SER_PEL
+		remove_ideas = {
+			SER_National_Liberation_Army
+			SER_SOPO_Terrorism
+			SER_Generational_Divide
+			SER_Refugee_Question
+		}
+		set_popularities = {
+			national_socialism = 65
+			fascism = 20
+			esoteric_nazism = 15
+		}
+		set_temp_variable = { TNO_economy_subtype_temp = 5 }
+		econ_subtype_change = yes
+		set_politics = {
+			ruling_party = national_socialism
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Sepp Janko"
+			desc = "POLITICS_SEPP_JANKO_DESC"
+			picture = "gfx/leaders/SER/Portrait_GMS_Sepp_Janko.dds"
+			expire = "1985.1.1"
+			ideology = national_socialism_subtype
+		}
+		set_party_name = {
+			ideology = national_socialism
+			name = GMS_NSDAP_national_socialism_party
+			long_name = GMS_NSDAP_national_socialism_party_long
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			GMS_Sepp_Janko_hog
+			GMS_Emanuel_Schafer_sec
+			GMS_Franz_Neuhausen_eco
+			GMS_Hermann_Neubacher_for
+		}
+	}
+}
+
+country_event = { # Debug test
+	id = serbia.100
+	title = serbia.100.t
+	desc = serbia.100.desc
+	picture = GFX_report_event_austin_cambridge
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {log = "[GetDateText]: [Root.GetName]: event serbia.100"}
+
+	option = {
+		name = serbia.100.a
+		set_cosmetic_tag = GMS_SER
+	}
+}

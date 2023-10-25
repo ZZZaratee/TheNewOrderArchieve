@@ -1,0 +1,26 @@
+
+state={
+	id=258
+	name="STATE_258"
+	resources = {
+		steel = 10
+	}
+	history={
+		owner = MCW
+		victory_points = { 6398 10 }
+		victory_points = { 3346 5 }
+		buildings = {
+			infrastructure = 5
+
+		}
+		add_core_of = MCW
+
+	}
+
+	provinces={
+		356 3199 3291 3318 3346 6230 6317 6341 6369 6398 9339 9394 
+	}
+	manpower=930656
+	buildings_max_level_factor=1.000
+	state_category=town
+}

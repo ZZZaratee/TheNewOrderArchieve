@@ -1,0 +1,25 @@
+
+state={
+	id=1474
+	name="STATE_1474" #Herat
+	manpower = 147125
+	
+	state_category = town
+	
+	resources={
+		tungsten=3
+	}
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+		}
+		add_core_of = AFG
+		victory_points = { 4893 1 }
+	}
+
+	provinces={
+		4893 13617 14746
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=1469
+	name="STATE_1469" # Nurestan
+	manpower = 157139
+	
+	state_category = pastoral
+	
+	resources={
+		tungsten=3
+	}
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 8027 1 }
+		add_core_of = AFG
+	}
+
+	provinces={
+		7519 8027 10417 10826 14751 14752
+	}
+}

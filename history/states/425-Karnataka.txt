@@ -1,0 +1,26 @@
+state={
+	id=425
+	name="STATE_425"
+	resources={
+		chromium=12.000
+		tungsten=128.000
+	}
+
+	history={
+		owner = IND
+		add_core_of = AZH
+		add_core_of = IND
+		victory_points = { 8011 15 }
+		victory_points = { 4344 5 }
+		buildings = {
+			infrastructure = 4
+		}
+	}
+
+	provinces={
+		1412 4315 4344 7244 7395 8011 8100 12146 12734 
+	}
+	manpower=13845184
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

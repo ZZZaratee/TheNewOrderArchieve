@@ -1,0 +1,35 @@
+ideas = {
+	country = {
+		PLS_tukhachevskys_fiefdom = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PLS_tukhachevskys_fiefdom"}
+			allowed = {
+				always = no
+			}
+            cancel = { has_country_flag = RUS_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = PLS_tukhachevskys_fiefdom
+			modifier = {
+				army_org_Factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		PLS_fortification_projects = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PLS_tukhchavsky's_fiefdom"}
+			allowed = {
+				always = no
+			}
+            cancel = { has_country_flag = RUS_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = MGN_fort
+			modifier = {
+				production_speed_bunker_factor = 0.3
+			}
+		}
+	}
+}

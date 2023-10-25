@@ -1,0 +1,24 @@
+state = {
+	id=1428
+	name = "STATE_1428"
+
+	resources={
+		aluminium=8.000
+	}
+	
+	manpower = 1249000
+	state_category = city
+	
+	history = {
+		owner = UKR
+		add_core_of = UKR
+		victory_points = { 525 25 }
+		buildings = {
+			infrastructure = 7
+		}
+	}
+
+	provinces = {
+		525
+	}
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=1617
+	name="STATE_1617"
+	manpower = 320331
+	
+	state_category = town
+	
+	history={
+		owner = PAR
+		add_core_of = PAR
+		victory_points = { 15265 15 }
+		buildings = {
+			infrastructure = 4
+		}
+	}
+
+	provinces={
+		2173 15261 15265
+	}
+	
+}

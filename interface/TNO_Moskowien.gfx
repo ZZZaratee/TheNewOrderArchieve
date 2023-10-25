@@ -1,0 +1,210 @@
+spriteTypes = {
+	# BBB
+		spriteType = {
+			name = "GFX_idea_BBB_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/BBB/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_BBB_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/BBB/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_BBB_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/BBB/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_BBB_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/BBB/sec.dds"
+		}
+	# FRP
+		spriteType = {
+			name = "GFX_idea_FRP_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/FRP/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_FRP_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/FRP/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_FRP_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/FRP/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_FRP_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/FRP/sec.dds"
+		}
+	# MOS
+		spriteType = {
+			name = "GFX_idea_MOS_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/MOS/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_MOS_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/MOS/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_MOS_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/MOS/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_MOS_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/MOS/sec.dds"
+		}
+	# OKB
+		spriteType = {
+			name = "GFX_idea_OKB_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/OKB/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_OKB_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/OKB/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_OKB_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/OKB/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_OKB_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/OKB/sec.dds"
+		}
+	# PAU
+		spriteType = {
+			name = "GFX_idea_PAU_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PAU/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PAU_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PAU/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PAU_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PAU/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PAU_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PAU/sec.dds"
+		}
+	# PEN
+		spriteType = {
+			name = "GFX_idea_PEN_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PEN/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PEN_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PEN/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PEN_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PEN/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PEN_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PEN/sec.dds"
+		}
+	# PSK
+		spriteType = {
+			name = "GFX_idea_PSK_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PSK/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PSK_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PSK/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PSK_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PSK/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_PSK_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/PSK/sec.dds"
+		}
+	# RSB
+		spriteType = {
+			name = "GFX_idea_RSB_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/RSB/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_RSB_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/RSB/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_RSB_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/RSB/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_RSB_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/RSB/sec.dds"
+		}
+	# RDC
+		spriteType = {
+			name = "GFX_idea_RDC_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/RDC/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_RDC_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/RDC/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_RDC_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/RDC/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_RDC_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/RDC/sec.dds"
+		}
+	# SMO
+		spriteType = {
+			name = "GFX_idea_SMO_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/SMO/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_SMO_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/SMO/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_SMO_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/SMO/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_SMO_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/SMO/sec.dds"
+		}
+	# TAM
+		spriteType = {
+			name = "GFX_idea_TAM_hog"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/TAM/hog.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_TAM_for"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/TAM/for.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_TAM_eco"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/TAM/eco.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_TAM_sec"
+			texturefile = "gfx/interface/ideas/ministers/Moskowien/TAM/sec.dds"
+		}
+	# News Events
+		spriteType = {
+			name = "GFX_MSK_dissolution_news_RDC"
+			texturefile = "gfx/event_pictures/Dissolution/GFX_news_event_dissolution_RDC.dds"
+		}
+		spriteType = {
+			name = "GFX_MSK_dissolution_news_MOS"
+			texturefile = "gfx/event_pictures/Dissolution/GFX_news_event_dissolution_MOS.dds"
+		}
+		spriteType = {
+			name = "GFX_MSK_dissolution_news_OKB"
+			texturefile = "gfx/event_pictures/Dissolution/GFX_news_event_dissolution_OKB.dds"
+		}
+		spriteType = {
+			name = "GFX_MSK_dissolution_news_PAU"
+			texturefile = "gfx/event_pictures/Dissolution/GFX_news_event_dissolution_PAU.dds"
+		}
+		spriteType = {
+			name = "GFX_MSK_dissolution_news_chaos"
+			texturefile = "gfx/event_pictures/Dissolution/GFX_news_event_dissolution_chaos.dds"
+		}
+}

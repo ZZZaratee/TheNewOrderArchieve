@@ -1,0 +1,53 @@
+﻿### Deprecated, do not use ###
+
+capital = 1428 #Kiev
+
+add_ideas = {
+	##MINISTERS##
+	UKR_Boris_Levytsky_hog
+	UKR_Ivan_Maistrenko_for
+	UKR_Vsevolod_Holubnychyi_eco
+	UKR_Roman_Dashkevich_sec
+}
+
+set_research_slots = 3
+
+set_politics = {	
+	ruling_party = authoritarian_democracy
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 15
+    socialist = 30
+    social_democracy = 0
+    liberal_democracy = 0
+
+    conservative_democracy = 0
+    authoritarian_democracy = 45
+    despotism = 4
+    fascism = 0
+    national_socialism = 0
+    ultranationalism = 6
+    
+}
+
+create_country_leader = {
+	name = "Yuriy Horlis"
+	desc = "POLITICS_YURIY_HORLIS_DESC"
+	picture = "gfx/leaders/UKR/Portrait_UKR_Yuriy_Horlis.dds"
+	expire = "1983.1.1"
+	ideology = authoritarian_democracy_social_nationalism_subtype
+}
+
+create_corps_commander = {
+	name = "Yuriy Horlis"
+	picture = "gfx/leaders/UKR/Portrait_UKR_Yuriy_Horlis.dds"
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+TNO_startup_nation = yes 

@@ -1,0 +1,39 @@
+###POP DONE
+###VPS DONE
+state={
+	id=817
+	name="STATE_817"
+	resources={
+		oil=3
+		aluminium=18
+		rubber=28
+	}
+	history={
+		owner = INS
+		add_core_of = INS
+		victory_points = { 4652 25 }
+		victory_points = { 7658 10 }
+		victory_points = { 10509 5 }
+		victory_points = { 12126 5 }
+		buildings = {
+			schools = 1
+			offices = 1
+			thermoelectric_plant = 2
+			infrastructure = 4
+			radar_station = 2
+			air_base = 1
+			4652 = {
+				naval_base = 5
+			}
+			1648 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		1648 4652 7658 8360 10509 10522 12126 12488 
+	}
+	manpower=5008724
+	state_category = town
+	buildings_max_level_factor=1.000
+}

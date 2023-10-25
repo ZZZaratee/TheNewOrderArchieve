@@ -1,0 +1,421 @@
+##########################################
+##  ██████╗ ███╗   ███╗ ██████╗██╗  ██╗ ##
+## ██╔═══██╗████╗ ████║██╔════╝██║ ██╔╝ ##
+## ██║   ██║██╔████╔██║██║     █████╔╝  ##
+## ██║   ██║██║╚██╔╝██║██║     ██╔═██╗  ##
+## ╚██████╔╝██║ ╚═╝ ██║╚██████╗██║  ██╗ ##
+##  ╚═════╝ ╚═╝     ╚═╝ ╚═════╝╚═╝  ╚═╝ ##
+##########################################
+
+
+# INDEX
+#
+# 0 - Batov's Insurgency
+
+
+# 0 - Batov's Insurgency
+
+OMS_SE_insurgency_start = {
+	custom_effect_tooltip = OMS_SE_insurgency_start_tt
+	set_country_flag = OMS_batov_insurgency_active
+	
+	set_variable = { insurgency_controller = 0 }
+	set_variable = { OMS_available_new_bases = 3 }
+	set_variable = { AVAILABLE_BASES = 2 }
+	set_variable = { OMS_batov_base_effectiveness = 0.05 }
+	set_variable = { OMS_our_base_effectiveness = -0.05 }
+	hidden_effect = {
+		add_popularity = {
+			ideology = authoritarian_democracy
+			popularity = 0.3
+		}
+		set_party_name = {
+			ideology = authoritarian_democracy
+			long_name = "Russkiy Komitet Natsionalnogo Vosstanovleniya"
+			name = "RKNV"
+		}
+		create_country_leader = {
+			name = "Pavel Batov"
+			desc = "POLITICS_PAVEL_BATOV_DESC"
+			picture = "gfx/leaders/SVR/Portrait_Sverdlovsk_Pavel_Batov.dds"
+			expire = "1999.1.1"
+			ideology = authoritarian_democracy_stratocracy_subtype
+			traits = {
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = OMS_batov_insurgency_dynomod
+			scope = OMS
+		}
+		every_owned_state = {
+			limit = {
+				NOT = { state = 581 }
+			}
+			add_dynamic_modifier = { modifier = OMS_BI_state_dynomod }
+		}
+		add_ideas = OMS_batov_insurgency_dynmod_dummy
+		tno_worsen_admin_efficiency = yes
+		activate_mission = OMS_put_down_batovs_bandits
+	}
+
+	if = {
+		limit = { has_country_flag = OMS_Lock_Regional }
+		add_political_power = 150
+	}
+	
+	clear_array = OMS_map_grid_array
+	add_to_array = { OMS_map_grid_array = 754 }
+	add_to_array = { OMS_map_grid_array = 653 }
+	add_to_array = { OMS_map_grid_array = 573 }
+	add_to_array = { OMS_map_grid_array = 572 }
+	add_to_array = { OMS_map_grid_array = 580 }
+	add_to_array = { OMS_map_grid_array = 403 }
+	add_to_array = { OMS_map_grid_array = 571 }
+	add_to_array = { OMS_map_grid_array = 871 }
+	add_to_array = { OMS_map_grid_array = 863 }
+	add_to_array = { OMS_map_grid_array = 756 }
+	add_to_array = { OMS_map_grid_array = 844 }
+	add_to_array = { OMS_map_grid_array = 579 }
+	add_to_array = { OMS_map_grid_array = 845 }
+
+	# Statuses: 1 (Nobody has a base in here), 2 (We have a base in here), 3 (Batov has a base in here)
+	
+	754 = { set_variable = { base_status = 3 } }
+	653 = { set_variable = { base_status = 3 } }
+	573 = { set_variable = { base_status = 3 } }
+	572 = { set_variable = { base_status = 2 } }
+	580 = { set_variable = { base_status = 1 } }
+	403 = { set_variable = { base_status = 3 } }
+	571 = { set_variable = { base_status = 2 } }
+	871 = { set_variable = { base_status = 1 } }
+	863 = { set_variable = { base_status = 3 } }
+	756 = { set_variable = { base_status = 1 } }
+	844 = { set_variable = { base_status = 1 } }
+	579 = { set_variable = { base_status = 1 } }
+	845 = { set_variable = { base_status = 1 } }
+	
+	clear_array = OMS_map_x
+	clear_array = OMS_map_y
+	add_to_array = { OMS_map_x = 76 }
+	add_to_array = { OMS_map_x = 89 }
+	add_to_array = { OMS_map_x = 44 }
+	add_to_array = { OMS_map_x = 101 }
+	add_to_array = { OMS_map_x = 160 }
+	add_to_array = { OMS_map_x = 193 }
+	add_to_array = { OMS_map_x = 295 }
+	add_to_array = { OMS_map_x = 43 }
+	add_to_array = { OMS_map_x = 3 }
+	add_to_array = { OMS_map_x = 75 }
+	add_to_array = { OMS_map_x = 191 }
+	add_to_array = { OMS_map_x = 215 }
+	add_to_array = { OMS_map_x = 83 }
+	
+	add_to_array = { OMS_map_y = 443 }
+	add_to_array = { OMS_map_y = 297 }
+	add_to_array = { OMS_map_y = 350 }
+	add_to_array = { OMS_map_y = 385 }
+	add_to_array = { OMS_map_y = 204 }
+	add_to_array = { OMS_map_y = 284 }
+	add_to_array = { OMS_map_y = 333 }
+	add_to_array = { OMS_map_y = 216 }
+	add_to_array = { OMS_map_y = 3 }
+	add_to_array = { OMS_map_y = 47 }
+	add_to_array = { OMS_map_y = 35 }
+	add_to_array = { OMS_map_y = 36 }
+	add_to_array = { OMS_map_y = 194 }
+	for_each_loop = {
+		array = OMS_map_grid_array
+		if = {
+			limit = {
+				check_variable = { v:base_status = 1 }
+			}
+			var:v = {
+				set_variable = { insurgency_strength = 0.45 }
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { v:base_status = 2 }
+			}
+			var:v = {
+				set_variable = { insurgency_strength = 0.25 }
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { v:base_status = 3}
+			}
+			var:v = {
+				set_variable = { insurgency_strength = 1 }
+			}
+		}
+	}
+
+	hidden_effect = { country_event = { id = omsk.1999 days = 7 } }
+
+	OMS_SE_insurgency_calc_insurgency_strength = yes
+
+	set_variable = { insurgency_state_selected = 754 }
+}
+
+OMS_SE_insurgency_calc_insurgency_strength = {
+	hidden_effect = {
+		set_variable = { insurgency_strength = 0 }
+		set_variable = { active_state = 0 }
+		every_owned_state = {
+			limit = { has_variable = insurgency_strength }
+			clamp_variable = { var = insurgency_strength min = 0 max = 1 }
+			add_to_variable = { ROOT.insurgency_strength = insurgency_strength }
+			add_to_variable = { ROOT.active_states = 1 } # for debug purposes
+		}
+		log = "OMS_map_grid_array^num: [?OMS_map_grid_array^num]"
+
+		divide_variable = { insurgency_strength = 13 }
+		OMS_calculate_dynmod_effects = yes
+		multiply_variable = { insurgency_strength = 100 }
+		
+		log = "[?insurgency_strength]"
+		
+		# Count how many bases yazov and batov have
+		set_variable = { OMSK_YAZOV_COUNTER_INSURGENCY_BASES_NUMBER = 0 }
+		set_variable = { BATOV_INSURGENCY_BASES_NUMBER = 0 }
+		for_each_loop = {
+			array = OMS_map_grid_array
+			if = {
+				limit = {
+					check_variable = { v:base_status = 2 }
+				}
+				add_to_variable = { OMSK_YAZOV_COUNTER_INSURGENCY_BASES_NUMBER = 1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { v:base_status = 3 }
+				}
+				add_to_variable = { BATOV_INSURGENCY_BASES_NUMBER = 1 }
+			}
+		}
+		
+		add_to_variable = { insurgency_controller = 1 }
+	}
+}
+
+OMS_calculate_dynmod_effects = {
+	# Country scope dynmods
+	clear_array = OMS_ins_dynomod_array
+	add_to_array = { OMS_ins_dynomod_array = 0.2 } # Resistance Target
+	add_to_array = { OMS_ins_dynomod_array = 0.3 } # Supply consumption factor
+	add_to_array = { OMS_ins_dynomod_array = -0.2 } # Resource gain efficiency
+	add_to_array = { OMS_ins_dynomod_array = -0.3 } # Stability
+	add_to_array = { OMS_ins_dynomod_array = -5 } # GDP growth
+	add_to_array = { OMS_ins_dynomod_array = 0.2 } # Misc military costs
+	for_each_loop = {
+		array = OMS_ins_dynomod_array
+		multiply_variable = { OMS_ins_dynomod_array^i = insurgency_strength }
+	}
+	
+	# State scope dynmods
+	every_owned_state = {
+		limit = {
+			NOT = { state = 581 }
+		}
+		set_temp_variable = { temp_state_strength = insurgency_strength }
+		ROOT = { log = "temp_state_strength = [?temp_state_strength]" }
+		clear_array = OMS_state_dynomod_array
+		add_to_array = { OMS_state_dynomod_array = -0.05 } # Local manpower
+		add_to_array = { OMS_state_dynomod_array = -0.2 } # Local supplies
+		add_to_array = { OMS_state_dynomod_array = -0.15 } # Recruitable pop factor
+		add_to_array = { OMS_state_dynomod_array = -0.2 } # Local construction speed
+		for_each_loop = {
+			array = OMS_state_dynomod_array
+			multiply_variable = { OMS_state_dynomod_array^i = temp_state_strength }
+		}
+	}
+	
+	force_update_dynamic_modifier = yes
+}
+
+OMS_insurgency_ai_move_effect = {
+	if = { # Prioritize filling up empty spaces
+		limit = {
+			any_owned_state = {
+				check_variable = { base_status = 1 }
+				OMS_has_neighboring_enemy_base = yes
+				NOT = {
+					has_state_flag = OMS_insurgency_purge
+					check_variable = { ROOT.OMS_map_grid_array^OMS_acted_upon_build_i = THIS }
+				}
+			}
+		}
+		random_owned_state = {
+			limit = {
+				check_variable = { base_status = 1 }
+				OMS_has_neighboring_enemy_base = yes
+				NOT = { has_state_flag = OMS_insurgency_purged }
+			}
+			set_variable = { base_status = 3 }
+		}
+	}
+	else = { # Attacks a base of us
+		random_owned_state = {
+			limit = {
+				check_variable = { base_status = 2 }
+				OMS_has_neighboring_enemy_base = yes
+				NOT = { has_state_flag = OMS_insurgency_purged }
+				ROOT = {
+					NOT = {
+						check_variable = { OMS_map_grid_array^OMS_acted_upon_build_i = PREV }
+					}
+				}
+			}
+			set_variable = { base_status = 1 }
+		}
+		add_to_variable = { AVAILABLE_BASES = 1 }
+	}
+	OMS_SE_insurgency_calc_insurgency_strength = yes
+}
+
+OMS_build_a_base_here = {
+	custom_effect_tooltip = OMS_build_base_tt
+	var:OMS_map_grid_array^OMS_acted_upon_build_i = {
+		set_variable = { base_status = 2 }
+	}
+	subtract_from_variable = { AVAILABLE_BASES = 1 }
+	hidden_effect = {
+		OMS_SE_insurgency_calc_insurgency_strength = yes
+	}
+	clear_variable = OMS_acted_upon_build_i
+}
+
+OMS_dismantle_base_here = {
+	custom_effect_tooltip = OMS_dismantle_base_tt
+	var:OMS_map_grid_array^OMS_acted_upon_dismantle_i = {
+		set_variable = { base_status = 1 }
+	}
+	add_to_variable = { AVAILABLE_BASES = 1 }
+	hidden_effect = {
+		OMS_SE_insurgency_calc_insurgency_strength = yes
+	}
+	clear_variable = OMS_acted_upon_dismantle_i
+}
+
+OMS_attack_enemy_base = {
+	custom_effect_tooltip = OMS_attack_enemy_base_tt
+	var:OMS_map_grid_array^OMS_acted_upon_attack_i = {
+		set_variable = { base_status = 1 }
+	}
+	hidden_effect = {
+		OMS_SE_insurgency_calc_insurgency_strength = yes
+	}
+	clear_variable = OMS_acted_upon_attack_i
+}
+
+OMS_purge_state = {
+	custom_effect_tooltip = OMS_purge_state_tt
+	add_to_variable = { insurgency_strength = -0.4 }
+	ROOT = { OMS_SE_insurgency_calc_insurgency_strength = yes }
+}
+
+
+# |====| OLD CODE, DON'T REMOVE YET |====| #
+
+OMS_increase_counter_insurgency_progress_10 = {
+	custom_effect_tooltip = OMS_escalate_isd_operations_tt
+	add_to_variable = { OMS_counter_insurgency_progress = 10 }
+	clamp_variable = { var = OMS_counter_insurgency_progress min = 0 max = 100 }
+}
+
+OMS_increase_counter_insurgency_progress_20 = {
+	custom_effect_tooltip = OMS_improve_counter_terror_armaments_tt
+	add_to_variable = { OMS_counter_insurgency_progress = 20 }
+	clamp_variable = { var = OMS_counter_insurgency_progress min = 0 max = 100 }
+}
+
+OMS_increase_counter_insurgency_progress_25 = {
+	custom_effect_tooltip = OMS_infltrate_terror_cells_tt
+	add_to_variable = { OMS_counter_insurgency_progress = 25 }
+	clamp_variable = { var = OMS_counter_insurgency_progress min = 0 max = 100 }
+}
+
+OMS_increase_counter_insurgency_progress_30 = {
+	custom_effect_tooltip = OMS_launch_raids_on_holdouts_tt
+	add_to_variable = { OMS_counter_insurgency_progress = 30 }
+	clamp_variable = { var = OMS_counter_insurgency_progress min = 0 max = 100 }
+}
+
+batov_insurgency_decrease = {
+	if = {
+		limit = {
+			has_idea = OMS_batov_insurgency
+		}
+		swap_ideas = {
+			remove_idea = OMS_batov_insurgency
+			add_idea = OMS_batov_insurgency_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = OMS_batov_insurgency_2
+		}
+		swap_ideas = {
+			remove_idea = OMS_batov_insurgency_2
+			add_idea = OMS_batov_insurgency_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = OMS_batov_insurgency_3
+		}
+		swap_ideas = {
+			remove_idea = OMS_batov_insurgency_3
+			add_idea = OMS_batov_insurgency_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = OMS_batov_insurgency_4
+		}
+		swap_ideas = {
+			remove_idea = OMS_batov_insurgency_4
+			add_idea = OMS_batov_insurgency_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = OMS_batov_insurgency_5
+		}
+		remove_ideas = OMS_batov_insurgency_5
+	}
+}
+
+batov_insurgency_remove = {
+	if = {
+		limit = {
+			has_idea = OMS_batov_insurgency
+		}
+		remove_ideas = OMS_batov_insurgency
+	}
+	else_if = {
+		limit = {
+			has_idea = OMS_batov_insurgency_2
+		}
+		remove_ideas = OMS_batov_insurgency_2
+	}
+	else_if = {
+		limit = {
+			has_idea = OMS_batov_insurgency_3
+		}
+		remove_ideas = OMS_batov_insurgency_3
+	}
+	else_if = {
+		limit = {
+			has_idea = OMS_batov_insurgency_4
+		}
+		remove_ideas = OMS_batov_insurgency_4
+	}
+	else_if = {
+		limit = {
+			has_idea = OMS_batov_insurgency_5
+		}
+		remove_ideas = OMS_batov_insurgency_5
+	}
+}

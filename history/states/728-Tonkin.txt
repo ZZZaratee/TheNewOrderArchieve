@@ -1,0 +1,31 @@
+
+state={
+	id=728
+	name="STATE_728"
+
+	resources={
+		aluminium=3
+	}
+
+	history={
+		owner = VIN
+		add_core_of = VIN
+		buildings = {
+			infrastructure = 3
+			radar_station = 1
+			air_base = 1
+			4119 = { naval_base = 2 }
+		}
+		victory_points = { 4075 20 }
+		victory_points = { 4119 5 }
+		victory_points = { 12065 1 }
+		victory_points = { 9948 1 }
+	}
+
+	provinces={
+		1073 1157 1185 4075 4119 7015 7093 7518 9948 12008 12048 12065
+	}
+	manpower=7065500
+	buildings_max_level_factor=1.000
+	state_category=city
+}

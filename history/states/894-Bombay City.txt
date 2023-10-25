@@ -1,0 +1,30 @@
+state={
+	id=894
+	name="STATE_894"
+	resources={
+		steel=6
+	}
+	provinces={
+		1349 
+	}
+	manpower = 4061262
+
+	state_category = large_city
+	
+	history={
+		owner = IND
+		add_core_of = IND
+		add_core_of = AZH
+		victory_points = { 1349 35 }
+		buildings = {
+			infrastructure = 7
+			radar_station = 1
+			air_base = 1
+			1349 = {
+				naval_base = 6
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+
+}

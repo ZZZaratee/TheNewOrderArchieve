@@ -1,0 +1,32 @@
+
+state={
+	id=422
+	name="STATE_422"
+	resources={
+		rubber=116.000
+	}
+
+	history={
+		owner = CYL
+		add_core_of = CYL
+		add_claim_by = AZH
+		add_claim_by = IND
+		victory_points = { 7260 5 }
+		buildings = {
+			infrastructure = 3
+			radar_station = 2
+			air_base = 3
+			7260 = {
+				naval_base = 3
+				coastal_bunker = 3
+			}
+		}
+	}
+
+	provinces={
+		1213 4219 7260 7344 10287 
+	}
+	manpower = 8487000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,5737 @@
+###POLITICS SCREEN###
+defined_text = {
+	name = GetKOMMostPowerfulParty
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > KOMRightPower
+				}
+				check_variable = {
+					KOMLeftPower > KOMCenterPower
+				}
+			}
+		}
+		localization_key = KOM_Left_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > KOMLeftPower
+				}
+				check_variable = {
+					KOMCenterPower > KOMRightPower
+				}
+			}
+		}
+		localization_key = KOM_Center_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > KOMLeftPower
+				}
+				check_variable = {
+					KOMRightPower > KOMCenterPower
+				}
+			}
+		}
+		localization_key = KOM_Right_Leading
+	}
+	text = {
+		localization_key = KOM_default
+	}
+}
+
+defined_text = {
+	name = GetKOMShowLeftPower
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 90
+				}
+			}
+		}
+		localization_key = KOM_Movement_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 80
+				}
+			}
+		}
+		localization_key = KOM_Movement_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 70
+				}
+			}
+		}
+		localization_key = KOM_Movement_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 60
+				}
+			}
+		}
+		localization_key = KOM_Movement_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 50
+				}
+			}
+		}
+		localization_key = KOM_Movement_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 40
+				}
+			}
+		}
+		localization_key = KOM_Movement_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 30
+				}
+			}
+		}
+		localization_key = KOM_Movement_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 20
+				}
+			}
+		}
+		localization_key = KOM_Movement_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Movement_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMLeftPower < 10
+				}
+			}
+		}
+		localization_key = KOM_Movement_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMShowCenterPower
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 90
+				}
+			}
+		}
+		localization_key = KOM_Movement_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 80
+				}
+			}
+		}
+		localization_key = KOM_Movement_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 70
+				}
+			}
+		}
+		localization_key = KOM_Movement_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 60
+				}
+			}
+		}
+		localization_key = KOM_Movement_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 50
+				}
+			}
+		}
+		localization_key = KOM_Movement_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 40
+				}
+			}
+		}
+		localization_key = KOM_Movement_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 30
+				}
+			}
+		}
+		localization_key = KOM_Movement_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 20
+				}
+			}
+		}
+		localization_key = KOM_Movement_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Movement_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMCenterPower < 10
+				}
+			}
+		}
+		localization_key = KOM_Movement_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMShowRightPower
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 90
+				}
+			}
+		}
+		localization_key = KOM_Movement_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 80
+				}
+			}
+		}
+		localization_key = KOM_Movement_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 70
+				}
+			}
+		}
+		localization_key = KOM_Movement_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 60
+				}
+			}
+		}
+		localization_key = KOM_Movement_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 50
+				}
+			}
+		}
+		localization_key = KOM_Movement_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 40
+				}
+			}
+		}
+		localization_key = KOM_Movement_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 30
+				}
+			}
+		}
+		localization_key = KOM_Movement_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 20
+				}
+			}
+		}
+		localization_key = KOM_Movement_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Movement_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMRightPower < 10
+				}
+			}
+		}
+		localization_key = KOM_Movement_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMSocDemLeaderLast
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = KOM_Voznesensky_Retired
+				has_country_flag = KOM_Voznesensky_Arrested
+				has_country_flag = KOM_Voznesensky_Dead
+			}
+		}
+		localization_key = KOM_SocDem_Leader_Kantorovich_Last
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Voznesensky_Retired
+					has_country_flag = KOM_Voznesensky_Arrested
+					has_country_flag = KOM_Voznesensky_Dead
+				}
+			}
+		}
+		localization_key = KOM_SocDem_Leader_Voznesesnky_Last
+	}
+}
+
+defined_text = {
+	name = GetKOMSocDemLeader
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Voznesensky_Retired
+					has_country_flag = KOM_Voznesensky_Arrested
+					has_country_flag = KOM_Voznesensky_Dead
+				}
+			}
+		}
+		localization_key = KOM_SocDem_Leader_Voznesesnky
+	}
+	text = {
+		localization_key = NIK_SocDem_Leader_Kantorovich
+	}
+}
+
+defined_text = {
+	name = GetKOMLeftLeader
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_country_flag = KOM_Ponomaryov_Dead
+					has_country_flag = KOM_Ponomaryov_Arrested
+					has_country_flag = KOM_Ponomaryov_Retired
+				}
+				OR = {
+					has_country_flag = KOM_Zhdanov_Dead
+					has_country_flag = KOM_Zhdanov_Arrested
+					has_country_flag = KOM_Zhdanov_Retired
+				}
+				OR = {
+					has_country_flag = KOM_Suslov_Dead
+					has_country_flag = KOM_Suslov_Arrested
+					has_country_flag = KOM_Suslov_Retired
+				}
+				OR = {
+					has_country_flag = KOM_Bukharina_Dead
+					has_country_flag = KOM_Bukharina_Arrested
+					has_country_flag = KOM_Bukharina_Retired
+				}
+			}
+		}
+		localization_key = KOM_Everyone_Dead
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > KOMSuslovInfluence
+				}
+				check_variable = {
+					KOMZhdanovInfluence > KOMBukharinaInfluence
+				}
+				check_variable = {
+					KOMZhdanovInfluence > KOMPonomaryovInfluence
+				}
+			}
+		}
+		localization_key = KOM_Left_Zhdanov_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > KOMZhdanovInfluence
+				}
+				check_variable = {
+					KOMBukharinaInfluence > KOMPonomaryovInfluence
+				}
+				check_variable = {
+					KOMBukharinaInfluence > KOMSuslovInfluence
+				}
+			}
+		}
+		localization_key = KOM_Left_Bukharina_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > KOMBukharinaInfluence
+				}
+				check_variable = {
+					KOMSuslovInfluence > KOMZhdanovInfluence
+				}
+				check_variable = {
+					KOMSuslovInfluence > KOMPonomaryovInfluence
+				}
+			}
+		}
+		localization_key = KOM_Left_Suslov_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > KOMZhdanovInfluence
+				}
+				check_variable = {
+					KOMPonomaryovInfluence > KOMBukharinaInfluence
+				}
+				check_variable = {
+					KOMPonomaryovInfluence > KOMSuslovInfluence
+				}
+			}
+		}
+		localization_key = KOM_Left_Ponomaryov_Leading
+	}
+	text = {
+		localization_key = KOM_default
+	}
+}
+
+defined_text = {
+	name = GetKOMCenterLeader
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_country_flag = KOM_Voznesensky_Dead
+					has_country_flag = KOM_Voznesensky_Arrested
+					has_country_flag = KOM_Voznesensky_Retired
+				}
+				OR = {
+					has_country_flag = KOM_Stalina_Dead
+					has_country_flag = KOM_Stalina_Arrested
+					has_country_flag = KOM_Stalina_Retired
+				}
+				OR = {
+					has_country_flag = KOM_Kosygin_Dead
+					has_country_flag = KOM_Kosygin_Arrested
+					has_country_flag = KOM_Kosygin_Retired
+				}
+			}
+		}
+		localization_key = KOM_Everyone_Dead
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > KOMKosyginInfluence
+				}
+				check_variable = {
+					KOMVoznesenskyInfluence > KOMStalinaInfluence
+				}
+				NOT = {
+					has_country_flag = KOM_Voznesensky_Arrested
+					has_country_flag = KOM_Voznesensky_Retired
+					has_country_flag = KOM_Voznesensky_Dead
+				}
+			}
+		}
+		localization_key = KOM_Center_Voznesensky_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > KOMVoznesenskyInfluence
+				}
+				check_variable = {
+					KOMStalinaInfluence > KOMKosyginInfluence
+				}
+			}
+		}
+		localization_key = KOM_Center_Stalina_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > KOMStalinaInfluence
+				}
+				check_variable = {
+					KOMKosyginInfluence > KOMVoznesenskyInfluence
+				}
+			}
+		}
+		localization_key = KOM_Center_Kosygin_Leading
+	}
+	text = {
+		localization_key = KOM_default
+	}
+}
+
+defined_text = {
+	name = GetKOMRightLeader
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_country_flag = KOM_Gumilyov_Dead
+					has_country_flag = KOM_Gumilyov_Arrested
+					has_country_flag = KOM_Gumilyov_Retired
+				}
+				OR = {
+					has_country_flag = KOM_Taboritsky_Dead
+					has_country_flag = KOM_Taboritsky_Arrested
+					has_country_flag = KOM_Taboritsky_Retired
+				}
+			}
+		}
+		localization_key = KOM_Everyone_Dead
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > KOMTaboritskyInfluence
+				}
+				check_variable = {
+					KOMShafarevichInfluence > KOMSerovInfluence
+				}
+				check_variable = {
+					KOMShafarevichInfluence > KOMGumilyovInfluence
+				}
+			}
+		}
+		localization_key = KOM_Right_Shafarevich_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > KOMTaboritskyInfluence
+				}
+				check_variable = {
+					KOMGumilyovInfluence > KOMSerovInfluence
+				}
+				check_variable = {
+					KOMGumilyovInfluence > KOMShafarevichInfluence
+				}
+			}
+		}
+		localization_key = KOM_Right_Gumilyov_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > KOMGumilyovInfluence
+				}
+				check_variable = {
+					KOMTaboritskyInfluence > KOMSerovInfluence
+				}
+				check_variable = {
+					KOMTaboritskyInfluence > KOMShafarevichInfluence
+				}
+			}
+		}
+		localization_key = KOM_Right_Taboritsky_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > KOMTaboritskyInfluence
+				}
+				check_variable = {
+					KOMSerovInfluence > KOMGumilyovInfluence
+				}
+				check_variable = {
+					KOMSerovInfluence > KOMShafarevichInfluence
+				}
+			}
+		}
+		localization_key = KOM_Right_Serov_Leading
+	}
+	text = {
+		localization_key = KOM_default
+	}
+}
+
+defined_text = {
+	name = GetKOMGumilyovInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Gumilyov_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Gumilyov_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Gumilyov_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMTaboritskyInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Taboritsky_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Taboritsky_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Taboritsky_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMSerovInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMShafarevichInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Shafarevich_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Shafarevich_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Shafarevich_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMSerovExistence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Defected
+		}
+		localization_key = KOM_Serov_Entry
+	}
+}
+
+defined_text = {
+	name = GetKOMKosyginInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kosygin_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kosygin_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kosygin_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMVoznesenskyInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Voznesensky_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Voznesensky_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Voznesensky_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMStalinaInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Stalina_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Stalina_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Stalina_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMZhdanovInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMPonomaryovInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Ponomaryov_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Ponomaryov_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Ponomaryov_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMPonomaryovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMBukharinaInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Bukharina_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Bukharina_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Bukharina_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+defined_text = {
+	name = GetKOMSuslovInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Suslov_Dead
+		}
+		localization_key = KOM_Politician_Dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Suslov_Arrested
+		}
+		localization_key = KOM_Politician_Arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Suslov_Retired
+		}
+		localization_key = KOM_Politician_Retired
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Politician_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Politician_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Politician_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Politician_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Politician_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Politician_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Politician_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Politician_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMMostDangerousParty
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = liberal_democracy
+					has_government = social_democracy
+					has_government = conservative_democracy
+					has_government = authoritarian_democracy
+				}
+				check_variable = {
+					KOMLeftPower > KOMRightPower
+				}
+			}
+		}
+		localization_key = KOM_Left_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = liberal_democracy
+					has_government = social_democracy
+					has_government = conservative_democracy
+					has_government = authoritarian_democracy
+				}
+				check_variable = {
+					KOMRightPower > KOMLeftPower
+				}
+			}
+		}
+		localization_key = KOM_Right_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = fascism
+					has_government = national_socialism
+					has_government = ultranationalism
+					has_government = esoteric_nazism
+				}
+				check_variable = {
+					KOMLeftPower > KOMCenterPower
+				}
+			}
+		}
+		localization_key = KOM_Left_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = fascism
+					has_government = national_socialism
+					has_government = ultranationalism
+					has_government = esoteric_nazism
+				}
+				check_variable = {
+					KOMCenterPower > KOMLeftPower
+				}
+			}
+		}
+		localization_key = KOM_Center_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = socialist
+					has_government = communist
+				}
+				check_variable = {
+					KOMCenterPower > KOMRightPower
+				}
+			}
+		}
+		localization_key = KOM_Center_Leading
+	}
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = socialist
+					has_government = communist
+				}
+				check_variable = {
+					KOMRightPower > KOMCenterPower
+				}
+			}
+		}
+		localization_key = KOM_Right_Leading
+	}
+	text = {
+		localization_key = KOM_unknown_tt
+	}
+}
+
+defined_text = {
+	name = GetKOMCenterCoupActivity
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = liberal_democracy
+					has_government = social_democracy
+					has_government = conservative_democracy
+					has_government = authoritarian_democracy
+				}
+			}
+		}
+		localization_key = KOM_In_Power
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 80 }
+		}
+		localization_key = KOM_Extremely_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 60 }
+		}
+		localization_key = KOM_Highly_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 40 }
+		}
+		localization_key = KOM_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 20 }
+		}
+		localization_key = KOM_Non_Threatening
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { KOMCenterPower > 0 }
+				check_variable = { KOMCenterPower < 0 }	
+			}
+		}
+		localization_key = KOM_Neutered
+	}
+}
+
+defined_text = {
+	name = GetKOMLeftCoupActivity
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = socialist
+					has_government = communist
+				}
+			}
+		}
+		localization_key = KOM_In_Power
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 80 }
+		}
+		localization_key = KOM_Extremely_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 60 }
+		}
+		localization_key = KOM_Highly_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 40 }
+		}
+		localization_key = KOM_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 20 }
+		}
+		localization_key = KOM_Non_Threatening
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { KOMLeftPower > 0 }
+				check_variable = { KOMLeftPower = 0 }
+				check_variable = { KOMLeftPower < 0 }
+			}
+		}
+		localization_key = KOM_Neutered
+	}
+}
+
+defined_text = {
+	name = GetKOMRightCoupActivity
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_government = fascism
+					has_government = national_socialism
+					has_government = ultranationalism
+					has_government = esoteric_nazism
+				}
+			}
+		}
+		localization_key = KOM_In_Power
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMRightPower > 80 }
+		}
+		localization_key = KOM_Extremely_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMRightPower > 60 }
+		}
+		localization_key = KOM_Highly_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMRightPower > 40 }
+		}
+		localization_key = KOM_Threatening
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMRightPower > 20 }
+		}
+		localization_key = KOM_Non_Threatening
+	}
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { KOMRightPower > 0 }
+				check_variable = { KOMRightPower = 0 }
+				check_variable = { KOMRightPower < 0 }
+			}
+		}
+		localization_key = KOM_Neutered
+	}
+}
+
+defined_text = {
+	name = GetKOMCoupLikelihood
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 90 }
+		}
+		localization_key = KOM_Coup_Risk_Critical
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 80 }
+		}
+		localization_key = KOM_Coup_Risk_Extremely_High
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 70 }
+		}
+		localization_key = KOM_Coup_Risk_High
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 60 }
+		}
+		localization_key = KOM_Coup_Risk_Slightly_High
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 50 }
+		}
+		localization_key = KOM_Coup_Risk_Moderate
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 40 }
+		}
+		localization_key = KOM_Coup_Risk_Slightly_Low
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 30 }
+		}
+		localization_key = KOM_Coup_Risk_Low
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 20 }
+		}
+		localization_key = KOM_Coup_Risk_Extremely_Low
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 10 }
+		}
+		localization_key = KOM_Coup_Risk_Nonexistent
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk > 0 }
+		}
+		localization_key = KOM_Coup_Risk_Nonexistent
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCoupRisk = 0 }
+		}
+		localization_key = KOM_default
+	}
+}
+
+defined_text = {
+	name = GetKOMLeftIntegrity
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 80 }
+		}
+		localization_key = KOM_Party_Stable
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 60 }
+		}
+		localization_key = KOM_Party_Reasonably_Stable
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 40 }
+		}
+		localization_key = KOM_Party_Unstable
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 20 }
+		}
+		localization_key = KOM_Party_Dangerously_Unstable
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMLeftPower > 0 }
+		}
+		localization_key = KOM_Party_Collapsing
+	}
+}
+
+defined_text = {
+	name = GetKOMZhdanoviteInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanovites_Purged
+		}
+		localization_key = KOM_Faction_Purged
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMZhdanovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMBukharinistInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Bukharinists_Purged
+		}
+		localization_key = KOM_Faction_Purged
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMBukharinaInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+defined_text = {
+	name = GetKOMSusloviteInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Suslovites_Purged
+		}
+		localization_key = KOM_Faction_Purged
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSuslovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMCenterIntegrity
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 80 }
+		}
+		localization_key = KOM_Party_Stable
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 60 }
+		}
+		localization_key = KOM_Party_Reasonably_Stable
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 40 }
+		}
+		localization_key = KOM_Party_Unstable
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 20 }
+		}
+		localization_key = KOM_Party_Dangerously_Unstable
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMCenterPower > 0 }
+		}
+		localization_key = KOM_Party_Collapsing
+	}
+}
+
+defined_text = {
+	name = GetKOMPSDPower
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMStalinaInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMSMRPower
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kosyginites_Purged
+		}
+		localization_key = KOM_Faction_Purged
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMKosyginInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMVPower
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMVoznesenskyInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+
+defined_text = {
+	name = KOMResolveSocDemSituation
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = KOM_Voznesensky_Retired
+				has_country_flag = KOM_Voznesensky_Dead
+				has_country_flag = KOM_Voznesensky_Arrested
+			}
+		}
+		localization_key = KOM_socdems_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Voznesensky_Retired
+					has_country_flag = KOM_Voznesensky_Dead
+					has_country_flag = KOM_Voznesensky_Arrested
+				}
+			}
+		}
+		localization_key = KOM_socdems_exist
+	}
+}
+
+defined_text = {
+	name = GetKOMGumilyoviteInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Gumilyovites_Purged
+		}
+		localization_key = KOM_Faction_Purged
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMGumilyovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMShafarevichiteInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Shafarevichites_Purged
+		}
+		localization_key = KOM_Faction_Purged
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMShafarevichInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+
+defined_text = {
+	name = GetKOMOrdosocialistInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Ordosocialists_Purged
+		}
+		localization_key = KOM_Faction_Purged
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMSerovInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+defined_text = {
+	name = GetKOMTaboritskyiteInfluence
+	text = {
+		trigger = {
+			has_country_flag = KOM_Taboritskyites_Purged
+		}
+		localization_key = KOM_Faction_Purged
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 90
+				}
+			}
+		}
+		localization_key = KOM_Faction_Overpowering
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 80
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 70
+				}
+			}
+		}
+		localization_key = KOM_Faction_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 60
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_High
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 50
+				}
+			}
+		}
+		localization_key = KOM_Faction_Medium
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 40
+				}
+			}
+		}
+		localization_key = KOM_Faction_Moderately_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 30
+				}
+			}
+		}
+		localization_key = KOM_Faction_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 20
+				}
+			}
+		}
+		localization_key = KOM_Faction_Very_Low
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence > 9.99
+				}
+			}
+		}
+		localization_key = KOM_Faction_Irrelevant
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMTaboritskyInfluence < 10
+				}
+			}
+		}
+		localization_key = KOM_Faction_Nonexistent
+	}
+}
+
+
+### ZHDANOV SCIENCE ###
+
+defined_text = {
+	name = GetKOMSocietyExperiments
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = KOMSocietyExperimentDetails
+	}
+}
+
+defined_text = {
+	name = GetKOMPsychExperiments
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = KOMPsychExperimentDetails
+	}
+}
+
+defined_text = {
+	name = GetKOMWeaponExperiments
+	text = {
+		trigger = {
+			has_country_flag = THE_GODDAMN_MINIGUN
+		}
+		localization_key = KOMYESMINIGUNweaponExperimentDetails
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = THE_GODDAMN_MINIGUN
+			}
+		}
+		localization_key = KOMNOMINIGUNweaponExperimentDetails
+	}
+}
+
+defined_text = {
+	name = KOMGetPsychProject1Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_1_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_1_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_1_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_1_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_1_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetPsychProject2Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_2_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_2_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_2_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_2_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_2_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetPsychProject3Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_3_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_3_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_3_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_3_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_3_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetPsychProject4Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_4_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_4_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_4_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_4_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_4_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetPsychProject5Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_5_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_5_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_5_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_5_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_PSYCH_PROJECT_5_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetSocietyProject1Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_1_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_1_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_1_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_1_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_1_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetSocietyProject2Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_2_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_2_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_2_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_2_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_2_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetSocietyProject3Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_3_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_3_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_3_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_3_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_3_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetSocietyProject4Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_4_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_4_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_4_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_4_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_4_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetSocietyProject5Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_5_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_5_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_5_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_5_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_SOCIETY_PROJECT_5_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetWeaponsProject1Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_1_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_1_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_1_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_1_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_1_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetWeaponsProject2Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_2_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_2_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_2_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_2_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_2_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetWeaponsProject3Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_3_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_3_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_3_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_3_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_3_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetWeaponsProject4Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_4_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_4_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_4_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_4_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_4_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetWeaponsProject5Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_5_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_5_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_5_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_5_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_5_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+defined_text = {
+	name = KOMGetWeaponsProject6Status
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_6_FAILED
+		}
+		localization_key = KOM_experiment_failed
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_6_INCONCLUSIVE
+		}
+		localization_key = KOM_experiment_inconclusive
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_6_PARTIAL_SUCCESS
+		}
+		localization_key = KOM_experiment_partial
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_6_SUCCESS
+		}
+		localization_key = KOM_experiment_success
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_WEAPONS_PROJECT_6_IN_PROGRESS
+		}
+		localization_key = KOM_experiment_in_progress
+	}
+	text = {
+		localization_key = KOM_experiment_incomplete
+	}
+}
+
+### TABBY ###
+defined_text = {
+	name = KOMTabbyGetTime
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 1 }
+		}
+		localization_key = KOM_tabby_time_1
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 2 }
+		}
+		localization_key = KOM_tabby_time_2
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 3 }
+		}
+		localization_key = KOM_tabby_time_3
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 4 }
+		}
+		localization_key = KOM_tabby_time_4
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 5 }
+		}
+		localization_key = KOM_tabby_time_5
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 6 }
+		}
+		localization_key = KOM_tabby_time_6
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 7 }
+		}
+		localization_key = KOM_tabby_time_7
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 8 }
+		}
+		localization_key = KOM_tabby_time_8
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 9 }
+		}
+		localization_key = KOM_tabby_time_9
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 10 }
+		}
+		localization_key = KOM_tabby_time_10
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 11 }
+		}
+		localization_key = KOM_tabby_time_11
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 12 }
+		}
+		localization_key = KOM_tabby_time_12
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 13 }
+		}
+		localization_key = KOM_tabby_time_13
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 14 }
+		}
+		localization_key = KOM_tabby_time_14
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 15 }
+		}
+		localization_key = KOM_tabby_time_15
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 16 }
+		}
+		localization_key = KOM_tabby_time_16
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 17 }
+		}
+		localization_key = KOM_tabby_time_17
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 18 }
+		}
+		localization_key = KOM_tabby_time_18
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 19 }
+		}
+		localization_key = KOM_tabby_time_19
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 20 }
+		}
+		localization_key = KOM_tabby_time_20
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 21 }
+		}
+		localization_key = KOM_tabby_time_21
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 22 }
+		}
+		localization_key = KOM_tabby_time_22
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 23 }
+		}
+		localization_key = KOM_tabby_time_23
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_hours = 24 }
+		}
+		localization_key = KOM_tabby_time_24
+	}
+}
+
+defined_text = {
+	name = KOMTabbyGetTimeProgress
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_progress > 45 }
+		}
+		localization_key = KOM_tabby_time_forward_4
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_progress > 30 }
+		}
+		localization_key = KOM_tabby_time_forward_3
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_progress > 15 }
+		}
+		localization_key = KOM_tabby_time_forward_2
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_progress > 0 }
+		}
+		localization_key = KOM_tabby_time_forward_1
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_progress = 0 }
+		}
+		localization_key = KOM_tabby_time_still
+	}
+	text = {
+		trigger = {
+			check_variable = { KOM_tabby_time_progress < 0 }
+		}
+		localization_key = KOM_tabby_time_backwards
+	}
+}
+
+defined_text = {
+	name = KOMGetIdeologyOppositionMenu
+	text = {
+		trigger = {
+			OR = {
+				has_government = authoritarian_democracy
+				has_government = social_democracy
+				has_government = liberal_democracy
+				AND = {
+					has_government = despotism
+					has_country_leader = {
+						name = "Svetlana Stalina"
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		localization_key = KOM_democratic_opposition_menu_gui
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = socialist
+				has_government = communist
+			}
+		}
+		localization_key = KOM_communist_opposition_menu_gui
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = fascism
+				has_government = national_socialism
+				has_government = esoteric_nazism
+				has_government = ultranationalism
+				AND = {
+					has_government = despotism
+					has_country_leader = {
+						name = "Sergey Taboritsky"
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		localization_key = KOM_fascist_opposition_menu_gui
+	}
+}
+defined_text = {
+	name = KOMGetRuleOfengagement
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kill_Opposition
+		}
+		localization_key = KOM_opposition_kill_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Arrest_Opposition
+		}
+		localization_key = KOM_opposition_arrest_tt
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Exile_Opposition
+		}
+		localization_key = KOM_opposition_exile_tt
+	}
+}
+defined_text = {
+	name = KOMGetStalinaOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Stalina_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Stalina_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Stalina_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Stalina_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Stalina_Dead
+					has_country_flag = KOM_Stalina_Retired
+					has_country_flag = KOM_Stalina_Arrested
+					has_country_flag = KOM_Stalina_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetVoznesenskyOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Voznesensky_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Voznesensky_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Voznesensky_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Voznesensky_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Voznesensky_Dead
+					has_country_flag = KOM_Voznesensky_Retired
+					has_country_flag = KOM_Voznesensky_Arrested
+					has_country_flag = KOM_Voznesensky_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetKosyginOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kosygin_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kosygin_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kosygin_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Kosygin_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Kosygin_Dead
+					has_country_flag = KOM_Kosygin_Retired
+					has_country_flag = KOM_Kosygin_Arrested
+					has_country_flag = KOM_Kosygin_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetSuslovOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Suslov_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Suslov_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Suslov_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Suslov_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Suslov_Dead
+					has_country_flag = KOM_Suslov_Retired
+					has_country_flag = KOM_Suslov_Arrested
+					has_country_flag = KOM_Suslov_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetZhdanovOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Zhdanov_Dead
+					has_country_flag = KOM_Zhdanov_Retired
+					has_country_flag = KOM_Zhdanov_Arrested
+					has_country_flag = KOM_Zhdanov_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetBukharinaOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Bukharina_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Bukharina_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Bukharina_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Bukharina_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Bukharina_Dead
+					has_country_flag = KOM_Bukharina_Retired
+					has_country_flag = KOM_Bukharina_Arrested
+					has_country_flag = KOM_Bukharina_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetShafarevichOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Shafarevich_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Shafarevich_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Shafarevich_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Shafarevich_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Shafarevich_Dead
+					has_country_flag = KOM_Shafarevich_Retired
+					has_country_flag = KOM_Shafarevich_Arrested
+					has_country_flag = KOM_Shafarevich_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetGumilyovOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Gumilyov_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Gumilyov_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Gumilyov_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Gumilyov_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Gumilyov_Dead
+					has_country_flag = KOM_Gumilyov_Retired
+					has_country_flag = KOM_Gumilyov_Arrested
+					has_country_flag = KOM_Gumilyov_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetSerovOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Serov_Dead
+					has_country_flag = KOM_Serov_Retired
+					has_country_flag = KOM_Serov_Arrested
+					has_country_flag = KOM_Serov_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMGetTaboritskyOppositionStatus
+	text = {
+		trigger = {
+			has_country_flag = KOM_Taboritsky_Dead
+		}
+		localization_key = KOM_opposition_leader_dead
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Taboritsky_Retired
+		}
+		localization_key = KOM_opposition_leader_fled
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Taboritsky_Arrested
+		}
+		localization_key = KOM_opposition_leader_arrested
+	}
+	text = {
+		trigger = {
+			has_country_flag = KOM_Taboritsky_Active
+		}
+		localization_key = KOM_opposition_leader_active
+	}
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = KOM_Taboritsky_Dead
+					has_country_flag = KOM_Taboritsky_Retired
+					has_country_flag = KOM_Taboritsky_Arrested
+					has_country_flag = KOM_Taboritsky_Active
+				}
+			}
+		}
+		localization_key = KOM_opposition_leader_unknown
+	}
+}
+defined_text = {
+	name = KOMOrdosocialistPartyDominant
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMOrdosocialistLean = 3
+				}
+			}
+		}
+		localization_key = KOM_Ordosocialist_Far_Left
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMOrdosocialistLean = 2
+				}
+			}
+		}
+		localization_key = KOM_Ordosocialist_Left
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMOrdosocialistLean = 1
+				}
+			}
+		}
+		localization_key = KOM_Ordosocialist_Left_Leaning
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMOrdosocialistLean = 0
+				}
+			}
+		}
+		localization_key = KOM_Ordosocialist_Center
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMOrdosocialistLean = -1
+				}
+			}
+		}
+		localization_key = KOM_Ordosocialist_Right_Leaning
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMOrdosocialistLean = -2
+				}
+			}
+		}
+		localization_key = KOM_Ordosocialist_Right
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOMOrdosocialistLean = -3
+				}
+			}
+		}
+		localization_key = KOM_Ordosocialist_Far_Right
+	}
+}
+
+defined_text = {
+	name = GetPSDStatus
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_unity > 80
+				}
+			}
+		}
+		localization_key = KOM_PSD_fully_unified
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_unity > 60
+				}
+			}
+		}
+		localization_key = KOM_PSD_unified
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_unity > 40
+				}
+			}
+		}
+		localization_key = KOM_PSD_slightly_unified
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_unity > 20
+				}
+			}
+		}
+		localization_key = KOM_PSD_disunified
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_unity > -100
+				}
+			}
+		}
+		localization_key = KOM_PSD_not_unified
+	}
+}
+
+defined_text = {
+	name = GetPSDLeaning
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_leaning > 25
+				}
+			}
+		}
+		localization_key = KOM_PSD_far_left
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_leaning > 15
+				}
+			}
+		}
+		localization_key = KOM_PSD_left
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_leaning > 5
+				}
+			}
+		}
+		localization_key = KOM_PSD_center_left
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_leaning > -5
+				}
+			}
+		}
+		localization_key = KOM_PSD_centrist
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_leaning > -15
+				}
+			}
+		}
+		localization_key = KOM_PSD_center_right
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_leaning > -25
+				}
+			}
+		}
+		localization_key = KOM_PSD_right
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_leaning > -100
+				}
+			}
+		}
+		localization_key = KOM_PSD_far_right
+	}
+}
+
+defined_text = {
+	name = GetPSDProStatus
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_left_power > 80
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_powerful
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_left_power > 60
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_mod_powerful
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_left_power > 40
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_mod
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_left_power > 20
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_weak
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_left_power > -1
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_irrelevant
+	}
+}
+
+defined_text = {
+	name = GetPSDNatStatus
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_right_power > 80
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_powerful
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_right_power > 60
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_mod_powerful
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_right_power > 40
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_mod
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_right_power > 20
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_weak
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KOM_PSD_right_power > -1
+				}
+			}
+		}
+		localization_key = KOM_PSD_wing_irrelevant
+	}
+}
+
+### I AM BEYOND GOD
+
+defined_text = {
+	name = UltravisGetZhdanovAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Zhdanov_Karda_Success
+					has_country_flag = Zhdanov_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_chelo_leaning
+	}
+	text = {
+		trigger = {
+			has_country_flag = Zhdanov_Karda_Success
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = Zhdanov_Chelo_Success
+		}
+		localization_key = KOM_UV_chelo_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetForeignAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Foreign_Karda_Success
+					has_country_flag = Foreign_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_chelo_leaning
+	}
+	text = {
+		trigger = {
+			has_country_flag = Foreign_Chelo_Success
+		}
+		localization_key = KOM_UV_chelo_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetFinanceAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Finance_Karda_Success
+					has_country_flag = Finance_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_karda_leaning
+	}
+	text = {
+		trigger = {
+			has_country_flag = Finance_Karda_Success
+		}
+		localization_key = KOM_UV_karda_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetScienceAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Science_Karda_Success
+					has_country_flag = Science_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_undecided
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = Science_Chelo_Failure
+				has_country_flag = Science_Karda_Failure
+			}
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = Science_Karda_Success
+		}
+		localization_key = KOM_UV_karda_aligned
+	}
+	text = {
+		trigger = {
+			has_country_flag = Science_Chelo_Success
+		}
+		localization_key = KOM_UV_chelo_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetIndustryAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Industry_Karda_Success
+					has_country_flag = Industry_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_undecided
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = Industry_Chelo_Failure
+				has_country_flag = Industry_Karda_Failure
+			}
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = Industry_Karda_Success
+		}
+		localization_key = KOM_UV_karda_aligned
+	}
+	text = {
+		trigger = {
+			has_country_flag = Industry_Chelo_Success
+		}
+		localization_key = KOM_UV_chelo_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetRecordsAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Records_Karda_Success
+					has_country_flag = Records_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_undecided
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = Records_Chelo_Failure
+				has_country_flag = Records_Karda_Failure
+			}
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = Records_Karda_Success
+		}
+		localization_key = KOM_UV_karda_aligned
+	}
+	text = {
+		trigger = {
+			has_country_flag = Records_Chelo_Success
+		}
+		localization_key = KOM_UV_chelo_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetArmyAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Army_Karda_Success
+					has_country_flag = Army_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_chelo_leaning
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = Army_Chelo_Failure
+				has_country_flag = Army_Karda_Failure
+			}
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = Army_Karda_Success
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = Army_Chelo_Success
+		}
+		localization_key = KOM_UV_chelo_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetReformerAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Reformer_Karda_Success
+					has_country_flag = Reformer_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_karda_leaning
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = Reformer_Chelo_Failure
+				has_country_flag = Reformer_Karda_Failure
+			}
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = Reformer_Karda_Success
+		}
+		localization_key = KOM_UV_karda_aligned
+	}
+	text = {
+		trigger = {
+			has_country_flag = Reformer_Chelo_Success
+		}
+		localization_key = KOM_UV_neutral
+	}
+}
+
+defined_text = {
+	name = UltravisGetSCAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = SC_Karda_Success
+					has_country_flag = SC_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_undecided
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = SC_Chelo_Failure
+				has_country_flag = SC_Karda_Failure
+			}
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = SC_Karda_Success
+		}
+		localization_key = KOM_UV_karda_aligned
+	}
+	text = {
+		trigger = {
+			has_country_flag = SC_Chelo_Success
+		}
+		localization_key = KOM_UV_chelo_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetSpaceAlignment
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = Space_Karda_Success
+					has_country_flag = Space_Chelo_Success
+				}
+			}
+		}
+		localization_key = KOM_UV_undecided
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = Space_Chelo_Failure
+				has_country_flag = Space_Karda_Failure
+			}
+		}
+		localization_key = KOM_UV_neutral
+	}
+	text = {
+		trigger = {
+			has_country_flag = Space_Karda_Success
+		}
+		localization_key = KOM_UV_karda_aligned
+	}
+	text = {
+		trigger = {
+			has_country_flag = Space_Chelo_Success
+		}
+		localization_key = KOM_UV_chelo_aligned
+	}
+}
+
+defined_text = {
+	name = UltravisGetInfluenceBalance
+	text = {
+		trigger = {
+			check_variable = { KOMChelomeiPoints > KOMKardashevPointsDouble }
+		}
+		localization_key = KOM_UV_influence_balance_chelo_high
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMChelomeiPointsDouble < KOMKardashevPoints }
+		}
+		localization_key = KOM_UV_influence_balance_karda_high
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMChelomeiPoints = KOMKardashevPoints }
+		}
+		localization_key = KOM_UV_influence_balance_balanced
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMChelomeiPoints > KOMKardashevPoints }
+		}
+		localization_key = KOM_UV_influence_balance_chelo
+	}
+	text = {
+		trigger = {
+			check_variable = { KOMChelomeiPoints < KOMKardashevPoints }
+		}
+		localization_key = KOM_UV_influence_balance_karda
+	}
+}
+
+defined_text = {
+	name = UltravisGetOpponentName
+	text = {
+		trigger = {
+			has_country_flag = PLAYER_CHELO_POV
+		}
+		localization_key = KOM_UV_Karda
+	}
+	text = {
+		trigger = {
+			has_country_flag = PLAYER_KARDA_POV
+		}
+		localization_key = KOM_UV_Chelo
+	}
+}
+
+defined_text = {
+	name = Get_Event_KOM_181_Desc
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_181_zhdanov_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = KOM_Zhdanov_Dead
+			}
+		}
+		localization_key = KOM_181_zhdanov_alive
+	}
+}
+
+defined_text = {
+	name = Get_Event_KOM_278_Desc
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_278_zhdanov_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = KOM_Zhdanov_Dead
+			}
+		}
+		localization_key = KOM_278_zhdanov_alive
+	}
+}
+
+defined_text = {
+	name = Get_Event_KOM_335_Desc
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_335_zhdanov_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = KOM_Zhdanov_Dead
+			}
+		}
+		localization_key = KOM_335_zhdanov_alive
+	}
+}
+
+defined_text = {
+	name = Get_Event_KOM_347_Desc
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_347_zhdanov_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = KOM_Zhdanov_Dead
+			}
+		}
+		localization_key = KOM_347_zhdanov_alive
+	}
+}
+
+defined_text = {
+	name = Get_Event_KOM_349_Desc
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_349_zhdanov_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = KOM_Zhdanov_Dead
+			}
+		}
+		localization_key = KOM_349_zhdanov_alive
+	}
+}
+
+defined_text = {
+	name = Get_Left_President_Full_Name
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Yuri Andropov"
+				ruling_only = yes
+			}
+		}
+		localization_key = KOM_adr_full_name
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Andrei Zhdanov"
+				ruling_only = yes
+			}
+		}
+		localization_key = KOM_zhd_full_name
+	}
+}
+
+defined_text = {
+	name = Get_Left_President_Last_Name
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Yuri Andropov"
+				ruling_only = yes
+			}
+		}
+		localization_key = KOM_adr_last_name
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Andrei Zhdanov"
+				ruling_only = yes
+			}
+		}
+		localization_key = KOM_zhd_last_name
+	}
+}
+
+defined_text = {
+	name = Get_Left_President_First_Name
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Yuri Andropov"
+				ruling_only = yes
+			}
+		}
+		localization_key = KOM_adr_first_name
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Andrei Zhdanov"
+				ruling_only = yes
+			}
+		}
+		localization_key = KOM_zhd_first_name
+	}
+}
+
+defined_text = {
+	name = Get_Left_Sec_Min
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Yuri Andropov"
+				ruling_only = yes
+			}
+		}
+		localization_key = KOM_vrl_last_name
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Andrei Zhdanov"
+				ruling_only = yes
+			}
+		}
+		localization_key = KOM_adr_last_name
+	}
+}
+
+defined_text = {
+	name = Get_KOM_Expel_Revisionists_TT
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_expel_revisionists_zhdanov_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = KOM_Zhdanov_Dead
+			}
+		}
+		localization_key = KOM_expel_revisionists_zhdanov_alive
+	}
+}
+
+defined_text = {
+	name = Get_Event_KOM_361_Desc
+	text = {
+		trigger = {
+			has_country_flag = KOM_Zhdanov_Dead
+		}
+		localization_key = KOM_361_zhdanov_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = KOM_Zhdanov_Dead
+			}
+		}
+		localization_key = KOM_361_zhdanov_alive
+	}
+}
+
+defined_text = {
+	name = Get_Event_KOM_16_Desc
+	text = {
+		trigger = {
+			MCW = {
+				exists = yes
+			}
+		}
+		localization_key = KOM_16_Moskowien_alive
+	}
+	text = {
+		trigger = {
+			MCW = {
+				exists = no
+			}
+		}
+		localization_key = KOM_16_Moskowien_dead
+	}
+}
+
+defined_text = {
+	name = Get_Event_KOM_382_Desc
+	text = {
+		trigger = {
+			has_country_flag = KOM_Serov_Dead
+		}
+		localization_key = KOM_382_serov_dead
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = KOM_Serov_Dead
+			}
+		}
+		localization_key = KOM_382_serov_alive
+	}
+}

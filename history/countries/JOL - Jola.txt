@@ -1,0 +1,160 @@
+﻿capital = 701
+
+add_ideas = {
+	WEST_AFRICA_idea_terror_bombing
+	JOL_idea_under_shadow_wolofia
+	JOL_idea_home_exiled_paigc
+
+	JOL_Assan_Musa_Camara_hog
+	JOL_Augustin_Diamacoune_Senghor_for
+	JOL_Daniel_Cabou_eco
+	JOL_Sheriff_Mustapha_Dibba_sec
+	### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	tno_refugees_vetted_entry
+
+	### MILITARY LAWS ###
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_few_regulations
+	tno_education_elite_only
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_police
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### SOCIETAL DEVELOPMENT ###
+	 
+     tno_army_professionalism_disgruntled_veterans
+     tno_industrial_expertise_nascent
+     tno_industrial_equipment_power_tools
+     tno_agriculture_basic_mechanized
+     tno_research_facilities_outdated
+     tno_academic_base_basic_literacy
+	 tno_admin_efficiency_widespread_corruption
+}
+
+oob = "JOL_1962"
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    social_democracy = 22
+    liberal_democracy = 6
+
+    conservative_democracy = 11
+    authoritarian_democracy = 23
+    despotism = 30
+    fascism = 8
+    
+}
+
+create_country_leader = {
+	name = "Luís Cabral"
+	desc = "POLITICS_LUIS_CABRAL_DESC"
+	picture = "Portrait_Jola_Luis_Cabral.dds"
+	expire = "1965.1.1"
+	ideology = communist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "João Bernardo Vieira"
+	desc = "POLITICS_JOAO_BERNARDO_VIEIRA_DESC"
+	picture = "Portrait_Jola_Joao_Bernardo_Vieira.dds"
+	expire = "1965.1.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Dawda Jawara"
+	desc = "POLITICS_DAWDA_JAWARA_DESC"
+	picture = "Portrait_Jola_Dawda_Jawara.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Pierre Sarr N'Jie"
+	desc = "POLITICS_ PIERRE_SARR_NJIE_DESC"
+	picture = "Portrait_Jola_Pierre_Sarr_NJie.dds"
+	expire = "1965.1.1"
+	ideology = conservative_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Émile Badiane"
+	desc = "POLITICS_EMILE_BEDIANE_DESC"
+	picture = "Portrait_Jola_Emile_Badiane.dds"
+	expire = "1965.1.1"
+	ideology = despotism_civilian_dictatorship_subtype
+	traits = {
+		#
+	}
+}
+
+create_field_marshal  = {
+    name = "Émile Badiane"
+    picture = "Portrait_Ewe_Emile_Badiane.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Mustapha Danso"
+    picture = "Portrait_Ewe_Mustapha_Danso.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}

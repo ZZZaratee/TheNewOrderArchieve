@@ -1,0 +1,25 @@
+#POP DONE
+state={
+	id=791
+	name="STATE_791"
+	state_category = rural
+	provinces={
+		3534 3549 9578 
+	}
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 6
+			barracks = 1
+			schools = 1
+			offices = 1
+		}
+		add_core_of = FRA
+		set_demilitarized_zone = yes
+		victory_points = { 3534 5 }
+		victory_points = { 3549 1 }
+		victory_points = { 9578 1 }
+	}
+	manpower=280500
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,28 @@
+##POP DONE
+state={
+	id=181
+	name="STATE_181"
+	manpower = 266421
+	
+	state_category = town
+	
+	resources={
+		tungsten=300
+		uranium = 10
+	}
+	history={
+		owner = IBR
+		buildings = {
+			barracks = 1
+			infrastructure = 5
+		}
+
+		add_core_of = IBR
+		victory_points = { 6996 5 }
+		victory_points = { 9787 5 }
+	}
+
+	provinces={
+		845 889 938 3969 6818 6996 9787 11885 
+	}
+}

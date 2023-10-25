@@ -1,0 +1,31 @@
+
+state={
+	id=96
+	name="STATE_96"
+
+	history={
+		owner = OST
+		add_core_of = OST
+		victory_points = {
+			3320 10
+		}
+		buildings = {
+			infrastructure = 6
+			air_base = 5
+			thermoelectric_plant = 1
+			schools = 2
+			hospitals = 1
+			offices = 1
+			prisons = 1
+			barracks = 1
+		}
+		add_extra_state_shared_building_slots = 5
+	}
+
+	provinces={
+		3320 14567 14571 14573 14576 14582 
+	}
+	manpower=590086
+	buildings_max_level_factor=1.000
+	state_category=town
+}

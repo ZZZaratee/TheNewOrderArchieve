@@ -1,0 +1,252 @@
+ideas = {
+	country = {
+		CHL_idea_social_question = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				gdp_growth_modifier = -0.05
+				taxable_population_modifier = -0.2
+				poverty_monthly_rate = -0.05
+			}
+			picture = CHL_la_hacienda_idea
+		}
+		CHL_idea_political_fragmentation_alessandri_0 = { # Chad Alessandri
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.05
+			}
+			picture = CHL_political_fragmentation_idea
+		}
+		CHL_idea_political_fragmentation_alessandri_1 = { # Status-Quo Alessandri
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.5
+				stability_factor = -0.1
+				liberal_democracy_drift = -0.02
+			}
+			picture = CHL_political_fragmentation_idea
+		}
+		CHL_idea_political_fragmentation_alessandri_2 = { # Cucked Alessandri
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.75
+				stability_factor = -0.05
+				liberal_democracy_drift = -0.02
+			}
+			picture = CHL_political_fragmentation_idea
+		}
+		CHL_idea_economic_subservience = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				misc_income_modifier = 0.05
+			}
+			picture = CHL_economic_subservience_idea
+		}
+		CHL_idea_agrarian_timebomb = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+			}
+			picture = CHL_agrarian_timebomb_idea
+		}
+
+		## Rural Collapse
+		CHL_idea_rural_collapse = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.3
+				conscription = -0.2
+				max_command_power = -50
+				weekly_manpower = -10
+			}
+			picture = CHL_rural_collapse_idea
+		}
+	}
+	head_of_government = {
+		CHL_Sotero_del_Rio_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHL_Sotero_del_Rio_hog"}
+			picture = CHL_Sotero_del_Rio_minister
+			allowed = {
+				original_tag = CHL
+			}
+			available = {
+			}
+			traits = {
+				CHL_minister_interior
+				liberal_democracy
+				CHL_Sotero_del_Rio_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	head_of_government = {
+		CHL_Julio_Philippi_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHL_Julio_Philippi_hog"}
+			picture = CHL_Julio_Philippi_minister
+			allowed = {
+				original_tag = CHL
+			}
+			available = {
+			}
+			traits = {
+				CHL_minister_interior
+				liberal_democracy
+				CHL_Julio_Philippi_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	foreign_minister = {
+		CHL_Arturo_Maschke_pol = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHL_Arturo_Maschke_pol"}
+			picture = CHL_Arturo_Maschke_minister
+			allowed = {
+				original_tag = CHL
+			}
+			available = {
+			}
+			traits = {
+				CHL_minister_exterior
+				liberal_democracy
+				CHL_Arturo_Maschke_pol_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	foreign_minister = {
+		CHL_Julio_Philippi_pol = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHL_Julio_Philippi_pol"}
+			picture = CHL_Julio_Philippi_minister
+			allowed = {
+				original_tag = CHL
+			}
+			available = {
+			}
+			traits = {
+				CHL_minister_exterior
+				liberal_democracy
+				CHL_Julio_Philippi_pol_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	economy_minister = {
+		CHL_Julio_Philippi_eco = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHL_Julio_Philippi_eco"}
+			picture = CHL_Julio_Philippi_minister
+			allowed = {
+				original_tag = CHL
+			}
+			available = {
+			}
+			traits = {
+				CHL_minister_economy
+				liberal_democracy
+				CHL_Julio_Philippi_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	economy_minister = {
+		CHL_Arturo_Maschke_eco = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHL_Arturo_Maschke_eco"}
+			picture = CHL_Arturo_Maschke_minister
+			allowed = {
+				original_tag = CHL
+			}
+			available = {
+			}
+			traits = {
+				CHL_minister_economy
+				liberal_democracy
+				CHL_Arturo_Maschke_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	economy_minister = {
+		CHL_Roberto_Vergara_eco = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHL_Roberto_Vergara_eco"}
+			#picture = CHL_Roberto_Vergara_minister
+			allowed = {
+				original_tag = CHL
+			}
+			available = {
+			}
+			traits = {
+				CHL_minister_economy
+				liberal_democracy
+				CHL_Roberto_Vergara_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	security_minister = {
+		CHL_Carlos_Vial_sec = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHL_Carlos_Vial_sec"}
+			picture = CHL_Carlos_Vial_sec
+			allowed = {
+				original_tag = CHL
+			}
+			available = {
+			}
+			traits = {
+				CHL_minister_defense
+				liberal_democracy
+				CHL_Carlos_Vial_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+}

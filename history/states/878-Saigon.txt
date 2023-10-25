@@ -1,0 +1,33 @@
+###POP DONE
+state={
+	id=878
+	name="STATE_878"
+	resources={
+		rubber=2
+	}
+	
+	history={
+		owner = VIN
+		add_core_of = VIN
+		
+		buildings = {
+			infrastructure = 3
+			radar_station = 2
+			air_base = 2
+			4401 = {
+				naval_base = 4
+
+			}
+		}
+		victory_points = { 4401 20 }
+	
+	}
+	
+	provinces={
+		4401 12232 
+	}
+	
+	manpower=2916100
+	state_category=city
+	buildings_max_level_factor=1.000	
+}

@@ -1,0 +1,30 @@
+###POP DONE 
+state={
+	id=24
+	name="STATE_24"
+
+	history={
+		owner = FRA
+		victory_points = { 3671 5 }
+		victory_points = { 3509 10 }
+		victory_points = { 11463 1 }
+		victory_points = { 6533 1 }
+		buildings = {
+			infrastructure = 7
+			prisons = 1 
+			schools = 1
+			offices = 1
+			hospitals = 1
+			thermoelectric_plant = 1
+		}
+		add_core_of = FRA
+		
+	}
+
+	provinces={
+		3509 3671 6533 9492 11463 11631 13364 
+	}
+	manpower=1388995
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

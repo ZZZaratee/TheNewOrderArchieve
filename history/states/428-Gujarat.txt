@@ -1,0 +1,30 @@
+###POP DONE###
+state={
+	id=428
+	name="STATE_428"
+	manpower = 19695305
+	
+	state_category = large_town
+	resources={
+		oil=3	
+	}
+	history={
+		owner = IND
+		victory_points = { 9975 20 }
+		victory_points = {
+			4187 10 #Surat#
+		}
+		buildings = {
+			infrastructure = 4
+			9975 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = AZH
+		add_core_of = IND
+	}
+
+	provinces={
+		1061 1103 1144 1190 4064 4090 4132 4187 7020 7150 7165 7207 9975 10118 11952 12037 12092 
+	}
+}

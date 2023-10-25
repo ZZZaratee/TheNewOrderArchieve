@@ -1,0 +1,1162 @@
+﻿add_namespace = PLS
+
+###Warlord event pack
+
+country_event = {
+	id = PLS.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.1"}
+	title = PLS.1.t
+	desc = PLS.1.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = { #Confess
+		name = PLS.1.a
+		set_country_flag = PRISONERS_DILEMMA_SILENT
+		complete_national_focus = PLS_against_the_opposition
+	}
+	option = { #Silent
+		name = PLS.1.b
+		set_country_flag = PRISONERS_DILEMMA_CONFESS
+		complete_national_focus = PLS_for_ourselves
+	}
+}
+
+country_event = { #Prisoner's Dilemma explanation
+	id = PLS.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.2"}
+	title = PLS.2.t
+	desc = PLS.2.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.2.a
+		add_political_power = 10
+	}
+}
+
+country_event = { #Our Situation
+	id = PLS.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.3"}
+	title = PLS.3.t
+	desc = PLS.3.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.3.a
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #Vorshilov's Requests
+	id = PLS.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.4"}
+	title = PLS.4.t
+	desc = PLS.4.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.4.a
+		add_manpower = 300
+	}
+}
+
+country_event = { #Ready to reunify
+	id = PLS.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.5"}
+	title = PLS.5.t
+	desc = PLS.5.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.5.a
+		WRS = {
+			add_state_core = 870
+			add_state_core = 860
+			add_state_core = 861
+		}
+		WRS_increase_tukha_influence_med = yes
+		WRS_decrease_factionalism_high = yes
+
+	}
+}
+
+country_event = { #Observing Ukhta
+	id = PLS.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.6"}
+	title = PLS.6.t
+	desc = PLS.6.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.6.a
+		WRS_decrease_zhukov_influence_low = yes
+	}
+}
+
+country_event = { #Dig through records
+	id = PLS.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.7"}
+	title = PLS.7.t
+	desc = PLS.7.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.7.a
+		add_political_power = 25
+		WRS_decrease_zhukov_influence_med = yes
+	}
+}
+
+country_event = { #Mission to Archangelsk
+	id = PLS.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.8"}
+	title = PLS.8.t
+	desc = PLS.8.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.8.a
+		WRS_increase_tukha_influence_high = yes
+	}
+}
+
+country_event = { #Plesetsk asks for reinforcements
+	id = PLS.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.9"}
+	title = PLS.9.t
+	desc = PLS.9.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.9.a
+		PLS = {
+			country_event = {
+				id = PLS.10
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = PLS.9.b
+		PLS = {
+			country_event = {
+				id = PLS.11
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #WRS says yes
+	id = PLS.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.10"}
+	title = PLS.10.t
+	desc = PLS.10.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.10.a
+		add_manpower = 1500
+		WRS_increase_tukha_influence_low = yes
+	}
+}
+
+country_event = { #WRS says no
+	id = PLS.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.11"}
+	title = PLS.11.t
+	desc = PLS.11.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.11.a
+		WRS_decrease_factionalism_med = yes
+	}
+}
+
+country_event = { #Lose The Orders
+	id = PLS.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.12"}
+	title = PLS.12.t
+	desc = PLS.12.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.12.a
+	}
+}
+
+country_event = { #Tukhachevsky's Domain
+	id = PLS.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.13"}
+	title = PLS.13.t
+	desc = PLS.13.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.13.a
+	}
+}
+
+country_event = { #Assemble The General Staff
+	id = PLS.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.14"}
+	title = PLS.14.t
+	desc = PLS.14.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = { #Focus Onega
+		name = PLS.14.a
+		861 = {
+			add_building_construction = {
+				type = bunker
+				level = 3
+				instant_build = yes
+				province = 6075
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				instant_build = yes
+				province = 9130
+			}
+		}
+	}
+	option = { #Focus Komi
+		name = PLS.14.b
+		860 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 9123
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 9124
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 6100
+			}
+		}
+		870 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 7330
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 3155
+			}
+		}
+	}
+	option = { #Focus Vologda
+		name = PLS.14.c
+		861 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 72
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 6166
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 11074
+			}
+		}
+		860 = {
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 6199
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 3166
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				instant_build = yes
+				province = 6100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = PLS.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.15"}
+	title = PLS.15.t
+	desc = PLS.15.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = PLS.15.a
+		PLS = {
+			country_event = {
+				id = PLS.16
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = PLS.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.16"}
+	title = PLS.16.t
+	desc = PLS.16.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.16.a
+	}
+}
+
+country_event = { #Resurgence Program
+	id = PLS.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.17"}
+	title = PLS.17.t
+	desc = PLS.17.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.17.a
+		add_war_support = 0.025
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = PLS.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.18"}
+	title = PLS.18.t
+	desc = PLS.18.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.18.a
+	}
+}
+
+country_event = {
+	id = PLS.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.19"}
+	title = PLS.19.t
+	desc = PLS.19.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.19.a
+	}
+}
+
+country_event = { #Load prisoner's dilemma
+	id = PLS.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.20"}
+	title = PLS.20.t
+	desc = PLS.20.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.20.a
+		#load_focus_tree = TNO_prisoners_dilemma
+	}
+}
+
+country_event = {
+	id = PLS.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.21"}
+	title = PLS.21.t
+	desc = PLS.21.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.21.a
+	}
+}
+
+country_event = {
+	id = PLS.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.22"}
+	title = PLS.22.t
+	desc = PLS.22.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.22.a
+	}
+}
+
+country_event = {
+	id = PLS.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.23"}
+	title = PLS.23.t
+	desc = PLS.23.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.23.a
+	}
+}
+
+country_event = {
+	id = PLS.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.24"}
+	title = PLS.24.t
+	desc = PLS.24.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.24.a
+	}
+}
+
+country_event = {
+	id = PLS.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.25"}
+	title = PLS.25.t
+	desc = PLS.25.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.25.a
+	}
+}
+
+country_event = {
+	id = PLS.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.26"}
+	title = PLS.26.t
+	desc = PLS.26.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.26.a
+	}
+}
+
+country_event = {
+	id = PLS.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.27"}
+	title = PLS.27.t
+	desc = PLS.27.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.27.a
+	}
+}
+
+country_event = {
+	id = PLS.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.28"}
+	title = PLS.28.t
+	desc = PLS.28.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.28.a
+	}
+}
+
+country_event = {
+	id = PLS.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.29"}
+	title = PLS.29.t
+	desc = PLS.29.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.29.a
+	}
+}
+
+country_event = {
+	id = PLS.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.30"}
+	title = PLS.30.t
+	desc = PLS.30.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.30.a
+	}
+}
+
+country_event = {
+	id = PLS.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.31"}
+	title = PLS.31.t
+	desc = PLS.31.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.31.a
+	}
+}
+
+country_event = {
+	id = PLS.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.32"}
+	title = PLS.32.t
+	desc = PLS.32.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.32.a
+	}
+}
+
+country_event = {
+	id = PLS.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.33"}
+	title = PLS.33.t
+	desc = PLS.33.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.33.a
+	}
+}
+
+country_event = {
+	id = PLS.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.34"}
+	title = PLS.34.t
+	desc = PLS.34.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.34.a
+	}
+}
+
+country_event = {
+	id = PLS.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.35"}
+	title = PLS.35.t
+	desc = PLS.35.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.35.a
+		TAR = {
+			transfer_state = 249
+			transfer_state = 256
+			transfer_state = 854
+		}
+		BKR = {
+			transfer_state = 651
+		}
+	}
+}
+
+country_event = {
+	id = PLS.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.36"}
+	title = PLS.36.t
+	desc = PLS.36.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.36.a
+	}
+}
+
+country_event = {
+	id = PLS.37
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.37"}
+	title = PLS.37.t
+	desc = PLS.37.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.37.a
+	}
+}
+
+country_event = {
+	id = PLS.38
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.38"}
+	title = PLS.38.t
+	desc = PLS.38.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.38.a
+	}
+}
+
+country_event = {
+	id = PLS.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.39"}
+	title = PLS.39.t
+	desc = PLS.39.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.39.a
+	}
+}
+
+country_event = {
+	id = PLS.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.40"}
+	title = PLS.40.t
+	desc = PLS.40.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.40.a
+	}
+}
+
+country_event = {
+	id = PLS.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.41"}
+	title = PLS.41.t
+	desc = PLS.41.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.41.a
+	}
+}
+
+country_event = {
+	id = PLS.42
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.42"}
+	title = PLS.42.t
+	desc = PLS.42.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.42.a
+	}
+}
+
+country_event = {
+	id = PLS.43
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.43"}
+	title = PLS.43.t
+	desc = PLS.43.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.43.a
+	}
+}
+
+country_event = {
+	id = PLS.44
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.44"}
+	title = PLS.44.t
+	desc = PLS.44.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.44.a
+	}
+}
+
+country_event = {
+	id = PLS.45
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.45"}
+	title = PLS.45.t
+	desc = PLS.45.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.45.a
+	}
+}
+
+country_event = {
+	id = PLS.46
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.46"}
+	title = PLS.46.t
+	desc = PLS.46.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.46.a
+	}
+}
+
+country_event = {
+	id = PLS.47
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.47"}
+	title = PLS.47.t
+	desc = PLS.47.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.47.a
+	}
+}
+
+country_event = {
+	id = PLS.48
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.48"}
+	title = PLS.48.t
+	desc = PLS.48.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.48.a
+	}
+}
+
+country_event = {
+	id = PLS.49
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.49"}
+	title = PLS.49.t
+	desc = PLS.49.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.49.a
+	}
+}
+
+country_event = {
+	id = PLS.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.50"}
+	title = PLS.50.t
+	desc = PLS.50.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.50.a
+	}
+}
+
+country_event = { #Tukhavhevsky - Tukhachevsky made official successor
+	id = PLS.100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.100"}
+	title = PLS.100.t
+	desc = PLS.100.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.100.a
+		WRS = {
+			create_country_leader = {
+				name = "Mikhail Tukhachevsky"
+				picture = "Portrait_WRS_Mikhail_Tukhachevsky.dds"
+				expire = "1999.1.1"
+				desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
+				ideology = communist_stratocratic_communism_subtype
+				traits = {
+					the_red_bonaparte
+				}
+			}
+		}
+		WRS = {
+			remove_all_ministers = yes
+			add_ideas = {
+				WRS_Ieronim_Uborevich_hog
+				WRS_Dmitry_Ustinov_eco
+				WRS_Alexey_Yepishev_for
+				WRS_Yan_Gamarnik_sec
+			}
+		}
+		PLS = {
+			every_unit_leader = {
+				set_nationality = WRS
+			}
+		}
+		WRS = {
+			annex_country = {
+				target = PLS
+				transfer_troops = yes
+			}
+		}
+		WRS = {
+			change_tag_from = PLS
+		}
+	}
+}
+country_event = { #Tukhachevsky - Zhukov made official successor
+	id = PLS.101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.101"}
+	title = PLS.101.t
+	desc = PLS.101.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.101.a
+		country_event = {
+			id = PLS.102
+			days = 1
+		}
+	}
+}
+country_event = { #Challenge Zhukov's Ascension?
+	id = PLS.102
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.102"}
+	title = PLS.102.t
+	desc = PLS.102.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.102.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				check_variable = { global.WRSFactionalism < 20 }
+				factor = 0.25
+			}
+			modifier = {
+				check_variable = { global.WRSFactionalism > 30 }
+				factor = 1
+			}
+			modifier = {
+				check_variable = { global.WRSFactionalism > 50 }
+				factor = 5
+			}
+			modifier = {
+				check_variable = { global.WRSFactionalism > 70 }
+				factor = 10
+			}
+			modifier = {
+				check_variable = { global.WRSFactionalism > 90 }
+				factor = 15
+			}
+		}
+		WRS = {
+			country_event = PLS.103
+		}
+	}
+	option = {
+		name = PLS.102.b
+		trigger = {
+			WRS = {
+				OR = {
+					is_ai = yes
+					has_country_flag = WRS_power_struggle_zhukov
+				}
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+		WRS = {
+			country_event = PLS.104
+		}
+	}
+}
+country_event = { #Zhukov - Tukhachevsky challenges
+	id = PLS.103
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PLS.103"
+		PLS = {
+			declare_war_on = {
+				target = WRS
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					WRS = { has_country_flag = WRS_power_struggle_tukha }
+				}
+				change_tag_from = WRS
+			}
+		}
+	}
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		#Anti-exploit
+		if = {
+			limit = {
+				PLS = { is_ai = no }
+				OR = {
+					has_army_manpower = { size < 35000 }
+					num_divisions < 7
+				}
+			}
+			WRS = {
+				load_oob = WRS_1962
+				load_oob = UKH_1962
+			}
+		}
+	}
+}
+country_event = { #Zhukov - Tukhachevsky folds
+	id = PLS.104
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.104"}
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		PLS = {
+			every_unit_leader = {
+				set_nationality = WRS
+			}
+		}
+		WRS = {
+			annex_country = {
+				target = PLS
+				transfer_troops = yes
+			}
+			change_tag_from = PLS
+		}
+	}
+}
+country_event = { #Altunin made official successor
+	id = PLS.105
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.105"}
+	title = PLS.105.t
+	desc = PLS.105.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.105.a
+		PLS = {
+			country_event = {
+				id = PLS.106
+				days = 1
+			}
+		}
+	}
+}
+country_event = { #Challenge Altunin?
+	id = PLS.106
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.106"}
+	title = PLS.106.t
+	desc = PLS.106.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.106.a
+		ai_chance = {
+			factor = 15
+			modifier = {
+				check_variable = { global.WRSFactionalism < 20 }
+				factor = 0.25
+			}
+			modifier = {
+				check_variable = { global.WRSFactionalism > 30 }
+				factor = 1
+			}
+			modifier = {
+				check_variable = { global.WRSFactionalism > 50 }
+				factor = 5
+			}
+			modifier = {
+				check_variable = { global.WRSFactionalism > 70 }
+				factor = 10
+			}
+			modifier = {
+				check_variable = { global.WRSFactionalism > 90 }
+				factor = 15
+			}
+		}
+		WRS = {
+			country_event = {
+				id = PLS.107
+			}
+		}
+	}
+	option = {
+		name = PLS.106.b
+		trigger = {
+			NOT = {
+				has_global_flag = WRS_Player_Is_Cheating_Bastard
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+		WRS = {
+			country_event = {
+				id = PLS.108
+			}
+		}
+	}
+}
+country_event = { #Altunin - Tukhachevsky challenges
+	id = PLS.107
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.107"}
+	title = PLS.107.t
+	desc = PLS.107.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	option = {
+		name = PLS.107.a
+		PLS = {
+			declare_war_on = {
+				target = WRS
+				type = annex_everything
+			}
+		}
+		PLS = {
+			declare_war_on = {
+				target = UKH
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = { #Altunin - Tukhachevsky folds
+	id = PLS.108
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PLS.108"}
+	title = PLS.108.t
+	desc = PLS.108.d
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLS.108.a
+		PLS = {
+			every_unit_leader = {
+				set_nationality = WRS
+			}
+		}
+		WRS = {
+			annex_country = {
+				target = PLS
+				transfer_troops = yes
+			}
+			change_tag_from = PLS
+		}
+	}
+}

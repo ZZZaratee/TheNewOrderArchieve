@@ -1,0 +1,14 @@
+### FAR EAST DEVELOPMENT CATEGORIES ###
+
+OMO_far_east_development_category = { # Dorime, interimo ajapare dorime ameno ameno latire latiremo...
+
+	icon = GFX_decision_category_generic_economy
+	picture = GFX_RUS_decision_holy
+	
+	visible = {
+		tag = OMO
+		has_country_flag = far_east_deccat_enable
+	}
+	visible_when_empty = yes
+	priority = 9999
+}

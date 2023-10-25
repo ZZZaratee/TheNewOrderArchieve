@@ -1,0 +1,27 @@
+state = {
+	id = 1411
+	name = "STATE_1411"
+	
+	manpower = 1973837
+	state_category = town
+	
+	resources = {
+		steel = 4
+	}
+	history = {
+		owner = MEX
+		add_core_of = MEX
+		victory_points = { 8089 20 }
+
+		buildings = {
+			infrastructure = 5
+			offices = 2
+			schools = 1
+			hospitals = 1
+		}
+	}
+
+	provinces = {
+		14488 14487 8089 14507
+	}
+}

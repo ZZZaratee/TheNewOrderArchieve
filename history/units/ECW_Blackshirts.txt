@@ -1,0 +1,14 @@
+units = {
+	division= {	
+		location = 6335
+		name = "National Front Militia"
+		division_template = "militia"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		location = 130
+		name = "National Front Militia"
+		division_template = "militia"
+		start_experience_factor = 0.1
+	}
+}

@@ -1,0 +1,26 @@
+state = {
+	id = 1408
+	name = "STATE_1408"
+	
+	manpower = 760836
+	state_category = town
+
+	resources={
+		steel=2
+	}
+	
+	history = {
+		owner = MEX
+		add_core_of = MEX
+		victory_points = { 7921 20 }
+
+		buildings = {
+			infrastructure = 4
+			prisons = 1
+		}
+	}
+
+	provinces = {
+		10871 8003 10853 7921 4946
+	}
+}

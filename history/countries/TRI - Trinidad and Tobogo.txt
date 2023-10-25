@@ -1,0 +1,185 @@
+﻿capital = 691
+
+set_cosmetic_tag = TRI_FIXED
+
+set_politics = {	
+	ruling_party = conservative_democracy
+	last_election = "1961.5.16"
+	election_frequency = 48
+	elections_allowed = yes
+
+}
+
+set_popularities = {
+    socialist = 4
+    social_democracy = 21
+    liberal_democracy = 53
+	conservative_democracy = 22
+}
+
+create_country_leader = {
+	name = "Rudranath Capilideo"
+	desc = "POLITICS_RUDRANATH_CAPILIDEO_DESC"
+	picture = "Portrait_TRI_Rubranath_Capilideo.dds"
+	expire = "1971.10.28"
+	ideology = liberal_democracy_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Eric Williams"
+	desc = "POLITICS_ERIC_WILLIAMS_TRI_DESC"
+	picture = "Portrait_TRI_Eric_Williams.dds"
+	expire = "1971.10.28"
+	ideology = liberal_democracy_national_liberal_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Bhadese Maraj"
+	desc = "POLITICS_BHADESE_MARAJ_DESC"
+	picture = "Portrait_TRI_Bhadese_Maraj.dds"
+	expire = "1971.10.28"
+	ideology = social_democracy_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Tubal Uriah Butler"
+	desc = "POLITICS_TUBAL_URIAH_BUTLER_DESC"
+	picture = "Portrait_TRI_Tubal_Uriah_Butler.dds"
+	expire = "1971.10.28"
+	ideology = socialist_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Makandal Daaga"
+	desc = "POLITICS_MAKANDAL_DAAGA_DESC"
+	picture = "Portrait_TRI_Makandal_Daaga.dds"
+	expire = "1971.10.28"
+	ideology = socialist_left_wing_nationalism_subtype
+	traits = {
+	}
+}
+
+
+set_research_slots = 2
+set_convoys = 50
+
+set_technology = {
+	##INFANTRY##
+	# infantry_equipment_0 = 1
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	night_vision_1 = 1
+	infantry_at = 1
+	infantry_at2 = 1
+	motorized_infantry = 1
+	motorized_infantry_1 = 1
+	
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	
+	##ARMOR##
+	advanced_light_tank = 1
+	mechanised_infantry3 = 1
+	
+	##ARTILLERY##
+	artillery4 = 1
+	antiair5 = 1
+	
+	##NAVAL##
+	ww2_destroyer = 1
+	ww2_submarine = 1
+	basic_submarine = 1
+	transport = 1
+	
+	##HELICOPTERS##
+	very_early_helicopter = 1
+ 	early_helicopter = 1
+	
+	##LIGHT AIR##
+	early_fighter = 1
+	fighter_1945 = 1
+	interceptor_1945 = 1
+	
+	##HEAVY AIR##
+	tac_bomber1 = 1
+	
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	centimetric_radar = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	improved_computing_machine = 1
+	improved_encryption = 1
+	improved_decryption = 1
+	advanced_computing_machine = 1
+	advanced_encryption = 1
+	advanced_decryption = 1
+	helicopter_engines = 1
+	jet_engines = 1
+	
+	##INDUSTRY##
+	##INDUSTRY TECHS ARE WIP##
+}
+
+add_ideas = {
+	tno_safety_limited_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_some_regulations
+	tno_education_public_education
+	tno_penal_system_rehabilitation
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_gender_equality
+	tno_minorities_equal_rights
+	tno_security_police
+
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_registered_voting
+	tno_refugees_skilled
+
+	tno_trade_laws_free_trade
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_restricted
+	tno_pensions_trinket_pensions
+	tno_unemployment_no_subsidies
+
+	tno_conscription_volunteer_only
+	tno_women_noncombat_only
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_civil_service_deferment
+
+	TRI_pnm_dominance
+	TRI_undersea_riches
+}
+
+TNO_startup_nation = yes 

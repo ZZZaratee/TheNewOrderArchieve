@@ -1,0 +1,21 @@
+state = {
+	id = 1400
+	name = "STATE_1400"
+	
+	manpower = 203521
+	state_category = rural
+	
+	history = {
+		owner = OST
+		add_core_of = OST
+		victory_points = { 14585 5 }
+
+		buildings = {
+			infrastructure = 5
+		}
+	}
+
+	provinces = {
+		14588 9246 11226 11498 14583 14585
+	}
+}

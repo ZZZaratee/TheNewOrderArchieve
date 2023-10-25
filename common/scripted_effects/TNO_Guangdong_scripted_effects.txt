@@ -1,0 +1,196 @@
+GNG_update_status = {
+	hidden_effect = {
+		remove_ideas = {
+			GNG_between_two_worlds_dummy
+			GNG_yasuda_crisis_dummy
+			GNG_silicon_years_dummy
+		}
+		if = {
+			limit = {
+				check_variable = {
+					GNG_general_status_var = 2
+				}
+			}
+			add_ideas = GNG_silicon_years_dummy
+			set_variable = { GNG_status_dynmod_stab = -0.25 }
+			set_variable = { GNG_status_dynmod_warsup = -0.25 }
+			set_variable = { GNG_status_dynmod_pp = -0.15 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					GNG_general_status_var = 1
+				}
+			}
+			add_ideas = GNG_yasuda_crisis_dummy
+			set_variable = { GNG_status_dynmod_stab = -0.5 }
+			set_variable = { GNG_status_dynmod_warsup = -0.5 }
+			set_variable = { GNG_status_dynmod_pp = -0.4 }
+		}
+		else = {
+			add_ideas = GNG_between_two_worlds_dummy
+		}
+	}
+	custom_effect_tooltip = GNG_update_general_status_tt
+}
+
+GNG_update_corruption = {
+	hidden_effect = {
+		remove_ideas = {
+			GNG_corruption_the_finest_money_can_buy_dummy
+			GNG_corruption_corrupt_dummy
+			GNG_corruption_passable_dummy
+			GNG_corruption_asias_finest_dummy
+		}
+		if = {
+			limit = {
+				check_variable = {
+					GNG_corruption_status_var = 3
+				}
+			}
+			add_ideas = GNG_corruption_asias_finest_dummy
+			set_variable = { GNG_corruption_monthly_corruption = 0 }
+			set_variable = { GNG_corruption_republic_of_china_support_cap = 0 }
+			set_variable = { GNG_corruption_pp_impact = 0.05 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					GNG_corruption_status_var = 2
+				}
+			}
+			add_ideas = GNG_corruption_passable_dummy
+			set_variable = { GNG_corruption_monthly_corruption = 0.05 }
+			set_variable = { GNG_corruption_republic_of_china_support_cap = -5 }
+			set_variable = { GNG_corruption_pp_impact = -0.2 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					GNG_corruption_status_var = 1
+				}
+			}
+			add_ideas = GNG_corruption_corrupt_dummy
+			set_variable = { GNG_corruption_monthly_corruption = 0.09 }
+			set_variable = { GNG_corruption_republic_of_china_support_cap = -7.5 }
+			set_variable = { GNG_corruption_pp_impact = -0.2 }
+		}
+		else = {
+			add_ideas = GNG_corruption_the_finest_money_can_buy_dummy
+			set_variable = { GNG_corruption_monthly_corruption = 0.12 }
+			set_variable = { GNG_corruption_republic_of_china_support_cap = -10 }
+			set_variable = { GNG_corruption_pp_impact = -0.2 }
+		}
+	}
+	custom_effect_tooltip = GNG_update_corruption_status_tt
+}
+
+GNG_update_fiscal = {
+	hidden_effect = {
+		remove_ideas = {
+			GNG_fiscal_sound_dummy
+			GNG_fiscal_caution_dummy
+			GNG_fiscal_warning_dummy
+			GNG_fiscal_problematic_dummy
+			GNG_fiscal_emergency_dummy
+		}
+		if = {
+			limit = {
+				check_variable = {
+					GNG_fiscal_status_var = 4
+				}
+			}
+			add_ideas = GNG_fiscal_emergency_dummy
+			set_variable = { GNG_fiscal_pp_gain = -0.3 }
+			set_variable = { GNG_fiscal_credit_rating = 3 }
+			set_variable = { GNG_fiscal_japanese_opinion = -45 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					GNG_fiscal_status_var = 3
+				}
+			}
+			add_ideas = GNG_fiscal_problematic_dummy
+			set_variable = { GNG_fiscal_pp_gain = -0.15 }
+			set_variable = { GNG_fiscal_credit_rating = 5 }
+			set_variable = { GNG_fiscal_japanese_opinion = -35 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					GNG_fiscal_status_var = 2
+				}
+			}
+			add_ideas = GNG_fiscal_warning_dummy
+			set_variable = { GNG_fiscal_pp_gain = -0.075 }
+			set_variable = { GNG_fiscal_credit_rating = 6 }
+			set_variable = { GNG_fiscal_japanese_opinion = -25 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					GNG_fiscal_status_var = 1
+				}
+			}
+			add_ideas = GNG_fiscal_caution_dummy
+			set_variable = { GNG_fiscal_pp_gain = 0 }
+			set_variable = { GNG_fiscal_credit_rating = 7 }
+			set_variable = { GNG_fiscal_japanese_opinion = -15 }
+		}
+		else = {
+			add_ideas = GNG_fiscal_sound_dummy
+			set_variable = { GNG_fiscal_pp_gain = 0.1 }
+			set_variable = { GNG_fiscal_credit_rating = 8 }
+			set_variable = { GNG_fiscal_japanese_opinion = 0 }
+		}
+		set_temp_variable = { temp_credit_rating = GNG_fiscal_credit_rating }
+		set_temp_variable = { temp_credit_rating_min = GNG_fiscal_credit_rating }
+		set_temp_variable = { temp_credit_rating_max = GNG_fiscal_credit_rating }
+		econ_initialize_credit_rating_system = yes
+	}
+	custom_effect_tooltip = GNG_update_fiscal_status_tt
+}
+
+GNG_update_kenpeitai = {
+	hidden_effect = {
+		remove_ideas = {
+			GNG_kenpeitai_pervasive_kenpeitai_networks_dummy
+			GNG_kenpeitai_blunt_force_policing_dummy
+			GNG_kenpeitai_transitional_security_apparatus_dummy
+		}
+		if = {
+			limit = {
+				check_variable = {
+					GNG_kenpeitai_status_var = 2
+				}
+			}
+			add_ideas = GNG_kenpeitai_blunt_force_policing_dummy
+			set_variable = { GNG_security_non_japanese_support_cap = -30 }
+			set_variable = { GNG_security_republic_of_china_support_cap = -45 }
+			set_variable = { GNG_security_kenpeitai_support_cap = 0 }
+			set_variable = { GNG_security_police_support_cap = -70 } 
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					GNG_kenpeitai_status_var = 1
+				}
+			}
+			add_ideas = GNG_kenpeitai_transitional_security_apparatus_dummy
+			set_variable = { GNG_security_non_japanese_support_cap = -15 }
+			set_variable = { GNG_security_republic_of_china_support_cap = -25 }
+			set_variable = { GNG_security_kenpeitai_support_cap = 0 }
+			set_variable = { GNG_security_police_support_cap = -50 } 
+		}
+		else = {
+			add_ideas = GNG_kenpeitai_pervasive_kenpeitai_networks_dummy
+			set_variable = { GNG_security_non_japanese_support_cap = -20 }
+			set_variable = { GNG_security_republic_of_china_support_cap = -30 }
+			set_variable = { GNG_security_kenpeitai_support_cap = 0 }
+			set_variable = { GNG_security_police_support_cap = -60 }
+		}
+	}
+	custom_effect_tooltip = GNG_update_kenpeitai_status_tt
+}
+

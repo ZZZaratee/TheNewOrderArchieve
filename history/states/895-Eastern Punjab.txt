@@ -1,0 +1,23 @@
+state={
+	id=895
+	name="STATE_895"
+	provinces={
+		2002 10729 10772 12041 12822 
+	}
+	manpower = 10285784
+	state_category = large_town
+	
+	history={
+		owner = IND
+		add_core_of = AZH
+		add_core_of = IND
+		victory_points = { 10729 5 }
+		victory_points = { 2002 10 }
+		victory_points = { 10772 25 }
+		buildings = {
+			radar_station = 1
+			infrastructure = 4
+		}
+	}
+	buildings_max_level_factor=1.000
+}

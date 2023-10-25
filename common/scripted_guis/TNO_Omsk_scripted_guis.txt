@@ -1,0 +1,47 @@
+scripted_gui = {
+	OMS_GUI_insurgency = {
+		context_type = decision_category
+		window_name = "OMS_GUI_insurgency"
+		visible = { always = yes }
+		dirty = insurgency_controller
+		dynamic_lists = {
+			map_gridbox = {
+				array = OMS_map_grid_array
+				index = idx
+				value = OMS_map_value
+				entry_container = "OMS_map_entry"
+			}
+		}
+		properties = {
+			map_state = {
+				image = "GFX_OMS_insurgency_map_state_[?OMS_map_grid_array^idx]"
+				frame = OMS_map_value:base_status
+				x = OMS_map_x^idx
+				y = OMS_map_y^idx
+			}
+			top_bar_strength_bar = { frame = insurgency_strength }
+		}
+		triggers = {
+			map_state_754_selected_visible = { check_variable = { insurgency_state_selected = 754 } }
+			map_state_653_selected_visible = { check_variable = { insurgency_state_selected = 653 } }
+			map_state_573_selected_visible = { check_variable = { insurgency_state_selected = 573 } }
+			map_state_572_selected_visible = { check_variable = { insurgency_state_selected = 572 } }
+			map_state_580_selected_visible = { check_variable = { insurgency_state_selected = 580 } }
+			map_state_403_selected_visible = { check_variable = { insurgency_state_selected = 403 } }
+			map_state_571_selected_visible = { check_variable = { insurgency_state_selected = 571 } }
+			map_state_871_selected_visible = { check_variable = { insurgency_state_selected = 871 } }
+			map_state_863_selected_visible = { check_variable = { insurgency_state_selected = 863 } }
+			map_state_756_selected_visible = { check_variable = { insurgency_state_selected = 756 } }
+			map_state_844_selected_visible = { check_variable = { insurgency_state_selected = 844 } }
+			map_state_579_selected_visible = { check_variable = { insurgency_state_selected = 579 } }
+			map_state_845_selected_visible = { check_variable = { insurgency_state_selected = 845 } }
+		}
+		effects = {
+			map_state_click = {
+				set_variable = { insurgency_state_selected = OMS_map_grid_array^idx }
+				set_variable = { insurgency_state_selected_i = idx }
+				add_to_variable = { insurgency_controller = 1 }
+			}
+		}
+	}
+}

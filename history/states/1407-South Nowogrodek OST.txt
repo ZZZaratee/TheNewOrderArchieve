@@ -1,0 +1,25 @@
+state = {
+	id = 1407
+	name = "STATE_1407"
+	
+	manpower = 401348
+	state_category = town
+	
+	resources = {
+		oil = 1
+	}
+	history = {
+		owner = OST
+		add_core_of = OST
+		victory_points = { 3309 1 }
+
+		buildings = {
+			infrastructure = 5
+			air_base = 3
+		}
+	}
+
+	provinces = {
+		6359 3309 6306 6280 14546
+	}
+}

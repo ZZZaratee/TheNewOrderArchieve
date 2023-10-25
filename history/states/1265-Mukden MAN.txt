@@ -1,0 +1,34 @@
+state = {
+	id=1265
+	name = "STATE_1265"
+	
+	manpower = 5713891
+	state_category = metropolis
+
+	resources={
+		steel = 4
+	}
+	
+	history = {
+		owner = MAN
+		add_core_of = MAN	
+
+		buildings = {
+			infrastructure = 7
+			radar_station = 1
+			air_base = 1
+			schools = 1
+			offices = 1
+			hospitals = 2
+			barracks = 2
+			prisons = 2
+			thermoelectric_plant = 2
+		}
+
+		victory_points = { 11771 30 }
+	}
+
+	provinces = {
+		11771
+	}
+}

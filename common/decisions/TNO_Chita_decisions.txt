@@ -1,0 +1,1735 @@
+CHT_initial_investments_category = {
+	CHT_civilian_initial_investments = {
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				has_country_flag = CHT_military_investing
+			}
+		}
+
+		cost = 20
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = CHT_civilian_investing
+			WHC_tax_conflict_towards_civilians = yes
+			custom_effect_tooltip = WHC_Civil_favored
+			set_temp_variable = { debt_temp = 0.02 }
+			econ_national_debt_change = yes
+		}
+		remove_effect = {
+			clr_country_flag = CHT_civilian_investing
+		}
+	}
+
+	CHT_military_initial_investments = {
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				has_country_flag = CHT_civilian_investing
+			}
+		}
+
+		cost = 20
+
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = CHT_military_investing
+			WHC_tax_conflict_towards_military = yes
+			custom_effect_tooltip = WHC_Army_favored
+			set_temp_variable = { debt_temp = 0.02 }
+			econ_national_debt_change = yes
+		}
+		remove_effect = {
+			clr_country_flag = CHT_military_investing
+		}
+	}
+}
+
+
+
+CHT_a_quiet_dinner_category = {
+	CHT_unlock_militarist_decisions = {
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_unlock_militarist_decisions"
+			set_country_flag = CHT_increase_militarist_influence
+		}
+	}
+	CHT_disable_militarist_decisions = {
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+
+		visible = {
+			has_country_flag = CHT_increase_militarist_influence
+		}
+
+		cost = 0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_disable_militarist_decisions"
+			clr_country_flag = CHT_increase_militarist_influence
+		}
+	}
+	CHT_pro_military_decision_1 = { #Employ military for factory construction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_buildings_factor = 0.1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_military_decision_1"
+			CHT_military_influence_increase_medium = yes
+		}
+	}
+	CHT_pro_military_decision_2 = { #Employ military for infrastructure construction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.25
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_military_decision_2"
+			CHT_military_influence_increase_medium = yes
+		}
+	}
+	CHT_pro_military_decision_3 = { #Employ military for naval construction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_dockyard_factor = 0.15
+			production_speed_naval_base_factor = 0.15
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_military_decision_3"
+			CHT_military_influence_increase_medium = yes
+		}
+	}
+	CHT_pro_military_decision_4 = { #Employ military for resource extraction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			local_resources_factor = 0.2
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_military_decision_4"
+			CHT_military_influence_increase_medium = yes
+		}
+	}
+	CHT_pro_military_decision_5 = { #Employ military for land clearing
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_military_decision_5"
+			CHT_military_influence_increase_medium = yes
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	CHT_pro_military_decision_6 = { #Employ military for fortification construction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_bunker_factor = 0.2
+			production_speed_coastal_bunker_factor = 0.2
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_military_decision_6"
+			CHT_military_influence_increase_medium = yes
+		}
+	}
+
+	CHT_unlock_loyalist_decisions = {
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_unlock_loyalist_decisions"
+			set_country_flag = CHT_increase_loyalist_influence
+		}
+	}
+	CHT_disable_loyalist_decisions = {
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				has_country_flag = CHT_increase_militarist_influence
+			}
+		}
+
+		visible = {
+			has_country_flag = CHT_increase_loyalist_influence
+		}
+
+		cost = 0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_disable_loyalist_decisions"
+			clr_country_flag = CHT_increase_loyalist_influence
+		}
+	}
+	CHT_pro_civilian_decision_1 = { #Employ civilian for factory construction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_buildings_factor = 0.05
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_civilian_decision_1"
+			CHT_civilian_influence_increase_medium = yes
+		}
+	}
+	CHT_pro_civilian_decision_2 = { #Employ civilian for infrastructure construction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.2
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_civilian_decision_2"
+			CHT_civilian_influence_increase_medium = yes
+		}
+	}
+	CHT_pro_civilian_decision_3 = { #Employ civilian for naval construction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_dockyard_factor = 0.1
+			production_speed_naval_base_factor = 0.1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_civilian_decision_3"
+			CHT_civilian_influence_increase_medium = yes
+		}
+	}
+	CHT_pro_civilian_decision_4 = { #Employ civilian for resource extraction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			local_resources_factor = 0.15
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_civilian_decision_4"
+			CHT_civilian_influence_increase_medium = yes
+		}
+	}
+	CHT_pro_civilian_decision_5 = { #Employ civilian for land clearing
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_civilian_decision_5"
+			CHT_civilian_influence_increase_medium = yes
+		}
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	CHT_pro_civilian_decision_6 = { #Employ civilian for fortification construction
+		allowed = {
+			tag = CHT
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			hidden_trigger = {
+				has_country_flag = CHT_increase_loyalist_influence
+			}
+		}
+		cost = 50
+		days_remove = 150
+		fire_only_once = yes
+
+		modifier = {
+			production_speed_bunker_factor = 0.15
+			production_speed_coastal_bunker_factor = 0.15
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_pro_civilian_decision_6"
+			CHT_civilian_influence_increase_medium = yes
+		}
+	}
+}
+
+CHT_chessboard_category = {
+	### PHASE 1 ###
+	CHT_repair_the_baikal_highway = {
+		icon = GFX_decision_generic_workers
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 0 }
+		}
+		cost = 20
+		fire_only_once = yes
+		days_remove = 80
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_repair_the_baikal_highway"
+			set_temp_variable = { temp_econ_spending_amount = 0.04 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_repair_the_baikal_highway"
+			random_owned_controlled_state = {
+				limit = { state = 566 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 564 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 886 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			add_to_variable = { CHT_phase_1_count = 1 }
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	CHT_finish_the_amur_highway = {
+		icon = GFX_decision_generic_workers
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 0 }
+		}
+		cost = 20
+		fire_only_once = yes
+		days_remove = 60
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_finish_the_amur_highway"
+			random_owned_controlled_state = {
+				limit = { state = 561 }
+				add_manpower = -3500
+			}
+			set_temp_variable = { temp_econ_spending_amount = 0.04 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_finish_the_amur_highway"
+			random_owned_controlled_state = {
+				limit = { state = 561 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 563 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 886 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			set_country_flag = CHT_amur_highway_finished
+			add_to_variable = { CHT_phase_1_count = 1 }
+		}
+	}
+
+	CHT_complete_the_magadan_connection = {
+		icon = GFX_decision_generic_infrastructure
+		available = {
+			has_country_flag = CHT_amur_highway_finished
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 0 }
+		}
+		cost = 20
+		fire_only_once = yes
+		days_remove = 60
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_complete_the_magadan_connection"
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				add_manpower = -3500
+			}
+			set_temp_variable = { temp_econ_spending_amount = 0.04 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_complete_the_magadan_connection"
+			random_owned_controlled_state = {
+				limit = { state = 574 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { temp_state_value_addition = 0.025 }
+				econ_state_value_change_addition = yes
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { temp_state_value_addition = 0.04 }
+				econ_state_value_change_addition = yes
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			add_to_variable = { CHT_phase_1_count = 1 }
+		}
+	}
+
+	CHT_restoration_of_Irkutsk_hps = {
+		icon = GFX_decision_gibraltar_dam
+		available = {
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 0 }
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = 75
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_restoration_of_irkutsk_hps"
+			set_temp_variable = { temp_econ_spending_amount = 0.08 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_restoration_of_irkutsk_hps"
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+			random_owned_controlled_state = {
+				limit = { state = 566 }
+				add_resource = {
+					type = power
+					amount = 6
+				}
+				set_temp_variable = { temp_state_value_addition = 0.05 }
+				econ_state_value_change_addition = yes
+			}
+			add_to_variable = { CHT_phase_1_count = 1 }
+		}
+	}
+
+	CHT_develop_Blagoveshchensk_railway_hub = {
+		icon = GFX_decision_generic_infrastructure
+		available = {
+			has_country_flag = CHT_amur_highway_finished
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 0 }
+		}
+		cost = 35
+		fire_only_once = yes
+		days_remove = 80
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_develop_Blagoveshchensk_railway_hub"
+			set_temp_variable = { temp_econ_spending_amount = 0.08 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_develop_Blagoveshchensk_railway_hub"
+			random_owned_controlled_state = {
+				limit = { state = 1364 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_temp_variable = { temp_state_value_addition = 0.08 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.4 } }
+			}
+			set_variable = { CHT_restoration_construct_speed = 0.1 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = CHT_develop_Blagoveshchensk_railway_hub_tt
+			TNO_improve_industrial_equipment_med = yes
+			add_to_variable = { CHT_phase_1_count = 1 }
+		}
+	}
+
+	CHT_expand_the_port_of_magadan = {
+		icon = GFX_decision_shipyard
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { CHT_phase_1_count > 4 }
+				tooltip = CHT_econ_phase_done_tt
+			}
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 0 }
+		}
+		cost = 35
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_the_port_of_magadan"
+			set_temp_variable = { temp_econ_spending_amount = 0.08 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_the_port_of_magadan"
+			custom_effect_tooltip = CHT_next_phase_tt
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				set_temp_variable = { temp_state_value_addition = 0.06 }
+				econ_state_value_change_addition = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1.5 } }				
+			}
+			clear_variable = CHT_phase_1_count
+			set_variable = { CHT_chessboard_phase = 2 }
+		}
+	}
+
+	### PHASE 2 ###
+
+	CHT_expand_resource_exploitation_yakutia = {
+		icon = GFX_decision_mining
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 1 }
+		}
+		cost = 40
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			add_to_variable = { CHT_restoration_misc_income = 0.05 }
+			add_to_variable = { CHT_restoration_resource = 0.1 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = CHT_resource_exploitation_tt
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 760
+						state = 574
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+				add_resource = {
+					type = tungsten
+					amount = 2
+				}
+				set_temp_variable = { temp_state_value_addition = 0.04 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+
+			add_to_variable = { CHT_phase_2_count = 1 }
+			set_country_flag = CHT_yakutia_resources
+		}
+	}
+
+	CHT_expand_resource_exploitation_irkutsk = {
+		icon = GFX_decision_mining
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 1 }
+		}
+		cost = 40
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			add_to_variable = { CHT_restoration_misc_income = 0.05 }
+			add_to_variable = { CHT_restoration_resource = 0.1 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = CHT_resource_exploitation_tt
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 564
+						state = 566
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+				add_resource = {
+					type = tungsten
+					amount = 2
+				}
+				set_temp_variable = { temp_state_value_addition = 0.04 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+
+			add_to_variable = { CHT_phase_2_count = 1 }
+			set_country_flag = CHT_irkutsk_resources
+		}
+	}
+
+	CHT_yakutia_resource_lease = {
+		icon = GFX_decision_generic_money
+		available = {
+			
+		}
+		visible = {
+			AND = {
+				has_country_flag = CHT_yakutia_resources
+				NOT = { has_country_flag = CHT_split_with_japan }
+			}
+		}
+		cost = 25
+		fire_only_once = no
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			give_resource_rights = {
+				receiver = JAP
+				state = 574
+			}
+			give_resource_rights = {
+				receiver = JAP
+				state = 760
+			}
+			custom_effect_tooltip = CHT_resource_lease_tt
+			add_to_variable = { CHT_restoration_misc_income = 0.1 }
+			add_to_variable = { CHT_restoration_construct_speed = 0.1 }
+			force_update_dynamic_modifier = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			subtract_from_variable = { CHT_restoration_misc_income = 0.1 }
+			subtract_from_variable = { CHT_restoration_construct_speed = 0.1 }
+			force_update_dynamic_modifier = yes
+			JAP = {
+				remove_resource_rights = 574
+				remove_resource_rights = 760
+			}
+		}
+	}
+
+	CHT_irkutsk_resource_lease = {
+		icon = GFX_decision_generic_money
+		available = {
+			
+		}
+		visible = {
+			AND = {
+				has_country_flag = CHT_irkutsk_resources
+				NOT = { has_country_flag = CHT_split_with_japan }
+			}
+		}
+		cost = 25
+		fire_only_once = no
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			give_resource_rights = {
+				receiver = JAP
+				state = 564
+			}
+			give_resource_rights = {
+				receiver = JAP
+				state = 566
+			}
+			custom_effect_tooltip = CHT_resource_lease_tt
+			add_to_variable = { CHT_restoration_misc_income = 0.1 }
+			add_to_variable = { CHT_restoration_construct_speed = 0.1 }
+			force_update_dynamic_modifier = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			subtract_From_variable = { CHT_restoration_misc_income = 0.1 }
+			subtract_From_variable = { CHT_restoration_construct_speed = 0.1 }
+			force_update_dynamic_modifier = yes
+			JAP = {
+				remove_resource_rights = 564
+				remove_resource_rights = 766
+			}
+		}
+	}
+
+	CHT_develop_magadan_for_large_scale_shipping = {
+		icon = GFX_decision_shipyard
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 1 }
+		}
+		cost = 40
+		fire_only_once = yes
+		days_remove = 80
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_develop_magadan_for_large_scale_shipping"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_develop_magadan_for_large_scale_shipping"
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				set_temp_variable = { temp_state_value_addition = 0.07 }
+				econ_state_value_change_addition = yes
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = offices
+					level = 1
+					instant_build = yes
+				}
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 2 } }
+			}
+			add_to_variable = { CHT_phase_2_count = 1 }			
+		}
+	}
+
+	CHf_develop_domestic_imperial_industries = {
+		icon = GFX_decision_generic_heavy_industry
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 1 }
+		}
+		cost = 40
+		fire_only_once = yes
+		days_remove = 80
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHf_develop_domestic_imperial_industries"
+			set_temp_variable = { temp_econ_spending_amount = 0.1 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHf_develop_domestic_imperial_industries"
+			random_owned_controlled_state = {
+				limit = {
+					state = 563
+				}
+				set_temp_variable = { temp_state_value_addition = 0.05 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1 } }
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 562
+						state = 1364
+						state = 564
+					}
+				}
+				set_temp_variable = { temp_state_value_addition = 0.04 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 637
+				}
+				set_temp_variable = { temp_state_value_addition = 0.025 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			add_to_variable = { CHT_phase_2_count = 1 }
+		}
+	}
+
+	CHT_imperial_heart_of_siberia = {
+		icon = GFX_decision_chess_king
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { CHT_phase_2_count > 3 }
+				tooltip = CHT_econ_phase_done_tt
+			}
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 1 }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 80
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			set_temp_variable = { temp_econ_spending_amount = 0.2 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			custom_effect_tooltip = CHT_next_phase_tt
+			random_owned_controlled_state = {
+				limit = {
+					state = 563
+				}
+				set_temp_variable = { temp_state_value_addition = 0.075 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1 } }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = offices
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = barracks
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_variable = { CHT_chessboard_phase = 3 }
+		}
+	}
+
+	### PHASE 3 ###
+
+		# Info Decision #
+
+	CHT_Phase_3_Info = {
+		icon = decision_category_generic
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = CHT_phase_3_start_tt
+			}
+		}
+		visible = {
+			AND = {
+				check_variable = { CHT_chessboard_phase > 2 }
+				NOT = {
+					OR = {
+						has_country_flag = CHT_supported_mikhail
+						has_country_flag = CHT_supported_shepunov
+					}
+				}
+			}
+			
+		}
+		cost = 0
+	}
+
+		## Mikhail Edition ##
+
+	CHT_encourage_investment_in_trade_hubs = {
+		icon = GFX_decision_generic_infrastructure
+		available = {
+			
+		}
+		visible = {
+			AND = {
+				check_variable = { CHT_chessboard_phase > 2 }
+				has_country_flag = CHT_supported_mikhail
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_encourage_investment_in_trade_hubs"
+			set_temp_variable = { temp_econ_spending_amount = 0.07 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_encourage_investment_in_trade_hubs"
+			add_to_variable = { CHT_restoration_misc_income = 0.075 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = CHT_encourage_investment_in_trade_hubs_tt
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 1364
+						state = 562
+					}
+				}
+				set_temp_variable = { temp_state_value_addition = 0.1 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1 } }
+			}
+			add_to_variable = { CHT_phase_3_count = 1 }
+		}
+	}
+
+	CHT_expand_national_industrialization_effort = {
+		icon = GFX_decision_generic_heavy_industry
+		available = {
+			
+		}
+		visible = {
+			AND = {
+				check_variable = { CHT_chessboard_phase > 2 }
+				has_country_flag = CHT_supported_mikhail
+			}
+		}
+		cost = 65
+		fire_only_once = yes
+		days_remove = 100
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_national_industrialization_effort"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_national_industrialization_effort"
+			add_to_variable = { industrial_capacity_factory = 0.05 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = CHT_expand_national_industrialization_effort_tt
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 563
+						state = 564
+						state = 566
+						state = 561
+						state = 886
+					}
+				}
+				set_temp_variable = { temp_state_value_addition = 0.04 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			add_to_variable = { CHT_phase_3_count = 1 }
+		}
+	}
+
+	CHT_modernize_irkutsk_hps = {
+		icon = GFX_decision_gibraltar_dam
+		available = {
+			
+		}
+		visible = {
+			AND = {
+				check_variable = { CHT_chessboard_phase > 2 }
+				has_country_flag = CHT_supported_mikhail
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_modernize_irkutsk_hps"
+			set_temp_variable = { temp_econ_spending_amount = 0.07 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_modernize_irkutsk_hps"
+			random_owned_controlled_state = {
+				limit = {
+					state = 566
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { temp_state_value_addition = 0.05 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			add_to_variable = { CHT_phase_3_count = 1 }
+		}
+	}
+
+		## Shepunov Edition ##
+
+	CHT_invest_in_uranium_extraction = {
+		icon = GFX_decision_reactor
+		available = {
+			
+		}
+		visible = {
+			AND = {
+				check_variable = { CHT_chessboard_phase > 2 }
+				has_country_flag = CHT_supported_shepunov
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_invest_in_uranium_extraction"
+			set_temp_variable = { temp_econ_spending_amount = 0.2 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_invest_in_uranium_extraction"
+			custom_effect_tooltip = CHT_invest_in_uranium_extraction_tt
+			random_owned_controlled_state = {
+				limit = {
+					state = 565
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = uranium
+					amount = 5
+				}
+				add_to_variable = { temp_state_value_addition = 0.05 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1 } }
+			}
+			add_to_variable = { CHT_phase_3_count = 1 }
+			set_country_flag = CHT_uranium_extraction
+		}
+	}
+
+	CHT_organize_uranium_deal = {
+		icon = GFX_decision_generic_supply
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 2 }
+			has_country_flag = CHT_uranium_extraction
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 365
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_organize_uranium_deal"
+			custom_effect_tooltip = CHT_organize_uranium_deal_tt
+			add_to_variable = { misc_income_modifier = 0.25 }
+			add_to_variable = { production_speed_buildings_factor = 0.1 }
+			add_to_variable = { industrial_capacity_factory = 0.1 }
+			force_update_dynamic_modifier = yes
+			give_resource_rights = {
+				receiver = JAP
+				state = 565
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_organize_uranium_deal"
+			JAP = {
+				remove_resource_rights = 565
+			}
+			subtract_from_variable = { misc_income_modifier = 0.25 }
+			subtract_from_variable = { production_speed_buildings_factor = 0.1 }
+			subtract_from_variable = { industrial_capacity_factory = 0.1 }
+			force_update_dynamic_modifier = yes
+		}
+	}
+
+	CHT_invite_zaibatsu_investments = {
+		icon = GFX_decision_handshake
+		available = {
+			
+		}
+		visible = {
+			AND = {
+				check_variable = { CHT_chessboard_phase > 2 }
+				has_country_flag = CHT_supported_shepunov
+			}
+		}
+		cost = 60
+		fire_only_once = yes
+		days_remove = 80
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_invite_zaibatsu_investments"
+			set_temp_variable = { temp_econ_spending_amount = 0.09 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_invite_zaibatsu_investments"
+			add_to_variable = { industrial_capacity_factory = 0.1 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = CHT_invite_zaibatsu_investments_tt
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 1364
+						state = 561
+						state = 886
+					}
+				}
+				add_to_variable = { temp_state_value_addition = 0.06 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			add_to_variable = { CHT_phase_3_count = 1 }
+		}
+	}
+
+	CHT_siberian_war_preparations = {
+		icon = GFX_decision_generic_building_army_base
+		available = {
+			
+		}
+		visible = {
+			AND = {
+				check_variable = { CHT_chessboard_phase > 2 }
+				has_country_flag = CHT_supported_shepunov
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_siberian_war_preparations"
+			set_temp_variable = { temp_econ_spending_amount = 0.09 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_siberian_war_preparations"
+			TNO_improve_army_professionalism_med = yes
+			TNO_improve_training_policy_effectiveness_med = yes
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = infantry_weapons
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 566
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = barracks
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 563
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = barracks
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 561
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = barracks
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 564
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = barracks
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { CHT_phase_3_count = 1 }
+		}
+	}
+
+		## Shared Phase 3 Final ##
+
+	CHT_prepare_for_the_westward_expansion = {
+		icon = GFX_decision_generic_siberia_superregional
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { CHT_phase_3_count > 2 }
+				tooltip = CHT_econ_phase_done_tt
+			}
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 2 }
+			OR = {
+				has_country_flag = CHT_supported_mikhail
+				has_country_flag = CHT_supported_shepunov
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 100
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_prepare_for_the_westward_expansion"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_prepare_for_the_westward_expansion"
+			custom_effect_tooltip = CHT_next_phase_tt
+			custom_effect_tooltip = CHT_prepare_for_the_westward_expansion_tt
+			add_to_variable = { production_speed_buildings_factor = 0.1 }
+			add_to_variable = { industrial_capacity_factory = 0.05 }
+			add_to_variable = { production_factory_efficiency_gain_factor = 0.1 }
+			force_update_dynamic_modifier = yes
+			random_owned_controlled_state = {
+				limit = {
+					state = 566
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_variable = { CHT_chessboard_phase = 4 }
+		}
+	}
+
+	### PHASE 4 ###
+
+		# Info Decision #
+
+	CHT_Phase_4_Info = {
+		icon = decision_category_generic
+		available = {
+			custom_trigger_tooltip = {
+				always = no
+				tooltip = CHT_phase_4_start_tt
+			}
+		}
+		visible = {
+			AND = {
+				check_variable = { CHT_chessboard_phase > 3 }
+				NOT = {
+					has_country_flag = RUS_superregional_stage	
+				}
+			}
+		}
+		cost = 0
+	}
+
+		## SHARED ##
+
+	CHT_siberian_highway_project = {
+		icon = GFX_decision_generic_infrastructure
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 3 }
+			has_country_flag = RUS_superregional_stage
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 140
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_siberian_highway_projectw"
+			set_temp_variable = { temp_econ_spending_amount = 0.4 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_siberian_highway_projectw"
+			random_owned_controlled_state = {
+				limit = { state = 567 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 568 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 757 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 569 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 578 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 570 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+		}
+	}
+
+	CHT_novosibirsk_naval_program = {
+		icon = GFX_decision_shipyard
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 3 }
+			has_country_flag = RUS_superregional_stage
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 140
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			set_temp_variable = { temp_econ_spending_amount = 0.4 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				set_temp_variable = { temp_state_value_addition = 0.2 }
+				econ_state_value_change_addition = yes	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 5 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 652 }
+				add_to_variable = { temp_state_value_addition = 0.05 }
+				econ_state_value_change_addition = yes	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 2 } }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+		## Mikhail Edition ##
+
+	CHT_stolypin_land_grants_program = {
+		icon = GFX_decision_mega_farm
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 3 }
+			has_country_flag = CHT_mikhail_victorious
+			has_country_flag = RUS_superregional_stage
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 140
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			set_temp_variable = { temp_econ_spending_amount = 0.4 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			TNO_improve_agriculture_high = yes
+			TNO_improve_poverty_high = yes
+			add_stability = 0.1
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 887
+						state = 758
+						state = 890
+						state = 574
+						state = 760
+						state = 577
+						state = 888
+						state = 887
+						state = 576
+					}
+				}
+				set_temp_variable = { temp_state_value_addition = 0.025 }
+				econ_state_value_change_addition = yes	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1.5 } }
+			}
+		}
+	}
+
+		## Shepunov Edition ##
+
+	CHT_operation_ilya_muromets = {
+		icon = GFX_decision_generic_fighter_plane
+		available = {
+			
+		}
+		visible = {
+			check_variable = { CHT_chessboard_phase > 3 }
+			has_country_flag = CHT_shepunov_victorious
+			has_country_flag = RUS_superregional_stage
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 140
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			set_temp_variable = { temp_econ_spending_amount = 0.4 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHT_expand_resource_exploitation_yakutia"
+			add_ideas = CHT_ilya_muromets
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = tactical_bomber
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 570
+						state = 563
+					}
+				}
+				add_to_variable = { temp_state_value_addition = 0.15 }
+				econ_state_value_change_addition = yes	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 2.5 } }
+			}
+		}
+	}
+}

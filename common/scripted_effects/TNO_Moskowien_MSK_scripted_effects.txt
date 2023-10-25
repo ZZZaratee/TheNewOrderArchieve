@@ -1,0 +1,1387 @@
+MSK_SE_dissolution_debug_spawn = {
+	MSK_SE_dissolution_spawn_OKB = yes
+	MSK_SE_dissolution_spawn_RSB = yes
+	MSK_SE_dissolution_spawn_KAG = yes
+	MSK_SE_dissolution_spawn_PSK = yes
+	MSK_SE_dissolution_spawn_DFK = yes
+	MSK_SE_dissolution_spawn_BBB = yes
+	MSK_SE_dissolution_spawn_MOS = yes
+	MSK_SE_dissolution_spawn_SMO = yes
+	MSK_SE_dissolution_spawn_LAK = yes
+	MSK_SE_dissolution_spawn_ZLB = yes
+	MSK_SE_dissolution_spawn_RDC = yes
+	MSK_SE_dissolution_spawn_TAM = yes
+	MSK_SE_dissolution_spawn_POS = yes
+	MSK_SE_dissolution_spawn_PEN = yes
+	MSK_SE_dissolution_spawn_PAU = yes
+	MSK_SE_dissolution_spawn_FRP = yes
+	MSK_SE_dissolution_spawn_MZL = yes
+	MSK_SE_dissolution_spawn_SKR = yes
+	MSK_SE_disssolution_wars = yes
+	set_variable = { global.MSK_dissolution_ongoing = 1 }
+}
+
+MSK_SE_dissolution_GER_declare_war = {
+	custom_effect_tooltip = MSK_SE_dissolution_GER_declare_war_tt
+	hidden_effect = {
+		set_variable = { global.MSK_dissolution_ongoing = 2 }
+		if = {
+		    limit = { OKB = { exists = yes } }
+			GER = { declare_war_on = { target = OKB type = annex_everything } }
+		}
+		if = {
+			limit = { RSB = { exists = yes } }
+			GER = { declare_war_on = { target = RSB type = annex_everything } }
+		}
+		if = {
+			limit = { KAG = { exists = yes } }
+			GER = { declare_war_on = { target = KAG type = annex_everything } }
+		}
+		if = {
+			limit = { PSK = { exists = yes } }
+			GER = { declare_war_on = { target = PSK type = annex_everything } }
+		}
+		if = {
+			limit = { PSK = { exists = yes } }
+			GER = { declare_war_on = { target = PSK type = annex_everything } }
+		}
+		if = {
+			limit = { DFK = { exists = yes } }
+			GER = { declare_war_on = { target = DFK type = annex_everything } }
+		}
+		if = {
+			limit = { BBB = { exists = yes } }
+			GER = { declare_war_on = { target = BBB type = annex_everything } }
+		}
+		if = {
+			limit = { MOS = { exists = yes } }
+			GER = { declare_war_on = { target = MOS type = annex_everything } }
+		}
+		if = {
+			limit = { SMO = { exists = yes } }
+			GER = { declare_war_on = { target = SMO type = annex_everything } }
+		}
+		if = {
+			limit = { LAK = { exists = yes } }
+			GER = { declare_war_on = { target = LAK type = annex_everything } }
+		}
+		if = {
+			limit = { ZLB = { exists = yes } }
+			GER = { declare_war_on = { target = ZLB type = annex_everything } }
+		}
+		if = {
+			limit = { RDC = { exists = yes } }
+			GER = { declare_war_on = { target = RDC type = annex_everything } }
+		}
+		if = {
+			limit = { TAM = { exists = yes } }
+			GER = { declare_war_on = { target = TAM type = annex_everything } }
+		}
+		if = {
+			limit = { POS = { exists = yes } }
+			GER = { declare_war_on = { target = POS type = annex_everything } }
+		}
+		if = {
+			limit = { PEN = { exists = yes } }
+			GER = { declare_war_on = { target = PEN type = annex_everything } }
+		}
+		if = {
+			limit = { PAU = { exists = yes } }
+			GER = { declare_war_on = { target = PAU type = annex_everything } }
+		}
+		if = {
+			limit = { FRP = { exists = yes } }
+			GER = { declare_war_on = { target = FRP type = annex_everything } }
+		}
+		if = {
+			limit = { MZL = { exists = yes } }
+			GER = { declare_war_on = { target = MZL type = annex_everything } }
+		}
+		if = {
+			limit = { SKR = { exists = yes } }
+			GER = { declare_war_on = { target = SKR type = annex_everything } }
+		}
+	}
+}
+
+MSK_SE_dissolution_spawn_OKB = {
+	OKB = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 195
+		transfer_state = 195
+		set_variable = { MSK_dissolution_OKB = 1 }
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_RSB = {
+	RSB = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 1421
+		transfer_state = 1421
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_KAG = {
+	KAG = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 257
+		transfer_state = 257
+		set_variable = { MSK_dissolution_OKB = 1 }
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_PSK = {
+	PSK = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 209
+		transfer_state = 209
+		add_state_core = 1434
+		transfer_state = 1434
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_DFK = {
+	DFK = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 208
+		transfer_state = 208
+		add_state_core = 220
+		transfer_state = 220
+		set_politics = {
+			ruling_party = national_socialism
+			last_election = "1933.2.16"
+			election_frequency = 36
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Otto Weidinger"
+			desc = "MSK_DISSOLUTION_DFK_LEADER_DESC"
+			picture = "Portrait_Deutsches_Freikorps_Otto_Weidinger.dds"
+			expire = "1995.1.1"
+			ideology = national_socialism_subtype
+			traits = {
+			}
+		}
+		set_popularities = { national_socialism = 100 }
+		set_cosmetic_tag = DFK_natsoc
+		set_party_name = {
+			ideology = national_socialism
+			long_name = DFK_national_socialism_dissolution_party_long
+			name = DFK_national_socialism_dissolution_party
+		}
+		set_capital = 208
+		remove_ideas = {
+			DFK_Funding_from_the_Shadows
+			DFK_Band_of_Brothers
+			DFK_Rule_of_the_mercenaries
+		}
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_BBB = {
+	BBB = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 264
+		transfer_state = 264	
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_MOS = {
+	MOS = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 1477
+		transfer_state = 1477
+		add_state_core = 1314
+		transfer_state = 1314
+		add_state_core = 247
+		transfer_state = 247
+		add_state_core = 1474
+		transfer_state = 1475
+		add_state_core = 255
+		transfer_state = 255
+		add_state_core = 1478
+		transfer_state = 1478
+		add_state_core = 1442
+		transfer_state = 1442
+		add_state_core = 219
+		transfer_state = 219
+		add_state_core = 248
+		transfer_state = 248
+		add_state_core = 246
+		transfer_state = 246
+		add_state_core = 238
+		transfer_state = 238
+		add_state_core = 253
+		transfer_state = 253
+		add_state_core = 254
+		transfer_state = 254
+		MSK_SE_dissolution_setup_TAG = yes
+		1314 = { set_demilitarized_zone = yes }
+		247 = { set_demilitarized_zone = yes }
+		1477 = { set_demilitarized_zone = yes }
+		238 = { set_demilitarized_zone = yes }
+		253 = { set_demilitarized_zone = yes }
+		254 = { set_demilitarized_zone = yes }
+		1442 = { set_demilitarized_zone = yes }
+	}
+}
+MSK_SE_dissolution_spawn_SMO = {
+	SMO = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 242
+		transfer_state = 242
+		add_state_core = 1476
+		transfer_state = 1476
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_LAK = {
+	LAK = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 223
+		transfer_state = 223
+		add_state_core = 1444
+		transfer_state = 1444
+		set_variable = { MSK_dissolution_OKB = 1 }
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_ZLB = {
+	ZLB = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 241
+		transfer_state = 241
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_RDC = {
+	RDC = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 205
+		transfer_state = 205
+		add_state_core = 222
+		transfer_state = 222
+		add_state_core = 1435
+		transfer_state = 1435
+		add_state_core = 210
+		transfer_state = 210
+		add_state_core = 258
+		transfer_state = 258
+		add_state_core = 401
+		transfer_state = 401
+		MSK_SE_dissolution_setup_TAG = yes
+		205 = { set_demilitarized_zone = yes }
+		401 = { set_demilitarized_zone = yes }
+		210 = { set_demilitarized_zone = yes }
+	}
+}
+MSK_SE_dissolution_spawn_TAM = {
+	TAM = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 1443
+		transfer_state = 1443
+		add_state_core = 1441
+		transfer_state = 1441
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_POS = {
+	POS = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 1436
+		transfer_state = 1436
+		add_state_core = 245
+		transfer_state = 245
+		set_variable = { MSK_dissolution_OKB = 1 }
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_PEN = {
+	PEN = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 263
+		transfer_state = 263
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+MSK_SE_dissolution_spawn_PAU = {
+	PAU = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 217
+		transfer_state = 217
+		add_state_core = 243
+		transfer_state = 243
+		add_state_core = 239
+		transfer_state = 239
+		add_state_core = 236
+		transfer_state = 236
+		add_state_core = 237
+		transfer_state = 237
+		MSK_SE_dissolution_setup_TAG = yes
+		217 = { set_demilitarized_zone = yes }
+		237 = { set_demilitarized_zone = yes }
+	}
+}
+MSK_SE_dissolution_spawn_FRP = {
+	FRP = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 240
+		transfer_state = 240
+		add_state_core = 260
+		transfer_state = 260
+		add_state_core = 224
+		transfer_state = 224
+		MSK_SE_dissolution_setup_TAG = yes
+		224 = { set_demilitarized_zone = yes }
+	}
+}
+
+MSK_SE_dissolution_spawn_MZL = {
+	MZL = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 265
+		transfer_state = 265
+		set_variable = { MSK_dissolution_OKB = 1 }
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+
+MSK_SE_dissolution_spawn_SKR = {
+	SKR = {
+		add_ideas = { MSK_dissolution_start }
+		add_state_core = 244
+		transfer_state = 244
+		set_variable = { MSK_dissolution_OKB = 1 }
+		MSK_SE_dissolution_setup_TAG = yes
+	}
+}
+
+MSK_SE_dissolution_setup_TAG = {
+	TNO_startup_nation = yes
+	inherit_technology = MCW
+	if = {
+		limit = { tag = OKB }
+		division_template = {
+			name = "Infanterie-Division"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+			priority = 1
+		}
+		195 = {
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = OKB
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = RSB }
+		division_template = {
+			name = "Krasnozvezdnaya Divisia"
+			priority = 1
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { X = 0 y = 1 }
+			}
+		}
+		1421 = {
+			create_unit = {
+				division = "division_template = \"Krasnozvezdnaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RSB
+			}
+			create_unit = {
+				division = "division_template = \"Krasnozvezdnaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RSB
+			}
+			create_unit = {
+				division = "division_template = \"Krasnozvezdnaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RSB
+			}
+			create_unit = {
+				division = "division_template = \"Krasnozvezdnaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RSB
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = KAG }
+		division_template = {
+			name = "Infanterie-Division"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+			priority = 1
+		}
+		257 = {
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = KAG
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = KAG
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = KAG
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = KAG
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = KAG
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = PSK }
+		division_template = {
+			name = "Schutzstaffel-Infanterie"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				military_police = { x = 0 y = 1 }
+			}
+		}
+		division_template = {
+			name = "SS-Panzergrenadier-Division"
+			regiments = {
+				motorized = { x = 0 y = 0 }
+				motorized = { x = 1 y = 0 }
+				MBT = { X = 1 y = 1 }
+			}
+			support = {
+				maintenance_company = { x = 0 y = 0 }
+			}
+		}
+		division_template = {
+			name = "SS-Kavallerie-Division"
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+			}
+			support = {
+				military_police = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+			}
+		}
+		209 = {
+			create_unit = {
+				division = "division_template = \"Schutzstaffel-Infanterie\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PSK
+			}
+			create_unit = {
+				division = "division_template = \"Schutzstaffel-Infanterie\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PSK
+			}
+			create_unit = {
+				division = "division_template = \"SS-Panzergrenadier-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PSK
+			}
+			create_unit = {
+				division = "division_template = \"SS-Kavallerie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PSK
+			}
+			create_unit = {
+				division = "division_template = \"SS-Kavallerie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PSK
+			}
+			create_unit = {
+				division = "division_template = \"SS-Kavallerie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PSK
+			}
+			create_unit = {
+				division = "division_template = \"SS-Kavallerie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PSK
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = DFK }
+		division_template = {
+			name = "Deutsches Schutzkorps"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				artillery_brigade = { X = 0 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+			}
+		}
+		208 = {
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = DFK
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = DFK
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = DFK
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = DFK
+			}
+		}
+		220 = {
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = DFK
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = DFK
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = DFK
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = BBB }
+		division_template = {
+			name = "Chernaya Brigada"
+			priority = 1
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+			}
+			support = {
+				recon = { x = 0 y = 0 }
+			}
+		}
+		264 = {
+			create_unit = {
+				division = "division_template = \"Chernaya Brigada\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = BBB
+			}
+			create_unit = {
+				division = "division_template = \"Chernaya Brigada\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = BBB
+			}
+			create_unit = {
+				division = "division_template = \"Chernaya Brigada\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = BBB
+			}
+			create_unit = {
+				division = "division_template = \"Chernaya Brigada\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = BBB
+			}
+			create_unit = {
+				division = "division_template = \"Chernaya Brigada\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = BBB
+			}
+			create_unit = {
+				division = "division_template = \"Chernaya Brigada\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = BBB
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = MOS }
+		division_template = {
+			name = "Pehotnaya Divisia RONA"
+			priority = 1
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+		}
+		division_template = {
+			name = "Artilleristkaya Divisia RONA"
+			priority = 1
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 1 y = 0 }
+				artillery_brigade = { X = 0 y = 1 }
+				artillery_brigade = { X = 1 y = 1 }
+			}
+		}
+		1478 = {
+			create_unit = {
+				division = "division_template = \"Artilleristkaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Artilleristkaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Artilleristkaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Artilleristkaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+		}
+		246 = {
+			create_unit = {
+				division = "division_template = \"Artilleristkaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+		}
+		255 = {
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+		}
+		248 = {
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+			create_unit = {
+				division = "division_template = \"Pehotnaya Divisia RONA\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = MOS
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = SMO }
+		division_template = {
+			name = "Narodnaya Divisia"
+			priority = 1
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 1 y = 1 }
+			}
+		}
+		242 = {
+			create_unit = {
+				division = "division_template = \"Narodnaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = SMO
+			}
+			create_unit = {
+				division = "division_template = \"Narodnaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = SMO
+			}
+		}
+		1476 = {
+			create_unit = {
+				division = "division_template = \"Narodnaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = SMO
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = LAK }
+		division_template = {
+			name = "Infanterie-Division"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+			priority = 1
+		}
+		223 = {
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = LAK
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = LAK
+			}
+		}
+		1444 = {
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = LAK
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = LAK
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = ZLB }
+		division_template = {
+			name = "Batalion Zolina"
+			priority = 1
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 1 y = 1 }
+			}
+		}
+		241 = {
+			create_unit = {
+				division = "division_template = \"Batalion Zolina\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = ZLB
+			}
+			create_unit = {
+				division = "division_template = \"Batalion Zolina\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = ZLB
+			}
+			create_unit = {
+				division = "division_template = \"Batalion Zolina\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = ZLB
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = RDC }
+		division_template = {
+			name = "Divisia Opespecheniya Besopasnosti"
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 1 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 1 y = 1 }
+			}
+			support = {
+				military_police = { x = 0 y = 0 }
+			}
+			priority = 1
+		}
+		division_template = {
+			name = "Partisanskaya Strelkovaya Divisia"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+			priority = 0
+		}
+		222 = {
+			create_unit = {
+				division = "division_template = \"Divisia Opespecheniya Besopasnosti\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Divisia Opespecheniya Besopasnosti\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Divisia Opespecheniya Besopasnosti\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Divisia Opespecheniya Besopasnosti\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+			create_unit = {
+				division = "division_template = \"Partisanskaya Strelkovaya Divisia\" start_experience_factor = 0.1 start_equipment_factor = 1"
+				owner = RDC
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = TAM }
+		division_template = {
+			name = "Privates Firmenschutzkorps"
+			#division_names_group = TAM_paratroopers
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				light_infantry = { X = 0 y = 1 }
+				light_infantry = { X = 1 y = 1 }
+			}
+			support = {
+				military_police = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+			}
+		}
+		division_template = {
+			name = "Krisenvorsorgebataillon"
+			priority = 1
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				artillery_brigade = { x = 0 y = 1 }
+				artillery_brigade = { x = 1 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				logistics_company = { x = 0 y = 1 }
+			}
+		}
+		1443 = {
+			create_unit = {
+				division = "division_template = \"Privates Firmenschutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TAM
+			}
+			create_unit = {
+				division = "division_template = \"Privates Firmenschutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TAM
+			}
+			create_unit = {
+				division = "division_template = \"Privates Firmenschutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = TAM
+			}
+			create_unit = {
+				division = "division_template = \"Privates Firmenschutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TAM
+			}
+			create_unit = {
+				division = "division_template = \"Privates Firmenschutzkorps\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TAM
+			}
+			create_unit = {
+				division = "division_template = \"Privates Firmenschutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = TAM
+			}
+		}
+		1441 = {
+			create_unit = {
+				division = "division_template = \"Krisenvorsorgebataillon\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = TAM
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = POS }
+		division_template = {
+			name = "Panzer-Division"
+			priority = 1
+			regiments = {
+				motorized = { x = 0 y = 0 }
+				motorized = { x = 1 y = 0 }
+				MBT = { x = 0 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				maintenance_company = { x = 0 y = 1 }
+			}
+		}
+		division_template = {
+			name = "Infanterie-Division"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+			priority = 1
+		}
+		1436 = {
+			create_unit = {
+				division = "division_template = \"Panzer-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = POS
+			}
+			create_unit = {
+				division = "division_template = \"Panzer-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = POS
+			}
+		}
+		245 = {
+			create_unit = {
+				division = "division_template = \"Panzer-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = POS
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = POS
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = POS
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = PEN }
+		division_template = {
+			name = "Penzenskaya Suverennaya Pehota"
+			priority = 1
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+			}
+			support = {
+				recon = { x = 0 y = 0 }
+			}
+		}
+		263 = {
+			create_unit = {
+				division = "division_template = \"Penzenskaya Suverennaya Pehota\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PEN
+			}
+			create_unit = {
+				division = "division_template = \"Penzenskaya Suverennaya Pehota\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PEN
+			}
+			create_unit = {
+				division = "division_template = \"Penzenskaya Suverennaya Pehota\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PEN
+			}
+			create_unit = {
+				division = "division_template = \"Penzenskaya Suverennaya Pehota\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PEN
+			}
+			create_unit = {
+				division = "division_template = \"Penzenskaya Suverennaya Pehota\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PEN
+			}
+			create_unit = {
+				division = "division_template = \"Penzenskaya Suverennaya Pehota\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PEN
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = PAU }
+		division_template = {
+			name = "Russische Freiwilligen-Division"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				light_infantry = { x = 0 y = 2 }
+				light_infantry = { x = 1 y = 0 }
+			}
+			support = {
+				military_police = { x = 0 y = 0 }
+			}
+		}
+		division_template = {
+			name = "Deutsches Schutzkorps"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				artillery_brigade = { X = 0 y = 1 }
+				artillery_brigade = { X = 1 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+			}
+		}
+		243 = {
+			create_unit = {
+				division = "division_template = \"Russische Freiwilligen-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Russische Freiwilligen-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Russische Freiwilligen-Division\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+		}
+		239 = {
+			create_unit = {
+				division = "division_template = \"Russische Freiwilligen-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Deutsches Schutzkorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Kalmückische Kavalleriekorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Kalmückische Kavalleriekorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Kalmückische Kavalleriekorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Kalmückische Kavalleriekorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Kalmückische Kavalleriekorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Kalmückische Kavalleriekorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+			create_unit = {
+				division = "division_template = \"Kalmückische Kavalleriekorps\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = PAU
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = FRP }
+		division_template = {
+			name = "Partizanskaya Divisia"
+			priority = 1
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+			}
+		}
+		240 = {
+			create_unit = {
+				division = "division_template = \"Partizanskaya Divisia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = FRP
+			}
+			create_unit = {
+				division = "division_template = \"Partizanskaya Divisia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = FRP
+			}
+			create_unit = {
+				division = "division_template = \"Partizanskaya Divisia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = FRP
+			}
+			create_unit = {
+				division = "division_template = \"Partizanskaya Divisia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = FRP
+			}
+		}
+		260 = {
+			create_unit = {
+				division = "division_template = \"Partizanskaya Divisia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = FRP
+			}
+			create_unit = {
+				division = "division_template = \"Partizanskaya Divisia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = FRP
+			}
+			create_unit = {
+				division = "division_template = \"Partizanskaya Divisia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = FRP
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = MZL }
+		division_template = {
+			name = "Infanterie-Division"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+			priority = 1
+		}
+		division_template = {
+			name = "Zollgrenzschutz-Division"
+			regiments = {
+				light_infantry = { x = 0 y = 0 }
+				light_infantry = { x = 0 y = 1 }
+				light_infantry = { x = 1 y = 0 }
+			}
+			support = {
+				military_police = { x = 0 y = 0 }
+			}
+			priority = 0 
+		}
+		265 = {
+			create_unit = {
+				division = "division_template = \"Zollgrenzschutz-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = MZL
+			}
+			create_unit = {
+				division = "division_template = \"Zollgrenzschutz-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = MZL
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = MZL
+			}
+		}
+	}
+	else_if = {
+		limit = { tag = SKR }
+		division_template = {
+			name = "Infanterie-Division"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+			priority = 1
+		}
+		244 = {
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = SKR
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = SKR
+			}
+			create_unit = {
+				division = "division_template = \"Infanterie-Division\" start_experience_factor = 0.3 start_equipment_factor = 1"
+				owner = SKR
+			}
+		}
+	}
+	every_owned_state = {
+		remove_core_of = MCW
+		set_demilitarized_zone = no
+	}
+	set_research_slots = 0
+	if = {
+		limit = {
+			has_template = "Infanterie Abteilung"
+		}
+		delete_unit_template_and_units = { division_template = "Infanterie Abteilung" disband = yes }
+		delete_unit_template_and_units = { division_template = "Leichte Infanterie Abteilung" disband = yes }
+		delete_unit_template_and_units = { division_template = "Motorisierte Abteilung" disband = yes }
+		delete_unit_template_and_units = { division_template = "Panzer Abteilung" disband = yes }
+	}
+	country_lock_all_division_template = yes
+}
+
+MSK_SE_disssolution_wars = {
+	OKB = {
+		declare_war_on = { target = RSB type = annex_everything }
+	}
+	RSB = {
+		declare_war_on = { target = KAG type = annex_everything }
+		declare_war_on = { target = DFK type = annex_everything }
+	}
+	KAG = {
+		declare_war_on = { target = PSK type = annex_everything }
+		declare_war_on = { target = DFK type = annex_everything }
+	}
+	BBB = {
+		declare_war_on = { target = DFK type = annex_everything }
+	}
+	MOS = {
+		declare_war_on = { target = BBB type = annex_everything }
+		declare_war_on = { target = DFK type = annex_everything }
+		declare_war_on = { target = KAG type = annex_everything }
+		declare_war_on = { target = PSK type = annex_everything }
+		declare_war_on = { target = SMO type = annex_everything }
+		declare_war_on = { target = RDC type = annex_everything }
+		declare_war_on = { target = TAM type = annex_everything }
+		declare_war_on = { target = POS type = annex_everything }
+		declare_war_on = { target = PEN type = annex_everything }
+	}
+	SMO = {
+		declare_war_on = { target = PSK type = annex_everything }
+		declare_war_on = { target = RDC type = annex_everything }
+		declare_war_on = { target = LAK type = annex_everything }
+	}
+	LAK = {
+		declare_war_on = { target = ZLB type = annex_everything }
+		declare_war_on = { target = RDC type = annex_everything }
+	}
+	RDC = {
+		declare_war_on = { target = TAM type = annex_everything }
+		declare_war_on = { target = FRP type = annex_everything }
+	}
+	TAM = {
+		declare_war_on = { target = FRP type = annex_everything }
+		declare_war_on = { target = POS type = annex_everything }
+	}
+	POS = {
+		declare_war_on = { target = PEN type = annex_everything }
+		declare_war_on = { target = FRP type = annex_everything }
+		declare_war_on = { target = PAU type = annex_everything }
+	}
+	PEN = {
+		declare_war_on = { target = PAU type = annex_everything }
+	}
+	FRP = {
+		declare_war_on = { target = PAU type = annex_everything }
+		declare_war_on = { target = MZL type = annex_everything }
+	}
+	MZL = {
+		declare_war_on = { target = PAU type = annex_everything }
+	}
+	SKR = {
+		declare_war_on = { target = PAU type = annex_everything }
+	}
+}

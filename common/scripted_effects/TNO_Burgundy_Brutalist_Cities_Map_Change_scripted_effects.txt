@@ -1,0 +1,564 @@
+BRG_Change_VPS_State_4 = { ### Flanders
+    if = {
+        limit = {
+            check_variable = { 6.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 6446 value = -5 } ## Bye Bye Burgs
+        add_victory_points = { province = 3576 value = -5 }
+        add_victory_points = { province = 6598 value = 5 } ## Hello Antwerp
+    }
+
+    if = {
+        limit = {
+            check_variable = { 6.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 6560 value = -5 } ## Bye Bye Gent
+        add_victory_points = { province = 6598 value = 5 } ## Hello Ryssel
+
+        4 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+BRG_Change_VPS_State_5 = { ### Walloon
+    if = {
+        limit = {
+            check_variable = { 34.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 3516 value = -5 } ## Bye Bye Namur
+        add_victory_points = { province = 11519 value = 5 } ## Hello Luttich
+    }
+
+    if = {
+        limit = {
+            check_variable = { 34.BRG_brutalist_city_level = 2 }
+        }
+
+        #add_victory_points = { province = 9536 value = -5 } ## Bye Bye Charleloi REPLACE LATER
+        add_victory_points = { province = 11519 value = 5 } ## Hello Luttich
+
+        34 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 34.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 9536 value = -10 } ## Bye Bye Charleloi
+        add_victory_points = { province = 11519 value = 10 } ## Hello Luttich
+    }
+}
+
+BRG_Change_VPS_State_6 = { ### Pickardien
+    if = {
+        limit = {
+            check_variable = { 29.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 11548 value = -5 } ## Bye Bye Kalen
+        add_victory_points = { province = 11483 value = 5 } ## Hello Ryssel
+    }
+
+    if = {
+        limit = {
+            check_variable = { 29.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 575 value = -5 } ## Bye Bye Dunkirk
+        add_victory_points = { province = 11483 value = 5 } ## Hello Ryssel
+
+        29 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 29.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 3476 value = -10 } ## Bye Bye Merowwhatever
+        add_victory_points = { province = 11483 value = 10 } ## Hello Ryssel
+    }
+}
+
+
+BRG_Change_VPS_State_7 = { ### Kampen
+    if = {
+        limit = {
+            check_variable = { 18.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 9472 value = -5 } ## Bye Bye Carleville Maziere
+        add_victory_points = { province = 13011 value = 5 } ## Hello Reimen
+    }
+
+    if = {
+        limit = {
+            check_variable = { 18.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 5291 value = -5 } ## Bye Bye Vertin
+        add_victory_points = { province = 13011 value = 5 } ## Hello Reimen
+
+        18 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 18.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 9490 value = -10 } ## Bye Bye Trojan
+        add_victory_points = { province = 13011 value = 10 } ## Hello Reimen
+    }
+}
+
+
+BRG_Change_VPS_State_8 = { #### Friegwhatever
+    if = {
+        limit = {
+            check_variable = { 17.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 6698 value = -5 } ## Bye Bye Vesaul
+        add_victory_points = { province = 11516 value = 5 } ## Hello Nanzig
+    }
+
+    if = {
+        limit = {
+            check_variable = { 17.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 698 value = -5 } ## Bye Bye Belfort
+        add_victory_points = { province = 11516 value = 5 } ## Hello Nanzig
+
+        17 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 17.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 9642 value = -10 } ## Bye Bye Merowwhatever
+        add_victory_points = { province = 11516 value = 10 } ## Hello Nanzig
+    }
+}
+
+
+BRG_Change_VPS_State_9 = { ### Normandie 
+    if = {
+        limit = {
+            check_variable = { 15.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 6569 value = -5 } ## Bye Bye Gisors
+        add_victory_points = { province = 11563 value = 5 } ## Hello Rodomo
+    }
+
+    if = {
+        limit = {
+            check_variable = { 15.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 485 value = -5 } ## Bye Bye Dieppe
+        add_victory_points = { province = 11563 value = 5 } ## Hello Rodomo
+
+        15 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 15.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 9434 value = -10 } ## Bye Bye Hafstadt
+        add_victory_points = { province = 11563 value = 10 } ## Hello Rodomo
+    }
+}
+
+
+BRG_Change_VPS_State_10 = { ### Ost Paris, nothing
+}
+
+
+BRG_Change_VPS_State_11 = { ### West Paris, nothing
+}
+
+
+BRG_Change_VPS_State_12 = { ### Meau
+
+    if = {
+        limit = {
+            check_variable = { 788.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 11491 value = -5 } ## Bye Bye Cuolo
+        add_victory_points = { province = 6949 value = 5 } ## Hello Meldis
+
+        788 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 788.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 11518 value = -10 } ## Bye Bye DAMMARTAN
+        add_victory_points = { province = 6949 value = 10 } ## Hello Meldis
+    }
+}
+
+
+BRG_Change_VPS_State_14 = { ### Evreux
+
+    if = {
+        limit = {
+            check_variable = { 791.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 9578 value = -5 } ## Bye Bye Louviers
+        add_victory_points = { province = 3534 value = 5 } ## Hello Evreux
+
+        791 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 791.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 3549 value = -10 } ## Bye Bye Eburo
+        add_victory_points = { province = 3534 value = 10 } ## Hello Evreux
+    }
+}
+
+
+BRG_Change_VPS_State_15 = { ### Versaile 
+
+    if = {
+        limit = {
+            check_variable = { 787.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 6547 value = -5 } ## Bye Bye Plasir
+        add_victory_points = { province = 9507 value = 5 } ## Hello Neustadt
+
+        787 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 787.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 9725 value = -10 } ## Bye Bye Sens
+        add_victory_points = { province = 9507 value = 10 } ## Hello Neustadt
+    }
+}
+
+
+BRG_Change_VPS_State_16 = { ### Sully-Sur-Liore
+    if = {
+        limit = {
+            check_variable = { 792.BRG_brutalist_city_level = 1 }
+        }
+
+        #add_victory_points = { province = 6688 value = -5 } ## Bye Bye Vierzon
+        add_victory_points = { province = 512 value = 5 } ## Hello Aurelstadt
+    }
+
+    if = {
+        limit = {
+            check_variable = { 792.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 6518 value = -5 } ## Bye Bye Montargis
+        add_victory_points = { province = 512 value = 5 } ## Hello Aurelstadt
+
+        792 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 792.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 11611 value = -10 } ## Bye Bye Burgen
+        add_victory_points = { province = 512 value = 10 } ## Hello Aurelstadt
+    }
+}
+
+
+BRG_Change_VPS_State_17 = { ### Burgund
+    if = {
+        limit = {
+            check_variable = { 27.BRG_brutalist_city_level = 1 }
+        }
+        add_victory_points = { province = 11628 value = -5 } ## Bye Bye Beaune
+        add_victory_points = { province = 3506 value = -5 } ## Bye Bye Auxerre
+        add_victory_points = { province = 3652 value = 5 } ## Hello Tischau
+    }
+
+    if = {
+        limit = {
+            check_variable = { 27.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 11593 value = -5 } ## Bye Bye Roane
+        add_victory_points = { province = 3605 value = -5 } ## Bye Bye Atrikus
+        add_victory_points = { province = 3652 value = 5 } ## Hello Tischau
+
+        27 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 27.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 11794 value = -10 } ## Bye Bye Macon
+        add_victory_points = { province = 3652 value = 10 } ## Hello Tischau
+    }
+}
+
+BRG_Change_VPS_State_23 = { ### Rhone
+
+    if = {
+        limit = {
+            check_variable = { 24.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 9590 value = -5 } ## Bye Bye Bourg en Brasse
+        add_victory_points = { province = 6613 value = 5 } ## Hello Leydon
+
+        24 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 24.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 6786 value = -10 } ## Bye Bye Viene
+        add_victory_points = { province = 6613 value = 10 } ## Hello Leydon
+    }
+}
+
+
+BRG_Change_VPS_State_21 = { ### Centre Sud 
+
+    if = {
+        limit = {
+            check_variable = { 33.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 3655 value = -5 } ## Bye Bye Chatwhatever
+        add_victory_points = { province = 13365 value = 5 } ## Hello Pickenstadt
+    }
+
+    if = {
+        limit = {
+            check_variable = { 33.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 11576 value = -5 } ## Bye Bye Monlucon
+        add_victory_points = { province = 13365 value = 5 } ## Hello Pickenstadt
+
+        33 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 33.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 620 value = -10 } ## Bye Bye Limogen
+        add_victory_points = { province = 13365 value = 10 } ## Hello Pickenstadt
+    }
+}
+
+
+BRG_Change_VPS_State_22 = { ### Vichy
+
+    if = {
+        limit = {
+            check_variable = { 789.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 9609 value = -5 } ## Bye Bye Moulins
+        add_victory_points = { province = 3594 value = 5 } ## Hello Vichystadt
+    }
+}
+
+
+BRG_Change_VPS_State_20 = { ### Centre
+
+    if = {
+        limit = {
+            check_variable = { 24.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 11463 value = -5 } ## Bye Bye Druex
+        add_victory_points = { province = 3509 value = 5 } ## Hello Menzeller
+    }
+
+    if = {
+        limit = {
+            check_variable = { 24.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 6533 value = -5 } ## Bye Bye Vendome
+        add_victory_points = { province = 3509 value = 5 } ## Hello Menzeller
+
+        24 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 24.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 3671 value = -10 } ## Bye Bye Turon
+        add_victory_points = { province = 3509 value = 10 } ## Hello Menzeller
+    }
+}
+
+
+BRG_Change_VPS_State_24 = { ### Vallon Pont Du Arc
+
+    if = {
+        limit = {
+            check_variable = { 790.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 3770 value = -10 } ## Bye Bye Montbrison
+        add_victory_points = { province = 9732 value = 10 } ## Hello Stefanstadt
+    }
+}
+
+
+BRG_Change_VPS_State_25 = { ### Alpenland
+
+    if = {
+        limit = {
+            check_variable = { 32.BRG_brutalist_city_level = 1 }
+        }
+
+        add_victory_points = { province = 3589 value = -5 } ## Bye Bye Chambrey
+        add_victory_points = { province = 3768 value = 5 } ## Hello Graswelde
+    }
+
+    if = {
+        limit = {
+            check_variable = { 32.BRG_brutalist_city_level = 2 }
+        }
+
+        add_victory_points = { province = 780 value = -5 } ## Bye Bye Valence
+        add_victory_points = { province = 3768 value = 5 } ## Hello Graswelde
+
+        32 = {
+            add_building_construction = {
+                type = brutalist_city
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { 32.BRG_brutalist_city_level = 3 }
+        }
+
+        add_victory_points = { province = 6784 value = -10 } ## Bye Bye Annecy
+        add_victory_points = { province = 3768 value = 10 } ## Hello Graswelde
+    }
+}
+

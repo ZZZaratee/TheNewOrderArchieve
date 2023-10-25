@@ -1,0 +1,5110 @@
+GGR_set_up_RK_ROOT = {
+
+	econ_join_sphere_GER = yes
+
+	GER = {
+		set_autonomy = {
+			target = PREV
+			autonomous_state = autonomy_autonomous_reichskommissariat
+		}
+	}
+	every_owned_state = {
+		PREV = {
+			add_state_core = PREV
+		}
+	}
+
+	set_politics = {
+		ruling_party = national_socialism
+	}
+	set_popularities = {
+		national_socialism = 60
+		ultranationalism = 40
+	}
+	add_ideas = Pakt_Autonomous_Reichskommissariat
+
+	set_stability = 0.25
+	set_war_support = -0.1
+
+	add_timed_idea = {
+		idea = GGR_stabilising_regime
+		days = 365
+	}
+
+	add_ideas = {
+		##POLITICAL LAWS##
+		tno_political_parties_one_party_state
+		tno_religious_rights_state_atheism
+		tno_trade_unions_illegal
+		tno_immigration_quota_immigration
+		tno_slavery_allowed
+		tno_public_meetings_regulated
+		tno_press_rights_state_press_only
+		tno_vote_franchise_registered_voting
+		tno_refugees_skilled
+		##MILITARY LAWS###
+		tno_conscription_two_year_draft
+		tno_women_banned
+		tno_military_supervision_kill_em_all
+		tno_training_basic_training
+		tno_racial_integration_none
+		tno_draft_exemptions_none
+		##SOCIAL LAWS##
+		tno_safety_minimal_regulations
+		tno_health_care_support_for_emergencies
+		tno_pollution_no_controls
+		tno_education_public_education
+		tno_penal_system_penal_slavery
+		tno_lgbt_rights_lgbt_outlawed
+		tno_gender_rights_traditional_roles
+		tno_minorities_oppression
+		tno_security_security_service
+		##ECONOMIC LAWS##
+		tno_trade_laws_limited_exports
+		tno_income_taxation_elite_tax_exemptions
+		tno_minimum_wage_trinket_minimum_wage
+		tno_max_workhours_14_hour_work_day
+		tno_child_labor_restricted
+		tno_pensions_low_pensions
+		tno_unemployment_no_subsidies
+	}
+	hidden_effect = {
+		set_temp_variable = { TNO_economy_subtype_temp = 5 }
+		econ_subtype_change = yes
+	}
+}
+
+#Tree Reloader
+GGR_Reload_main = {
+	custom_effect_tooltip = USA_more_focus_tree_options
+	hidden_effect = {
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+# Mil gui shit
+
+GGR_decrease_militarist_loyalty_small = {
+	custom_effect_tooltip = GER_GOR_Militarists_loyalty_decrease_small
+	subtract_from_variable = { GER_Militarist_Loyalty = 5 }
+	clamp_variable = { var = GER_Militarist_Loyalty min = 0 max = 100 }
+}
+GGR_decrease_militarist_loyalty = {
+	custom_effect_tooltip = GER_GOR_Militarists_loyalty_decrease
+	subtract_from_variable = { GER_Militarist_Loyalty = 10 }
+	clamp_variable = { var = GER_Militarist_Loyalty min = 0 max = 100 }
+}
+GGR_decrease_militarist_loyalty_large = {
+	custom_effect_tooltip = GER_GOR_Militarists_loyalty_decrease_large
+	subtract_from_variable = { GER_Militarist_Loyalty = 15 }
+	clamp_variable = { var = GER_Militarist_Loyalty min = 0 max = 100 }
+}
+
+GGR_increase_militarist_loyalty_small = {
+	custom_effect_tooltip = GER_GOR_Militarists_loyalty_increase_small
+	add_to_variable = { GER_Militarist_Loyalty = 5 }
+	clamp_variable = { var = GER_Militarist_Loyalty min = 0 max = 100 }
+}
+GGR_increase_militarist_loyalty = {
+	custom_effect_tooltip = GER_GOR_Militarists_loyalty_increase
+	add_to_variable = { GER_Militarist_Loyalty = 10 }
+	clamp_variable = { var = GER_Militarist_Loyalty min = 0 max = 100 }
+}
+GGR_increase_militarist_loyalty_large = {
+	custom_effect_tooltip = GER_GOR_Militarists_loyalty_increase_large
+	add_to_variable = { GER_Militarist_Loyalty = 15 }
+	clamp_variable = { var = GER_Militarist_Loyalty min = 0 max = 100 }
+}
+
+GGR_decrease_militarist_power_small = {
+	custom_effect_tooltip = GER_GOR_Militarists_power_decrease_small
+	subtract_from_variable = { GER_Militarist_Power = 5 }
+	clamp_variable = { var = GER_Militarist_Power min = 0 max = 100 }
+}
+GGR_decrease_militarist_power = {
+	custom_effect_tooltip = GER_GOR_Militarists_power_decrease
+	subtract_from_variable = { GER_Militarist_Power = 10 }
+	clamp_variable = { var = GER_Militarist_Power min = 0 max = 100 }
+}
+GGR_decrease_militarist_power_large = {
+	custom_effect_tooltip = GER_GOR_Militarists_power_decrease_large
+	subtract_from_variable = { GER_Militarist_Power = 15 }
+	clamp_variable = { var = GER_Militarist_Power min = 0 max = 100 }
+}
+
+GGR_increase_militarist_power_small = {
+	custom_effect_tooltip = GER_GOR_Militarists_power_increase_small
+	add_to_variable = { GER_Militarist_Power = 5 }
+	clamp_variable = { var = GER_Militarist_Power min = 0 max = 100 }
+}
+GGR_increase_militarist_power = {
+	custom_effect_tooltip = GER_GOR_Militarists_power_increase_small
+	add_to_variable = { GER_Militarist_Power = 10 }
+	clamp_variable = { var = GER_Militarist_Power min = 0 max = 100 }
+}
+GGR_increase_militarist_power_large = {
+	custom_effect_tooltip = GER_GOR_Militarists_power_increase_small
+	add_to_variable = { GER_Militarist_Power = 15 }
+	clamp_variable = { var = GER_Militarist_Power min = 0 max = 100 }
+}
+
+GGR_decrease_militarist_influence_small = {
+	custom_effect_tooltip = GER_GOR_Militarists_influence_decrease_small
+	subtract_from_variable = { GER_Militarist_Influence = 5 }
+	clamp_variable = { var = GER_Militarist_Influence min = 0 max = 100 }
+}
+GGR_decrease_militarist_influence = {
+	custom_effect_tooltip = GER_GOR_Militarists_influence_decrease
+	subtract_from_variable = { GER_Militarist_Influence = 10 }
+	clamp_variable = { var = GER_Militarist_Influence min = 0 max = 100 }
+}
+GGR_decrease_militarist_influence_large = {
+	custom_effect_tooltip = GER_GOR_Militarists_influence_decrease_large
+	subtract_from_variable = { GER_Militarist_Influence = 15 }
+	clamp_variable = { var = GER_Militarist_Influence min = 0 max = 100 }
+}
+
+GGR_increase_militarist_influence_small = {
+	custom_effect_tooltip = GER_GOR_Militarists_influence_increase_small
+	add_to_variable = { GER_Militarist_Influence = 5 }
+	clamp_variable = { var = GER_Militarist_Influence min = 0 max = 100 }
+}
+GGR_increase_militarist_influence = {
+	custom_effect_tooltip = GER_GOR_Militarists_influence_increase
+	add_to_variable = { GER_Militarist_Influence = 10 }
+	clamp_variable = { var = GER_Militarist_Influence min = 0 max = 100 }
+}
+GGR_increase_militarist_influence_large = {
+	custom_effect_tooltip = GER_GOR_Militarists_influence_increase_large
+	add_to_variable = { GER_Militarist_Influence = 15 }
+	clamp_variable = { var = GER_Militarist_Influence min = 0 max = 100 }
+}
+
+GGR_repair_germany = {
+	if = {
+		limit = { has_idea = rebuilding_germany5 }
+		remove_ideas = rebuilding_germany5
+	}
+	else_if = {
+		limit = { has_idea = rebuilding_germany4 }
+		swap_ideas = {
+			remove_idea = rebuilding_germany4
+			add_idea = rebuilding_germany5
+		}
+	}
+	else_if = {
+		limit = { has_idea = rebuilding_germany3 }
+		swap_ideas = {
+			remove_idea = rebuilding_germany3
+			add_idea = rebuilding_germany4
+		}
+	}
+	else_if = {
+		limit = { has_idea = rebuilding_germany2 }
+		swap_ideas = {
+			remove_idea = rebuilding_germany2
+			add_idea = rebuilding_germany3
+		}
+	}
+	else_if = {
+		limit = { has_idea = rebuilding_germany }
+		swap_ideas = {
+			remove_idea = rebuilding_germany
+			add_idea = rebuilding_germany2
+		}
+	}
+}
+
+#Operation Rurik stuff
+GGR_cossack_discovery_check = {
+	custom_effect_tooltip = GGR_cossack_discovery
+	hidden_effect = {
+		set_temp_variable = { detection_chance = random }
+		if = {
+			limit = { check_variable = { GGR_rurick_cossack_suspicion > detection_chance }}
+			country_event = { id = goering.1031 days = 7 }
+		}
+	}
+}
+
+GGR_loyalist_discovery_check = {
+	custom_effect_tooltip = GGR_loyalist_discovery
+	hidden_effect = {
+		set_temp_variable = { detection_chance = random }
+		if = {
+			limit = { check_variable = { GGR_rurik_loyalist_suspicion > detection_chance }}
+			country_event = { id = goering.1032 days = 7 }
+		}
+	}
+}
+
+GGR_SS_cell_west_discovery_check = {
+	custom_effect_tooltip = GGR_SS_cell_west_discovery_check
+	hidden_effect = {
+		set_temp_variable = { discovery_chance = UKR.UKR_west_prep }
+		add_to_temp_variable = { discovery_chance = 2.5 }
+		if = { limit = { 201 = { has_state_flag = state_monitored } } add_to_temp_variable = { discovery_chance = 1 } }
+		else = { 201 = { set_state_flag = state_monitored } }
+		divide_temp_variable = { discovery_chance = 10 }
+		set_temp_variable = { random_check = random }
+		if = {
+			limit = {
+				check_variable = { random_check < discovery_chance }
+				check_variable = { UKR.UKR_west_prep > 0 }
+			}
+			country_event = { id = goering.1069 }
+		}
+		else = {
+			country_event = { id = goering.1070 }
+		}
+	}
+}
+GGR_SS_cell_north_discovery_check = {
+	custom_effect_tooltip = GGR_SS_cell_north_discovery_check
+	hidden_effect = {
+		set_temp_variable = { discovery_chance = UKR.UKR_north_prep }
+		add_to_temp_variable = { discovery_chance = 2.5 }
+		if = { limit = { 193 = { has_state_flag = state_monitored } } add_to_temp_variable = { discovery_chance = 1 } }
+		else = { 193 = { set_state_flag = state_monitored } }
+		divide_temp_variable = { discovery_chance = 10 }
+		set_temp_variable = { random_check = random }
+		if = {
+			limit = {
+				check_variable = { random_check < discovery_chance }
+				check_variable = { UKR.UKR_north_prep > 0 }
+			}
+			country_event = { id = goering.1069 }
+		}
+		else = {
+			country_event = { id = goering.1070 }
+		}
+	}
+}
+GGR_SS_cell_east_discovery_check = {
+	custom_effect_tooltip = GGR_SS_cell_east_discovery_check
+	hidden_effect = {
+		set_temp_variable = { discovery_chance = UKR.UKR_east_prep }
+		add_to_temp_variable = { discovery_chance = 2.5 }
+		if = { limit = { 221 = { has_state_flag = state_monitored } } add_to_temp_variable = { discovery_chance = 1 } }
+		else = { 221 = { set_state_flag = state_monitored } }
+		divide_temp_variable = { discovery_chance = 10 }
+		set_temp_variable = { random_check = random }
+		if = {
+			limit = {
+				check_variable = { random_check < discovery_chance }
+				check_variable = { UKR.UKR_east_prep > 0 }
+			}
+			country_event = { id = goering.1069 }
+		}
+		else = {
+			country_event = { id = goering.1070 }
+		}
+	}
+}
+GGR_SS_cell_south_discovery_check = {
+	custom_effect_tooltip = GGR_SS_cell_south_discovery_check
+	hidden_effect = {
+		set_temp_variable = { discovery_chance = UKR.UKR_south_prep }
+		add_to_temp_variable = { discovery_chance = 2.5 }
+		if = { limit = { 200 = { has_state_flag = state_monitored } } add_to_temp_variable = { discovery_chance = 1 } }
+		else = { 200 = { set_state_flag = state_monitored } }
+		divide_temp_variable = { discovery_chance = 10 }
+		set_temp_variable = { random_check = random }
+		if = {
+			limit = {
+				check_variable = { random_check < discovery_chance }
+				check_variable = { UKR.UKR_south_prep > 0 }
+			}
+			country_event = { id = goering.1069 }
+		}
+		else = {
+			country_event = { id = goering.1070 }
+		}
+	}
+}
+
+GGR_plan_A_max_planning = {
+	add_timed_idea = {
+		idea = GGR_back_to_the_drawing_room
+		days = 90
+	}
+}
+
+GGR_ser_pacification_check = {
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { GGR_chetnik_diplomacy > GGR_chetnik_diplomacy_target }
+				check_variable = { GGR_chetnik_integration > GGR_chetnik_integration_target }
+			}
+			country_event = { id = goering.1094 days = 1 }
+		}
+		else = {
+			set_temp_variable = { GGR_direction_diplomacy_check = GGR_chetnik_diplomacy_target }
+			set_temp_variable = { GGR_direction_integration_check = GGR_chetnik_integration }
+			add_to_temp_variable = { GGR_direction_diplomacy_check = 1 }
+			add_to_temp_variable = { GGR_direction_integration_check = 1 }
+			if = {
+				limit = {
+					OR = {
+						check_variable = { GGR_chetnik_diplomacy > GGR_direction_diplomacy_check }
+						check_variable = { GGR_chetnik_integration > GGR_direction_integration_check }
+					}
+				}
+				country_event = { id = goering.1095 }
+			}
+		}
+	}
+}
+
+GGR_ser_diplomacy = {
+	custom_effect_tooltip = GGR_ser_diplomacy_tooltip
+	add_to_variable = { GGR_chetnik_diplomacy = 1 }
+	GGR_ser_pacification_check = yes
+}
+
+GGR_ser_integration = {
+	custom_effect_tooltip = GGR_ser_integration_tooltip
+	add_to_variable = { GGR_chetnik_integration = 1 }
+	GGR_ser_pacification_check = yes
+}
+
+GGR_clear_temporary_variables = {
+	clear_variable = GGR_temporary_soft_attack
+	clear_variable = GGR_temporary_speed
+	clear_variable = GGR_temporary_bombing
+	clear_variable = GGR_temporary_repair_speed
+	clear_variable = GGR_temporary_organisation_factor
+	clear_variable = GGR_temporary_air_cas_present_factor
+	clear_variable = GGR_temporary_entrenchment_speed
+	clear_variable = GGR_temporary_reinforce_rate
+	clear_variable = GGR_temporary_planning_speed
+	clear_variable = GGR_temporary_attrition
+	clear_variable = GGR_temporary_infantry_attack
+	clear_variable = GGR_temporary_paradrop_attack
+	clear_variable = GGR_temporary_supply_grace
+	clear_variable = GGR_temporary_invasion_speed
+	clear_variable = GGR_temporary_harbour_construction_speed
+	clear_variable = GGR_temporary_max_command_power
+	clear_variable = GGR_temporary_experience_loss_factor
+	clear_variable = GGR_temporary_army_organisation
+	clear_variable = GGR_temporary_experience_gain_army_factor
+	clear_variable = GGR_temporary_max_planning
+	clear_variable = GGR_temporary_army_armor_attack_factor
+	clear_variable = GGR_temporary_army_armor_speed_factor
+	clear_variable = GGR_temporary_defence_factor
+	clear_variable = GGR_temporary_special_forces_attack_factor
+	clear_variable = GGR_temporary_special_forces_defence_factor
+	clear_variable = GGR_temporary_army_bonus_air_superiority_factor
+	clear_variable = GGR_temporary_army_artillery_attack_factor
+	clear_variable = GGR_temporary_army_morale_factor
+	clear_variable = GGR_temporary_winter_attrition_factor
+	clear_variable = GGR_temporary_training_time_army_factor
+	clear_variable = GGR_temporary_acclimatization_cold_climate_gain_factor
+	clear_variable = GGR_temporary_mechanized_attack_factor
+	clear_variable = GGR_temporary_mechanized_defence_factor
+	clear_variable = GGR_temporary_convoy_escort_efficiency
+	clear_variable = GGR_temporary_invasion_preparation
+	clear_variable = GGR_temporary_convoy_raiding_efficiency
+	clear_variable = GGR_temporary_enemy_partisan_effect
+	clear_variable = GGR_temporary_war_support
+	clear_variable = GGR_temporary_supply_consumption
+}
+
+GGR_anti_goering_upgrade = {
+	if = {
+		limit = { has_idea = GGR_anti_goering_4 }
+		swap_ideas = {
+			remove_idea = GGR_anti_goering_4
+			add_idea = GGR_anti_goering_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = GGR_anti_goering_3 }
+		swap_ideas = {
+			remove_idea = GGR_anti_goering_3
+			add_idea = GGR_anti_goering_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GGR_anti_goering_2 }
+		swap_ideas = {
+			remove_idea = GGR_anti_goering_2
+			add_idea = GGR_anti_goering_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GGR_anti_goering_1 }
+		swap_ideas = {
+			remove_idea = GGR_anti_goering_1
+			add_idea = GGR_anti_goering_2
+		}
+	}
+	else = {
+		add_ideas = GGR_anti_goering_1
+	}
+}
+
+GGR_increase_japanese_awarenes = {
+	custom_effect_tooltip = GGR_increase_japanese_awarenes_tooltip
+	if = {
+		limit = {
+			check_variable = { GGR_tension_with_japan = 0 }
+		}
+		add_to_variable = {
+			var = GGR_tension_with_japan
+			value = 2
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { GGR_tension_with_japan > 0 }
+				check_variable = { GGR_tension_with_japan < 10 }
+			}
+		}
+		add_to_variable = {
+			var = GGR_tension_with_japan
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { GGR_tension_with_japan = 10 }
+		}
+		add_to_variable = {
+			var = GGR_tension_with_japan
+			value = 1
+		}
+		JAP = {
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+}
+
+# Science variables
+
+GGRCSI_increase_corruption = {
+	custom_effect_tooltip = GGR_increase_GGRCSI_corruption_tooltip
+	add_to_variable = { GGRCSI_corruption = 0.05 }
+	clamp_variable = { var = GGRCSI_corruption min = 0 max = 1 }
+}
+
+GGRCSI_decrease_corruption = {
+	custom_effect_tooltip = GGR_decrease_GGRCSI_corruption_tooltip
+	subtract_from_variable = { GGRCSI_corruption = 0.05 }
+	clamp_variable = { var = GGRCSI_corruption min = 0 max = 1 }
+}
+
+GGRCSI_increase_public_concern = {
+	custom_effect_tooltip = GGR_increase_public_concern_tooltip
+	add_to_variable = { GGRCSI_public_concern = 0.05 }
+	clamp_variable = { var = GGRCSI_public_concern min = 0 max = 1 }
+}
+
+GGRCSI_decrease_public_concern = {
+	custom_effect_tooltip = GGR_decrease_public_concern_tooltip
+	subtract_from_variable = { GGRCSI_public_concern = 0.05 }
+	clamp_variable = { var = GGRCSI_public_concern min = 0 max = 1 }
+}
+
+GGRCSI_increase_military_concern = {
+	custom_effect_tooltip = GGR_increase_military_concern_tooltip
+	add_to_variable = { GGRCSI_military_concern = 0.05 }
+	clamp_variable = { var = GGRCSI_military_concern min = 0 max = 1 }
+}
+
+GGRCSI_decrease_military_concern = {
+	custom_effect_tooltip = GGR_decrease_military_concern_tooltip
+	subtract_from_variable = { GGRCSI_military_concern = 0.05 }
+	clamp_variable = { var = GGRCSI_military_concern min = 0 max = 1 }
+}
+
+GGRCSI_decrease_military_power = {
+	custom_effect_tooltip = GGRCSI_decrease_military_power_tooltip
+	if = {
+		limit = {
+			check_variable = { GGRCSI_corruption > 0.66 }
+		}
+		GGR_decrease_militarist_power_large = yes
+		random_list = {
+			8 = {
+				GGRCSI_increase_military_concern = yes
+			}
+
+			2 = {
+
+			}
+
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { GGRCSI_corruption > 0.33 }
+		}
+		GGR_decrease_militarist_power = yes
+		random_list = {
+			5 = {
+				GGRCSI_increase_military_concern = yes
+			}
+
+			5 = {
+
+			}
+		}
+	}
+	else = {
+		GGR_decrease_militarist_power_small = yes
+		random_list = {
+			2 = {
+				GGRCSI_increase_military_concern = yes
+			}
+
+			8 = {
+
+			}
+		}
+	}
+}
+
+GGRCSI_calculate_total_nuclear_reactors = {
+	subtract_from_variable = { GGRCSI_spending = nuclear_spending }
+	set_variable = { nuclear_spending = 0 }
+	set_variable = { GGRCSI_total_nuclear_reactors = 0 }
+	for_each_scope_loop = {
+		array = controlled_states
+
+		add_to_variable = { GER.GGRCSI_total_nuclear_reactors = building_level@nuclear_reactor }
+		add_to_variable = { GER.nuclear_spending = building_level@nuclear_reactor }
+	}
+
+	UKR = {
+		for_each_scope_loop = {
+			array = controlled_states
+
+			add_to_variable = { UKR.GGRCSI_total_nuclear_reactors = building_level@nuclear_reactor }
+			add_to_variable = { UKR.nuclear_spending = building_level@nuclear_reactor }
+		}
+	}
+	add_to_variable = { GGRCSI_total_nuclear_reactors = UKR.GGRCSI_total_nuclear_reactors }
+	divide_variable = { UKR.nuclear_spending = 2 }
+	add_to_variable = { nuclear_spending = UKR.nuclear_spending }
+
+	multiply_variable = { nuclear_spending = nuclear_maintenance }
+	add_to_variable = { GGRCSI_spending = nuclear_spending }
+	add_to_variable = { misc_costs = nuclear_spending }
+}
+
+
+# Economic stuff
+GGR_increase_slave_participation_small = {
+	custom_effect_tooltip = GGR_increase_slave_participation_small_tooltip
+
+	add_to_variable = { GGR_slave_participation = 0.03 }
+	clamp_variable = { var = GGR_slave_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.015 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.015 }
+	}
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.015 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.015 }
+	}
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_slave_participation = {
+	custom_effect_tooltip = GGR_increase_slave_participation_tooltip
+
+	add_to_variable = { GGR_slave_participation = 0.06 }
+	clamp_variable = { var = GGR_slave_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.03 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.03 }
+	}
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.03 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.03 }
+	}
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_slave_participation_large = {
+	custom_effect_tooltip = GGR_increase_slave_participation_large_tooltip
+
+	add_to_variable = { GGR_slave_participation = 0.09 }
+	clamp_variable = { var = GGR_slave_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.045 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.045 }
+	}
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.045 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.045 }
+	}
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_decrease_slave_participation_small = {
+	custom_effect_tooltip = GGR_decrease_slave_participation_small_tooltip
+
+	add_to_variable = { GGR_worker_participation = 0.015 }
+	add_to_variable = { GGR_foreign_participation = 0.015 }
+	clamp_variable = { var = GGR_slave_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.03 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.03 }
+	}
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_decrease_slave_participation = {
+	custom_effect_tooltip = GGR_decrease_slave_participation_tooltip
+
+	add_to_variable = { GGR_worker_participation = 0.03 }
+	add_to_variable = { GGR_foreign_participation = 0.03 }
+	clamp_variable = { var = GGR_slave_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.06 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.06 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_decrease_slave_participation_large = {
+	custom_effect_tooltip = GGR_decrease_slave_participation_large_tooltip
+
+	add_to_variable = { GGR_worker_participation = 0.045 }
+	add_to_variable = { GGR_foreign_participation = 0.045 }
+	clamp_variable = { var = GGR_slave_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.09 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.09 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_worker_participation_small = {
+	custom_effect_tooltip = GGR_increase_worker_participation_small_tooltip
+
+	add_to_variable = { GGR_worker_participation = 0.03 }
+	clamp_variable = { var = GGR_worker_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.015 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.015 }
+	}
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.015 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.015 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_worker_participation = {
+	custom_effect_tooltip = GGR_increase_worker_participation_tooltip
+	add_to_variable = { GGR_worker_participation = 0.06 }
+	clamp_variable = { var = GGR_worker_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.03 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.03 }
+	}
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.03 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.03 }
+	}
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_worker_participation_large = {
+	custom_effect_tooltip = GGR_increase_worker_participation_large_tooltip
+
+	add_to_variable = { GGR_worker_participation = 0.09 }
+	clamp_variable = { var = GGR_worker_participation min = 0 max = 1 }
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.045 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.045 }
+	}
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.045 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_worker_participation }
+		set_variable = { GGR_foreign_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.045 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_decrease_worker_participation_small = {
+	custom_effect_tooltip = GGR_decrease_worker_participation_small_tooltip
+
+	add_to_variable = { GGR_slave_participation = 0.015 }
+	add_to_variable = { GGR_foreign_participation = 0.015 }
+	clamp_variable = { var = GGR_worker_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.03 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.03 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_decrease_worker_participation = {
+	custom_effect_tooltip = GGR_decrease_worker_participation_tooltip
+
+	add_to_variable = { GGR_slave_participation = 0.03 }
+	add_to_variable = { GGR_foreign_participation = 0.03 }
+	clamp_variable = { var = GGR_worker_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.06 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.06 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_decrease_worker_participation_large = {
+	custom_effect_tooltip = GGR_decrease_worker_participation_large_tooltip
+
+	add_to_variable = { GGR_slave_participation = 0.045 }
+	add_to_variable = { GGR_foreign_participation = 0.045 }
+	clamp_variable = { var = GGR_worker_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.09 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.09 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_foreign_participation_small = {
+	custom_effect_tooltip = GGR_increase_foreign_participation_small_tooltip
+
+	add_to_variable = { GGR_foreign_participation = 0.03 }
+	clamp_variable = { var = GGR_foreign_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.015 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.015 }
+	}
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.015 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.015 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_foreign_participation = {
+	custom_effect_tooltip = GGR_increase_foreign_participation_tooltip
+
+	add_to_variable = { GGR_foreign_participation = 0.06 }
+	clamp_variable = { var = GGR_foreign_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.03 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.03 }
+	}
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.03 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.03 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_foreign_participation_large = {
+	custom_effect_tooltip = GGR_increase_foreign_participation_large_tooltip
+
+	add_to_variable = { GGR_foreign_participation = 0.09 }
+	clamp_variable = { var = GGR_foreign_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_slave_participation < 0.045 } }
+		set_variable = { GGR_slave_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_slave_participation = 0.045 }
+	}
+	if = {
+		limit = { check_variable = { GGR_worker_participation < 0.045 } }
+		set_variable = { GGR_worker_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_foreign_participation }
+		set_variable = { GGR_slave_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_worker_participation = 0.045 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_decrease_foreign_participation_small = {
+	custom_effect_tooltip = GGR_decrease_foreign_participation_small_tooltip
+
+	add_to_variable = { GGR_worker_participation = 0.015 }
+	add_to_variable = { GGR_slave_participation = 0.015 }
+	clamp_variable = { var = GGR_foreign_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.03 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.03 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_decrease_foreign_participation = {
+	custom_effect_tooltip = GGR_decrease_foreign_participation_tooltip
+
+	add_to_variable = { GGR_worker_participation = 0.03 }
+	add_to_variable = { GGR_slave_participation = 0.03 }
+	clamp_variable = { var = GGR_foreign_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.06 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.06 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_decrease_foreign_participation_large = {
+	custom_effect_tooltip = GGR_decrease_foreign_participation_large_tooltip
+	add_to_variable = { GGR_worker_participation = 0.045 }
+	add_to_variable = { GGR_slave_participation = 0.045 }
+	clamp_variable = { var = GGR_foreign_participation min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { GGR_foreign_participation < 0.09 } }
+		set_variable = { GGR_foreign_participation = 0 }
+		set_temp_variable = { one = 1 }
+		subtract_from_temp_variable = { one = GGR_slave_participation }
+		set_variable = { GGR_worker_participation = one }
+	}
+	else = {
+		subtract_from_variable = { GGR_foreign_participation = 0.09 }
+	}
+
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_recalculate_participation_industry_variables = {
+	set_variable = { GGR_industrial_efficiency_factor = GGR_worker_participation } # Worker participation link to factory efficiency
+	set_temp_variable = { GGR_industrial_efficiency_enthusiasm = GGR_worker_enthusiasm }
+	add_to_temp_variable = { GGR_industrial_efficiency_enthusiasm = 0.5 }
+	multiply_variable = { GGR_industrial_efficiency_factor = GGR_industrial_efficiency_enthusiasm }
+	divide_variable = { GGR_industrial_efficiency_factor = 3 }
+
+	set_variable = { GGR_industrial_efficiency_growth = GGR_foreign_participation } # Efficiency growth linked to foreign participation
+	divide_variable = { GGR_industrial_efficiency_growth = 2 }
+}
+
+GGR_increase_worker_enthusiasm_small = {
+	custom_effect_tooltip = GGR_increase_worker_enthusiasm_small_tooltip
+	add_to_variable = { GGR_worker_enthusiasm = 0.05 }
+	clamp_variable = { var = GGR_worker_enthusiasm min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_increase_worker_enthusiasm = {
+	custom_effect_tooltip = GGR_increase_worker_enthusiasm_tooltip
+	add_to_variable = { GGR_worker_enthusiasm = 0.1 }
+	clamp_variable = { var = GGR_worker_enthusiasm min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_increase_worker_enthusiasm_large = {
+	custom_effect_tooltip = GGR_increase_worker_enthusiasm_large_tooltip
+	add_to_variable = { GGR_worker_enthusiasm = 0.15 }
+	clamp_variable = { var = GGR_worker_enthusiasm min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_decrease_worker_enthusiasm_small = {
+	custom_effect_tooltip = GGR_decrease_worker_enthusiasm_small_tooltip
+	subtract_from_variable = { GGR_worker_enthusiasm = 0.05 }
+	clamp_variable = { var = GGR_worker_enthusiasm min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_decrease_worker_enthusiasm = {
+	custom_effect_tooltip = GGR_decrease_worker_enthusiasm_tooltip
+	subtract_from_variable = { GGR_worker_enthusiasm = 0.1 }
+	clamp_variable = { var = GGR_worker_enthusiasm min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_decrease_worker_enthusiasm_large = {
+	custom_effect_tooltip = GGR_decrease_worker_enthusiasm_large_tooltip
+	subtract_from_variable = { GGR_worker_enthusiasm = 0.15 }
+	clamp_variable = { var = GGR_worker_enthusiasm min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_slave_organisation_small = {
+	custom_effect_tooltip = GGR_increase_slave_organisation_small_tooltip
+	add_to_variable = { GGR_slave_organisation = 0.05 }
+	clamp_variable = { var = GGR_slave_organisation min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_increase_slave_organisation = {
+	custom_effect_tooltip = GGR_increase_slave_organisation_tooltip
+	add_to_variable = { GGR_slave_organisation = 0.1 }
+	clamp_variable = { var = GGR_slave_organisation min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_increase_slave_organisation_large = {
+	custom_effect_tooltip = GGR_increase_slave_organisation_large_tooltip
+	add_to_variable = { GGR_slave_organisation = 0.15 }
+	clamp_variable = { var = GGR_slave_organisation min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_decrease_slave_organisation_small = {
+	custom_effect_tooltip = GGR_decrease_slave_organisation_small_tooltip
+	subtract_from_variable = { GGR_slave_organisation = 0.05 }
+	clamp_variable = { var = GGR_slave_organisation min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_decrease_slave_organisation = {
+	custom_effect_tooltip = GGR_decrease_slave_organisation_tooltip
+	subtract_from_variable = { GGR_slave_organisation = 0.1 }
+	clamp_variable = { var = GGR_slave_organisation min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+GGR_decrease_slave_organisation_large = {
+	custom_effect_tooltip = GGR_decrease_slave_organisation_large_tooltip
+	subtract_from_variable = { GGR_slave_organisation = 0.15 }
+	clamp_variable = { var = GGR_slave_organisation min = 0 max = 1 }
+	GGR_recalculate_participation_industry_variables = yes
+}
+
+GGR_increase_military_industrial_participation_small = {
+	custom_effect_tooltip = GGR_increase_military_industrial_participation_small_tooltip
+	add_to_variable = { GGR_military_industrial_participation = 0.05 }
+	clamp_variable = { var = GGR_military_industrial_participation min = 0 max = 1 }
+	GGR_recalculate_military_industry_variables = yes
+}
+GGR_increase_military_industrial_participation = {
+	custom_effect_tooltip = GGR_increase_military_industrial_participation_tooltip
+	add_to_variable = { GGR_military_industrial_participation = 0.1 }
+	clamp_variable = { var = GGR_military_industrial_participation min = 0 max = 1 }
+	GGR_recalculate_military_industry_variables = yes
+}
+GGR_increase_military_industrial_participation_large = {
+	custom_effect_tooltip = GGR_increase_military_industrial_participation_large_tooltip
+	add_to_variable = { GGR_military_industrial_participation = 0.15 }
+	clamp_variable = { var = GGR_military_industrial_participation min = 0 max = 1 }
+	GGR_recalculate_military_industry_variables = yes
+}
+GGR_decrease_military_industrial_participation_small = {
+	custom_effect_tooltip = GGR_decrease_military_industrial_participation_small_tooltip
+	subtract_from_variable = { GGR_military_industrial_participation = 0.05 }
+	clamp_variable = { var = GGR_military_industrial_participation min = 0 max = 1 }
+	GGR_recalculate_military_industry_variables = yes
+}
+GGR_decrease_military_industrial_participation = {
+	custom_effect_tooltip = GGR_decrease_military_industrial_participation_tooltip
+	subtract_from_variable = { GGR_military_industrial_participation = 0.1 }
+	clamp_variable = { var = GGR_military_industrial_participation min = 0 max = 1 }
+	GGR_recalculate_military_industry_variables = yes
+}
+GGR_decrease_military_industrial_participation_large = {
+	custom_effect_tooltip = GGR_decrease_military_industrial_participation_large_tooltip
+	subtract_from_variable = { GGR_military_industrial_participation = 0.15 }
+	clamp_variable = { var = GGR_military_industrial_participation min = 0 max = 1 }
+	GGR_recalculate_military_industry_variables = yes
+}
+
+GGR_recalculate_military_industry_variables = {
+	set_variable = { GGR_military_industry_civ_factory = GGR_military_industrial_participation } # Linking military industry participation to construction speed changes
+	subtract_from_variable = { GGR_military_industry_civ_factory = 0.5 }
+	set_variable = { GGR_military_industry_mil_factory = GGR_military_industry_civ_factory }
+	multiply_variable = { GGR_military_industry_mil_factory = -1 }
+}
+
+GGR_increase_inflation_small = {
+	custom_effect_tooltip = GGR_increase_inflation_small_tooltip
+	add_to_variable = { GGR_inflation = 0.01 }
+	clamp_variable = { var = GGR_inflation min = 0 max = 1 }
+}
+GGR_increase_inflation = {
+	custom_effect_tooltip = GGR_increase_inflation_tooltip
+	add_to_variable = { GGR_inflation = 0.02 }
+	clamp_variable = { var = GGR_inflation min = 0 max = 1 }
+}
+GGR_increase_inflation_large = {
+	custom_effect_tooltip = GGR_increase_inflation_large_tooltip
+	add_to_variable = { GGR_inflation = 0.03 }
+	clamp_variable = { var = GGR_inflation min = 0 max = 1 }
+}
+GGR_decrease_inflation_small = {
+	custom_effect_tooltip = GGR_decrease_inflation_small_tooltip
+	subtract_from_variable = { GGR_inflation = 0.01 }
+	clamp_variable = { var = GGR_inflation min = 0 max = 1 }
+}
+GGR_decrease_inflation = {
+	custom_effect_tooltip = GGR_decrease_inflation_tooltip
+	subtract_from_variable = { GGR_inflation = 0.02 }
+	clamp_variable = { var = GGR_inflation min = 0 max = 1 }
+}
+GGR_decrease_inflation_large = {
+	custom_effect_tooltip = GGR_decrease_inflation_large_tooltip
+	subtract_from_variable = { GGR_inflation = 0.03 }
+	clamp_variable = { var = GGR_inflation min = 0 max = 1 }
+}
+
+GGR_increase_monetary_faith_small = {
+	custom_effect_tooltip = GGR_increase_monetary_faith_small_tooltip
+	add_to_variable = { GGR_monetary_faith = 0.05 }
+	clamp_variable = { var = GGR_monetary_faith min = 0 max = 1 }
+}
+GGR_increase_monetary_faith = {
+	custom_effect_tooltip = GGR_increase_monetary_faith_tooltip
+	add_to_variable = { GGR_monetary_faith = 0.1 }
+	clamp_variable = { var = GGR_monetary_faith min = 0 max = 1 }
+}
+GGR_increase_monetary_faith_large = {
+	custom_effect_tooltip = GGR_increase_monetary_faith_large_tooltip
+	add_to_variable = { GGR_monetary_faith = 0.15 }
+	clamp_variable = { var = GGR_monetary_faith min = 0 max = 1 }
+}
+GGR_decrease_monetary_faith_small = {
+	custom_effect_tooltip = GGR_decrease_monetary_faith_small_tooltip
+	subtract_from_variable = { GGR_monetary_faith = 0.05 }
+	clamp_variable = { var = GGR_monetary_faith min = 0 max = 1 }
+}
+GGR_decrease_monetary_faith = {
+	custom_effect_tooltip = GGR_decrease_monetary_faith_tooltip
+	subtract_from_variable = { GGR_monetary_faith = 0.1 }
+	clamp_variable = { var = GGR_monetary_faith min = 0 max = 1 }
+}
+GGR_decrease_monetary_faith_large = {
+	custom_effect_tooltip = GGR_decrease_monetary_faith_large_tooltip
+	subtract_from_variable = { GGR_monetary_faith = 0.15 }
+	clamp_variable = { var = GGR_monetary_faith min = 0 max = 1 }
+}
+
+GGR_increase_civilian_investment_small = {
+	custom_effect_tooltip = GGR_increase_civilian_investment_small_tooltip
+	add_to_variable = { GGR_civilian_investment = 0.05 }
+	clamp_variable = { var = GGR_civilian_investment min = 0 max = 1 }
+	GGR_recalculate_civilian_industry_variables = yes
+}
+GGR_increase_civilian_investment = {
+	custom_effect_tooltip = GGR_increase_civilian_investment_tooltip
+	add_to_variable = { GGR_civilian_investment = 0.1 }
+	clamp_variable = { var = GGR_civilian_investment min = 0 max = 1 }
+	GGR_recalculate_civilian_industry_variables = yes
+}
+GGR_increase_civilian_investment_large = {
+	custom_effect_tooltip = GGR_increase_civilian_investment_large_tooltip
+	add_to_variable = { GGR_civilian_investment = 0.15 }
+	clamp_variable = { var = GGR_civilian_investment min = 0 max = 1 }
+	GGR_recalculate_civilian_industry_variables = yes
+}
+GGR_decrease_civilian_investment_small = {
+	custom_effect_tooltip = GGR_decrease_civilian_investment_small_tooltip
+	subtract_from_variable = { GGR_civilian_investment = 0.05 }
+	clamp_variable = { var = GGR_civilian_investment min = 0 max = 1 }
+	GGR_recalculate_civilian_industry_variables = yes
+}
+GGR_decrease_civilian_investment = {
+	custom_effect_tooltip = GGR_decrease_civilian_investment_tooltip
+	subtract_from_variable = { GGR_civilian_investment = 0.1 }
+	clamp_variable = { var = GGR_civilian_investment min = 0 max = 1 }
+	GGR_recalculate_civilian_industry_variables = yes
+}
+GGR_decrease_civilian_investment_large = {
+	custom_effect_tooltip = GGR_decrease_civilian_investment_large_tooltip
+	subtract_from_variable = { GGR_civilian_investment = 0.15 }
+	clamp_variable = { var = GGR_civilian_investment min = 0 max = 1 }
+	GGR_recalculate_civilian_industry_variables = yes
+}
+
+GGR_recalculate_civilian_industry_variables = {
+	set_variable = { GGR_consumer_goods = GGR_civilian_investment } # Link civ participation to consumer goods
+	subtract_from_variable = { GGR_consumer_goods = 0.25 }
+	divide_variable = { GGR_consumer_goods = 3 }
+}
+
+GGR_increase_banking_participation_small = {
+	custom_effect_tooltip = GGR_increase_banking_participation_small_tooltip
+	add_to_variable = { GGR_banking_participation = 0.05 }
+	clamp_variable = { var = GGR_banking_participation min = 0 max = 1 }
+}
+GGR_increase_banking_participation = {
+	custom_effect_tooltip = GGR_increase_banking_participation_tooltip
+	add_to_variable = { GGR_banking_participation = 0.1 }
+	clamp_variable = { var = GGR_banking_participation min = 0 max = 1 }
+}
+GGR_increase_banking_participation_large = {
+	custom_effect_tooltip = GGR_increase_banking_participation_large_tooltip
+	add_to_variable = { GGR_banking_participation = 0.15 }
+	clamp_variable = { var = GGR_banking_participation min = 0 max = 1 }
+}
+GGR_decrease_banking_participation_small = {
+	custom_effect_tooltip = GGR_decrease_banking_participation_small_tooltip
+	subtract_from_variable = { GGR_banking_participation = 0.05 }
+	clamp_variable = { var = GGR_banking_participation min = 0 max = 1 }
+}
+GGR_decrease_banking_participation = {
+	custom_effect_tooltip = GGR_decrease_banking_participation_tooltip
+	subtract_from_variable = { GGR_banking_participation = 0.1 }
+	clamp_variable = { var = GGR_banking_participation min = 0 max = 1 }
+}
+GGR_decrease_banking_participation_large = {
+	custom_effect_tooltip = GGR_decrease_banking_participation_large_tooltip
+	subtract_from_variable = { GGR_banking_participation = 0.15 }
+	clamp_variable = { var = GGR_banking_participation min = 0 max = 1 }
+}
+
+GGR_first_every_month_economic_events = {
+	set_temp_variable = { event_chance_amount = random }
+
+	if = {
+		limit = { has_war = no }
+		if = {
+			limit = {
+				check_variable = { event_chance_amount > 0.4 }
+				check_variable = { event_chance_amount < 0.9 }
+			}
+			country_event = { id = goering.800 days = 1 random = 720 }
+		}
+		else = {
+			country_event = { id = goering.800 days = 7 random = 210 }
+			country_event = { id = goering.800 days = 14 random = 210 }
+		}
+	}
+	else = {
+		set_temp_variable = { half_of_foreign_participation = GGR_foreign_participation }
+		divide_temp_variable = { half_of_foreign_participation = 2 }
+		add_to_temp_variable = { GGR_event_chance_amount = half_of_foreign_participation }
+		GGR_wartime_economic_collapse_check = yes
+		if = {
+			limit = { check_variable = { event_chance_amount < 0.66 } }
+			country_event = { id = goering.813 days = 7 random = 210 }
+		}
+		else = {
+			country_event = { id = goering.813 days = 7 random = 210 }
+			country_event = { id = goering.813 days = 16 random = 210 }
+		}
+	}
+	if = {
+		limit = { check_variable = { event_chance_amount < GGR_inflation } }
+		country_event = { id = goering.826 days = 5 }
+	}
+
+}
+
+GGR_foreign_participation_rk_stability_decrease = {
+	set_temp_variable = { rks_hit = GGR_foreign_participation }
+	multiply_variable = { rks_hit = 3 }
+	round_variable = rks_hit
+
+	set_temp_variable = { rk_stab_loss = GGR_foreign_participation }
+	multiply_variable = { rk_stab_loss = -4 }
+
+	if = {
+		limit = { check_variable = { rks_hit > 0.99 } }
+		random_country = {
+			limit = {
+				is_subject_of = GER
+			}
+			add_stability = var:rk_stab_loss
+		}
+	}
+	if = {
+		limit = { check_variable = { rks_hit > 1.99 } }
+		random_country = {
+			limit = {
+				is_subject_of = GER
+			}
+			add_stability = var:rk_stab_loss
+		}
+	}
+	if = {
+		limit = { check_variable = { rks_hit > 2.99 } }
+		random_country = {
+			limit = {
+				is_subject_of = GER
+				has_autonomy_state = autonomy_integrated_reichskommissariat
+			}
+			add_stability = var:rk_stab_loss
+		}
+	}
+}
+
+GGR_wartime_economic_collapse_check = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = { GGR_GDP_collapse = GDP }
+				check_variable = { GGR_GDP_collapse > GDP }
+			}
+			has_war = yes
+		}
+		if = { limit = { has_idea = GGR_last_legs }
+			country_event = { id = goering.822 days = 4 }
+		}
+		else = {
+			country_event = { id = goering.820 days = 4 }
+		}
+	}
+}
+
+GGR_too_long_war = {
+	if = {
+		limit = {
+			has_global_flag = german_civil_war_goeringvic
+			GER = {
+				has_war = yes
+			}
+		}
+		set_country_flag = GGR_war
+		else_if = {
+			limit = {
+				has_global_flag = german_civil_war_goeringvic
+				GER = {
+					NOT = {
+						has_war = yes
+					}
+				}
+			}
+			clr_country_flag = GGR_war
+		}
+	}
+}
+
+
+GGR_low_stab_fail = {
+	if = {
+		limit = {
+			has_global_flag = german_civil_war_goeringvic
+			GER = {
+				is_ai = yes
+				check_variable = { stability < 0 }
+			}
+		}
+		country_event = {
+			id = goering.820
+		}
+	}
+}
+
+GGR_war_timer_var = {
+	if = {
+		limit = {
+			has_country_flag = GER_war_plan_zero
+		}
+		set_variable = { GGR_war_timer_var = 30 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = GER_war_plan_A
+		}
+		set_variable = { GGR_war_timer_var = 60 }
+	}
+	else_if = { #fun fact, goering only collapses 20 days after this. sorry, didn't know.
+		limit = {
+			ENG = {
+				NOT = {
+					is_ai = yes
+				}
+				has_war_with = GER
+			}
+		}
+		set_variable = { GGR_war_timer_var = 75 }
+	}
+	else_if = {
+		limit = {
+			GER = {
+				NOT = {
+					is_ai = yes
+				}
+				OR = {
+					has_war_with = SWI
+					has_war_with = ENG
+					has_war_with = NOR
+				}
+			}
+		}
+		set_variable = { GGR_war_timer_var = 90 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = GER_war_plan_B
+			NOT = {
+				has_war_with = ITA
+			}
+		}
+		set_variable = { GGR_war_timer_var = 150 }
+	}
+	else_if = {
+		limit = {
+			has_country_flag = GER_war_plan_C
+		}
+		set_variable = { GGR_war_timer_var = 200 }
+	}
+	else_if = {
+		limit = {
+			has_war_with = ITA
+		}
+		set_variable = { GGR_war_timer_var = 250 }
+	}
+	else_if = {
+		limit = {
+			GER = {
+				is_ai = yes
+				OR = {
+					has_war_with = NOR
+					has_war_with = SWI
+					has_war_with = SWE
+				}
+			}
+		}
+		set_variable = { GGR_war_timer_var = 45 }
+	}
+}
+
+GER_militarist_monthly_changes = {
+	# PRE GCW
+
+	if = {
+		limit = {
+			has_country_flag = GER_expanded_draft
+		}
+		GGR_increase_militarist_power_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_overextended_airforce
+		}
+		GGR_decrease_militarist_power_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_faith_in_the_fuhrer
+		}
+		GGR_increase_militarist_loyalty_large = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_rampant_factionalism
+		}
+		GGR_decrease_militarist_influence_small = yes
+		GGR_decrease_militarist_power_small = yes
+		GGR_decrease_militarist_loyalty_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_supported_the_navy
+		}
+		GGR_increase_militarist_loyalty_small = yes
+		GGR_increase_militarist_power_small = yes
+		GGR_increase_militarist_influence_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_acted_against_SS
+		}
+		GGR_increase_militarist_loyalty_small = yes
+		GGR_increase_militarist_influence_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GER_reduced_heer_budget
+		}
+		GGR_decrease_militarist_influence_small = yes
+		GGR_decrease_militarist_power_small = yes
+		GGR_decrease_militarist_loyalty_small = yes
+	}
+
+	if = {
+		limit = {
+			has_country_flag = GER_domestic_unrest
+		}
+		GGR_decrease_militarist_influence_small = yes
+		GGR_decrease_militarist_loyalty_small = yes
+	}
+
+
+	if = {
+		limit = {
+			has_country_flag = GER_civil_war_victors
+		}
+		GGR_increase_militarist_loyalty = yes
+	}
+
+	# MILITARIST LEADER STUFF
+
+	if = {
+		limit = {
+			has_country_flag = GER_Schorner_Militarist_Leader
+			has_global_flag = german_civil_war_goeringvic
+		}
+		GGR_decrease_militarist_loyalty_small = yes
+		GGR_increase_militarist_influence_small = yes
+		GGR_increase_militarist_power_small = yes
+	}
+
+	# OIL CRISIS PANIC
+	if = {
+		limit = {
+			has_country_flag = GGR_militarists_panic
+		}
+		GGR_decrease_militarist_loyalty_small = yes
+		GGR_decrease_militarist_power_small = yes
+		GGR_increase_militarist_influence_small = yes
+	}
+	# Schörners purge
+	if = {
+		limit = {
+			has_country_flag = schorner_consolidating
+		}
+		GGR_decrease_militarist_loyalty = yes
+		GGR_decrease_militarist_power_small = yes
+		GGR_increase_militarist_influence = yes
+	}
+	# AFRICA STUFF
+
+	if = {
+		limit = {
+			has_completed_focus = GER_GOR_support_afrikaschild
+			has_global_flag = south_african_war
+		}
+		GGR_decrease_militarist_loyalty_small = yes
+		GGR_decrease_militarist_power_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GGR_speidels_triumph
+		}
+		GGR_decrease_militarist_influence = yes
+		GGR_increase_militarist_loyalty_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GGR_speidels_victory
+		}
+		GGR_decrease_militarist_influence_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GGR_speidels_defeat
+		}
+		GGR_increase_militarist_influence_small = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GGR_speidels_disgrace
+		}
+		GGR_increase_militarist_influence = yes
+		GGR_decrease_militarist_loyalty_small = yes
+	}
+
+	#OSTLAND PUPPETS
+
+	if = {
+		limit = {
+			has_country_flag = GGR_stahleckers_power
+			OST = {
+				is_puppet_of = GER
+			}
+			has_global_flag = german_civil_war_goeringvic
+		}
+		GGR_decrease_militarist_loyalty_small = yes
+		GGR_decrease_militarist_power_small = yes
+	}
+	if = {
+		limit = {
+			DST = {
+				has_autonomy_state = autonomy_integrated_reichskommissariat
+			}
+			has_global_flag = german_civil_war_goeringvic
+		}
+		GGR_increase_militarist_loyalty_small = yes
+		GGR_increase_militarist_power_small = yes
+	}
+	if = {
+		limit = {
+			BLR = {
+				has_autonomy_state = autonomy_reichsprotektorat
+			}
+			has_global_flag = german_civil_war_goeringvic
+		}
+		GGR_decrease_militarist_influence_small = yes
+		GGR_decrease_militarist_power_small = yes
+	}
+
+	if = {
+		limit = {
+			OR = {
+				check_variable = { GGR_militarist_demands_met = 1 }
+				check_variable = { GGR_militarist_demands_met = 2 }
+			}
+		}
+		GGR_increase_militarist_loyalty_small = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				check_variable = { GGR_militarist_demands_met = 3 }
+				check_variable = { GGR_militarist_demands_met = 4 }
+			}
+		}
+		GGR_increase_militarist_loyalty = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { GGR_militarist_demands_met > 4 }
+		}
+		GGR_increase_militarist_loyalty_large = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				check_variable = { GGR_militarist_demands_met = -1 }
+				check_variable = { GGR_militarist_demands_met = -2 }
+			}
+		}
+		GGR_decrease_militarist_loyalty_small = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				check_variable = { GGR_militarist_demands_met = -3 }
+				check_variable = { GGR_militarist_demands_met = -4 }
+			}
+		}
+		GGR_decrease_militarist_loyalty = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { GGR_militarist_demands_met < -4 }
+		}
+		GGR_decrease_militarist_loyalty_large = yes
+	}
+
+	if = {
+		limit = {
+			OR = {
+				check_variable = { GGR_leaving_militarists = 1 }
+				check_variable = { GGR_leaving_militarists = 2 }
+			}
+		}
+		GGR_decrease_militarist_influence_small = yes
+		GGR_decrease_militarist_power_small = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				check_variable = { GGR_leaving_militarists = 3 }
+				check_variable = { GGR_leaving_militarists = 4 }
+			}
+		}
+		GGR_decrease_militarist_influence = yes
+		GGR_decrease_militarist_power = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = { GGR_leaving_militarists > 4 }
+		}
+		GGR_decrease_militarist_influence_large = yes
+		GGR_decrease_militarist_power_large = yes
+	}
+
+	if = {
+		limit = {
+			has_country_flag = GGRSCI_failed
+		}
+		GGR_decrease_militarist_loyalty_small = yes
+	}
+}
+
+GER_mefo_bills_level_up = {
+	if = {
+		limit = { has_idea = GER_mefo_bills_17 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_17
+			add_idea = GER_mefo_bills_18
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_16 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_16
+			add_idea = GER_mefo_bills_17
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_15 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_15
+			add_idea = GER_mefo_bills_16
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_14 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_14
+			add_idea = GER_mefo_bills_15
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_13 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_13
+			add_idea = GER_mefo_bills_14
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_12 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_12
+			add_idea = GER_mefo_bills_13
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_11 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_11
+			add_idea = GER_mefo_bills_12
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_10 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_10
+			add_idea = GER_mefo_bills_11
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_9 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_9
+			add_idea = GER_mefo_bills_10
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_8 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_8
+			add_idea = GER_mefo_bills_9
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_7 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_7
+			add_idea = GER_mefo_bills_8
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_6 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_6
+			add_idea = GER_mefo_bills_7
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_5 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_5
+			add_idea = GER_mefo_bills_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_4 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_4
+			add_idea = GER_mefo_bills_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_3 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_3
+			add_idea = GER_mefo_bills_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_2 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_2
+			add_idea = GER_mefo_bills_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_1 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_1
+			add_idea = GER_mefo_bills_2
+		}
+	}
+}
+
+#Important to put HIGHEST first
+GER_remove_mefo_bills = {
+	if = {
+		limit = { has_idea = GER_mefo_bills_1 }
+		remove_ideas = GER_mefo_bills_1
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_2 }
+		remove_ideas = GER_mefo_bills_2
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_3 }
+		remove_ideas = GER_mefo_bills_3
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_4 }
+		remove_ideas = GER_mefo_bills_4
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_5 }
+		remove_ideas = GER_mefo_bills_5
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_6 }
+		remove_ideas = GER_mefo_bills_6
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_7 }
+		remove_ideas = GER_mefo_bills_7
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_8 }
+		remove_ideas = GER_mefo_bills_8
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_9 }
+		remove_ideas = GER_mefo_bills_9
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_10 }
+		remove_ideas = GER_mefo_bills_10
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_11 }
+		remove_ideas = GER_mefo_bills_11
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_12 }
+		remove_ideas = GER_mefo_bills_12
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_13 }
+		remove_ideas = GER_mefo_bills_13
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_14 }
+		remove_ideas = GER_mefo_bills_14
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_15 }
+		remove_ideas = GER_mefo_bills_15
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_16 }
+		remove_ideas = GER_mefo_bills_16
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_17 }
+		remove_ideas = GER_mefo_bills_17
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_18 }
+		remove_ideas = GER_mefo_bills_18
+	}
+}
+
+# Like the level up effect except it runs in reverse
+
+GER_mefo_bills_level_down = {
+	if = {
+		limit = { has_idea = GER_mefo_bills_2 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_2
+			add_idea = GER_mefo_bills_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_3 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_3
+			add_idea = GER_mefo_bills_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_4 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_4
+			add_idea = GER_mefo_bills_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_5 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_5
+			add_idea = GER_mefo_bills_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_6 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_6
+			add_idea = GER_mefo_bills_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_7 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_7
+			add_idea = GER_mefo_bills_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_8 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_8
+			add_idea = GER_mefo_bills_7
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_9 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_9
+			add_idea = GER_mefo_bills_8
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_10 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_10
+			add_idea = GER_mefo_bills_9
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_11 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_11
+			add_idea = GER_mefo_bills_10
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_12 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_12
+			add_idea = GER_mefo_bills_11
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_13 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_13
+			add_idea = GER_mefo_bills_12
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_14 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_14
+			add_idea = GER_mefo_bills_13
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_15 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_15
+			add_idea = GER_mefo_bills_14
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_16 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_16
+			add_idea = GER_mefo_bills_15
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_17 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_17
+			add_idea = GER_mefo_bills_16
+		}
+	}
+	else_if = {
+		limit = { has_idea = GER_mefo_bills_18 }
+		swap_ideas = {
+			remove_idea = GER_mefo_bills_18
+			add_idea = GER_mefo_bills_17
+		}
+	}
+}
+anti_goering_send_equipment = {
+	if = {
+		limit = {
+			GER = { is_ai = no }
+			is_ai = yes
+			has_equipment = {
+				infantry_equipment > 4999
+			}
+		}
+		event_target:GGR_defender = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+		}
+	}
+	else = {
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 5000
+			target = event_target:GGR_Defender
+		}
+	}
+}
+
+anti_goering_send_volunteers = {
+	if = {
+		limit = { always = no }
+		
+	}
+	else = {
+		event_target:GGR_Defender = {
+			set_technology = {
+				MBT_1960 = 1
+				IFV_1960 = 1
+				APC_1960 = 1
+				scout_helicopter_1960 = 1
+				transport_helicopter_1960 = 1
+			}
+		}
+		if = {
+			limit = { original_tag = USA }
+			event_target:GGR_Defender = {
+				division_template = {
+					name = "American Tank Division"
+
+					regiments = {
+						MBT = { x = 0 y = 0 }
+						MBT = { x = 0 y = 1 }
+						MBT = { x = 0 y = 2 }
+						MBT = { x = 0 y = 3 }
+						MBT = { x = 0 y = 4 }
+						APC = { x = 1 y = 0 }
+						APC = { x = 1 y = 1 }
+						APC = { x = 1 y = 2 }
+						APC = { x = 1 y = 2 }
+						APC = { x = 1 y = 4 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						scout_helicopter_company = { x = 0 y = 2 }
+						logistics_company = { x = 0 y = 3 }
+						signal_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"American Volunteer Division \" division_template = \"American Tank Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+					create_unit = {
+						division = "name = \"American Volunteer Division \" division_template = \"American Tank Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+					create_unit = {
+						division = "name = \"American Volunteer Division \" division_template = \"American Tank Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { original_tag = JAP }
+			event_target:GGR_Defender = {
+				division_template = {
+					name = "Japanese Volunteer Division"
+
+					regiments = {
+						IFV = { x = 2 y = 0 }
+						IFV = { x = 2 y = 1 }
+						IFV = { x = 2 y = 2 }
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						scout_helicopter_company = { x = 0 y = 2 }
+						logistics_company = { x = 0 y = 3 }
+						transport_helicopter_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Japanese Volunteer Division \" division_template = \"Japanese Volunteer Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+					create_unit = {
+						division = "name = \"Japanese Volunteer Division \" division_template = \"Japanese Volunteer Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+					create_unit = {
+						division = "name = \"Japanese Volunteer Division \" division_template = \"Japanese Volunteer Division\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { original_tag = BRG }
+			event_target:GGR_Defender = {
+				division_template = {
+					name = "Burgundian Special Forces"
+
+					regiments = {
+						elite_infantry = { x = 0 y = 0 }
+						elite_infantry = { x = 0 y = 1 }
+						elite_infantry = { x = 0 y = 2 }
+						elite_infantry = { x = 0 y = 3 }
+						elite_infantry = { x = 0 y = 4 }
+						elite_infantry = { x = 1 y = 0 }
+						elite_infantry = { x = 1 y = 1 }
+						elite_infantry = { x = 1 y = 2 }
+						elite_infantry = { x = 1 y = 3 }
+						elite_infantry = { x = 1 y = 4 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						scout_helicopter_company = { x = 0 y = 2 }
+						logistics_company = { x = 0 y = 3 }
+						transport_helicopter_company = { x = 0 y = 4 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Burgundian Volunteer Division \" division_template = \"Burgundian Special Forces\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+					create_unit = {
+						division = "name = \"Burgundian Volunteer Division \" division_template = \"Burgundian Special Forces\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+					create_unit = {
+						division = "name = \"Burgundian Volunteer Division \" division_template = \"Burgundian Special Forces\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = THIS
+					}
+				}
+			}
+		}
+	}
+}
+
+GGR_initialize_SAW = {
+
+	custom_effect_tooltip = SGR_SAW_entry_tt
+	hidden_effect = {
+		add_dynamic_modifier = { modifier = GER_GGR_student_protests_dynamic_modifier }
+		add_ideas = GER_GGR_student_protests
+	
+		set_variable = {GGR_SAW_max_stab_hit = 0.05}
+		set_variable = {GGR_SAW_max_pp_hit = 0.1}
+
+		activate_mission = GGR_SAW_war_report
+
+		set_country_flag = GER_SAW_intervention
+		TNO_fopo_add_saw_tab = yes
+	
+		GGR_SAW_protest_growth = yes
+
+		set_temp_variable = { tension_WT = 5 }
+		set_temp_variable = { tension_superpower_1 = GER }
+		set_temp_variable = { tension_superpower_2 = USA }
+		set_temp_variable = { tension_id = 27 }
+		TNO_change_tension = yes
+
+		set_variable = {GGR_SAW_involvement = 15 }
+		set_variable = {GGR_SAW_civilian_protest = 10}
+		set_variable = {GGR_SAW_civilian_protest_growth_base = 0.5}
+		set_variable = {GGR_SAW_involvement_check = GGR_SAW_involvement}
+		set_variable = {GER_advisor_level = 0}
+	}
+}
+
+GGR_conclude_SAW = {
+
+	remove_mission = GGR_SAW_war_report
+
+	set_country_flag = GGR_SAW_withdrawal
+
+	clr_country_flag = GER_SAW_intervention
+	TNO_fopo_remove_saw_tab = yes
+
+	custom_effect_tooltip = SGR_SAW_conclude_tt
+
+	remove_ideas = GER_GGR_student_protests
+	remove_dynamic_modifier = { modifier = GER_GGR_student_protests_dynamic_modifier }
+	hidden_effect = {
+		set_temp_variable = { target = COG }
+		TNO_clear_num_volunteers = yes
+		set_temp_variable = { target = ANG }
+		TNO_clear_num_volunteers = yes
+		set_temp_variable = { target = GRO }
+		TNO_clear_num_volunteers = yes
+	}
+	GRO_REICHSSTAAT_calculate_cabal_power = yes
+	clear_variable = GGR_SAW_involvement
+	clear_variable = GGR_SAW_civilian_protest
+	clear_variable = GGR_SAW_civilian_protest_growth_base
+	clear_variable = GGR_civ_protest_soc_impact
+
+	#Calculating how many soldiers end up returning
+
+	set_temp_variable = {tempSoldiers = 1}
+
+	randomize_temp_variable = {
+		var = tempSoldiers
+		distribution = uniform
+		min = 0.5
+		max = 0.8
+	}
+
+	multiply_variable = {GGR_SAW_manpower = tempSoldiers}
+
+	round_variable = GGR_SAW_manpower
+
+}
+
+GGR_SAW_protest_growth = {
+
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest_growth_base
+		min = 0
+		max = 10
+	}
+	
+	add_to_variable = {GGR_SAW_civilian_protest = GGR_SAW_civilian_protest_growth_base}
+	multiply_variable = {GGR_SAW_civilian_protest_growth_base = 1.5}
+
+	GGR_SAW_calculate_idea_values = yes
+
+	custom_effect_tooltip = SGR_SAW_war_report_predic_tt
+
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+
+	#Calculating the Social Outlook impact
+
+	set_temp_variable = {tempProtest = GGR_SAW_civilian_protest}
+
+	multiply_temp_variable = {tempProtest = 0.1}
+	
+	set_variable = {GGR_civ_protest_soc_impact = tempProtest}
+
+	#Events
+
+	if = {
+		limit = {
+			check_variable = {GGR_SAW_civilian_protest > 30}
+		}
+		country_event = {
+			id = SpeerSAW.14
+			days = 17
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {GGR_SAW_civilian_protest > 50}
+		}
+		country_event = {
+			id = SpeerSAW.15
+			days = 8
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {GGR_SAW_civilian_protest > 70}
+		}
+		country_event = {
+			id = SpeerSAW.16
+			days = 20
+		}
+	}
+}
+
+GGR_SAW_calculate_idea_values = {
+	
+	set_temp_variable = {tempStab = GGR_SAW_max_stab_hit}
+	set_temp_variable = {tempPP = GGR_SAW_max_pp_hit}
+	set_temp_variable = {tempProtest = GGR_SAW_civilian_protest}
+	
+	multiply_temp_variable = {tempProtest = 0.01}
+	divide_temp_variable = {tempProtest = 2}
+
+	multiply_temp_variable = {tempStab = tempProtest}
+	multiply_temp_variable = {tempStab = -1}
+	multiply_temp_variable = {tempPP = tempProtest}
+	multiply_temp_variable = {tempPP = -1}
+
+	set_variable = {GGR_protests_severity_pp = tempPP}
+	set_variable = {GGR_protests_severity_stab = tempStab}
+}
+
+GGR_SAW_robbery_policy = {
+	set_country_flag = GGR_SAW_strat_rob
+	add_timed_idea = {
+		idea = GER_GGR_defensive_strat_SAW
+		days = 90
+	}
+	set_temp_variable = { gdp_growth_temp = 1.25 }
+	econ_gdp_growth_change = yes
+	custom_effect_tooltip = SGR_SAW_strat_rob_tt
+}
+
+GGR_SAW_victory_policy = {
+	set_country_flag = SGR_SAW_strat_win
+	add_timed_idea = {
+		idea = GER_GGR_offensive_strat_SAW
+		days = 90
+	}
+	TNO_improve_army_professionalism_low = yes
+	TNO_improve_military_supervision_policy_effectiveness_monthly_low = yes
+	custom_effect_tooltip = SGR_SAW_strat_win_tt
+}
+
+GGR_SAW_involvement_increase_small = {
+	custom_effect_tooltip = SGR_SAW_involvement_increase_small_tt
+	add_to_variable = {GGR_SAW_involvement = 2.5}
+	add_to_variable = {GGR_SAW_civilian_protest = 2.5}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_involvement_increase_med = {
+	custom_effect_tooltip = SGR_SAW_involvement_increase_med_tt
+	add_to_variable = {GGR_SAW_involvement = 5}
+	add_to_variable = {GGR_SAW_civilian_protest = 5}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_involvement_increase_big = {
+	custom_effect_tooltip = SGR_SAW_involvement_increase_big_tt
+	add_to_variable = {GGR_SAW_involvement = 10}
+	add_to_variable = {GGR_SAW_civilian_protest = 10}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_involvement_decrease_small = {
+	custom_effect_tooltip = SGR_SAW_involvement_decrease_small_tt
+	subtract_from_variable = {GGR_SAW_involvement = 2.5}
+	subtract_from_variable = {GGR_SAW_civilian_protest = 2.5}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_involvement_decrease_med = {
+	custom_effect_tooltip = SGR_SAW_involvement_decrease_med_tt
+	subtract_from_variable = {GGR_SAW_involvement = 5}
+	subtract_from_variable = {GGR_SAW_civilian_protest = 5}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_involvement_decrease_big = {
+	custom_effect_tooltip = SGR_SAW_involvement_decrease_big_tt
+	subtract_from_variable = {GGR_SAW_involvement = 10}
+	subtract_from_variable = {GGR_SAW_civilian_protest = 10}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_protest_increase_small = {
+	custom_effect_tooltip = SGR_SAW_protests_increase_small_tt
+	add_to_variable = {GGR_SAW_civilian_protest = 2.5}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_protest_increase_med = {
+	custom_effect_tooltip = SGR_SAW_protests_increase_med_tt
+	add_to_variable = {GGR_SAW_civilian_protest = 5}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_protest_increase_big = {
+	custom_effect_tooltip = SGR_SAW_protests_increase_big_tt
+	add_to_variable = {GGR_SAW_civilian_protest = 10}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_protest_decrease_small = {
+	custom_effect_tooltip = SGR_SAW_protests_decrease_small_tt
+	subtract_from_variable = {GGR_SAW_civilian_protest = 2.5}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_protest_decrease_med = {
+	custom_effect_tooltip = SGR_SAW_protests_decrease_med_tt
+	subtract_from_variable = {GGR_SAW_civilian_protest = 5}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_SAW_protest_decrease_big = {
+	custom_effect_tooltip = SGR_SAW_protests_decrease_big_tt
+	subtract_from_variable = {GGR_SAW_civilian_protest = 10}
+	clamp_variable = {
+		var = GGR_SAW_civilian_protest
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = GGR_SAW_involvement
+		min = 0
+		max = 100
+	}
+}
+
+GGR_war_plan_peace_effects = {
+
+	log = "[GetDateText]: GGR war plan peace effect"
+	# War Plan 0
+	if = {
+		limit = { ROOT = { tag = HOL } }
+		white_peace = HOL
+		annex_country = {
+			target = HOL
+			transfer_troops = no
+		}
+		every_unit_leader = {
+			limit = { has_id = 75 }
+			set_nationality = HOL
+		}
+		country_event = { id = goering_peace_events.9 }
+		remove_dynamic_modifier = { modifier = GGR_Operation_Sichelschnitt }
+		add_state_core = 36
+		add_state_core = 35
+		add_state_core = 7
+	}
+	else_if = { #Poland
+		limit = { ROOT = { tag = POL } }
+		country_event = { id = reich_shared.22 days = 4 }
+		white_peace = POL
+		annex_country = {
+			target = POL
+			transfer_troops = no
+		}
+	}
+	else_if = { #Other Regions
+		limit = {
+			ROOT = {
+				OR = {
+					tag = DEN
+					tag = OST
+					tag = DST
+					tag = MST
+					tag = JST
+					tag = BLR
+					tag = UPO
+					tag = SLO
+				}
+			}
+		}
+		white_peace = ROOT
+		annex_country = {
+			target = ROOT
+			transfer_troops = no
+		}
+	}
+
+    # War Plan A
+	else_if = { #Ukraine
+		limit = { ROOT = { tag = UKR } }
+		white_peace = UKR
+		remove_dynamic_modifier = { modifier = GGR_operation_rurik }
+		remove_dynamic_modifier = { modifier = GGR_operation_rurik3 }
+		remove_ideas = {
+			GGR_a_carefully_planned_invasion
+			GGR_emergency_invasion
+		}
+		delete_unit_template_and_units = {
+			division_template = "Loyalist partisans"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Free Cossack brigades"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Ukrainian Rebel Brigade"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Emergency Germania action group"
+		}
+		annex_country = {
+			target = UKR
+			transfer_troops = no
+		}
+		country_event = { id = goering_peace_events.2 }
+	}
+	else_if = { #Crimea
+		limit = { ROOT = { tag = CRI } }
+		country_event = { id = goering.1017 }
+		CRI = { transfer_navy = { target = GER } }
+		annex_country = {
+			target = CRI
+			transfer_troops = no
+		}
+	}
+	else_if = { #Moskowien
+		limit = {
+			ROOT = {
+				OR = {
+					tag = BBB
+					tag = FRP
+					tag = MOS
+					tag = OKB
+					tag = PAU
+					tag = PEN
+					tag = PSK
+					tag = RSB
+					tag = RDC
+					tag = SMO
+					tag = TAM
+					tag = ZLB
+					tag = KAG
+					tag = LAK
+					tag = MZL
+					tag = POS
+					tag = SKR
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = MCW
+			}
+			white_peace = ROOT
+			MCW = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { country_exists = MCW }
+			}
+			white_peace = ROOT
+			MCW = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+			}
+			set_autonomy = {
+				target = MCW
+				autonomy_state = autonomy_autonomous_reichskommissariat
+			}
+		}
+		if = {
+			limit = {
+				has_war = no
+			}
+			country_event = { id = goering_peace_events.1 }
+			remove_dynamic_modifier = { modifier = GGR_operation_henry }
+		}
+	}
+	else_if = {
+		limit = { ROOT = { tag = CAU } }
+		white_peace = CAU
+		annex_country = {
+			target = CAU
+			transfer_troops = no
+		}
+		country_event = { id = goering_peace_events.16 }
+		remove_dynamic_modifier = { modifier = GGR_fall_schwarzes_gold }
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = AZR
+					original_tag = GEO
+					original_tag = DAG
+					original_tag = ADY
+				}
+			}
+		}
+		CAU = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+	}
+	else_if = { #Romania
+		limit = { ROOT = { tag = ROM } }
+		white_peace = ROM
+		annex_country = {
+			target = ROM
+			transfer_troops = no
+		}
+		country_event = { id = goering_peace_events.4 }
+		if = {
+			limit = { has_country_flag = GGR_no_clear_variables }
+			country_event = { id = goering.1015 }
+		}
+		else = {
+			remove_dynamic_modifier = { modifier = GGR_operation_tepes }
+		}
+	}
+	else_if = { #Hungary
+		limit = { ROOT = { tag = HUN } }
+		white_peace = HUN
+		annex_country = {
+			target = HUN
+			transfer_troops = no
+		}
+		remove_dynamic_modifier = { modifier = GGR_operation_margarethe }
+		country_event = { id = goering_peace_events.3 }
+	}
+	else_if = { # Serbia
+		limit = { ROOT = { tag = SER } }
+		white_peace = SER
+		annex_country = {
+			target = SER
+			transfer_troops = no
+		}
+		country_event = { id = goering_peace_events.7 }
+	}
+	else_if = {
+		limit = { ROOT = { tag = BUL } }
+		white_peace = BUL
+		annex_country = {
+			target = BUL
+			transfer_troops = no
+		}
+		country_event = { id = goering_peace_events.12 }
+		remove_dynamic_modifier = { modifier = GGR_operation_tepes }
+		clr_country_flag = GGR_no_clear_variables
+	}
+	else_if = { # Switzerland
+		limit = { ROOT = { tag = SWI } }
+		white_peace = SWI
+		annex_country = {
+			target = SWI
+			transfer_troops = no
+		}
+		add_ideas = GGR_swiss_resistance
+		remove_dynamic_modifier = { modifier = GGR_operation_tannenbaum }
+	}
+	else_if = {
+		limit = { ROOT = { tag = ENG } }
+		white_peace = ENG
+		annex_country = {
+			target = ENG
+			transfer_troops = no
+		}
+		annex_country = {
+			target = CRN
+			transfer_troops = yes
+		}
+		remove_dynamic_modifier = { modifier = GGR_operation_sealion2_ENG }
+		country_event = { id = goering_peace_events.14 }
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				OR = {
+					tag = SCO
+					tag = IRE
+					tag = ULS
+					tag = WAL
+				}
+			}
+		}
+		white_peace = ROOT
+		BRI = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					NOT = {
+						original_tag = ULS
+					}
+				}
+			}
+			GER = {
+				add_to_variable = { GGR_isles_loot = 2 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					country_exists = SCO
+					country_exists = IRE
+					country_exists = ULS
+					country_exists = WAL
+				}
+			}
+			GER = {
+				country_event = { id = goering_peace_events.15 }
+			}
+		}
+	}
+	else_if = {
+		limit = { ROOT = { tag = NOR } }
+		white_peace = NOR
+		NOR = {
+			remove_ideas = {
+				NOR_collab_purge
+				NOR_Olav_V
+				NOR_rebuilding_norway
+				NOR_protect_norway
+				NOR_elite_army_1
+				NOR_elite_army_2
+				NOR_american_advisors_idea
+				NOR_coup_aftermath
+			}
+		}
+		annex_country = {
+			target = NOR
+			transfer_troops = no
+		}
+		country_event = { id = goering_peace_events.11 }
+	}
+	else_if = { # Sweden
+		limit = { ROOT = { tag = SWE } }
+		white_peace = SWE
+		annex_country = {
+			target = SWE
+			transfer_troops = no
+		}
+		country_event = { id = goering_peace_events.8 }
+	}
+	else_if = {
+		limit = { ROOT = { tag = FIN } }
+		white_peace = FIN
+		annex_country = {
+			target = FIN
+			transfer_troops = no
+		}
+		transfer_state = 145
+		country_event = { id = goering_peace_events.10 }
+		hidden_effect = {
+			remove_dynamic_modifier = { modifier = GGR_operation_lapland }
+		}
+	}
+	else_if = { #Britanny
+		limit = { ROOT = { tag = BRT } }
+		white_peace = BRT
+		GLC = {
+			annex_country = {
+				target = BRT
+				transfer_troops = no
+			}
+			GGR_set_up_RK_ROOT = yes
+			if = {
+				limit = {
+					NOT = {
+						has_idea = Pakt_Autonomous_Reichskommissariat
+					}
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+			}
+		}
+	}
+
+	# War Plab B
+	else_if = { #Iberia
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = CTL
+					original_tag = BSQ
+					original_tag = GAL
+					original_tag = POR
+					original_tag = MOR
+					original_tag = TRZ
+					original_tag = RIF
+					original_tag = GNS
+					original_tag = GIB
+					original_tag = SPR
+					original_tag = IBR
+					original_tag = SPS
+					original_tag = FZL
+					original_tag = PPR
+					original_tag = RPP
+					original_tag = FSR
+					original_tag = ADL
+					original_tag = SPA
+					original_tag = TBA
+					original_tag = PAD #Andorra
+				}
+			}
+		}
+		GER = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					country_exists = CTL
+					country_exists = BSQ
+					country_exists = GAL
+					country_exists = POR
+					country_exists = MOR
+					country_exists = TRZ
+					country_exists = RIF
+					country_exists = GNS
+					country_exists = GIB
+					country_exists = SPR
+					country_exists = IBR
+					country_exists = SPS
+					country_exists = FZL
+					country_exists = PPR
+					country_exists = RPP
+					country_exists = FSR
+					country_exists = ADL
+					country_exists = SPA
+					country_exists = TBA
+					#country_exists = PAD
+				}
+			}
+			GER = {
+				country_event = { id = goering_peace_events.17 }
+				clr_country_flag = GGR_no_clear_variables
+			}
+		}
+	}
+	
+	else_if = {
+		limit = {
+			ROOT = {
+				original_tag = GNB
+			}
+		}
+		GER = {
+			transfer_state = 702
+		}
+		WAF = {
+			annex_country = {
+				target = GNB
+				transfer_troops = no
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				OR = {
+					tag = JOL
+					tag = WOL
+					tag = SUS
+					tag = MLI
+					tag = FFR
+					tag = FTF
+					tag = BKF
+					tag = IVO
+					tag = NGR
+					tag = HAU
+					tag = SWB
+					tag = CPP
+					tag = EWE
+					tag = GBE
+					tag = YOR
+					tag = CAO
+				}
+			}
+		}
+		WAF = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+	}
+
+	else_if = { # Russia / Central Asia
+		limit = {
+			ROOT = {
+				OR = {
+					is_russian_nation = yes
+					is_kazakh_nation = yes
+					is_central_asian_nation = yes
+					original_tag = KRL
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_in_faction = yes
+				}
+			}
+			ROOT = {
+				if = {
+					limit = {
+						has_country_flag = ARC_leader
+						is_in_faction_with = CSB
+					}
+					clr_country_flag = ARC_leader
+					CSB = {
+						set_country_flag = ARC_leader
+						country_event = { id = ARC.11 days = 2 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = ARC_leader
+						is_in_faction_with = WSB
+					}
+					clr_country_flag = ARC_leader
+					WSB = {
+						set_country_flag = ARC_leader
+						country_event = { id = ARC.11 days = 2 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = ARC_leader
+						is_in_faction_with = FST
+					}
+					clr_country_flag = ARC_leader
+					FST = {
+						set_country_flag = ARC_leader
+						country_event = { id = ARC.11 days = 2 }
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = ARC_leader
+						is_in_faction_with = KZK
+					}
+					clr_country_flag = ARC_leader
+					KZK = {
+						set_country_flag = ARC_leader
+						country_event = { id = ARC.11 days = 2 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_central_asian_nation = yes
+				}
+			}
+			if = {
+				limit = {
+					RKT = {
+						exists = no
+					}
+				}
+				RKT = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					GGR_set_up_RK_ROOT = yes
+					add_ideas = Pakt_Autonomous_Reichskommissariat
+				}
+			}
+			else = {
+				RKT = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					every_owned_state = {
+						add_core_of = RKT
+					}
+				}
+			}
+			log = "[GetDateText]: [Root.GetName]: on_actions peace_on_actions_GGR_kazakh/central_asia"
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					OR = {
+						is_kazakh_nation = yes
+						is_russian_nation = yes
+						original_tag = KRL
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = ROOT
+						AND = {
+							is_owned_by = MCW
+							NOT = {
+								is_core_of = MCW
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_core_of = FIN
+					}
+					SCN = {
+						transfer_state = PREV
+					}
+					log = "[GetDateText]: [Root.GetName]: on_actions peace_on_actions_GGR_scandinavien"
+				}
+				if = {
+					limit = {
+						is_kazakh_state = yes
+					}
+					if = {
+						limit = {
+							RKT = {
+								exists = no
+							}
+						}
+						RKT = {
+							transfer_state = PREV
+							add_state_core = PREV
+							GGR_set_up_RK_ROOT = yes
+							add_ideas = Pakt_Autonomous_Reichskommissariat
+						}
+					}
+					else = {
+						RKT = {
+							transfer_state = PREV
+							add_state_core = PREV
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							is_west_russian_state = yes
+							is_core_of = MCW
+							state = 852 #ORE
+							state = 849
+							state = 652
+						}
+					}
+					MCW = {
+						transfer_state = PREV
+						add_state_core = PREV
+					}
+					log = "[GetDateText]: [Root.GetName]: on_actions peace_on_actions_GGR_moskowien"
+				}
+				if = {
+					limit = {
+						OR = {
+							is_west_siberia_state = yes
+							is_central_siberia_state = yes
+							state = 847 #URL
+							state = 848
+							state = 846 #DRL
+							state = 582 #MAG
+						}
+					}
+					if = {
+						limit = {
+							RKS = {
+								exists = no
+							}
+						}
+
+						RKS = {
+							transfer_state = PREV
+							add_state_core = PREV
+							GGR_set_up_RK_ROOT = yes
+							add_ideas = Pakt_Autonomous_Reichskommissariat
+						}
+					}
+					else = {
+						RKS = {
+							transfer_state = PREV
+							add_state_core = PREV
+						}
+					}
+					log = "[GetDateText]: [Root.GetName]: on_actions peace_on_actions_GGR_siberia"
+				}
+				if = {
+					limit = {
+						is_far_east_state = yes
+					}
+					if = {
+						limit = {
+							RKF = {
+								exists = no
+							}
+						}
+						RKF = {
+							transfer_state = PREV
+							add_state_core = PREV
+							GGR_set_up_RK_ROOT = yes
+							add_ideas = Pakt_Autonomous_Reichskommissariat
+						}
+					}
+					else = {
+						RKF = {
+							transfer_state = PREV
+							add_state_core = PREV
+						}
+					}
+					log = "[GetDateText]: [Root.GetName]: on_actions peace_on_actions_GGR_far_east"
+				}
+			}
+		}
+		GER = {
+			if = { # Check if ural invasion tree is unlocked
+				limit = {
+					OR = {
+						any_enemy_country = {
+							OR = {
+								is_west_siberian_nation = yes
+								is_southern_urals_nation = yes
+							}
+						}
+						MCW = {
+							check_variable = { num_owned_states > 50 }
+						}
+					}
+				}
+				GGR_Reload_main = yes
+			}
+			if = { # Check if Kazakh invasion tree is unlocked
+				limit = {
+					OR = {
+						any_enemy_country = {
+							is_kazakh_nation = yes
+						}
+						MCW = {
+							check_variable = { num_owned_states > 50 }
+						}
+					}
+				}
+				GGR_Reload_main = yes
+			}
+			if = { # Check if Far east invasion tree is unlocked
+				limit = {
+					OR = {
+						any_enemy_country = {
+							OR = {
+								is_central_siberian_nation = yes
+								is_far_eastern_nation = yes
+							}
+						}
+						RKS = {
+							check_variable = { num_owned_states > 9 }
+						}
+					}
+				}
+				GGR_Reload_main = yes
+			}
+			if = {
+				limit = {
+					has_war = no
+					NOT = {
+						any_country = {
+							is_russian_nation = yes
+							exists = yes
+							NOT = { is_in_faction_with = GER }
+						}
+					}
+				}
+				country_event = { id = goering_peace_events.13 }
+				remove_dynamic_modifier = { modifier = GGR_fall_rot }
+			}
+		}
+	}
+
+	else_if = { #Turkey
+		limit = {
+			ROOT = { original_tag = TUR }
+		}
+		CAU = {
+			transfer_state = 230
+			transfer_state = 783
+			transfer_state = 1565
+			transfer_state = 1567
+			transfer_state = 1568
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+		RKK = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+			annex_country = {
+				target = SNS
+				transfer_troops = no
+			}
+			annex_country = {
+				target = BKU
+				transfer_troops = no
+			}
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			if = {
+				limit = {
+					SYR = {
+						exists = no
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = SYR
+							is_core_of = LEB
+						}
+					}
+					SYR = {
+						transfer_state = PREV
+					}
+				}
+				SYR = {
+					set_cosmetic_tag = SYR_GOR
+					create_country_leader = {
+						name = "Otto von Bülow"
+						picture = "gfx/leaders/GER/Portrait_Germany_Otto_von_Bulow.dds"
+						expire = "1999.4.24"
+						ideology = national_socialism_subtype
+						traits = {}
+					}
+					GGR_set_up_RK_ROOT = yes
+					set_politics = {
+						ruling_party = national_socialism
+					}
+					set_popularities = {
+						fascism = 0.3
+						national_socialism = 0.7
+					}
+				}
+			}
+			GGR_set_up_RK_ROOT = yes
+		}
+	}
+
+
+	else_if = { #Italy
+		limit = {
+			ROOT = {
+				original_tag = ITA
+			}
+		}
+		GER = {
+			white_peace = ITA
+			white_peace = CRO
+			white_peace = BOS
+			white_peace = GRE
+			country_event = { id = goering_peace_events.19 }
+		}
+	}
+
+	else_if = { #Italian Microstates
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = MOC
+					original_tag = VAC
+					original_tag = SNM
+				}
+			}
+		}
+		ITA = { annex_country = { target = ROOT } }
+	}
+	else_if = { #Croatia/Bosnia
+		limit = { 
+			ROOT = { 
+				OR = {
+					original_tag = CRO
+					original_tag = BOS
+				} 
+			} 
+		}
+		RKB = {		
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+	}
+	else_if = { #Greece
+		limit = { ROOT = { original_tag = GRE } }
+		RKK = {		
+			annex_country = {
+				target = GRE
+				transfer_troops = no
+			}
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+	}
+
+	else_if = { #France
+		limit = {
+			ROOT = {
+				original_tag = FRA
+			}
+		}
+		GER = { 
+			white_peace = FRA
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							is_in_faction_with = BRT
+							is_in_faction_with = GLC
+						}
+					}
+				}
+				country_event = { id = goering.1237 }
+			}
+		}
+		OKZ = {
+			annex_country = {
+				target = FRA
+				transfer_troops = yes
+			}
+			hidden_effect = {
+				GGR_set_up_RK_ROOT = yes
+			}
+			every_owned_state = {
+				add_core_of = PREV
+			}
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+		}
+	}
+
+	else_if = { #Algeria
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = ILG
+					original_tag = SLG
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					country_exists = NAF
+				}
+			}
+			NAF = {
+				econ_join_sphere_GER = yes
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				GGR_set_up_RK_ROOT = yes
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+		else = {
+			NAF = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+		if = {
+			limit = {
+				GER = {
+					is_in_faction_with = OKZ
+				}
+			}
+			OKZ = {
+				remove_state_core = 784
+			}
+			NAF = {
+				add_state_core = 784
+				transfer_state = 784
+			}
+		}
+	}
+
+	else_if = { #East Africa
+		limit = {
+			ROOT = {
+				OR = {
+					tag = RPS
+					tag = SDS
+					tag = SDF
+					tag = AZA
+					tag = AYA
+					tag = ERT
+					tag = ETB
+					tag = ORM
+					tag = KEN
+					tag = SML
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					country_exists = GEA
+				}
+			}
+			GEA = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GEA = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+
+	else_if = { #Egypt
+	limit = {
+		ROOT = {
+			OR = {
+				tag = EGY
+				tag = EGB
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				EGY = { owns_state = 1125 }
+				EGB = { owns_state = 1125 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					country_exists = GEA
+				}
+			}
+			GEA = {
+				transfer_state = 549
+				transfer_state = 551
+				transfer_state = 1120
+				transfer_state = 1121
+				transfer_state = 1122
+				transfer_state = 1123
+				transfer_state = 1124
+				transfer_state = 1125
+				transfer_state = 1126
+				transfer_state = 1127
+				transfer_state = 1128
+				transfer_state = 1129
+				transfer_state = 1130
+				transfer_state = 1131
+				transfer_state = 1132
+				transfer_state = 1133
+				transfer_state = 1134
+				transfer_state = 1135
+				transfer_state = 1136
+				transfer_state = 1179
+				every_owned_state = {
+					add_core_of = PREV
+				}
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GEA = {
+				transfer_state = 549
+				transfer_state = 551
+				transfer_state = 1120
+				transfer_state = 1121
+				transfer_state = 1122
+				transfer_state = 1123
+				transfer_state = 1124
+				transfer_state = 1125
+				transfer_state = 1126
+				transfer_state = 1127
+				transfer_state = 1128
+				transfer_state = 1129
+				transfer_state = 1130
+				transfer_state = 1131
+				transfer_state = 1132
+				transfer_state = 1133
+				transfer_state = 1134
+				transfer_state = 1135
+				transfer_state = 1179
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				country_exists = NAF
+			}
+		}
+		NAF = {
+			econ_join_sphere_GER = yes
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+			GGR_set_up_RK_ROOT = yes
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+	}
+	else = {
+		NAF = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+	}
+}
+
+	# War Plan C
+
+	else_if = { #Burgundy
+		limit = {
+			ROOT = {
+				original_tag = BRG
+			}
+		}
+		GLC = {
+			annex_country = {
+				target = BRG
+				transfer_troops = no
+			}
+			GGR_set_up_RK_ROOT = yes
+			if = {
+				limit = {
+					NOT = {
+						has_idea = Pakt_Autonomous_Reichskommissariat
+					}
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+			}
+		}
+		BEL = {
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			create_country_leader = {
+				name = "Siegfried Müller"
+				desc = POLITICS_SIEGFRIED_MULLER_DESC
+				picture = "gfx/leaders/GER/Portrait_Germany_Siegfried_Muller.dds"
+				expire = "1999.4.20"
+				ideology = national_socialism_subtype
+				traits = {
+				}
+			}
+			transfer_state = 34
+			transfer_state = 6
+			set_cosmetic_tag = BEL_GOR
+			GGR_set_up_RK_ROOT = yes
+			set_popularities = {
+				authoritarian_democracy = 20
+				fascism = 10
+				national_socialism = 70
+			}
+		}
+		GER = {
+			country_event = { id = nuclearwar.6 days = 7 }
+			set_global_flag = tno_speed_warning
+			white_peace = BRG
+		}
+	}
+
+	else_if = { #USA
+		limit = {
+			ROOT = {
+				original_tag = USA
+			}
+		}
+		AMK = {
+			transfer_state = 376
+			transfer_state = 375
+			transfer_state = 374
+			transfer_state = 989
+			transfer_state = 372
+			transfer_state = 368
+			transfer_state = 369
+			transfer_state = 362
+			transfer_state = 363
+			transfer_state = 364
+			transfer_state = 365
+			transfer_state = 367
+			transfer_state = 370
+			transfer_state = 371
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			GGR_set_up_RK_ROOT = yes
+		}
+		WST = {
+			transfer_state = 377
+			transfer_state = 990
+			transfer_state = 380
+			transfer_state = 387
+			transfer_state = 379
+			transfer_state = 385
+			transfer_state = 386
+			transfer_state = 378
+			transfer_state = 473
+			transfer_state = 471
+			transfer_state = 463
+			transfer_state = 739
+			transfer_state = 740
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			GGR_set_up_RK_ROOT = yes
+			create_country_leader = {
+				name = "Otto Ernst Remer"
+				desc = "POLITICS_OTTO_ERNST_REMER_DESC"
+				picture = "gfx/leaders/GER/Portrait_GER_Otto_Ernst_Remer.dds"
+				expire = "1999.1.1"
+				ideology = national_socialism_subtype
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = national_socialism
+				elections_allowed = no
+			}
+			set_popularities = {
+				authoritarian_democracy = 20
+				fascism = 10
+				national_socialism = 70
+			}
+			every_owned_state = {
+				add_core_of = PREV
+				remove_core_of = CAN
+			}
+		}
+
+		GER = {
+			#transfer_state = 366
+			transfer_state = 991
+			country_event = { id = nuclearwar.6 days = 7 }
+			set_global_flag = tno_speed_warning
+			white_peace = USA
+			set_autonomy = {
+				target = USA
+				autonomy_state = autonomy_collaborator_puppet_state
+			}
+		}
+
+		GCR = {
+			transfer_state = 686
+			transfer_state = 690
+			transfer_state = 693
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+
+		USA = {
+			set_politics = {
+				ruling_party = national_socialism
+				elections_allowed = no
+			}
+			set_popularities = {
+				conservative_democracy = 30
+				authoritarian_democracy = 10
+				national_socialism = 60
+			}
+			every_owned_state = {
+				limit = {
+					NOT = { is_core_of = USA }
+				}
+				GER = {
+					transfer_state = PREV
+				}
+			}
+
+			transfer_state = 276
+			transfer_state = 465
+			transfer_state = 464
+
+			every_owned_state = {
+				add_core_of = PREV
+				remove_core_of = CAN
+				remove_core_of = GQB
+			}
+			load_focus_tree = generic_focus
+			remove_faction_status = yes
+			add_ideas = Pakt_Marionettenstaat
+			set_cosmetic_tag = USA_GER
+			econ_join_sphere_GER = yes
+		}
+	}
+
+	else_if = { #Canada
+		limit = {
+			ROOT = {
+				original_tag = CAN
+			}
+		}
+		GQB = {
+			transfer_state = 466
+			transfer_state = 332
+			transfer_state = 468
+			transfer_state = 465
+			transfer_state = 464
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			GGR_set_up_RK_ROOT = yes
+		}
+		GER = {
+			white_peace = CAN
+			add_to_faction = CAN
+			transfer_state = 331
+			transfer_state = 730
+			set_autonomy = {
+				target = CAN
+				autonomy_state = autonomy_collaborator_puppet_state
+			}
+		}
+		CAN = {
+			econ_join_sphere_GER = yes
+			remove_faction_status = yes
+			create_country_leader = {
+				name = "William John Beattie"
+				desc = "POLITICS_JOHN_BEATTIE_DESC"
+				picture = "Portrait_CAN_JOHN_BEATTIE.dds"
+				expire = "1999.4.20"
+				ideology = national_socialism_subtype
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = national_socialism
+				elections_allowed = no
+			}
+			set_popularities = {
+				communist = 0
+				ultranationalism = 0
+				socialist = 5
+				social_democracy = 15
+				liberal_democracy = 10
+				conservative_democracy = 30
+				authoritarian_democracy = 10
+				despotism = 10
+				fascism = 10
+				national_socialism = 10
+			}
+			set_cosmetic_tag = CAN_GOR
+			add_ideas = Pakt_Marionettenstaat
+		}
+	}
+
+	else_if = { #Iceland, Canal
+		limit = {
+			ROOT = {
+				OR = {
+					tag = ICE
+					tag = PCZ
+				}
+			}
+		}
+		GER = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+	}
+	
+	else_if = { #West Indies
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = CUB
+					original_tag = HAI
+					original_tag = DOM
+					original_tag = WIN
+					original_tag = JAM
+					original_tag = TRI
+					original_tag = ANT
+					original_tag = GND
+					original_tag = BRB
+					original_tag = SVI
+					original_tag = SLU
+					original_tag = MRT
+					original_tag = DMI
+					original_tag = GUD
+					original_tag = SKN
+					original_tag = CUR
+				}
+			}
+		}
+		GER = { white_peace = ROOT }
+		if = {
+			limit = {
+				NOT = { country_exists = GCR }
+			}
+			GCR = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GCR = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+			}
+		}
+		GER = {
+			add_to_variable = {GGR_conquistador_supply = 0.02}
+			add_to_variable = {GGR_conquistador_consump = 0.02}
+			add_to_variable = {GGR_conquistador_heat_attrition = 0.02}
+			add_to_variable = {GGR_conquistador_no_supply = 0.02}
+			add_to_variable = {GGR_conquistador_hot_acclimation = 0.02}
+			add_to_variable = {GGR_conquistador_reinforce = 0.02}
+			add_to_variable = {GGR_conquistador_speed = 0.02}
+		}
+	}
+
+	if = { #Latin America
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = PAN
+					original_tag = COS
+					original_tag = NIC
+					original_tag = HON
+					original_tag = ELS
+					original_tag = BLZ
+					original_tag = GUA
+					original_tag = MEX
+				}
+			}
+		}
+		GER = { white_peace = ROOT }
+		if = {
+			limit = {
+				NOT = { country_exists = RKL }
+			}
+			RKL = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			RKL = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+			}
+		}
+		GER = {
+			add_to_variable = {GGR_conquistador_supply = 0.02}
+			add_to_variable = {GGR_conquistador_consump = 0.02}
+			add_to_variable = {GGR_conquistador_heat_attrition = 0.02}
+			add_to_variable = {GGR_conquistador_no_supply = 0.02}
+			add_to_variable = {GGR_conquistador_hot_acclimation = 0.02}
+			add_to_variable = {GGR_conquistador_reinforce = 0.02}
+			add_to_variable = {GGR_conquistador_speed = 0.02}
+		}
+	}
+	else_if = { #Brazil region
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = BRA
+					original_tag = GUY
+				}
+			}
+		}
+		GER = { white_peace = ROOT }
+		if = {
+			limit = {
+				NOT = { country_exists = GBR }
+			}
+			GBR = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GBR = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+			}
+		}
+		GER = {
+			add_to_variable = {GGR_conquistador_supply = 0.02}
+			add_to_variable = {GGR_conquistador_consump = 0.02}
+			add_to_variable = {GGR_conquistador_heat_attrition = 0.02}
+			add_to_variable = {GGR_conquistador_no_supply = 0.02}
+			add_to_variable = {GGR_conquistador_hot_acclimation = 0.02}
+			add_to_variable = {GGR_conquistador_reinforce = 0.02}
+			add_to_variable = {GGR_conquistador_speed = 0.02}
+		}
+	}
+
+	else_if = { #Columbia region
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = COL
+					original_tag = VEN
+					original_tag = ECU
+					original_tag = PRU
+				}
+			}
+		}
+		GER = { white_peace = ROOT }
+		if = {
+			limit = {
+				NOT = { country_exists = GCO }
+			}
+			GCO = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GCO = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+			}
+		}
+		GER = {
+			add_to_variable = {GGR_conquistador_supply = 0.02}
+			add_to_variable = {GGR_conquistador_consump = 0.02}
+			add_to_variable = {GGR_conquistador_heat_attrition = 0.02}
+			add_to_variable = {GGR_conquistador_no_supply = 0.02}
+			add_to_variable = {GGR_conquistador_hot_acclimation = 0.02}
+			add_to_variable = {GGR_conquistador_reinforce = 0.02}
+			add_to_variable = {GGR_conquistador_speed = 0.02}
+		}
+	}
+
+	else_if = { #Aregntina region
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = ARG
+					original_tag = CHL
+					original_tag = BOL
+					original_tag = URG
+					original_tag = PAR
+					original_tag = TDF
+				}
+			}
+		}
+		GER = { white_peace = ROOT }
+		if = {
+			limit = {
+				NOT = { country_exists = GAR }
+			}
+			GAR = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GAR = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+			}
+		}
+		GER = {
+			add_to_variable = {GGR_conquistador_supply = 0.02}
+			add_to_variable = {GGR_conquistador_consump = 0.02}
+			add_to_variable = {GGR_conquistador_heat_attrition = 0.02}
+			add_to_variable = {GGR_conquistador_no_supply = 0.02}
+			add_to_variable = {GGR_conquistador_hot_acclimation = 0.02}
+			add_to_variable = {GGR_conquistador_reinforce = 0.02}
+			add_to_variable = {GGR_conquistador_speed = 0.02}
+		}
+	}
+
+	else_if = { #Australia & New Zealand
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = AST
+					original_tag = NZL
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { country_exists = GAS }
+			}
+			GAS = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GAS = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	else_if = { #Japan
+		limit = {
+			ROOT = {
+				original_tag = JAP
+			}
+		}
+		ENA = {
+			add_ideas = Pakt_Military_Authority
+			annex_country = { target = JAP }
+		}
+		TOH = {
+			add_ideas = Pakt_Marionettenstaat
+			transfer_state = 642
+			transfer_state = 533
+		}
+		SKK = {
+			add_ideas = Pakt_Marionettenstaat
+			transfer_state = 530
+		}
+		KIN = {
+			add_ideas = Pakt_Marionettenstaat
+			transfer_state = 529
+			transfer_state = 630
+			transfer_state = 631
+			transfer_state = 531
+		}
+		KNT = {
+			add_ideas = Pakt_Marionettenstaat
+			transfer_state = 535
+			transfer_state = 532
+			transfer_state = 282
+			transfer_state = 1234
+			transfer_state = 534
+		}
+		GKO = {
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			transfer_state = 963
+			transfer_state = 655
+			transfer_state = 1018
+			transfer_state = 525
+			transfer_state = 962
+			transfer_state = 1024
+			transfer_state = 560
+			transfer_state = 527
+		}
+		GER = {
+			country_event = { id = nuclearwar.6 days = 7 }
+			set_global_flag = tno_speed_warning
+			white_peace = JAP
+			set_autonomy = {
+				target = GKO
+				autonomy_state = autonomy_autonomous_reichskommissariat
+			}
+			set_autonomy = {
+				target = ENA
+				autonomy_state = autonomy_occupied_territory
+			}
+			set_autonomy = {
+				target = TOH
+				autonomy_state = autonomy_collaborator_puppet_state
+			}
+			set_autonomy = {
+				target = KNT
+				autonomy_state = autonomy_collaborator_puppet_state
+			}
+			set_autonomy = {
+				target = SKK
+				autonomy_state = autonomy_collaborator_puppet_state
+			}
+			set_autonomy = {
+				target = KIN
+				autonomy_state = autonomy_collaborator_puppet_state
+			}
+		}
+	}
+
+	else_if = {
+		limit = {
+			ROOT = {
+				tag = GUL
+			}
+		}
+		GER = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+	}
+
+	else_if = {
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = SAU
+					original_tag = YEM
+					original_tag = NYM
+					original_tag = OMA
+					original_tag = OMB
+					original_tag = OMI
+					original_tag = PAL
+					original_tag = ISR
+					original_tag = JOR
+					original_tag = JER
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { country_exists = RKA }
+			}
+			RKA = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			RKA = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+
+	else_if = { #UAR
+		limit = {
+			ROOT = {
+				tag = UAR
+			}
+		}
+
+		UAR = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = KUW
+						is_core_of = QAT
+						is_core_of = UAE
+					}
+				}
+				GER = { transfer_state = PREV }
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							is_core_of = IRQ
+							is_core_of = KUR
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { country_exists = RKP }
+					}
+					every_owned_state = {
+						limit = {
+							OR = {
+								is_core_of = IRQ
+								is_core_of = KUR
+							}
+						}
+						RKP = {
+							transfer_state = PREV
+						}
+					}
+					RKP = {
+						add_ideas = Pakt_Autonomous_Reichskommissariat
+						GGR_set_up_RK_ROOT = yes
+					}
+				}
+				else = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								is_core_of = IRQ
+								is_core_of = KUR
+							}
+						}
+						RKP = {
+							transfer_state = PREV
+							add_state_core = PREV
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							is_core_of = SYR
+							is_core_of = LEB
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { country_exists = SYR }
+					}
+					every_state = {
+						limit = {
+							OR = {
+								is_owned_by = GER
+								is_owned_by = UAR
+							}
+							OR = {
+								is_core_of = SYR
+								is_core_of = LEB
+							}
+						}
+						SYR = {
+							transfer_state = PREV
+						}
+					}
+					SYR = {
+						set_cosmetic_tag = SYR_GOR
+						create_country_leader = {
+							name = "Otto von Bülow"
+							picture = "gfx/leaders/GER/Portrait_Germany_Otto_von_Bulow.dds"
+							expire = "1999.4.24"
+							ideology = national_socialism_subtype
+							traits = {}
+						}
+						add_ideas = Pakt_Autonomous_Reichskommissariat
+						GGR_set_up_RK_ROOT = yes
+						set_politics = {
+							ruling_party = national_socialism
+						}
+						set_popularities = {
+							fascism = 0.3
+							national_socialism = 0.7
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = RKA }
+			}
+			RKA = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			RKA = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+
+	else_if = { #Syria
+		limit = {
+			ROOT = {
+				tag = SYR
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = LEB
+			}
+			SYR = {
+				transfer_state = PREV
+			}
+		}
+		SYR = {
+			set_cosmetic_tag = SYR_GOR
+			create_country_leader = {
+				name = "Otto von Bülow"
+				picture = "gfx/leaders/GER/Portrait_Germany_Otto_von_Bulow.dds"
+				expire = "1999.4.24"
+				ideology = national_socialism_subtype
+				traits = {}
+			}
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			GGR_set_up_RK_ROOT = yes
+			set_politics = {
+				ruling_party = national_socialism
+			}
+			set_popularities = {
+				fascism = 0.3
+				national_socialism = 0.7
+			}
+		}
+	}
+
+	else_if = { #Lebanon
+		limit = {
+			ROOT = {
+				OR = {
+					tag = LEB
+					tag = SLB
+				}
+			}
+		}
+		if = {
+			limit = {
+				SYR = {
+					is_puppet_of = GER
+				}
+			}
+			SYR = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+			}
+		}
+		else = {
+			GER = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+			}
+		}
+	}
+
+	else_if = { #Iraq
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = IRQ
+					original_tag = SNI
+					original_tag = BIR
+					original_tag = KUR
+					original_tag = IRP
+				}
+			}
+		}
+		
+		ROOT = {
+			every_owned_state = {
+				limit = {
+					is_core_of = KUW
+				}
+				GER = { transfer_state = PREV }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = RKP }
+			}
+			if = {
+				limit = {
+					RKK = {
+						owns_state = 1334
+						owns_state = 781
+					}
+				}
+				RKP = {
+					transfer_state = 1334
+					transfer_state = 781
+				}
+			}
+			RKP = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			RKP = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+
+	else_if = { #Iran
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = PER
+					original_tag = IRI
+					original_tag = IRL
+					original_tag = IRA
+					original_tag = IRB
+					original_tag = IRC
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction_with = PER
+			}
+			PER = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = { country_exists = RKP }
+				}
+				if = {
+					limit = {
+						RKK = {
+							owns_state = 1334
+							owns_state = 781
+						}
+					}
+					RKP = {
+						transfer_state = 1334
+						transfer_state = 781
+					}
+				}
+				RKP = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					add_ideas = Pakt_Autonomous_Reichskommissariat
+					GGR_set_up_RK_ROOT = yes
+				}
+			}
+			else = {
+				RKP = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					every_owned_state = {
+						add_core_of = PREV
+					}
+				}
+			}
+		}
+	}
+
+	else_if = { #Afghanistan
+		limit = {
+			ROOT = {
+				tag = AFG
+			}
+		}
+		AFG = {
+			econ_join_sphere_GER = yes
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			create_country_leader = {
+				name = "Armin Zimmermann"
+				desc = "POLITICS_ARMIN_ZIMMERMAN_DESC"
+				picture = "GFX/leaders/GER/Portrait_GER_Armin_Zimmermann.dds"
+				expire = "1999.4.20"
+				ideology = national_socialism_subtype
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = national_socialism
+			}
+			set_popularities = {
+				liberal_democracy = 0
+				national_socialism = 100
+			}
+			set_cosmetic_tag = AFG_GOR
+			every_unit_leader = {
+				limit = { has_id = 1120 }
+				retire = yes
+			}
+			annex_country = {
+				target = KLT
+				transfer_troops = no
+			}
+			annex_country = {
+				target = MFP
+				transfer_troops = no
+			}
+			every_owned_state = {
+				add_core_of = AFG
+			}
+		}
+		GER = {
+			white_peace = AFG
+			add_to_faction = AFG
+			set_autonomy = {
+				target = AFG
+				autonomy_state = autonomy_autonomous_reichskommissariat
+			}
+		}
+	}
+
+	else_if = { #India
+		limit = {
+			ROOT = {
+				tag = IND
+			}
+		}
+		transfer_state = 281
+		transfer_state = 422
+		transfer_state = 970
+		transfer_state = 710
+		if = {
+			limit = {
+				is_in_faction_with = AZH
+			}
+			AZH = {
+				annex_country = {
+					target = IND
+					transfer_troops = no
+				}
+			}
+		}
+		else = {
+			RKH = {
+				if = { 
+					limit = { exists = yes} 
+					annex_country = {
+						target = IND
+						transfer_troops = no
+					}
+				}
+				else = { 
+					annex_country = {
+						target = IND
+						transfer_troops = no
+					}
+					GGR_set_up_RK_ROOT = yes
+					add_ideas = Pakt_Autonomous_Reichskommissariat
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction_with = AFG
+			}
+			AFG = {
+				transfer_state = 1318
+				transfer_state = 1317
+				transfer_state = 1316
+				transfer_state = 749
+				every_owned_state = {
+					add_core_of = AFG
+					remove_core_of = RKH
+				}
+			}
+		}
+	}
+
+	else_if = { #Azad Hind & Bhutan
+		limit = {
+			ROOT = {
+				OR = {
+					tag = AZH
+					tag = BHU
+				}
+			}
+		}
+
+		RKH = {
+			if = { 
+				limit = { exists = yes } 
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+			}
+			else = { 
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				GGR_set_up_RK_ROOT = yes
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+			}
+			every_owned_state = {
+				add_core_of = RKH
+			}
+		}
+	}
+
+	else_if = { #Nepal
+		limit = {
+			ROOT = {
+				tag = NEP
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { is_in_faction_with = RKH }
+				is_in_faction_with = AZH
+			}
+			AZH = {
+				annex_country = {
+					target = NEP
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = AZH
+				}
+			}
+		}
+		else = {
+			RKH = {
+				if = { 
+					limit = { exists = yes } 
+					annex_country = {
+						target = NEP
+						transfer_troops = no
+					}
+				}
+				else = { 
+					annex_country = {
+						target = NEP
+						transfer_troops = no
+					}
+					GGR_set_up_RK_ROOT = yes
+					add_ideas = Pakt_Autonomous_Reichskommissariat
+				}
+				every_owned_state = {
+					add_core_of = RKH
+				}
+			}
+		}
+	}
+
+	else_if = { #Burma
+		limit = {
+			ROOT = {
+				tag = BUR
+			}
+		}
+		GMB = {
+			annex_country = {
+				target = BUR
+				transfer_troops = no
+			}
+			add_ideas = Pakt_Autonomous_Reichskommissariat
+			GGR_set_up_RK_ROOT = yes
+		}
+	}
+
+	else_if = { #Philippines
+		limit = {
+			ROOT = {
+				OR = {
+					tag = SPH
+					tag = PHI
+					tag = UPH
+					tag = FGB
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = GPP }
+			}
+			GPP = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GPP = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+
+	else_if = { #Indonesia region
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = NRB
+					original_tag = INS
+					original_tag = FRI
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = RKO }
+			}
+			RKO = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			RKO = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+
+	else_if = { #South East Asia
+		limit = {
+			ROOT = {
+				OR = {
+					original_tag = VIN
+					original_tag = THA
+					original_tag = CAM
+					original_tag = LAO
+					original_tag = SHO
+					original_tag = MLY
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = GVT }
+			}
+			GVT = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				add_ideas = Pakt_Autonomous_Reichskommissariat
+				GGR_set_up_RK_ROOT = yes
+			}
+		}
+		else = {
+			GVT = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = no
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+
+	else_if = {
+		limit = {
+			ROOT = {
+				tag = XIN
+			}
+		}
+		XIN = {
+			econ_join_sphere_GER = yes
+			add_ideas = Pakt_Marionettenstaat
+		}
+		GER = {
+			white_peace = XIN
+			add_to_faction = XIN
+			set_autonomy = {
+				target = XIN
+				autonomy_state = autonomy_collaborator_puppet_state
+			}
+		}
+	}
+}

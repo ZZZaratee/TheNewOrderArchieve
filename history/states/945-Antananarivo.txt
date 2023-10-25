@@ -1,0 +1,21 @@
+state={
+	id=945
+	name="STATE_945"
+	provinces={
+		13576 13701 13705 13728
+	}
+	history={
+		owner = MAD
+		add_core_of = MAD
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+		}
+
+		victory_points = { 13705 10 }
+	}
+
+	manpower=3535112
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

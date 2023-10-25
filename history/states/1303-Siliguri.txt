@@ -1,0 +1,26 @@
+
+state={
+	id=1303
+	name="STATE_1303"
+
+	resources={
+		tungsten=4
+	}
+
+	history={
+		owner = AZH
+		victory_points = { 12338 10 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = AZH
+		add_core_of = IND
+	}
+
+	provinces={
+		7475 7565 10389 12338 13222 
+	}
+	manpower=162189
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

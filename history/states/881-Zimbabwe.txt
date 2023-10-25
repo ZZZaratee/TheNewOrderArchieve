@@ -1,0 +1,22 @@
+###POP DONE
+state={
+	id=881
+	name="STATE_881"
+	provinces={
+		13700 13704 13711 13722
+	}
+	
+	history={
+		owner = GRO
+		add_core_of = GRO
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+		}
+		victory_points = { 13704 5 }
+		victory_points = { 13700 10 }
+	}
+	state_category=town
+	manpower = 512228
+	buildings_max_level_factor=1.000
+}

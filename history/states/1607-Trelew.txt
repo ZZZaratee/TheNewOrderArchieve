@@ -1,0 +1,20 @@
+state={
+	id=1607
+	name="STATE_1607"
+	manpower = 10840
+	
+	state_category = pastoral
+	
+	history={
+		owner = ARG
+		buildings = {
+			infrastructure = 2
+			radar_station = 2
+		}
+		add_core_of = ARG
+	}
+
+	provinces={
+		8161 8176 15020 15026
+	}
+}

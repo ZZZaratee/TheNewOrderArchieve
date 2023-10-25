@@ -1,0 +1,23 @@
+###POP DONE 
+state={
+	id=1625
+	name="STATE_1625"
+	manpower = 696142
+	
+	state_category = large_town
+
+	history={
+		owner = BRG
+		victory_points = { 13011 5 }
+		buildings = {
+			infrastructure = 7
+			air_base = 10
+		}
+		add_core_of = FRA
+		add_core_of = BRG
+	}
+
+	provinces={
+		551 3533 6531 11732 13011 
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=610
+	name="STATE_610"
+
+	history={
+		owner = MAN
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 4
+			radar_station = 1
+
+		}
+		victory_points = { 9835 10 }
+		victory_points = { 881 5 }
+		victory_points = { 6937 5 }
+		victory_points = { 3934 10 }
+		victory_points = { 6837 10 }
+	}
+
+	provinces={
+		814 881 934 972 3814 3828 3881 3955 6852 6898 6937 7575 7633 9768 9873 9905 10331 10426 11801 11855 11886 6988 14628 14627 13272 14625 6837 9835 11815 3934 9927 6893 9788 6951 846 4514 11836 9831 14632
+	}
+	manpower=5375377
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,3652 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			################################
+			###   Indonesian Civil War   ###
+			################################
+			if = {
+				limit = {
+					ROOT = { is_russian_nation = yes }
+					FROM = { is_kazakh_nation = yes }
+					SIB = {
+						NOT = { has_war_with = RWS }
+					}
+					RWS = {
+						NOT = { has_war_with = SIB }
+					}
+					FROM.FROM = {
+						OR = {
+							is_core_of = SIB
+							is_core_of = RWS
+						}
+					}
+				}
+				add_to_variable = { global.RUS_KAZ_progess = -1 }
+			}
+			if = {
+				limit = {
+					FROM = { is_russian_nation = yes }
+					ROOT = { is_kazakh_nation = yes }
+					SIB = {
+						NOT = { has_war_with = RWS }
+					}
+					RWS = {
+						NOT = { has_war_with = SIB }
+					}
+					FROM.FROM = {
+						OR = {
+							is_core_of = SIB
+							is_core_of = RWS
+						}
+					}
+				}
+				add_to_variable = { global.RUS_KAZ_progess = 1 }
+				if = {
+					limit = {
+						check_variable = { global.RUS_KAZ_progess > 12 }
+						NOT = { has_global_flag = AFTER_MIDNIGHT_COMMENCED }
+					}
+					FROM = {
+						add_stability = -0.20
+						if = {
+							limit = {
+								has_war_with = KZK
+							}
+							white_peace = KZK
+						}
+						if = {
+							limit = {
+								has_war_with = NPL
+							}
+							white_peace = NPL
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = { global.RUS_KAZ_progess > 5 }
+					}
+					FROM = { country_event = { id = RUS_race_to_kazakhstan.35 days = 1 } }
+				}
+			}
+			if = {#Reinforce cells if a Cell region is fully captured
+				limit = {
+					FROM = {
+						original_tag = INS
+					}
+					ROOT = {
+						original_tag = FRI
+					}
+				}
+				if = {#North Sumatra
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 818
+								state = 817
+							}
+						}
+						FRI_has_majority_control_North_Sumatra = yes
+						ROOT = {
+							NOT = { has_country_flag = FRI_sec_cells_north_sumatra }
+						}
+					}
+					FRI = {
+						add_to_variable = {FRI_cs_north_sumatra = 2}
+						clamp_variable = {
+							var = FRI_cs_north_sumatra
+							min = 0
+							max = 10
+						}
+						set_country_flag = FRI_sec_north_sumatra
+					}
+				}
+
+				if = {#South Sumatra
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 819
+								state = 672
+							}
+						}
+						FRI_has_majority_control_South_Sumatra = yes
+						ROOT = {NOT = {has_country_flag = FRI_sec_south_sumatra}}
+					}
+					FRI = {
+						add_to_variable = {FRI_cs_south_sumatra = 2}
+						clamp_variable = {
+							var = FRI_cs_south_sumatra
+							min = 0
+							max = 10
+						}
+						set_country_flag = FRI_sec_cells_south_sumatra
+					}
+				}
+
+				if = {#West Java
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 799
+								state = 795
+							}
+						}
+						FRI_has_majority_control_West_Java = yes
+						ROOT = {NOT = {has_country_flag = FRI_sec_west_java}}
+					}
+					FRI = {
+						add_to_variable = {FRI_cs_west_java = 2}
+						clamp_variable = {
+							var = FRI_cs_west_java
+							min = 0
+							max = 10
+						}
+						set_country_flag = FRI_sec_cells_west_java
+					}
+				}
+
+				if = {#East Java
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 797
+								state = 796
+								state = 335
+							}
+						}
+						FRI_has_majority_control_East_Java = yes
+						ROOT = {NOT = {has_country_flag = FRI_sec_cells_east_java}}
+					}
+					FRI = {
+						add_to_variable = {FRI_cs_east_java = 2}
+						clamp_variable = {
+							var = FRI_cs_east_java
+							min = 0
+							max = 10
+						}
+						set_country_flag = FRI_sec_cells_east_java
+					}
+				}
+
+				if = {#Kalimantan
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 816
+								state = 794
+								state = 334
+							}
+						}
+						FRI_has_majority_control_Kalimantan = yes
+						ROOT = {NOT = {has_country_flag = FRI_sec_cells_kalimantan}}
+					}
+					FRI = {
+						add_to_variable = {FRI_cs_kalimantan = 2}
+						clamp_variable = {
+							var = FRI_cs_kalimantan
+							min = 0
+							max = 10
+						}
+						set_country_flag = FRI_sec_cells_kalimantan
+					}
+				}
+
+				if = {#Sulawesi
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 820
+								state = 821
+								state = 822
+								state = 823
+								state = 673
+							}
+						}
+						FRI_has_majority_control_Sulawesi = yes
+						ROOT = {NOT = {has_country_flag = FRI_sec_cells_sulawesi}}
+					}
+					FRI = {
+						add_to_variable = {FRI_cs_sulawesi = 2}
+						clamp_variable = {
+							var = FRI_cs_sulawesi
+							min = 0
+							max = 10
+						}
+						set_country_flag = FRI_sec_cells_sulawesi
+					}
+				}
+
+				if = {#Papua
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 523
+								state = 669
+							}
+						}
+						FRI_has_majority_control_Papua = yes
+						ROOT = {NOT = {has_country_flag = FRI_sec_cells_papua}}
+					}
+					FRI = {
+						add_to_variable = {FRI_cs_papua = 2}
+						clamp_variable = {
+							var = FRI_cs_papua
+							min = 0
+							max = 10
+						}
+						set_country_flag = FRI_sec_cells_papua
+					}
+				}
+
+				if = {#Moluccas
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 668
+								state = 824
+							}
+						}
+						FRI_has_majority_control_Moluccas = yes
+						ROOT = {NOT = {has_country_flag = FRI_sec_cells_moluccas}}
+					}
+					FRI = {
+						add_to_variable = {FRI_cs_moluccas = 2}
+						clamp_variable = {
+							var = FRI_cs_moluccas
+							min = 0
+							max = 10
+						}
+						set_country_flag = FRI_sec_cells_moluccas
+					}
+				}
+			}
+			if = {#Clear cell reinforcement blocker flags if region is fully recaptured by INS
+				limit = {
+					FROM = {
+						original_tag = FRI
+					}
+					ROOT = {
+						original_tag = INS
+					}
+				}
+				if = {#North Sumatra
+					limit = {	
+						FROM.FROM = {
+							OR = {
+								state = 817
+								state = 818
+							}
+						}
+						ROOT = {
+							has_full_control_of_state = 817
+							has_full_control_of_state = 818
+						}
+					}
+					FROM = {
+						clr_country_flag = FRI_sec_cells_north_sumatra
+					}
+				}
+
+				if = {#South Sumatra
+					limit = {	
+						FROM.FROM = {
+							OR = {
+								state = 672
+								state = 819
+							}
+						}
+						ROOT = {
+							has_full_control_of_state = 672
+							has_full_control_of_state = 819
+						}
+					}
+					FROM = {
+						clr_country_flag = FRI_sec_cells_south_sumatra
+					}
+				}
+
+				if = {#West Java
+					limit = {	
+						FROM.FROM = {
+							OR = {
+								state = 795
+								state = 799
+							}
+						}
+						ROOT = {
+							has_full_control_of_state = 795
+							has_full_control_of_state = 799
+						}
+					}
+					FROM = {
+						clr_country_flag = FRI_sec_cells_west_java
+					}
+				}
+
+				if = {#East Java
+					limit = {	
+						FROM.FROM = {
+							OR = {
+								state = 335
+								state = 796
+								state = 797
+							}
+						}
+						ROOT = {
+							has_full_control_of_state = 335
+							has_full_control_of_state = 796
+							has_full_control_of_state = 797
+						}
+					}
+					FROM = {
+						clr_country_flag = FRI_sec_cells_east_java
+					}
+				}
+
+				if = {#Kalimantan
+					limit = {	
+						FROM.FROM = {
+							OR = {
+								state = 334
+								state = 794
+								state = 816
+							}
+						}
+						ROOT = {
+							has_full_control_of_state = 334
+							has_full_control_of_state = 794
+							has_full_control_of_state = 816
+						}
+					}
+					FROM = {
+						clr_country_flag = FRI_sec_cells_kalimantan
+					}
+				}
+
+				if = {#Sulawesi
+					limit = {	
+						FROM.FROM = {
+							OR = {
+								state = 673
+								state = 820
+								state = 821
+								state = 822
+								state = 823
+							}
+						}
+						ROOT = {
+							has_full_control_of_state = 673
+							has_full_control_of_state = 820
+							has_full_control_of_state = 821
+							has_full_control_of_state = 822
+							has_full_control_of_state = 823
+						}
+					}
+					FROM = {
+						clr_country_flag = FRI_sec_cells_sulawesi
+					}
+				}
+
+				if = {#Papua
+					limit = {	
+						FROM.FROM = {
+							OR = {
+								state = 523
+								state = 669
+							}
+						}
+						ROOT = {
+							has_full_control_of_state = 523
+							has_full_control_of_state = 669
+						}
+					}
+					FROM = {
+						clr_country_flag = FRI_sec_cells_papua
+					}
+				}
+
+				if = {#Moluccas
+					limit = {	
+						FROM.FROM = {
+							OR = {
+								state = 668
+								state = 824
+							}
+						}
+						ROOT = {
+							has_full_control_of_state = 668
+							has_full_control_of_state = 824
+						}
+					}
+					FROM = {
+						clr_country_flag = FRI_sec_cells_moluccas
+					}
+				}
+			}
+
+			if = {#Name changers
+				limit = {
+					FROM = {
+						original_tag = INS
+					}
+					ROOT = {
+						original_tag = FRI
+					}
+					FROM.FROM = {
+						state = 669
+					}
+				}
+						
+				set_province_name = {
+					id = 12371
+					name = "Jayapura"
+				}
+			}
+
+			###################
+			### MALAYAN WAR ###
+			###################
+
+			if = {#Hold the Line Mission
+				limit = {
+					FROM = {
+						original_tag = SHO
+					}
+					ROOT = {
+						original_tag = MLY
+					}
+					FROM.FROM = {
+						state = 751
+					}
+				}
+				USA = {
+					activate_mission = USA_hold_the_line
+				}
+			}
+
+			if = {#Hold the Line Mission
+				limit = {
+					FROM = {
+						original_tag = MLY
+					}
+					ROOT = {
+						original_tag = SHO
+					}
+					FROM.FROM = {
+						state = 751
+					}
+				}
+				USA = {
+					remove_mission = USA_hold_the_line
+				}
+			}
+
+
+			#############################
+			###   ANTI-HEYDRICH PACT  ###
+			#############################
+			
+			if = {
+				limit = {
+					has_global_flag = german_civil_war
+					NOT = { has_global_flag = anti_heydrich_pact_chain_begins }
+				}
+				if = {
+					limit = {
+						ROOT = { original_tag = HGR }
+						OR = {
+							AND = {
+								# num_of_controlled_states > 6
+								num_of_controlled_states > 11
+								NOT = { 5 = { is_controlled_by = HGR } }
+								NOT = { 85 = { is_controlled_by = HGR } }
+								NOT = { 97 = { is_controlled_by = HGR } }
+								NOT = { 98 = { is_controlled_by = HGR } }
+							}
+							AND = {
+								# num_of_controlled_states > 7
+								num_of_controlled_states > 12
+								count_triggers = {
+									amount = 4
+									NOT = { 5 = { is_controlled_by = HGR } }
+									NOT = { 85 = { is_controlled_by = HGR } }
+									NOT = { 97 = { is_controlled_by = HGR } }
+									NOT = { 98 = { is_controlled_by = HGR } }
+								}
+							}
+							AND = {
+								# num_of_controlled_states > 8
+								num_of_controlled_states > 13
+								count_triggers = {
+									amount = 3
+									NOT = { 5 = { is_controlled_by = HGR } }
+									NOT = { 85 = { is_controlled_by = HGR } }
+									NOT = { 97 = { is_controlled_by = HGR } }
+									NOT = { 98 = { is_controlled_by = HGR } }
+								}
+							}
+							AND = {
+								# num_of_controlled_states > 9
+								num_of_controlled_states > 14
+								count_triggers = {
+									amount = 2
+									NOT = { 5 = { is_controlled_by = HGR } }
+									NOT = { 85 = { is_controlled_by = HGR } }
+									NOT = { 97 = { is_controlled_by = HGR } }
+									NOT = { 98 = { is_controlled_by = HGR } }
+								}
+							}
+							AND = {
+								# num_of_controlled_states > 10
+								num_of_controlled_states > 15
+								count_triggers = {
+									amount = 1
+									NOT = { 5 = { is_controlled_by = HGR } }
+									NOT = { 85 = { is_controlled_by = HGR } }
+									NOT = { 97 = { is_controlled_by = HGR } }
+									NOT = { 98 = { is_controlled_by = HGR } }
+								}
+							}
+							AND = {
+								# num_of_controlled_states > 11
+								num_of_controlled_states > 16
+								5 = { is_controlled_by = HGR }
+								85 = { is_controlled_by = HGR }
+								97 = { is_controlled_by = HGR }
+								98 = { is_controlled_by = HGR }
+							}
+						}
+						count_triggers = {
+							amount > 1
+							country_exists = BGR
+							country_exists = GGR
+							country_exists = SGR
+						}
+					}
+					if = {
+						limit = { country_exists = SGR }
+						SGR = { country_event = speer.16 }
+					}
+					else_if = {
+						limit = { country_exists = BGR }
+						BGR = { country_event = bormann.9 }
+					}
+					set_global_flag = anti_heydrich_pact_chain_begins
+				}
+			}
+
+			###############################
+			###   Mongolian Civil War   ###
+			###############################
+
+			if = {
+				limit = {
+					FROM = {
+						original_tag = MON
+					}
+					ROOT = {
+						OR = {
+							original_tag = MEN
+							has_war_together_with = MEN
+							has_war_together_with = JAP
+						}
+					}
+					FROM.FROM = {
+						state = 330
+					}
+				}
+				set_province_name = {
+					id = 4801
+					name = "Khüree"
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = MEN
+							has_war_together_with = MEN
+							has_war_together_with = JAP
+						}
+					}
+					ROOT = {
+						original_tag = MON
+					}
+					FROM.FROM = {
+						state = 330
+					}
+				}
+				set_province_name = {
+					id = 4801
+					name = "Ulaanbataar"
+				}
+			}
+
+			################################################
+			### Mengjiang Reconquest of Western Mongolia ###
+			################################################
+
+			#Mengjiang fcks up
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = MEN
+							has_war_together_with = MEN
+						}
+					}
+					ROOT = {
+						original_tag = PRC
+					}
+					FROM.FROM = {
+						is_owned_by = MEN
+					}
+				}
+				MEN = {
+					country_event = men.24
+				}
+				JAP = {
+					country_event = men.25
+				}
+				PRC = {
+					country_event = PRC.2
+				}
+			}
+
+			###########################
+			###   Great Asian War   ###
+			###########################
+
+			if = {#Prevent Countries running rampant in Korea
+				limit = {
+					FROM.FROM = {
+						OR = {
+							is_core_of = KOR
+							is_core_of = JAP
+						}
+						NOT = { state = 100 }
+					}
+					FROM = {
+						original_tag = JAP
+					}
+				}
+				if = { # GAW
+					limit = {
+						ROOT = {
+							OR = {
+								tag = CHI
+								is_in_faction_with = CHI
+							}
+						}
+					}
+					JAP = {
+						country_event = {id = gaw.105 hours = 3}
+					}
+				}
+				else_if = { # WI
+					limit = {
+						ROOT = {
+							is_in_faction_with = YUN
+						}
+						OR = {
+							has_global_flag = YUN_NPA_GAW_Crisis
+							has_global_flag = CHI_Western_Insurrection_Crisis
+						}
+					}
+					YUN = {
+						country_event = {id = yun_wi.45 hours = 3}
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							tag = MON
+						}
+					}
+					JAP = {
+						country_event = {id = men.33 hours = 3}
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							tag = PRC
+						}
+					}
+					JAP = {
+						# country_event = {id = prc.104 hours = 3}
+					}
+				}
+			}
+
+			if = {#GAW - China captures Shanghai
+				limit = {
+					has_global_flag = GAW_in_progress
+					FROM.FROM = {
+						state = 813
+					}
+					FROM = {
+						original_tag = JAP
+					}
+					ROOT = {
+						OR = {
+							original_tag = CHI
+							has_war_together_with = CHI
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = CHI
+							original_tag = JAP
+							has_country_flag = GAW_neutral
+							has_country_flag = GAW_jap_ally
+							has_country_flag = GAW_chi_ally
+						}
+					}
+					country_event = {id = gaw.303 hours = 3}
+				}
+			}
+
+			if = {#Western Insurrection - Yunnan
+				limit = {
+					NOT = { has_global_flag = YUN_WI_thx_paradox }
+					OR = {
+						has_global_flag = YUN_NPA_GAW_Crisis
+						has_global_flag = CHI_Western_Insurrection_Crisis
+					}
+					FROM = {
+						OR = {
+							original_tag = CHI
+							original_tag = XIK
+							original_tag = QIN
+							original_tag = XIN
+							original_tag = TIB
+							is_in_faction_with = JAP
+							is_in_faction_with = CHI
+						}
+					}
+
+					ROOT = {
+						original_tag = YUN
+					}
+
+				}
+
+				FROM.FROM = {
+					YUN_conquered_state_calc = yes
+				}
+				ROOT = {
+					add_to_variable = { YUN_WI_warbuff = 1 }
+					clamp_variable = {
+						var = YUN_WI_warbuff
+						min = 0
+						max = 100
+					}
+					add_to_variable = { YUN_NPA_Crusade_dirty = 1 }
+					WI_calc_state_officer_needed = yes
+					greater_china_states_control_change = yes
+					if = {
+						limit = {
+							NOT = { has_variable = YUN_introduce_admin }
+						}
+						country_event = { id = yun_wi.26 }
+						set_variable = { YUN_introduce_admin = 1 }
+					}
+					#country_event = { id = yun.2022 }
+				}
+
+				if = {#NCPC
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 620
+								state = 1016
+								state = 959
+								state = 613
+							}
+						}
+						NOT = { has_global_flag = YUN_NCPC_revived }
+					}
+					JAP = {
+						country_event = japchiinteraction.10
+					}
+				}
+
+				if = {
+					limit = {
+						FROM.FROM = {
+							state = 1016 #Wuhan
+						}
+					}
+					YUN = { 
+						country_event = { id = yun_wi.66 } 
+					}
+				}
+
+				if = {
+					limit = {
+						FROM.FROM = {
+							state = 607 #Henan
+						}
+					}
+					YUN = {
+						country_event = { id = yun_wi.62 days = 3 }
+					}
+				}
+				
+				if = {
+					limit = {
+						FROM.FROM = {
+							state = 613 #Nanjing
+						}
+					}	
+					CHI = {
+						remove_ideas = CHI_Western_Insurrection
+						add_ideas = CHI_nanjing_falls
+					}
+					YUN = {
+						country_event = {id = yun_wi.29}
+					}
+				}
+
+				if = {
+					limit = {
+						has_global_flag = YUN_NPA_GAW_Crisis
+						FROM.FROM = {
+							state = 608 #Beijing
+						}
+					}
+					YUN = { 
+						country_event = {id = yun_wi.67 } 
+					}
+				}
+			}
+
+			if = {#Western Insurrection - Not Yunnan
+				limit = {
+					NOT = { has_global_flag = YUN_WI_thx_paradox }
+					OR = {
+						has_global_flag = YUN_NPA_GAW_Crisis
+						has_global_flag = CHI_Western_Insurrection_Crisis
+					}
+					FROM = {
+						original_tag = YUN
+					}
+
+					ROOT = {
+						OR = {
+							original_tag = CHI
+							original_tag = XIK
+							original_tag = QIN
+							original_tag = XIN
+							original_tag = TIB
+							is_in_faction_with = JAP
+							is_in_faction_with = CHI
+						}
+					}
+				}
+
+				FROM.FROM = {
+					YUN_conquered_state_calc_reverse = yes
+				}
+				FROM = {
+					add_to_variable = { YUN_WI_warbuff = -2 }
+					clamp_variable = {
+						var = YUN_WI_warbuff
+						min = 0
+						max = 100
+					}
+					add_to_variable = { YUN_NPA_Crusade_dirty = 1 }
+					WI_calc_state_officer_needed = yes
+					greater_china_states_control_change = yes
+					if = {
+						limit = { 
+							num_of_controlled_states < 2
+							NOT = { has_country_flag = YUN_NPA_despair_branch }
+						}
+						country_event = { id = yun_wi.51 }
+					}
+				}
+			}
+
+			if = {#GAW - Japan recaptures Shanghai
+				limit = {
+					has_global_flag = GAW_in_progress
+					FROM.FROM = {
+						state = 813
+					}
+					FROM = {
+						OR = {
+							original_tag = CHI
+							has_war_together_with = CHI
+						}
+					}
+					ROOT = {
+						original_tag = JAP
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = CHI
+							original_tag = JAP
+							has_country_flag = GAW_neutral
+							has_country_flag = GAW_jap_ally
+							has_country_flag = GAW_chi_ally
+						}
+					}
+					country_event = {id = gaw.304 hours = 3}
+				}
+			}
+
+			if = {#Chinese states rename
+				limit = {
+					FROM = {
+						OR = {
+							is_russian_nation = yes
+							is_in_faction_with = JAP
+						}
+					}
+					ROOT = {
+						OR = {
+							is_in_faction_with = YUN
+							is_in_faction_with = CHI
+						}
+						NOT = { is_in_faction_with = JAP }
+					}
+				}
+				FROM.FROM = {
+					if = {
+						limit = {
+							is_in_array = { YUN.greater_china_states = THIS } 
+						}
+					}
+					VP_change_chi = yes
+				}
+			}
+
+			if = {#Japanese states rename
+				limit = {
+					FROM = {
+						OR = {
+							is_in_faction_with = YUN
+							is_in_faction_with = CHI
+						}
+						NOT = { is_in_faction_with = JAP }
+					}
+					ROOT = {
+						is_in_faction_with = JAP
+					}
+				}
+				FROM.FROM = {
+					if = {
+						limit = {
+							is_in_array = { YUN.greater_china_states = THIS } 
+						}
+					}
+					VP_change_jap = yes
+				}
+			}
+
+			###########################
+			###   Warsaw Uprising   ###
+			###########################
+
+			#Germany/GGN takes Polish states (in Poland)
+			if = {
+				limit = {
+					FROM = {
+						original_tag = POL
+					}
+					ROOT = {
+						OR = {
+							original_tag = GGN
+							original_tag = GER
+							has_war_together_with = GER
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 10}
+					}
+					10 = {
+						set_state_name = "Warschau"
+					}
+					set_province_name = {
+						id = 3544
+						name = "Warschau"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 90}
+					}
+					90 = {
+						set_state_name = "Weichselland"
+					}
+					set_province_name = {
+						id = 3586
+						name = "Tschenstochau"
+					} 	
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 1385}
+					}
+					1385 = {
+						set_state_name = "Beskidenland"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 92}
+					}
+					92 = {
+						set_state_name = "Vandalenland"
+					}
+					set_province_name = {
+						id = 3521
+						name = "Siedlitz"
+					} 
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 88}
+					}
+					88 = {
+						set_state_name = "Krakau"
+					}
+					set_province_name = {
+						id = 9427
+						name = "Krakau"
+					}
+					set_province_name = {
+						id = 442
+						name = "Tarnau"
+					}
+					set_province_name = {
+						id = 6522
+						name = "Reichshof"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 1391}
+					}
+					1391 = {
+						set_state_name = "Galizien"
+					}
+					set_province_name = {
+	   					id = 11479
+	   					name = "Galizien"
+	   				}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 89}
+					}
+					89 = {
+						set_state_name = "Stanislau"
+					}
+					set_province_name = {
+						id = 11411
+						name = "Stanislau"
+					}
+					set_province_name = {
+						id = 3743
+						name = "Kolomea"
+					} 
+				}
+			}
+			#Poland takes Germany/GGN states (in Poland)
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = GGN
+							original_tag = GER
+							has_war_together_with = GER
+						}
+					}
+					ROOT = {
+						original_tag = POL
+						NOT = { has_cosmetic_tag = POL_SGR2 }
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 10}
+					}
+					10 = {
+						set_state_name = STATE_10_pol #Warszawa
+					}
+					set_province_name = {
+						id = 3544
+						name = VICTORY_POINTS_3544_pol
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 1385}
+					}
+					1385 = {
+						set_state_name = "Tarnów"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 90}
+					}
+					90 = {
+						set_state_name = "Kielce"
+					}
+					set_province_name = {
+						id = 3586
+						name = "Częstochowa"
+					} 	
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 92}
+					}
+					92 = {
+						set_state_name = "Lublin"
+					}
+					set_province_name = {
+						id = 3521
+						name = "Siedlce"
+					} 
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 88}
+					}
+					88 = {
+						set_state_name = "Małopolska"
+					}
+					set_province_name = {
+						id = 9427
+						name = "Kraków"
+					}
+					set_province_name = {
+						id = 442
+						name = "Tarnów"
+					}
+					set_province_name = {
+						id = 6522
+						name = "Rzeszów"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 1391}
+					}
+					1391 = {
+						set_state_name = "Lwów"
+					}
+					set_province_name = {
+	   					id = 11479
+	   					name = "Lwów"
+	   				}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 89}
+					}
+					89 = {
+						set_state_name = "Stanisławów"
+					}
+					set_province_name = {
+						id = 11411
+						name = "Stanisławów"
+					}
+					set_province_name = {
+						id = 9425
+						name = "Kołomyja"
+					} 
+				}
+			}
+			#######################################################
+			### RUSSIAN WARLORD VP NAME CHANGES GOD HELP US ALL ###
+			#######################################################
+
+
+			if = {
+				limit = {
+					FROM = {
+						tag = ONG
+					}
+					ROOT = {
+						tag = WSR
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = {state = 859}
+					}
+					RUS_select_regional_focus_tree = yes
+				}
+			}
+
+			FROM.FROM = {
+				### Outer Manchuria
+				VP_change_outman = yes
+				
+				### Central Russia ###
+				VP_change_rus = yes
+					
+				### Fuck Finland ###
+				VP_change_fin = yes
+			}
+			
+			### RETURN TO SANITY ###
+			
+			############
+			#Madagascar#
+			############
+			
+			
+			if = { #Natives take states
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = MAD
+							original_tag = MDG
+						}
+					}
+					ROOT = {
+						original_tag = MDM
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 706 }
+					}
+					set_province_name = { id = 13017 name = VICTORY_POINTS_13017_nat }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 707 }
+					}
+					set_province_name = { id = 13018 name = VICTORY_POINTS_13018_nat }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 944 }
+					}
+					944 = { set_state_name = STATE_944_nat } #
+					set_province_name = { id = 13706 name = VICTORY_POINTS_13706_nat }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 945 }
+					}
+					945 = { set_state_name = STATE_945_nat }
+					set_province_name = { id = 13705 name = VICTORY_POINTS_13705_nat }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 946 }
+					}
+					946 = { set_state_name = STATE_946_nat }
+					set_province_name = { id = 12956 name = VICTORY_POINTS_12956_nat }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1042 }
+					}
+					set_province_name = { id = 13633 name = VICTORY_POINTS_13633_nat }
+				}
+			}
+			
+			if = { #For German factions if Malagasy VPs are ever Germanized to be more easily integrated into this system
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = MDM
+						}
+					}
+					ROOT = {
+						OR = {
+							original_tag = MAD
+							original_tag = MDG
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 706 }
+					}
+					reset_province_name = 13017
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 707 }
+					}
+					reset_province_name = 13018
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 944 }
+					}
+					944 = { reset_state_name = yes }
+					reset_province_name = 13706
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 945 }
+					}
+					945 = { reset_state_name = yes }
+					reset_province_name = 13705
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 946 }
+					}
+					946 = { reset_state_name = yes }
+					reset_province_name = 12956
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1042 }
+					}
+					reset_province_name = 13633
+				}
+			}
+			###CROATIAN SPRING###
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = ITA
+							original_tag = GER
+							original_tag = RKB
+						}
+					}
+					ROOT = {
+						original_tag = CRO
+					}
+				}
+
+				if = {
+					limit = {
+						FROM.FROM = { state = 102 }
+					}
+					102 = { set_state_name = STATE_102_cro }
+					set_province_name = {
+						id = 9627
+						name = "Ljubljana"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 103 }
+					}
+					103 = { set_state_name = "Zadar" }
+					set_province_name = {
+						id = 14660
+						name = "Zadar"
+					}
+					set_province_name = {
+						id = 14661
+						name = "Split"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 736 }
+					}
+					736 = { set_state_name = STATE_736_cro }
+					set_province_name = {
+						id = 14649
+						name = "Rijeka"
+					}
+					set_province_name = {
+						id = 599
+						name = "Trst"
+					}
+					set_province_name = {
+						id = 6626
+						name = "Pula"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 116 }
+					}
+					116 = { set_state_name = "Furlanija" }
+					set_province_name = {
+						id = 11595
+						name = "Gorica"
+					}
+					set_province_name = {
+						id = 628
+						name = "Videm"
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						original_tag = CRO
+						original_tag = GER
+						original_tag = RKB
+					}
+					FROM = {
+						original_tag = ITA
+					}
+				}
+
+				if = {
+					limit = {
+						FROM.FROM = { state = 102 }
+					}
+					102 = { reset_state_name = yes }
+					reset_province_name = 9627
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 103 }
+					}
+					103 = { reset_state_name = yes }
+					reset_province_name = 14660
+					reset_province_name = 14661
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 736 }
+					}
+					736 = { reset_state_name = yes }
+					reset_province_name = 14649
+					reset_province_name = 599
+					reset_province_name = 6626
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 116 }
+					}
+					116 = { reset_state_name = yes }
+					reset_province_name = 11595
+					reset_province_name = 628
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 39 }
+					}
+					39 = { reset_state_name = yes }
+					reset_province_name = 9630
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = ITA
+							original_tag = CRO
+						}
+					}
+					ROOT = {
+						OR = {
+							original_tag = GER
+							original_tag = RKB
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						FROM.FROM = { state = 102 }
+					}
+					102 = { set_state_name = STATE_102_ger }
+					set_province_name = {
+						id = 9627
+						name = "Laibach"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 103 }
+					}
+					set_province_name = {
+						id = 14660
+						name = "Zara"
+					}
+					set_province_name = {
+						id = 14661
+						name = "Spalato"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 736 }
+					}
+					736 = { set_state_name = "Küstenland" }
+					set_province_name = {
+						id = 14649
+						name = "Sankt Veit am Flaum"
+					}
+					set_province_name = {
+						id = 599
+						name = "Triest"
+					}
+					set_province_name = {
+						id = 6626
+						name = "Pula"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 116 }
+					}
+					116 = { set_state_name = "Friaul" }
+					set_province_name = {
+						id = 11595
+						name = "Görz"
+					}
+					set_province_name = {
+						id = 628
+						name = "Weiden"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 39 }
+					}
+					39 = { set_state_name = STATE_39_ger }
+					set_province_name = {
+						id = 9630
+						name = "Bozen"
+					}
+				}
+			}
+
+			# Moskowien VP Changes - Includes Germany Too! (ping scoodoop if this breaks)
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							has_idea = MSK_dissolution_start
+							original_tag = GER
+							is_puppet_of = GER
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							original_tag = RSB
+							original_tag = SMO
+							original_tag = FRP
+							original_tag = RDC
+							original_tag = MOS
+							original_tag = BBB
+							original_tag = ZLB
+							original_tag = PEN
+						}
+					}
+					if = {
+						limit = { FROM.FROM = { state = 195 } }
+						if = {
+							limit = {
+								OR = {
+									original_tag = RSB
+									original_tag = SMO
+									original_tag = FRP
+								}
+							}
+							195 = { set_state_name = "Leningrad" }
+						}
+						else = {
+							195 = { set_state_name = "Saint Petersburg" }
+						}
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1421 } }
+						if = {
+							limit = {
+								OR = {
+									original_tag = RSB
+									original_tag = SMO
+									original_tag = FRP
+								}
+							}
+							1421 = { set_state_name = "Kirovsk" }
+						}
+						else = {
+							1421 = { set_state_name = "Nevdubstroy" }
+						}
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 208 } }
+						208 = { set_state_name = "Tihvin" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 264 } }
+						264 = { set_state_name = "Cherepovets" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 209 } }
+						209 = { set_state_name = "Pskov" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 257 } }
+						257 = { set_state_name = "Velikie Luki" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1434 } }
+						if = {
+							limit = {
+								FROM = {
+									OR = {
+										original_tag = RSB
+										original_tag = SMO
+										original_tag = FRP
+									}
+								}
+							}
+							1434 = { set_state_name = "Novgorod" }
+						}
+						else = {
+							1434 = { set_state_name = "Velikiy Novgorod" }
+						}
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 220 } }
+						220 = { set_state_name = "Borovichi" }
+						set_province_name = { id = 39 name = "Pestovo" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 247 } }
+						if = {
+							limit = {
+								FROM = {
+									OR = {
+										original_tag = RSB
+										original_tag = SMO
+										original_tag = FRP
+									}
+								}
+							}
+							247 = { set_state_name = "Kalinin" }
+						}
+						else = {
+							247 = { set_state_name = "Tver" }
+						}
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 255 } }
+						255 = { set_state_name = "Rzhev" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 246 } }
+						246 = { set_state_name = "Yaroslavl" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1442 } }
+						1442 = { set_state_name = "Moscow" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 238 } }
+						238 = { set_state_name = "Ivanovo" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 253 } }
+						253 = { set_state_name = "Vladimir" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 223 } }
+						223 = { set_state_name = "Roslavl" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1476 } }
+						1476 = { set_state_name = "Gzhatsk" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 241 } }
+						241 = { set_state_name = "Gomel" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1444 } }
+						1444 = { set_state_name = "Bryansk" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1443 } }
+						1443 = { set_state_name = "Ryazan" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 258 } }
+						258 = { set_state_name = "Lipetsk" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1441 } }
+						1441 = { set_state_name = "Tambov" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 239 } }
+						if = {
+							limit = {
+								OR = {
+									original_tag = RSB
+									original_tag = SMO
+									original_tag = FRP
+								}
+							}
+							239 = { set_state_name = "Engels" }
+						}
+						else = {
+							239 = { set_state_name = "Pokrov" }
+						}
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 243 } }
+						if = {
+							limit = {
+								OR = {
+									original_tag = RSB
+									original_tag = SMO
+									original_tag = FRP
+								}
+							}
+							243 = { set_state_name = STATE_243_sov } #Voroshilovgrad
+						}
+						else = {
+							243 = { set_state_name = "Volgograd" }
+						}
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 265 } }
+						265 = { set_state_name = "Volgodonsk" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 237 } }
+						237 = { set_state_name = "Kalmykia" }
+						set_province_name = { id = 11724 name = "Elista" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 244 } }
+						244 = { set_state_name = "Astrakhan" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 236 } }
+						236 = { set_state_name = "Akhtubinsk" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1435 } }
+						set_province_name = { id = 580 name = "Lvov" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 401 } }
+						set_province_name = { id = 6333 name = "Novaya Moskva" }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 245 } }
+						set_province_name = { id = 433 name = "Balashov" }
+					}
+				}
+				else = {
+					if = {
+						limit = { FROM.FROM = { state = 195 } }
+						195 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1421 } }
+						1421 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 208 } }
+						208 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 264 } }
+						264 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 209 } }
+						209 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 257 } }
+						257 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1434 } }
+						1434 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 220 } }
+						220 = { reset_state_name = yes }
+						reset_province_name = 39
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 247 } }
+						247 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 255 } }
+						255 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 246 } }
+						247 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1442 } }
+						1442 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 238 } }
+						238 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 253 } }
+						253 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 223 } }
+						223 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1476 } }
+						1476 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 241 } }
+						241 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1444 } }
+						1444 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1443 } }
+						1443 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 258 } }
+						258 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1441 } }
+						1441 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 239 } }
+						239 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 243 } }
+						243 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 265 } }
+						265 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 237 } }
+						237 = { reset_state_name = yes }
+						reset_province_name = 11724
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 244 } }
+						244 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 236 } }
+						236 = { reset_state_name = yes }
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 1435 } }
+						reset_province_name = 580
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 401 } }
+						reset_province_name = 6333
+					}
+					else_if = {
+						limit = { FROM.FROM = { state = 245 } }
+						reset_province_name = 433
+					}
+				}
+			}
+	#####GAZALAND CAPTURE EVENTS######
+			if = { # Nampula
+				limit = {
+					has_global_flag = gazaland_civil_war_active
+					OR = {
+						AND = {
+							ROOT = { tag = GZO }
+							FROM = { tag = GZS }
+							FROM.FROM = { state = 1071 }
+						}
+
+						AND = {
+							ROOT = { tag = GAZ }
+							FROM = { tag = GZS }
+							FROM.FROM = { state = 1071 }
+						}
+					}
+				}
+				#USA = { country_event =  { id = GAZ.fallof.1 days = 1 } }
+				#JAP = { country_event =  { id = GAZ.fallof.1 days = 1 } }
+			}
+			if = { # Mabote
+				limit = {
+					has_global_flag = gazaland_civil_war_active
+					OR = {
+						AND = {
+							ROOT = { tag = GZO }
+							FROM = { tag = GAZ }
+							FROM.FROM = { state = 1058 }
+						}
+
+						AND = {
+							ROOT = { tag = GZS }
+							FROM = { tag = GAZ }
+							FROM.FROM = { state = 1058 }
+						}
+					}
+				}
+				#USA = { country_event =  { id = GAZ.fallof.2 days = 1 } }
+				#JAP = { country_event =  { id = GAZ.fallof.2 days = 1 } }
+			}
+		###Africa VP Changes - Made by Marethyu, will be revamped soon###
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+						original_tag = GRO
+						AND = {
+							GRO = {
+								OR = {
+								Mozambique_is_rk = yes
+								Mozambique_is_reichsstaat = yes
+								}
+							}
+						original_tag = ANG
+						AND = {
+							ANG = {
+								Angola_is_rk = yes
+								}
+							}
+						original_tag = COG
+						AND = {
+							COG = {
+								Congo_is_rk = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							original_tag = SAF
+							original_tag = USC
+							AND = {
+								original_tag = MZB
+								MZB = {
+									OR = {
+									Mozambique_is_mandate = yes
+									Mozambique_is_independent = yes
+									}
+								}
+							}
+							AND = {
+								original_tag = ANG
+								ANG = {
+									OR = {
+									Angola_is_mandate = yes
+									Angola_is_independent = yes
+									}
+								}
+							}
+							AND = {
+								original_tag = COG
+								COG = {
+									OR = {
+										Congo_is_mandate = yes
+										Congo_is_independent = yes
+									}
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1057 }
+					}
+					1057 = { set_state_name = STATE_1057_nat } 
+					set_province_name = { id = 13816 name = VICTORY_POINTS_13816_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1177 }
+					}
+					set_province_name = { id = 13384 name = VICTORY_POINTS_13384_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1175 }
+					}
+					set_province_name = { id = 13378 name = VICTORY_POINTS_13378_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1088 }
+					}
+					set_province_name = { id = 13383 name = VICTORY_POINTS_13383_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 548 }
+					}
+					set_province_name = { id = 12989 name = VICTORY_POINTS_12989_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1182 }
+					}
+					set_province_name = { id = 3165 name = VICTORY_POINTS_3165_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1075 }
+					}
+					set_province_name = { id = 13811 name = VICTORY_POINTS_13811_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 545 }
+					}
+					545 = { set_state_name = STATE_545_nat }
+					set_province_name = { id = 13666 name = VICTORY_POINTS_13666_nat } #Rommelstadt/Serowe
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1178 }
+					}
+					set_province_name = { id = 6027 name = VICTORY_POINTS_6027_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1061 }
+					}
+					set_province_name = { id = 13730 name = VICTORY_POINTS_13730_nat }	
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1066 }
+					}
+					set_province_name = { id = 13765 name = VICTORY_POINTS_13765_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1054 }
+					}
+					set_province_name = { id = 13735 name = VICTORY_POINTS_13735_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1063 }
+					}
+					set_province_name = { id = 13207 name = VICTORY_POINTS_13207_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1118 }
+					}
+					set_province_name = { id = 13879 name = VICTORY_POINTS_13879_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 778 }
+					}
+					778 = { set_state_name = STATE_778_nat }
+					set_province_name = { id = 4879 name = VICTORY_POINTS_4879_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1031 }
+					}
+					set_province_name = { id = 13716 name = VICTORY_POINTS_13716_nat } #Opuwo
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1035 }
+					}
+					set_province_name = { id = 14414 name = VICTORY_POINTS_14414_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1033 }
+					}
+					set_province_name = { id = 12985 name = VICTORY_POINTS_12895_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1036 }
+					}
+					set_province_name = { id = 10966 name = VICTORY_POINTS_10966_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1065 }
+					}
+					set_province_name = { id = 13698 name = VICTORY_POINTS_13698_nat }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1073 }
+						}
+						if = {
+							limit = {
+								original_tag = SAF
+							}
+							1073 = { set_state_name = STATE_1073_saf }
+							set_province_name = { id = 13792 name = VICTORY_POINTS_13792_saf }
+						}
+						else = {
+							1073 = { set_state_name = STATE_1073_nat }
+							set_province_name = { id = 13792 name = VICTORY_POINTS_13792_nat }
+					}	
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 748 }
+					}
+					if = {
+						limit = {
+							original_tag = SAF
+						}
+						748 = { set_state_name = STATE_748_saf } #Fort Rosebery
+						set_province_name = { id = 13828 name = VICTORY_POINTS_13828_saf } #Fort Rosebery
+					}
+					else = {
+						748 = { set_state_name = STATE_748_nat } #Mansa
+						set_province_name = { id = 13828 name = VICTORY_POINTS_13828_nat } #Mansa
+					}
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1072 }
+					}
+					if = {
+						limit = {
+							original_tag = SAF
+						}
+						1072 = { set_state_name = STATE_1072_saf } #Porto Amélia
+						set_province_name = { id = 13796 name = VICTORY_POINTS_13796_saf } #Porto Amélia
+					}
+					else = {
+						1072 = { set_state_name = STATE_1072_nat } #Pemba
+						set_province_name = { id = 13796 name = VICTORY_POINTS_13796_nat } #Pemba
+					}
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1059 }
+					}
+					if = {
+						limit = {
+							original_tag = SAF
+						}
+						1059 = { set_state_name = STATE_1059_saf } #Vila Pery
+						set_province_name = { id = 13708 name = VICTORY_POINTS_13708_saf } #Vila Pery
+					}
+					else = {
+						1059 = { set_state_name = STATE_1059_nat } #Chimoio
+						set_province_name = { id = 13708 name = VICTORY_POINTS_13708_nat } #Chimoio
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						FROM.FROM = { state = 1057 }
+					}
+					1057 = { reset_state_name = yes }
+					reset_province_name = 13816
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1177 }
+					}
+					1177 = { reset_state_name = yes }
+					reset_province_name = 13384
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1175 }
+					}
+					1175 = { reset_state_name = yes }
+					reset_province_name = 13378
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1088 }
+					}
+					1088 = { reset_state_name = yes }
+					reset_province_name = 13383
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 548 }
+					}
+					548 = { reset_state_name = yes }
+					reset_province_name = 12989
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1182 }
+					}
+					1182 = { reset_state_name = yes }
+					reset_province_name = 3165
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 545 }
+					}
+					545 = { reset_state_name = yes }
+					reset_province_name = 13666
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1178 }
+					}
+					1178 = { reset_state_name = yes }
+					reset_province_name = 6027
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1061 }
+					}
+					1061 = { reset_state_name = yes }
+					reset_province_name = 13730
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1066 }
+					}
+					1066 = { reset_state_name = yes }
+					reset_province_name = 13765
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1054 }
+					}
+					1054 = { reset_state_name = yes }
+					reset_province_name = 13735
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1063 }
+					}
+					1063 = { reset_state_name = yes }
+					reset_province_name = 13207
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1118 }
+					}
+					1118 = { reset_state_name = yes }
+					reset_province_name = 13879
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 778 }
+					}
+					778 = { reset_state_name = yes }
+					reset_province_name = 4879
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1213 }
+					}
+					1213 = { reset_state_name = yes }
+					reset_province_name = 13622
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1031 }
+					}
+					1031 = { reset_state_name = yes }
+					reset_province_name = 13716
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1075 }
+					}
+					1075 = { reset_state_name = yes }
+					reset_province_name = 13811
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1035 }
+					}
+					1035 = { reset_state_name = yes }
+					reset_province_name = 14414
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1033 }
+					}
+					1033 = { reset_state_name = yes }
+					reset_province_name = 12985
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 541 }
+					}
+					541 = { reset_state_name = yes }
+					reset_province_name = 12911
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1036 }
+					}
+					1036 = { reset_state_name = yes }
+					reset_province_name = 5154
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1065 }
+					}
+					1065 = { reset_state_name = yes }
+					reset_province_name = 13698
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1073 }
+					}
+					1073 = { reset_state_name = yes }
+					reset_province_name = 13792
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 748 }
+					}
+					748 = { reset_state_name = yes }
+					reset_province_name = 13828
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1072 }
+					}
+					1072 = { reset_state_name = yes }
+					reset_province_name = 13708
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { state = 1059 }
+					}
+					1059 = { reset_state_name = yes }
+					reset_province_name = 13708
+				}
+			}
+		}
+		if = { #South Africa VP Changes
+			limit = {
+				FROM = {
+					original_tag = SAF
+				}
+				ROOT = {
+					OR = {
+						tag = BOR
+						AFR_consider_german_regime = yes
+					}
+				}
+			}
+			FROM.FROM = {
+				SAF_VP_change = yes
+			}
+		}
+		if = { #Paraguayan VP Changes
+			limit = {
+				FROM = {
+					original_tag = PAR
+				}
+				ROOT = {
+					OR = {
+						tag = ARG
+					    tag = ARP
+					}
+				}
+				FROM.FROM = {
+					state = 1622
+				}
+			}
+			1622 = {
+				set_state_name = STATE_1622_arg
+				set_province_name = {
+					id = 2209
+					name = VICTORY_POINTS_2209_arg
+				}
+			}
+		}
+		if = { #France/Burgundy changes
+			limit = {
+				NOT = { #renamings happen after, not during invasion
+					FRA = { has_idea = FRA_the_treaty_of_vichi }
+				}
+				OR = {
+					tag = FRA
+					tag = FFR
+					tag = RPY
+					tag = FRD
+					tag = FRM
+					tag = HOL
+					AND = { #potential liberators
+						OR = {
+							is_in_faction_with = FRA
+							is_in_faction_with = FFR
+						}
+						tag = USA
+						tag = ITA
+						tag = ENG
+					}
+				}
+				FROM = {
+					NOT = {
+						OR = {
+							tag = FRA
+							tag = FFR
+							tag = RPY
+							tag = FRD
+							tag = FRM
+						}
+					}
+				}
+			}
+			#France starting states
+			if = {
+				limit = {
+					FROM.FROM = { state = 33 }
+				}
+				33 = { reset_state_name = yes }
+				reset_province_name = 13365
+				reset_province_name = 620
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 24 }
+				}
+				24 = { reset_state_name = yes }
+				reset_province_name = 3509
+				reset_province_name = 3671
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 786 }
+				}
+				786 = { reset_state_name = yes }
+				reset_province_name = 9523
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 790 }
+				}
+				reset_province_name = 9732
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 789 }
+				}
+				reset_province_name = 3594
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 792 }
+				}
+				reset_province_name = 11611
+				reset_province_name = 512
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 787 }
+				}
+				reset_province_name = 9507
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 791 }
+				}
+				reset_province_name = 3549
+			}
+			#Burgundy starting states
+			else_if = { #Normandie
+				limit = {
+					FROM.FROM = { state = 15 }
+				}
+				set_province_name = { id = 11563 name = VICTORY_POINTS_11563_fra }
+				set_province_name = { id = 9434 name = VICTORY_POINTS_9434_fra }
+			}
+			else_if = { #Grossraum Paris
+				limit = {
+					FROM.FROM = { state = 16 }
+				}
+				16 = { set_state_name = STATE_16_fra }
+			}
+			else_if = { #Meau
+				limit = {
+					FROM.FROM = { state = 788 }
+				}
+				788 = { set_state_name = STATE_788_fra }
+				set_province_name = { id = 6949 name = VICTORY_POINTS_6949_fra }
+			}
+			else_if = { #Alpenland
+				limit = {
+					FROM.FROM = { state = 32 }
+				}
+				32 = { set_state_name = STATE_32_fra }
+				set_province_name = { id = 3768 name = VICTORY_POINTS_3768_fra }
+				set_province_name = { id = 6784 name = VICTORY_POINTS_6784_fra }
+				set_province_name = { id = 780 name = VICTORY_POINTS_780_fra }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 20 }
+				}
+				20 = { set_state_name = STATE_20_fra }
+				set_province_name = { id = 6613 name = VICTORY_POINTS_6613_fra }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 27 }
+				}
+				27 = { set_state_name = STATE_27_fra }
+				set_province_name = { id = 11794 name = VICTORY_POINTS_11794_fra }
+				set_province_name = { id = 3506 name = VICTORY_POINTS_3506_fra }
+				set_province_name = { id = 9490 name = VICTORY_POINTS_9490_fra }
+				set_province_name = { id = 3652 name = VICTORY_POINTS_3652_fra }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 17 }
+				}
+				17 = { set_state_name = STATE_17_fra }
+				set_province_name = { id = 11516 name = VICTORY_POINTS_11516_fra }
+				set_province_name = { id = 6689 name = VICTORY_POINTS_6689_fra }
+				set_province_name = { id = 9642 name = VICTORY_POINTS_9642_fra }
+				set_province_name = { id = 698 name = VICTORY_POINTS_698_fra }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 18 }
+				}
+				18 = { set_state_name = STATE_18_fra }
+				set_province_name = { id = 5291 name = VICTORY_POINTS_5291_fra }
+				set_province_name = { id = 9472 name = VICTORY_POINTS_9472_fra }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 29 }
+				}
+				29 = { set_state_name = STATE_29_fra }
+				set_province_name = { id = 3476 name = VICTORY_POINTS_3476_fra }
+				set_province_name = { id = 11483 name = VICTORY_POINTS_11483_fra }
+				set_province_name = { id = 575 name = VICTORY_POINTS_575_fra }
+				set_province_name = { id = 11548 name = VICTORY_POINTS_11548_fra }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 1625 }
+				}
+				1625 = { set_state_name = STATE_1625_fra }
+				set_province_name = { id = 13011 name = VICTORY_POINTS_13011_fra }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 1626 }
+				}
+				1626 = { set_state_name = STATE_1626_fra }
+			}
+			#Belgian States
+			else_if = { #Flanders
+				limit = {
+					FROM.FROM = { state = 6 }
+				}
+				6 = { set_state_name = STATE_6_nor }
+				set_province_name = { id = 6446 name = VICTORY_POINTS_6446_nor }
+				set_province_name = { id = 516 name = VICTORY_POINTS_516_nor }
+			}
+			else_if = { #Wallonia
+				limit = {
+					FROM.FROM = { state = 34 }
+				}
+				34 = { set_state_name = STATE_34_nor }
+				set_province_name = { id = 9536 name = VICTORY_POINTS_9536_nor }
+				set_province_name = { id = 11519 name = VICTORY_POINTS_11519_nor }
+			}
+			#Britanny
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 747 }
+				}
+				747 = { reset_state_name = yes }
+				reset_province_name = 6449
+				reset_province_name = 11535
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 30 }
+				}
+				30 = { reset_state_name = yes }
+				reset_province_name = 9478
+			}
+			else_if = { #Bretagne
+				limit = {
+					FROM.FROM = { state = 14 }
+				}
+				set_province_name = { id = 6536 name = VICTORY_POINTS_6536_fra }
+				set_province_name = { id = 11465 name = VICTORY_POINTS_11465_fra }
+				set_province_name = { id = 9495 name = VICTORY_POINTS_9495_fra }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { #renamings happen after, not during invasion
+					FRA = { has_idea = FRA_the_treaty_of_vichi }
+				}
+				OR = {
+					tag = BRG
+					tag = PIC
+					#tag = BEL
+					#tag = FLR
+					tag = GLC
+					tag = GER
+				}
+				FROM = {
+					OR = {
+						tag = FRA
+						tag = FFR
+						tag = RPY
+						tag = FRD
+						tag = FRM
+						tag = BRT
+					}
+				}
+			}
+			#France starting states
+			if = {
+				limit = {
+					FROM.FROM = { state = 33 } 
+				}
+				33 = { set_state_name = STATE_33_brg }
+				set_province_name = { id = 13365 name = VICTORY_POINTS_13365_brg }
+				set_province_name = { id = 620 name = VICTORY_POINTS_620_brg }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 24 }
+				}
+				set_province_name = { id = 3509 name = VICTORY_POINTS_3509_brg }
+				set_province_name = { id = 3671 name = VICTORY_POINTS_3671_brg }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 786 }
+				}
+				786 = { set_state_name = STATE_786_brg }
+				set_province_name = { id = 9523 name = VICTORY_POINTS_9523_brg }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 790 }
+				}
+				set_province_name = { id = 9732 name = VICTORY_POINTS_9732_brg }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 789 }
+				}
+				set_province_name = { id = 3594 name = VICTORY_POINTS_3594_brg }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 792 }
+				}
+				set_province_name = { id = 11611 name = VICTORY_POINTS_11611_brg }
+				set_province_name = { id = 512 name = VICTORY_POINTS_512_brg }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 787 }
+				}
+				set_province_name = { id = 9507 name = VICTORY_POINTS_9507_brg }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 791 }
+				}
+				set_province_name = { id = 3549 name = VICTORY_POINTS_3549_brg }
+			}
+			#Burgundy starting states
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 15 }
+				}
+				15 = { reset_state_name = yes }
+				reset_province_name = 11563
+				reset_province_name = 9434
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 16 }
+				}
+				16 = { reset_state_name = yes }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 788 }
+				}
+				788 = { reset_state_name = yes }
+				reset_province_name = 6949
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 32 }
+				}
+				32 = { reset_state_name = yes }
+				reset_province_name = 3768
+				reset_province_name = 6784
+				reset_province_name = 780
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 20 }
+				}
+				20 = { reset_state_name = yes }
+				reset_province_name = 6613
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 27 }
+				}
+				27 = { reset_state_name = yes }
+				reset_province_name = 11794
+				reset_province_name = 3506
+				reset_province_name = 9490
+				reset_province_name = 3652
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 17 }
+				}
+				17 = { reset_state_name = yes }
+				reset_province_name = 11516
+				reset_province_name = 6689
+				reset_province_name = 9642
+				reset_province_name = 698
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 18 }
+				}
+				18 = { reset_state_name = yes }
+				reset_province_name = 5291
+				reset_province_name = 9472
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 29 }
+				}
+				29 = { reset_state_name = yes }
+				reset_province_name = 3476
+				reset_province_name = 11483
+				reset_province_name = 575
+				reset_province_name = 11548
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 1625 }
+				}
+				1625 = { reset_state_name = yes }
+				reset_province_name = 13011
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 1626 }
+				}
+				1626 = { reset_state_name = yes }
+			}
+			#Belgian States
+			else_if = { #Flanders
+				limit = {
+					FROM.FROM = { state = 6 }
+				}
+				6 = { reset_state_name = yes }
+				reset_province_name = 6446
+				reset_province_name = 516
+			}
+			else_if = { #Wallonia
+				limit = {
+					FROM.FROM = { state = 34 }
+				}
+				34 = { reset_state_name = yes }
+				reset_province_name = 9536
+				reset_province_name = 11519
+			}
+			#Britanny
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 747 }
+				}
+				set_province_name = { id = 6449 name = VICTORY_POINTS_6449_brg }
+				set_province_name = { id = 11535 name = VICTORY_POINTS_11535_brg }
+			}
+			else_if = {
+				limit = {
+					FROM.FROM = { state = 30 }
+				}
+				set_province_name = { id = 9478 name = VICTORY_POINTS_9478_brg }
+			}
+			else_if = { #Bretagne
+				limit = {
+					FROM.FROM = { state = 14 }
+				}
+			}
+		}
+		#Yerivan/Erivan
+		if = {
+			limit = {
+				FROM = {
+					original_tag = TUR
+				}
+				ROOT = {
+					original_tag = ARM
+				}
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 230 }
+				}
+				230 = {
+					set_state_name = "Yerivan"
+				}
+				set_province_name = {
+					id = 12320
+					name = VICTORY_POINTS_12320_arm
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = ARM
+				}
+				ROOT = {
+					original_tag = TUR
+				}
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 230 }
+				}
+				230 = { reset_state_name = yes }
+				reset_province_name = 12320
+			}
+		}
+		#If Goering can't be bug free, at least he'll have flavor
+		if = {
+			limit = {
+				ROOT = {
+					original_tag = GSL
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						NOT = {
+							OR = {
+								original_tag = GER
+								original_tag = GSL
+							}
+						}
+					}
+				}
+				#Slovakia
+				if = {
+					limit = {
+						FROM.FROM = { state = 664 }
+					}
+					664 = { set_state_name = "Südslowakei" }
+					set_province_name = {
+						id = 6573
+						name = "Kaschau"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 70 }
+					}
+					70 = { set_state_name = "Westslowakei" }
+					set_province_name = {
+						id = 9692
+						name = "Preßburg"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 71 }
+					}
+					71 = { set_state_name = "Ostslowakei" }
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					original_tag = RKB
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						NOT = {
+							OR = {
+								original_tag = GER
+								original_tag = RKB
+							}
+						}
+					}
+				}
+				#Romania
+				if = {
+					limit = {
+						FROM.FROM = { state = 1281 }
+					}
+					1281 = { set_state_name = "Bukarest" }
+					set_province_name = {
+						id = 9617
+						name = "Bukarest"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1283 }
+					}
+					set_province_name = {
+						id = 657
+						name = "Konstanz"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 81 }
+					}
+					set_province_name = {
+						id = 637
+						name = "Zelatna"
+					}
+					set_province_name = {
+						id = 3645
+						name = "Kragau"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 79 }
+					}
+					set_province_name = {
+						id = 11655
+						name = "Fokschan"
+					}
+					set_province_name = {
+						id = 6706
+						name = "Galatz"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1284 }
+					}
+					set_province_name = {
+						id = 9716
+						name = "Jassy"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 78 }
+					}
+					set_province_name = {
+						id = 11686
+						name = "Kischenau"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 84 }
+					}
+					set_province_name = {
+						id = 690
+						name = "Kronstadt"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1287 }
+					}
+					1287 = { set_state_name = "Siebenbürgen" }
+					set_province_name = {
+						id = 676
+						name = "Diemrich"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1288 }
+					}
+					set_province_name = {
+						id = 746
+						name = "Siget"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 76 }
+					}
+					76 = { set_state_name = "Nord-Siebenbürgen" }
+					set_province_name = {
+						id = 6711
+						name = "Klausenburg"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1289 }
+					}
+					1289 = { set_state_name = "Szeklerland" }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 46 }
+					}
+					46 = { set_state_name = "Große Walachei" }
+					set_province_name = {
+						id = 3663
+						name = "Plorescht"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1285 }
+					}
+					1285 = { set_state_name = "Budschak" }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 83 }
+					}
+					83 = { set_state_name = "Kreischgebiet" }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 82 }
+					}
+					set_province_name = {
+						id = 9606
+						name = "Temeswar"
+					}
+				}
+				#Bulgaria
+				if = {
+					limit = {
+						FROM.FROM = { state = 212 }
+					}
+					set_province_name = {
+						id = 6923
+						name = "Plowdiw"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1270 }
+					}
+					set_province_name = {
+						id = 9771
+						name = "Widin"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1269 }
+					}
+					set_province_name = {
+						id = 9862
+						name = "Haskowo"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1268 }
+					}
+					set_province_name = {
+						id = 3796
+						name = "Plewen"
+					}
+					set_province_name = {
+						id = 6842
+						name = "Hitlersdorf"
+					}
+				}
+				#Serbia
+				if = {
+					limit = {
+						FROM.FROM = { state = 108 }
+					}
+					set_province_name = {
+						id = 11887
+						name = "Nisch"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1274 }
+					}
+					set_province_name = {
+						id = 3609
+						name = "Schabatz"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1272 }
+					}
+					1272 = { set_state_name = "Prinz-Eugen-Stadt" }
+					set_province_name = {
+						id = 11586
+						name = "Prinz-Eugen-Stadt"
+					}
+				}
+				#Croatia
+				if = {
+					limit = {
+						FROM.FROM = { state = 1280 }
+					}
+					1280 = { set_state_name = "Dalmatien" }
+					set_province_name = {
+						id = 6889
+						name = "Ragus"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 746 }
+					}
+					746 = { set_state_name = "Herzegowina" }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1277 }
+					}
+					set_province_name = {
+						id = 11899
+						name = "Sarajewo"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1279 }
+					}
+					1279 = { set_state_name = "Windischland" }
+					set_province_name = {
+						id = 6647
+						name = "Essegg"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 109 }
+					}
+					109 = { set_state_name = "Kroatien" }
+					set_province_name = {
+						id = 11581
+						name = "Agram"
+					}
+					set_province_name = {
+						id = 3592
+						name = "Karlstadt"
+					}
+					set_province_name = {
+						id = 3601
+						name = "Slunin"
+					}
+				}
+				#Hungary
+				if = {
+					limit = {
+						FROM.FROM = { state = 45 }
+					}
+					set_province_name = {
+						id = 9621
+						name = "Theresiopel"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 771 }
+					}
+					771 = { set_state_name = "Übermurgebiet" }
+					set_province_name = {
+						id = 13363
+						name = "Olsnitz"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 155 }
+					}
+					set_province_name = {
+						id = 11610
+						name = "Fünfkirchen"
+					}
+					set_province_name = {
+						id = 3670
+						name = "Kesthell"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1292 }
+					}
+					set_province_name = {
+						id = 6720
+						name = "Raab"
+					}
+					set_province_name = {
+						id = 686
+						name = "Ödenburg"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 967 }
+					}
+					set_province_name = {
+						id = 6670
+						name = "Frankenstadt"
+					}
+					set_province_name = {
+						id = 6700
+						name = "Segedin"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 154 }
+					}
+					set_province_name = {
+						id = 11659
+						name = "Debrezin"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 966 }
+					}
+					966 = { set_state_name = "Nordungarn" }
+					set_province_name = {
+						id = 3713
+						name = "Mischkolz"
+					}
+					set_province_name = {
+						id = 3731
+						name = "Gengeß"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 43 }
+					}
+					set_province_name = {
+						id = 6716
+						name = "Zolnock"
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 73 }
+					}
+					set_province_name = {
+						id = 3548
+						name = "Munkatsch"
+					}
+					set_province_name = {
+						id = 11691
+						name = "Ungwar"
+					}
+				}
+				#Albania
+				if = {
+					limit = {
+						FROM.FROM = { state = 105 }
+					}
+					set_province_name = {
+						id = 9874
+						name = "Prischtina"
+					}
+					set_province_name = {
+						id = 867
+						name = "Prisrend"
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = GSL
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						NOT = {
+							OR = {
+								original_tag = GER
+								original_tag = GSL
+							}
+						}
+					}
+				}
+				#Slovakia
+				if = {
+					limit = {
+						FROM.FROM = { state = 664 }
+					}
+					644 = { reset_state_name = yes }
+					reset_province_name = 6573
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 70 }
+					}
+					70 = { reset_state_name = yes }
+					reset_province_name = 9692
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 71 }
+					}
+					71 = { reset_state_name = yes }
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					original_tag = RKB
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						NOT = {
+							OR = {
+								original_tag = GER
+								original_tag = RKB
+							}
+						}
+					}
+				}
+				#Romania
+				if = {
+					limit = {
+						FROM.FROM = { state = 1281 }
+					}
+					1281 = { reset_state_name = yes }
+					reset_province_name = 9617
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1283 }
+					}
+					reset_province_name = 657
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 81 }
+					}
+					reset_province_name = 637
+					reset_province_name = 3645
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 79 }
+					}
+					reset_province_name = 11655
+					reset_province_name = 6706
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1284 }
+					}
+					reset_province_name = 9716
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 78 }
+					}
+					reset_province_name = 11686
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 84 }
+					}
+					reset_province_name = 690
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1287 }
+					}
+					1287 = { reset_state_name = yes }
+					reset_province_name = 676
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1288 }
+					}
+					reset_province_name = 746
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 76 }
+					}
+					76 = { reset_state_name = yes }
+					reset_province_name = 6711
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1289 }
+					}
+					1289 = { reset_state_name = yes }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 46 }
+					}
+					46 = { reset_state_name = yes }
+					reset_province_name = 3663
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1285 }
+					}
+					1285 = { reset_state_name = yes }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 83 }
+					}
+					83 = { reset_state_name = yes }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 82 }
+					}
+					reset_province_name = 9606
+				}
+				#Bulgaria
+				if = {
+					limit = {
+						FROM.FROM = { state = 212 }
+					}
+					reset_province_name = 6923
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1270 }
+					}
+					reset_province_name = 9771
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1269 }
+					}
+					reset_province_name = 9862
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1268 }
+					}
+					reset_province_name = 3796
+					reset_province_name = 6842
+				}
+				#Serbia
+				if = {
+					limit = {
+						FROM.FROM = { state = 108 }
+					}
+					reset_province_name = 11887
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1274 }
+					}
+					reset_province_name = 3609
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1272 }
+					}
+					1272 = { reset_state_name = yes }
+					reset_province_name = 11586
+				}
+				#Croatia
+				if = {
+					limit = {
+						FROM.FROM = { state = 1280 }
+					}
+					1280 = { reset_state_name = yes }
+					reset_province_name = 6889
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 746 }
+					}
+					746 = { reset_state_name = yes }
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1277 }
+					}
+					reset_province_name = 11899
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1279 }
+					}
+					1279 = { reset_state_name = yes }
+					reset_province_name = 6647
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 109 }
+					}
+					109 = { reset_state_name = yes }
+					reset_province_name = 11581
+					reset_province_name = 3592
+					reset_province_name = 3601
+				}
+				#Hungary
+				if = {
+					limit = {
+						FROM.FROM = { state = 45 }
+					}
+					reset_province_name = 9621
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 771 }
+					}
+					771 = { reset_state_name = yes }
+					reset_province_name = 13363
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 155 }
+					}
+					reset_province_name = 11610
+					reset_province_name = 3670
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 1292 }
+					}
+					reset_province_name = 6720
+					reset_province_name = 686
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 967 }
+					}
+					reset_province_name = 6670
+					reset_province_name = 6700
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 154 }
+					}
+					reset_province_name = 11659
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 966 }
+					}
+					966 = { reset_state_name = yes }
+					reset_province_name = 3713
+					reset_province_name = 3731
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 43 }
+					}
+					reset_province_name = 6716
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 73 }
+					}
+					reset_province_name = 3548
+					reset_province_name = 11691
+				}
+				#Albania
+				if = {
+					limit = {
+						FROM.FROM = { state = 105 }
+					}
+					reset_province_name = 9874
+					reset_province_name = 867
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+state={
+	id=1343
+	name="STATE_1343"
+	provinces={
+		1541 1569 1983 7064 7334 8082 10751 
+	}
+	history={
+		owner = AZH
+		buildings = {
+			infrastructure = 1
+			radar_station = 1
+		}
+		add_core_of = AZH
+		add_core_of = IND
+	}
+	manpower=20852720
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,263 @@
+﻿capital = 252
+set_country_flag = is_russian_nation
+
+oob = "GOR_1962"
+
+add_ideas = {
+	##STANDARD##
+	RUS_terror_bombing
+	RUS_warlord_manpower
+    RUS_warlord_econ
+	RUS_gorky_tank_factory
+	GOR_armor_expertise
+	GOR_mobile_bandits
+	##MINISTERS##
+	GOR_Nikolai_Averin_hog
+	GOR_Alexander_Alexandrovich_Morozov_eco
+	GOR_Pyotr_Norytsyin_for
+	GOR_Semyon_Krivoshein_sec
+	##POLITICAL LAWS##
+	tno_political_parties_one_party_state
+	tno_religious_rights_secularism
+	tno_trade_unions_illegal
+	tno_immigration_quota_immigration
+	tno_slavery_corvee
+	tno_public_meetings_outlawed
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	tno_refugees_banned
+	##MILITARY LAWS###
+	tno_conscription_four_year_draft
+	tno_women_military_assistance
+	tno_military_supervision_no_supervision
+	tno_training_minimal_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_none
+	##SOCIAL LAWS##
+	tno_safety_no_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_no_controls
+	tno_education_elite_only
+	tno_penal_system_penal_slavery
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_police
+	##ECONOMIC LAWS##
+	tno_trade_laws_closed_economy
+	tno_income_taxation_not_applicable
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_14_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+	##SOCIETAL DEVELOPMENT##
+	
+	tno_army_professionalism_reluctant_conscripts
+	tno_industrial_expertise_incompetent
+	tno_industrial_equipment_power_tools
+	tno_agriculture_centralized
+	tno_research_facilities_makeshift
+	tno_academic_base_mass_illiteracy
+}
+
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_health_care_effectiveness = 0 }
+
+# ECONOMIC LAWS
+set_variable = { tno_trade_laws_effectiveness = 50 }
+set_variable = { tno_income_taxation_effectiveness = 50 }
+set_variable = { tno_minimum_wage_effectiveness = 50 }
+set_variable = { tno_max_workhours_effectiveness = 50 }
+set_variable = { tno_child_labor_effectiveness = 50 }
+set_variable = { tno_pensions_effectiveness = 50 }
+set_variable = { tno_unemployment_effectiveness = 50 }
+
+# SOCIAL LAWS
+set_variable = { tno_safety_effectiveness = 50 }
+set_variable = { tno_health_care_effectiveness = 0 }
+set_variable = { tno_pollution_effectiveness = 50 }
+set_variable = { tno_education_effectiveness = 50 }
+set_variable = { tno_penal_system_effectiveness = 50 }
+set_variable = { tno_lgbt_rights_effectiveness = 50 }
+set_variable = { tno_gender_rights_effectiveness = 50 }
+set_variable = { tno_minorities_effectiveness = 50 }
+set_variable = { tno_security_effectiveness = 50 }
+
+# POLITICAL LAWS
+set_variable = { tno_political_parties_effectiveness = 50 }
+set_variable = { tno_religious_rights_effectiveness = 50 }
+set_variable = { tno_trade_unions_effectiveness = 50 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 50 }
+set_variable = { tno_public_meetings_effectiveness = 50 }
+set_variable = { tno_press_rights_effectiveness = 50 }
+set_variable = { tno_vote_franchise_effectiveness = 50 }
+set_variable = { tno_refugees_effectiveness = 50 }
+
+# MILITARY LAWS
+set_variable = { tno_conscription_effectiveness = 50 }
+set_variable = { tno_women_effectiveness = 50 }
+set_variable = { tno_military_supervision_effectiveness = 50 }
+set_variable = { tno_training_effectiveness = 50 }
+set_variable = { tno_racial_integration_effectiveness = 50 }
+set_variable = { tno_draft_exemptions_effectiveness = 50 }
+
+
+
+set_research_slots = 2
+
+set_technology = {
+	##INFANTRY##
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	infantry_at = 1
+	infantry_at2 = 1
+	motorized_infantry = 1
+	#infantry_aa = 1
+	#infantry_aa2 = 1
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_engineers_flamethrowers_1 = 1
+	tech_recon = 1
+	tech_recon2 = 1
+	##ARTY##
+	artillery4 = 1
+	antiair5 = 1
+	##ARMOR##
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+
+	APC_1950 = 1
+	APC_1950_basic_turret = 1
+	#APC_1950_basic_engine = 1
+
+	IFV_1950 = 1
+
+	MBT_1950 = 1
+
+	##AIRCRAFT##
+	early_fighter = 1
+	fighter_1945 = 1
+	interceptor_1945 = 1
+	CAS_1945 = 1
+	##HEAVY AIRCRAFT##
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	##HELICOPTERS##
+	helicopter_engines = 1
+	very_early_helicopter = 1
+	early_helicopter = 1
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	##INDUSTRY##
+	ww2_line_production = 1
+	batch_production_1 = 1
+	building_construction_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	military_construction_1 = 1
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 15
+	ultranationalism = 0
+	national_socialism = 0
+	socialist = 0
+	social_democracy = 0
+	liberal_democracy = 0
+
+	conservative_democracy = 0
+	authoritarian_democracy = 11
+	despotism = 65
+	fascism = 9
+	
+}
+
+### Country Leader ###
+create_country_leader = {
+	name = "Nikolai Averin"
+	picture = "Portrait_Gorky_Nikolai_Averin.dds"
+	desc = "POLITICS_NIKOLAI_AVERIN_DESC"
+	expire = "1999.1.1"
+	ideology = despotism_military_junta_subtype
+	traits = {
+
+	}
+}
+
+### Generals ###
+create_field_marshal = {
+	name = "Nikolai Averin"
+	picture = "Portrait_Gorky_Nikolai_Averin.dds"
+	traits = { offensive_doctrine bearer_of_artillery trickster }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+	id = 3331
+}
+
+create_corps_commander = {
+	name = "Pyotr Norytsyin"
+	picture = "Portrait_Gorky_Pyotr_Norytsyin.dds"
+	traits = { trait_cautious harsh_leader }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+	id = 3332
+}
+
+create_corps_commander = {
+	name = "Sergei Bystrov"
+	picture = "Portrait_Gorky_Sergei_Bystrov.dds"
+	traits = { trait_engineer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+	id = 3333
+}
+
+create_corps_commander = {
+	name = "Semyon Krivoshein"
+	picture = "Portrait_Gorky_Semyon_Krivoshein.dds"
+	traits = { panzer_leader }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+	id = 3334
+}

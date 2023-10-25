@@ -1,0 +1,11 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_YOR_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/SCO_IFV_45.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_YOR_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/SAF_APC_45.dds"
+	}
+}

@@ -1,0 +1,34 @@
+###POP DONE 
+state={
+	id=13
+	name="STATE_13"
+	manpower = 878984
+	resources={
+		steel=3
+	}
+	state_category = large_town
+	history={
+		owner = OST
+		victory_points = { 3152 5 }
+		buildings = {
+			infrastructure = 6
+			dockyard = 1
+			air_base = 2
+			3152 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}
+			thermoelectric_plant = 1
+			schools = 1
+			hospitals = 2
+			offices = 1
+			prisons = 1
+		}
+		add_extra_state_shared_building_slots = 4
+		add_core_of = OST
+	}
+
+	provinces={
+		83 496 567 3074 3152 3174 6381 14603 14609 14610
+	}
+}

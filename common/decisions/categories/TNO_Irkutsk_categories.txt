@@ -1,0 +1,21 @@
+IRK_reforms_category = {
+	picture = decision_category_generic_political_actions
+	allowed = {
+		tag = IRK
+	}
+	visible = {
+		NOT = { has_global_flag = AFTER_MIDNIGHT_COMMENCED }
+	}
+}
+
+IRK_five_year_plans = {
+	picture = GFX_IRK_decision_five_year_plan
+	icon = GFX_decision_category_generic_factory
+	allowed = {
+		tag = IRK
+	}
+	priority = 200
+	visible = {
+		has_variable = IRK_five_year_plans_phase
+	}
+}

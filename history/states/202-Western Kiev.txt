@@ -1,0 +1,28 @@
+
+state={
+	id=202
+	name="STATE_202"
+	resources={
+		aluminium=4.000
+		oil=6
+	}
+
+	history={
+		owner = UKR
+		victory_points = { 6497 1 }
+		buildings = {
+			infrastructure = 6
+			air_base = 8
+
+		}
+		
+		add_core_of = UKR
+	}
+
+	provinces={
+		504 582 3494 3543 6497 9465 9543 9568 11453 11557 14532
+	}
+	manpower=2489898
+	buildings_max_level_factor=1.000
+	state_category=town
+}

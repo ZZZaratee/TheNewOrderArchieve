@@ -1,0 +1,24 @@
+
+state={
+	id=1247
+	name="STATE_1247"
+	manpower = 80767
+	
+	state_category = pastoral
+
+	history={
+		owner = IME
+		buildings = {
+			infrastructure = 4
+			air_base = 2
+			14452 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = IME
+	}
+
+	provinces={
+		11970 14452
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=436
+	name="STATE_436"
+	resources={
+		chromium=6.000
+	}
+
+	history={
+		owner = IND
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = AZH
+		add_core_of = IND
+	}
+
+	provinces={
+		4950 4953 10801 10872 12799 12854 
+	}
+	manpower=1531254
+	buildings_max_level_factor=1.000
+	state_category=town
+}

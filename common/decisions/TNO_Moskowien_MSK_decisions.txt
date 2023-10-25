@@ -1,0 +1,429 @@
+MSK_DECCAT_dissolution = {
+	MSK_DEC_dissolution_war_OKB = {
+		available = {
+			has_war = no
+			is_neighbor_of = OKB
+			NOT = { has_variable = MSK_dissolution_OKB }
+			NOT = { has_war_with = OKB }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = OKB type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_RSB = {
+		available = {
+			has_war = no
+			is_neighbor_of = RSB
+			NOT = { tag = RSB }
+			NOT = { has_war_with = RSB }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = RSB type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_KAG = {
+		available = {
+			has_war = no
+			is_neighbor_of = KAG
+			NOT = { has_variable = MSK_dissolution_OKB }
+			NOT = { has_war_with = KAG }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = KAG type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_PSK = {
+		available = {
+			has_war = no
+			is_neighbor_of = PSK
+			NOT = { tag = PSK }
+			NOT = { has_war_with = PSK }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = PSK type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_DFK = {
+		available = {
+			has_war = no
+			is_neighbor_of = DFK
+			NOT = {
+				OR = {
+					tag = DFK
+					tag = TAM
+					tag = PAU
+				}
+			}
+			NOT = { has_war_with = DFK }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = DFK type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_BBB = {
+		available = {
+			has_war = no
+			is_neighbor_of = BBB
+			NOT = { tag = BBB }
+			NOT = { has_war_with = BBB }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = BBB type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_MOS = {
+		available = {
+			has_war = no
+			is_neighbor_of = MOS
+			NOT = { tag = MOS }
+			NOT = { has_war_with = MOS }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = MOS type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_SMO = {
+		available = {
+			has_war = no
+			is_neighbor_of = SMO
+			NOT = {
+				OR = {
+					tag = SMO
+					tag = FRP
+				}
+			}
+			NOT = { has_war_with = SMO }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = SMO type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_LAK = {
+		available = {
+			has_war = no
+			is_neighbor_of = LAK
+			NOT = { has_variable = MSK_dissolution_OKB }
+			NOT = { has_war_with = LAK }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = LAK type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_ZLB = {
+		available = {
+			has_war = no
+			is_neighbor_of = ZLB
+			NOT = { tag = ZLB }
+			NOT = { has_war_with = ZLB }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = ZLB type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_RDC = {
+		available = {
+			has_war = no
+			is_neighbor_of = RDC
+			NOT = { tag = RDC }
+			NOT = { has_war_with = RDC }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = RDC type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_TAM = {
+		available = {
+			has_war = no
+			is_neighbor_of = TAM
+			NOT = {
+				OR = {
+					tag = TAM
+					tag = DFK
+				}
+			}
+			NOT = { has_war_with = TAM }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = TAM type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_POS = {
+		available = {
+			has_war = no
+			is_neighbor_of = POS
+			NOT = { has_variable = MSK_dissolution_OKB }
+			NOT = { has_war_with = POS }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = POS type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_PEN = {
+		available = {
+			has_war = no
+			is_neighbor_of = PEN
+			NOT = { tag = PEN }
+			NOT = { has_war_with = PEN }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = PEN type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_PAU = {
+		available = {
+			has_war = no
+			is_neighbor_of = PAU
+			NOT = {
+				OR = {
+					tag = PAU
+					tag = DFK
+				}
+			}
+			NOT = { has_war_with = PAU }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = PAU type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_FRP = {
+		available = {
+			has_war = no
+			is_neighbor_of = FRP
+			NOT = {
+				OR = {
+					tag = SMO
+					tag = FRP
+				}
+			}
+			NOT = { has_war_with = FRP }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = FRP type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_MZL = {
+		available = {
+			has_war = no
+			is_neighbor_of = MZL
+			NOT = { has_variable = MSK_dissolution_OKB }
+			NOT = { has_war_with = MZL }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = MZL type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_war_SKR = {
+		available = {
+			has_war = no
+			is_neighbor_of = SKR
+			NOT = { has_variable = MSK_dissolution_OKB }
+			NOT = { has_war_with = SKR }
+		}
+		fire_only_once = yes
+		complete_effect = { declare_war_on = { target = SKR type = annex_everything } }
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_end_normal = {
+		available = {
+			num_of_controlled_states > 46
+			has_war = no
+		}
+		complete_effect = {
+			if = {
+				limit = { tag = MOS }
+				news_event = { id = msk_dissolution_news.1 }
+				set_cosmetic_tag = MOS_dissolution_winner
+				retire_ideology_leader = national_socialism
+				create_country_leader = {
+					name = "Bronislav Kaminski"
+					picture = "gfx/leaders/Moskowien/MOS_pain.dds"
+					expire = "1999.10.12"
+					ideology = national_socialism_stratocratic_nazism_subtype
+					traits = { terrorizer }
+				}
+			}
+			else_if = {
+				limit = { tag = RDC }
+				news_event = { id = msk_dissolution_news.0 }
+				set_cosmetic_tag = RDC_dissolution_winner
+				retire_ideology_leader = authoritarian_democracy
+				create_country_leader = {
+					name = "Mikhail Gorbachev"
+					picture = "gfx/leaders/Moskowien/RDC_drip.dds"
+					expire = "1999.1.1"
+					ideology = authoritarian_democracy_controlled_democracy_subtype
+					traits = { career_burocrat }
+				}
+			}
+			else_if = {
+				limit = { tag = OKB }
+				news_event = { id = msk_dissolution_news.2 }
+				set_cosmetic_tag = OKB_dissolution_winner
+				retire_ideology_leader = despotism
+				create_country_leader = {
+					name = "Dietrich von Saucken"
+					picture = "gfx/leaders/Moskowien/OKB_drip.dds"
+					expire = "1999.1.1"
+					ideology = despotism_military_junta_subtype
+					traits = { sec_old_prussian }
+				}
+			}
+			else_if = {
+				limit = { tag = PAU }
+				news_event = { id = msk_dissolution_news.3 }
+				set_cosmetic_tag = PAU_dissolution_winner
+				retire_ideology_leader = national_socialism
+				create_country_leader = {
+					name = "Wolf-Heinrich Graf von Helldorff"
+					picture = "gfx/leaders/Moskowien/PAU_drip.dds"
+					expire = "1999.10.12"
+					ideology = national_socialism_subtype
+					traits = { dictator }
+				}
+			}
+			else = {
+				news_event = { id = msk_dissolution_news.4 }
+			}
+			swap_ideas = {
+				remove_idea = MSK_dissolution_start
+				add_idea = MSK_dissolution_end
+			}
+			add_state_core = 247
+			add_state_core = 258
+			add_state_core = 264
+			add_state_core = 222
+			add_state_core = 236
+			add_state_core = 240
+			add_state_core = 195
+			add_state_core = 210
+			add_state_core = 217
+			add_state_core = 1435
+			add_state_core = 1441
+			add_state_core = 401
+			add_state_core = 265
+			add_state_core = 248
+			add_state_core = 253
+			add_state_core = 254
+			add_state_core = 255
+			add_state_core = 257
+			add_state_core = 260
+			add_state_core = 263
+			add_state_core = 220
+			add_state_core = 223
+			add_state_core = 224
+			add_state_core = 237
+			add_state_core = 238
+			add_state_core = 239
+			add_state_core = 241
+			add_state_core = 242
+			add_state_core = 243
+			add_state_core = 244
+			add_state_core = 245
+			add_state_core = 246
+			add_state_core = 205
+			add_state_core = 208
+			add_state_core = 209
+			add_state_core = 219
+			add_state_core = 1475
+			add_state_core = 1476
+			add_state_core = 1477
+			add_state_core = 1478
+			add_state_core = 1442
+			add_state_core = 1443
+			add_state_core = 1444
+			add_state_core = 1434
+			add_state_core = 1436
+			add_state_core = 1421
+			add_state_core = 1314
+		}
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_OKB_annex_KAG = {
+		available = {
+			is_neighbor_of = KAG
+			tag = OKB
+		}
+		fire_only_once = yes
+		complete_effect = {
+			annex_country = { target = KAG transfer_troops = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_OKB_annex_LAK = {
+		available = {
+			is_neighbor_of = LAK
+			tag = OKB
+		}
+		fire_only_once = yes
+		complete_effect = {
+			annex_country = { target = LAK transfer_troops = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_OKB_annex_POS = {
+		available = {
+			is_neighbor_of = POS
+			tag = OKB
+		}
+		fire_only_once = yes
+		complete_effect = {
+			annex_country = { target = POS transfer_troops = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_OKB_annex_MZL = {
+		available = {
+			is_neighbor_of = MZL
+			tag = OKB
+		}
+		fire_only_once = yes
+		complete_effect = {
+			annex_country = { target = MZL transfer_troops = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_OKB_annex_SKR = {
+		available = {
+			is_neighbor_of = SKR
+			tag = OKB
+		}
+		fire_only_once = yes
+		complete_effect = {
+			annex_country = { target = SKR transfer_troops = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_PAU_annex_DFK = {
+		available = {
+			is_neighbor_of = DFK
+			tag = PAU
+		}
+		fire_only_once = yes
+		complete_effect = {
+			annex_country = { target = DFK transfer_troops = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_TAM_annex_DFK = {
+		available = {
+			is_neighbor_of = DFK
+			tag = TAM
+		}
+		fire_only_once = yes
+		complete_effect = {
+			annex_country = { target = DFK transfer_troops = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+	MSK_DEC_dissolution_FRP_annex_SMO = {
+		available = {
+			is_neighbor_of = SMO
+			tag = FRP
+		}
+		fire_only_once = yes
+		complete_effect = {
+			annex_country = { target = SMO transfer_troops = yes }
+		}
+		ai_will_do = { factor = 100 }
+	}
+}

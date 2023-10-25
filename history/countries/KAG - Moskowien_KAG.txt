@@ -1,0 +1,69 @@
+﻿capital = 209
+add_ideas = {
+	# Ministers
+		Generic_Vacant_hog
+		Generic_Vacant_for
+		Generic_Vacant_eco
+		Generic_Vacant_sec
+	# Military Laws
+		tno_conscription_service_by_requirement
+		tno_women_military_assistance
+		tno_military_supervision_military_policing
+		tno_training_combat_schooling
+		tno_racial_integration_segregated_regiments
+		tno_draft_exemptions_none
+	# Political Laws
+		tno_political_parties_one_party_state
+		tno_religious_rights_pluralism
+		tno_trade_unions_state_controlled
+		tno_immigration_closed_borders
+		tno_slavery_outlawed
+		tno_public_meetings_regulated
+		tno_press_rights_censored_press
+		tno_vote_franchise_no_voting
+		tno_refugees_vetted_entry
+	# Economic Laws
+		tno_trade_laws_closed_economy
+		tno_income_taxation_flat_taxes
+		tno_minimum_wage_acceptable_minimum
+		tno_max_workhours_10_hour_work_day
+		tno_child_labor_illegal
+		tno_pensions_trinket_pensions
+		tno_unemployment_trinket_subsidies
+	# Social Laws
+		tno_safety_limited_regulations
+		tno_health_care_support_for_emergencies
+		tno_pollution_no_controls
+		tno_education_public_education
+		tno_penal_system_incarceration
+		tno_lgbt_rights_lgbt_outlawed
+		tno_gender_rights_women_in_the_workplace
+		tno_minorities_institutional_discrimination
+		tno_security_police
+	# Societal Development
+		tno_academic_base_secondary_schooling
+		tno_research_facilities_outdated
+		tno_agriculture_modern
+		tno_industrial_equipment_modern
+		tno_industrial_expertise_experienced
+		tno_army_professionalism_reluctant_conscripts
+		
+}
+set_politics = {
+	ruling_party = despotism
+	last_election = "1941.4.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = { despotism = 100 }
+create_country_leader = {
+	name = "Siegfried Grabert"
+	expire = "1999.1.1"
+	desc = "MSK_DISSOLUTION_KAG_LEADER_DESC"
+	picture = "gfx/leaders/Moskowien/KAG.dds"
+	ideology = despotism_military_junta_subtype
+	traits = {}
+}
+
+set_variable = {TNO_economy_type = 3}
+set_variable = {TNO_economy_subtype = 6}

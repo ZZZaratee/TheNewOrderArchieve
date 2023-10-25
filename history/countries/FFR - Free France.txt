@@ -1,0 +1,659 @@
+﻿capital = 779
+
+oob = "FFR_1962"
+add_manpower = 500000
+set_major = yes
+set_research_slots = 3
+set_stability = 0.95
+
+
+set_technology = {
+	# Infantry
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+	infantry_weapons_3 = 1
+	tech_mountaineers = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	night_vision_1 = 1
+	infantry_at = 1
+	motorized_infantry = 1
+#	motorized_infantry_1 = 1
+	
+# Support
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	
+# Armor
+	mechanised_infantry3 = 1
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	APC_1950 = 1
+	IFV_1950 = 1
+	MBT_1950 = 1
+	
+# Artillery
+	artillery4 = 1
+	antiair5 = 1
+	
+# Land Doctrine
+	strategic_theorem = 1
+	
+# Naval
+	ww2_submarine = 1
+	basic_submarine = 1
+	ww2_destroyer = 1
+	basic_destroyer = 1
+	ww2_cruiser = 1
+	basic_cruiser = 1
+	improved_cruiser = 1
+	ww2_battleship = 1
+	ww2_carrier = 1
+	early_carrier = 1
+	transport = 1
+	
+# Naval Doctrine
+	#fleet_in_being = 1
+	
+# Helicopters
+	very_early_helicopter = 1
+	early_helicopter = 1
+	
+# Light Aircraft
+	early_fighter = 1
+	fighter_1945 = 1
+	cv_1945_fighter = 1
+	fighter_1950 = 1
+	cv_1950_fighter = 1
+	interceptor_1945 = 1
+	interceptor_1950 = 1
+	CAS_1945 = 1
+	cv_1945_CAS = 1
+	CAS_1950 = 1
+	cv_1950_CAS = 1
+	
+# Heavy Aircraft
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+	transport_air_1960 = 1
+
+# Electronics
+	electronic_mechanical_engineering = 1
+	radio = 1
+	helicopter_engines = 1
+	jet_engines = 1
+	jet_engines_bombers = 1
+
+# Industry
+	ww2_line_production = 1
+	building_construction_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	administration_construction_1 = 1
+	military_construction_1 = 1
+	resource_extraction_methods = 1
+
+# Doctrine
+	strategic_theorem = 1
+
+	air_supremacy = 1
+
+	green_water_navy = 1
+}
+
+#if = {
+#	limit = { has_dlc = "Man the Guns" }
+#	set_technology = {
+#		basic_naval_mines = 1
+#		submarine_mine_laying = 1
+#
+#		early_ship_hull_very_light = 1
+#		basic_ship_hull_very_light = 1
+#		improved_ship_hull_very_light = 1
+#
+#		early_ship_hull_more_light = 1
+#		basic_ship_hull_more_light = 1
+#		improved_ship_hull_more_light = 1
+#
+#		early_ship_hull_light = 1
+#		basic_ship_hull_light = 1
+#		improved_ship_hull_light = 1
+#
+#		missile_corvette_1960 = 1
+#
+#		early_ship_hull_submarine = 1
+#		basic_ship_hull_submarine = 1
+#
+#		early_ship_hull_cruiser = 1
+#		basic_ship_hull_cruiser = 1
+#		improved_ship_hull_cruiser = 1
+#
+#		early_ship_hull_heavy = 1
+#		basic_ship_hull_heavy = 1
+#
+#		basic_battery = 1
+#		basic_light_battery = 1
+#		basic_secondary_battery = 1
+#		basic_medium_battery = 1
+#		improved_secondary_battery = 1
+#		dp_secondary_battery = 1
+#		basic_heavy_battery = 1
+#
+#		basic_torpedo = 1
+#
+#		basic_depth_charges = 1
+#		improved_depth_charges = 1
+#
+#		basic_secondary_battery = 1
+#		mtg_transport = 1
+#
+#		antiair_1950 = 1
+#
+#		basic_fire_control_system = 1
+#		improved_fire_control_system = 1
+#
+#		sonar = 1
+#		improved_sonar = 1
+#	}
+#
+#	## Almirante Latorre ##
+#	create_equipment_variant = {
+#		name = "Clase Almirante Latorre"
+#		type = ship_hull_heavy_1
+#		modules = {
+#			fixed_ship_battery_slot = ship_heavy_battery_1
+#			fixed_ship_anti_air_slot = ship_anti_air_2
+#			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+#			fixed_ship_radar_slot = ship_radar_1
+#			fixed_ship_engine_slot = heavy_ship_engine_2
+#			fixed_ship_secondaries_slot = ship_secondaries_2
+#			fixed_ship_armor_slot = ship_armor_bb_1
+#			front_1_custom_slot = ship_heavy_battery_2
+#			mid_1_custom_slot = ship_secondaries_2
+#			mid_2_custom_slot = ship_secondaries_2
+#			rear_1_custom_slot = ship_heavy_battery_2
+#		}
+#	}
+#
+#	## Cruisers ##
+#	create_equipment_variant = {
+#		name = "Clase Crucero Ligero"
+#		type = ship_hull_cruiser_1
+#		parent_version = 0
+#		modules = {
+#			fixed_ship_battery_slot = ship_medium_battery_2
+#			fixed_ship_anti_air_slot = ship_anti_air_missile_battery_1
+#			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+#			fixed_ship_radar_slot = ship_radar_1
+#			fixed_ship_engine_slot = cruiser_ship_engine_2
+#			fixed_ship_secondaries_slot = ship_secondaries_1
+#			fixed_ship_armor_slot = ship_armor_cruiser_1
+#			front_1_custom_slot = ship_secondaries_1
+#			mid_1_custom_slot = ship_secondaries_1
+#			rear_1_custom_slot = ship_anti_air_1
+#		}
+#	}
+#
+#	## Destroyers ##
+#	create_equipment_variant = {
+#		name = "Clase Almirante"
+#		type = ship_hull_light_2
+#		parent_version = 0
+#		modules = {
+#			fixed_ship_battery_slot = ship_light_battery_2
+#			fixed_ship_anti_air_slot = ship_anti_air_missile_battery_1
+#			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+#			fixed_ship_torpedo_slot = ship_torpedo_1
+#			fixed_ship_engine_slot = light_ship_engine_2
+#			fixed_ship_radar_slot = ship_radar_1
+#			mid_1_custom_slot = ship_light_battery_2
+#			rear_1_custom_slot = ship_light_battery_2
+#		}
+#	}
+#	create_equipment_variant = {
+#		name = "Clase Blanco Encalada"
+#		type = ship_hull_light_1
+#		parent_version = 0
+#		modules = {
+#			fixed_ship_battery_slot = ship_light_battery_1
+#			fixed_ship_anti_air_slot = ship_anti_air_1
+#			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+#			fixed_ship_torpedo_slot = ship_torpedo_1
+#			fixed_ship_engine_slot = light_ship_engine_2
+#			fixed_ship_radar_slot = ship_radar_1
+#			mid_1_custom_slot = ship_light_battery_1
+#			rear_1_custom_slot = ship_light_battery_1
+#		}
+#	}
+#
+#	## Frigates ##
+#	create_equipment_variant = {
+#		name = "Clase Iquique"
+#		type = ship_hull_more_light_1
+#		parent_version = 0
+#		modules = {
+#			fixed_ship_battery_slot = ship_light_battery_1
+#			fixed_ship_anti_air_slot = ship_anti_air_missile_battery_1
+#			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+#			fixed_ship_radar_slot = ship_radar_1
+#			fixed_ship_engine_slot = light_ship_engine_2
+#			fixed_ship_torpedo_slot = ship_torpedo_1
+#			mid_1_custom_slot = ship_torpedo_1
+#			rear_1_custom_slot = ship_anti_air_missile_battery_1
+#		}
+#	}
+#
+#	## Corvettes ##
+#	create_equipment_variant = {
+#		name = "Clase Papudo"
+#		type = ship_hull_very_light_1
+#		parent_version = 0
+#		modules = {
+#			fixed_ship_battery_slot = ship_light_battery_1
+#			fixed_ship_anti_air_slot = ship_anti_air_missile_battery_1
+#			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+#			fixed_ship_radar_slot = ship_sonar_2
+#			fixed_ship_torpedo_slot = ship_torpedo_1
+#			fixed_ship_engine_slot = light_ship_engine_2
+#			mid_1_custom_slot = ship_light_battery_1
+#			rear_1_custom_slot = ship_depth_charge_2
+#		}
+#	}
+#
+#	## Submarines ##
+#	create_equipment_variant = {
+#		name = "Clase Simpson"
+#		type = ship_hull_submarine_1
+#		modules = {
+#			fixed_ship_engine_slot = sub_ship_engine_1
+#			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+#			rear_1_custom_slot = ship_torpedo_sub_2
+#    	}
+#	}
+#
+#	set_naval_oob = "FFR_1962_naval_mtg"
+#}
+
+#if = {
+#	limit = { NOT = { has_dlc = "Man the Guns" } }
+#	set_technology = {
+#		ww2_destroyer = 1
+#		basic_destroyer = 1
+#		improved_destroyer = 1
+#		ww2_cruiser = 1
+#		basic_cruiser = 1
+#		improved_cruiser = 1
+#		ww2_battleship = 1
+#		ww2_submarine = 1
+#		basic_submarine = 1
+#		improved_submarine = 1
+#		transport = 1
+#		landing_craft = 1
+#	}
+#
+#	create_equipment_variant = {
+#		name = "Clase Almirante Latorre"
+#		type = battleship_1
+#	}
+#	create_equipment_variant = {
+#		name = "Clase Crucero Ligero"
+#		type = light_cruiser_2
+#	}
+#	create_equipment_variant = {
+#		name = "Clase Almirante"
+#		type = destroyer_2
+#	}
+#	create_equipment_variant = {
+#		name = "Clase Blanco Encalada"
+#		type = destroyer_1
+#	}
+#	create_equipment_variant = {
+#		name = "Clase Iquique"
+#		type = frigate_1
+#	}
+#	create_equipment_variant = {
+#		name = "Clase Papudo"
+#		type = frigate_1
+#	}
+#	create_equipment_variant = {
+#		name = "Clase Simpson"
+#		type = submarine_1
+#	}
+#
+#	set_naval_oob = "FFR_1962_naval"
+#}
+
+set_politics = {	
+	ruling_party = conservative_democracy
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 3
+    social_democracy = 24
+    liberal_democracy = 31
+
+    conservative_democracy = 23
+    authoritarian_democracy = 17
+    despotism = 2
+    fascism = 0
+    national_socialism = 0
+    
+}
+
+create_country_leader = {
+	name = "Charles de Gaulle"
+	desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+	picture = "Portrait_Free_France_Charles_De_Gaulle.dds"
+	expire = "1965.1.1"
+	ideology = conservative_democracy_paternalistic_conservatism_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Charles de Gaulle"
+	desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+	picture = "Portrait_Free_France_Charles_De_Gaulle.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		
+	}
+}
+
+create_field_marshal  = {
+    name = "Charles de Gaulle"
+    picture = "Portrait_Free_France_Charles_De_Gaulle_general.dds"
+    traits = { old_guard desert_fox war_hero panzer_leader }
+    skill = 4
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_field_marshal  = {
+    name = "Marie Pierre Koenig"
+    picture = "Portrait_Free_France_Marie_Pierre_Koenig.dds"
+    traits = { old_guard desert_fox panzer_leader }
+    skill = 3
+    attack_skill = 4
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 1
+}
+
+create_field_marshal  = {
+    name = "Philippe Leclerc"
+    picture = "Portrait_Free_France_Philippe_Leclerc.dds"
+    traits = { old_guard desert_fox logistics_wizard politically_connected }
+    skill = 4
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 3
+}
+
+create_field_marshal  = {
+    name = "Jacques Massu"
+    picture = "Portrait_Free_France_Jacques_Massu.dds"
+    traits = { old_guard jungle_rat }
+    skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_field_marshal  = {
+    name = "Jean Touzet du Vigier"
+    picture = "Portrait_Free_France_Jean_Touzet_Du_Vigier.dds"
+    traits = { old_guard desert_fox expert_delegator }
+    skill = 4
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 4
+}
+
+create_field_marshal  = {
+    name = "Louis Napoléon"
+    id = 100
+    picture = "Portrait_Free_France_Louis_Napoleon.dds"
+    traits = { desert_fox politically_connected }
+    skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 4
+}
+
+create_corps_commander = {
+    name = "Joseph de Goislard de Monsabert"
+    picture = "Portrait_Free_France_Joseph_De_Goislard_De_Monsabert.dds"
+    traits = { old_guard desert_fox infantry_officer infantry_expert }
+    skill = 2
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Gaston Palewski"
+    picture = "Portrait_Free_France_Gaston_Palewski.dds"
+    traits = { old_guard desert_fox politically_connected }
+    skill = 1
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Georges Catroux"
+    picture = "Portrait_Free_France_Georges_Catroux.dds"
+    traits = { old_guard skilled_staffer desert_fox }
+    skill = 2
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+    name = "Maurice Challe"
+    picture = "Portrait_Free_France_Maurice_Challe.dds"
+    traits = { old_guard desert_fox trickster }
+    skill = 2
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Edgard de Larminat"
+    picture = "Portrait_Free_France_Edgard_De_Larminat.dds"
+    traits = { old_guard desert_fox bearer_of_artillery }
+    skill = 2
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Raoul Magrin-Vernerey"
+    picture = "Portrait_Free_France_Raoul_Magrin_Vernerey.dds"
+    traits = { old_guard desert_fox infantry_officer }
+    skill = 2
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "André Zeller"
+    picture = "Portrait_Free_France_Andre_Zeller.dds"
+    traits = { old_guard desert_fox bearer_of_artillery }
+    skill = 2
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_navy_leader = {
+    name = "Georges Thierry d'Argenlieu"
+    picture = "Portrait_Free_France_Georges_Thierry_D'Argenlieu.dds"
+    traits = { old_guard }
+    skill = 2
+}
+
+create_navy_leader = {
+    name = "Pierre Barjot"
+    picture = "Portrait_Free_France_Pierre_Barjot.dds"
+    traits = { old_guard }
+    skill = 2
+}
+
+create_navy_leader = {
+    name = "Philippe de Gaulle"
+    picture = "Portrait_Free_France_Phillippe_De_Gaulle.dds"
+    traits = { politically_connected }
+    skill = 2
+}
+
+create_navy_leader = {
+    name = "Philippe Kieffer"
+    picture = "Portrait_Free_France_Philippe_Kieffer.dds"
+    traits = { old_guard }
+    skill = 2
+}
+
+create_navy_leader = {
+    name = "Émile Muselier"
+    picture = "Portrait_Free_France_Émile_Muselier.dds"
+    traits = { old_guard }
+    skill = 2
+}
+
+add_ideas = {
+	WEST_AFRICA_idea_terror_bombing
+	FFR_military_administration
+	FFR_precious_metal
+	FFR_spirit_french
+
+	##MINISTERS##
+	 FFR_Jacques_Chaban_Delmas_dep
+	 FFR_Paul_Legentilhomme_mil
+	 FFR_Georges_Pompidou_for
+	 FFR_Maurice_Schumann_eco
+
+	##POLITICAL LAWS##
+	 tno_political_parties_one_party_state
+	 tno_religious_rights_secularism
+	 tno_trade_unions_all_allowed
+	 tno_immigration_closed_borders
+	 tno_immigration_open_immigration
+	 tno_public_meetings_allowed
+	 tno_press_rights_free_press
+	 tno_vote_franchise_registered_voting
+	 tno_refugees_open
+	 
+	 ##MILITARY LAWS###
+	 tno_conscription_two_year_draft
+	 tno_women_combat_roles
+	 tno_military_supervision_military_policing
+	 tno_training_advanced_training_methods
+	 tno_racial_integration_integrated_military
+	 tno_draft_exemptions_none
+	
+	 ##SOCIAL LAWS##
+	 tno_safety_minimal_regulations
+	 tno_health_care_not_applicable
+	 tno_pollution_no_controls
+	 tno_education_elite_only
+	 tno_penal_system_penal_labor
+	 tno_lgbt_rights_lgbt_outlawed
+	
+	 ##ECONOMIC LAWS##
+	 tno_trade_laws_limited_exports
+	 tno_income_taxation_flat_taxes
+	 tno_minimum_wage_no_minimum_wage
+	 tno_max_workhours_14_hour_work_day
+	 
+	 ##SOCIETAL DEVELOPMENT##
+	 
+     tno_army_professionalism_disgruntled_veterans
+     tno_industrial_expertise_nascent
+     tno_industrial_equipment_power_tools
+     tno_agriculture_basic_mechanized
+     tno_research_facilities_outdated
+     tno_academic_base_basic_literacy
+	 tno_admin_efficiency_widespread_corruption
+}
+
+set_country_flag = tno_defined_startup_effectiveness
+
+# ECONOMIC LAWS
+set_variable = { tno_trade_laws_effectiveness = 50 }
+set_variable = { tno_income_taxation_effectiveness = 50 }
+set_variable = { tno_minimum_wage_effectiveness = 50 }
+set_variable = { tno_max_workhours_effectiveness = 50 }
+set_variable = { tno_child_labor_effectiveness = 50 }
+set_variable = { tno_pensions_effectiveness = 50 }
+set_variable = { tno_unemployment_effectiveness = 50 }
+
+# SOCIAL LAWS
+set_variable = { tno_safety_effectiveness = 50 }
+set_variable = { tno_health_care_effectiveness = 0 }
+set_variable = { tno_pollution_effectiveness = 50 }
+set_variable = { tno_education_effectiveness = 50 }
+set_variable = { tno_penal_system_effectiveness = 50 }
+set_variable = { tno_lgbt_rights_effectiveness = 50 }
+set_variable = { tno_gender_rights_effectiveness = 50 }
+set_variable = { tno_minorities_effectiveness = 50 }
+set_variable = { tno_security_effectiveness = 50 }
+
+# POLITICAL LAWS
+set_variable = { tno_political_parties_effectiveness = 50 }
+set_variable = { tno_religious_rights_effectiveness = 50 }
+set_variable = { tno_trade_unions_effectiveness = 50 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 50 }
+set_variable = { tno_public_meetings_effectiveness = 50 }
+set_variable = { tno_press_rights_effectiveness = 50 }
+set_variable = { tno_vote_franchise_effectiveness = 50 }
+set_variable = { tno_refugees_effectiveness = 50 }
+
+# MILITARY LAWS
+set_variable = { tno_conscription_effectiveness = 50 }
+set_variable = { tno_women_effectiveness = 50 }
+set_variable = { tno_military_supervision_effectiveness = 50 }
+set_variable = { tno_training_effectiveness = 50 }
+set_variable = { tno_racial_integration_effectiveness = 50 }
+set_variable = { tno_draft_exemptions_effectiveness = 50 }
+
+#econtype
+set_variable = { TNO_economy_type = 2 }
+set_variable = { TNO_economy_subtype = 10 }

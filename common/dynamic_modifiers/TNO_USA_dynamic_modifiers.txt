@@ -1,0 +1,238 @@
+USA_WFB_financial_monetary_conference_modifier = {
+	enable = { is_in_faction_with = USA }
+	icon = "GFX_idea_ARL_breakneck_industrialization"
+}
+
+#USA_military_tree_modifier = {
+#    enable = { original_tag = USA }
+#    remove_trigger = { always = no }
+#    icon = "GFX_idea_IBR_Betray_Old_Guard"
+#
+#    research_speed_factor = USA_mil_research_speed_factor
+#
+#    amphibious_invasion = USA_mil_amphibious_invasion
+#    invasion_preparation = USA_mil_invasion_preparation
+#
+#    recon_factor = USA_mil_recon_factor
+#    army_org_factor = USA_mil_army_org_factor
+#    max_planning = USA_mil_max_planning
+#    planning_speed = USA_mil_planning_speed
+#    army_morale_factor = USA_mil_army_morale_factor
+#    decryption_factor = USA_mil_decryption_factor
+#    encryption_factor = USA_mil_encryption_factor
+#    supply_consumption_factor = USA_mil_supply_consumption_factor
+#    
+#    modifier_army_sub_unit_category_IFV_attack_factor = USA_mil_IFV_attack_factor
+#    modifier_army_sub_unit_category_IFV_defence_factor = USA_mil_IFV_defence_factor
+#    modifier_army_sub_unit_category_IFV_speed_factor = USA_mil_IFV_speed_factor
+#
+#    modifier_army_sub_unit_category_MBT_attack_factor = USA_mil_MBT_attack_factor
+#    modifier_army_sub_unit_category_MBT_defence_factor = USA_mil_MBT_defence_factor
+#    modifier_army_sub_unit_category_MBT_speed_factor = USA_mil_MBT_speed_factor
+#
+#    modifier_army_sub_unit_category_APC_attack_factor = USA_mil_APC_attack_factor
+#    modifier_army_sub_unit_category_APC_defence_factor = USA_mil_APC_defence_factor
+#    modifier_army_sub_unit_category_APC_speed_factor = USA_mil_APC_speed_factor
+#
+#    convoy_escort_efficiency = USA_mil_convoy_escort_efficiency
+#    navy_anti_air_attack_factor = USA_mil_navy_anti_air_attack_factor
+#    naval_hit_chance = USA_mil_naval_hit_chance
+#    naval_coordination = USA_mil_naval_coordination
+#    spotting_chance = USA_mil_spotting_chance
+#    navy_submarine_detection_factor = USA_mil_navy_submarine_detection_factor
+#
+#    navy_submarine_attack_factor = USA_mil_navy_submarine_attack_factor
+#    navy_submarine_defence_factor = USA_mil_navy_submarine_defence_factor
+#    navy_screen_attack_factor = USA_mil_navy_screen_attack_factor
+#    navy_screen_defence_factor = USA_mil_navy_screen_defence_factor
+#    navy_carrier_air_attack_factor = USA_mil_navy_carrier_air_attack_factor
+#    navy_carrier_air_targetting_factor = USA_mil_navy_carrier_air_targetting_factor
+#
+#    air_close_air_support_attack_factor = USA_mil_air_close_air_support_attack_factor
+#    air_close_air_support_defence_factor = USA_mil_air_close_air_support_defence_factor
+#
+#    air_air_superiority_attack_factor = USA_mil_air_air_superiority_attack_factor
+#    air_air_superiority_defence_factor = USA_mil_air_air_superiority_defence_factor
+#
+#    air_interception_attack_factor = USA_mil_air_interception_attack_factor
+#    air_interception_defence_factor = USA_mil_air_interception_defence_factor
+#
+#    enemy_army_bonus_air_superiority_factor = USA_mil_enemy_army_bonus_air_superiority_factor
+#
+#
+#}
+
+SAW_rubberband_dynmod_USA = {
+	#icon = "GFX_idea_ICE_growing_unpopularity"
+	army_defence_factor = SAW_rubberband_var_fifth
+	industrial_capacity_factory = SAW_rubberband_var_third
+	industry_free_repair_factor = SAW_rubberband_var_third
+	army_org = SAW_rubberband_var_ten
+	dig_in_speed = SAW_rubberband_var_tenth
+	supply_consumption_factor = SAW_rubberband_var_tenth
+	army_morale_factor = SAW_rubberband_var_tenth
+}
+
+SAW_rubberband_dynmod_SAF = {
+	#icon = "GFX_idea_ICE_growing_unpopularity"
+	army_defence_factor = SAW_rubberband_var_fifth
+	industrial_capacity_factory = SAW_rubberband_var_third
+	industry_free_repair_factor = SAW_rubberband_var_third
+	army_org = SAW_rubberband_var_ten
+	dig_in_speed = SAW_rubberband_var_tenth
+	supply_consumption_factor = SAW_rubberband_var_tenth
+	army_morale_factor = SAW_rubberband_var_tenth
+}
+
+SAW_rubberband_dynmod_COG = {
+	#icon = "GFX_idea_ICE_growing_unpopularity"
+	army_defence_factor = SAW_rubberband_var_fifth
+	industrial_capacity_factory = SAW_rubberband_var_third
+	industry_free_repair_factor = SAW_rubberband_var_third
+	army_org = SAW_rubberband_var_ten
+	dig_in_speed = SAW_rubberband_var_tenth
+	supply_consumption_factor = SAW_rubberband_var_tenth
+	army_morale_factor = SAW_rubberband_var_tenth
+}
+
+SAW_rubberband_dynmod_ANG = {
+	#icon = "GFX_idea_ICE_growing_unpopularity"
+	army_defence_factor = SAW_rubberband_var_fifth
+	industrial_capacity_factory = SAW_rubberband_var_third
+	industry_free_repair_factor = SAW_rubberband_var_third
+	army_org = SAW_rubberband_var_ten
+	dig_in_speed = SAW_rubberband_var_tenth
+	supply_consumption_factor = SAW_rubberband_var_tenth
+	army_morale_factor = SAW_rubberband_var_tenth
+}
+
+SAW_rubberband_dynmod_GRO = {
+	#icon = "GFX_idea_ICE_growing_unpopularity"
+	army_defence_factor = SAW_rubberband_var_fifth
+	industrial_capacity_factory = SAW_rubberband_var_third
+	industry_free_repair_factor = SAW_rubberband_var_third
+	army_org = SAW_rubberband_var_ten
+	dig_in_speed = SAW_rubberband_var_tenth
+	supply_consumption_factor = SAW_rubberband_var_tenth
+	army_morale_factor = SAW_rubberband_var_tenth
+}
+
+SAW_rubberband_dynmod_BOR = {
+	#icon = "GFX_idea_ICE_growing_unpopularity"
+	army_defence_factor = SAW_rubberband_var_fifth
+	industrial_capacity_factory = SAW_rubberband_var_third
+	industry_free_repair_factor = SAW_rubberband_var_third
+	army_org = SAW_rubberband_var_ten
+	dig_in_speed = SAW_rubberband_var_tenth
+	supply_consumption_factor = SAW_rubberband_var_tenth
+	army_morale_factor = SAW_rubberband_var_tenth
+}
+
+USA_HAR_veterans_program = {
+	academic_base_monthly_rate = USA_HAR_veterans_education
+	industrial_expertise_monthly_rate = USA_HAR_veterans_jobs
+	misc_costs_modifier = USA_HAR_veterans_cost
+}
+
+USA_LBJ_great_society_modifier = {
+	icon = "GFX_idea_ICE_growing_unpopularity"
+	vote_franchise_policy_monthly_rate = USA_LBJ_civil_rights_policy_improvement
+	minorities_policy_monthly_rate = USA_LBJ_civil_rights_policy_improvement
+
+	education_policy_monthly_rate = USA_LBJ_education_policy_improvement
+
+	health_care_policy_monthly_rate = USA_LBJ_health_care_policy_improvement
+
+	pollution_policy_monthly_rate = USA_LBJ_pollution_policy_improvement
+
+	unemployment_policy_monthly_rate = USA_LBJ_welfare_policy_improvement
+	pensions_policy_monthly_rate = USA_LBJ_welfare_policy_improvement
+
+	poverty_monthly_rate = USA_LBJ_great_society_poverty_improvement
+
+	social_program_cost_factor = USA_LBJ_social_program_cost_modifier
+
+}
+
+USA_HAR_social_reforms_costs_modifier = {
+	icon = "GFX_idea_ICE_growing_unpopularity"
+	tno_other_program_proportional_pop_cost = USA_HAR_social_programs_pop_costs
+	tno_admin_proportional_pop_cost = USA_HAR_admin_programs_pop_costs
+}
+
+USA_WAL_buisness_subsidies_dynmod = {
+	icon = "GFX_idea_USA_Subsidy_Sprees"
+	enable = { always = yes }
+
+	misc_costs_modifier = USA_WAL_buisness_subsidies_misc_costs
+}
+
+USA_WAL_JOBS_act_dynmod = {
+	icon = "GFX_idea_generic_negative_public_relation"
+	enable = { always = yes }
+
+	misc_costs_modifier = USA_WAL_JOBS_act_misc_costs
+}
+
+USA_WAL_SS_and_healthcare_dynmod = {
+	icon = "GFX_idea_the_healthcare_act"
+	enable = { always = yes }
+
+	misc_costs_modifier = USA_WAL_SS_and_healthcare_misc_costs
+}
+
+USA_WAL_schools_dynmod = {
+	icon = "GFX_idea_USA_LBJ_Funded_Schools"
+	enable = { always = yes }
+
+	misc_costs_modifier = USA_WAL_schools_misc_costs
+}
+
+USA_WAL_trade_deals_dynmod = {
+	icon = "GFX_SAW_USA_support"
+	enable = { always = yes }
+
+	misc_costs_modifier = USA_WAL_trade_deals_misc_costs
+}
+
+USA_LEMAY_cost_dynmod = {
+	icon = "GFX_idea_USA_Subsidy_Sprees"
+	enable = { always = yes }
+
+	misc_costs_modifier = USA_LEMAY_misc_costs
+}
+
+USA_MCS_program_costs = {
+	#icon = "GFX_idea_generic_planned_economy" #Hidden
+	enable = { always = yes }
+
+	misc_costs_modifier = USA_MCS_costs_of_the_mcs_programs
+}
+
+USA_GLN_nasa_funding_annual = {
+	#icon = "GFX_idea_generic_planned_economy" #Hidden
+	enable = { always = yes }
+
+	misc_costs_modifier = USA_GLN_NASA_Funding_Annual
+}
+
+USA_GLN_nuclear_sabotage = {
+	icon = GFX_idea_GER_Speer_Scale_Back_Military_Production
+	enable = { always = yes }
+
+	nuclear_production_factor = USA_GLN_nuclear_fuckery_var
+}
+USA_GLN_nuclear_buff = {
+	icon = GFX_idea_GER_Speer_Scale_Back_Military_Production
+	enable = { always = yes }
+
+	nuclear_production_factor = GLN_nuclear_boost_var
+	misc_costs_modifier = GLN_nuclear_spending
+}
+
+USA_GLN_nuclear_disarmament = {
+	icon = GFX_idea_GER_Speer_Scale_Back_Military_Production
+	enable = { always = yes }
+
+	nuclear_production_factor = GLN_nuclear_disarmament_var
+}

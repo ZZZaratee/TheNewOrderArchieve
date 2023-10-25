@@ -1,0 +1,26 @@
+
+state={
+	id=1060
+	name="STATE_1060"
+
+	resources={
+		aluminium=1
+	}
+
+	history={
+		owner = GRO
+		add_core_of = GRO
+		buildings = {
+			schools = 1
+			infrastructure = 2
+		}
+		victory_points = { 13710 10 }
+	}
+
+	provinces={
+    	2120 13710 13733 13740
+	}
+	manpower = 634902
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

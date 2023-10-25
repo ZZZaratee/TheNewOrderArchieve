@@ -1,0 +1,5 @@
+WAC_flag_check = { #For debug use
+	has_global_flag = WAC_scenario_1
+	has_global_flag = WAC_scenario_2
+	has_global_flag = WAC_scenario_3
+}

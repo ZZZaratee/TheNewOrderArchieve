@@ -1,0 +1,18 @@
+state={
+	id=930
+	name="STATE_930"
+	provinces={
+		1949 2036 2092 7080 10807 10816 
+	}
+	history={
+		owner = IND
+		add_core_of = AZH
+		add_core_of = IND
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=3350400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

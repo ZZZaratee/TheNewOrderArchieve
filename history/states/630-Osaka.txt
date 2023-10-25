@@ -1,0 +1,33 @@
+state=
+{
+	id=630
+	name="STATE_630"
+	manpower = 3270908
+	state_category = megalopolis
+
+	resources={
+		aluminium=1
+	}
+
+	history={
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 8
+			dockyard = 4
+			barracks = 1
+			hospitals = 2
+			schools = 1
+			air_base = 3
+			7072 = {
+				naval_base = 3
+			}
+		}
+		victory_points = { 7072 40 }
+		victory_points = { 12031 10 }
+	}
+	
+	provinces={
+		7072 9985 12031	
+	}
+}

@@ -1,0 +1,62 @@
+music_station = "tno_soundtrack"
+
+# Please keep this file alphabetically sorted (but with the main theme at the top), thank you very much!
+music = {
+	song = "maintheme"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "Burgund Erwacht!"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "Burgundian Lullaby"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "Einigkeit und Recht und Freiheit"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "German Anarchy Theme"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "I Will Return Remix"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "Russian Anarchy Theme"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "Slave Revolt"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "The Battle Continues!"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "The Final War"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "The Great Trial"
+	chance = { factor = 1 }
+}
+
+music = {
+	song = "The Gun Pointed at the Heart of Africa"
+	chance = { factor = 1 }
+}

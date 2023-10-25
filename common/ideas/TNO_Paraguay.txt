@@ -1,0 +1,295 @@
+ideas = {
+	#############
+    ## SPIRITS ##
+	#############
+	country = {
+
+		PAR_bastion_of_latin_american_fascism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_bastion_of_latin_american_fascism" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = PAR_bastion_of_latin_american_fascism
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				drift_defence_factor = 0.3
+				custom_modifier_tooltip = PAR_bastion_of_latin_american_fascism_tt
+			}
+		}
+		PAR_avanee = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_avanee" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_Avane
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.33
+				surrender_limit = 0.15
+			}
+		}
+		PAR_the_chokehold = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_the_chokehold" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_The_Chokehold
+			removal_cost = -1
+			targeted_modifier = {
+				tag = ARG
+				extra_trade_to_target_factor = 0.4
+			}
+			targeted_modifier = {
+				tag = BRA
+				extra_trade_to_target_factor = 0.4
+			}
+		}
+		PAR_political_tarot = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_political_tarot" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_political_tarot
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		PAR_bush_war = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_bush_war" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = PAR_bush_war
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = -100
+				stability_factor = -0.2
+				fascism_drift = -0.05
+			}
+		}
+
+		####################################
+		PAR_disciplina_jerarquia_y_orden = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_disciplina_jerarquia_y_orden" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_coloradan_dissidence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_coloradan_dissidence" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_coloradans_shattered = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_coloradan_dissidence" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = PAR_coloradan_dissidence
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_fulna_insurgency = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_fulna_insurgency" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_new_state_chavez = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_new_state_chavez" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_new_state_stroessner = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_new_state_stroessner" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_new_state_franco = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_new_state_franco" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_coloradans_ascendant = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_coloradans_ascendant" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_coloradans_secured = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_coloradans_secured" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+
+		PAR_fulna_ascendant = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_fulna_ascendant" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			#picture = GER_master_of_europe
+
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+	}
+
+	###############
+	## MINISTERS ##
+	###############
+	head_of_government = {
+		PAR_juan_natalicio_gonzalez_hog = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_juan_natalicio_gonzalez_hog" }
+			picture = PAR_juan_natalicio_gonzalez_hog
+
+			allowed = { original_tag = PAR }
+			available = { }
+
+			traits = {
+				head_of_government
+				minister_fascism_fascist_populism
+				PAR_juan_natalicio_gonzalez_hog_desc
+			}
+			cancel_if_invalid = yes
+		}
+	}
+
+	foreign_minister = {
+		PAR_rodney_elipdio_acevedo_for = {
+		   on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_rodney_elipdio_acevedo_for" }
+		   picture = x
+
+		   allowed = { original_tag = PAR }
+		   available = { }
+
+		   traits = {
+			   foreign_minister
+			   minister_fascism_corporatism
+			   PAR_rodney_elipdio_acevedo_for_desc
+		   }
+		   cancel_if_invalid = yes
+	   }
+   }
+
+	economy_minister = {
+		PAR_epifanio_mendez_fleitas_eco = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_epifanio_mendez_fleitas_eco" }
+			picture = PAR_epifanio_mendez_fleitas_for
+
+			allowed = { original_tag = PAR }
+			available = { }
+
+			traits = {
+				economy_minister
+				minister_authoritarian_democracy_peronism
+				PAR_epifanio_mendez_fleitas_eco_desc
+			}
+			cancel_if_invalid = yes
+		}
+	}
+
+	security_minister = {
+		PAR_auguste_ricord_sec = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAR_auguste_ricord_sec" }
+			picture = PAR_auguste_ricord_sec
+
+			allowed = { original_tag = PAR }
+			available = { }
+
+			traits = {
+				security_minister
+				minister_fascism_corporatism
+				PAR_auguste_ricord_sec_desc
+			}
+			cancel_if_invalid = yes
+		}
+	}
+}

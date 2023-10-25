@@ -1,0 +1,27 @@
+###POP DONE 
+state={
+	id=1564
+	name="STATE_1564"
+	manpower = 1063000
+	
+	state_category = town
+	
+	resources={
+		oil=2
+	}
+
+	history={
+		owner = CAU
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = { 7624 1 }
+		victory_points = { 3668 10 }
+		add_core_of = CAU
+		add_core_of = DAG
+	}
+
+	provinces={
+		1450 3668 3711 4463 6701 7624 15132
+	}
+}

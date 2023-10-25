@@ -1,0 +1,801 @@
+ideas = {
+	# MCW
+		head_of_government = {
+			MCW_Wolf_Heinrich_Graf_von_Helldorff_hog = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea MCW_Wolf_Heinrich_Graf_von_Helldorff_hog"}
+				allowed = { original_tag = MCW }
+				picture = "MCW_Wolf_Heinrich_Graf_von_Helldorff_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					national_socialism
+					hog_utterly_corrupt
+					MCW_Wolf_Heinrich_Graf_von_Helldorff_hog_desc
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			MCW_Bronislav_Kaminski_for = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea MCW_Bronislav_Kaminski_for"}
+				allowed = { original_tag = MCW }
+				picture = "MCW_Bronislav_Kaminski_for"
+				available = { always = yes }
+				traits = {
+					MCW_nspr_ss
+					minister_national_socialism_stratocratic_nazism
+					MCW_tver_forest
+					MCW_Bronislav_Kaminski_for_desc
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			MCW_Harald_Quandt_eco = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea MCW_Harald_Quandt_eco"}
+				allowed = { original_tag = MCW }
+				picture = "MCW_Harald_Quandt_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_fascism_corporate_statism
+					eco_industrialiser
+					MCW_Harald_Quandt_eco_desc
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			MCW_Dietrich_von_Saucken_sec = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea MCW_Dietrich_von_Saucken_sec"}
+				allowed = { original_tag = MCW }
+				picture = "MCW_Dietrich_von_Saucken_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					despotism
+					sec_old_prussian
+					MCW_Dietrich_von_Saucken_sec_desc
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		country = {
+			MCW_generalplan_moskowien_and_its_fruits = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_generalplan_moskowien_and_its_fruits" }
+				picture = "MCW_the_great_prize"
+				allowed = { always = no }
+				allowed_civil_war = { always = no }
+				removal_cost = -1
+			}
+			MCW_totalrekonstruktion_and_what_lead_to_it = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_totalrekonstruktion_and_what_lead_to_it" }
+				picture = "MCW_totalrekonstruktion_and_what_lead_to_it"
+				allowed = { always = no }
+				allowed_civil_war = { always = no }
+				removal_cost = -1
+				modifier = {
+				}
+			}
+			MCW_ostvolkrat_and_its_rats = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_ostvolkrat_and_its_rats" }
+				picture = "MCW_the_ostvolk_council"
+				allowed = { always = no }
+				allowed_civil_war = { always = no }
+				removal_cost = -1
+				modifier = {
+				}
+			}
+			MCW_living_on_a_minefield = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea MCW_living_on_a_minefield" }
+				picture = "MCW_living_on_a_minefield"
+				allowed = { always = no }
+				allowed_civil_war = { always = no }
+				removal_cost = -1
+				modifier = {
+					stability_factor = -0.2
+					war_support_factor = -0.2
+					admin_efficiency_monthly_rate = -0.01
+					national_socialism_drift = -0.01
+					military_expenditures_factor = 0.2
+				}
+			}
+		}
+	# BBB
+		head_of_government = {
+			BBB_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBB_hog" }
+				allowed = { original_tag = BBB }
+				picture = "BBB_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					fascism
+					hog_the_black_bandit
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			BBB_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBB_for" }
+				allowed = { original_tag = BBB }
+				picture = "BBB_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					fascism
+					for_the_cloak_n_dagger_schemer
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			BBB_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBB_eco" }
+				allowed = { original_tag = BBB }
+				picture = "BBB_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					fascism
+					eco_pillager
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			BBB_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBB_sec" }
+				allowed = { original_tag = BBB }
+				picture = "BBB_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					fascism
+					sec_guerilla_fighter
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# FRP
+		head_of_government = {
+			FRP_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRP_hog" }
+				allowed = { original_tag = FRP }
+				picture = "FRP_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					minister_communist_bukharinism
+					hog_respected_war_hero
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			FRP_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRP_for" }
+				allowed = { original_tag = FRP }
+				picture = "FRP_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					minister_communist_bukharinism
+					for_well_connected
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			FRP_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRP_eco" }
+				allowed = { original_tag = FRP }
+				picture = "FRP_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_communist_bukharinism
+					eco_balanced_budget_economy
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			FRP_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRP_sec" }
+				allowed = { original_tag = FRP }
+				picture = "FRP_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					minister_communist_bukharinism
+					sec_guerilla_fighter
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# MOS
+		head_of_government = {
+			MOS_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOS_hog" }
+				allowed = { original_tag = MOS }
+				picture = "MOS_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					national_socialism
+					hog_local_tyrant
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			MOS_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOS_for" }
+				allowed = { original_tag = MOS }
+				picture = "MOS_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					national_socialism
+					for_well_connected
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			MOS_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOS_eco" }
+				allowed = { original_tag = MOS }
+				picture = "MOS_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_fascism_corporatism
+					eco_tough_and_incompetent
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			MOS_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea MOS_sec" }
+				allowed = { original_tag = MOS }
+				picture = "MOS_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					national_socialism
+					sec_prince_of_terror
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# OKB
+		head_of_government = {
+			OKB_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea OKB_hog" }
+				allowed = { original_tag = OKB }
+				picture = "OKB_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					authoritarian_democracy
+					hog_respected_war_hero
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			OKB_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea OKB_for" }
+				allowed = { original_tag = OKB }
+				picture = "OKB_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					despotism
+					for_general_staffer
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			OKB_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea OKB_eco" }
+				allowed = { original_tag = OKB }
+				picture = "OKB_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					authoritarian_democracy
+					eco_reformer
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			OKB_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea OKB_sec" }
+				allowed = { original_tag = OKB }
+				picture = "OKB_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					national_socialism
+					sec_disliked_by_the_military
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# PAU
+		head_of_government = {
+			PAU_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAU_hog" }
+				allowed = { original_tag = PAU }
+				picture = "PAU_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					national_socialism
+					hog_silent_workhorse
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			PAU_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAU_for" }
+				allowed = { original_tag = PAU }
+				picture = "PAU_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					minister_fascism_corporatism
+					for_well_connected
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			PAU_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAU_eco" }
+				allowed = { original_tag = MCW }
+				picture = "PAU_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_national_socialism_technocratic_nazism
+					eco_industrialiser
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			PAU_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PAU_sec" }
+				allowed = { original_tag = PAU }
+				picture = "PAU_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					fascism
+					sec_army_instructor
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# PEN
+		head_of_government = {
+			PEN_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PEN_hog" }
+				allowed = { original_tag = PEN }
+				picture = "PEN_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					minister_authoritarian_democracy_oligarchy
+					hog_silent_workhorse
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			PEN_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PEN_for" }
+				allowed = { original_tag = PEN }
+				picture = "PEN_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					minister_authoritarian_democracy_oligarchy
+					for_fierce_negotiator
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			PEN_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PEN_eco" }
+				allowed = { original_tag = PEN }
+				picture = "PEN_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_despotism_warlordism
+					eco_corrupt_kleptocrat
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			PEN_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PEN_sec" }
+				allowed = { original_tag = PEN }
+				picture = "PEN_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					minister_despotism_warlordism
+					sec_guerilla_fighter
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# PSK
+		head_of_government = {
+			PSK_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PSK_hog" }
+				allowed = { original_tag = PSK }
+				picture = "PSK_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					minister_esoteric_nazism_agrarian_spartanism
+					hog_deaths_frequent_guest
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			PSK_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PSK_for" }
+				allowed = { original_tag = PSK }
+				picture = "PSK_for"
+				available = { always = yes }
+				traits = {
+					for_head_of_rkm56
+					minister_esoteric_nazism_spartanism
+					sec_secret_police_chief
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			PSK_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PSK_eco" }
+				allowed = { original_tag = PSK }
+				picture = "PSK_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_esoteric_nazism_agrarian_spartanism
+					eco_military_entrepreneur
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			PSK_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea PSK_sec" }
+				allowed = { original_tag = PSK }
+				picture = "PSK_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					minister_esoteric_nazism_spartanism
+					sec_prince_of_terror
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# RSB
+		head_of_government = {
+			RSB_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea RSB_hog" }
+				allowed = { original_tag = RSB }
+				picture = "RSB_minister_Mkhitar_Ambartsumyan_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					minister_despotism_warlordism
+					hog_local_tyrant
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			RSB_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea RSB_for" }
+				allowed = { original_tag = RSB }
+				picture = "RSB_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					minister_despotism_warlordism
+					for_the_cloak_n_dagger_schemer
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			RSB_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea RSB_eco" }
+				allowed = { original_tag = RSB }
+				picture = "RSB_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_despotism_warlordism
+					eco_pillager
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			RSB_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea RSB_sec" }
+				allowed = { original_tag = RSB }
+				picture = "RSB_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					minister_despotism_warlordism
+					sec_petty_warlord
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# RDC
+		head_of_government = {
+			RDC_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea RDC_hog" }
+				allowed = { original_tag = RDC }
+				picture = "RDC_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					minister_authoritarian_democracy_provisional_government
+					hog_silent_workhorse
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			RDC_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea RDC_for" }
+				allowed = { original_tag = RDC }
+				picture = "RDC_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					minister_authoritarian_democracy_provisional_government
+					for_great_compromiser
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			RDC_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea RDC_eco" }
+				allowed = { original_tag = RDC }
+				picture = "RDC_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_authoritarian_democracy_provisional_government
+					eco_balanced_budget_economy
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			RDC_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea RDC_sec" }
+				allowed = { original_tag = RDC }
+				picture = "RDC_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					despotism
+					sec_steadfast_defender
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# SMO
+		head_of_government = {
+			SMO_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea SMO_hog" }
+				allowed = { original_tag = SMO }
+				picture = "SMO_hog"
+				available = { always = yes }
+				traits = {
+					head_of_government
+					minister_communist_bukharinism
+					hog_respected_war_hero
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			SMO_for = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea SMO_for"}
+				allowed = { original_tag = SMO }
+				picture = "SMO_for"
+				available = { always = yes }
+				traits = {
+					foreign_minister
+					minister_communist_bukharinism
+					for_well_connected
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			SMO_eco = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea SMO_eco"}
+				allowed = { original_tag = SMO }
+				picture = "SMO_eco"
+				available = { always = yes }
+				traits = {
+					economy_minister
+					minister_communist_bukharinism
+					eco_union_man
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			SMO_sec = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea SMO_sec"}
+				allowed = { original_tag = SMO }
+				picture = "SMO_sec"
+				available = { always = yes }
+				traits = {
+					security_minister
+					minister_communist_bukharinism
+					sec_guerilla_fighter
+				}
+				cancel_if_invalid = no
+				ledger = civilian
+			}
+		}
+	# TAM
+		head_of_government = {
+			TAM_hog = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea TAM_hog" }
+				picture = "TAM_hog"
+				allowed = { original_tag = TAM }
+				available = { always = yes }
+				traits = {
+					head_of_government
+					minister_fascism_corporate_statism
+					hog_corporate_suit
+				}
+				cancel_if_invalid = yes
+				ledger = civilian
+			}
+		}
+		foreign_minister = {
+			TAM_for = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea TAM_for" }
+				picture = "TAM_for"
+				allowed = { original_tag = TAM }
+				traits = {
+					foreign_minister
+					minister_fascism_corporate_statism
+					for_well_connected
+				}
+				cancel_if_invalid = yes
+				ledger = civilian
+			}
+		}
+		economy_minister = {
+			TAM_eco = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: add idea TAM_eco" }
+				picture = "TAM_eco"
+				allowed = { original_tag = TAM }
+				traits = {
+					economy_minister
+					minister_fascism_corporate_statism
+					eco_laissez_faire_capitalist
+				}
+				cancel_if_invalid = yes
+				ledger = civilian
+			}
+		}
+		security_minister = {
+			TAM_sec = {
+				on_add = { log = "[GetDateText]: [Root.GetName]: TAM_sec" }
+				picture = "TAM_minister_Gerhard_Mertins"
+				allowed = { original_tag = TAM }
+				traits = {
+					security_minister
+					despotism
+					sec_army_instructor
+				}
+				cancel_if_invalid = yes
+				ledger = civilian
+			}
+		}
+	country = {
+		# Dissolution
+		MSK_dissolution_start = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MSK_dissolution_start" }
+			picture = GER_broken_moskowien
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = -0.3
+				army_defence_factor = 0.3
+			}
+		}
+		MSK_dissolution_end = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MSK_dissolution_end" }
+			picture = WEST_AFRICA_obliterated_infrastructures
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				political_power_gain = -0.2
+			}
+		}
+	}
+}

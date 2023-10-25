@@ -1,0 +1,26 @@
+
+state={
+	id=1282
+	name="STATE_1282"
+	manpower = 1124401
+
+	state_category = town
+
+	resources={
+		oil=1
+	}
+	
+	history={
+		owner = ROM
+		buildings = {
+			infrastructure = 6
+			radar_station = 1
+		}
+		victory_points = { 11636 2 }
+		add_core_of = ROM
+	}
+
+	provinces={
+		674 6677 9651 11603 11636 
+	}
+}

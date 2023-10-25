@@ -1,0 +1,30 @@
+
+state={
+	id=1248
+	name="STATE_1248"
+	manpower = 420658
+	
+	state_category = town
+	buildings_max_level_factor=1.250
+
+	history={
+		owner = IME
+		victory_points = { 14453 5 }
+		buildings = {
+			infrastructure = 4
+			dockyard = 1
+			14453 = {
+				naval_base = 1
+			}
+			air_base = 2
+			# 1201 = {
+			# 	naval_base = 3
+			# }
+		}
+		add_core_of = IME
+	}
+
+	provinces={
+		14453
+	}
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=1477
+	name="STATE_1477"
+
+	history={
+		owner = MCW
+		victory_points = { 8 10 }
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = MCW
+
+	}
+
+	provinces={
+		8 110 187 3321 6086 6154 6225 9111 9212 9333 11191 11224 
+	}
+	manpower=223000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

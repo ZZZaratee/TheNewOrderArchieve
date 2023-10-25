@@ -1,0 +1,159 @@
+#####################
+# Position traits
+######################
+#  These have no effect and are just for events and to clarify ideology belongings
+#####################
+
+leader_traits = {
+#####################
+# Minister
+#####################
+
+	decision = {}
+
+#####################
+# Minister
+#####################
+
+	head_of_government = {}
+	foreign_minister = {}
+	economy_minister = {}
+	security_minister = {}
+	intel_minister = {}
+
+#####################
+# Military Staff
+#####################
+
+	high_command = {}
+	army_chief = {}
+	navy_chief = {}
+	air_chief = {}
+
+#####################
+# Political ideologies
+#####################
+	communist = {}
+	socialist = {}
+	social_democracy = {}
+	liberal_democracy = {}
+	conservative_democracy = {}
+	authoritarian_democracy = {}
+	despotism = {}
+	fascism = {}
+	national_socialism = {}
+	ultranationalism = {}
+	esoteric_nazism = {}
+
+	## Subideologies
+	## Communist Subideologies
+	minister_communist_bukharinism = {}
+	minister_communist_stalinism = {}
+	minister_communist_neocommunism = {}
+	minister_communist_left_communist = {}
+	minister_communist_stratocratic_communism = {}
+	minister_communist_maoism = {}
+	minister_communist_mao_zedong_thought = {}
+	minister_communist_islamic_marxism = {}
+	minister_communist_amazonism = {}
+	minister_communist_arab_communism = {}
+	minister_communist_national_communism = {}
+	minister_communist_workerism = {}
+	## Socialist Subideologies
+	minister_socialist_anarcho_communist = {}
+	minister_socialist_christian_socialism = {}
+	minister_socialist_revolutionary_frontism = {}
+	minister_socialist_ultravisionary_socialism = {}
+	minister_socialist_agrarian_socialism = {}
+	minister_socialist_syndicalism = {}
+	minister_socialist_utopian_socialism = {}
+	minister_socialist_panafricanism = {}
+	minister_socialist_baathism = {}
+	minister_socialist_left_wing_nationalism = {}
+	minister_socialist_guevarism = {}
+	minister_socialist_nasserism = {}
+	## Socdem Subideologies
+	minister_social_democracy_democratic_socialism = {}
+	minister_social_democracy_progressivism = {}
+	minister_social_democracy_left_wing_populism = {}
+	minister_social_democracy_left_kemalism = {}
+	minister_social_democracy_labor_zionism = {}
+	minister_social_democracy_popular_front = {}
+	minister_social_democracy_social_radicalism = {}
+	## Libdem Subideologies
+	minister_liberal_democracy_christian_progressivism = {}
+	minister_liberal_democracy_national_liberalism = {}
+	minister_liberal_democracy_liberal_radicalism = {}
+	minister_liberal_democracy_revisionist_zionism = {}
+	## Condem Subideologies
+	minister_conservative_democracy_agrarianism = {}
+	minister_conservative_democracy_paternalistic_conservatism = {}
+	minister_conservative_democracy_islamic_democracy = {}
+	minister_conservative_democracy_liberal_conservatism = {}
+	minister_conservative_democracy_christian_democracy = {}
+	minister_conservative_democracy_populist_conservatism = {}
+	minister_conservative_democracy_revisionist_zionism = {}
+	## Authdem Subideologies
+	minister_authoritarian_democracy_national_conservatism = {}
+	minister_authoritarian_democracy_social_nationalism = {}
+	minister_authoritarian_democracy_controlled_democracy = {}
+	minister_authoritarian_democracy_stratocracy = {}
+	minister_authoritarian_democracy_oligarchy = {}
+	minister_authoritarian_democracy_solidarism = {}
+	minister_authoritarian_democracy_military_mandate = {}
+	minister_authoritarian_democracy_neoconservatism = {}
+	minister_authoritarian_democracy_dixiecrat = {}
+	minister_authoritarian_democracy_social_credit = {}
+	minister_authoritarian_democracy_corporate_paternalism = {}
+	minister_authoritarian_democracy_kemalism = {}
+	minister_authoritarian_democracy_semi_constitutional_monarchy = {}
+	minister_authoritarian_democracy_dominant_party_democracy = {}
+	minister_authoritarian_democracy_peronism = {}
+	minister_authoritarian_democracy_provisional_government = {}
+	minister_authoritarian_democracy_right_wing_populism = {}
+	minister_authoritarian_democracy_xunzheng = {}
+	## Despot Subideologies
+	minister_despotism_absolute_monarchy = {}
+	minister_despotism_military_junta = {}
+	minister_despotism_civilian_dictatorship = {}
+	minister_despotism_theocracy = {}
+	minister_despotism_papacy = {}
+	minister_despotism_interim_government = {}
+	minister_despotism_colonial_government = {}
+	minister_despotism_neo_baathism_ = {}
+	minister_despotism_corporatocracy = {}
+	minister_despotism_military_anarchism = {}
+	minister_despotism_aristocratic_conservatism = {}
+	minister_despotism_warlordism = {}
+	minister_despotism_personalistic_dictatorship = {}
+	minister_despotism_partisan_movement = {}
+	minister_despotism_national_catholicism = {}
+	## Fascist Subideologies
+	minister_fascism_reformed_national_socialism = {}
+	minister_fascism_corporatism = {}
+	minister_fascism_corporate_statism = {}
+	minister_fascism_sansepolcrismo = {}
+	minister_fascism_fascist_mysticism = {}
+	minister_fascism_shia_theocracy = {}
+	minister_fascism_national_syndicalism = {}
+	minister_fascism_fascist_populism = {}
+	minister_fascism_revolutionary_nationalism = {}
+	minister_fascism_reform_bureaucracy = {}
+	## NatSoc Subideologies
+	minister_national_socialism_idiosyncratic_nazism = {}
+	minister_national_socialism_clerical_fascism = {}
+	minister_national_socialism_stratocratic_nazism = {}
+	minister_national_socialism_ordosocialism = {}
+	minister_national_socialism_technocratic_nazism = {}
+	## Ultnat Subideologies
+	minister_ultranationalism_slavo_aryanism = {}
+	minister_ultranationalism_eurasianism = {}
+	minister_ultranationalism_ultramilitarism = {}
+	minister_ultranationalism_fundamentalism = {}
+	minister_ultranationalism_stratocratic_nazism = {}
+	## EsoNaz Subideologies
+	minister_esoteric_nazism_burgundian_system = {}
+	minister_esoteric_nazism_imperial_cult = {}
+	minister_esoteric_nazism_agrarian_spartanism = {}
+	minister_esoteric_nazism_spartanism = {}
+}

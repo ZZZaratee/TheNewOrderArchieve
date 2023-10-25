@@ -1,0 +1,25 @@
+###POP DONE 
+state=
+{
+	id=74
+	name="STATE_74"
+	manpower = 1120000
+	
+	state_category = rural
+	
+	
+	history = {
+		owner = GER
+		buildings = {
+			barracks = 1
+			infrastructure = 7
+			thermoelectric_plant = 1
+			nuclear_reactor = 1
+		}
+		add_core_of = GER
+		victory_points = { 3414 5 }
+	}
+	provinces= {
+		421 3414 3583 6485
+ 	}
+}

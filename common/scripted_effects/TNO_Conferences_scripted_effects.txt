@@ -1,0 +1,243 @@
+#Cold War conference mechanic scripted effects
+
+TNO_CW_clear_conference_variables = {
+	clear_array = global.TNO_Conference_Countries
+	clear_array = global.TNO_Conference_Decisions
+	clear_variable = global.TNO_conference
+	clear_variable = global.CW_Conference_Timer
+	clear_variable = global.CW_Conference_Stronger_Power
+	set_variable = { global.CW_USA_GER_Balance = 50 }
+	set_variable = { global.CW_GER_JAP_Balance = 50 }
+	set_variable = { global.CW_JAP_USA_Balance = 50 }
+
+	clr_global_flag = CW_Proposals_Done
+	clr_global_flag = CW_Conference_Done
+	GER = {
+		clr_country_flag = CW_TEST_PROPOSAL_FLAG
+	}
+}
+
+TNO_CW_add_tension_ID = {
+	if = {
+		limit = { check_variable = { global.TNO_conference = 1 } }
+		set_temp_variable = { tension_ID = 21 }
+	}
+	else_if = {
+		limit = { check_variable = { global.TNO_conference = 2 } }
+		set_temp_variable = { tension_ID = 22 }
+	}
+}
+
+TNO_CW_conference_timeout_effects = {
+	if = {
+		limit = {
+			check_variable = { global.TNO_Conference_Countries^0 = GER }
+			check_variable = { global.TNO_Conference_Countries^1 = JAP }
+		}
+		if = {
+			limit = { check_variable = { GER.TotalScore > JAP.TotalScore } }
+			set_variable = { global.CW_Conference_Stronger_Power = GER }
+		}
+		else_if = {
+			set_variable = { global.CW_Conference_Stronger_Power = JAP }
+		}
+		###
+		if = {
+			limit = { check_variable = { global.CW_GER_JAP_Balance > 55 } }
+			GER = { country_event = conferences.3 }
+		}
+		else_if = {
+			limit = { check_variable = { global.CW_GER_JAP_Balance > 45 } }
+			TNO_CW_conference_balanced_success_effects = yes
+			GER = { country_event = conferences.2 }
+			JAP = { country_event = conferences.2 }
+		}
+		else = {
+			JAP = { country_event = conferences.3 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { global.TNO_Conference_Countries^0 = USA }
+			check_variable = { global.TNO_Conference_Countries^1 = GER }
+		}
+		if = {
+			limit = { check_variable = { USA.TotalScore > GER.TotalScore } }
+			set_variable = { global.CW_Conference_StronUSA_Power = USA }
+		}
+		else_if = {
+			set_variable = { global.CW_Conference_StronUSA_Power = GER }
+		}
+		###
+		if = {
+			limit = { check_variable = { global.CW_USA_GER_Balance > 55 } }
+			USA = { country_event = conferences.3 }
+		}
+		else_if = {
+			limit = { check_variable = { global.CW_USA_GER_Balance > 45 } }
+			TNO_CW_conference_balanced_success_effects = yes
+			USA = { country_event = conferences.2 }
+			GER = { country_event = conferences.2 }
+		}
+		else = {
+			GER = { country_event = conferences.3 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { global.TNO_Conference_Countries^0 = JAP }
+			check_variable = { global.TNO_Conference_Countries^1 = USA }
+		}
+		if = {
+			limit = { check_variable = { JAP.TotalScore > USA.TotalScore } }
+			set_variable = { global.CW_Conference_StronJAP_Power = JAP }
+		}
+		else_if = {
+			set_variable = { global.CW_Conference_StronJAP_Power = USA }
+		}
+		###
+		if = {
+			limit = { check_variable = { global.CW_JAP_USA_Balance > 55 } }
+			JAP = { country_event = conferences.3 }
+		}
+		else_if = {
+			limit = { check_variable = { global.CW_JAP_USA_Balance > 45 } }
+			TNO_CW_conference_balanced_success_effects = yes
+			JAP = { country_event = conferences.2 }
+			USA = { country_event = conferences.2 }
+		}
+		else = {
+			USA = { country_event = conferences.3 }
+		}
+	}
+}
+
+TNO_CW_conference_balanced_success_effects = {
+	if = {
+		limit = { check_variable = { global.TNO_conference = 1 } }
+		GER = {
+			if = {
+				limit = { has_country_flag = CW_TEST_PROPOSAL_FLAG }
+				add_stability = 0.20
+			}
+		}
+		JAP = {
+			##insert effects heres
+		}
+	}
+	set_temp_variable = { tension_WT = -10 }
+	set_temp_variable = { tension_superpower_1 = global.TNO_Conference_Countries^0 } 
+	set_temp_variable = { tension_superpower_2 = global.TNO_Conference_Countries^1 }
+	TNO_CW_add_tension_ID = yes
+	TNO_change_tension = yes
+	TNO_CW_clear_conference_variables = yes
+}
+
+TNO_CW_conference_success_effects = {
+	if = {
+		limit = { check_variable = { global.TNO_conference = 1 } }
+		GER = {
+			if = {
+				limit = { has_country_flag = CW_TEST_PROPOSAL_FLAG }
+				add_stability = 0.20
+			}
+		}
+		JAP = {
+			##insert effects heres
+		}
+	}
+	set_temp_variable = { tension_WT = -10 }
+	set_temp_variable = { tension_superpower_1 = global.TNO_Conference_Countries^0 } 
+	set_temp_variable = { tension_superpower_2 = global.TNO_Conference_Countries^1 }
+	TNO_CW_add_tension_ID = yes
+	TNO_change_tension = yes
+	TNO_CW_clear_conference_variables = yes
+}
+
+TNO_CW_conference_strong_arming_effects = {
+	if = {
+		limit = { check_variable = { global.TNO_conference = 1 } }
+		GER = {
+			if = {
+				limit = { check_variable = { global.CW_Conference_Stronger_Power = GER } }
+				add_stability = 0.40
+			}
+			else = {
+				add_stability = -0.40
+			}
+		}
+		JAP = {
+			##insert effects heres
+		}
+	}
+	TNO_CW_clear_conference_variables = yes
+}
+
+TNO_CW_conference_failure_strong_arming_effects = {
+	if = {
+		limit = { check_variable = { global.TNO_conference = 1 } }
+		GER = {
+			if = {
+				limit = { has_country_flag = CW_TEST_PROPOSAL_FLAG }
+				add_stability = -0.40
+			}
+		}
+		JAP = {
+			##insert effects heres
+		}
+	}
+	set_temp_variable = { tension_WT = 10 }
+	set_temp_variable = { tension_superpower_1 = global.TNO_Conference_Countries^0 } 
+	set_temp_variable = { tension_superpower_2 = global.TNO_Conference_Countries^1 }
+	TNO_CW_add_tension_ID = yes
+	TNO_change_tension = yes
+	TNO_CW_clear_conference_variables = yes
+}
+
+TNO_CW_conference_failure_effects = {
+	if = {
+		limit = { check_variable = { global.TNO_conference = 1 } }
+		GER = {
+			if = {
+				limit = { has_country_flag = CW_TEST_PROPOSAL_FLAG }
+				add_stability = -0.20
+			}
+		}
+		JAP = {
+			##insert effects heres
+		}
+	}
+	set_temp_variable = { tension_WT = 5 }
+	set_temp_variable = { tension_superpower_1 = global.TNO_Conference_Countries^0 } 
+	set_temp_variable = { tension_superpower_2 = global.TNO_Conference_Countries^1 }
+	TNO_CW_add_tension_ID = yes
+	TNO_change_tension = yes
+	TNO_CW_clear_conference_variables = yes
+}
+
+TNO_CW_conference_Proposals_click_effect = {
+	if = {
+		limit = { check_variable = { i = 0 } }
+		#placeholders
+		add_political_power = -5
+		set_country_flag = CW_TEST_PROPOSAL_FLAG
+	}
+	else_if = {
+		limit = { check_variable = { i = 1 } }
+		#placeholders
+		add_political_power = 5
+	}
+}
+
+TNO_CW_conference_Decisions_click_effect = {
+	if = {
+		limit = { check_variable = { i = 0 } }
+		#placeholders
+		add_political_power = -5
+	}
+	else_if = {
+		limit = { check_variable = { i = 1 } }
+		#placeholders
+		add_political_power = 5
+	}
+}

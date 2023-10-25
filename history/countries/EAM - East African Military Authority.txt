@@ -1,0 +1,413 @@
+﻿capital = 271
+
+set_research_slots = 2
+set_convoys = 50
+set_stability = 0.5
+set_war_support = 0.5
+
+oob = "IEA_collapse_1967"
+
+add_ideas = {
+### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	tno_refugees_vetted_entry
+
+	### MILITARY LAWS ###
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_few_regulations
+	tno_education_elite_only
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_police
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### SOCIETAL DEVELOPMENT ###
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_widespread_corruption
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+# Starting tech
+set_technology = {
+
+	# Infantry
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+	infantry_weapons_3 = 1
+	tech_mountaineers = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	night_vision_1 = 1
+	infantry_at = 1
+	motorized_infantry = 1
+	#	motorized_infantry_1 = 1
+
+	# Support
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+
+	# Armor
+	mechanised_infantry3 = 1
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	APC_1950 = 1
+	APC_1950_basic_turret = 1
+	IFV_1950 = 1
+	MBT_1950 = 1
+	MBT_1950_basic_turret = 1
+	#MBT_1950_basic_engine = 1
+
+	# Artillery
+	artillery4 = 1
+	antiair5 = 1
+
+	# Land Doctrine
+	strategic_theorem = 1
+
+	# Naval
+	ww2_submarine = 1
+	basic_submarine = 1
+	ww2_destroyer = 1
+	basic_destroyer = 1
+	ww2_cruiser = 1
+	basic_cruiser = 1
+	improved_cruiser = 1
+	ww2_battleship = 1
+	ww2_carrier = 1
+	early_carrier = 1
+	transport = 1
+
+	# Naval Doctrine
+	#fleet_in_being = 1
+
+	# Helicopters
+	very_early_helicopter = 1
+	early_helicopter = 1
+
+	# Light Aircraft
+	early_fighter = 1
+	fighter_1945 = 1
+	cv_1945_fighter = 1
+	fighter_1950 = 1
+	cv_1950_fighter = 1
+	interceptor_1945 = 1
+	interceptor_1950 = 1
+	CAS_1945 = 1
+	cv_1945_CAS = 1
+	CAS_1950 = 1
+	cv_1950_CAS = 1
+
+	# Heavy Aircraft
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	tac_air_1950 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+	transport_air_1960 = 1
+
+	# Electronics
+	electronic_mechanical_engineering = 1
+	radio = 1
+	helicopter_engines = 1
+	jet_engines = 1
+	jet_engines_bombers = 1
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1934.3.26"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 0
+	ultranationalism = 0
+	socialist = 0
+	social_democracy = 0
+	liberal_democracy = 0
+
+	conservative_democracy = 0
+	authoritarian_democracy = 30
+	despotism = 60
+	fascism = 10
+	national_socialism = 0
+	
+}
+
+create_country_leader = {
+	name = "Amedeo Guillet"
+	desc = "POLITICS_VICEROY_AMEDEO_GUILLET_DESC"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Amedeo_Guillet.dds"
+	expire = "1985.1.1"
+	ideology = despotism_subtype
+	traits = 	{
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Amedeo Guillet"
+	portrait_path = "gfx/leaders/IEA/Portrait_IEA_Amedeo_Guillet.dds"
+	traits = {
+		inspirational_leader
+		war_hero
+		adaptable
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+	#id = 1
+}
+
+create_corps_commander = {
+	name = "Alfredo Arnera"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Alfredo_Arnera.dds"
+	traits = {
+		old_guard
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Angelo Bastiani"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Angelo_Bastiani.dds"
+	traits = {
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Camillo Bechis"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Camillo_Bechis.dds"
+	traits = {
+		old_guard
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Domenico Mondelli"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Domenico_Mondelli.dds"
+	traits = {
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Elio Antenucci"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Elio_Antenucci.dds"
+	traits = {
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Enrico Anzilotti"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Enrico_Anzilotti.dds"
+	traits = {
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Ibrahim Mohammed Farag"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Ibrahim_Mohammed_Farag.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Mohamed Abshirt Muse"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Mohamed_Abshir_Muse.dds"
+	traits = {
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Mohammed Siad Barre"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Mohammed_Siad_Barre.dds"
+	traits = {
+		politically_connected
+		inflexible_strategist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Orlando Lorenzini"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Orlando_Lorenzini.dds"
+	traits = {
+		old_guard
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Saverio Maraventano"
+	picture = "gfx/leaders/IEA/Portrait_IEA_Saverio_Maraventano.dds"
+	traits = {
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+add_ideas = {
+	#standard#
+
+
+	#political#
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_elite_voting
+	tno_refugees_open
+
+	#military#
+	tno_conscription_one_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_educational_deferment
+
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_low_pensions
+	tno_unemployment_no_subsidies
+
+	#social#
+	tno_safety_limited_regulations
+	tno_health_care_low_income_protections
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_security_service
+}
+
+set_variable = { trade_opinion_embargo@GER = 1 }
+set_variable = { trade_opinion_embargo@GGR = 1 }
+set_variable = { trade_opinion_embargo@BGR = 1 }
+set_variable = { trade_opinion_embargo@HGR = 1 }
+set_variable = { trade_opinion_embargo@SGR = 1 }
+set_variable = { trade_opinion_embargo@CZE = 1 }
+set_variable = { trade_opinion_embargo@GGN = 1 }
+set_variable = { trade_opinion_embargo@SLO = 1 }
+set_variable = { trade_opinion_embargo@UKR = 1 }
+set_variable = { trade_opinion_embargo@MCW = 1 }
+set_variable = { trade_opinion_embargo@OST = 1 }
+set_variable = { trade_opinion_embargo@COG = 1 }
+set_variable = { trade_opinion_embargo@CAU = 1 }
+set_variable = { trade_opinion_embargo@SER = 1 }
+set_variable = { trade_opinion_embargo@DEN = 1 }
+set_variable = { trade_opinion_embargo@HOL = 1 }
+set_variable = { trade_opinion_embargo@NOR = 1 }
+set_variable = { trade_opinion_embargo@CRN = 1 }
+set_variable = { trade_opinion_embargo@MAD = 1 }
+set_variable = { trade_opinion_embargo@GRO = 1 }
+set_variable = { trade_opinion_embargo@ANG = 1 }
+set_variable = { trade_opinion_embargo@HOL = 1 }
+set_variable = { trade_opinion_embargo@BRG = 1 }
+set_variable = { trade_opinion_embargo@BUL = 1 }
+set_variable = { trade_opinion_embargo@ENG = 1 }
+set_variable = { trade_opinion_embargo@FRA = 1 }
+set_variable = { trade_opinion_embargo@BRT = 1 }
+set_variable = { trade_opinion_embargo@IRE = 1 }

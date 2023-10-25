@@ -1,0 +1,5986 @@
+﻿add_namespace = SAFWAR
+add_namespace = SAFWAR.SAFFlavour
+##Currently Reserved For Debug
+country_event = {
+	id = SAFWAR.11111
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.1"}
+	title = SAFWAR.11111.t
+	desc = SAFWAR.11111.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		USA = {
+			set_country_flag = USA_can_pull_out_mandates
+		}
+	}
+}
+country_event = {
+	id = SAFWAR.11110
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.1"}
+	title = SAFWAR.11111.t
+	desc = SAFWAR.11111.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "total pakt win"
+		hidden_effect = {
+			USA = {
+				set_temp_variable = { Victory_ID = 4 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -300 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				if = {
+					limit = { NOT = { has_global_flag = german_civil_war_end } }
+					set_country_flag = SAW_early_end
+				}
+				else = {
+					set_temp_variable = { Victory_ID = 4 }
+					set_temp_variable = { Victory_Outcome = 5 }
+					set_temp_variable = { Victory_Points = 300 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+				white_peace = ANG
+				white_peace = GRO
+				white_peace = COG
+				white_peace = NAM
+				white_peace = BOR
+			}
+			clr_global_flag = south_african_war_happening
+			set_global_flag = SAF_Schild_Victory
+			if = {
+				limit = {
+					has_global_flag = german_civil_war_goeringvic
+				}
+				GER = {
+					set_country_flag = GGR_total_SAW
+				}
+			}
+			#SAF = {
+			#	add_named_threat = {
+			#		threat = -30
+			#		name = threat.17.t
+			#	}
+			#}
+			if = {
+				limit = {
+					OR = {
+						tag = SAF
+						tag = GRO
+						tag = COG
+						tag = ANG
+					}
+				}
+				country_event = {
+					id = fixfixfix.2
+					days = 8
+				}
+			}
+
+			USA = {
+				clr_country_flag = USA_show_south_africa_tree
+				USA_reload_presidential_tree = yes
+				#remove_ideas = tno_CAN_support_from_canada
+			}
+			CAN = {
+				set_temp_variable = { target = SAF }
+				TNO_clear_num_volunteers = yes
+				#remove_ideas = tno_CAN_quebecois_conscription
+				remove_ideas = TNO_division_limit_exemption
+				#remove_ideas = tno_CAN_supporting_USA
+				add_to_variable = {
+					var = USA_advisor_level
+					value = -2
+				}
+				#country_event = { id = CAN.600 days = 350 }
+				#load_focus_tree = {
+				#	tree = canada_blank
+				#	keep_completed = no
+				#}
+			}
+			SAF = { remove_ideas = SAF_Boer_Viet_Cong }
+			GRO = {
+				transfer_state = 884
+				transfer_state = 1049
+				transfer_state = 1048
+				transfer_state = 1050
+			}
+
+			if = {
+				limit = {
+					country_exists = ANG
+				}
+
+				ANG = {
+					transfer_state = 942
+					transfer_state = 542
+					transfer_state = 1045
+					transfer_state = 1047
+					transfer_state = 1046
+					transfer_state = 1044
+				}
+			}
+			else = {
+				GRO = {
+					transfer_state = 942
+					transfer_state = 542
+					transfer_state = 1045
+					transfer_state = 1047
+					transfer_state = 1046
+					transfer_state = 1044
+				}
+			}
+
+			if = {
+				limit = {
+					has_global_flag = ANG_Free
+				}
+				NAM = {
+					annex_country = {
+						target = ANG
+					transfer_troops = no
+				}
+			}
+		}
+		BOR = {
+			annex_country = {
+				target = SAF
+				transfer_troops = no
+			}
+			annex_country = {
+				target = ANC
+				transfer_troops = no
+			}
+			transfer_state = 936
+			transfer_state = 719
+			transfer_state = 935
+			transfer_state = 934
+			transfer_state = 681
+			transfer_state = 1312
+			transfer_state = 933
+			transfer_state = 275
+			transfer_state = 939
+			transfer_state = 940
+			transfer_state = 937
+			transfer_state = 938
+		}
+		GRO = {
+			set_autonomy = {
+				target = BOR
+				autonomy_state = autonomy_collaborator_puppet_state
+			}
+		}
+		BOR = {
+			set_popularities = {
+				communist = 0
+				ultranationalism = 0
+				socialist = 0
+				social_democracy = 0
+				liberal_democracy = 0
+				conservative_democracy = 22
+				authoritarian_democracy = 10
+				despotism = 0
+				fascism = 58
+				national_socialism = 10
+			
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+		conclude_south_african_war = yes
+	}
+	}
+	option = {
+		name = "total OFN win"
+		hidden_effect = {
+			USA = {
+				set_temp_variable = { Victory_ID = 4 }
+				set_temp_variable = { Victory_Outcome = 5 }
+				set_temp_variable = { Victory_Points = 300 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				if = {
+					limit = { NOT = { has_global_flag = german_civil_war_end } }
+					set_country_flag = SAW_early_end
+				}
+				else = {
+					set_temp_variable = { Victory_ID = 4 }
+					set_temp_variable = { Victory_Outcome = 1 }
+					set_temp_variable = { Victory_Points = -300 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+				white_peace = ANG
+				white_peace = GRO
+				white_peace = COG
+				white_peace = NAM
+				white_peace = BOR
+			}
+			clr_global_flag = south_african_war_happening
+			set_global_flag = SAF_OFN_Victory
+			SAF = {
+				remove_ideas = SAF_Boer_Viet_Cong
+			}
+			SAF = { 
+				if = {
+					limit = { has_global_flag = SAF_monarchy_won }
+					country_event = { id = SAF.143 days = 1 } 
+				}
+				else_if = {
+					limit = { has_global_flag = SAF_republic_won }
+					country_event = { id = SAF.157 days = 1 } 
+				}
+			}			#SAF = {
+			#	add_named_threat = {
+			#		threat = -35
+			#		name = threat.16.t
+			#	}
+			#}
+			if = {
+				limit = {
+					has_global_flag = german_civil_war_goeringvic
+				}
+				GER = {
+					set_country_flag = GGR_total_loss_SAW
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SAF
+						tag = GRO
+						tag = COG
+						tag = ANG
+					}
+				}
+				country_event = {
+					id = fixfixfix.2
+					days = 8
+				}
+			}
+			clr_global_flag = SAF_WAR_Leopoldville_Captured
+			CAN = {
+				set_temp_variable = { target = SAF }
+				TNO_clear_num_volunteers = yes
+				#remove_ideas = tno_CAN_quebecois_conscription
+				remove_ideas = TNO_division_limit_exemption
+				#remove_ideas = tno_CAN_supporting_USA
+				add_to_variable = {
+					var = USA_advisor_level
+					value = -2
+				}
+			}
+			SAF = {
+				annex_country = {
+					target = BOR
+					transfer_troops = no
+				}
+				annex_country = {
+					target = NAM
+					transfer_troops = no
+				}
+				annex_country = {
+					target = ANC
+					transfer_troops = no
+				}
+				load_focus_tree = generic_focus
+
+				transfer_state = 936
+				transfer_state = 719
+				transfer_state = 935
+				transfer_state = 934
+				transfer_state = 681
+				transfer_state = 1312
+				transfer_state = 933
+				transfer_state = 942
+
+				transfer_state = 275
+				transfer_state = 939
+				transfer_state = 940
+				transfer_state = 937
+				transfer_state = 938
+
+				transfer_state = 1044
+				transfer_state = 542
+				transfer_state = 1050
+				transfer_state = 1046
+				transfer_state = 1048
+				transfer_state = 1047
+				transfer_state = 1049
+				transfer_state = 1045
+				transfer_state = 884
+
+				transfer_state = 1060
+				transfer_state = 1061
+				transfer_state = 1062
+				transfer_state = 881
+				transfer_state = 545
+				transfer_state = 1063
+				transfer_state = 1064
+				transfer_state = 1065
+				transfer_state = 1059
+				transfer_state = 1058
+				transfer_state = 880
+				transfer_state = 1029
+				transfer_state = 1030
+				transfer_state = 1031
+				transfer_state = 1028
+				transfer_state = 1027
+				transfer_state = 778
+				transfer_state = 1214
+				transfer_state = 541
+				transfer_state = 1213
+			}
+			GER = {
+				end_puppet = GRO
+			}
+			every_state = {
+				limit = {
+					is_owned_by = GRO
+				}
+				MZB = {
+					add_state_core = PREV
+				}
+			}
+			MZB = {
+				annex_country = {
+					target = GRO
+					transfer_troops = no
+				}
+				inherit_technology = USA
+			}
+			USA = {
+				set_autonomy = {
+					target = COG
+					autonomy_state = autonomy_military_government
+				}
+				if = {
+					limit = {
+						ANG = {
+							NOT = { has_country_flag = ANG_USA_guarantee }
+						}
+					}
+					set_autonomy = {
+						target = ANG
+						autonomy_state = autonomy_military_government
+					}
+				}
+				clr_country_flag = USA_show_south_africa_tree
+				USA_reload_presidential_tree = yes
+				set_autonomy = {
+					target = MZB
+					autonomy_state = autonomy_military_government
+				}
+				add_to_faction = SAF
+				SAF = { add_ideas = OFN_Independent_Member }
+				econ_leave_sphere = yes
+				econ_join_sphere_USA = yes
+			}
+			COG = {
+				clr_country_flag = country_has_gui
+				retire_country_leader = yes
+				set_politics = {
+					ruling_party = authoritarian_democracy
+					last_election = "1933.3.5"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				every_unit_leader = {
+					limit = { has_id = 811111 }
+					retire = yes
+				}
+				add_ideas = OFN_Mandate
+				set_popularities = {
+					communist = 5
+					ultranationalism = 0
+					socialist = 10
+					social_democracy = 5
+					liberal_democracy = 10
+
+					conservative_democracy = 15
+					authoritarian_democracy = 45
+					despotism = 0
+					fascism = 10
+					national_socialism = 0
+					
+				}
+				OFN_MANDATE_set_starting_laws = yes
+
+				set_party_name = { ideology = communist long_name = OFN_COG_com_party_long name = OFN_COG_com_party }
+				set_party_name = { ideology = socialist long_name = OFN_COG_soc_party_long name = OFN_COG_soc_party }
+				set_party_name = { ideology = social_democracy long_name = OFN_COG_socdem_party_long name = OFN_COG_socdem_party }
+				set_party_name = { ideology = liberal_democracy long_name = OFN_COG_soclib_party_long name = OFN_COG_soclib_party }
+				set_party_name = { ideology = conservative_democracy long_name = OFN_COG_soccon_party_long name = OFN_COG_soccon_party }
+				set_party_name = { ideology = authoritarian_democracy long_name = OFN_COG_authdem_party_long name = OFN_COG_authdem_party }
+				set_party_name = { ideology = fascism long_name = OFN_COG_fasc_party_long name = OFN_COG_fasc_party }
+
+				create_country_leader = {
+					name = "Various Revolutionary Movements"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = communist_subtype
+				}
+				create_country_leader = {
+					name = "Various Revolutionary Movements"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = socialist_subtype
+				}
+				create_country_leader = {
+					name = "Various Democratic Parties"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = social_democracy_subtype
+				}
+				create_country_leader = {
+					name = "Various Democratic Parties"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = liberal_democracy_subtype
+				}
+				create_country_leader = {
+					name = "Various Democratic Parties"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = conservative_democracy_subtype
+				}
+				create_country_leader = {
+					name = "Creighton Abrams Jr."
+					desc = "POLITICS_CREIGHTON_ABRAMS_DESC"
+					picture = "Portrait_Zentralafrika_Creighton_Abrams.dds"
+					expire = "1999.1.23"
+					ideology = authoritarian_democracy_military_mandate_subtype
+				}
+				create_country_leader = {
+					name = "Various Warlord Cliques"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = despotism_subtype
+				}
+				create_country_leader = {
+					name = "German Remnants"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = fascism_subtype
+				}
+				remove_ideas = {
+					COG_Heart_Of_Afrika_0
+					COG_Heart_Of_Afrika_1
+					COG_Heart_Of_Afrika_2
+					COG_Heart_Of_Afrika_3
+					COG_Heart_Of_Afrika_4
+					COG_Heart_Of_Afrika_5
+					COG_Heart_Of_Afrika_6
+					COG_Heart_Of_Afrika_7
+					COG_Heart_Of_Afrika_8
+					COG_Heart_Of_Afrika_9
+					COG_Hands_Off_Administration
+					COG_Soldiers_Of_Fortune
+					COG_The_Fatherland_Arrives
+					COG_Conscripted_Natives
+					COG_Conscripted_Mercenaries
+					COG_Conscripted_Mercenaries_2
+					COG_Up_to_Date_Maps
+					COG_Cameroon_Defense_Plan
+					COG_Mullers_Army_0
+					COG_Mullers_Army_1
+					COG_Mullers_Army_2
+					COG_Zentralafrikaner_Military_Complex_0
+					COG_Zentralafrikaner_Military_Complex_1
+					COG_Air_Training_Programs
+					COG_Aerian_Logistics
+					COG_SAF_Tactical_Bombing_Campaigns
+					COG_Airfield_Developments_0
+					COG_Airfield_Developments_1
+					COG_bonus_vacation_kollner
+					COG_bonus_vacation_speer_jr
+					COG_bonus_vacation_kaselowsky
+					COG_bonus_vacation_manstein
+					COG_bonus_vacation_nordhoff
+					COG_bonus_vacation_von_heydekampf
+					COG_bonus_vacation_abs
+					COG_bonus_vacation_flick
+					COG_bonus_vacation_geilenburg
+					COG_bonus_vacation_von_siemens
+					COG_Raised_Steel_Quotas
+					COG_Raised_Rubber_Quotas
+					GER_SGR_drugs_SAW
+					Pakt_Autonomous_Reichskommissariat
+
+					COG_Rolf_Steiner_dep
+					COG_Rolf_Steiner_mil
+					COG_Wilhelm_Ritter_von_Thoma_for
+					COG_Friedrich_Freiherr_von_Broich_eco
+				}
+				add_ideas = {
+					COG_USA_Cyrille_Adoula_hog
+					COG_USA_Andrew_W_Cordier_for
+					COG_USA_Leonard_Mulumba_eco
+					COG_USA_Cyrus_Vance_sec
+
+					COG_OFN_Legacy_Zentralafrikaner_System_1
+					COG_OFN_Unhappy_Investors_1
+					COG_OFN_Manace_of_Cameroon_1
+				}
+				remove_dynamic_modifier = {
+					modifier = COG_mercenary_army
+				}
+				remove_dynamic_modifier = {
+					modifier = COG_mercenary_army
+				}
+
+				remove_dynamic_modifier = {
+					modifier = COG_the_call_of_the_wild
+				}
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = COG_USA
+				load_focus_tree = ofn_congo
+				load_oob = OFN_COG
+				delete_unit_template_and_units = {
+					division_template = "Schutztruppe"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Wehrmacht"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Waffen-SS"
+				}
+				transfer_navy = {
+				    target = GER
+				}
+				remove_unit_leader = 177
+				remove_unit_leader = 178
+				remove_unit_leader = 179
+				remove_unit_leader = 180
+				remove_unit_leader = 181
+				remove_unit_leader = 18100
+				remove_unit_leader = 18101
+				remove_unit_leader = 18102
+				remove_unit_leader = 18103
+				create_corps_commander = {
+					name = "Léonard Mulamba"
+					picture = "Portrait_Zentralafrika_Leonard_Mulamba.dds"
+					traits = { media_personality infantry_leader jungle_rat }
+					skill = 2
+					id = 181001
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Joseph Kasa-Vubu"
+					picture = "Portrait_Zentralafrika_Joseph_Kasa_Vubu.dds"
+					traits = {  }
+					skill = 3
+					id = 181002
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 3
+				}
+
+				set_country_flag = OFN_MANDATE_not_decolonized
+				econ_leave_sphere = yes
+				econ_join_sphere_USA = yes
+				hidden_effect = {
+					set_temp_variable = { TNO_economy_subtype_temp = 1 }
+					econ_subtype_change = yes
+				}
+				country_lock_all_division_template = yes
+			}
+			MZB = {
+				
+				add_ideas = {
+					OFN_Mandate
+				}
+				set_politics = {
+					ruling_party = authoritarian_democracy
+					last_election = "1933.3.5"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					communist = 20
+					ultranationalism = 0
+					socialist = 10
+					social_democracy = 0
+					liberal_democracy = 0
+
+					conservative_democracy = 0
+					authoritarian_democracy = 30
+					despotism = 10
+					fascism = 20
+					national_socialism = 10
+					
+				}
+				set_variable = { GDP_growth = 8 }
+				set_variable = { base_inflation_rate = 3.8 }
+				set_variable = { income_tax_rate = 0.1 }
+				set_variable = { business_tax_rate = 0.03 }
+				set_variable = { poverty_rate = GRO.poverty_rate }
+				set_variable = { poverty_monthly_change = 0.2 }
+				set_variable = { money_reserves = 0.0 } #in billions
+				set_variable = { misc_income = 0.685 }
+				set_variable = { misc_costs = 0.159 }			
+				set_variable = { economic_centralization = 65 }
+
+				OFN_MANDATE_set_starting_laws = yes
+
+				set_party_name = { ideology = communist long_name = OFN_MZB_com_party_long name = OFN_MZB_com_party }
+				set_party_name = { ideology = socialist long_name = OFN_MZB_soc_party_long name = OFN_MZB_soc_party }
+				set_party_name = { ideology = authoritarian_democracy long_name = OFN_MZB_authdem_party_long name = OFN_MZB_authdem_party }
+				set_party_name = { ideology = despotism long_name = OFN_MZB_desp_party_long name = OFN_MZB_desp_party }
+				set_party_name = { ideology = fascism long_name = OFN_MZB_fasc_party_long name = OFN_MZB_fasc_party }
+				set_party_name = { ideology = national_socialism long_name = OFN_MZB_natsoc_party_long name = OFN_MZB_natsoc_party }
+
+				create_country_leader = {
+					name = "Various Revolutionary Movements"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = communist_subtype
+				}
+				create_country_leader = {
+					name = "Various Revolutionary Movements"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = socialist_subtype
+				}
+				create_country_leader = {
+					name = "William Westmoreland"
+					desc = "POLITICS_WILLIAM_WESTMORELAND_DESC"
+					picture = "Portrait_Ostafrika_William_Westmoreland.dds"
+					expire = "1999.1.23"
+					ideology = authoritarian_democracy_military_mandate_subtype
+				}
+				create_country_leader = {
+					name = "Various Warlord Cliques"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = despotism_subtype
+				}
+				create_country_leader = {
+					name = "Various Warlord Cliques"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = fascism_subtype
+				}
+				create_country_leader = {
+					name = "German Remnants"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = national_socialism_subtype
+				}
+				add_ideas = {
+					MZB_USA_William_R_Peers_hog
+					MZB_USA_Kenneth_Rush_for
+					MZB_USA_Paul_Nitze_eco
+					MZB_USA_Paul_D_Harkins_sec
+
+					MZB_USA_Legacy_Ostafrikaner_Research
+					MZB_USA_East_African_Warlordism
+					MZB_USA_Lackluster_Infrastructures
+				}
+
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = MZB_USA
+				load_focus_tree = ofn_mozambique
+				load_oob = OFN_MZB
+				delete_unit_template_and_units = {
+					division_template = "Schutztruppe"
+				}
+				delete_unit_template_and_units = {
+					division_template = "SS-Ostafrika"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Waffen-SS"
+				}
+				
+				create_corps_commander = {
+					name = "William R. Peers"
+					picture = "Portrait_Ostafrika_William_R_Peers.dds"
+					traits = {  }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Paul D. Harkins"
+					picture = "Portrait_Ostafrika_Paul_D_Harkins.dds"
+					traits = {  }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+
+				set_country_flag = OFN_MANDATE_not_decolonized
+				#activate_decision = OFN_AFRICA_MANDATE_test
+				econ_leave_sphere = yes
+				econ_join_sphere_USA = yes
+				hidden_effect = {
+					set_temp_variable = { TNO_economy_subtype_temp = 1 }
+					econ_subtype_change = yes
+				}
+				TNO_startup_nation = yes
+			}
+			if = {
+				limit = {
+					ANG = {
+						NOT = {
+							has_country_flag = ANG_Free
+						}
+					}
+				}
+				ANG = {
+					retire_country_leader = yes
+					set_capital = 1035
+					add_ideas = OFN_Mandate
+					set_politics = {
+						ruling_party = authoritarian_democracy
+						last_election = "1933.3.5"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					econ_join_sphere_USA = yes
+					set_popularities = {
+						communist = 10
+						ultranationalism = 0
+						socialist = 5
+						social_democracy = 0
+						liberal_democracy = 10
+
+						conservative_democracy = 5
+						authoritarian_democracy = 40
+						despotism = 20
+						fascism = 10
+						national_socialism = 0
+						
+					}
+					OFN_MANDATE_set_starting_laws = yes
+
+					set_party_name = { ideology = communist long_name = OFN_ANG_com_party_long name = OFN_ANG_com_party }
+					set_party_name = { ideology = socialist long_name = OFN_ANG_soc_party_long name = OFN_ANG_soc_party }
+					set_party_name = { ideology = liberal_democracy long_name = OFN_ANG_soclib_party_long name = OFN_ANG_soclib_party }
+					set_party_name = { ideology = conservative_democracy long_name = OFN_ANG_soccon_party_long name = OFN_ANG_soccon_party }
+					set_party_name = { ideology = authoritarian_democracy long_name = OFN_ANG_authdem_party_long name = OFN_ANG_authdem_party }
+					set_party_name = { ideology = despotism long_name = OFN_ANG_desp_party_long name = OFN_ANG_desp_party }
+					set_party_name = { ideology = fascism long_name = OFN_ANG_fasc_party_long name = OFN_ANG_fasc_party }
+
+					create_country_leader = {
+						name = "Agostinho Neto"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = communist_subtype
+					}
+					create_country_leader = {
+						name = "Ilídio Machado"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = socialist_subtype
+					}
+					create_country_leader = {
+						name = "Johnny Eduardo Pinnock"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = liberal_democracy_subtype
+					}
+					create_country_leader = {
+						name = "Holden Roberto"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = conservative_democracy_subtype
+					}
+					create_country_leader = {
+						name = "John D. Lavelle"
+						desc = "POLITICS_JOHN_LAVELLE_DESC"
+						picture = "Portrait_Sudwestafrika_John_D_Lavelle.dds"
+						expire = "1999.1.23"
+						ideology = authoritarian_democracy_military_mandate_subtype
+						traits = { }
+					}
+					create_country_leader = {
+						name = "Jonas Savimbi"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = despotism_subtype
+					}
+					create_country_leader = {
+						name = "German Remnants"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = fascism_subtype
+					}
+
+					remove_ideas = {
+						ANG_Afrikaner_Airstrip
+						ANG_Incoherent_Bookkeeping
+						ANG_Incoherent_Bookkeeping_2
+						ANG_Incoherent_Bookkeeping_3
+						ANG_Incoherent_Bookkeeping_4
+						ANG_Away_In_The_Clouds
+						ANG_The_Fatherland_Arrives
+						ANG_Disrupted_Comms
+						ANG_Slipping_The_Plans
+						ANG_Constant_Partisans
+						ANG_Broken_Fuel_Lines
+						ANG_Token_Troops
+						ANG_Muller_Airlift
+						ANG_No_One_In_No_One_Out
+						ANG_USA_Infiltrated_RK_Armies
+						ANG_SKL_Air_Exercises
+						ANG_SKL_RD_Expanded
+						ANG_Secure_The_Homefront
+						ANG_Boer_Help
+						ANG_In_The_Nuts
+						ANG_In_The_Nuts_2
+						ANG_In_The_Nuts_3
+						ANG_In_The_Nuts_4
+						ANG_Reprisal_Attacks
+						ANG_SS_Anti_Terror
+						ANG_SS_Anti_Terror_2
+						ANG_Using_Our_People
+						ANG_Using_Our_People_Paid_Well
+						ANG_Using_Our_People_Paid_Well_2
+						ANG_Using_Our_People_Paid_Enough
+						ANG_Using_Our_People_Paid_Enough_2
+						ANG_Roll_Them_Off_The_Line
+						GRO_Financed_Shit
+						ANG_Mutual_Assistence_Pact_1
+						ANG_Mutual_Assistence_Pact
+						ANG_Mutual_Assistence_Pact_COG
+						ANG_Mutual_Assistence_Pact_GRO
+						ANG_Road_Of_Life
+						ANG_Natives_In_The_Air_2
+						ANG_Natives_In_The_Air_1
+						ANG_RANDR
+						ANG_RANDR_2
+						ANG_Joint_Offensive_Shit
+						ANG_Lords_Of_The_Air
+						ANG_Lords_Of_The_Air_2
+						ANG_PlanesInOurHand_1
+						ANG_PlanesInOurHand_2
+						ANG_PlanesInOurHand_3
+						ANG_bomber_production
+						ANG_fighter_production
+						ANG_transport_production
+						ANG_Bomber_Plans
+						ANG_Bomber_Plans_And_Fighter_Plans
+						ANG_Fighter_Plans
+						ANG_Air_Assault_And_Fighter
+						ANG_Trifecta
+						ANG_Air_Assault
+						ANG_Air_Assault_And_Bomber
+						ANG_Safetey_is_paramount_idea
+						ANG_pit_stop_model_idea
+						ANG_pit_stop_modeland_saftey_idea
+						ANG_build_quickly_idea
+						ANG_German_Sus_idea_1
+						ANG_German_Sus_idea_2
+						ANG_German_Sus_idea_3
+						ANG_German_Sus_idea_4
+						ANG_German_Sus_idea_5
+						ANG_Huttig_Sus_idea_1
+						ANG_Huttig_Sus_idea_2
+						ANG_Huttig_Sus_idea_3
+						ANG_Huttig_Sus_idea_4
+						ANG_Muller_sus_idea_1
+						ANG_Muller_sus_idea_2
+						ANG_Muller_sus_idea_3
+						ANG_Muller_sus_idea_4
+						ANG_Native_Militancy_1
+						ANG_Native_Militancy_2
+						ANG_Native_Militancy_3
+						ANG_Native_Militancy_4
+						ANG_Native_Militancy_5
+						ANG_Sudwest_Training_Shit
+						ANG_Sudwest_Training_med
+						ANG_Sudwest_Training_high
+						ANG_constitution
+						ANG_Guerillas_Rescued
+						ANG_few_prisoners_freed
+						ANG_med_prisoners_freed
+						ANG_high_prisoners_freed
+						ANG_German_Resistance
+						ANG_Improved_Internal_Structure
+						ANG_City_Terror_Attack
+						ANG_Terror_Troop_Angst
+						ANG_American_Advisors
+						GER_SGR_drugs_SAW
+						Pakt_Autonomous_Reichskommissariat
+
+						ANG_Wolfgang_Schenck_dep
+						ANG_Hellmut_von_Leipzig_mil
+						ANG_Gerhard_Homuth_for
+						ANG_Otto_Herrigel_eco
+						
+						ANG_Air_Empire_Dynmod_Dummy
+					}
+					add_ideas = {
+						ANG_USA_William_W_Momyer_hog
+						ANG_USA_Robert_A_Lovett_for
+						ANG_USA_Klaus_Dierks_eco
+						ANG_USA_Philip_Davidson_sec
+
+						ANG_USA_Lecagy_Air_Empire
+						ANG_USA_UNITA_MPLA_Infightings
+						ANG_USA_Fumes_of_the_Battlefields
+					}
+					remove_dynamic_modifier = {
+						modifier = ANG_German_support
+					}
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = ANG_USA
+					load_focus_tree = ofn_angola
+					load_oob = OFN_ANG
+					delete_unit_template_and_units = {
+						division_template = "Schutztruppe"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Ursprunglich Patroullieren"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Wehrmacht"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Waffen-SS"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Fallschirmjäger"
+					}
+					transfer_navy = {
+					    target = GER
+					}
+					remove_unit_leader = 187
+					remove_unit_leader = 188
+					remove_unit_leader = 189
+					remove_unit_leader = 190
+					remove_unit_leader = 191
+					remove_unit_leader = 5000
+					remove_unit_leader = 5001
+					remove_unit_leader = 5002
+
+					create_field_marshal = {
+						name = "John D. Lavelle"
+						picture = "Portrait_Sudwestafrika_John_D_Lavelle.dds"
+						traits = { paratrooper }
+						skill = 2
+						id = 191001
+						attack_skill = 3
+						defense_skill = 1
+						planning_skill = 1
+						logistics_skill = 2
+					}
+					create_corps_commander = {
+						name = "William W. Momyer"
+						picture = "Portrait_Sudwestafrika_William_W_Momyer.dds"
+						traits = {  }
+						skill = 3
+						id = 191002
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 3
+					}
+					set_politics = { ruling_party = authoritarian_democracy }
+					set_country_flag = OFN_MANDATE_not_decolonized
+					#set_political_power = -50
+					econ_leave_sphere = yes
+					econ_join_sphere_USA = yes
+					hidden_effect = {
+						set_temp_variable = { TNO_economy_subtype_temp = 1 }
+						econ_subtype_change = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ANG = { has_country_flag = ANG_USA_guarantee }
+				}
+				white_peace = SAF
+				white_peace = GRO
+				white_peace = COG
+				white_peace = NAM
+				white_peace = BOR
+			}
+
+			USA_AFRICA_set_start_stability = yes
+			conclude_south_african_war = yes
+	}
+	}
+	option = {
+		name = "pakt ceasefire"
+	}
+	option = {
+		name = "ofn ceasefire"
+	}
+}
+country_event = {
+	id = SAFWAR.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.1"}
+	title = SAFWAR.1.t
+	desc = SAFWAR.1.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.1.a
+		hidden_effect = {
+			SCO = {
+				country_event = {
+					id = SCO.107
+					days = 2
+				}
+			}
+			clr_country_flag = SAF_referendum_decisions
+		}
+		ai_chance = { factor = 80 }
+		GER = {
+			every_country = {
+				limit = {
+					is_puppet_of = GER
+				}
+				GER = { end_puppet = PREV }
+			}
+		}
+		BOR = {
+			transfer_state = 275
+			transfer_state = 939
+			transfer_state = 940
+			transfer_state = 938
+			transfer_state = 937
+			inherit_technology = PREV
+			load_oob = BOR
+			set_temp_variable = { TNO_economy_type_temp = 2 }
+			econ_type_change = yes
+		}
+		275 = {
+			add_core_of = BOR
+			set_demilitarized_zone = no
+		}
+		939 = {
+			add_core_of = BOR
+			set_demilitarized_zone = no
+		}
+		940 = {
+			add_core_of = BOR
+			set_demilitarized_zone = no
+		}
+		938 = {
+			add_core_of = BOR
+			set_demilitarized_zone = no
+		}
+		937 = {
+			add_core_of = BOR
+			set_demilitarized_zone = no
+		}
+		GRO = {
+			create_faction = afrika_schild
+			add_to_faction = COG
+			add_to_faction = ANG
+			add_to_faction = BOR
+		}
+		BOR = {
+			declare_war_on = {
+				target = SAF
+				type = annex_everything
+			}
+		}
+		set_variable = {SAF_free_prod_units = 7}
+	}
+}
+
+##South African Last Stand - Our Darkest Hour
+country_event = {
+	id = SAFWAR.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.2"}
+	title = SAFWAR.2.t
+	desc = SAFWAR.2.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.2.a
+		ai_chance = { factor = 80 }
+		add_timed_idea = {
+			idea = SAF_our_darkest_hour
+			days = 90
+		}
+		hidden_effect = {
+			GRO = {
+				country_event = {
+					id = saw_collapse.1
+					days = 91
+				}
+			}
+		}
+	}
+}
+
+##Zentralafrika Last Stand
+country_event = {
+	id = SAFWAR.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.3"}
+	title = SAFWAR.3.t
+	desc = SAFWAR.3.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.3.a
+		ai_chance = { factor = 80 }
+		add_timed_idea = {
+			idea = RK_Wervolf
+			days = 90
+		}
+	}
+}
+
+##Ostafrika Last Stand
+country_event = {
+	id = SAFWAR.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.4"}
+	title = SAFWAR.4.t
+	desc = SAFWAR.4.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.4.a
+		ai_chance = { factor = 80 }
+		add_timed_idea = {
+			idea = RK_Wervolf
+			days = 90
+		}
+	}
+}
+
+##Sudwestafrika Last Stand
+country_event = {
+	id = SAFWAR.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.5"}
+	title = SAFWAR.5.t
+	desc = SAFWAR.5.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.5.a
+		ai_chance = { factor = 80 }
+		add_timed_idea = {
+			idea = RK_Wervolf
+			days = 90
+		}
+	}
+}
+
+##Schild Joins The War
+country_event = {
+	id = SAFWAR.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.6"}
+	title = SAFWAR.6.t
+	desc = SAFWAR.6.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.6.a
+		ai_chance = { factor = 80 }
+		#add_timed_idea = {
+		#	idea = RK_Wervolf
+		#	days = 90
+		#}
+
+		####################
+		# BUFF TO THE AI
+		####################
+
+		if = {
+			limit = {
+				SAF = { is_ai = yes }
+			}
+			SAF = {
+				add_ideas = RK_SAF_war_AI_bonus
+			}
+		}
+
+		if = {
+			limit = {
+				AND = {
+					COG = { is_ai = yes }
+					ANG = { is_ai = yes }
+					GRO = { is_ai = yes }
+				}
+			}
+			COG = {
+				add_ideas = RK_SAF_war_AI_bonus
+			}
+			ANG = {
+				add_ideas = RK_SAF_war_AI_bonus
+			}
+			GRO = {
+				add_ideas = RK_SAF_war_AI_bonus
+			}
+		}
+	}
+}
+
+##Americans Join The War
+country_event = {
+	id = SAFWAR.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.7"}
+	title = SAFWAR.7.t
+	desc = SAFWAR.7.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.7.a
+		add_ideas = OFN_Observer
+		hidden_effect = {
+			set_global_flag = south_african_war_happening
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				SAF = {
+					load_oob = US_naval_forces_SAF_mtg
+				}
+				if = {
+					limit = {
+						not = { has_dlc = "Man the Guns" }
+					}
+					SAF = {
+						load_oob = US_naval_forces_SAF
+					}
+				}
+				SAF = {
+					add_timed_idea = {
+						idea = SAF_Uncle_Sam_Arrives
+						days = 90
+					}
+					set_country_flag = SAF_Uncle_Sam
+				}
+
+				SAF = {
+					SAW_rubberband_effect = yes
+					SAW_update_rubberband = yes
+					log = "[?GetName] SAF.SAW_surrender = [?THIS.SAW_surrender] - LAZER"
+				}
+				USA = {
+					SAW_rubberband_effect = yes
+					SAW_update_rubberband = yes
+					log = "[?GetName] SAF.SAW_surrender = [?THIS.SAW_surrender] - LAZER"
+				}
+				GRO = {
+					SAW_rubberband_effect = yes
+					SAW_update_rubberband = yes
+					log = "[?GetName] GRO.SAW_surrender = [?THIS.SAW_surrender] - LAZER"
+				}
+				ANG = {
+					SAW_rubberband_effect = yes
+					SAW_update_rubberband = yes
+					log = "[?GetName] ANG.SAW_surrender = [?THIS.SAW_surrender] - LAZER"
+				}
+				COG = {
+					SAW_rubberband_effect = yes
+					SAW_update_rubberband = yes
+					log = "[?GetName] COG.SAW_surrender = [?THIS.SAW_surrender] - LAZER"
+				}
+
+				####################
+				# BUFF TO THE AI
+				####################
+
+				if = {
+					limit = {
+						AND = {
+							USA = { is_ai = yes }
+							SAF = { is_ai = yes }
+						}
+					}
+					USA = {
+						add_ideas = RK_SAF_war_AI_bonus
+					}
+				}
+				SAF = {
+					country_event = { id = SAFWAR.SAFFlavour.1 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.2 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.3 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.4 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.5 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.6 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.7 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.8 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.9 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.10 days = 10 random = 1300 }
+				}
+				USA = {
+					country_event = { id = SAFWAR.SAFFlavour.1 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.2 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.3 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.7 days = 10 random = 1300 }
+					country_event = { id = SAFWAR.SAFFlavour.8 days = 10 random = 1300 }
+				}
+				AST = {
+					country_event = { id = SAFWAR.SAFFlavour.10 days = 10 random = 1300 }
+				}
+			}
+		}
+	}
+}
+
+##Germany Joins The War
+country_event = {
+	id = SAFWAR.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.8"}
+	title = SAFWAR.8.t
+	desc = SAFWAR.8.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.8.a
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				tag = GRO
+			}
+			GRO = {
+				add_timed_idea = {
+					idea = GRO_The_Fatherland_Arrives
+					days = 90
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = ANG
+			}
+			ANG = {
+				add_timed_idea = {
+					idea = ANG_The_Fatherland_Arrives
+					days = 90
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = COG
+			}
+			COG = {
+				add_timed_idea = {
+					idea = COG_The_Fatherland_Arrives
+					days = 90
+				}
+			}
+		}
+	}
+}
+
+##Total Schild Victory - Ostafrika
+country_event = {
+	id = SAFWAR.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.9"}
+	title = SAFWAR.9.t
+	desc = SAFWAR.9.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	immediate = {
+		hidden_effect = {
+			USA = {
+				set_temp_variable = { Victory_ID = 4 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -300 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				if = {
+					limit = { NOT = { has_global_flag = german_civil_war_end } }
+					set_country_flag = SAW_early_end
+				}
+				else = {
+					set_temp_variable = { Victory_ID = 4 }
+					set_temp_variable = { Victory_Outcome = 5 }
+					set_temp_variable = { Victory_Points = 300 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+				white_peace = ANG
+				white_peace = GRO
+				white_peace = COG
+				white_peace = NAM
+				white_peace = BOR
+			}
+			clr_global_flag = south_african_war_happening
+			set_global_flag = SAF_Schild_Victory
+			if = {
+				limit = {
+					has_global_flag = german_civil_war_goeringvic
+				}
+				GER = {
+					set_country_flag = GGR_total_SAW
+				}
+			}
+			#SAF = {
+			#	add_named_threat = {
+			#		threat = -30
+			#		name = threat.17.t
+			#	}
+			#}
+			if = {
+				limit = {
+					OR = {
+						tag = SAF
+						tag = GRO
+						tag = COG
+						tag = ANG
+					}
+				}
+				country_event = {
+					id = fixfixfix.2
+					days = 8
+				}
+			}
+
+			USA = {
+				clr_country_flag = USA_show_south_africa_tree
+				USA_reload_presidential_tree = yes
+				#remove_ideas = tno_CAN_support_from_canada
+			}
+			CAN = {
+				set_temp_variable = { target = SAF }
+				TNO_clear_num_volunteers = yes
+				#remove_ideas = tno_CAN_quebecois_conscription
+				remove_ideas = TNO_division_limit_exemption
+				#remove_ideas = tno_CAN_supporting_USA
+				add_to_variable = {
+					var = USA_advisor_level
+					value = -2
+				}
+				#country_event = { id = CAN.600 days = 350 }
+				#load_focus_tree = {
+				#	tree = canada_blank
+				#	keep_completed = no
+				#}
+			}
+			SAF = { remove_ideas = SAF_Boer_Viet_Cong }
+			GRO = {
+				transfer_state = 884
+				transfer_state = 1049
+				transfer_state = 1048
+				transfer_state = 1050
+			}
+
+			if = {
+				limit = {
+					country_exists = ANG
+				}
+
+				ANG = {
+					transfer_state = 942
+					transfer_state = 542
+					transfer_state = 1045
+					transfer_state = 1047
+					transfer_state = 1046
+					transfer_state = 1044
+				}
+			}
+			else = {
+				GRO = {
+					transfer_state = 942
+					transfer_state = 542
+					transfer_state = 1045
+					transfer_state = 1047
+					transfer_state = 1046
+					transfer_state = 1044
+				}
+			}
+
+			if = {
+				limit = {
+					has_global_flag = ANG_Free
+				}
+				NAM = {
+					annex_country = {
+						target = ANG
+						transfer_troops = no
+					}
+				}
+			}
+			BOR = {
+				annex_country = {
+					target = SAF
+					transfer_troops = no
+				}
+				annex_country = {
+					target = ANC
+					transfer_troops = no
+				}
+				transfer_state = 936
+				transfer_state = 719
+				transfer_state = 935
+				transfer_state = 934
+				transfer_state = 681
+				transfer_state = 1312
+				transfer_state = 933
+
+				transfer_state = 275
+				transfer_state = 939
+				transfer_state = 940
+				transfer_state = 937
+				transfer_state = 938
+			}
+			GRO = {
+				set_autonomy = {
+					target = BOR
+					autonomy_state = autonomy_collaborator_puppet_state
+				}
+			}
+			BOR = {
+				set_popularities = {
+					communist = 0
+					ultranationalism = 0
+					socialist = 0
+					social_democracy = 0
+					liberal_democracy = 0
+
+					conservative_democracy = 22
+					authoritarian_democracy = 10
+					despotism = 0
+					fascism = 58
+					national_socialism = 10
+					
+				}
+
+				set_politics = {
+					ruling_party = fascism
+				}
+			}
+			GRO = {
+				country_event = {
+					id = SAFWAR.23
+					days = 46
+				}
+				if = {
+					limit = {
+						OR = {
+							has_cosmetic_tag = GRO_REICHSSTAAT
+							has_cosmetic_tag = GRO_REICHSSTAAT_2
+							has_cosmetic_tag = GRO_REICHSSTAAT_3
+						}
+					}
+					dismantle_faction = yes
+					every_owned_state = {
+						add_core_of = GRO
+					}
+				}
+			}
+			conclude_south_african_war = yes
+		}
+	}
+
+	option = {
+		name = SAFWAR.9.a
+		ai_chance = { factor = 80 }
+		every_country = {
+			news_event = {
+				id = WORLD.593
+				days = 1
+			}
+		}
+	}
+}
+
+##Total Schild Victory - Zentralafrika
+country_event = {
+	id = SAFWAR.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.10"}
+	title = SAFWAR.10.t
+	desc = SAFWAR.10.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.10.a
+		ai_chance = { factor = 80 }
+	}
+}
+
+##Total Schild Victory - Sudwestafrika
+country_event = {
+	id = SAFWAR.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.11"}
+	title = SAFWAR.11.t
+	desc = SAFWAR.11.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.11.a
+		ai_chance = { factor = 80 }
+	}
+}
+
+##Total Schild Victory - The Boer Republic
+country_event = {
+	id = SAFWAR.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.12"}
+	title = SAFWAR.12.t
+	desc = SAFWAR.12.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.12.a
+		ai_chance = { factor = 80 }
+	}
+}
+
+##Total OFN Victory
+country_event = { #
+	id = SAFWAR.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.13"}
+	title = SAFWAR.13.t
+	desc = SAFWAR.13.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	immediate = {
+		hidden_effect = {
+			USA = {
+				set_temp_variable = { Victory_ID = 4 }
+				set_temp_variable = { Victory_Outcome = 5 }
+				set_temp_variable = { Victory_Points = 300 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				if = {
+					limit = { NOT = { has_global_flag = german_civil_war_end } }
+					set_country_flag = SAW_early_end
+				}
+				else = {
+					set_temp_variable = { Victory_ID = 4 }
+					set_temp_variable = { Victory_Outcome = 1 }
+					set_temp_variable = { Victory_Points = -300 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+				white_peace = ANG
+				white_peace = GRO
+				white_peace = COG
+				white_peace = NAM
+				white_peace = BOR
+			}
+			clr_global_flag = south_african_war_happening
+			set_global_flag = SAF_OFN_Victory
+			SAF = {
+				remove_ideas = SAF_Boer_Viet_Cong
+			}
+			SAF = { 
+				if = {
+					limit = { has_global_flag = SAF_monarchy_won }
+					country_event = { id = SAF.143 days = 1 } 
+				}
+				else_if = {
+					limit = { has_global_flag = SAF_republic_won }
+					country_event = { id = SAF.157 days = 1 } 
+				}
+			}			#SAF = {
+			#	add_named_threat = {
+			#		threat = -35
+			#		name = threat.16.t
+			#	}
+			#}
+			if = {
+				limit = {
+					has_global_flag = german_civil_war_goeringvic
+				}
+				GER = {
+					set_country_flag = GGR_total_loss_SAW
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SAF
+						tag = GRO
+						tag = COG
+						tag = ANG
+					}
+				}
+				country_event = {
+					id = fixfixfix.2
+					days = 8
+				}
+			}
+			clr_global_flag = SAF_WAR_Leopoldville_Captured
+			CAN = {
+				set_temp_variable = { target = SAF }
+				TNO_clear_num_volunteers = yes
+				#remove_ideas = tno_CAN_quebecois_conscription
+				remove_ideas = TNO_division_limit_exemption
+				#remove_ideas = tno_CAN_supporting_USA
+				add_to_variable = {
+					var = USA_advisor_level
+					value = -2
+				}
+			}
+			SAF = {
+				annex_country = {
+					target = BOR
+					transfer_troops = no
+				}
+				annex_country = {
+					target = NAM
+					transfer_troops = no
+				}
+				annex_country = {
+					target = ANC
+					transfer_troops = no
+				}
+				load_focus_tree = generic_focus
+
+				transfer_state = 936
+				transfer_state = 719
+				transfer_state = 935
+				transfer_state = 934
+				transfer_state = 681
+				transfer_state = 1312
+				transfer_state = 933
+				transfer_state = 942
+
+				transfer_state = 275
+				transfer_state = 939
+				transfer_state = 940
+				transfer_state = 937
+				transfer_state = 938
+
+				transfer_state = 1044
+				transfer_state = 542
+				transfer_state = 1050
+				transfer_state = 1046
+				transfer_state = 1048
+				transfer_state = 1047
+				transfer_state = 1049
+				transfer_state = 1045
+				transfer_state = 884
+
+				transfer_state = 1060
+				transfer_state = 1061
+				transfer_state = 1062
+				transfer_state = 881
+				transfer_state = 545
+				transfer_state = 1063
+				transfer_state = 1064
+				transfer_state = 1065
+				transfer_state = 1059
+				transfer_state = 1058
+				transfer_state = 880
+				transfer_state = 1029
+				transfer_state = 1030
+				transfer_state = 1031
+				transfer_state = 1028
+				transfer_state = 1027
+				transfer_state = 778
+				transfer_state = 1214
+				transfer_state = 541
+				transfer_state = 1213
+			}
+			GER = {
+				end_puppet = GRO
+			}
+			if = {
+				limit = {
+					GRO = {
+						OR = {
+							has_cosmetic_tag = GRO_REICHSSTAAT
+							has_cosmetic_tag = GRO_REICHSSTAAT_2
+							has_cosmetic_tag = GRO_REICHSSTAAT_3
+						}
+					}
+				}
+
+				GRO = {
+					every_owned_state = {
+						remove_core_of = GRO
+					}
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 295
+								state = 297
+								state = 538
+								state = 539
+								state = 718
+								state = 1055
+								state = 1056
+								state = 1057
+								state = 1162
+								state = 1163
+								state = 1164
+								state = 1165
+								state = 1166
+								state = 1167
+								state = 1168
+								state = 1169
+								state = 1170
+								state = 1171
+								state = 1172
+								state = 1173
+								state = 1174
+								state = 1175
+								state = 1176
+								state = 1177
+								state = 1178
+								state = 1180
+								state = 1181
+								state = 1182
+								state = 1183
+								state = 1184
+								state = 1185
+								state = 1186
+							}
+						}
+						COG = {
+							add_state_core = PREV
+							transfer_state = PREV
+						}
+					}
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 540
+								state = 1032
+								state = 1033
+								state = 1034
+								state = 1035
+								state = 1036
+								state = 1037
+								state = 1038
+								state = 1039
+								state = 1040
+								state = 1051
+							}
+						}
+						ANG = {
+							transfer_state = PREV
+							add_state_core = PREV
+						}
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = GRO
+				}
+				MZB = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+			MZB = {
+				inherit_technology = USA
+			}
+			USA = {
+				set_autonomy = {
+					target = COG
+					autonomy_state = autonomy_military_government
+				}
+				if = {
+					limit = {
+						ANG = {
+							NOT = { has_country_flag = ANG_USA_guarantee }
+						}
+					}
+					set_autonomy = {
+						target = ANG
+						autonomy_state = autonomy_military_government
+					}
+				}
+				clr_country_flag = USA_show_south_africa_tree
+				USA_reload_presidential_tree = yes
+				set_autonomy = {
+					target = MZB
+					autonomy_state = autonomy_military_government
+				}
+				add_to_faction = SAF
+				SAF = { add_ideas = OFN_Independent_Member }
+				econ_leave_sphere = yes
+				econ_join_sphere_USA = yes
+			}
+			USA = {
+				random_unit_leader = {
+					limit = {
+						has_id = 1005
+					}
+					set_nationality = MZB
+				}
+				random_unit_leader = {
+					limit = {
+						has_id = 1016
+					}
+					set_nationality = ANG
+				}
+				random_unit_leader = {
+					limit = {
+						has_id = 999
+					}
+					set_nationality = COG
+				}
+				subtract_from_variable = { USA_SAF_WAR_Discontent = 40 }
+				set_country_flag = USA_SAW_Full_Vic
+			}
+			COG = {
+				clr_country_flag = country_has_gui
+				retire_country_leader = yes
+				set_politics = {
+					ruling_party = authoritarian_democracy
+					last_election = "1933.3.5"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				every_unit_leader = {
+					limit = { has_id = 811111 }
+					retire = yes
+				}
+				add_ideas = OFN_Mandate
+				set_popularities = {
+					communist = 5
+					ultranationalism = 0
+					socialist = 10
+					social_democracy = 5
+					liberal_democracy = 10
+
+					conservative_democracy = 15
+					authoritarian_democracy = 45
+					despotism = 0
+					fascism = 10
+					national_socialism = 0
+					
+				}
+				inherit_technology = USA
+				OFN_MANDATE_set_starting_laws = yes
+
+				set_party_name = { ideology = communist long_name = OFN_COG_com_party_long name = OFN_COG_com_party }
+				set_party_name = { ideology = socialist long_name = OFN_COG_soc_party_long name = OFN_COG_soc_party }
+				set_party_name = { ideology = social_democracy long_name = OFN_COG_socdem_party_long name = OFN_COG_socdem_party }
+				set_party_name = { ideology = liberal_democracy long_name = OFN_COG_soclib_party_long name = OFN_COG_soclib_party }
+				set_party_name = { ideology = conservative_democracy long_name = OFN_COG_soccon_party_long name = OFN_COG_soccon_party }
+				set_party_name = { ideology = authoritarian_democracy long_name = OFN_COG_authdem_party_long name = OFN_COG_authdem_party }
+				set_party_name = { ideology = fascism long_name = OFN_COG_fasc_party_long name = OFN_COG_fasc_party }
+
+				create_country_leader = {
+					name = "Various Revolutionary Movements"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = communist_subtype
+				}
+				create_country_leader = {
+					name = "Various Revolutionary Movements"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = socialist_subtype
+				}
+				create_country_leader = {
+					name = "Various Democratic Parties"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = social_democracy_subtype
+				}
+				create_country_leader = {
+					name = "Various Democratic Parties"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = liberal_democracy_subtype
+				}
+				create_country_leader = {
+					name = "Various Democratic Parties"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = conservative_democracy_subtype
+				}
+				create_country_leader = {
+					name = "Creighton Abrams Jr."
+					desc = "POLITICS_CREIGHTON_ABRAMS_DESC"
+					picture = "Portrait_Zentralafrika_Creighton_Abrams.dds"
+					expire = "1999.1.23"
+					ideology = authoritarian_democracy_military_mandate_subtype
+				}
+				create_country_leader = {
+					name = "Various Warlord Cliques"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = despotism_subtype
+				}
+				create_country_leader = {
+					name = "German Remnants"
+					desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = fascism_subtype
+				}
+				remove_ideas = {
+					COG_Heart_Of_Afrika_0
+					COG_Heart_Of_Afrika_1
+					COG_Heart_Of_Afrika_2
+					COG_Heart_Of_Afrika_3
+					COG_Heart_Of_Afrika_4
+					COG_Heart_Of_Afrika_5
+					COG_Heart_Of_Afrika_6
+					COG_Heart_Of_Afrika_7
+					COG_Heart_Of_Afrika_8
+					COG_Heart_Of_Afrika_9
+					COG_Hands_Off_Administration
+					COG_Soldiers_Of_Fortune
+					COG_The_Fatherland_Arrives
+					COG_Conscripted_Natives
+					COG_Conscripted_Mercenaries
+					COG_Conscripted_Mercenaries_2
+					COG_Up_to_Date_Maps
+					COG_Cameroon_Defense_Plan
+					COG_Mullers_Army_0
+					COG_Mullers_Army_1
+					COG_Mullers_Army_2
+					COG_Zentralafrikaner_Military_Complex_0
+					COG_Zentralafrikaner_Military_Complex_1
+					COG_Air_Training_Programs
+					COG_Aerian_Logistics
+					COG_SAF_Tactical_Bombing_Campaigns
+					COG_Airfield_Developments_0
+					COG_Airfield_Developments_1
+					COG_bonus_vacation_kollner
+					COG_bonus_vacation_speer_jr
+					COG_bonus_vacation_kaselowsky
+					COG_bonus_vacation_manstein
+					COG_bonus_vacation_nordhoff
+					COG_bonus_vacation_von_heydekampf
+					COG_bonus_vacation_abs
+					COG_bonus_vacation_flick
+					COG_bonus_vacation_geilenburg
+					COG_bonus_vacation_von_siemens
+					COG_Raised_Steel_Quotas
+					COG_Raised_Rubber_Quotas
+					GER_SGR_drugs_SAW
+					Pakt_Autonomous_Reichskommissariat
+
+					COG_Rolf_Steiner_dep
+					COG_Rolf_Steiner_mil
+					COG_Wilhelm_Ritter_von_Thoma_for
+					COG_Friedrich_Freiherr_von_Broich_eco
+				}
+				add_ideas = {
+					COG_USA_Cyrille_Adoula_hog
+					COG_USA_Andrew_W_Cordier_for
+					COG_USA_Leonard_Mulumba_eco
+					COG_USA_Cyrus_Vance_sec
+
+					COG_OFN_Legacy_Zentralafrikaner_System_1
+					COG_OFN_Unhappy_Investors_1
+					COG_OFN_Manace_of_Cameroon_1
+				}
+				remove_dynamic_modifier = {
+					modifier = COG_mercenary_army
+				}
+				remove_dynamic_modifier = {
+					modifier = COG_mercenary_army
+				}
+
+				remove_dynamic_modifier = {
+					modifier = COG_the_call_of_the_wild
+				}
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = COG_USA
+				load_focus_tree = ofn_congo
+				load_oob = OFN_COG
+				delete_unit_template_and_units = {
+					division_template = "Schutztruppe"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Wehrmacht"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Waffen-SS"
+				}
+				transfer_navy = {
+				    target = GER
+				}
+				remove_unit_leader = 177
+				remove_unit_leader = 178
+				remove_unit_leader = 179
+				remove_unit_leader = 180
+				remove_unit_leader = 181
+				remove_unit_leader = 18100
+				remove_unit_leader = 18101
+				remove_unit_leader = 18102
+				remove_unit_leader = 18103
+				create_corps_commander = {
+					name = "Léonard Mulamba"
+					picture = "Portrait_Zentralafrika_Leonard_Mulamba.dds"
+					traits = { media_personality infantry_leader jungle_rat }
+					skill = 2
+					id = 181001
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Joseph Kasa-Vubu"
+					picture = "Portrait_Zentralafrika_Joseph_Kasa_Vubu.dds"
+					traits = {  }
+					skill = 3
+					id = 181002
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 3
+				}
+
+				set_country_flag = OFN_MANDATE_not_decolonized
+				econ_leave_sphere = yes
+				econ_join_sphere_USA = yes
+				hidden_effect = {
+					set_temp_variable = { TNO_economy_subtype_temp = 1 }
+					econ_subtype_change = yes
+				}
+				country_lock_all_division_template = yes
+			}
+			MZB = {
+				
+				add_ideas = {
+					OFN_Mandate
+				}
+				set_politics = {
+					ruling_party = authoritarian_democracy
+					last_election = "1933.3.5"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					communist = 20
+					ultranationalism = 0
+					socialist = 10
+					social_democracy = 0
+					liberal_democracy = 0
+
+					conservative_democracy = 0
+					authoritarian_democracy = 30
+					despotism = 10
+					fascism = 20
+					national_socialism = 10
+					
+				}
+				set_variable = { GDP_growth = 8 }
+				set_variable = { base_inflation_rate = 3.8 }
+				set_variable = { income_tax_rate = 0.1 }
+				set_variable = { business_tax_rate = 0.03 }
+				set_variable = { poverty_rate = GRO.poverty_rate }
+				set_variable = { poverty_monthly_change = 0.2 }
+				set_variable = { money_reserves = 0.0 } #in billions
+				set_variable = { misc_income = 0.685 }
+				set_variable = { misc_costs = 0.159 }			
+				set_variable = { economic_centralization = 65 }
+
+				OFN_MANDATE_set_starting_laws = yes
+
+				set_party_name = { ideology = communist long_name = OFN_MZB_com_party_long name = OFN_MZB_com_party }
+				set_party_name = { ideology = socialist long_name = OFN_MZB_soc_party_long name = OFN_MZB_soc_party }
+				set_party_name = { ideology = authoritarian_democracy long_name = OFN_MZB_authdem_party_long name = OFN_MZB_authdem_party }
+				set_party_name = { ideology = despotism long_name = OFN_MZB_desp_party_long name = OFN_MZB_desp_party }
+				set_party_name = { ideology = fascism long_name = OFN_MZB_fasc_party_long name = OFN_MZB_fasc_party }
+				set_party_name = { ideology = national_socialism long_name = OFN_MZB_natsoc_party_long name = OFN_MZB_natsoc_party }
+
+				create_country_leader = {
+					name = "Various Revolutionary Movements"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = communist_subtype
+				}
+				create_country_leader = {
+					name = "Various Revolutionary Movements"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = socialist_subtype
+				}
+				create_country_leader = {
+					name = "William Westmoreland"
+					desc = "POLITICS_WILLIAM_WESTMORELAND_DESC"
+					picture = "Portrait_Ostafrika_William_Westmoreland.dds"
+					expire = "1999.1.23"
+					ideology = authoritarian_democracy_military_mandate_subtype
+				}
+				create_country_leader = {
+					name = "Various Warlord Cliques"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = despotism_subtype
+				}
+				create_country_leader = {
+					name = "Various Warlord Cliques"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = fascism_subtype
+				}
+				create_country_leader = {
+					name = "German Remnants"
+					desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+					expire = "1999.1.23"
+					ideology = national_socialism_subtype
+				}
+				add_ideas = {
+					MZB_USA_William_R_Peers_hog
+					MZB_USA_Kenneth_Rush_for
+					MZB_USA_Paul_Nitze_eco
+					MZB_USA_Paul_D_Harkins_sec
+
+					MZB_USA_Legacy_Ostafrikaner_Research
+					MZB_USA_East_African_Warlordism
+					MZB_USA_Lackluster_Infrastructures
+				}
+
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = MZB_USA
+				load_focus_tree = ofn_mozambique
+				load_oob = OFN_MZB
+				
+				create_corps_commander = {
+					name = "William R. Peers"
+					picture = "Portrait_Ostafrika_William_R_Peers.dds"
+					traits = {  }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Paul D. Harkins"
+					picture = "Portrait_Ostafrika_Paul_D_Harkins.dds"
+					traits = {  }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+
+				set_country_flag = OFN_MANDATE_not_decolonized
+				#activate_decision = OFN_AFRICA_MANDATE_test
+				econ_leave_sphere = yes
+				econ_join_sphere_USA = yes
+				hidden_effect = {
+					set_temp_variable = { TNO_economy_subtype_temp = 1 }
+					econ_subtype_change = yes
+				}
+				TNO_startup_nation = yes
+			}
+			if = {
+				limit = {
+					ANG = {
+						NOT = {
+							has_country_flag = ANG_Free
+						}
+					}
+				}
+				ANG = {
+					retire_country_leader = yes
+					set_capital = 1035
+					add_ideas = OFN_Mandate
+					set_politics = {
+						ruling_party = authoritarian_democracy
+						last_election = "1933.3.5"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					econ_join_sphere_USA = yes
+					set_popularities = {
+						communist = 10
+						ultranationalism = 0
+						socialist = 5
+						social_democracy = 0
+						liberal_democracy = 10
+
+						conservative_democracy = 5
+						authoritarian_democracy = 40
+						despotism = 20
+						fascism = 10
+						national_socialism = 0
+						
+					}
+					inherit_technology = USA
+					OFN_MANDATE_set_starting_laws = yes
+
+					set_party_name = { ideology = communist long_name = OFN_ANG_com_party_long name = OFN_ANG_com_party }
+					set_party_name = { ideology = socialist long_name = OFN_ANG_soc_party_long name = OFN_ANG_soc_party }
+					set_party_name = { ideology = liberal_democracy long_name = OFN_ANG_soclib_party_long name = OFN_ANG_soclib_party }
+					set_party_name = { ideology = conservative_democracy long_name = OFN_ANG_soccon_party_long name = OFN_ANG_soccon_party }
+					set_party_name = { ideology = authoritarian_democracy long_name = OFN_ANG_authdem_party_long name = OFN_ANG_authdem_party }
+					set_party_name = { ideology = despotism long_name = OFN_ANG_desp_party_long name = OFN_ANG_desp_party }
+					set_party_name = { ideology = fascism long_name = OFN_ANG_fasc_party_long name = OFN_ANG_fasc_party }
+
+					create_country_leader = {
+						name = "Agostinho Neto"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = communist_subtype
+					}
+					create_country_leader = {
+						name = "Ilídio Machado"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = socialist_subtype
+					}
+					create_country_leader = {
+						name = "Johnny Eduardo Pinnock"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = liberal_democracy_subtype
+					}
+					create_country_leader = {
+						name = "Holden Roberto"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = conservative_democracy_subtype
+					}
+					create_country_leader = {
+						name = "John D. Lavelle"
+						desc = "POLITICS_JOHN_LAVELLE_DESC"
+						picture = "Portrait_Sudwestafrika_John_D_Lavelle.dds"
+						expire = "1999.1.23"
+						ideology = authoritarian_democracy_military_mandate_subtype
+						traits = { }
+					}
+					create_country_leader = {
+						name = "Jonas Savimbi"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = despotism_subtype
+					}
+					create_country_leader = {
+						name = "German Remnants"
+						desc = "POLITICS_CENTRAL_AFRICA_DUMMY_DESC"
+						expire = "1999.1.23"
+						ideology = fascism_subtype
+					}
+
+					remove_ideas = {
+						ANG_Afrikaner_Airstrip
+						ANG_Incoherent_Bookkeeping
+						ANG_Incoherent_Bookkeeping_2
+						ANG_Incoherent_Bookkeeping_3
+						ANG_Incoherent_Bookkeeping_4
+						ANG_Away_In_The_Clouds
+						ANG_The_Fatherland_Arrives
+						ANG_Disrupted_Comms
+						ANG_Slipping_The_Plans
+						ANG_Constant_Partisans
+						ANG_Broken_Fuel_Lines
+						ANG_Token_Troops
+						ANG_Muller_Airlift
+						ANG_No_One_In_No_One_Out
+						ANG_USA_Infiltrated_RK_Armies
+						ANG_SKL_Air_Exercises
+						ANG_SKL_RD_Expanded
+						ANG_Secure_The_Homefront
+						ANG_Boer_Help
+						ANG_In_The_Nuts
+						ANG_In_The_Nuts_2
+						ANG_In_The_Nuts_3
+						ANG_In_The_Nuts_4
+						ANG_Reprisal_Attacks
+						ANG_SS_Anti_Terror
+						ANG_SS_Anti_Terror_2
+						ANG_Using_Our_People
+						ANG_Using_Our_People_Paid_Well
+						ANG_Using_Our_People_Paid_Well_2
+						ANG_Using_Our_People_Paid_Enough
+						ANG_Using_Our_People_Paid_Enough_2
+						ANG_Roll_Them_Off_The_Line
+						GRO_Financed_Shit
+						ANG_Mutual_Assistence_Pact_1
+						ANG_Mutual_Assistence_Pact
+						ANG_Mutual_Assistence_Pact_COG
+						ANG_Mutual_Assistence_Pact_GRO
+						ANG_Road_Of_Life
+						ANG_Natives_In_The_Air_2
+						ANG_Natives_In_The_Air_1
+						ANG_RANDR
+						ANG_RANDR_2
+						ANG_Joint_Offensive_Shit
+						ANG_Lords_Of_The_Air
+						ANG_Lords_Of_The_Air_2
+						ANG_PlanesInOurHand_1
+						ANG_PlanesInOurHand_2
+						ANG_PlanesInOurHand_3
+						ANG_bomber_production
+						ANG_fighter_production
+						ANG_transport_production
+						ANG_Bomber_Plans
+						ANG_Bomber_Plans_And_Fighter_Plans
+						ANG_Fighter_Plans
+						ANG_Air_Assault_And_Fighter
+						ANG_Trifecta
+						ANG_Air_Assault
+						ANG_Air_Assault_And_Bomber
+						ANG_Safetey_is_paramount_idea
+						ANG_pit_stop_model_idea
+						ANG_pit_stop_modeland_saftey_idea
+						ANG_build_quickly_idea
+						ANG_German_Sus_idea_1
+						ANG_German_Sus_idea_2
+						ANG_German_Sus_idea_3
+						ANG_German_Sus_idea_4
+						ANG_German_Sus_idea_5
+						ANG_Huttig_Sus_idea_1
+						ANG_Huttig_Sus_idea_2
+						ANG_Huttig_Sus_idea_3
+						ANG_Huttig_Sus_idea_4
+						ANG_Muller_sus_idea_1
+						ANG_Muller_sus_idea_2
+						ANG_Muller_sus_idea_3
+						ANG_Muller_sus_idea_4
+						ANG_Native_Militancy_1
+						ANG_Native_Militancy_2
+						ANG_Native_Militancy_3
+						ANG_Native_Militancy_4
+						ANG_Native_Militancy_5
+						ANG_Sudwest_Training_Shit
+						ANG_Sudwest_Training_med
+						ANG_Sudwest_Training_high
+						ANG_constitution
+						ANG_Guerillas_Rescued
+						ANG_few_prisoners_freed
+						ANG_med_prisoners_freed
+						ANG_high_prisoners_freed
+						ANG_German_Resistance
+						ANG_Improved_Internal_Structure
+						ANG_City_Terror_Attack
+						ANG_Terror_Troop_Angst
+						ANG_American_Advisors
+						GER_SGR_drugs_SAW
+						Pakt_Autonomous_Reichskommissariat
+
+						ANG_Wolfgang_Schenck_dep
+						ANG_Hellmut_von_Leipzig_mil
+						ANG_Gerhard_Homuth_for
+						ANG_Otto_Herrigel_eco
+						
+						ANG_Air_Empire_Dynmod_Dummy
+					}
+					add_ideas = {
+						ANG_USA_William_W_Momyer_hog
+						ANG_USA_Robert_A_Lovett_for
+						ANG_USA_Klaus_Dierks_eco
+						ANG_USA_Philip_Davidson_sec
+
+						ANG_USA_Lecagy_Air_Empire
+						ANG_USA_UNITA_MPLA_Infightings
+						ANG_USA_Fumes_of_the_Battlefields
+					}
+					remove_dynamic_modifier = {
+						modifier = ANG_German_support
+					}
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = ANG_USA
+					load_focus_tree = ofn_angola
+					load_oob = OFN_ANG
+					delete_unit_template_and_units = {
+						division_template = "Schutztruppe"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Ursprunglich Patroullieren"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Wehrmacht"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Waffen-SS"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Fallschirmjäger"
+					}
+					transfer_navy = {
+					    target = GER
+					}
+					remove_unit_leader = 187
+					remove_unit_leader = 188
+					remove_unit_leader = 189
+					remove_unit_leader = 190
+					remove_unit_leader = 191
+					remove_unit_leader = 5000
+					remove_unit_leader = 5001
+					remove_unit_leader = 5002
+
+					create_corps_commander = {
+						name = "William W. Momyer"
+						picture = "Portrait_Sudwestafrika_William_W_Momyer.dds"
+						traits = {  }
+						skill = 3
+						id = 191002
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 3
+					}
+					set_politics = { ruling_party = authoritarian_democracy }
+					set_country_flag = OFN_MANDATE_not_decolonized
+					#set_political_power = -50
+					econ_leave_sphere = yes
+					econ_join_sphere_USA = yes
+					hidden_effect = {
+						set_temp_variable = { TNO_economy_subtype_temp = 1 }
+						econ_subtype_change = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ANG = { has_country_flag = ANG_USA_guarantee }
+				}
+				white_peace = SAF
+				white_peace = GRO
+				white_peace = COG
+				white_peace = NAM
+				white_peace = BOR
+			}
+
+			USA_AFRICA_set_start_stability = yes
+			conclude_south_african_war = yes
+		}
+	}
+
+	option = {
+		name = SAFWAR.13.a
+		ai_chance = { factor = 80 }
+		USA = {
+			country_event = {
+				id = USA.51
+				days = 1
+			}
+		}
+		every_country = {
+			news_event = {
+				id = WORLD.594
+				days = 1
+			}
+		}
+	}
+
+	option = { #play angola
+		name = SAFWAR.13.b
+		ai_chance = { factor = 0 }
+		USA = {
+			country_event = {
+				id = USA.51
+				days = 1
+			}
+		}
+		every_country = {
+			news_event = {
+				id = WORLD.594
+				days = 1
+			}
+		}
+		ANG = {
+			set_variable = { national_debt = 0 }
+			TNO_fopo_add_saf_reconstruction_conflict_tab = yes
+			set_political_power = 150
+			change_tag_from = SAF
+		}
+	}
+
+	option = { #play congo
+		name = SAFWAR.13.c
+		ai_chance = { factor = 0 }
+		USA = {
+			country_event = {
+				id = USA.51
+				days = 1
+			}
+		}
+		every_country = {
+			news_event = {
+				id = WORLD.594
+				days = 1
+			}
+		}
+		COG = {
+			set_variable = { national_debt = 0 }
+			TNO_fopo_add_saf_reconstruction_conflict_tab = yes
+			set_political_power = 150
+			change_tag_from = SAF
+		}
+	}
+
+	option = { #play east africa
+		name = SAFWAR.13.e
+		ai_chance = { factor = 0 }
+		USA = {
+			country_event = {
+				id = USA.51
+				days = 1
+			}
+		}
+		every_country = {
+			news_event = {
+				id = WORLD.594
+				days = 1
+			}
+		}
+		MZB = {
+			set_variable = { national_debt = 0 }
+			TNO_fopo_add_saf_reconstruction_conflict_tab = yes
+			set_political_power = 150
+			change_tag_from = SAF
+		}
+	}
+
+}
+
+##OFN Offers Us A Ceasefire - OFN Leaning
+country_event = {
+	id = SAFWAR.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.14"}
+	title = SAFWAR.14.t
+	desc = SAFWAR.14.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+
+	option = { #Agree
+		name = SAFWAR.14.a
+		ai_chance = { factor = 80 }
+
+		clr_global_flag = south_african_war_ceasefires_enabled
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+			USA = {
+				country_event = { id = SAFWAR.24 days = 1 }
+				clr_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+		}
+	}
+	option = { #Reject
+		name = SAFWAR.14.b
+		ai_chance = { factor = 40 }
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+			USA = {
+				country_event = { id = SAFWAR.27 days = 1 }
+				clr_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+		}
+	}
+}
+
+##OFN Offers Us A Ceasefire - Stalemate
+country_event = {
+	id = SAFWAR.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.15"}
+	title = SAFWAR.15.t
+	desc = SAFWAR.15.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+
+	option = {
+		name = SAFWAR.15.a
+		ai_chance = { factor = 40 }
+		clr_global_flag = south_african_war_ceasefires_enabled
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+			USA = {
+				country_event = { id = SAFWAR.25 days = 1 }
+				clr_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+		}
+	}
+	option = {
+		name = SAFWAR.15.b
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+			USA = {
+				country_event = { id = SAFWAR.27 days = 1 }
+				clr_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+		}
+	}
+}
+
+##OFN Offers Us A Ceasefire - Schild Leaning
+country_event = {
+	id = SAFWAR.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.16"}
+	title = SAFWAR.16.t
+	desc = SAFWAR.16.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+
+	option = {
+		name = SAFWAR.16.a
+		ai_chance = { factor = 80 }
+		clr_global_flag = south_african_war_ceasefires_enabled
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+			USA = {
+				country_event = { id = SAFWAR.26 days = 1 }
+				clr_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+		}
+	}
+	option = {
+		name = SAFWAR.16.b
+		ai_chance = { factor = 40 }
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+			USA = {
+				country_event = { id = SAFWAR.27 days = 1 }
+				clr_global_flag = SAFWAR_USA_proposes_ceasefire
+			}
+		}
+	}
+}
+
+##Schild Offers Us A Ceasefire - Schild Leaning
+country_event = {
+	id = SAFWAR.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.17"}
+	title = SAFWAR.17.t
+	desc = SAFWAR.17.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+
+	option = {
+		name = SAFWAR.17.a
+		clr_global_flag = south_african_war_ceasefires_enabled
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+			GRO = {
+				country_event = { id = SAFWAR.26 days = 1 }
+				clr_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+			ANG = {
+				country_event = { id = SAFWAR.26 days = 1 }
+				clr_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+			COG = {
+				country_event = { id = SAFWAR.26 days = 1 }
+				clr_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+			GER = {
+				country_event = { id = SAFWAR.26 days = 1 }
+				clr_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+		}
+	}
+	option = {
+		name = SAFWAR.17.b
+		ai_chance = { factor = 40 }
+
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+			GRO = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+			ANG = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+			COG = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+			GER = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+		}
+	}
+}
+
+##Schild Offers Us A Ceasefire - Stalemate
+country_event = {
+	id = SAFWAR.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.18"}
+	title = SAFWAR.18.t
+	desc = SAFWAR.18.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+
+	option = {
+		name = SAFWAR.18.a
+		ai_chance = { factor = 40 }
+		set_global_flag = SAF_ended_in_neutral
+		clr_global_flag = south_african_war_ceasefires_enabled
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+			GRO = {
+				country_event = { id = SAFWAR.25 days = 1 }
+				clr_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+			ANG = {
+				country_event = { id = SAFWAR.25 days = 1 }
+				clr_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+			COG = {
+				country_event = { id = SAFWAR.25 days = 1 }
+				clr_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+			GER = {
+				country_event = { id = SAFWAR.25 days = 1 }
+				clr_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+		}
+	}
+	option = {
+		name = SAFWAR.18.b
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+			GRO = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+			ANG = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+			COG = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+			GER = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+		}
+	}
+}
+
+##Schild Offers Us A Ceasefire - OFN Leaning
+country_event = {
+	id = SAFWAR.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.19"}
+	title = SAFWAR.19.t
+	desc = SAFWAR.19.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+
+	option = {
+		name = SAFWAR.19.a
+		ai_chance = { factor = 80 }
+		clr_global_flag = south_african_war_ceasefires_enabled
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+			GRO = {
+				country_event = { id = SAFWAR.24 days = 1 }
+				clr_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+			ANG = {
+				country_event = { id = SAFWAR.24 days = 1 }
+				clr_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+			COG = {
+				country_event = { id = SAFWAR.24 days = 1 }
+				clr_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+			GER = {
+				country_event = { id = SAFWAR.24 days = 1 }
+				clr_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+		}
+	}
+	option = {
+		name = SAFWAR.19.b
+		ai_chance = { factor = 20 }
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+			GRO = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_GRO_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+			ANG = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_ANG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+			COG = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_COG_proposes_ceasefire
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+			GER = {
+				country_event = { id = SAFWAR.28 days = 1 }
+				clr_global_flag = SAFWAR_GER_proposes_ceasefire
+			}
+		}
+	}
+}
+
+##Ceasefire Event - Schild Leaning Ceasefire
+country_event = {
+	id = SAFWAR.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.20"}
+	title = SAFWAR.20.t
+	desc = SAFWAR.20.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	immediate = {
+		hidden_effect = {
+			USA = {
+				set_temp_variable = { Victory_ID = 4 }
+				set_temp_variable = { Victory_Outcome = 2 }
+				set_temp_variable = { Victory_Points = -150 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				if = {
+					limit = { NOT = { has_global_flag = german_civil_war_end } }
+					set_country_flag = SAW_early_end
+				}
+				else = {
+					set_temp_variable = { Victory_ID = 4 }
+					set_temp_variable = { Victory_Outcome = 4 }
+					set_temp_variable = { Victory_Points = 150 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+			}
+			clr_global_flag = south_african_war_happening
+			set_global_flag = SAF_Schild_Ceasefire
+			set_global_flag = SAF_ceasefire
+			#SAF = {
+			#	add_named_threat = {
+			#		threat = -40
+			#		name = threat.14.t
+			#	}
+			#}
+			if = {
+				limit = {
+					OR = {
+						tag = SAF
+						tag = GRO
+						tag = COG
+						tag = ANG
+					}
+				}
+				country_event = {
+					id = fixfixfix.2
+					days = 8
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+				white_peace = ANG
+				white_peace = GRO
+				white_peace = COG
+				white_peace = NAM
+				white_peace = BOR
+			}
+			SAF = {
+				white_peace = COG
+				white_peace = GRO
+				white_peace = ANG
+				white_peace = BOR
+				white_peace = ANC
+				load_focus_tree = generic_focus
+			}
+			SAF = {
+				annex_country = {
+					target = ANC
+					transfer_troops = yes
+				}
+			}
+			SAF = { 
+				if = {
+					limit = { has_global_flag = SAF_monarchy_won }
+					country_event = { id = SAF.143 days = 1 } 
+				}
+				else_if = {
+					limit = { has_global_flag = SAF_republic_won }
+					country_event = { id = SAF.157 days = 1 } 
+				}
+			}
+			SAF = {
+				transfer_state = 936
+				transfer_state = 719
+				transfer_state = 935
+				transfer_state = 934
+				transfer_state = 681
+				transfer_state = 1312
+				transfer_state = 933
+				transfer_state = 942
+			}
+			GRO = {
+				transfer_state = 884
+				transfer_state = 1049
+				transfer_state = 1048
+				transfer_state = 1050
+			}
+			if = {
+				limit = {
+					GRO = {
+						NOT = { has_cosmetic_tag = GRO_REICHSSTAAT }
+					}
+				}
+				ANG = {
+					transfer_state = 542
+					transfer_state = 1045
+					transfer_state = 1047
+					transfer_state = 1046
+					transfer_state = 1044
+				}
+				else = {
+					limit = {
+						GRO = { has_cosmetic_tag = GRO_REICHSSTAAT }
+					}
+					GRO = {
+						transfer_state = 542
+						transfer_state = 1045
+						transfer_state = 1047
+						transfer_state = 1046
+						transfer_state = 1044
+					}
+				}
+			}
+			GRO = {
+				set_autonomy = {
+					target = BOR
+					autonomy_state = autonomy_collaborator_puppet_state
+				}
+			}
+			BOR = {
+				set_popularities = {
+					communist = 0
+					ultranationalism = 0
+					socialist = 0
+					social_democracy = 0
+					liberal_democracy = 0
+
+					conservative_democracy = 0
+					authoritarian_democracy = 10
+					despotism = 0
+					fascism = 80
+					national_socialism = 10
+					
+				}
+
+				set_politics = {
+					ruling_party = fascism
+				}
+			}
+			USA = {
+				add_to_faction = SAF
+				SAF = { add_ideas = OFN_Independent_Member }
+			}
+			if = {
+				limit = {
+					has_global_flag = ANG_Free
+				}
+				NAM = {
+					annex_country = {
+						target = ANG
+						transfer_troops =  no
+					}
+				}
+			}
+			every_country = {
+				news_event = {
+					id = WORLD.592
+					days = 1
+				}
+			}
+			GRO = {
+				country_event = {
+					id = SAFWAR.23
+					days = 46
+				}
+				if = {
+					limit = {
+						OR = {
+							has_cosmetic_tag = GRO_REICHSSTAAT
+							has_cosmetic_tag = GRO_REICHSSTAAT_2
+							has_cosmetic_tag = GRO_REICHSSTAAT_3
+						}
+					}
+					dismantle_faction = yes
+					every_owned_state = {
+						add_core_of = GRO
+					}
+				}
+			}
+			conclude_south_african_war = yes
+			if = {
+				limit = {
+					has_global_flag = german_civil_war_goeringvic
+				}
+				GER = {
+					set_country_flag = GGR_stalemate_SAW
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SAFWAR.20.a
+		ai_chance = { factor = 80 }
+	}
+}
+
+##Ceasefire Event - Stalemate
+country_event = {
+	id = SAFWAR.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.21"}
+	title = SAFWAR.21.t
+	desc = SAFWAR.21.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	immediate = {
+		hidden_effect = {
+			USA = {
+				set_temp_variable = { Victory_ID = 4 }
+				set_temp_variable = { Victory_Outcome = 3 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				if = {
+					limit = { NOT = { has_global_flag = german_civil_war_end } }
+					set_country_flag = SAW_early_end
+				}
+				else = {
+					set_temp_variable = { Victory_ID = 4 }
+					set_temp_variable = { Victory_Outcome = 3 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						is_in_faction_with = USA
+					}
+				}
+				white_peace = ANG
+				white_peace = GRO
+				white_peace = COG
+				white_peace = NAM
+				white_peace = BOR
+			}
+			clr_global_flag = south_african_war_happening
+			set_global_flag = SAF_Stalemate
+			set_global_flag = SAF_ceasefire
+			#		threat = -40
+			#		name = threat.15.t
+			#	}
+			#}
+			if = {
+				limit = {
+					OR = {
+						tag = SAF
+						tag = GRO
+						tag = COG
+						tag = ANG
+					}
+				}
+				country_event = {
+					id = fixfixfix.2
+					days = 8
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SAFWAR.21.a
+		ai_chance = { factor = 80 }
+		SAF = {
+			white_peace = COG
+			white_peace = GRO
+			if = {
+				limit = {
+					ANG = {
+						OR = {
+							has_country_flag = ANG_USA_guarantee
+							NOT = { has_global_flag = ANG_Free }
+						}
+					}
+				}
+				white_peace = ANG
+			}
+			white_peace = BOR
+			white_peace = ANC
+			white_peace = NAM
+		}
+		SAF = {
+			annex_country = {
+				target = BOR
+				transfer_troops = no
+			}
+			load_focus_tree = generic_focus
+		}
+		SAF = { 
+			if = {
+				limit = { has_global_flag = SAF_monarchy_won }
+				country_event = { id = SAF.143 days = 1 } 
+			}
+			else_if = {
+				limit = { has_global_flag = SAF_republic_won }
+				country_event = { id = SAF.157 days = 1 } 
+			}
+		}
+		SAF = {
+			annex_country = {
+				target = ANC
+				transfer_troops = no
+			}
+		}
+		SAF = {
+			transfer_state = 936
+			transfer_state = 719
+			transfer_state = 935
+			transfer_state = 934
+			transfer_state = 681
+			transfer_state = 1312
+			transfer_state = 933
+			transfer_state = 942
+
+			transfer_state = 275
+			transfer_state = 939
+			transfer_state = 940
+			transfer_state = 937
+			transfer_state = 938
+
+			transfer_state = 1044
+			transfer_state = 542
+			transfer_state = 1050
+			transfer_state = 1046
+			transfer_state = 1048
+			transfer_state = 1047
+			transfer_state = 1049
+			transfer_state = 1045
+			transfer_state = 884
+		}
+		USA = {
+			add_to_faction = SAF
+			SAF = { add_ideas = OFN_Independent_Member }
+		}
+		every_country = {
+			news_event = {
+				id = WORLD.591
+				days = 1
+			}
+		}
+		GRO = {
+			country_event = {
+				id = SAFWAR.23
+				days = 46
+			}
+			if = {
+				limit = {
+					OR = {
+						has_cosmetic_tag = GRO_REICHSSTAAT
+						has_cosmetic_tag = GRO_REICHSSTAAT_2
+						has_cosmetic_tag = GRO_REICHSSTAAT_3
+					}
+				}
+				dismantle_faction = yes
+			}
+		}
+		conclude_south_african_war = yes
+		if = {
+			limit = {
+				has_global_flag = german_civil_war_goeringvic
+			}
+			GER = {
+				set_country_flag = GGR_stalemate_SAW
+			}
+		}
+	}
+}
+
+##Ceasefire Event - OFN Leaning Ceasefire
+country_event = {
+	id = SAFWAR.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.22"}
+	title = SAFWAR.22.t
+	desc = SAFWAR.22.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	hidden = yes
+
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					tag = USA
+					is_in_faction_with = USA
+				}
+			}
+			white_peace = ANG
+			white_peace = GRO
+			white_peace = COG
+			white_peace = NAM
+			white_peace = BOR
+		}
+		clr_global_flag = south_african_war_happening
+		set_global_flag = SAF_ceasefire
+		set_global_flag = SAF_OFN_Ceasefire
+		hidden_effect = {
+			USA = {
+				set_temp_variable = { Victory_ID = 4 }
+				set_temp_variable = { Victory_Outcome = 4 }
+				set_temp_variable = { Victory_Points = 150 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				if = {
+					limit = { NOT = { has_global_flag = german_civil_war_end } }
+					set_country_flag = SAW_early_end 
+				}
+				else = {
+					set_temp_variable = { Victory_ID = 4 }
+					set_temp_variable = { Victory_Outcome = 2 }
+					set_temp_variable = { Victory_Points = -150 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+			}
+			SAF = { 
+				if = {
+					limit = { has_global_flag = SAF_monarchy_won }
+					country_event = { id = SAF.143 days = 1 } 
+				}
+				else_if = {
+					limit = { has_global_flag = SAF_republic_won }
+					country_event = { id = SAF.157 days = 1 } 
+				}
+			}
+
+			#SAF = {
+			#	add_named_threat = {
+			#		threat = -40
+			#		name = threat.13.t
+			#	}
+			#}
+			if = {
+				limit = {
+					OR = {
+						tag = SAF
+						tag = GRO
+						tag = COG
+						tag = ANG
+					}
+				}
+				country_event = {
+					id = fixfixfix.2
+					days = 8
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SAFWAR.22.a
+		ai_chance = { factor = 80 }
+		conclude_south_african_war = yes
+		if = {
+			limit = {
+				has_global_flag = german_civil_war_goeringvic
+			}
+			GER = {
+				set_country_flag = GGR_stalemate_SAW
+			}
+		}
+		SAF = {
+			white_peace = COG
+			white_peace = GRO
+			white_peace = ANG
+			white_peace = BOR
+			white_peace = ANC
+		}
+		SAF = {
+			annex_country = {
+				target = BOR
+				transfer_troops = no
+			}
+			load_focus_tree = generic_focus
+		}
+		SAF = {
+			annex_country = {
+				target = ANC
+				transfer_troops = no
+			}
+		}
+		ANG = {
+			set_capital = 1035
+		}
+		if = {
+			limit = {
+				ANG = { has_country_flag = ANG_USA_guarantee }
+			}
+			white_peace = COG
+			white_peace = GRO
+			white_peace = BOR
+			white_peace = NAM
+		}
+
+		else_if = {
+			limit = {
+				has_global_flag = ANG_Free
+				ANG = {
+					NOT = { has_country_flag = ANG_USA_guarantee }
+				}
+			}
+			ANG = {
+				white_peace = GRO
+				white_peace = COG
+				white_peace = USA
+			}
+			USA = {
+				puppet = ANG
+			}
+			ANG = {
+				retire_country_leader = yes
+				set_capital = 1035
+				set_politics = {
+					ruling_party = authoritarian_democracy
+					last_election = "1933.3.5"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					communist = 0
+					ultranationalism = 0
+					socialist = 0
+					social_democracy = 0
+					liberal_democracy = 10
+
+					conservative_democracy = 20
+					authoritarian_democracy = 40
+					despotism = 10
+					fascism = 10
+					national_socialism = 10
+					
+				}
+				conclude_south_african_war = yes
+				OFN_MANDATE_set_starting_laws = yes
+				remove_ideas = {
+					ANG_Afrikaner_Airstrip
+					ANG_Incoherent_Bookkeeping
+					ANG_Incoherent_Bookkeeping_2
+					ANG_Incoherent_Bookkeeping_3
+					ANG_Incoherent_Bookkeeping_4
+					ANG_Away_In_The_Clouds
+					ANG_The_Fatherland_Arrives
+					ANG_Disrupted_Comms
+					ANG_Slipping_The_Plans
+					ANG_Constant_Partisans
+					ANG_Broken_Fuel_Lines
+					ANG_Token_Troops
+					ANG_Muller_Airlift
+					ANG_No_One_In_No_One_Out
+					ANG_USA_Infiltrated_RK_Armies
+					ANG_SKL_Air_Exercises
+					ANG_SKL_RD_Expanded
+					ANG_Secure_The_Homefront
+					ANG_Boer_Help
+					ANG_In_The_Nuts
+					ANG_In_The_Nuts_2
+					ANG_In_The_Nuts_3
+					ANG_In_The_Nuts_4
+					ANG_Reprisal_Attacks
+					ANG_SS_Anti_Terror
+					ANG_SS_Anti_Terror_2
+					ANG_Using_Our_People
+					ANG_Using_Our_People_Paid_Well
+					ANG_Using_Our_People_Paid_Well_2
+					ANG_Using_Our_People_Paid_Enough
+					ANG_Using_Our_People_Paid_Enough_2
+					ANG_Roll_Them_Off_The_Line
+					GRO_Financed_Shit
+					ANG_Mutual_Assistence_Pact_1
+					ANG_Mutual_Assistence_Pact
+					ANG_Mutual_Assistence_Pact_COG
+					ANG_Mutual_Assistence_Pact_GRO
+					ANG_Road_Of_Life
+					ANG_Natives_In_The_Air_2
+					ANG_Natives_In_The_Air_1
+					ANG_RANDR
+					ANG_RANDR_2
+					ANG_Joint_Offensive_Shit
+					ANG_Lords_Of_The_Air
+					ANG_Lords_Of_The_Air_2
+					ANG_PlanesInOurHand_1
+					ANG_PlanesInOurHand_2
+					ANG_PlanesInOurHand_3
+					ANG_bomber_production
+					ANG_fighter_production
+					ANG_transport_production
+					ANG_Bomber_Plans
+					ANG_Bomber_Plans_And_Fighter_Plans
+					ANG_Fighter_Plans
+					ANG_Air_Assault_And_Fighter
+					ANG_Trifecta
+					ANG_Air_Assault
+					ANG_Air_Assault_And_Bomber
+					ANG_Safetey_is_paramount_idea
+					ANG_pit_stop_model_idea
+					ANG_pit_stop_modeland_saftey_idea
+					ANG_build_quickly_idea
+					ANG_German_Sus_idea_1
+					ANG_German_Sus_idea_2
+					ANG_German_Sus_idea_3
+					ANG_German_Sus_idea_4
+					ANG_German_Sus_idea_5
+					ANG_Huttig_Sus_idea_1
+					ANG_Huttig_Sus_idea_2
+					ANG_Huttig_Sus_idea_3
+					ANG_Huttig_Sus_idea_4
+					ANG_Muller_sus_idea_1
+					ANG_Muller_sus_idea_2
+					ANG_Muller_sus_idea_3
+					ANG_Muller_sus_idea_4
+					ANG_Native_Militancy_1
+					ANG_Native_Militancy_2
+					ANG_Native_Militancy_3
+					ANG_Native_Militancy_4
+					ANG_Native_Militancy_5
+					ANG_Sudwest_Training_Shit
+					ANG_Sudwest_Training_med
+					ANG_Sudwest_Training_high
+					ANG_constitution
+					ANG_Guerillas_Rescued
+					ANG_few_prisoners_freed
+					ANG_med_prisoners_freed
+					ANG_high_prisoners_freed
+					ANG_German_Resistance
+					ANG_Improved_Internal_Structure
+					ANG_City_Terror_Attack
+					ANG_Terror_Troop_Angst
+					ANG_American_Advisors
+					Pakt_Autonomous_Reichskommissariat
+				}
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = ANG_USA
+				load_focus_tree = ofn_angola
+				remove_unit_leader = 187
+				remove_unit_leader = 188
+				remove_unit_leader = 189
+				remove_unit_leader = 190
+				remove_unit_leader = 191
+			}
+		}
+
+		USA = {
+			add_to_faction = SAF
+			SAF = { add_ideas = OFN_Independent_Member }
+		}
+		every_country = {
+			news_event = {
+				id = WORLD.590
+				days = 1
+			}
+		}
+		GRO = {
+			country_event = {
+				id = SAFWAR.23
+				days = 46
+			}
+			if = {
+				limit = {
+					OR = {
+						has_cosmetic_tag = GRO_REICHSSTAAT
+						has_cosmetic_tag = GRO_REICHSSTAAT_2
+						has_cosmetic_tag = GRO_REICHSSTAAT_3
+					}
+				}
+				dismantle_faction = yes
+			}
+			country_event = {
+				id = GRO_REICHSSTAAT.50
+				days = 450
+			}
+		}
+		SAF = {
+			transfer_state = 936
+			transfer_state = 719
+			transfer_state = 935
+			transfer_state = 934
+			transfer_state = 681
+			transfer_state = 1312
+			transfer_state = 933
+			transfer_state = 942
+
+			transfer_state = 275
+			transfer_state = 939
+			transfer_state = 940
+			transfer_state = 937
+			transfer_state = 938
+
+			transfer_state = 1044
+			transfer_state = 542
+			transfer_state = 1050
+			transfer_state = 1046
+			transfer_state = 1048
+			transfer_state = 1047
+			transfer_state = 1049
+			transfer_state = 1045
+			transfer_state = 884
+
+			transfer_state = 1060
+			transfer_state = 1061
+			transfer_state = 1062
+			transfer_state = 881
+			transfer_state = 545
+			transfer_state = 1063
+			transfer_state = 1064
+			transfer_state = 1065
+			transfer_state = 1059
+			transfer_state = 1058
+			transfer_state = 880
+			transfer_state = 1029
+			transfer_state = 1030
+			transfer_state = 1031
+			transfer_state = 1028
+			transfer_state = 1027
+			transfer_state = 778
+			transfer_state = 1214
+			transfer_state = 541
+			transfer_state = 1213
+		}
+	}
+}
+
+##Hüttig takes over Sudwestafrika and Zentralafrika
+country_event = {
+	id = SAFWAR.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.23"}
+	title = SAFWAR.23.t
+	desc = SAFWAR.23.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_country_leader = {
+			name = "Hans Hüttig"
+			ruling_only = yes
+		}
+	}
+
+	option = {
+		name = SAFWAR.23.a
+		trigger = {
+			original_tag = GRO
+		}
+		hidden_effect = {
+			GRO_huttig_paranoia_idea_leveler = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = german_civil_war_goeringvic
+					has_war = no
+				}
+				GER = {
+					end_puppet = COG
+					end_puppet = GRO
+					end_puppet = ANG
+					set_country_flag = GGR_huttigs_betrayal
+					remove_from_faction = COG
+					remove_from_faction = GRO
+					remove_from_faction = ANG
+					remove_from_faction = BOR
+				}
+				GRO = {
+					remove_from_faction = COG
+					remove_from_faction = GRO
+					remove_from_faction = ANG
+					remove_from_faction = BOR
+					set_autonomy = {
+						target = BOR
+						autonomy_state = autonomy_collaborator_puppet_state
+					}
+				}
+				BOR = {
+					econ_leave_sphere = yes
+					remove_ideas = Pakt_Marionettenstaat
+					set_popularities = {
+						communist = 0
+						ultranationalism = 0
+						socialist = 0
+						social_democracy = 0
+						liberal_democracy = 0
+
+						conservative_democracy = 0
+						authoritarian_democracy = 10
+						despotism = 0
+						fascism = 80
+						national_socialism = 10
+						
+					}
+
+					set_politics = {
+						ruling_party = fascism
+					}
+				}
+			}
+
+			GRO = {
+				econ_leave_sphere = yes
+				drop_cosmetic_tag = yes
+				set_politics = {
+					ruling_party = esoteric_nazism
+					last_election = "1933.3.5"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					communist = 0
+					ultranationalism = 0
+					socialist = 0
+					social_democracy = 0
+					liberal_democracy = 0
+
+					conservative_democracy = 0
+					authoritarian_democracy = 0
+					despotism = 0
+					fascism = 0
+					national_socialism = 20
+					esoteric_nazism = 80
+				}
+				create_country_leader = {
+					name = "Hans Hüttig"
+					desc = "POLITICS_HANS_HUTTIG_DESC"
+					picture = "Portrait_GRO_Hans_Huttig.dds"
+					expire = "1999.1.23"
+					ideology = esoteric_nazism_burgundian_system_subtype
+				}
+				add_ideas = tno_admin_efficiency_illegitimate_administration
+				set_party_name = { ideology = esoteric_nazism long_name = GRO_reichsstaat_party name = GRO_reichsstaat_party }
+				set_party_name = { ideology = fascism long_name = GRO_reichsstaat_cabal_long name = GRO_reichsstaat_cabal }
+				set_cosmetic_tag = GRO_REICHSSTAAT
+				set_variable = { TNO_economy_subtype = 7 }
+				remove_dynamic_modifier = {
+					modifier = GRO_the_drums_of_war 
+				}
+				
+				
+				hidden_effect = {
+					if = {
+						limit = {
+							has_war = no
+						}
+						dismantle_faction = yes
+					}
+					every_country = {
+						news_event = { id = SAFWAR.42 days = 2 }
+					}
+					GRO = {
+						country_event = { id = GRO_REICHSSTAAT.1 days = 2 }
+						country_event = { id = GRO_REICHSSTAAT.47 days = 10 }
+						set_autonomy = {
+							target = BOR
+							autonomy_state = autonomy_collaborator_puppet_state
+						}
+						remove_ideas = {
+							GRO_Kindersoldaten_Idea
+							GRO_Simplified_Arms_Production_Idea
+							GRO_idea_a_hundred_for_one
+							GRO_Tribal_Recruitment
+						}
+					}
+					BOR = {
+						set_popularities = {
+							communist = 0
+							ultranationalism = 0
+							socialist = 0
+							social_democracy = 0
+							liberal_democracy = 0
+
+							conservative_democracy = 0
+							authoritarian_democracy = 10
+							despotism = 0
+							fascism = 80
+							national_socialism = 10
+							
+						}
+						set_politics = {
+							ruling_party = fascism
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						country_exists = BOR
+					}
+					load_focus_tree = GRO_grossafrikanischer_reichsstaat
+				}
+
+				else = {
+					load_focus_tree = GRO_grossafrikanischer_reichsstaat_no_boers
+				}
+
+				#Cabal power calcuallted at the conclusion of the SAW
+				if = {
+					limit = { has_country_flag = GRO_cabal_active }
+					GER = { country_event = { id = SAFWAR.41 days = 2 } }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SAF
+						tag = GRO
+						tag = COG
+						tag = ANG
+					}
+				}
+				country_event = {
+					id = fixfixfix.2
+					days = 8
+				}
+			}
+		}
+		COG = {
+			country_event = {
+				id = SAFWAR.38
+				days = 1
+			}
+		}
+		if = {
+			limit = {
+				ANG = {
+					has_country_leader = {
+						name = "Wolfgang Schenck"
+						ruling_only = yes
+					}
+				}
+			}
+			ANG = {
+				country_event = {
+					id = SAFWAR.39
+					days = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				ANG = {
+					has_country_leader = {
+						name = "Adolf Galland"
+						ruling_only = yes
+					}
+				}
+			}
+			ANG = {
+				country_event = {
+					id = SAFWAR.40
+					days = 2
+				}
+			}
+		}
+	}
+	option = {
+		name = SAFWAR.23.b
+		trigger = {
+			NOT = {
+				original_tag = GRO
+			}
+		}
+	}
+}
+
+##The Ceasefire is accepted - OFN Leaning
+country_event = {
+	id = SAFWAR.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.24"}
+	title = SAFWAR.24.t
+	desc = SAFWAR.24.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.24.a
+		ai_chance = { factor = 80 }
+		hidden_effect = {
+			conclude_south_african_war = yes
+			USA = {
+				clr_country_flag = USA_show_south_africa_tree
+				USA_reload_presidential_tree = yes
+			}
+			#USA = { remove_ideas = tno_CAN_support_from_canada }
+			CAN = {
+				set_temp_variable = { target = SAF }
+				TNO_clear_num_volunteers = yes
+				#remove_ideas = tno_CAN_quebecois_conscription
+				remove_ideas = TNO_division_limit_exemption
+				#remove_ideas = tno_CAN_supporting_USA
+				add_to_variable = {
+					var = USA_advisor_level
+					value = -2
+				}
+#					country_event = { id = CAN.600 days = 350 }
+#					load_focus_tree = {
+#						tree = canada_blank
+#						keep_completed = no
+#					}
+			}
+			country_event = { id = SAFWAR.22 days = 1 }
+		}
+	}
+}
+
+##The Ceasefire is accepted - Stalemate
+country_event = { #
+	id = SAFWAR.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.25"}
+	title = SAFWAR.25.t
+	desc = SAFWAR.25.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.25.a
+		ai_chance = { factor = 80 }
+		SAF = { remove_ideas = SAF_Boer_Viet_Cong }
+		hidden_effect = {
+			conclude_south_african_war = yes
+			USA = {
+				clr_country_flag = USA_show_south_africa_tree
+				USA_reload_presidential_tree = yes
+			}
+			#USA = { remove_ideas = tno_CAN_support_from_canada }
+			CAN = {
+				set_temp_variable = { target = SAF }
+				TNO_clear_num_volunteers = yes
+				#remove_ideas = tno_CAN_quebecois_conscription
+				remove_ideas = TNO_division_limit_exemption
+				#remove_ideas = tno_CAN_supporting_USA
+				add_to_variable = {
+					var = USA_advisor_level
+					value = -2
+				}
+#				country_event = { id = CAN.600 days = 350 }
+#				load_focus_tree = {
+#					tree = canada_blank
+#					keep_completed = no
+#				}
+			}
+			country_event = { id = SAFWAR.21 days = 1 }
+		}
+	}
+}
+
+##The Ceasefire is accepted - Schild Leaning
+country_event = {
+	id = SAFWAR.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.26"}
+	title = SAFWAR.26.t
+	desc = SAFWAR.26.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.26.a
+		ai_chance = { factor = 80 }
+		hidden_effect = {
+			conclude_south_african_war = yes
+			SAF = { remove_ideas = SAF_Boer_Viet_Cong }
+			USA = {
+				#remove_ideas = tno_CAN_support_from_canada
+				clr_country_flag = USA_show_south_africa_tree
+				USA_reload_presidential_tree = yes
+			}
+			CAN = {
+				set_temp_variable = { target = SAF }
+				TNO_clear_num_volunteers = yes
+				#remove_ideas = tno_CAN_quebecois_conscription
+				remove_ideas = TNO_division_limit_exemption
+				#remove_ideas = tno_CAN_supporting_USA
+				add_to_variable = {
+					var = USA_advisor_level
+					value = -2
+				}
+#				country_event = { id = CAN.600 days = 350 }
+#				load_focus_tree = {
+#					tree = canada_blank
+#					keep_completed = no
+#				}
+			}
+			country_event = { id = SAFWAR.20 days = 1 }
+		}
+	}
+}
+
+##The Ceasefire is rejected by the Germans
+country_event = {
+	id = SAFWAR.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.27"}
+	title = SAFWAR.27.t
+	desc = SAFWAR.27.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+
+	option = {
+		name = SAFWAR.27.a
+		ai_chance = { factor = 80 }
+	}
+}
+
+##The Ceasefire is rejected by the OFN
+country_event = {
+	id = SAFWAR.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.28"}
+	title = SAFWAR.28.t
+	desc = SAFWAR.28.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+
+	option = {
+		name = SAFWAR.28.a
+		ai_chance = { factor = 80 }
+	}
+}
+
+##Hidden event which enables ceasefires
+country_event = {
+	id = SAFWAR.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.29"}
+	title = SAFWAR.29.t
+	desc = SAFWAR.29.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	hidden = yes
+
+	option = {
+		name = SAFWAR.29.a
+		ai_chance = { factor = 80 }
+		set_global_flag = south_african_war_ceasefires_enabled
+	}
+}
+
+##Booby traps in Choma (to redo)
+country_event = {
+	id = SAFWAR.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.30"}
+	title = SAFWAR.30.t
+	desc = SAFWAR.30.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.30.a
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_choma_level_one_traps
+				}
+			}
+			1054 = {
+				damage_building = { type = infrastructure damage = 0.8 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_choma_level_two_traps
+				}
+			}
+			1054 = {
+				damage_building = { type = infrastructure damage = 1.2 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_choma_level_three_traps
+				}
+			}
+			1054 = {
+				damage_building = { type = infrastructure damage = 1.8 }
+			}
+		}
+	}
+}
+
+##Booby traps in Lupane
+country_event = {
+	id = SAFWAR.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.31"}
+	title = SAFWAR.31.t
+	desc = SAFWAR.31.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.31.a
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_lupane_level_one_traps
+				}
+			}
+			881 = {
+				damage_building = { type = infrastructure damage = 0.8 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_lupane_level_two_traps
+				}
+			}
+			881 = {
+				damage_building = { type = infrastructure damage = 1.2 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_lupane_level_three_traps
+				}
+			}
+			881 = {
+				damage_building = { type = infrastructure damage = 1.8 }
+			}
+		}
+	}
+}
+
+##Booby traps in Francistown
+country_event = {
+	id = SAFWAR.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.32"}
+	title = SAFWAR.32.t
+	desc = SAFWAR.32.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.32.a
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_francistown_level_one_traps
+				}
+			}
+			1063 = {
+				damage_building = { type = infrastructure damage = 0.8 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_francistown_level_two_traps
+				}
+			}
+			1063 = {
+				damage_building = { type = infrastructure damage = 1.2 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_francistown_level_three_traps
+				}
+			}
+			1063 = {
+				damage_building = { type = infrastructure damage = 1.8 }
+			}
+		}
+	}
+}
+
+##Booby traps in Rommelstadt
+country_event = {
+	id = SAFWAR.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.33"}
+	title = SAFWAR.33.t
+	desc = SAFWAR.33.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.33.a
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_rommelstadt_level_one_traps
+				}
+			}
+			545 = {
+				damage_building = { type = infrastructure damage = 0.8 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_rommelstadt_level_two_traps
+				}
+			}
+			545 = {
+				damage_building = { type = infrastructure damage = 1.2 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_rommelstadt_level_three_traps
+				}
+			}
+			545 = {
+				damage_building = { type = infrastructure damage = 1.8 }
+			}
+		}
+	}
+}
+
+##Booby traps in Masvingo
+country_event = {
+	id = SAFWAR.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.34"}
+	title = SAFWAR.34.t
+	desc = SAFWAR.34.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.34.a
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_masvingo_level_one_traps
+				}
+			}
+			1065 = {
+				damage_building = { type = infrastructure damage = 0.8 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_masvingo_level_two_traps
+				}
+			}
+			1065 = {
+				damage_building = { type = infrastructure damage = 1.2 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_masvingo_level_three_traps
+				}
+			}
+			1065 = {
+				damage_building = { type = infrastructure damage = 1.8 }
+			}
+		}
+	}
+}
+
+##Booby traps in Gaza
+country_event = {
+	id = SAFWAR.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.35"}
+	title = SAFWAR.35.t
+	desc = SAFWAR.35.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.35.a
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_gaza_level_one_traps
+				}
+			}
+			1058 = {
+				damage_building = { type = infrastructure damage = 0.8 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_gaza_level_two_traps
+				}
+			}
+			1058 = {
+				damage_building = { type = infrastructure damage = 1.2 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_gaza_level_three_traps
+				}
+			}
+			1058 = {
+				damage_building = { type = infrastructure damage = 1.8 }
+			}
+		}
+	}
+}
+
+##Booby traps in Maputo
+country_event = {
+	id = SAFWAR.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.36"}
+	title = SAFWAR.36.t
+	desc = SAFWAR.36.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.36.a
+		ai_chance = { factor = 80 }
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_maputo_level_one_traps
+				}
+			}
+			880 = {
+				damage_building = { type = infrastructure damage = 0.8 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_maputo_level_two_traps
+				}
+			}
+			880 = {
+				damage_building = { type = infrastructure damage = 1.2 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = south_african_war
+				GRO = {
+					has_country_flag = GRO_maputo_level_three_traps
+				}
+			}
+			880 = {
+				damage_building = { type = infrastructure damage = 1.8 }
+			}
+		}
+	}
+}
+
+##Hüttig drops chem weapons on the Americans
+country_event = {
+	id = SAFWAR.37
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.37"}
+	title = SAFWAR.37.t
+	desc = SAFWAR.37.d
+	picture = GFX_report_event_chemical_warfare
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Dont intervene
+		name = SAFWAR.37.a
+		ai_chance = { factor = 40 }
+		if = {
+			limit = {
+				USA_RD_ruling_party = yes
+			}
+			custom_effect_tooltip = USA_RD_popularity_decrease_high
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						can_have_elections_in_state = yes
+					}
+					set_temp_variable = { random_bonus = random }
+					multiply_temp_variable = { random_bonus = -0.1 }
+					add_to_variable = { RD_popularity = random_bonus }
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = USA_NPP_popularity_decrease_high
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						can_have_elections_in_state = yes
+					}
+					set_temp_variable = { random_bonus = random }
+					multiply_temp_variable = { random_bonus = -0.1 }
+					add_to_variable = { NPP_popularity = random_bonus }
+				}
+			}
+		}
+		add_timed_idea = { idea = SAFWAR_37_misc_costs days = 90 }
+		custom_effect_tooltip = econ_misc_expenses_add_large_increase
+	}
+
+	option = { #Intervene
+		name = SAFWAR.37.b
+		ai_chance = { factor = 60 }
+		every_country = {
+			news_event = { id = WORLD.595 hours = 1 }
+		}
+		USA = {
+			declare_war_on = {
+				target = GRO
+				type = annex_everything
+			}
+			add_to_faction = SAF
+			SAF = {
+				add_ideas = {
+					OFN_Independent_Member
+				}
+			}
+		}
+		GRO = {
+			activate_mission = GRO_hold_against_amerika
+			set_country_flag = hold_against_amerika
+		}
+		if = {
+			limit = {
+				USA_RD_ruling_party = yes
+			}
+			custom_effect_tooltip = USA_add_RD_popularity_high
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						can_have_elections_in_state = yes
+					}
+					set_temp_variable = { random_bonus = random }
+					multiply_temp_variable = { random_bonus = 0.1 }
+					add_to_variable = { RD_popularity = random_bonus }
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = USA_NPP_popularity_grows_high
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						can_have_elections_in_state = yes
+					}
+					set_temp_variable = { random_bonus = random }
+					multiply_temp_variable = { random_bonus = 0.1 }
+					add_to_variable = { NPP_popularity = random_bonus }
+				}
+			}
+		}
+	}
+}
+
+##Zentralafrika event for Hüttig oofing Muller
+country_event = {
+	id = SAFWAR.38
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.38"}
+	title = SAFWAR.38.t
+	desc = SAFWAR.38.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.38.a
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			load_focus_tree = GRO_grossafrikanischer_reichsstaat_empty
+			transfer_units_fraction = {
+				target = ZZZ
+				size = 0.56
+			}
+			ZZZ = {
+				delete_unit = {
+					state = 1297
+					disband = no
+				}
+			}
+		}
+		GRO = {
+			annex_country = {
+				target = COG
+				transfer_troops = yes
+			}
+			change_tag_from = COG
+		}
+		every_state = { remove_core_of = COG }
+	}
+
+	option = {
+		name = SAFWAR.38.b
+		ai_chance = { factor = 80 }
+		hidden_effect = {
+			transfer_units_fraction = {
+				target = ZZZ
+				size = 0.56
+			}
+			ZZZ = {
+				delete_unit = {
+					state = 1297
+					disband = no
+				}
+			}
+		}
+		GRO = {
+			annex_country = {
+				target = COG
+				transfer_troops = yes
+			}
+		}
+		every_state = { remove_core_of = COG }
+	}
+}
+##Sudwestafrika event for Hüttig oofing Schenck
+country_event = {
+	id = SAFWAR.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.39"}
+	title = SAFWAR.39.t
+	desc = SAFWAR.39.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.39.a
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			transfer_units_fraction = {
+				target = ZZZ
+				size = 0.47
+			}
+			ZZZ = {
+				delete_unit = {
+					state = 1297
+					disband = no
+				}
+			}
+		}
+		GRO = {
+			annex_country = {
+				target = ANG
+				transfer_troops = yes
+			}
+		}
+		every_state = { remove_core_of = ANG }
+	}
+
+	option = {
+		name = SAFWAR.39.b
+		ai_chance = { factor = 80 }
+		hidden_effect = {
+			transfer_units_fraction = {
+				target = ZZZ
+				size = 0.47
+			}
+			ZZZ = {
+				delete_unit = {
+					state = 1297
+					disband = no
+				}
+			}
+		}
+		GRO = {
+			annex_country = {
+				target = ANG
+				transfer_troops = yes
+			}
+		}
+		every_state = { remove_core_of = ANG }
+	}
+}
+##Sudwestafrika event for Hüttig oofing Galland
+country_event = {
+	id = SAFWAR.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.40"}
+	title = SAFWAR.40.t
+	desc = SAFWAR.40.d
+	picture = GFX_report_event_south_african_war_boer_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.40.b
+		ai_chance = { factor = 80 }
+		hidden_effect = {
+			transfer_units_fraction = {
+				target = ZZZ
+				size = 0.47
+			}
+			ZZZ = {
+				delete_unit = {
+					state = 1297
+					disband = no
+				}
+			}
+		}
+		GRO = {
+			annex_country = {
+				target = NAM
+				transfer_troops = yes
+			}
+		}
+	}
+}
+
+##Inform Germany about the cabal
+country_event = {
+	id = SAFWAR.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.41"}
+	title = SAFWAR.41.t
+	desc = SAFWAR.41.d
+	picture = GFX_report_event_GRO_african_cabal
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = SAFWAR.41.a
+		ai_chance = { factor = 1 }
+		set_country_flag = GER_can_interact_with_cabal
+	}
+}
+
+news_event = { # Hüttig kills the other Reichskommissars
+	id = SAFWAR.42
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SAFWAR.42"}
+	title = SAFWAR.42.t
+	desc = SAFWAR.42.d
+	is_triggered_only = yes
+
+	picture = GFX_news_event_brudermord
+
+	option = { # Generic
+		name = SAFWAR.42.a
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = COG
+					original_tag = ANG
+					original_tag = GRO
+					original_tag = SAF
+					original_tag = USA
+				}
+			}
+		}
+	}
+	option = { # Schild
+	name = SAFWAR.42.b
+		trigger = {
+			OR = {
+				original_tag = COG
+				original_tag = ANG
+				original_tag = GRO
+			}
+		}
+	}
+	option = { # SAF/USA
+		name = SAFWAR.42.c
+		trigger = {
+			OR = {
+				original_tag = SAF
+				original_tag = USA
+			}
+		}
+	}
+}
+
+country_event = { # Hard Decisions
+	id = SAFWAR.SAFFlavour.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.1" }
+	title = SAFWAR.SAFFlavour.1.t
+	desc = SAFWAR.SAFFlavour.1.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	option = { #
+		name = SAFWAR.SAFFlavour.1.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # A Little Spray
+	id = SAFWAR.SAFFlavour.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.2" }
+	title = SAFWAR.SAFFlavour.2.t
+	desc = SAFWAR.SAFFlavour.2.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	option = { #
+		name = SAFWAR.SAFFlavour.2.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # The Bob Hope USO Christmas Show
+	id = SAFWAR.SAFFlavour.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.3" }
+	title = SAFWAR.SAFFlavour.3.t
+	desc = SAFWAR.SAFFlavour.3.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	option = { #
+		name = SAFWAR.SAFFlavour.3.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # Life in Lephale
+	id = SAFWAR.SAFFlavour.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.4" }
+	title = SAFWAR.SAFFlavour.4.t
+	desc = SAFWAR.SAFFlavour.4.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	option = { #
+		name = SAFWAR.SAFFlavour.4.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # Silence in the Sky
+	id = SAFWAR.SAFFlavour.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.5" }
+	title = SAFWAR.SAFFlavour.5.t
+	desc = SAFWAR.SAFFlavour.5.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	option = { #
+		name = SAFWAR.SAFFlavour.5.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # One Man Down
+	id = SAFWAR.SAFFlavour.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.6" }
+	title = SAFWAR.SAFFlavour.6.t
+	desc = SAFWAR.SAFFlavour.6.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+
+	option = { #
+		name = SAFWAR.SAFFlavour.6.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # Flight of the FAC
+	id = SAFWAR.SAFFlavour.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.7" }
+	title = SAFWAR.SAFFlavour.7.t
+	desc = SAFWAR.SAFFlavour.7.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+
+	option = { #
+		name = SAFWAR.SAFFlavour.7.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # BLH Interview
+	id = SAFWAR.SAFFlavour.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.8" }
+	title = SAFWAR.SAFFlavour.8.t
+	desc = SAFWAR.SAFFlavour.8.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	option = { #
+		name = SAFWAR.SAFFlavour.8.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # My Vacation
+	id = SAFWAR.SAFFlavour.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.9" }
+	title = SAFWAR.SAFFlavour.9.t
+	desc = SAFWAR.SAFFlavour.9.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+	option = { #
+		name = SAFWAR.SAFFlavour.9.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # Ghosts of the Jungle
+	id = SAFWAR.SAFFlavour.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.10" }
+	title = SAFWAR.SAFFlavour.10.t
+	desc = SAFWAR.SAFFlavour.10.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+	}
+
+
+	option = { #
+		name = SAFWAR.SAFFlavour.10.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { # A Return Home - Chin Peng
+	id = SAFWAR.SAFFlavour.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.11" }
+	title = SAFWAR.SAFFlavour.11.t
+	desc = SAFWAR.SAFFlavour.11.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+		MLY = {
+			has_country_leader = {
+    				name = "Chin Peng"
+    				ruling_only = yes
+			}
+		}
+	}
+
+
+	option = { #
+		name = SAFWAR.SAFFlavour.11.a
+		ai_chance = { factor = 1 }
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+			}
+			add_to_variable = { NPP_L_bonus_popularity = 0.01 }
+			add_to_variable = { NPP_popularity = 0.01}
+			custom_effect_tooltip = USA_NPP_L_popularity_grows_low
+		}
+	}
+}
+
+country_event = { # A Return Home - Yeop Mahidin
+	id = SAFWAR.SAFFlavour.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SAFWAR.SAFFlavour.12" }
+	title = SAFWAR.SAFFlavour.12.t
+	desc = SAFWAR.SAFFlavour.12.desc
+	picture = GFX_report_event_south_african_war_us_soldier
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = south_african_war_happening
+		MLY = {
+			has_country_leader = {
+    				name = "Yeop Mahidin"
+    				ruling_only = yes
+			}
+		}
+	}
+
+
+	option = {
+		name = SAFWAR.SAFFlavour.12.a
+		ai_chance = { factor = 1 }
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+			}
+			add_to_variable = { NPP_Y_bonus_popularity = 0.01 }
+			add_to_variable = { NPP_popularity = 0.01}
+			custom_effect_tooltip = USA_NPP_Y_popularity_grows_low
+		}
+	}
+}
+
+
+add_namespace = saw_collapse
+
+country_event = { #South African collapse check, Capetown battle set up
+	id = saw_collapse.1
+	is_triggered_only = yes
+	trigger = {has_global_flag = south_african_war_happening}
+	hidden = yes
+	immediate = {
+		if = {
+			limit = { 
+				SAF = {
+					NOT = {
+						OR = {	
+							controls_province = 13495
+							AND = {
+								controls_province = 13489
+								controls_province = 13497
+							}
+						}
+					}
+					check_variable = {surrender_progress > 0.7}
+					controls_province = 13488
+					NOT = { has_idea = SAF_our_darkest_hour}
+				}
+			}
+			set_global_flag = SAF_collapse_war
+		}
+	}
+	
+	option = {
+		trigger = {not = {has_global_flag = SAF_collapse_war}}
+		country_event = { 
+			days = 3
+			id = saw_collapse.1
+		}
+	}
+	option = {
+		trigger = {has_global_flag = SAF_collapse_war}
+		SAW_start_SAF_collapse_vs_Schild = yes
+	}
+}
+
+country_event = { #US sees SAF collapsing
+	id = saw_collapse.2
+	title = saw_collapse.2.t
+	desc = saw_collapse.2.d
+	is_triggered_only = yes
+	picture = GFX_report_event_south_african_war_us_soldier6
+	immediate = {
+		activate_mission = USA_Capetown_evacuation
+	}
+	
+	option = {
+		name = saw_collapse.2.a
+		add_timed_idea = {
+			idea = USA_Capetown_battle
+			days = 21
+			
+		}
+	}
+}
+
+
+country_event = { #SAF GG
+	id = saw_collapse.3
+	title = saw_collapse.3.t
+	desc = saw_collapse.3.d
+	picture = GFX_report_event_south_african_war_us_soldier11
+	is_triggered_only = yes
+	
+	option = {
+		name = saw_collapse.3.a
+		add_ideas = SAF_the_great_flight
+	}
+}
+
+country_event = { #RK push to Kapstadt
+	id = saw_collapse.4
+	title = saw_collapse.4.t
+	desc = saw_collapse.4.d
+	picture = GFX_report_event_german_march
+	is_triggered_only = yes
+	immediate = {
+		activate_mission = ARK_rush_to_Kapstadt
+	}
+	
+	option = {
+		name = saw_collapse.4.a
+		add_timed_idea = {
+			idea = ARK_Kapstadt_Angriff
+			days = 21
+			
+		}
+	}
+}
+
+
+country_event = { #US holds Capetown-US
+	id = saw_collapse.10
+	title = saw_collapse.10.t
+	desc = saw_collapse.10.d
+	is_triggered_only = yes
+	picture = GFX_report_event_south_african_war_us_soldier
+	
+	option = {
+		name = saw_collapse.10.a
+		add_manpower = 2500
+		add_political_power = 5
+		set_temp_variable = {target = SAF}
+		TNO_clear_and_recall_volunteers = yes
+	}
+}
+
+country_event = { #US holds Capetown-RK
+	id = saw_collapse.11
+	title = saw_collapse.11.t
+	desc = saw_collapse.11.d
+	is_triggered_only = yes
+	picture = GFX_report_event_south_african_war_rk_soldier5
+	
+	option = {
+		name = saw_collapse.11.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = USA
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = { #US holds Capetown-SAF
+	id = saw_collapse.12
+	title = saw_collapse.12.t
+	desc = saw_collapse.12.d
+	is_triggered_only = yes
+	picture = GFX_report_event_south_african_war_saf_soldier4
+	
+	option = {
+		name = saw_collapse.12.a
+		swap_ideas = {
+			remove_idea = SAF_the_great_flight
+			add_idea = SAF_collapsed_will
+		}
+	}
+}
+
+country_event = { #US loses Capetown-US
+	id = saw_collapse.20
+	title = saw_collapse.20.t
+	desc = saw_collapse.20.d
+	is_triggered_only = yes
+	picture = GFX_report_event_south_african_war_saf_tank_destroyed3
+	
+	option = {
+		add_political_power = -50
+		add_manpower = -2500
+		name = saw_collapse.10.a
+		set_temp_variable = {target = SAF}
+		TNO_clear_and_recall_volunteers = yes
+	}
+}
+
+country_event = { #US loses Capetown-RK
+	id = saw_collapse.21
+	title = saw_collapse.21.t
+	desc = saw_collapse.21.d
+	is_triggered_only = yes
+	picture = GFX_report_event_south_african_war_rk_tank3
+	
+	option = {
+		name = saw_collapse.11.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2500
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 1000
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 500
+			producer = USA
+		}
+		add_political_power = 100
+	}
+}
+
+country_event = { #US loses Capetown-SAF
+	id = saw_collapse.22
+	title = saw_collapse.22.t
+	desc = saw_collapse.22.d
+	is_triggered_only = yes
+	picture = GFX_report_event_south_african_war_saf_tank_destroyed3
+
+	option = {
+		name = saw_collapse.22.a
+		swap_ideas = {
+			remove_idea = SAF_the_great_flight
+			add_idea = SAF_collapsed_will
+		}
+	}
+}
+
+add_namespace = saw_report
+country_event = { # Nixon - Total Pakt Victory
+	id = saw_report.1
+	title = saw_report.1.t
+	desc = saw_report.1.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.1.a
+
+		set_temp_variable = { victory_scale = -1.3 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Nixon - Total OFN Victory
+	id = saw_report.2
+	title = saw_report.2.t
+	desc = saw_report.2.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_usa_congress1
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.2.a
+
+		set_temp_variable = { victory_scale = 1.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # JFK - Total OFN Victory
+	id = saw_report.3
+	title = saw_report.3.t
+	desc = saw_report.3.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_usa_congress1
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.3.a
+
+		set_temp_variable = { victory_scale = 1.4 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # JFK - Total Pakt Victory
+	id = saw_report.4
+	title = saw_report.4.t
+	desc = saw_report.4.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.4.a
+
+		set_temp_variable = { victory_scale = -1.4 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # McCormack - White Peace
+	id = saw_report.5
+	title = saw_report.5.t
+	desc = saw_report.5.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_us_congress3
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.5.a
+
+		set_temp_variable = { victory_scale = -0.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # McCormack - Pro-OFN Ceasefire
+	id = saw_report.6
+	title = saw_report.6.t
+	desc = saw_report.6.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_whitehouse_color
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.6.a
+
+		set_temp_variable = { victory_scale = 0.6 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # McCormack - Pro-Pakt Ceasefire
+	id = saw_report.7
+	title = saw_report.7.t
+	desc = saw_report.7.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.7.a
+
+		set_temp_variable = { victory_scale = -0.6 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # McCormack - Total Pakt Victory
+	id = saw_report.8
+	title = saw_report.8.t
+	desc = saw_report.8.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.8.a
+
+		set_temp_variable = { victory_scale = -1.3 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # McCormack - Total OFN Victory
+	id = saw_report.9
+	title = saw_report.9.t
+	desc = saw_report.9.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_usa_congress1
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.9.a
+
+		set_temp_variable = { victory_scale = 1.3 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # LBJ - White Peace
+	id = saw_report.10
+	title = saw_report.10.t
+	desc = saw_report.10.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_us_congress3
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.10.a
+
+		set_temp_variable = { victory_scale = -0.15 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # LBJ - Pro-OFN Ceasefire
+	id = saw_report.11
+	title = saw_report.11.t
+	desc = saw_report.11.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_whitehouse_color
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.11.a
+
+		set_temp_variable = { victory_scale = 0.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # LBJ - Pro-Pakt Ceasefire
+	id = saw_report.12
+	title = saw_report.12.t
+	desc = saw_report.12.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.12.a
+
+		set_temp_variable = { victory_scale = -0.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # LBJ - Total OFN Victory
+	id = saw_report.13
+	title = saw_report.13.t
+	desc = saw_report.13.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_usa_congress1
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.13.a
+
+		set_temp_variable = { victory_scale = 1.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # LBJ - Total Pakt Victory
+	id = saw_report.14
+	title = saw_report.14.t
+	desc = saw_report.14.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.14.a
+
+		set_temp_variable = { victory_scale = -1.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Bennett - White Peace
+	id = saw_report.15
+	title = saw_report.15.t
+	desc = saw_report.15.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_us_congress3
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.15.a
+
+		set_temp_variable = { victory_scale = -0.15 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Bennett - Pro-OFN Ceasefire
+	id = saw_report.16
+	title = saw_report.16.t
+	desc = saw_report.16.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_whitehouse_color
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.16.a
+
+		set_temp_variable = { victory_scale = 0.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Bennett - Pro-Pakt Ceasefire
+	id = saw_report.17
+	title = saw_report.17.t
+	desc = saw_report.17.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.17.a
+
+		set_temp_variable = { victory_scale = -0.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Bennett - Total OFN Victory
+	id = saw_report.18
+	title = saw_report.18.t
+	desc = saw_report.18.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_usa_congress1
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.18.a
+
+		set_temp_variable = { victory_scale = 1.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Bennett - Total Pakt Victory
+	id = saw_report.19
+	title = saw_report.19.t
+	desc = saw_report.19.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.19.a
+
+		set_temp_variable = { victory_scale = -1.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Wallace - White Peace
+	id = saw_report.20
+	title = saw_report.20.t
+	desc = saw_report.20.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_us_congress3
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.20.a
+
+		set_temp_variable = { victory_scale = -0.15 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Wallace - Pro-OFN Ceasefire
+	id = saw_report.21
+	title = saw_report.21.t
+	desc = saw_report.21.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_whitehouse_color
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.21.a
+
+		set_temp_variable = { victory_scale = 0.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Wallace - Pro-Pakt Ceasefire
+	id = saw_report.22
+	title = saw_report.22.t
+	desc = saw_report.22.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.22.a
+
+		set_temp_variable = { victory_scale = -0.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Wallace - Total OFN Victory
+	id = saw_report.23
+	title = saw_report.23.t
+	desc = saw_report.23.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_usa_congress1
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.23.a
+
+		set_temp_variable = { victory_scale = 1.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # Wallace - Total Pakt Victory
+	id = saw_report.24
+	title = saw_report.24.t
+	desc = saw_report.24.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.24.a
+
+		set_temp_variable = { victory_scale = -1.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # RFK - White Peace
+	id = saw_report.25
+	title = saw_report.25.t
+	desc = saw_report.25.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_us_congress3
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.25.a
+
+		set_temp_variable = { victory_scale = -0.15 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # RFK - Pro-OFN Ceasefire
+	id = saw_report.26
+	title = saw_report.26.t
+	desc = saw_report.26.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_whitehouse_color
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.26.a
+
+		set_temp_variable = { victory_scale = 0.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # RFK - Pro-Pakt Ceasefire
+	id = saw_report.27
+	title = saw_report.27.t
+	desc = saw_report.27.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.27.a
+
+		set_temp_variable = { victory_scale = -0.5 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # RFK - Total OFN Victory
+	id = saw_report.28
+	title = saw_report.28.t
+	desc = saw_report.28.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_usa_congress1
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.28.a
+
+		set_temp_variable = { victory_scale = 1.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}
+
+country_event = { # RFK - Total Pakt Victory
+	id = saw_report.29
+	title = saw_report.29.t
+	desc = saw_report.29.desc
+	is_triggered_only = yes
+	picture = GFX_report_event_iberia_meeting_table
+
+	immediate = { set_country_flag = proxy_conclusion_affect_ofn_unity }
+	
+	option = {
+		name = saw_report.29.a
+
+		set_temp_variable = { victory_scale = -1.2 }
+		USA_proxy_conclusion_effect = yes
+		clr_country_flag = USA_NPP_64_SAF_war
+		USA_reload_presidential_tree = yes
+	}
+}

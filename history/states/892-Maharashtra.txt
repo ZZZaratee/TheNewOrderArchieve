@@ -1,0 +1,20 @@
+state={
+	id=892
+	name="STATE_892"
+	provinces={
+		4557 4883 5019 5063 7430 7619 10030 10171 10311 12226 12781 
+	}
+	manpower = 15194217
+	state_category = rural
+	
+	history={
+		owner = IND
+		add_core_of = AZH
+		add_core_of = IND
+		victory_points = { 4883 7 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	buildings_max_level_factor=1.000
+}

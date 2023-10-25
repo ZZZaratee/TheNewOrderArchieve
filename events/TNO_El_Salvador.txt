@@ -1,0 +1,302 @@
+add_namespace = ELS_scripted
+
+country_event = {#1962 Election
+	id = ELS_scripted.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ELS_scripted.1"}
+	title = ELS_scripted.1.t
+	desc = ELS_scripted.1.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ELS_scripted.1.a
+		create_country_leader = {
+			name = "Rubén Alonso Rosales"
+			picture = "Portrait_El_Salvador_Ruben_Alonso_Rosales_Civilian.dds"
+			expire = "1999.1.1"
+			ideology = authoritarian_democracy_controlled_democracy_subtype
+			traits = {
+				
+			}
+		}
+	}
+}
+
+country_event = {#Coup Check
+	id = ELS_scripted.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ELS_scripted.2"
+		set_party_name = { 
+			ideology = conservative_democracy 
+			long_name = ELS_uno_party_long 
+			name = ELS_uno_party 
+		}
+		set_party_name = { 
+			ideology = social_democracy 
+			long_name = ELS_uno_party_long 
+			name = ELS_uno_party 
+		}
+	}
+	title = ELS_scripted.2.t
+	desc = ELS_scripted.2.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {#No Coup
+		name = ELS_scripted.2.a
+		country_event = { id = ELS_scripted.3 days = 404 }
+	}
+
+	option = {#Coup
+		name = ELS_scripted.2.a
+		country_event = { id = ELS_scripted.4 }
+	}
+}
+
+country_event = {#1968 Election
+	id = ELS_scripted.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ELS_scripted.3"}
+	title = ELS_scripted.3.t
+	desc = ELS_scripted.3.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ELS_scripted.3.a
+		set_politics = {
+			ruling_party = conservative_democracy
+			elections_allowed = yes
+			last_election = "1968.3.4"
+			election_frequency = 72
+		}
+		add_popularity = {
+			ideology = conservative_democracy
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_democracy
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {#Military Coup
+	id = ELS_scripted.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ELS_scripted.4"}
+	title = ELS_scripted.4.t
+	desc = ELS_scripted.4.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ELS_scripted.4.a
+		create_country_leader = {
+			name = "Directorio Cívico-Militar"
+			picture = "Portrait_El_Salvador_Directorio_Civico_Militar.dds"
+			expire = "1999.1.1"
+			ideology = despotism_military_junta_subtype
+			traits = {
+				
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+			last_election = "1962.3.4"
+			election_frequency = 72
+		}
+		set_popularities = {
+			social_democracy = 10
+			conservative_democracy = 28
+			authoritarian_democracy = 8
+			despotism = 50
+			ultranationalism = 4
+		}
+		set_party_name = { 
+			ideology = despotism 
+			long_name = ELS_dcm_party_long 
+			name = ELS_dcm_party 
+		}
+		country_event = { id = ELS_scripted.5 days = 365 }
+	}
+}
+
+country_event = {#Military Coup
+	id = ELS_scripted.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ELS_scripted.5"}
+	title = ELS_scripted.5.t
+	desc = ELS_scripted.5.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ELS_scripted.5.a
+		create_country_leader = {
+			name = "Rodolfo Cordón Cea"
+			picture = "Portrait_El_Salvador_Rodolfo_Cordón_Cea.dds"
+			expire = "1999.1.1"
+			ideology = despotism_interim_government_subtype
+			traits = {
+				
+			}
+		}
+		set_party_name = { 
+			ideology = despotism 
+			long_name = ELS_despotism_party_long 
+			name = ELS_despotism_party 
+		}
+		country_event = { id = ELS_scripted.6 days = 158 }
+	}
+}
+
+country_event = {#1968 Election
+	id = ELS_scripted.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ELS_scripted.6"}
+	title = ELS_scripted.6.t
+	desc = ELS_scripted.6.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ELS_scripted.6.a
+		create_country_leader = {
+			name = "Julio Adalberto Rivera"
+			picture = "Portrait_El_Salvador_Julio_Adalberto_Rivera_Civilian.dds"
+			expire = "1999.1.1"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = {
+				
+			}
+		}
+		create_country_leader = {
+			name = "José Alberto Medrano"
+			picture = "Portrait_El_Salvador_Jose_Alberto_Medrano.dds"
+			expire = "1999.1.1"
+			ideology = ultranationalism_ultramilitarism_subtype
+			traits = {
+				
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = yes
+			last_election = "1968.5.5"
+			election_frequency = 72
+		}
+	}
+}
+
+country_event = {#Oil Crisis Hit, UNO falls apart
+	id = ELS_scripted.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ELS_scripted.7"}
+	title = ELS_scripted.7.t
+	desc = ELS_scripted.7.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ELS_scripted.7.a
+		set_party_name = { 
+			ideology = conservative_democracy 
+			long_name = ELS_conservative_democracy_party_long 
+			name = ELS_conservative_democracy_party 
+		}
+		set_party_name = { 
+			ideology = social_democracy 
+			long_name = ELS_social_democracy_party_long 
+			name = ELS_social_democracy_party 
+		}
+	}
+}
+
+country_event = {#The Revolution
+	id = ELS_scripted.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ELS_scripted.8"}
+	title = ELS_scripted.8.t
+	desc = ELS_scripted.8.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {#Success
+		name = ELS_scripted.8.a
+		create_country_leader = {
+			name = "Salvador Cayetano Carpio"
+			picture = "Portrait_El_Salvador_Salvador_Cayetano_Carpio.dds"
+			expire = "1999.1.1"
+			ideology = communist_subtype
+			traits = {
+				
+			}
+		}
+		set_politics = {
+			ruling_party = communist
+			elections_allowed = no
+			last_election = "1968.5.5"
+			election_frequency = 72
+		}
+		set_popularities = {
+			communist = 80
+			socialist = 20
+		}
+		set_party_name = {
+			ideology = communist
+			long_name = ELS_communist_junta_party_long
+			name = ELS_communist_junta_party
+		}
+		set_party_name = {
+			ideology = socialist
+			long_name = ELS_prtc_party_long
+			name = ELS_prtc_party
+		}
+	}
+	option = {#Fail
+		name = ELS_scripted.8.a
+		if = {
+			limit = {
+				has_country_leader = {
+					name = "Julio Adalberto Rivera"
+					ruling_only = yes
+				}
+			}
+			country_event = { id = ELS_scripted.9 days = 87 }
+		}
+	}
+}
+
+country_event = {#Rivera's successor
+	id = ELS_scripted.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ELS_scripted.9"}
+	title = ELS_scripted.9.t
+	desc = ELS_scripted.9.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {#Riverist Successor
+		name = ELS_scripted.9.a
+		create_country_leader = {
+			name = "Fidel Sánchez Hernández"
+			picture = "Portrait_El_Salvador_Fidel_Sanchez_Hernandez.dds"
+			expire = "1999.1.1"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = {
+				
+			}
+		}
+	}
+	option = {#National Guard/ORDEN triumph, D'Aubuisson TNO2 content wen
+		name = ELS_scripted.9.a
+		create_country_leader = {
+			name = "Carlos Humberto Romero"
+			picture = "Portrait_El_Salvador_Carlos_Romero.dds"
+			expire = "1999.1.1"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = {
+				
+			}
+		}
+		add_popularity = {
+			ideology = ultranationalism
+			popularity = 0.1
+		}
+	}
+}

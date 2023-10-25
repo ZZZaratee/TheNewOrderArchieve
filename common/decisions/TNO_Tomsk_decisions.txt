@@ -1,0 +1,4130 @@
+TOM_Regional_Campaign = {
+	TOM_campaign_on_Tomsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Is_Campaigning }
+		}
+		visible = {
+			578 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_campaign_on_Tomsk"
+			set_country_flag = TOM_Is_Campaigning
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_campaign_on_Tomsk"
+			set_temp_variable = { TOM_state_to_campaign = 578 }
+			TOM_Campaign_Effects = yes
+		}
+	}
+
+	TOM_campaign_on_Novosibirsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Is_Campaigning }
+		}
+		visible = {
+			570 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_campaign_on_Novosibirsk"
+			set_country_flag = TOM_Is_Campaigning
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_campaign_on_Novosibirsk"
+			set_temp_variable = { TOM_state_to_campaign = 570 }
+			TOM_Campaign_Effects = yes
+		}
+	}
+
+	TOM_campaign_on_Kemerovo = {
+		available = {
+			NOT = { has_country_flag = TOM_Is_Campaigning }
+		}
+		visible = {
+			569 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_campaign_on_Kemerovo"
+			set_country_flag = TOM_Is_Campaigning
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_campaign_on_Kemerovo"
+			set_temp_variable = { TOM_state_to_campaign = 569 }
+			TOM_Campaign_Effects = yes
+		}
+	}
+
+	TOM_campaign_on_Krasnoyarsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Is_Campaigning }
+		}
+		visible = {
+			757 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_campaign_on_Krasnoyarsk"
+			set_country_flag = TOM_Is_Campaigning
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_campaign_on_Krasnoyarsk"
+			set_temp_variable = { TOM_state_to_campaign = 757 }
+			TOM_Campaign_Effects = yes
+		}
+	}
+
+	TOM_voting_campaign_in_Tomsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Turnout_Decisions }
+		}
+		visible = {
+			578 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_voting_campaign_in_Tomsk"
+			set_country_flag = TOM_Turnout_Decisions
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_voting_campaign_in_Tomsk"
+			clr_country_flag = TOM_Turnout_Decisions
+			578 = { TOM_Increase_Turnout_low = yes }
+			TOM_Increase_Idealism_low = yes
+		}
+	}
+
+	TOM_voting_campaign_in_Novosibirsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Turnout_Decisions }
+		}
+		visible = {
+			570 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_voting_campaign_in_Novosibirsk"
+			set_country_flag = TOM_Turnout_Decisions
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_voting_campaign_in_Novosibirsk"
+			clr_country_flag = TOM_Turnout_Decisions
+			570 = { TOM_Increase_Turnout_low = yes }
+			TOM_Increase_Idealism_low = yes
+		}
+	}
+
+	TOM_voting_campaign_in_Kemerovo = {
+		available = {
+			NOT = { has_country_flag = TOM_Turnout_Decisions }
+		}
+		visible = {
+			569 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_voting_campaign_in_Kemerovo"
+			set_country_flag = TOM_Turnout_Decisions
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_voting_campaign_in_Kemerovo"
+			clr_country_flag = TOM_Turnout_Decisions
+			569 = { TOM_Increase_Turnout_low = yes }
+			TOM_Increase_Idealism_low = yes
+		}
+	}
+
+	TOM_voting_campaign_in_Krasnoyarsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Turnout_Decisions }
+		}
+		visible = {
+			757 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_voting_campaign_in_Krasnoyarsk"
+			set_country_flag = TOM_Turnout_Decisions
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_voting_campaign_in_Krasnoyarsk"
+			clr_country_flag = TOM_Turnout_Decisions
+			757 = { TOM_Increase_Turnout_low = yes }
+			TOM_Increase_Idealism_low = yes
+		}
+	}
+
+	TOM_suppress_voting_in_Tomsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Turnout_Decisions }
+		}
+		visible = {
+			578 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_suppress_voting_in_Tomsk"
+			set_country_flag = TOM_Turnout_Decisions
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_suppress_voting_in_Tomsk"
+			clr_country_flag = TOM_Turnout_Decisions
+			578 = { TOM_Decrease_Turnout_low = yes }
+			TOM_Decrease_Idealism_low = yes
+		}
+	}
+
+	TOM_suppress_voting_in_Novosibirsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Turnout_Decisions }
+		}
+		visible = {
+			570 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_suppress_voting_in_Novosibirsk"
+			set_country_flag = TOM_Turnout_Decisions
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_suppress_voting_in_Novosibirsk"
+			clr_country_flag = TOM_Turnout_Decisions
+			570 = { TOM_Decrease_Turnout_low = yes }
+			TOM_Decrease_Idealism_low = yes
+		}
+	}
+
+	TOM_suppress_voting_in_Kemerovo = {
+		available = {
+			NOT = { has_country_flag = TOM_Turnout_Decisions }
+		}
+		visible = {
+			569 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_suppress_voting_in_Kemerovo"
+			set_country_flag = TOM_Turnout_Decisions
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_suppress_voting_in_Kemerovo"
+			clr_country_flag = TOM_Turnout_Decisions
+			569 = { TOM_Decrease_Turnout_low = yes }
+			TOM_Decrease_Idealism_low = yes
+		}
+	}
+
+	TOM_suppress_voting_in_Krasnoyarsk = {
+		available = {
+			NOT = { has_country_flag = TOM_Turnout_Decisions }
+		}
+		visible = {
+			757 = { TOM_can_have_elections_in_state = yes }
+		}
+
+		days_remove = 25
+		cost = 30
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		fire_only_once = no
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_suppress_voting_in_Krasnoyarsk"
+			set_country_flag = TOM_Turnout_Decisions
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_suppress_voting_in_Krasnoyarsk"
+			clr_country_flag = TOM_Turnout_Decisions
+			757 = { TOM_Decrease_Turnout_low = yes }
+			TOM_Decrease_Idealism_low = yes
+		}
+	}
+}
+
+TOM_Humanist_TomSiBar_Category = {
+
+	TOM_Humanist_tomsibar_mission = {
+
+		icon = GFX_decision_generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TOM_megaproject_complete_tt
+				check_variable = { TOM_megaproject_progress > 99.99 }
+			}
+		}
+		activation = { always = no }
+		days_mission_timeout = 1460
+		is_good = no
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			TOM_Increase_Idealism_high = yes
+			set_temp_variable = { gdp_growth_temp = 0.5 }
+			econ_gdp_growth_change = yes
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.02 }
+			econ_GDP_boost_once_percentage = yes
+			TNO_improve_industrial_expertise_high = yes
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				TOM_Increase_Hum_Pop_high = yes
+			}
+			hidden_effect = {
+				country_event = { id = TOM_petrov.24 days = 7 }
+			}
+			clr_country_flag = TOM_started_megaproject
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = TOM_Humanist_tomsibar_mission_fail_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = { TOM_can_have_elections_in_state = yes }
+					TOM_Decrease_Hum_Pop_high = yes
+					TOM_Decrease_Hum_Pop_high = yes
+				}
+				TOM_Decrease_Idealism_high = yes
+				TOM_Decrease_Idealism_high = yes
+			}
+			clr_country_flag = TOM_started_megaproject
+		}
+	}
+
+	TOM_Humanist_increase_budget_10m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 5
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Humanist_increase_budget_10m"
+			set_temp_variable = { temp_econ_spending_amount = 0.01 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_low = yes
+		}
+	}
+
+	TOM_Humanist_increase_budget_25m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 10
+		days_re_enable = 180
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Humanist_increase_budget_25m"
+			set_temp_variable = { temp_econ_spending_amount = 0.025 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_med = yes
+		}
+	}
+
+	TOM_Humanist_increase_budget_50m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 20
+		days_re_enable = 365
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Humanist_increase_budget_50m"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_high = yes
+		}
+	}
+
+	TOM_import_foreign_engineers = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 75
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_import_foreign_engineers"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_import_foreign_engineers"
+			TNO_improve_industrial_equipment_med = yes
+			TOM_Increase_Megaproject_Progress_low = yes
+		}
+	}
+
+	TOM_expand_zoning_rights = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 75
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_expand_zoning_rights"
+			set_temp_variable = { temp_econ_spending_amount = 0.03 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_expand_zoning_rights"
+			TOM_Increase_Megaproject_Monthly_Progress_low = yes
+		}
+	}
+
+	TOM_urban_resettlement_initiatives = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_urban_resettlement_initiatives"
+			set_temp_variable = { temp_econ_spending_amount = 0.03 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_urban_resettlement_initiatives"
+			TOM_Increase_Megaproject_Monthly_Progress_low = yes
+			TNO_worsen_agriculture_low = yes
+			TNO_improve_poverty_med = yes
+		}
+	}
+
+	TOM_optimize_urban_development = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_humanist_megaproject_1
+		}
+
+		cost = 75
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_optimize_urban_development"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_optimize_urban_developments"
+			TOM_Increase_Megaproject_Progress_med = yes
+			578 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			570 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			40 = {
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+
+	TOM_construct_high_speed_trains = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_humanist_megaproject_2
+		}
+
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_construct_high_speed_trains"
+			set_temp_variable = { temp_econ_spending_amount = 0.1 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_construct_high_speed_trains"
+			TOM_Increase_Megaproject_Monthly_Progress_med = yes
+			578 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			570 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			40 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	TOM_develop_urban_unification_propaganda = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_humanist_megaproject_3
+		}
+
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_develop_urban_unification_propaganda"
+			add_stability = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_develop_urban_unification_propaganda"
+			TOM_Increase_Megaproject_Progress_med = yes
+		}
+	}
+}
+
+TOM_Modernist_SibPlan_Category = {
+
+	TOM_Modernist_sibplan_mission = {
+
+		icon = GFX_decision_generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TOM_megaproject_complete_tt
+				check_variable = { TOM_megaproject_progress > 99.99 }
+			}
+		}
+		activation = { always = no }
+		days_mission_timeout = 1460
+		is_good = no
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			TOM_Increase_Idealism_high = yes
+			set_temp_variable = { gdp_growth_temp = 0.2 }
+			econ_gdp_growth_change = yes
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.04 }
+			econ_GDP_boost_once_percentage = yes
+			TNO_improve_research_facilities_high = yes
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				TOM_Increase_Mod_Pop_high = yes
+			}
+			hidden_effect = {
+				country_event = { id = TOM_petrov.22 days = 7 }
+			}
+			clr_country_flag = TOM_started_megaproject
+		}
+
+		timeout_effect = {
+
+			custom_effect_tooltip = TOM_Modernist_sibplan_mission_fail_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = { TOM_can_have_elections_in_state = yes }
+					TOM_Decrease_Mod_Pop_high = yes
+					TOM_Decrease_Mod_Pop_high = yes
+				}
+				TOM_Decrease_Idealism_high = yes
+				TOM_Decrease_Idealism_high = yes
+			}
+			clr_country_flag = TOM_started_megaproject
+		}
+	}
+
+	TOM_Modernist_increase_budget_10m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 5
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Modernist_increase_budget_10m"
+			set_temp_variable = { temp_econ_spending_amount = 0.01 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_low = yes
+		}
+	}
+
+	TOM_Modernist_increase_budget_25m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 10
+		days_re_enable = 180
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Modernist_increase_budget_25m"
+			set_temp_variable = { temp_econ_spending_amount = 0.025 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_med = yes
+		}
+	}
+
+	TOM_Modernist_increase_budget_50m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 20
+		days_re_enable = 365
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Modernist_increase_budget_50m"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_high = yes
+		}
+	}
+
+	TOM_electrify_the_countryside = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_electrify_the_countryside"
+			set_temp_variable = { temp_econ_spending_amount = 0.075 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_electrify_the_countryside"
+			TNO_improve_poverty_low = yes
+			TNO_improve_industrial_expertise_low = yes
+			TOM_Increase_Megaproject_Progress_low = yes
+			random_owned_state = {
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	TOM_rural_education_initiatives = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 75
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_rural_education_initiatives"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_rural_education_initiatives"
+			TOM_Increase_Megaproject_Monthly_Progress_low = yes
+			TNO_improve_academic_base_med = yes
+			random_owned_state = {
+				add_building_construction = {
+					type = schools
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	TOM_expand_research_facilities = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_expand_research_facilities"
+			set_temp_variable = { temp_econ_spending_amount = 0.8 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_expand_research_facilities"
+			TNO_improve_research_facilities_low = yes
+			TOM_Increase_Megaproject_Monthly_Progress_med = yes
+		}
+	}
+
+	TOM_adjust_market_priorities = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_modernist_megaproject_1
+		}
+
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_adjust_market_priorities"
+			add_stability = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_adjust_market_priorities"
+			TOM_Increase_Megaproject_Progress_low = yes
+		}
+	}
+
+	TOM_import_foreign_computer_designs = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_modernist_megaproject_2
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_import_foreign_computer_designs"
+			set_temp_variable = { temp_econ_spending_amount = 0.045 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_import_foreign_computer_designs"
+			TOM_Increase_Megaproject_Progress_med = yes
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+}
+
+TOM_Decembrist_Great_Discord_Category = {
+
+	TOM_Decembrist_discord_mission = {
+
+		icon = GFX_decision_generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TOM_megaproject_complete_tt
+				check_variable = { TOM_megaproject_progress > 99.99 }
+			}
+		}
+		activation = { always = no }
+		days_mission_timeout = 1460
+		is_good = no
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = TOM_Decembrist_discord_mission_success_tt
+			hidden_effect = {
+				TOM_Increase_Idealism_high = yes
+				TOM_Increase_Idealism_high = yes
+				TOM_Increase_Idealism_high = yes
+				TOM_Decrease_Political_Outsiders_high = yes
+				TOM_Decrease_Political_Outsiders_high = yes
+			}
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				TOM_Increase_Dec_Pop_high = yes
+			}
+			hidden_effect = {
+				country_event = { id = TOM_petrov.23 days = 7 }
+			}
+			clr_country_flag = TOM_started_megaproject
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = TOM_Decembrist_discord_mission_fail_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = { TOM_can_have_elections_in_state = yes }
+					TOM_Decrease_Dec_Pop_high = yes
+					TOM_Decrease_Dec_Pop_high = yes
+				}
+				TOM_Decrease_Idealism_high = yes
+				TOM_Decrease_Idealism_high = yes
+			}
+			clr_country_flag = TOM_started_megaproject
+		}
+	}
+
+	TOM_Decembrist_increase_budget_10m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 5
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Decembrist_increase_budget_10m"
+			set_temp_variable = { temp_econ_spending_amount = 0.01 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_low = yes
+		}
+	}
+
+	TOM_Decembrist_increase_budget_25m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 10
+		days_re_enable = 180
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Decembrist_increase_budget_25m"
+			set_temp_variable = { temp_econ_spending_amount = 0.025 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_med = yes
+		}
+	}
+
+	TOM_Decembrist_increase_budget_50m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 20
+		days_re_enable = 365
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Decembrist_increase_budget_50m"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+			TOM_Increase_Megaproject_Progress_high = yes
+		}
+	}
+
+	TOM_culture_and_practice_protection_act = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_optimize_urban_development"
+			set_temp_variable = { temp_econ_spending_amount = 0.1 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_optimize_urban_developments"
+			add_ideas = tno_pollution_strict_regulations
+			TOM_Increase_Megaproject_Progress_low = yes
+		}
+	}
+
+	TOM_mend_the_urban_rural_divide = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 75
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_optimize_urban_development"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_optimize_urban_developments"
+			TOM_Increase_Megaproject_Monthly_Progress_med = yes
+			TOM_Increase_Idealism_med = yes
+			TNO_improve_agriculture_low = yes
+		}
+	}
+
+	TOM_apolitical_politial_education = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 75
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_apolitical_politial_education"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_apolitical_politial_education"
+			TOM_Increase_Megaproject_Monthly_Progress_low = yes
+			TNO_improve_academic_base_low = yes
+		}
+	}
+
+	TOM_apolitical_improve_salon_introductions = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_decembrist_megaproject_1
+		}
+
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_apolitical_improve_salon_introductions"
+			add_stability = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_apolitical_improve_salon_introductions"
+			TOM_Increase_Megaproject_Progress_high = yes
+			TOM_Decrease_Political_Outsiders_med = yes
+		}
+	}
+
+	TOM_apolitical_mobilize_the_media = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_decembrist_megaproject_2
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_apolitical_mobilize_the_media"
+			set_temp_variable = { temp_econ_spending_amount = 0.1 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_apolitical_mobilize_the_media"
+			TOM_Increase_Megaproject_Progress_low = yes
+			add_popularity = {
+				ideology = conservative_democracy
+				popularity = 0.05
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = { TOM_can_have_elections_in_state = yes }
+					TOM_Increase_Dec_Pop_low = yes
+				}
+			}
+		}
+	}
+}
+
+TOM_Bastillard_National_Redoubt_Category = {
+
+	TOM_Bastillard_redoubt_mission = {
+
+		icon = GFX_decision_generic_civil_support
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TOM_megaproject_complete_tt
+				check_variable = { TOM_megaproject_progress > 99.99 }
+			}
+		}
+		activation = { always = no }
+		days_mission_timeout = 1460
+		is_good = no
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_effect = {
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.05 }
+			econ_GDP_boost_once_percentage = yes
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+			TOM_Increase_Idealism_high = yes
+			navy_experience = 50
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			diplomatic_relation = {
+				country = MAN
+				relation = docking_rights
+				active = yes
+			}
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				TOM_Increase_Bas_Pop_high = yes
+			}
+			hidden_effect = {
+				country_event = { id = TOM_petrov.21 days = 7 }
+			}
+			clr_country_flag = TOM_started_megaproject
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = TOM_Bastillard_redoubt_mission_fail_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = { TOM_can_have_elections_in_state = yes }
+					TOM_Decrease_Bas_Pop_high = yes
+					TOM_Decrease_Bas_Pop_high = yes
+				}
+				TOM_Decrease_Idealism_high = yes
+				TOM_Decrease_Idealism_high = yes
+			}
+			clr_country_flag = TOM_started_megaproject
+		}
+	}
+
+	TOM_Bastillard_increase_budget_10m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 5
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Bastillard_increase_budget_10m"
+			set_temp_variable = { debt_temp = 0.01 }
+			econ_national_debt_change = yes   #already converted to billion
+			custom_effect_tooltip = TOM_increase_budget_10m_tt
+			TOM_Increase_Megaproject_Progress_low = yes
+		}
+	}
+
+	TOM_Bastillard_increase_budget_25m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 10
+		days_re_enable = 180
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Bastillard_increase_budget_25m"
+			set_temp_variable = { debt_temp = 0.025 }
+			econ_national_debt_change = yes
+			custom_effect_tooltip = TOM_increase_budget_25m_tt
+			TOM_Increase_Megaproject_Progress_med = yes
+		}
+	}
+
+	TOM_Bastillard_increase_budget_50m = {
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 20
+		days_re_enable = 365
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Bastillard_increase_budget_50m"
+			set_temp_variable = { debt_temp = 0.05 }
+			econ_national_debt_change = yes
+			custom_effect_tooltip = TOM_increase_budget_50m_tt
+			TOM_Increase_Megaproject_Progress_high = yes
+		}
+	}
+
+	TOM_expand_the_port_of_magadan = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_expand_the_port_of_magadan"
+			set_temp_variable = { debt_temp = 0.1 }
+			econ_national_debt_change = yes #already converted to billion
+			custom_effect_tooltip = econ_increase_debt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_expand_the_port_of_magadan"
+			562 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 12683
+				}
+			}
+			TOM_Increase_Megaproject_Progress_low = yes
+		}
+	}
+
+	TOM_fortify_the_coast = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 25
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_fortify_the_coast"
+			set_temp_variable = { debt_temp = 0.12 }
+			econ_national_debt_change = yes #already converted to billion
+			custom_effect_tooltip = econ_increase_debt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_fortify_the_coast"
+			TOM_Increase_Megaproject_Progress_low = yes
+			TNO_improve_army_professionalism_med = yes
+		}
+	}
+
+	TOM_develop_the_icebreaker_fleet = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_modernist_megaproject_2
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_develop_the_icebreaker_fleet"
+			set_temp_variable = { debt_temp = 0.08 }
+			econ_national_debt_change = yes #already converted to billion
+			custom_effect_tooltip = econ_increase_debt
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_develop_the_icebreaker_fleet"
+			TOM_Increase_Megaproject_Progress_med = yes
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 50
+				producer = TOM
+			}
+		}
+	}
+
+	TOM_reconfirm_japanese_cooperation = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_bastillard_megaproject_2
+		}
+
+		cost = 25
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_reconfirm_japanese_cooperation"
+			add_stability = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_reconfirm_japanese_cooperation"
+			TOM_Increase_Megaproject_Monthly_Progress_low = yes
+			set_temp_variable = { temp_econ_GDP_boost_flat = 0.2 }
+			econ_GDP_boost_once_flat = yes #already converted to billion
+			custom_effect_tooltip = econ_increase_GDP_small
+			JAP = {
+				add_opinion_modifier = {
+					target = SIB
+					modifier = TOM_Bastillard_JAP_reconfirmed
+				}
+				reverse_add_opinion_modifier = {
+					target = SIB
+					modifier = TOM_Bastillard_JAP_reconfirmed
+				}
+			}
+		}
+	}
+
+	TOM_reconfirm_american_cooperation = {
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = TOM_bastillard_megaproject_1
+		}
+
+		cost = 50
+		days_remove = 28
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_reconfirm_american_cooperation"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_reconfirm_american_cooperation"
+			TOM_Increase_Megaproject_Monthly_Progress_low = yes
+			set_temp_variable = { temp_econ_GDP_boost_flat = 0.2 }
+			econ_GDP_boost_once_flat = yes #already converted to billion
+			custom_effect_tooltip = econ_increase_GDP_small
+			USA = {
+				add_opinion_modifier = {
+					target = SIB
+					modifier = TOM_Bastillard_USA_reconfirmed
+				}
+				reverse_add_opinion_modifier = {
+					target = SIB
+					modifier = TOM_Bastillard_USA_reconfirmed
+				}
+			}
+		}
+	}
+}
+
+TOM_Political_Situation = {
+	TOM_The_Outsiders_Act = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_political_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 30
+		days_remove = 700
+		fire_only_once = yes
+
+		modifier = {
+			research_speed_factor = 0.15
+			custom_modifier_tooltip = TOM_The_Outsiders_Act_tt
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Expand_the_university_system"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_Expand_the_university_system"
+		}
+	}
+
+	TOM_Expand_the_university_system = {
+		modifier = {
+			stability_weekly = -0.005
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 25
+		days_remove = 28
+		days_re_enable = 49
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Expand_the_university_system"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_Expand_the_university_system"
+			TOM_Decrease_Political_Outsiders_med = yes
+			TNO_improve_research_facilities_low = yes
+		}
+	}
+
+	TOM_Bribe_the_Opposition = {
+		modifier = {
+			stability_weekly = -0.005
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 25
+		days_remove = 28
+		days_re_enable = 49
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Bribe_the_Opposition"
+			TOM_Decrease_Idealism_high = yes
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_Bribe_the_Opposition"
+			TOM_Decrease_Political_Outsiders_med = yes
+		}
+	}
+
+	TOM_Promote_the_Elites = {
+		modifier = {
+			stability_weekly = -0.005
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 25
+		days_remove = 28
+		days_re_enable = 49
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Promote_the_Elites"
+			TOM_Increase_Idealism_med = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_Promote_the_Elites"
+			TOM_Increase_Political_Outsiders_med = yes
+		}
+	}
+
+	TOM_Flexible_Elector_Requirements = {
+		modifier = {
+			stability_weekly = -0.005
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 25
+		days_remove = 28
+		days_re_enable = 49
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Flexible_Elector_Requirements"
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = conservative_democracy }
+					}
+					TOM_Decrease_Dec_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = liberal_democracy }
+					}
+					TOM_Decrease_Mod_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = authoritarian_democracy }
+					}
+					TOM_Decrease_Bas_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = socialist }
+					}
+					TOM_Decrease_Hum_Pop_high = yes
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_Flexible_Elector_Requirements"
+			TOM_Decrease_Political_Outsiders_high = yes
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				TOM_Increase_Turnout_med = yes
+			}
+		}
+	}
+
+	TOM_Recruit_the_Best_Outsiders = {
+		modifier = {
+			stability_weekly = -0.005
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 25
+		days_remove = 28
+		days_re_enable = 49
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Recruit_the_Best_Outsiders"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_Recruit_the_Best_Outsiders"
+			TOM_Decrease_Political_Outsiders_med = yes
+		}
+	}
+
+	TOM_Cross_Salon_Thinking = {
+		modifier = {
+			stability_weekly = -0.005
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		cost = 25
+		days_remove = 28
+		days_re_enable = 49
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Cross_Salon_Thinking"
+			if = {
+				limit = { has_government = conservative_democracy }
+				TOM_Decrease_Dec_Auth_med = yes
+			}
+			else_if = {
+				limit = { has_government = liberal_democracy }
+				TOM_Decrease_Mod_Auth_med = yes
+			}
+			else_if = {
+				limit = { has_government = authoritarian_democracy }
+				TOM_Decrease_Bas_Auth_med = yes
+			}
+			else_if = {
+				limit = { has_government = socialist }
+				TOM_Decrease_Hum_Auth_med = yes
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_Cross_Salon_Thinking"
+			TOM_Increase_Idealism_high = yes
+		}
+	}
+}
+
+TOM_Ruling_Tomsk = {
+	TOM_Scrap_Bastillard_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_bastillard_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = authoritarian_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Bastillard_Economic_Program"
+			activate_mission = TOM_Scrap_Bastillard_Economic_Program_bill
+			TOM_Increase_Idealism_med = yes
+			custom_effect_tooltip = TOM_scrap_program_tt
+			set_country_flag = TOM_Economy_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Scrap_Bastillard_Economic_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_industry_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Scrap_Bastillard_Economic_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Bastillard_Economic_Program_bill"
+			remove_ideas = TOM_idea_bastillard_economy
+			remove_ideas = TOM_idea_incompatible_economy
+			add_timed_idea = {
+				idea = TOM_idea_economic_transition
+				days = 120
+			}
+		}
+	}
+
+	TOM_Accept_Bastillard_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_bastillard_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = authoritarian_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Accept_Bastillard_Economic_Program"
+			TOM_Decrease_Idealism_high = yes
+			set_country_flag = TOM_Economy_Plan_Decision
+			remove_ideas = TOM_idea_incompatible_economy
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = conservative_democracy }
+					}
+					TOM_Decrease_Dec_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = liberal_democracy }
+					}
+					TOM_Decrease_Mod_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = socialist }
+					}
+					TOM_Decrease_Hum_Pop_high = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Bastillard_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_bastillard_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = authoritarian_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Bastillard_Economic_Program"
+			activate_mission = TOM_Synthetize_Bastillard_Economic_Program_bill
+			TOM_Increase_Idealism_high = yes
+			custom_effect_tooltip = TOM_synthetize_program_tt
+			set_country_flag = TOM_Economy_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Bastillard_Economic_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_industry_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Synthetize_Bastillard_Economic_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Bastillard_Economic_Program_bill"
+			if = {
+				limit = { has_government = conservative_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_bastillard_economy
+					add_idea = TOM_idea_decembrist_economy_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = liberal_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_bastillard_economy
+					add_idea = TOM_idea_modernist_economy_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = socialist }
+				swap_ideas = {
+					remove_idea = TOM_idea_bastillard_economy
+					add_idea = TOM_idea_humanist_economy_modified
+				}
+			}
+			remove_ideas = TOM_idea_incompatible_economy
+		}
+	}
+
+	#
+
+	TOM_Scrap_Bastillard_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_bastillard_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = authoritarian_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			activate_mission = TOM_Scrap_Bastillard_Military_Program_bill
+			TOM_Increase_Idealism_med = yes
+			custom_effect_tooltip = TOM_scrap_program_tt
+			set_country_flag = TOM_Military_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Scrap_Bastillard_Military_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_military_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_military_program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program_bill"
+			swap_ideas = {
+				remove_idea = TOM_idea_bastillard_army
+				add_idea = TOM_idea_standardized_army
+			}
+			remove_ideas = TOM_idea_incompatible_army
+			add_timed_idea = {
+				idea = TOM_idea_military_transition
+				days = 120
+			}
+		}
+	}
+
+	TOM_Accept_Bastillard_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_bastillard_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = authoritarian_democracy }
+			NOT = { has_country_flag = TOM_Military_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			TOM_Decrease_Idealism_high = yes
+			set_country_flag = TOM_Military_Plan_Decision
+			remove_ideas = TOM_idea_incompatible_army
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = conservative_democracy }
+					}
+					TOM_Decrease_Dec_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = liberal_democracy }
+					}
+					TOM_Decrease_Mod_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = socialist }
+					}
+					TOM_Decrease_Hum_Pop_high = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Bastillard_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_bastillard_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = authoritarian_democracy }
+			NOT = { has_country_flag = TOM_Military_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Bastillard_Military_Program"
+			activate_mission = TOM_Synthetize_Bastillard_Military_Program_bill
+			TOM_Increase_Idealism_high = yes
+			custom_effect_tooltip = TOM_synthetize_program_tt
+			set_country_flag = TOM_Military_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Bastillard_Military_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_military_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Synthetize_Bastillard_Military_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Bastillard_Military_Program_bill"
+			if = {
+				limit = { has_government = conservative_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_bastillard_army
+					add_idea = TOM_idea_decembrist_army_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = liberal_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_bastillard_army
+					add_idea = TOM_idea_modernist_army_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = socialist }
+				swap_ideas = {
+					remove_idea = TOM_idea_bastillard_army
+					add_idea = TOM_idea_humanist_army_modified
+				}
+			}
+			remove_ideas = TOM_idea_incompatible_army
+		}
+	}
+
+	#
+
+	TOM_Scrap_Modernist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_modernist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = liberal_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Modernist_Economic_Program"
+			activate_mission = TOM_Scrap_Modernist_Economic_Program_bill
+			TOM_Increase_Idealism_med = yes
+			custom_effect_tooltip = TOM_scrap_program_tt
+			set_country_flag = TOM_Economy_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Scrap_Modernist_Economic_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_industry_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Scrap_Modernist_Economic_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Modernist_Economic_Program_bill"
+			remove_ideas = TOM_idea_modernist_economy
+			remove_ideas = TOM_idea_incompatible_economy
+			add_timed_idea = {
+				idea = TOM_idea_economic_transition
+				days = 120
+			}
+		}
+	}
+
+	TOM_Accept_Modernist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_modernist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = liberal_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Accept_Modernist_Economic_Program"
+			TOM_Decrease_Idealism_high = yes
+			set_country_flag = TOM_Economy_Plan_Decision
+			remove_ideas = TOM_idea_incompatible_economy
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = conservative_democracy }
+					}
+					TOM_Decrease_Dec_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = authoritarian_democracy }
+					}
+					TOM_Decrease_Bas_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = socialist }
+					}
+					TOM_Decrease_Hum_Pop_high = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Modernist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_modernist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = liberal_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Modernist_Economic_Program"
+			activate_mission = TOM_Synthetize_Modernist_Economic_Program_bill
+			TOM_Increase_Idealism_high = yes
+			custom_effect_tooltip = TOM_synthetize_program_tt
+			set_country_flag = TOM_Economy_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Modernist_Economic_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_industry_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Synthetize_Modernist_Economic_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Modernist_Economic_Program_bill"
+			if = {
+				limit = { has_government = conservative_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_modernist_economy
+					add_idea = TOM_idea_decembrist_economy_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = authoritarian_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_modernist_economy
+					add_idea = TOM_idea_modernist_economy_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = socialist }
+				swap_ideas = {
+					remove_idea = TOM_idea_modernist_economy
+					add_idea = TOM_idea_humanist_economy_modified
+				}
+			}
+			remove_ideas = TOM_idea_incompatible_economy
+		}
+	}
+
+	#
+
+	TOM_Scrap_Modernist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_modernist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = liberal_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			activate_mission = TOM_Scrap_Modernist_Military_Program_bill
+			TOM_Increase_Idealism_med = yes
+			custom_effect_tooltip = TOM_scrap_program_tt
+			set_country_flag = TOM_Military_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Scrap_Modernist_Military_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_military_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_military_program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program_bill"
+			swap_ideas = {
+				remove_idea = TOM_idea_modernist_army
+				add_idea = TOM_idea_standardized_army
+			}
+			remove_ideas = TOM_idea_incompatible_army
+			add_timed_idea = {
+				idea = TOM_idea_military_transition
+				days = 120
+			}
+		}
+	}
+
+	TOM_Accept_Modernist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_modernist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = liberal_democracy }
+			NOT = { has_country_flag = TOM_Military_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			TOM_Decrease_Idealism_high = yes
+			set_country_flag = TOM_Military_Plan_Decision
+			remove_ideas = TOM_idea_incompatible_army
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = conservative_democracy }
+					}
+					TOM_Decrease_Dec_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = authoritarian_democracy }
+					}
+					TOM_Decrease_Bas_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = socialist }
+					}
+					TOM_Decrease_Hum_Pop_high = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Modernist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_modernist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = liberal_democracy }
+			NOT = { has_country_flag = TOM_Military_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Modernist_Economic_Program"
+			activate_mission = TOM_Synthetize_Modernist_Military_Program_bill
+			TOM_Increase_Idealism_high = yes
+			custom_effect_tooltip = TOM_synthetize_program_tt
+			set_country_flag = TOM_Military_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Modernist_Military_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_military_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Synthetize_Modernist_Military_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Modernist_Military_Program_bill"
+			if = {
+				limit = { has_government = conservative_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_modernist_army
+					add_idea = TOM_idea_decembrist_army_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = authoritarian_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_modernist_army
+					add_idea = TOM_idea_bastillard_army_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = socialist }
+				swap_ideas = {
+					remove_idea = TOM_idea_modernist_army
+					add_idea = TOM_idea_humanist_army_modified
+				}
+			}
+			remove_ideas = TOM_idea_incompatible_army
+		}
+	}
+
+	#
+
+	TOM_Scrap_Humanist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_humanist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = socialist }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Humanist_Economic_Program"
+			activate_mission = TOM_Scrap_Humanist_Economic_Program_bill
+			TOM_Increase_Idealism_med = yes
+			custom_effect_tooltip = TOM_scrap_program_tt
+			set_country_flag = TOM_Economy_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Scrap_Humanist_Economic_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_industry_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Scrap_Humanist_Economic_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Humanist_Economic_Program_bill"
+			remove_ideas = TOM_idea_humanist_economy
+			remove_ideas = TOM_idea_incompatible_economy
+			add_timed_idea = {
+				idea = TOM_idea_economic_transition
+				days = 120
+			}
+		}
+	}
+
+	TOM_Accept_Humanist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_humanist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = socialist }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Accept_Humanist_Economic_Program"
+			TOM_Decrease_Idealism_high = yes
+			set_country_flag = TOM_Economy_Plan_Decision
+			remove_ideas = TOM_idea_incompatible_economy
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = conservative_democracy }
+					}
+					TOM_Decrease_Dec_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = liberal_democracy }
+					}
+					TOM_Decrease_Mod_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = authoritarian_democracy }
+					}
+					TOM_Decrease_Bas_Pop_high = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Humanist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_humanist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = socialist }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Humanist_Economic_Program"
+			activate_mission = TOM_Synthetize_Humanist_Economic_Program_bill
+			TOM_Increase_Idealism_high = yes
+			custom_effect_tooltip = TOM_synthetize_program_tt
+			set_country_flag = TOM_Economy_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Humanist_Economic_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_industry_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Synthetize_Humanist_Economic_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Humanist_Economic_Program_bill"
+			if = {
+				limit = { has_government = conservative_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_humanist_economy
+					add_idea = TOM_idea_decembrist_economy_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = liberal_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_humanist_economy
+					add_idea = TOM_idea_modernist_economy_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = authoritarian_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_humanist_economy
+					add_idea = TOM_idea_bastillard_economy_modified
+				}
+			}
+			remove_ideas = TOM_idea_incompatible_economy
+		}
+	}
+
+	#
+
+	TOM_Scrap_Humanist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_humanist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = socialist }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			activate_mission = TOM_Scrap_Humanist_Military_Program_bill
+			TOM_Increase_Idealism_med = yes
+			custom_effect_tooltip = TOM_scrap_program_tt
+			set_country_flag = TOM_Military_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Scrap_Humanist_Military_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_military_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_military_program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program_bill"
+			swap_ideas = {
+				remove_idea = TOM_idea_humanist_army
+				add_idea = TOM_idea_standardized_army
+			}
+			remove_ideas = TOM_idea_incompatible_army
+			add_timed_idea = {
+				idea = TOM_idea_military_transition
+				days = 120
+			}
+		}
+	}
+
+	TOM_Accept_Humanist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_humanist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = socialist }
+			NOT = { has_country_flag = TOM_Military_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			TOM_Decrease_Idealism_high = yes
+			set_country_flag = TOM_Military_Plan_Decision
+			remove_ideas = TOM_idea_incompatible_army
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = conservative_democracy }
+					}
+					TOM_Decrease_Dec_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = liberal_democracy }
+					}
+					TOM_Decrease_Mod_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = authoritarian_democracy }
+					}
+					TOM_Decrease_Bas_Pop_high = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Humanist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_humanist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = socialist }
+			NOT = { has_country_flag = TOM_Military_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Humanist_Economic_Program"
+			activate_mission = TOM_Synthetize_Humanist_Economic_Program_bill
+			TOM_Increase_Idealism_high = yes
+			custom_effect_tooltip = TOM_synthetize_program_tt
+			set_country_flag = TOM_Military_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Humanist_Military_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_military_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Scrap_Humanist_Military_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Humanist_Military_Program_bill"
+			if = {
+				limit = { has_government = conservative_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_humanist_army
+					add_idea = TOM_idea_decembrist_army_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = liberal_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_humanist_army
+					add_idea = TOM_idea_modernist_army_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = authoritarian_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_humanist_army
+					add_idea = TOM_idea_bastillard_army_modified
+				}
+			}
+			remove_ideas = TOM_idea_incompatible_army
+		}
+	}
+
+	#
+
+	TOM_Scrap_Decembrist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_decembrist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = conservative_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Decembrist_Economic_Program"
+			activate_mission = TOM_Scrap_Decembrist_Economic_Program_bill
+			TOM_Increase_Idealism_med = yes
+			custom_effect_tooltip = TOM_scrap_program_tt
+			set_country_flag = TOM_Economy_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Scrap_Decembrist_Economic_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Decembrist_Constitution
+				}
+				TOM_Mod_check_industry_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Scrap_Decembrist_Economic_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Decembrist_Economic_Program_bill"
+			remove_ideas = TOM_idea_decembrist_economy
+			remove_ideas = TOM_idea_incompatible_economy
+			add_timed_idea = {
+				idea = TOM_idea_economic_transition
+				days = 120
+			}
+		}
+	}
+
+	TOM_Accept_Decembrist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_decembrist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = conservative_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Accept_Decembrist_Economic_Program"
+			TOM_Decrease_Idealism_high = yes
+			set_country_flag = TOM_Economy_Plan_Decision
+			remove_ideas = TOM_idea_incompatible_economy
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = authoritarian_democracy }
+					}
+					TOM_Decrease_Bas_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = liberal_democracy }
+					}
+					TOM_Decrease_Mod_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = socialist }
+					}
+					TOM_Decrease_Hum_Pop_high = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Decembrist_Economic_Program = {
+		visible = {
+			has_idea = TOM_idea_decembrist_economy
+			has_idea = TOM_idea_incompatible_economy
+			NOT = { has_government = conservative_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Decembrist_Economic_Program"
+			activate_mission = TOM_Synthetize_Decembrist_Economic_Program_bill
+			TOM_Increase_Idealism_high = yes
+			custom_effect_tooltip = TOM_synthetize_program_tt
+			set_country_flag = TOM_Economy_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Decembrist_Economic_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Decembrist_Constitution
+				}
+				TOM_Mod_check_industry_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Synthetize_Decembrist_Economic_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Decembrist_Economic_Program_bill"
+			if = {
+				limit = { has_government = liberal_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_decembrist_economy
+					add_idea = TOM_idea_modernist_economy_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = authoritarian_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_decembrist_economy
+					add_idea = TOM_idea_bastillard_economy_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = socialist }
+				swap_ideas = {
+					remove_idea = TOM_idea_decembrist_economy
+					add_idea = TOM_idea_humanist_economy_modified
+				}
+			}
+			remove_ideas = TOM_idea_incompatible_economy
+		}
+	}
+
+	#
+
+	TOM_Scrap_Decembrist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_decembrist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = conservative_democracy }
+			NOT = { has_country_flag = TOM_Economy_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			activate_mission = TOM_Scrap_Decembrist_Military_Program_bill
+			TOM_Increase_Idealism_med = yes
+			custom_effect_tooltip = TOM_scrap_program_tt
+			set_country_flag = TOM_Military_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Scrap_Decembrist_Military_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Decembrist_Constitution
+				}
+				TOM_Mod_check_military_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_military_program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program_bill"
+			swap_ideas = {
+				remove_idea = TOM_idea_decembrist_army
+				add_idea = TOM_idea_standardized_army
+			}
+			remove_ideas = TOM_idea_incompatible_army
+			add_timed_idea = {
+				idea = TOM_idea_military_transition
+				days = 120
+			}
+		}
+	}
+
+	TOM_Accept_Decembrist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_decembrist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = conservative_democracy }
+			NOT = { has_country_flag = TOM_Military_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			TOM_Decrease_Idealism_high = yes
+			set_country_flag = TOM_Military_Plan_Decision
+			remove_ideas = TOM_idea_incompatible_army
+			every_owned_state = {
+				limit = { TOM_can_have_elections_in_state = yes }
+				if = {
+					limit = {
+						TOM = { has_government = authoritarian_democracy }
+					}
+					TOM_Decrease_Bas_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = liberal_democracy }
+					}
+					TOM_Decrease_Mod_Pop_high = yes
+				}
+				else_if = {
+					limit = {
+						TOM = { has_government = socialist }
+					}
+					TOM_Decrease_Hum_Pop_high = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Decembrist_Military_Program = {
+		visible = {
+			has_idea = TOM_idea_decembrist_army
+			has_idea = TOM_idea_incompatible_army
+			NOT = { has_government = conservative_democracy }
+			NOT = { has_country_flag = TOM_Military_Plan_Decision }
+		}
+		cost = 15
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Synthetize_Decembrist_Economic_Program"
+			activate_mission = TOM_Synthetize_Decembrist_Military_Program_bill
+			TOM_Increase_Idealism_high = yes
+			custom_effect_tooltip = TOM_synthetize_program_tt
+			set_country_flag = TOM_Military_Plan_Decision
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_Synthetize_Decembrist_Military_Program_bill = {
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Decembrist_Constitution
+				}
+				TOM_Mod_check_military_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		activation = { always = no }
+		is_good = no
+		days_mission_timeout = 999
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_Scrap_Decembrist_Military_Program_bill"
+			add_political_power = -25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_Scrap_Decembrist_Military_Program_bill"
+			if = {
+				limit = { has_government = liberal_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_decembrist_army
+					add_idea = TOM_idea_modernist_army_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = authoritarian_democracy }
+				swap_ideas = {
+					remove_idea = TOM_idea_decembrist_army
+					add_idea = TOM_idea_bastillard_army_modified
+				}
+			}
+			else_if = {
+				limit = { has_government = socialist }
+				swap_ideas = {
+					remove_idea = TOM_idea_decembrist_army
+					add_idea = TOM_idea_humanist_army_modified
+				}
+			}
+			remove_ideas = TOM_idea_incompatible_army
+		}
+	}
+
+}
+
+TOM_Bill_Category = {
+	TOM_military_program = {
+		visible = {
+			NOT = {
+				has_country_flag = TOM_Military_Expansion_flag
+			}
+		}
+		available = {
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_war_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		cost = 15
+		days_re_enable = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_military_program"
+			custom_effect_tooltip = TOM_military_program_tt
+			set_country_flag = TOM_Military_Expansion_flag
+			unlock_decision_category_tooltip = TOM_Military_Expansion
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	TOM_unlock_war_plans = {
+		visible = {
+			NOT = {
+				has_country_flag = TOM_central_sib_expansion
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SIB_spring_tt
+				date > 1963.5.1
+			}
+			if = {
+				limit = {
+					has_country_flag = Modernist_Constitution
+				}
+				TOM_Mod_check_war_bill_approval = yes
+			}
+			else = {
+				TOM_check_house_bill_approval = yes
+			}
+		}
+		custom_cost_trigger = { always = yes } #no cost
+		days_re_enable = 70
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_unlock_war_plans"
+			custom_effect_tooltip = TOM_unlock_war_plans_tt
+			set_country_flag = TOM_central_sib_expansion
+			unlock_decision_category_tooltip = TOM_Siberian_Expansion_Category
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+TOM_Military_Expansion = {
+	TOM_army_drill = {
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 35
+
+		days_remove = 49
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision  TOM_army_drill"
+
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_army_drill"
+			army_experience = 20
+			TNO_improve_training_policy_effectiveness_low = yes
+		}
+	}
+
+	TOM_scavenge_for_weapons = {
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 35
+
+		days_remove = 49
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision  TOM_scavenge_for_weapons"
+			set_temp_variable = { temp_econ_spending_amount = 0.005 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_scavenge_for_weapons"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+			}
+		}
+	}
+
+	TOM_prepare_for_war = {
+
+		modifier = {
+			stability_weekly = -0.01
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 35
+
+		days_remove = 49
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision  TOM_prepare_for_war"
+
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_prepare_for_war"
+			add_war_support = 0.05
+			TNO_improve_conscription_policy_effectiveness_low = yes
+		}
+	}
+
+	TOM_weapon_research_project = {
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 35
+
+		days_remove = 49
+		days_re_enable = 90
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision  TOM_prepare_for_war"
+			set_temp_variable = { temp_econ_spending_amount = 0.005 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_prepare_for_war"
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	TOM_tomsk_arms_factory = {
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cost = 35
+
+		days_remove = 180
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision  TOM_prepare_for_war"
+			set_temp_variable = { temp_econ_spending_amount = 0.005 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_prepare_for_war"
+			set_temp_variable = { temp_month_income_gained = 0.65 }
+			econ_money_reserves_change_month_income = yes
+		}
+	}
+}
+
+TOM_Siberian_Expansion_Category = {
+
+	TOM_War_Plan_DAnthes = {
+		icon = GFX_decision_generic_assault
+
+		available = {
+			AND = {
+				has_war = no
+				NOT = { has_country_flag = TOM_War_Plan_Active }
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+			war_support_factor = 0.1
+			experience_gain_army_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = NOV
+			is_neighbor_of = NOV
+		}
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		days_remove = 21
+		war_with_on_remove = NOV
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision  TOM_War_Plan_DAnthes"
+			set_country_flag = TOM_War_Plan_Active
+			country_event = { id = TOM.13 }
+			hidden_effect = {
+				add_command_power = -15
+				country_event = { id = TOM.146 days = 120 }
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_DAnthes"
+			declare_war_on = {
+				target = NOV
+				type = annex_everything
+			}
+		}
+	}
+
+	TOM_War_Plan_DAnthes_strike_fast = {
+		icon = GFX_decision_generic_assault
+
+		available = {
+			has_war_with = NOV
+			NOT = {
+				has_decision = TOM_War_Plan_DAnthes_decisive_battle_strategy
+				has_decision = TOM_War_Plan_DAnthes_protect_the_industry
+				has_decision = TOM_War_Plan_DAnthes_crush_the_regiments
+				has_decision = TOM_War_Plan_DAnthes_shock_and_awe
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = NOV
+			has_war_with = NOV
+		}
+
+		cost = 20
+
+		days_remove = 21
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_DAnthes_strike_fast"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_DAnthes_strike_fast"
+			add_timed_idea = {
+				idea = TOM_idea_movement_based_warfare
+				days = 120
+			}
+		}
+	}
+
+	TOM_War_Plan_DAnthes_decisive_battle_strategy = {
+		icon = GFX_decision_generic_assault
+
+		available = {
+			has_war_with = NOV
+			NOT = {
+				has_decision = TOM_War_Plan_DAnthes_strike_fast
+				has_decision = TOM_War_Plan_DAnthes_protect_the_industry
+				has_decision = TOM_War_Plan_DAnthes_crush_the_regiments
+				has_decision = TOM_War_Plan_DAnthes_shock_and_awe
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = NOV
+			has_war_with = NOV
+		}
+
+		cost = 20
+
+		days_remove = 21
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_DAnthes_decisive_battle_strategy"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_DAnthes_decisive_battle_strategy"
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	TOM_War_Plan_DAnthes_protect_the_industry = {
+		icon = GFX_decision_generic_industry
+
+		available = {
+			has_war_with = NOV
+			NOT = {
+				has_decision = TOM_War_Plan_DAnthes_strike_fast
+				has_decision = TOM_War_Plan_DAnthes_decisive_battle_strategy
+				has_decision = TOM_War_Plan_DAnthes_crush_the_regiments
+				has_decision = TOM_War_Plan_DAnthes_shock_and_awe
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = NOV
+			has_war_with = NOV
+		}
+
+		cost = 20
+
+		days_remove = 21
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_DAnthes_protect_the_industry"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_DAnthes_protect_the_industry"
+			add_timed_idea = {
+				idea = TOM_idea_protect_the_industry
+				days = 120
+			}
+		}
+	}
+
+	TOM_War_Plan_DAnthes_crush_the_regiments = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+			has_war_with = NOV
+			NOT = {
+				has_decision = TOM_War_Plan_DAnthes_strike_fast
+				has_decision = TOM_War_Plan_DAnthes_decisive_battle_strategy
+				has_decision = TOM_War_Plan_DAnthes_protect_the_industry
+				has_decision = TOM_War_Plan_DAnthes_shock_and_awe
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = NOV
+			has_war_with = NOV
+		}
+
+		cost = 20
+
+		days_remove = 21
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_DAnthes_crush_the_regiments"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_DAnthes_crush_the_regiments"
+			add_timed_idea = {
+				idea = TOM_idea_crush_the_regiments
+				days = 60
+			}
+		}
+	}
+
+	TOM_War_Plan_DAnthes_shock_and_awe = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+			has_war_with = NOV
+			NOT = {
+				has_decision = TOM_War_Plan_DAnthes_strike_fast
+				has_decision = TOM_War_Plan_DAnthes_decisive_battle_strategy
+				has_decision = TOM_War_Plan_DAnthes_protect_the_industry
+				has_decision = TOM_War_Plan_DAnthes_crush_the_regiments
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			country_exists = NOV
+			has_war_with = NOV
+		}
+
+		cost = 20
+
+		days_remove = 21
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_DAnthes_shock_and_awe"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_DAnthes_shock_and_awe"
+			army_experience = 15
+			add_war_support = 0.1
+		}
+	}
+
+	TOM_War_Plan_DAnthes_Build_Up_Novosibirsk_Air_Bases = {
+		icon = GFX_decision_black_market_helicopter_purchase
+
+		modifier = {
+			consumer_goods_use_modifier = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			NOT = {
+				country_exists = NOV
+			}
+			owns_state = 570
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_DAnthes_Build_Up_Novosibirsk_Air_Bases"
+			set_temp_variable = { temp_econ_spending_amount = 0.015 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_DAnthes_Build_Up_Novosibirsk_Air_Bases"
+			570 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	TOM_War_Plan_DAnthes_trial_the_secessionists = {
+		icon = GFX_decision_generic_political_action
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			NOT = {
+				country_exists = NOV
+			}
+			owns_state = 570
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_DAnthes_trial_the_secessionists"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_DAnthes_trial_the_secessionists"
+			country_event = { id = TOM.14 }
+			if = {
+				limit = {
+					NOT = { 570 = { has_state_flag = TOM_election_state } }
+				}
+				TOM_setup_novosibirsk_variables = yes
+			}
+		}
+	}
+
+	TOM_War_Plan_Oskolok = {
+		icon = GFX_decision_generic_assault
+
+		available = {
+			AND = {
+				has_war = no
+				NOT = { has_country_flag = TOM_War_Plan_Active }
+			}
+		}
+
+		modifier = {
+			war_support_factor = 0.1
+			experience_gain_army_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = KEM
+			is_neighbor_of = KEM
+		}
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		days_remove = 21
+		war_with_on_remove = KEM
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Oskolok"
+			set_country_flag = TOM_War_Plan_Active
+			country_event = { id = TOM.17 }
+			hidden_effect = {
+				add_command_power = -15
+				country_event = { id = TOM.146 days = 120 }
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Oskolok"
+			declare_war_on = {
+				target = KEM
+				type = annex_everything
+			}
+		}
+	}
+
+	TOM_War_Plan_Oskolok_Reopen_Kemerovo_Coal_Mines = {
+		icon = GFX_decision_generic_industry
+
+		modifier = {
+			consumer_goods_use_modifier = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			NOT = { country_exists = KEM }
+			owns_state = 569
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Oskolok_Reopen_Kemerovo_Coal_Mines"
+			set_temp_variable = { temp_econ_spending_amount = 0.01 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Oskolok_Reopen_Kemerovo_Coal_Mines"
+			SIB_increase_resources_med = yes
+			569 = {
+				set_temp_variable = { state_value_multiplier_temp = 1.07 }
+				econ_state_value_change_multiply = yes
+			}
+		}
+	}
+
+	TOM_War_Plan_Oskolok_End_With_Royal_Privileges = {
+		icon = GFX_decision_generic_construction
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			NOT = { country_exists = KEM }
+			owns_state = 569
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Oskolok_End_With_Royal_Privileges"
+
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Oskolok_End_With_Royal_Privileges"
+			country_event = { id = TOM.35 }
+			if = {
+				limit = {
+					NOT = { 569 = { has_state_flag = TOM_election_state } }
+				}
+				TOM_setup_kemerovo_variables = yes
+			}
+		}
+	}
+
+	TOM_War_Plan_Vozneseniye = {
+		icon = GFX_decision_generic_political_action
+
+		available = {
+			AND = {
+				has_war = no
+				NOT = { has_country_flag = TOM_War_Plan_Active }
+			}
+		}
+
+		modifier = {
+			war_support_factor = 0.1
+			experience_gain_army_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = ALT
+			is_neighbor_of = ALT
+		}
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		days_remove = 21
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Vozneseniye"
+			set_country_flag = TOM_War_Plan_Active
+			country_event = { id = TOM.18 }
+			hidden_effect = {
+				add_command_power = -15
+				country_event = { id = TOM.146 days = 120 }
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Vozneseniye"
+			ALT = { country_event = { id = TOM.31 } }
+		}
+	}
+
+	TOM_War_Plan_Vozneseniye_Seize_Church_Land = {
+		icon = GFX_decision_generic_use_force
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			NOT = { country_exists = ALT }
+			owns_state = 654
+			has_country_flag = TOM_war_with_oyrotia
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Vozneseniye_Seize_Church_Land"
+
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Vozneseniye_Seize_Church_Land"
+			RUS_integration_cost_days_decrease = yes
+			set_temp_variable = { money_reserves_temp = 0.03 }
+			econ_money_reserves_change_raw_money = yes
+			clr_country_flag = TOM_war_with_oyrotia
+		}
+	}
+
+	TOM_War_Plan_Khorei = {
+		icon = GFX_decision_generic_assault
+
+		available = {
+			AND = {
+				has_war = no
+				NOT = { has_country_flag = TOM_War_Plan_Active }
+			}
+		}
+
+		modifier = {
+			war_support_factor = 0.1
+			experience_gain_army_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = KRS
+			is_neighbor_of = KRS
+		}
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		days_remove = 21
+		war_with_on_remove = KRS
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Khorei"
+			set_country_flag = TOM_War_Plan_Active
+			country_event = { id = TOM.38 }
+			hidden_effect = {
+				add_command_power = -15
+				country_event = { id = TOM.146 days = 120 }
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Khorei"
+			declare_war_on = {
+				target = KRS
+				type = annex_everything
+			}
+		}
+	}
+
+	TOM_War_Plan_Khorei_Blitz_Krasnnoyarsk = {
+		icon = GFX_decision_generic_assault
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = KRS
+			has_war_with = KRS
+		}
+
+		cost = 30
+
+		targeted_modifier = {
+			tag = KRS
+			attack_bonus_against = 0.15
+		}
+
+		days_remove = 60
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Khorei_Blitz_Krasnnoyarsk"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Khorei_Blitz_Krasnnoyarsk"
+			activate_mission = TOM_War_Plan_Khorei_Blitz_Krasnnoyarsk_mission
+		}
+	}
+
+	TOM_War_Plan_Khorei_Blitz_Krasnnoyarsk_mission = {
+		icon = GFX_decision_generic_assault
+		activation = {
+			always = no
+		}
+
+		fire_only_once = yes
+
+		available = {
+			KRS = {
+				OR = {
+					has_capitulated = yes
+					exists = no
+				}
+			}
+		}
+
+		days_mission_timeout = 60
+
+		is_good = no
+
+		complete_effect = {
+			add_war_support = 0.05
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Khorei_Blitz_Krasnnoyarsk_mission"
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Timeout TOM_War_Plan_Khorei_Blitz_Krasnnoyarsk_mission"
+			add_political_power = -50
+			add_war_support = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	TOM_War_Plan_Khorei_Develop_Krasnoyarsk_Industries = {
+		icon = GFX_decision_generic_industry
+
+		modifier = {
+			consumer_goods_use_modifier = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			NOT = { country_exists = KRS }
+			owns_state = 757
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Khorei_Develop_Krasnoyarsk_Industries"
+			set_temp_variable = { temp_econ_spending_amount = 0.02 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Khorei_Develop_Krasnoyarsk_Industries"
+			757 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.05 }
+				econ_state_value_change_multiply = yes
+			}
+			set_temp_variable = { pus_temp = 1 }
+			econ_pus_change = yes
+		}
+	}
+
+	TOM_War_Plan_Khorei_Purge_the_Traitors = {
+		icon = GFX_decision_generic_civil_support
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			NOT = { country_exists = KRS }
+			owns_state = 757
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Khorei_Purge_the_Traitors"
+
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Khorei_Purge_the_Traitors"
+			country_event = { id = TOM.39 }
+			if = {
+				limit = {
+					NOT = { 757 = { has_state_flag = TOM_election_state } }
+				}
+				TOM_setup_krasnoyarsk_variables = yes
+			}
+		}
+	}
+
+	TOM_War_Plan_Tvyordaya_Ruka = {
+		icon = GFX_decision_generic_assault
+
+		available = {
+			AND = {
+				has_war = no
+				NOT = { has_country_flag = TOM_War_Plan_Active }
+			}
+		}
+
+		modifier = {
+			war_support_factor = 0.1
+			experience_gain_army_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = SBA
+			is_neighbor_of = SBA
+		}
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		days_remove = 21
+		war_with_on_remove = SBA
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Tvyordaya_Ruka"
+			set_country_flag = TOM_War_Plan_Active
+			country_event = { id = TOM.43 }
+			hidden_effect = {
+				add_command_power = -15
+				country_event = { id = TOM.146 days = 120 }
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Tvyordaya_Ruka"
+			declare_war_on = {
+				target = SBA
+				type = annex_everything
+			}
+
+		}
+	}
+
+	TOM_War_Plan_Tvyordaya_Ruka_Put_Down_Anarchy = {
+		icon = GFX_decision_revolt
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			NOT = { country_exists = SBA }
+			owns_state = 568
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Tvyordaya_Ruka_Put_Down_Anarchy"
+
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Tvyordaya_Ruka_Put_Down_Anarchy"
+			country_event = { id = TOM.44 }
+		}
+	}
+
+	TOM_War_Plan_Shkola = {
+		icon = GFX_decision_generic_assault
+
+		available = {
+			AND = {
+				has_war = no
+				NOT = { has_country_flag = TOM_War_Plan_Active }
+			}
+		}
+
+		modifier = {
+			war_support_factor = 0.1
+			experience_gain_army_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			country_exists = PRC
+			is_neighbor_of = PRC
+		}
+
+		custom_cost_trigger = { command_power > 14 }
+		custom_cost_text = decision_cost_15_cp
+
+		days_remove = 21
+		war_with_on_remove = PRC
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Shkola"
+			set_country_flag = TOM_War_Plan_Active
+			country_event = { id = TOM.45 }
+			hidden_effect = {
+				add_command_power = -15
+				country_event = { id = TOM.146 days = 120 }
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Shkola"
+			declare_war_on = {
+				target = PRC
+				type = annex_everything
+			}
+		}
+	}
+
+	TOM_War_Plan_Shkola_Fate_of_the_Reds = {
+		icon = GFX_decision_generic_military_parade
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			NOT = { country_exists = PRC }
+			owns_state = 329
+		}
+
+		cost = 20
+
+		days_remove = 28
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TOM_War_Plan_Tvyordaya_Ruka_Put_Down_Anarchy"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove TOM_War_Plan_Tvyordaya_Ruka_Put_Down_Anarchy"
+			country_event = { id = TOM.46 }
+		}
+	}
+}
+
+
+

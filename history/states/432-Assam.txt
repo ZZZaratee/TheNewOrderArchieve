@@ -1,0 +1,25 @@
+state={
+	id=432
+	name="STATE_432"
+
+	resources={
+		oil=1
+		uranium = 4
+	}
+	history={
+		owner = AZH
+		victory_points = { 12366 10 }
+		add_core_of = AZH
+		add_core_of = IND
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces={
+		1497 7634 10514 12366 12395 12423 
+	}
+	manpower=13862050
+	buildings_max_level_factor=1.000
+	state_category=town
+}

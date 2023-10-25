@@ -1,0 +1,543 @@
+scripted_gui = {
+
+	TNO_BRG_Foreign_GUI = {
+		context_type = decision_category
+		window_name = "BRG_Foreign_GUI"
+
+		visible = {
+			always = yes
+		}
+
+		properties = {
+			BRG_CoverageProgressBar = {
+				frame = BRG_GP_NukeCoverage_Total_Var
+			}
+		}
+
+		triggers = {
+			BRG_Foreign_GUI_World_Map_AF_outline_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 0 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+			BRG_Foreign_GUI_World_Map_EU_outline_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 1 }
+			}
+			BRG_Foreign_GUI_World_Map_ME_outline_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 2 }
+			}
+			BRG_Foreign_GUI_World_Map_NA_outline_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 3 }
+			}
+			BRG_Foreign_GUI_World_Map_AU_outline_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 4 }
+			}
+			BRG_Foreign_GUI_World_Map_RU_outline_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 5 }
+			}
+			BRG_Foreign_GUI_World_Map_EA_outline_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 6 }
+			}
+			BRG_Foreign_GUI_World_Map_SA_outline_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 7 }
+			}
+			
+			BRG_Foreign_GUI_World_Map_AF_Mark_visible = {
+				has_country_flag = BRG_Master_GP_Region0NotViewed 
+			}
+			BRG_Foreign_GUI_World_Map_EU_Mark_visible = {
+				has_country_flag = BRG_Master_GP_Region1NotViewed 
+			}
+			BRG_Foreign_GUI_World_Map_ME_Mark_visible = {
+				has_country_flag = BRG_Master_GP_Region2NotViewed 
+			}
+			BRG_Foreign_GUI_World_Map_NA_Mark_visible = {
+				has_country_flag = BRG_Master_GP_Region3NotViewed 
+			}
+			BRG_Foreign_GUI_World_Map_AU_Mark_visible = {
+				has_country_flag = BRG_Master_GP_Region4NotViewed 
+			}
+			BRG_Foreign_GUI_World_Map_RU_Mark_visible = {
+				has_country_flag = BRG_Master_GP_Region5NotViewed 
+			}
+			BRG_Foreign_GUI_World_Map_EA_Mark_visible = {
+				has_country_flag = BRG_Master_GP_Region6NotViewed 
+			}
+			BRG_Foreign_GUI_World_Map_SA_Mark_visible = {
+				has_country_flag = BRG_Master_GP_Region7NotViewed 
+			}
+			BRG_Foreign_GUI_Budget_Minus_click_enabled = {
+				OR = {
+					check_variable = { BRG_GPCurrentMoneyBudget = 5 }
+					check_variable = { BRG_GPCurrentMoneyBudget > 5 }
+				}
+				check_variable = { BRG_GPCurrentPUBudget > 0 }
+			}
+			BRG_Foreign_GUI_Budget_Plus_click_enabled = {
+				check_variable = { BRG_GPCurrentPUBudget < production_units_raw }
+			}
+		}
+
+		effects = {
+			BRG_Foreign_GUI_World_Map_AF_click = {
+				if = {
+					limit = { 
+						OR = {
+							NOT = { check_variable = { BRG_Foreign_GUI_Selected = 0 } } 
+							NOT = { has_variable = BRG_Foreign_GUI_Selected } 
+						}
+					}
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes				
+					set_variable = { BRG_Foreign_GUI_Selected = 0 }
+					clear_variable = BRG_CloseUp_Selected
+					for_each_loop = {
+						array = BRG_Master_GP_Region0NotViewed
+						value = vd
+						
+						add_to_array = { BRG_GP_Decisions_Viewed = vd }
+					}
+					clear_array = BRG_Master_GP_Region0NotViewed
+					clear_array = BRG_Master_GP_Act_Array
+					clr_country_flag = BRG_Master_GP_Region0NotViewed
+					add_to_array = { BRG_Master_GP_Act_Array = 0 }
+					add_to_array = { BRG_Master_GP_Act_Array = 1 }
+				}
+				else = {
+					clear_variable = BRG_Foreign_GUI_Selected
+					clear_variable = BRG_CloseUp_Selected
+				}
+			}
+			BRG_Foreign_GUI_World_Map_EU_click = {
+				if = {
+					limit = { NOT = { check_variable = { BRG_Foreign_GUI_Selected = 1 } } }
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes				
+					set_variable = { BRG_Foreign_GUI_Selected = 1 }
+					clear_variable = BRG_CloseUp_Selected
+					for_each_loop = {
+						array = BRG_Master_GP_Region1NotViewed
+						value = vd
+						
+						add_to_array = { BRG_GP_Decisions_Viewed = vd }
+					}
+					clear_array = BRG_Master_GP_Region1NotViewed
+					clear_array = BRG_Master_GP_Act_Array
+					clr_country_flag = BRG_Master_GP_Region2NotViewed
+					add_to_array = { BRG_Master_GP_Act_Array = 2 }
+					add_to_array = { BRG_Master_GP_Act_Array = 3 }
+					add_to_array = { BRG_Master_GP_Act_Array = 4 }
+					add_to_array = { BRG_Master_GP_Act_Array = 5 }
+					add_to_array = { BRG_Master_GP_Act_Array = 6 }
+					add_to_array = { BRG_Master_GP_Act_Array = 7 }
+				}
+				else = {
+					clear_variable = BRG_Foreign_GUI_Selected
+					clear_variable = BRG_CloseUp_Selected
+				}
+			}
+			BRG_Foreign_GUI_World_Map_ME_click = {
+				if = {
+					limit = { NOT = { check_variable = { BRG_Foreign_GUI_Selected = 2 } } }
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes				
+					set_variable = { BRG_Foreign_GUI_Selected = 2 }
+					clear_variable = BRG_CloseUp_Selected
+					for_each_loop = {
+						array = BRG_Master_GP_Region2NotViewed
+						value = vd
+						
+						add_to_array = { BRG_GP_Decisions_Viewed = vd }
+					}
+					clear_array = BRG_Master_GP_Region2NotViewed
+					clear_array = BRG_Master_GP_Act_Array
+					clr_country_flag = BRG_Master_GP_Region2NotViewed
+					add_to_array = { BRG_Master_GP_Act_Array = 8 }
+					add_to_array = { BRG_Master_GP_Act_Array = 9 }
+				}
+				else = {
+					clear_variable = BRG_Foreign_GUI_Selected
+					clear_variable = BRG_CloseUp_Selected
+				}
+			}
+			BRG_Foreign_GUI_World_Map_NA_click = {
+				if = {
+					limit = { NOT = { check_variable = { BRG_Foreign_GUI_Selected = 3 } } }
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes
+					set_variable = { BRG_Foreign_GUI_Selected = 3 }
+					clear_variable = BRG_CloseUp_Selected
+					for_each_loop = {
+						array = BRG_Master_GP_Region3NotViewed
+						value = vd
+						
+						add_to_array = { BRG_GP_Decisions_Viewed = vd }
+					}
+					clear_array = BRG_Master_GP_Region3NotViewed
+					clear_array = BRG_Master_GP_Act_Array
+					clr_country_flag = BRG_Master_GP_Region3NotViewed
+					add_to_array = { BRG_Master_GP_Act_Array = 10 }
+					add_to_array = { BRG_Master_GP_Act_Array = 11 }
+					add_to_array = { BRG_Master_GP_Act_Array = 12 }
+				}
+				else = {
+					clear_variable = BRG_Foreign_GUI_Selected
+					clear_variable = BRG_CloseUp_Selected
+				}
+			}
+			BRG_Foreign_GUI_World_Map_AU_click = {
+				if = {
+					limit = { NOT = { check_variable = { BRG_Foreign_GUI_Selected = 4 } } }
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes					
+					set_variable = { BRG_Foreign_GUI_Selected = 4 }
+					clear_variable = BRG_CloseUp_Selected
+					for_each_loop = {
+						array = BRG_Master_GP_Region4NotViewed
+						value = vd
+						
+						add_to_array = { BRG_GP_Decisions_Viewed = vd }
+					}
+					clear_array = BRG_Master_GP_Region4NotViewed
+					clr_country_flag = BRG_Master_GP_Region4NotViewed
+					clear_array = BRG_Master_GP_Act_Array
+					add_to_array = { BRG_Master_GP_Act_Array = 13 }
+				}
+				else = {
+					clear_variable = BRG_Foreign_GUI_Selected
+					clear_variable = BRG_CloseUp_Selected
+				}
+			}
+			BRG_Foreign_GUI_World_Map_RU_click = {
+				if = {
+					limit = { NOT = { check_variable = { BRG_Foreign_GUI_Selected = 5 } } }
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes					
+					set_variable = { BRG_Foreign_GUI_Selected = 5 }
+					clear_variable = BRG_CloseUp_Selected
+					for_each_loop = {
+						array = BRG_Master_GP_Region5NotViewed
+						value = vd
+						
+						add_to_array = { BRG_GP_Decisions_Viewed = vd }
+					}
+					clear_array = BRG_Master_GP_Region5NotViewed
+					clr_country_flag = BRG_Master_GP_Region5NotViewed
+					clear_array = BRG_Master_GP_Act_Array
+					add_to_array = { BRG_Master_GP_Act_Array = 14 }
+					add_to_array = { BRG_Master_GP_Act_Array = 15 }
+					add_to_array = { BRG_Master_GP_Act_Array = 16 }
+					add_to_array = { BRG_Master_GP_Act_Array = 17 }
+				}
+				else = {
+					clear_variable = BRG_Foreign_GUI_Selected
+					clear_variable = BRG_CloseUp_Selected
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes
+				}
+			}
+			BRG_Foreign_GUI_World_Map_EA_click = {
+				if = {
+					limit = { NOT = { check_variable = { BRG_Foreign_GUI_Selected = 6 } } }
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes
+					set_variable = { BRG_Foreign_GUI_Selected = 6 }
+					clear_variable = BRG_CloseUp_Selected
+					for_each_loop = {
+						array = BRG_Master_GP_Region6NotViewed
+						value = vd
+						
+						add_to_array = { BRG_GP_Decisions_Viewed = vd }
+					}
+					clear_array = BRG_Master_GP_Region6NotViewed
+					clr_country_flag = BRG_Master_GP_Region6NotViewed
+					clear_array = BRG_Master_GP_Act_Array
+					add_to_array = { BRG_Master_GP_Act_Array = 18 }
+					add_to_array = { BRG_Master_GP_Act_Array = 19 }
+					add_to_array = { BRG_Master_GP_Act_Array = 20 }
+				}
+				else = {
+					clear_variable = BRG_Foreign_GUI_Selected
+					clear_variable = BRG_CloseUp_Selected
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes
+				}
+			}
+			BRG_Foreign_GUI_World_Map_SA_click = {
+				if = {
+					limit = { NOT = { check_variable = { BRG_Foreign_GUI_Selected = 7 } } }
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes
+					set_variable = { BRG_Foreign_GUI_Selected = 7 }
+					clear_variable = BRG_CloseUp_Selected
+					for_each_loop = {
+						array = BRG_Master_GP_Region7NotViewed
+						value = vd
+						
+						add_to_array = { BRG_GP_Decisions_Viewed = vd }
+					}
+					clear_array = BRG_Master_GP_Region7NotViewed
+					clr_country_flag = BRG_Master_GP_Region7NotViewed
+					clear_array = BRG_Master_GP_Act_Array
+					add_to_array = { BRG_Master_GP_Act_Array = 21 }
+					add_to_array = { BRG_Master_GP_Act_Array = 22 }
+					add_to_array = { BRG_Master_GP_Act_Array = 23 }					
+				}
+				else = {
+					clear_variable = BRG_Foreign_GUI_Selected
+					clear_variable = BRG_CloseUp_Selected
+					BRG_Frame_GP_Update = yes
+					BRG_Big_Flag_Check = yes
+				}
+			}
+			BRG_Foreign_GUI_Budget_Minus_click = {
+				set_temp_variable = { cal = -1 }
+				add_to_temp_variable = { cal = BRG_GPCurrentPUBudget }
+				if = { 
+					limit = { check_variable = { 0 > cal } }
+					set_temp_variable = { additive = cal }
+				}
+				else = {
+					set_temp_variable = { additive = -1 }
+				}
+				BRG_budget_calc = yes
+			}
+			BRG_Foreign_GUI_Budget_Plus_click = {
+				set_temp_variable = { cal = 1 }
+				add_to_temp_variable = { cal = BRG_GPCurrentPUBudget }
+
+				set_temp_variable = { BRG_PU_Avialable = production_units_raw }
+				subtract_from_temp_variable = { BRG_PU_Avialable = production_units_used }
+
+				if = { 
+					limit = { check_variable = { cal < BRG_PU_Avialable } }
+					set_temp_variable = { additive = cal }
+				}
+				BRG_budget_calc = yes
+			}
+		}
+	}
+	
+	BRG_Foreign_GUI_Close_Up = {
+		context_type = player_context
+		window_name = "BRG_Foreign_GUI_Close_Up"
+
+		visible = {
+			has_variable = BRG_Foreign_GUI_Selected
+		}
+
+		triggers = {
+			BRG_Foreign_GUI_Large_Map_Africa_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 0 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+			BRG_Foreign_GUI_Large_Map_Europe_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 1 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+			BRG_Foreign_GUI_Large_Map_Middle_East_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 2 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+			BRG_Foreign_GUI_Large_Map_North_America_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 3 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+			BRG_Foreign_GUI_Large_Map_Oceania_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 4 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+			BRG_Foreign_GUI_Large_Map_Russia_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 5 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+			BRG_Foreign_GUI_Large_Map_East_Asia_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 6 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+			BRG_Foreign_GUI_Large_Map_SA_visible = {
+				check_variable = { BRG_Foreign_GUI_Selected = 7 }
+				has_variable = BRG_Foreign_GUI_Selected
+			}
+		}
+
+		effects = {
+			BRG_Foreign_GUI_close_button_click = {
+				clear_variable = BRG_Foreign_GUI_Selected
+				clear_variable = BRG_CloseUp_Selected
+				for_each_loop = {
+					array = BRG_Master_GP_Big_Array
+					index = idx
+					set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+				}
+				BRG_Frame_GP_Update = yes
+				BRG_Big_Flag_Check = yes
+			}
+			BRG_Master_GP_Close_Up_Country_Button_click = {
+				if = {
+					limit = { NOT = { check_variable = { BRG_CloseUp_Selected = GP_v } } }
+					for_each_loop = {
+						array = BRG_Master_GP_Regions
+						remove_from_array = {
+							array = BRG_Master_GP_Regions
+							value = GP_v
+						}
+					}
+					for_each_loop = {
+						array = BRG_Master_GP_Big_Array
+						index = idx
+						set_variable = { BRG_Master_GP_Big_Array^idx = 1 }
+					}
+					BRG_Frame_GP_Update = yes
+					set_variable = { BRG_CloseUp_Selected = GP_v }
+					meta_effect = {
+						text = {
+							for_each_loop = {
+								array = BRG_Master_GP_Region[continentid]NotViewed
+								value = v_notviewed
+								
+								add_to_array = { BRG_GP_Decisions_Viewed = v_notviewed }
+							}
+							clear_array = BRG_Master_GP_Region[continentid]NotViewed
+						}
+					}
+					set_variable = { BRG_Master_GP_Big_Array^GP_v = 2 }
+				}
+				else = {
+					set_variable = { BRG_Master_GP_Big_Array^GP_v = 1 }
+					clear_variable = BRG_CloseUp_Selected
+				}
+			}
+		}
+		
+		properties = {
+			BRG_InfluenceBarClose_Prog = {
+				frame = BRG_GP_Influence^BRG_Foreign_GUI_Selected
+			}
+			BRG_NukeCoverageClose_Prog = {
+				frame = BRG_GP_NukeCoverage^BRG_Foreign_GUI_Selected
+			}
+			BRG_Master_GP_Close_Up_Country_Button = {
+				frame = BRG_Master_GP_Big_Array^GP_v
+				image = "GFX_BRG_Foreign_GUI_Large_Map_[?GP_v]"
+				x = BRG_Master_GP_X_Array^GP_v
+				y = BRG_Master_GP_Y_Array^GP_v
+			}
+		}
+		triggers = {
+			BRG_InfluenceBarClose_Prog5_Select_visible = {
+				check_variable = { BRG_GP_Influence^BRG_Foreign_GUI_Selected > 79 }
+			}
+			BRG_InfluenceBarClose_Prog4_Select_visible = {
+				check_variable = { BRG_GP_Influence^BRG_Foreign_GUI_Selected > 59 }
+			}
+			BRG_InfluenceBarClose_Prog3_Select_visible = {
+				check_variable = { BRG_GP_Influence^BRG_Foreign_GUI_Selected > 39 }
+			}
+			BRG_InfluenceBarClose_Prog2_Select_visible = {
+				check_variable = { BRG_GP_Influence^BRG_Foreign_GUI_Selected > 19 }
+			}
+			BRG_InfluenceBarClose_Prog5_NotSelect_visible = {
+				NOT = {
+					check_variable = { BRG_GP_Influence^BRG_Foreign_GUI_Selected > 79 }
+				}
+			}
+			BRG_InfluenceBarClose_Prog4_NotSelect_visible = {
+				NOT = {		
+					AND = {
+						check_variable = { BRG_GP_Influence^BRG_Foreign_GUI_Selected > 59 }
+					}
+				}
+			}
+			BRG_InfluenceBarClose_Prog3_NotSelect_visible = {
+				NOT = {
+					AND = {				
+						check_variable = { BRG_GP_Influence^BRG_Foreign_GUI_Selected > 39 }
+					}
+				}
+			}
+			BRG_InfluenceBarClose_Prog2_NotSelect_visible = {
+				NOT = {
+					AND = {
+						check_variable = { BRG_GP_Influence^BRG_Foreign_GUI_Selected > 19 }
+					}
+				}
+			}				
+		}
+		dynamic_lists = {
+			closeup_countries = {
+				array = BRG_Master_GP_Act_Array
+				change_scope = no
+				entry_container = BRG_Master_GP_Close_Up_Country
+				index = GP_idx
+				value = GP_v
+			}
+		}
+	}
+
+	TNO_Burgundy_Rodomo_Info_Button_GUI = {
+		context_type = decision_category
+		window_name = "TNO_Burgundy_Rodomo_Info_Button_GUI"
+
+		visible = {
+			always = yes
+		}
+	}
+
+	TNO_Burgundy_Education_Info_Button_GUI = {
+		context_type = decision_category
+		window_name = "TNO_Burgundy_Education_Info_Button_GUI"
+
+		visible = {
+			always = yes
+		}
+	}
+
+	TNO_Burgundy_Famine_Info_Button_GUI = {
+		context_type = decision_category
+		window_name = "TNO_Burgundy_Famine_Info_Button_GUI"
+
+		visible = {
+			always = yes
+		}
+	}
+}

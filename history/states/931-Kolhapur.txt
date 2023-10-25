@@ -1,0 +1,22 @@
+state={
+	id=931
+	name="STATE_931"
+	provinces={
+		1359 4278 4291 5032 7250 7411 10208 10259 10324 10799 12105 12208 
+	}
+	resources={
+		chromium=8
+	}
+	history={
+		owner = IND
+		add_core_of = AZH
+		add_core_of = IND
+		victory_points = { 12105 3 }
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	manpower=9230122
+	buildings_max_level_factor=1.000
+	state_category=town
+}

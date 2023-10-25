@@ -1,0 +1,17 @@
+PHI_Never_Garrison = {
+	allowed = {
+		OR = {
+			tag = UPH
+			tag = SPH
+			#tag = PHI
+			tag = FGB
+		}
+	}
+	enable = {
+		always = yes
+	}
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+}

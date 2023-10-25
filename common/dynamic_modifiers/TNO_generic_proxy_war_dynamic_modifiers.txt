@@ -1,0 +1,50 @@
+USA_military_advisors_dynmod = {
+	enable = { always = yes }
+	experience_gain_army = USA_mil_adv
+	command_power_gain = USA_mil_adv
+}
+
+USA_technician_aid_dynmod = {
+	enable = { always = yes }
+	political_power_gain = USA_tec_aid
+}
+
+USA_sabotage_effort_dynmod = {
+	enable = { always = yes }
+	army_attack_factor = USA_sab_eff
+	command_power_gain = USA_sab_eff
+}
+
+JAP_military_advisors_dynmod = {
+	enable = { always = yes }
+	experience_gain_army = JAP_mil_adv
+	command_power_gain = JAP_mil_adv
+}
+
+JAP_technician_aid_dynmod = {
+	enable = { always = yes }
+	political_power_gain = JAP_tec_aid
+}
+
+JAP_sabotage_effort_dynmod = {
+	enable = { always = yes }
+	army_attack_factor = JAP_sab_eff
+	command_power_gain = JAP_sab_eff
+}
+
+GER_military_advisors_dynmod = {
+	enable = { always = yes }
+	experience_gain_army = GER_mil_adv
+	command_power_gain = GER_mil_adv
+}
+
+GER_technician_aid_dynmod = {
+	enable = { always = yes }
+	political_power_gain = GER_tec_aid
+}
+
+GER_sabotage_effort_dynmod = {
+	enable = { always = yes }
+	army_attack_factor = GER_sab_eff
+	command_power_gain = GER_sab_eff
+}

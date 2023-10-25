@@ -1,0 +1,12 @@
+comintern_disabled = {
+	OR = {
+		tag = ZZZ
+		tag = USA
+		tag = SBA
+		tag = OMO
+		tag = ENG
+		tag = NRL
+		tag = ITA
+		tag = RPY
+	}
+}

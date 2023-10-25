@@ -1,0 +1,872 @@
+﻿############################
+## America Indonesian Civil War Events
+############################
+
+### RD Events ###
+add_namespace = USA_RD_INS
+
+#This event unlocks the ICW tree for both R-D and NPP
+country_event = {
+	id = USA_RD_INS.01
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_RD_INS.01"}
+	hidden = yes
+	title = USA_RD_INS.01.t
+	desc = USA_RD_INS.01.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_RD_INS.01.a
+		custom_effect_tooltip = USA_more_focus_tree_options
+		hidden_effect = { country_event = { id = USA_RD_INS.15 days = 365 }
+			USA = {
+				set_country_flag = USA_INS_CW_active
+				TNO_fopo_add_indonesia_tab = yes
+				set_technology = {
+					gunship_1968 = 1
+				}
+				if = {
+					limit = {
+						OR = {
+							has_government = conservative_democracy
+							has_government = liberal_democracy
+						}
+					}
+					set_country_flag = USA_RD_INS_CW	#RD Tree activates
+				}
+
+				if = {
+					limit = {
+						OR = {
+							has_government = authoritarian_democracy
+							has_government = social_democracy
+							has_government = communist
+							has_government = national_socialism
+						}
+					}
+					set_country_flag = USA_NPP_INS_CW	#NPP Tree activates
+				}
+				hidden_effect = {
+					country_event = {
+						id = USA.culture.10
+						days = 24
+					}
+				}
+			}
+			USA_reload_presidential_tree = yes
+		}
+	}
+}
+
+### NPP Events ###
+add_namespace = USA_NPP_INS
+
+country_event = {
+	id = USA_NPP_INS.01
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_NPP_INS.01"}
+	title = USA_NPP_INS.01.t
+	desc = USA_NPP_INS.01.d
+	picture = GFX_report_event_whitehouse_bnw
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_NPP_INS.01.a
+		add_war_support = 0.05
+	}
+}
+
+### Common Events ###
+add_namespace = USA_INS
+
+country_event = {
+	id = USA_INS.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_INS.1"}
+	title = USA_INS.1.t
+	desc = USA_INS.1.d
+	picture = GFX_report_event_USA_congress_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_INS.1.a
+	}
+}
+
+#FRI Wins
+country_event = {
+	id = USA_INS.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_INS.2"}
+	title = USA_INS.2.t
+	desc = USA_INS.2.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_INS.2.a
+
+		USA_ICW_end_effect = yes
+		add_stability = 0.03
+		add_political_power = 100
+		USA_reload_presidential_tree = yes
+		custom_effect_tooltip = USA_add_societal_unity_small
+		add_to_variable = { USA_unity = 0.5 }
+		FRI = { econ_join_sphere_USA = yes }
+		#President is NPP
+		if = {
+			limit = {
+				OR = {
+					has_government = authoritarian_democracy
+					has_government = social_democracy
+				}
+			}
+			add_popularity = {
+				ideology = liberal_democracy
+				popularity = -0.015
+			}
+			add_popularity = {
+				ideology = conservative_democracy
+				popularity = -0.01
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.015
+			}
+			add_popularity = {
+				ideology = authoritarian_democracy
+				popularity = 0.01
+			}
+			custom_effect_tooltip = USA_NPP_popularity_grows
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.1 }
+					divide_variable = { NPP_Y_bonus_popularity = 1.1 }
+					divide_variable = { NPP_L_bonus_popularity = 1.1 }
+					US_underdog_NPP_5_5 = yes
+				}
+			}
+		}
+
+		#President is RD
+		if = {
+			limit = {
+				OR = {
+					has_government = conservative_democracy
+					has_government = liberal_democracy
+				}
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = -0.015
+			}
+			add_popularity = {
+				ideology = authoritarian_democracy
+				popularity = -0.01
+			}
+			add_popularity = {
+				ideology = liberal_democracy
+				popularity = 0.015
+			}
+			add_popularity = {
+				ideology = conservative_democracy
+				popularity = 0.01
+			}
+			custom_effect_tooltip = USA_add_RD_popularity_med
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.1 }
+					divide_variable = { NPP_Y_bonus_popularity = 1.1 }
+					divide_variable = { NPP_L_bonus_popularity = 1.1 }
+					US_underdog_NPP_5_5 = yes
+				}
+			}
+		}
+
+		USA = { #flavor events
+			hidden_effect = {
+				country_event = {
+					id = usindoflavor.6
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+#FRI Loses
+country_event = {
+	id = USA_INS.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_INS.3"}
+	title = USA_INS.3.t
+	desc = USA_INS.3.d
+	picture = GFX_report_event_us_congress3
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_INS.3.a
+
+		USA_ICW_end_effect = yes
+		add_stability = -0.03
+		add_political_power = -100
+		USA_reload_presidential_tree = yes
+		custom_effect_tooltip = USA_subtract_societal_unity_small
+		add_to_variable = { USA_unity = -0.5 }
+		#President is RD
+		if = {
+			limit = {
+				OR = {
+					has_government = conservative_democracy
+					has_government = liberal_democracy
+				}
+			}
+			add_popularity = {
+				ideology = liberal_democracy
+				popularity = -0.015
+			}
+			add_popularity = {
+				ideology = conservative_democracy
+				popularity = -0.01
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.015
+			}
+			add_popularity = {
+				ideology = authoritarian_democracy
+				popularity = 0.01
+			}
+			custom_effect_tooltip = USA_NPP_popularity_grows
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.1 }
+					subtract_from_variable = { RD_R_bonus_popularity = 0.15}
+					subtract_from_variable = { RD_D_bonus_popularity = 0.15}
+					if = {
+						limit = { check_variable = {NPP_Y_bonus_popularity < NPP_L_bonus_popularity}}
+						add_to_variable = { NPP_L_bonus_popularity = 0.25}
+						else = { add_to_variable = { NPP_Y_bonus_popularity = 0.25}}
+					}
+				}
+
+				every_owned_state = {
+					limit = { check_variable = { RD_popularity > NPP_popularity } }
+					subtract_from_variable = { RD_popularity = 0.1 }
+				}
+
+				every_owned_state = {
+					limit = {
+						OR = {
+							check_variable = { nationality = 83 } #Dixie
+							check_variable = { nationality = 82 } #Yankee
+							check_variable = { nationality = 84 } #African American
+						}
+					}
+					subtract_from_variable = { RD_popularity = 0.1 }
+					US_underdog_NPP_2_2 = yes
+				}
+			}
+		}
+		#President is NPP
+		else_if = {
+			limit = {
+				OR = {
+					has_government = authoritarian_democracy
+					has_government = social_democracy
+				}
+			}
+			add_popularity = {
+				ideology = social_democracy
+				popularity = -0.015
+			}
+			add_popularity = {
+				ideology = authoritarian_democracy
+				popularity = -0.01
+			}
+			add_popularity = {
+				ideology = liberal_democracy
+				popularity = 0.015
+			}
+			add_popularity = {
+				ideology = conservative_democracy
+				popularity = 0.01
+			}
+			custom_effect_tooltip = USA_add_RD_popularity_med
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.1 }
+					subtract_from_variable = { NPP_C_bonus_popularity = 0.15}
+					subtract_from_variable = { NPP_FR_bonus_popularity = 0.15}
+					if = {
+						limit = { check_variable = {NPP_Y_bonus_popularity < NPP_L_bonus_popularity}}
+						add_to_variable = { NPP_L_bonus_popularity = 0.25}
+						else = { add_to_variable = { NPP_Y_bonus_popularity = 0.25}}
+					}
+				}
+
+				every_owned_state = {
+					limit = { check_variable = { NPP_popularity > RD_popularity } }
+					subtract_from_variable = { NPP_popularity = 0.02}
+				}
+
+				every_owned_state = {
+					limit = {
+						OR = {
+							check_variable = { nationality = 86 } #Southwestern
+							check_variable = { nationality = 87 } #Rockies
+							check_variable = { nationality = 85 } #Steel Belt
+							check_variable = { nationality = 88 } #Pacific
+						}
+					}
+					subtract_from_variable = { NPP_popularity = 0.1 }
+					US_underdog_RD_2_2 = yes
+				}
+			}
+		}
+		USA = { #flavor events
+			hidden_effect = {
+				country_event = {
+					id = usindoflavor.7
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+#I moved USA_INS.4 a bit lower below
+
+#FRI wins, USA did not get involved
+country_event = {
+	id = USA_INS.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_INS.5"}
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+
+		USA_ICW_end_effect = yes
+		if = {
+			limit = {
+				OR = {
+					has_government = conservative_democracy
+					has_government = liberal_democracy
+				}
+			}
+			every_owned_state = {
+				limit = { can_have_elections_in_state = yes}
+				divide_variable = { NPP_Y_bonus_popularity = 1.1 }
+				divide_variable = { NPP_L_bonus_popularity = 1.1 }
+				add_to_variable = { RD_popularity = 0.02}
+				US_underdog_RD_2_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_government = social_democracy
+					has_government = authoritarian_democracy
+				}
+			}
+			every_owned_state = {
+				limit = { can_have_elections_in_state = yes}
+				divide_variable = { NPP_Y_bonus_popularity = 1.1 }
+				divide_variable = { NPP_L_bonus_popularity = 1.1 }
+				add_to_variable = { NPP_popularity = 0.02 }
+				US_underdog_RD_2_2 = yes
+			}
+		}
+	}
+}
+
+#FRI loses, USA did not get involved
+country_event = {
+	id = USA_INS.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_INS.6"}
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		USA_ICW_end_effect = yes
+
+		if = {
+			limit = {
+				OR = {
+					has_government = conservative_democracy
+					has_government = liberal_democracy
+				}
+			}
+
+			custom_effect_tooltip = USA_NPP_popularity_grows_low
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.02 }
+					subtract_from_variable = { RD_R_bonus_popularity = 0.03}
+					subtract_from_variable = { RD_D_bonus_popularity = 0.03}
+					if = {
+						limit = { check_variable = {NPP_Y_bonus_popularity < NPP_L_bonus_popularity}}
+						add_to_variable = { NPP_L_bonus_popularity = 0.05}
+						else = { add_to_variable = { NPP_Y_bonus_popularity = 0.05}}
+					}
+				}
+
+				every_owned_state = {
+					limit = {
+						OR = {
+							check_variable = { nationality = 83 } #Dixie
+							check_variable = { nationality = 82 } #Yankee
+							check_variable = { nationality = 84 } #African American
+						}
+					}
+					subtract_from_variable = { RD_popularity = 0.02 }
+					US_underdog_1_1 = yes
+				}
+			}
+
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_government = social_democracy
+					has_government = authoritarian_democracy
+				}
+			}
+			custom_effect_tooltip = USA_add_RD_popularity_low
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.02 }
+					subtract_from_variable = { NPP_C_bonus_popularity = 0.03}
+					subtract_from_variable = { NPP_FR_bonus_popularity = 0.03}
+					if = {
+						limit = { check_variable = {NPP_Y_bonus_popularity < NPP_L_bonus_popularity}}
+						add_to_variable = { NPP_L_bonus_popularity = 0.05}
+						else = { add_to_variable = { NPP_Y_bonus_popularity = 0.05}}
+					}
+				}
+
+				every_owned_state = {
+					limit = {
+						OR = {
+							check_variable = { nationality = 86 } #Southwestern
+							check_variable = { nationality = 87 } #Rockies
+							check_variable = { nationality = 85 } #Steel Belt
+							check_variable = { nationality = 88 } #Pacific
+						}
+					}
+					subtract_from_variable = { NPP_popularity = 0.02 }
+					US_underdog_1_1 = yes
+				}
+			}
+		}
+	}
+}
+
+#Stalemate
+country_event = {
+	id = USA_INS.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_INS.4"}
+	title = USA_INS.4.t
+	desc = USA_INS.4.d
+	picture = GFX_report_event_us_congress3
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = USA_INS.4.a
+
+		USA_ICW_end_effect = yes
+		#somewhat negative effect. Outcome is neutral, but it took you years of war to achieve it (a bit worse than FRI win- no intervention)
+		
+		if = {
+			limit = {
+				OR = {
+					has_government = conservative_democracy
+					has_government = liberal_democracy
+				}
+			}
+
+			custom_effect_tooltip = USA_NPP_popularity_grows_low
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.04 }
+					subtract_from_variable = { RD_R_bonus_popularity = 0.06}
+					subtract_from_variable = { RD_D_bonus_popularity = 0.06}
+					if = {
+						limit = { check_variable = {NPP_Y_bonus_popularity < NPP_L_bonus_popularity}}
+						add_to_variable = { NPP_L_bonus_popularity = 0.10}
+						else = { add_to_variable = { NPP_Y_bonus_popularity = 0.10}}
+					}
+				}
+
+				every_owned_state = {
+					limit = {
+						OR = {
+							check_variable = { nationality = 83 } #Dixie
+							check_variable = { nationality = 82 } #Yankee
+							check_variable = { nationality = 84 } #African American
+						}
+					}
+					subtract_from_variable = { RD_popularity = 0.04 }
+					US_underdog_1_1 = yes
+				}
+			}
+
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_government = social_democracy
+					has_government = authoritarian_democracy
+				}
+			}
+			custom_effect_tooltip = USA_add_RD_popularity_low
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.04 }
+					subtract_from_variable = { NPP_C_bonus_popularity = 0.06}
+					subtract_from_variable = { NPP_FR_bonus_popularity = 0.06}
+					if = {
+						limit = { check_variable = {NPP_Y_bonus_popularity < NPP_L_bonus_popularity}}
+						add_to_variable = { NPP_L_bonus_popularity = 0.1}
+						else = { add_to_variable = { NPP_Y_bonus_popularity = 0.1}}
+					}
+				}
+
+				every_owned_state = {
+					limit = {
+						OR = {
+							check_variable = { nationality = 86 } #Southwestern
+							check_variable = { nationality = 87 } #Rockies
+							check_variable = { nationality = 85 } #Steel Belt
+							check_variable = { nationality = 88 } #Pacific
+						}
+					}
+					subtract_from_variable = { NPP_popularity = 0.04 }
+					US_underdog_1_1 = yes
+				}
+			}
+		}
+	}
+}
+
+#Stalemate, USA did not get involved
+country_event = {
+	id = USA_INS.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_INS.7"}
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		USA_ICW_end_effect = yes
+		#mixed effects, some people are are unhappy that you didnt go and tip the balance, while others are happy you stayed out/didnt escalate to nuclear war
+
+		if = { #if RD is in power, RD voters are happy for non-escalation
+			limit = {
+				OR = {
+					has_government = conservative_democracy
+					has_government = liberal_democracy
+				}
+			}
+			custom_effect_tooltip = USA_add_RD_popularity_low
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.02}
+				}
+			}
+		}
+
+		else_if = { #if NPP is in power, NPP voters are unhappy with non-hawkishness
+			limit = {
+				OR = {
+					has_government = social_democracy
+					has_government = authoritarian_democracy
+				}
+			}
+			custom_effect_tooltip = USA_NPP_popularity_decrease_low
+			hidden_effect = {
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					subtract_from_variable = { NPP_popularity = 0.02}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = USA_RD_INS.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_RD_INS.10"}
+
+	title = USA_RD_INS.10.t
+	desc = USA_RD_INS.10.d
+	picture = GFX_report_event_generic_people
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_RD_INS.10.a
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_government = social_democracy
+						has_government = authoritarian_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.01 }
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_government = conservative_democracy
+						has_government = liberal_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.01 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = USA_RD_INS.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_RD_INS.10"}
+
+	title = USA_RD_INS.11.t
+	desc = USA_RD_INS.11.d
+	picture = GFX_report_event_us_congress2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_RD_INS.11.a
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_government = social_democracy
+						has_government = authoritarian_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.025 }
+					US_underdog_RD_2_2 = yes
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_government = conservative_democracy
+						has_government = liberal_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.025 }
+					US_underdog_NPP_2_2 = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = USA_RD_INS.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_RD_INS.10"}
+
+	title = USA_RD_INS.12.t
+	desc = USA_RD_INS.12.d
+	picture = GFX_report_event_us_congress
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_RD_INS.12.a
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_government = social_democracy
+						has_government = authoritarian_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.03 }
+					US_underdog_RD_2_2 = yes
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_government = conservative_democracy
+						has_government = liberal_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.03 }
+					US_underdog_NPP_2_2 = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = USA_RD_INS.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_RD_INS.13"}
+
+	title = USA_RD_INS.13.t
+	desc = USA_RD_INS.13.d
+	picture = GFX_report_event_us_pentagon
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_RD_INS.13.a
+		hidden_effect = {
+
+			if = {
+				limit = {
+					OR = {
+						has_government = social_democracy
+						has_government = authoritarian_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.03 }
+					add_to_variable = { NPP_L_bonus_popularity = 0.02 }
+					add_to_variable = { NPP_Y_bonus_popularity = 0.02 }
+					US_underdog_RD_2_2 = yes
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_government = conservative_democracy
+						has_government = liberal_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.03 }
+					add_to_variable = { NPP_L_bonus_popularity = 0.02 }
+					add_to_variable = { NPP_Y_bonus_popularity = 0.02 }
+					US_underdog_NPP_2_2 = yes
+
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = USA_RD_INS.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_RD_INS.14"}
+
+	title = USA_RD_INS.14.t
+	desc = USA_RD_INS.14.d
+	picture = GFX_report_event_iberia_meeting_table
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_RD_INS.14.a
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_government = social_democracy
+						has_government = authoritarian_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { RD_popularity = 0.04 }
+					add_to_variable = { NPP_L_bonus_popularity = 0.02 }
+					add_to_variable = { NPP_Y_bonus_popularity = 0.02 }
+					US_underdog_RD_2_2 = yes
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_government = conservative_democracy
+						has_government = liberal_democracy
+					}
+				}
+				every_owned_state = {
+					limit = { can_have_elections_in_state = yes }
+					add_to_variable = { NPP_popularity = 0.04 }
+					add_to_variable = { NPP_L_bonus_popularity = 0.02 }
+					add_to_variable = { NPP_Y_bonus_popularity = 0.02 }
+					US_underdog_NPP_2_2 = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = USA_RD_INS.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event USA_RD_INS.14"}
+
+	title = USA_RD_INS.14.t
+	desc = USA_RD_INS.14.d
+	picture = GFX_report_event_us_presidential_podium
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = USA_RD_INS.14.a
+		hidden_effect = {
+			set_country_flag = USA_INS_1_YEAR
+		}
+	}
+}
+
+#flavor events
+

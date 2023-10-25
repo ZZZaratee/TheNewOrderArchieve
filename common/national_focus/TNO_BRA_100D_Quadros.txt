@@ -1,0 +1,468 @@
+
+#Now onto the hard part
+shared_focus = {
+	id = BRA_now_onto_the_hard_part
+	icon = GFX_BRA_Now_Onto_the_Hard_Part
+	x = 5
+	y = 0
+	cost = 2
+	allow_branch = {
+        always = yes
+    }
+	available = {
+		has_country_leader = {
+			name = "Jânio Quadros"
+			ruling_only = yes
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_now_onto_the_hard_part"
+		add_political_power = 20
+		country_event = {
+			id = brazil.272
+		}
+	}
+}
+
+#Establishing the Cabinet
+shared_focus = {
+	id = BRA_establishing_the_cabinet
+	icon = GFX_JAP_cabinet_reshuffle
+	x = 0
+	y = 1
+	relative_position_id = BRA_now_onto_the_hard_part
+	cost = 3
+	available = {
+		has_country_leader = {
+			name = "Jânio Quadros"
+			ruling_only = yes
+		}
+	}
+	prerequisite = { focus = BRA_now_onto_the_hard_part  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_establishing_the_cabinet"
+		country_event = {
+			id = brazil.152
+		}
+	}
+}
+
+#Calm the Military
+shared_focus = {
+	id = BRA_calm_the_military
+	icon = GFX_generic_tank_warfare
+	x = -2
+	y = 1
+	relative_position_id = BRA_establishing_the_cabinet
+	cost = 3
+	prerequisite = { focus = BRA_establishing_the_cabinet  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_calm_the_military"
+		country_event = {
+			id = brazil.153
+		}
+		add_stability = 0.02
+	}
+}
+
+#Apologies and Compromises
+shared_focus = {
+	id = BRA_apologies_and_compromises
+	icon = GFX_GER_The_Ghetto_Compromise
+	x = 0
+	y = 1
+	relative_position_id = BRA_calm_the_military
+	cost = 3
+	prerequisite = { focus = BRA_calm_the_military  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_apologies_and_compromises"
+		BRA_military_increase_loyalty_low = yes
+	}
+}
+
+#Pay rise for the Officer
+shared_focus = {
+	id = BRA_pay_rise_for_the_officer
+	icon = GFX_ANG_pay_them_well
+	x = 0
+	y = 1
+	relative_position_id = BRA_apologies_and_compromises
+	cost = 3
+	prerequisite = { focus = BRA_apologies_and_compromises  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_pay_rise_for_the_officer"
+		BRA_military_increase_loyalty_med = yes
+		BRA_military_increase_nepotism_med = yes
+		
+		set_temp_variable = { military_costs_temp = 0.01 }
+		econ_military_costs_change  = yes
+
+		hidden_effect = {
+		add_ideas = BRA_officersalaries_econ
+		}
+	}
+}
+
+#Dealing with Vipers
+shared_focus = {
+	id = BRA_dealing_with_vipers
+	icon = GFX_BRA_The_Crow_And_the_Bull
+	x = 2
+	y = 1
+	relative_position_id = BRA_establishing_the_cabinet
+	cost = 3
+	prerequisite = { focus = BRA_establishing_the_cabinet  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_dealing_with_vipers"
+		add_popularity = {
+			ideology = conservative_democracy
+			popularity = 0.05
+		}
+		    hidden_effect = {
+		        country_event = {
+				id = brazil.344
+				days = 7
+			}
+	    }
+	}
+}
+
+#Lacerda's Hypocrisy
+shared_focus = {
+	id = BRA_lacerdas_hypocrisy
+	icon = GFX_BRA_Lacerdas_Hypocrisy
+	x = -1
+	y = 1
+	relative_position_id = BRA_dealing_with_vipers
+	cost = 3
+	prerequisite = { focus = BRA_dealing_with_vipers  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_lacerdas_hypocrisy"
+		add_political_power = 30
+	}
+}
+
+#Expose the Crows Lie
+shared_focus = {
+	id = BRA_expose_the_crows_lie
+	icon = GFX_BRA_Expose_the_Crows_Lies
+	x = 0
+	y = 1
+	relative_position_id = BRA_lacerdas_hypocrisy
+	cost = 3
+	prerequisite = { focus = BRA_lacerdas_hypocrisy  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_expose_the_crows_lie"
+        country_event = {
+			id = brazil.154
+		}
+	}
+}
+
+#Adhemar's corruption
+shared_focus = {
+	id = BRA_adhemars_corruption
+	icon = GFX_BRA_Adhemars_Corruption
+	x = 1
+	y = 1
+	relative_position_id = BRA_dealing_with_vipers
+	cost = 3
+	prerequisite = { focus = BRA_dealing_with_vipers  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_adhemars_corruption"
+		add_popularity = {
+			ideology = authoritarian_democracy
+			popularity = -0.02
+		}
+	}
+}
+
+#Raid his office
+shared_focus = {
+	id = BRA_raid_his_office
+	icon = GFX_BRA_Raid_His_Office
+	x = 0
+	y = 1
+	relative_position_id = BRA_adhemars_corruption
+	cost = 3
+	prerequisite = { focus = BRA_adhemars_corruption  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_raid_his_office"
+		country_event = {
+		    id = brazil.273
+	    }
+	}
+}
+
+
+#The Diplomatic Shuffle
+shared_focus = {
+	id = BRA_the_diplomatic_shuffle
+	icon = GFX_WAL_Generic_Papers
+	x = 2
+	y = 1
+	relative_position_id = BRA_pay_rise_for_the_officer
+	cost = 3
+	prerequisite = { focus = BRA_pay_rise_for_the_officer  }
+	prerequisite =  { focus =  BRA_expose_the_crows_lie }
+	prerequisite = { focus = BRA_raid_his_office }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_diplomatic_shuffle"
+		country_event = {
+			id = brazil.157
+		}
+		hidden_effect = {
+			BRA = {
+				country_event = {
+					id = brazil.155
+					days = 21
+				}
+			}
+		}
+	}
+}
+
+#Withdraw from South Africa
+shared_focus = {
+	id = BRA_withdraw_from_south_africa
+	icon = GFX_BRA_withdraw_from_south_africa
+	x = 0
+	y = 1
+	relative_position_id = BRA_the_diplomatic_shuffle
+	cost = 4
+	prerequisite = { focus = BRA_the_diplomatic_shuffle  }
+    bypass = {
+		SAF = { has_volunteers_amount_from = { tag = BRA count = 0 } }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_withdraw_from_south_africa"
+		custom_effect_tooltip = BRA_pl_withdraw_forces_tooltip
+		hidden_effect = {
+			set_variable = { BRA_pl_bill_id = 6 }
+			set_variable = { BRA_pl_ptb_support_pct = 0.20 }
+			set_variable = { BRA_pl_psd_support_pct = 0.30 }
+			set_variable = { BRA_pl_udn_support_pct = 0.65 }
+			set_variable = { BRA_pl_psp_support_pct = 0.0 }
+			set_variable = { BRA_pl_prp_support_pct = 0.0 }
+			BRA_initialize_bill = yes
+			set_variable = { BRA_pl_vote_days = 28 }
+			BRA_call_bill_vote = yes
+		}
+	}
+}
+
+#The German Connection
+shared_focus = {
+	id = BRA_the_german_connection
+	icon = GFX_TNO_generic_germany
+	x = 2
+	y = 1
+	relative_position_id = BRA_withdraw_from_south_africa
+	cost = 3
+	prerequisite = { focus = BRA_withdraw_from_south_africa  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_german_connection"
+		country_event = {
+			id = brazil.159
+		}
+	}
+}
+
+#Connection with the Corps
+shared_focus = {
+	id = BRA_connection_with_the_corps
+	icon = GFX_TNO_generic_despair
+	x = 1
+	y = 1
+	relative_position_id = BRA_the_german_connection
+	cost = 3
+	prerequisite = { focus = BRA_the_german_connection  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_connection_with_the_corps"
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		set_temp_variable = { 
+			pus_temp = 2
+		}
+		econ_pus_change = yes
+		
+		add_stability = -0.02
+	}
+}
+
+#The Japanese Ambassador
+shared_focus = {
+	id = BRA_the_japanese_ambassador
+	icon = GFX_JAP_YSK_Generic
+	x = -2
+	y = 1
+	relative_position_id = BRA_withdraw_from_south_africa
+	cost = 3
+	prerequisite = { focus = BRA_withdraw_from_south_africa  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_japanese_ambassador"
+		country_event = {
+			id = brazil.156
+		}
+	}
+}
+
+#Reassure the Americans
+shared_focus = {
+	id = BRA_reassure_the_americans
+	icon = GFX_TNO_generic_america
+	x = 0
+	y = 1
+	relative_position_id = BRA_withdraw_from_south_africa
+	cost = 3
+	prerequisite = { focus = BRA_withdraw_from_south_africa  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_reassure_the_americans"
+		country_event = {
+			id = brazil.158
+		}
+	}
+}
+
+#End restrictions on immigration
+shared_focus = {
+	id = BRA_end_restrictions_on_immigration
+	icon = GFX_VIN_Japanese_Army
+	x = -1
+	y = 1
+	relative_position_id = BRA_the_japanese_ambassador
+	cost = 3
+	prerequisite = { focus = BRA_the_japanese_ambassador  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_end_restrictions_on_immigration"
+		country_event = {
+			id = brazil.164
+		}
+	}
+}
+
+#Maintain business connections
+shared_focus = {
+	id = BRA_maintain_business_connections
+	icon = GFX_Generic_Good_Economy
+	x = 0
+	y = 1
+	relative_position_id = BRA_reassure_the_americans
+	cost = 3
+	prerequisite = { focus = BRA_reassure_the_americans  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_maintain_business_connections"
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		set_temp_variable = { 
+			temp_econ_GDP_boost_percentage = 0.01
+		}
+		econ_GDP_boost_once_percentage = yes
+		
+		set_temp_variable = { 
+			pus_temp = 2
+		}
+		econ_pus_change = yes
+	}
+}
+
+#A trip to Tokyo
+shared_focus = {
+	id = BRA_a_trip_to_tokyo
+	icon = GFX_Generic_Sphere_free_trade
+	x = 1
+	y = 1
+	relative_position_id = BRA_end_restrictions_on_immigration
+	cost = 3
+	prerequisite = { focus = BRA_end_restrictions_on_immigration  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_a_trip_to_tokyo"
+		country_event = {
+			id = brazil.160
+		}
+	}
+}
+
+#Continue CIA connections
+shared_focus = {
+	id = BRA_continue_cia_connections
+	icon = GFX_USA_CIA
+	x = 0
+	y = 1
+	relative_position_id = BRA_maintain_business_connections
+	cost = 3
+	prerequisite = { focus = BRA_maintain_business_connections  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_continue_cia_connections"
+		add_stability = 0.02
+	}
+}
+
+#A Formal Dinner
+shared_focus = {
+	id = BRA_a_formal_dinner
+	icon = GFX_TNO_generic_investigation
+	x = -1
+	y = 1
+	relative_position_id = BRA_connection_with_the_corps
+	cost = 3
+	prerequisite = { focus = BRA_connection_with_the_corps  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_a_formal_dinner"
+		country_event = {
+			id = brazil.161
+		}
+	}
+}
+
+#The starter complete
+shared_focus = {
+	id = BRA_the_starter_complete
+	icon = GFX_BRA_The_Starter_Complete
+	x = 2
+	y = 2
+	relative_position_id = BRA_a_trip_to_tokyo
+	cost = 4
+	prerequisite = { focus = BRA_a_trip_to_tokyo }
+	prerequisite = { focus = BRA_continue_cia_connections }
+	prerequisite = { focus = BRA_a_formal_dinner }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_the_starter_complete"
+		add_stability = 0.05
+		country_event = {
+			id = brazil.162
+		}
+	}
+}
+
+#Onto the Main Course
+shared_focus = {
+	id = BRA_onto_the_main_course
+	icon = GFX_BRA_Onto_the_Main_Course
+	x = 0
+	y = 1
+	relative_position_id = BRA_the_starter_complete
+	cost = 3
+	prerequisite = { focus = BRA_the_starter_complete  }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRA_onto_the_main_course"
+		country_event = {
+			id = brazil.163
+		}
+		add_stability = -0.01
+	}
+}

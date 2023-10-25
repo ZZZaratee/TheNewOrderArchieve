@@ -1,0 +1,62 @@
+﻿capital = 1441
+add_ideas = {
+	# Ministers
+		TAM_hog
+		TAM_for
+		TAM_eco
+		TAM_sec
+	# Economic Laws
+		tno_trade_laws_closed_economy
+		tno_income_taxation_elite_tax_exemptions
+		tno_minimum_wage_no_minimum_wage
+		tno_max_workhours_unlimited_work_day
+	# Social Laws
+		tno_safety_no_regulations
+		tno_health_care_support_for_emergencies
+		tno_pollution_no_controls
+		tno_education_elite_only
+		tno_penal_system_penal_slavery
+		tno_lgbt_rights_lgbt_outlawed
+	# Political Laws
+		tno_political_parties_one_party_state
+		tno_religious_rights_state_atheism
+		tno_trade_unions_illegal
+		tno_immigration_closed_borders
+		tno_slavery_allowed
+		tno_press_rights_state_press_only
+		tno_vote_franchise_no_voting
+		tno_refugees_banned
+		tno_public_meetings_outlawed
+	# Military Laws
+		tno_conscription_service_by_requirement
+		tno_women_combat_roles
+		tno_military_supervision_no_supervision
+		tno_training_basic_training
+		tno_racial_integration_none
+		tno_draft_exemptions_civil_service_deferment
+	# Socital Development
+		tno_academic_base_secondary_schooling
+		tno_research_facilities_outdated
+		tno_agriculture_modern
+		tno_industrial_equipment_modern
+		tno_industrial_expertise_experienced
+		tno_army_professionalism_reluctant_conscripts
+		
+}
+set_politics = {
+	ruling_party = fascism
+	last_election = "1941.4.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = { fascism = 100 }
+create_country_leader = {
+	name = "Vladimir Gil"
+	desc = "MSK_DISSOLUTION_TAM_LEADER_DESC"
+	picture = "gfx/leaders/Moskowien/TAM.dds"
+	expire = "1999.1.1"
+	ideology = fascism_corporate_statism_subtype
+	traits = {}
+}
+
+set_variable = {TNO_economy_type = 2}

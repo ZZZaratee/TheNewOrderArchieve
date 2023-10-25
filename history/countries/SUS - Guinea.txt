@@ -1,0 +1,326 @@
+﻿capital = 828
+
+oob = "SUS_1962"
+add_manpower = 500000
+set_major = yes
+
+SUS = {
+ 	set_cosmetic_tag = SUS_FIXED
+}
+
+add_ideas = {
+	WEST_AFRICA_idea_terror_bombing
+	SUS_idea_guinean_democracy
+	SUS_idea_home_exiled_paigc
+
+	SUS_Louis_Lansana_Beavogui_hog
+	SUS_Ismael_Toure_for
+	SUS_NFamara_Keita_eco
+	SUS_Noumandian_Keita_sec
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	tno_refugees_skilled
+	#military#
+	tno_conscription_service_by_requirement
+	tno_women_military_assistance
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_generous_subsidies
+	#social#
+	tno_safety_acceptable_regulations
+	tno_health_care_low_income_protections
+	tno_pollution_some_regulations
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_police 
+	#social development 
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+set_technology = {
+	# Infantry
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+	infantry_weapons_3 = 1
+	tech_mountaineers = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	night_vision_1 = 1
+	infantry_at = 1
+	motorized_infantry = 1
+#	motorized_infantry_1 = 1
+	
+# Support
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	
+# Armor
+	mechanised_infantry3 = 1
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	APC_1950 = 1
+	IFV_1950 = 1
+	MBT_1950 = 1
+	
+# Artillery
+	artillery4 = 1
+	antiair5 = 1
+	
+# Land Doctrine
+	strategic_theorem = 1
+	
+# Naval
+	ww2_submarine = 1
+	basic_submarine = 1
+	ww2_destroyer = 1
+	basic_destroyer = 1
+	ww2_cruiser = 1
+	basic_cruiser = 1
+	improved_cruiser = 1
+	ww2_battleship = 1
+	ww2_carrier = 1
+	early_carrier = 1
+	transport = 1
+	
+# Naval Doctrine
+	#fleet_in_being = 1
+	
+# Helicopters
+	very_early_helicopter = 1
+	early_helicopter = 1
+	
+# Light Aircraft
+	early_fighter = 1
+	fighter_1945 = 1
+	cv_1945_fighter = 1
+	fighter_1950 = 1
+	cv_1950_fighter = 1
+	interceptor_1945 = 1
+	interceptor_1950 = 1
+	CAS_1945 = 1
+	cv_1945_CAS = 1
+	CAS_1950 = 1
+	cv_1950_CAS = 1
+	
+# Heavy Aircraft
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+	transport_air_1960 = 1
+
+# Electronics
+	electronic_mechanical_engineering = 1
+	radio = 1
+	helicopter_engines = 1
+	jet_engines = 1
+	jet_engines_bombers = 1
+
+# Industry
+	ww2_line_production = 1
+	building_construction_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	administration_construction_1 = 1
+	military_construction_1 = 1
+	resource_extraction_methods = 1
+}
+
+set_politics = {	
+	ruling_party = socialist
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 34
+    social_democracy = 0
+    liberal_democracy = 13
+
+    conservative_democracy = 16
+    authoritarian_democracy = 25
+    despotism = 10
+    fascism = 2
+    
+}
+
+create_country_leader = {
+	name = "Amílcar Cabral"
+	desc = "POLITICS_AMILCAR_CABRAL_DESC"
+	picture = "Portrait_Susu_Amilcar_Cabral.dds"
+	expire = "1965.1.1"
+	ideology = communist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Koumandian Keita"
+	desc = "POLITICS_KOUMANDIAN_KEITA_DESC"
+	picture = "Portrait_Guinea_Koumandian_Keita.dds"
+	expire = "1999.1.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ahmed Sékou Touré"
+	desc = "POLITICS_AHMED_SEKOU_TOURE_DESC"
+	picture = "Portrait_Susu_Ahmed_Sekou_Toure.dds"
+	expire = "1965.1.1"
+	ideology = socialist_panafricanism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Saïfoulaye Diallo"
+	desc = "POLITICS_SAIFOULAYE_DIALLO_DESC"
+	picture = "Portrait_Susu_Saifoulaye_Diallo.dds"
+	expire = "1965.1.1"
+	ideology = liberal_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Louis Lansana Beavogui"
+	desc = "POLITICS_LOUIS_LANSANA_BEAVOGUI_DESC"
+	picture = "Portrait_Susu_Louis_Lansana_Beavogui.dds"
+	expire = "1965.1.1"
+	ideology = conservative_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Noumandian Keita"
+	desc = "POLITICS_NOUMANDIAN_KEITA_DESC"
+	picture = "Portrait_Susu_Noumandian_Keita.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Diarra Traoré"
+	desc = "POLITICS_ Diarra Traoré _DESC"
+	picture = "Portrait_Susu_Diarra_Traore.dds"
+	expire = "1965.1.1"
+	ideology = despotism_subtype
+	traits = {
+		#
+	}
+}
+
+create_field_marshal  = {
+    name = "Noumandian Keita"
+    picture = "Portrait_Susu_Noumandian_Keita.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_field_marshal  = {
+    name = "Sidy Mahmoud Keita"
+    picture = "Portrait_Susu_Sidy_Mahmoud_Keita.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Amílcar Cabral"
+    picture = "Portrait_Susu_Amilcar_Cabral.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Lansana Diané"
+    picture = "Portrait_Susu_Lansana_Diane.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Siaka Touré"
+    picture = "Portrait_Susu_Siaka_Toure.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Thierno Ibrahima Diallo"
+    picture = "Portrait_Susu_Thierno_Ibrahima_Diallo.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}

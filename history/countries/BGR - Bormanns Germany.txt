@@ -1,0 +1,135 @@
+﻿capital = 64
+
+oob = "BGR_1962"
+
+###Playable
+set_country_flag = tno_playable_country
+
+add_ideas = {
+    ## Laws
+	# Political
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_allowed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_registered_voting
+	tno_refugees_skilled
+	# Military
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_kill_em_all
+	tno_training_basic_training
+	tno_racial_integration_none
+	tno_draft_exemptions_none
+	# Social
+	tno_safety_minimal_regulations
+	tno_health_care_low_income_protections
+	tno_pollution_good_regulations
+	tno_education_public_education
+	tno_penal_system_penal_slavery
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_oppression
+	tno_security_police
+	# Economic
+	tno_trade_laws_limited_exports
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_14_hour_work_day
+	tno_child_labor_restricted
+	tno_pensions_low_pensions
+	tno_unemployment_no_subsidies
+	###MINISTERS###
+    BGR_Baldur_von_Schirach_hog
+	BGR_Wilhelm_Burgdorf_sec
+	BGR_Walther_Hewel_for
+	BGR_Kurt_Lange_eco
+}
+
+### Policy Effectiveness
+set_country_flag = tno_defined_startup_effectiveness
+
+
+### Political
+set_variable = { tno_political_parties_effectiveness = 80 }
+set_variable = { tno_religious_rights_effectiveness = 33 }
+set_variable = { tno_trade_unions_effectiveness = 100 }
+set_variable = { tno_immigration_effectiveness = 100 }
+set_variable = { tno_slavery_effectiveness = 90 }
+set_variable = { tno_public_meetings_effectiveness = 70 }
+set_variable = { tno_press_rights_effectiveness = 85 }
+set_variable = { tno_vote_franchise_effectiveness = 100 }
+set_variable = { tno_refugees_effectiveness = 95 }
+
+### Military
+set_variable = { tno_conscription_effectiveness = 70 }
+set_variable = { tno_women_effectiveness = 100 }
+set_variable = { tno_military_supervision_effectiveness = 90 }
+set_variable = { tno_training_effectiveness = 55 }
+set_variable = { tno_racial_integration_effectiveness = 100 }
+set_variable = { tno_draft_exemptions_effectiveness = 80 }
+
+### Social
+set_variable = { tno_safety_effectiveness = 50 }
+set_variable = { tno_health_care_effectiveness = 65 }
+set_variable = { tno_pollution_effectiveness = 20 }
+set_variable = { tno_education_effectiveness = 60 }
+set_variable = { tno_penal_system_effectiveness = 85 }
+set_variable = { tno_lgbt_rights_effectiveness = 100 }
+set_variable = { tno_gender_rights_effectiveness = 80 }
+set_variable = { tno_minorities_effectiveness = 100 }
+set_variable = { tno_security_effectiveness = 80 }
+
+### Economic
+set_variable = { tno_trade_laws_effectiveness = 80 }
+set_variable = { tno_income_taxation_effectiveness = 40 }
+set_variable = { tno_minimum_wage_effectiveness = 45 }
+set_variable = { tno_max_workhours_effectiveness = 60 }
+set_variable = { tno_child_labor_effectiveness = 65 }
+set_variable = { tno_pensions_effectiveness = 55 }
+set_variable = { tno_unemployment_effectiveness = 55 }
+
+set_politics = {	
+	ruling_party = national_socialism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    conservative_democracy = 2
+	authoritarian_democracy = 4
+	fascism = 18
+	national_socialism = 60
+	ultranationalism = 16
+}
+
+create_country_leader = {
+	name = "Martin Bormann"
+	desc = "POLITICS_MARTIN_BORMANN_DESC"
+	picture = "Portrait_Germany_Martin_Bormann.dds"
+	expire = "1999.1.1"
+	ideology = national_socialism_subtype
+	traits = {
+		dictator
+	}
+}
+	
+create_country_leader = {
+	name = "Hans Filbinger"
+	desc = ""
+	picture = ""
+	expire = "1999.1.1"
+	ideology = authoritarian_democracy_subtype
+}
+	
+create_country_leader = {
+	name = "Eugen Gerstenmaier"
+	desc = ""
+	picture = ""
+	expire = "1999.1.1"
+	ideology = conservative_democracy_subtype
+}

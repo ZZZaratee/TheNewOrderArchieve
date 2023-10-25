@@ -1,0 +1,61 @@
+add_namespace = MSK_dissolution # Events for triggering Dissolution in Moskowien
+
+country_event = {
+	id = MSK_dissolution.1
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MSK_dissolution.1" }
+	option = {
+		MSK_SE_dissolution_spawn_MOS = yes
+		MSK_SE_dissolution_spawn_RDC = yes
+		MSK_SE_dissolution_spawn_TAM = yes
+		country_event = { id = MSK_dissolution.2 days = 3 }
+	}
+}
+country_event = {
+	id = MSK_dissolution.2
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MSK_dissolution.2" }
+	option = {
+		MSK_SE_dissolution_spawn_OKB = yes
+		MSK_SE_dissolution_spawn_PSK = yes
+		MSK_SE_dissolution_spawn_KAG = yes
+		MSK_SE_dissolution_spawn_LAK = yes
+		MSK_SE_dissolution_spawn_POS = yes
+		MSK_SE_dissolution_spawn_MZL = yes
+		MSK_SE_dissolution_spawn_SKR = yes
+		country_event = { id = MSK_dissolution.3 days = 3 }
+	}
+}
+country_event = {
+	id = MSK_dissolution.3
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MSK_dissolution.3" }
+	option = {
+		MSK_SE_dissolution_spawn_SMO = yes
+		MSK_SE_dissolution_spawn_ZLB = yes
+		MSK_SE_dissolution_spawn_PEN = yes
+		MSK_SE_dissolution_spawn_FRP = yes
+		MSK_SE_dissolution_spawn_BBB = yes
+		MSK_SE_dissolution_spawn_DFK = yes
+		MSK_SE_dissolution_spawn_RSB = yes
+		country_event = { id = MSK_dissolution.4 days = 3 }
+	}
+}
+country_event = {
+	id = MSK_dissolution.4
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MSK_dissolution.4" }
+	option = {
+		MSK_SE_dissolution_spawn_PAU = yes
+		MSK_SE_disssolution_wars = yes
+		set_variable = { global.MSK_dissolution_ongoing = 1 }
+	}
+}

@@ -1,0 +1,2159 @@
+siberia_development_decision_category = {
+	SIB_improve_resource_extraction_infrastructure = {
+
+		icon = GFX_decision_oil_extraction
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		days_remove = 50
+
+		days_re_enable = 75
+
+		cost = SIB_resource_cost?35
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SIB_improve_resource_extraction_infrastructure"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SIB_improve_resource_extraction_infrastructure"
+			SIB_increase_resources_high = yes
+			SIB_decrease_construction_speed_low = yes
+			add_to_variable = { SIB_resource_cost = 10 }
+		}
+	}
+
+	SIB_streamline_production_facilities = {
+
+		icon = GFX_decision_factory_generic_blue
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		days_remove = 60
+
+		days_re_enable = 75
+
+		cost = SIB_streamline_cost?55
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SIB_streamline_production_facilities"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SIB_streamline_production_facilities"
+			SIB_increase_ic_low = yes
+			SIB_decrease_efficiency_gain_med = yes
+			SIB_increase_max_efficiency_high = yes
+			add_to_variable = { SIB_streamline_cost = 10 }
+		}
+	}
+
+	SIB_reorganize_production_facility_networks = {
+
+		icon = GFX_decision_generic_supply
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		days_remove = 60
+
+		days_re_enable = 75
+
+		cost = SIB_reorganize_cost?55
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SIB_reorganize_production_facility_networks"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SIB_reorganize_production_facility_networks"
+			SIB_increase_ic_low = yes
+			SIB_increase_efficiency_gain_high = yes
+			SIB_decrease_max_efficiency_med = yes
+			add_to_variable = { SIB_reorganize_cost = 10 }
+		}
+	}
+
+#	SIB_optimize_consumer_goods_production = {
+#
+#		icon = GFX_decision_generic_consumer_goods
+#
+#		ai_will_do = {
+#			factor = 30
+#		}
+#
+#		days_remove = 30
+#
+#		days_re_enable = 75
+#
+#		cost = SIB_optimize_cost?45
+#
+#		complete_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision SIB_optimize_consumer_goods_production"
+#			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+#			econ_spend_money_once_effect_raw_money = yes
+#		}
+#
+#		remove_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision remove SIB_optimize_consumer_goods_production"
+#			SIB_decrease_consumer_goods_high = yes
+#			SIB_decrease_ic_low = yes
+#			add_to_variable = { SIB_optimize_cost = 10 }
+#		}
+#	}
+
+	SIB_invest_in_construction_techniques = {
+
+		icon = GFX_decision_generic_building
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		days_remove = 30
+
+		days_re_enable = 75
+
+		cost = SIB_construction_cost?35
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SIB_invest_in_construction_techniques"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SIB_invest_in_construction_techniques"
+			SIB_increase_construction_speed_high = yes
+			add_to_variable = { SIB_construction_cost = 10 }
+		}
+	}
+
+	SIB_increase_production_quotas = {
+
+		icon = GFX_decision_generic_workers
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		days_remove = 30
+
+		days_re_enable = 75
+
+		cost = SIB_quota_cost?50
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SIB_increase_production_quotas"
+			SIB_increase_ic_high = yes
+			SIB_increase_worker_tension_high = yes
+			set_temp_variable = { gdp_growth_temp = 0.1 }
+			econ_gdp_growth_change = yes
+			add_to_variable = { SIB_quota_cost = 10 }
+		}
+	}
+
+	SIB_implement_worker_concenssions = {
+
+		icon = GFX_decision_generic_political_discourse
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		days_remove = 30
+
+		days_re_enable = 75
+
+		cost = SIB_concenssion_cost?25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SIB_implement_worker_concenssions"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SIB_implement_worker_concenssions"
+			SIB_decrease_worker_tension_med = yes
+			TNO_improve_safety_policy_effectiveness_med = yes
+			SIB_decrease_ic_med = yes
+			add_to_variable = { SIB_concenssion_cost = 10 }
+		}
+	}
+
+#	SIB_divert_civilian_production = {
+#
+#		icon = GFX_decision_generic_arms_crate
+#
+#		ai_will_do = {
+#			factor = 30
+#		}
+#
+#		days_remove = 30
+#
+#		days_re_enable = 75
+#
+#		cost = SIB_divert_cost?35
+#
+#		complete_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision SIB_divert_civilian_production"
+#			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+#			econ_spend_money_once_effect_raw_money = yes
+#			add_stability = -0.025
+#		}
+#
+#		remove_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision remove SIB_divert_civilian_production"
+#			SIB_decrease_consumer_goods_high = yes
+#			SIB_increase_worker_tension_low = yes
+#			set_temp_variable = { gdp_growth_temp = 1.5 }
+#			econ_gdp_growth_change = yes
+#			add_to_variable = { SIB_divert_cost = 10 }
+#		}
+#	}
+}
+
+
+warlord_development_decision_category = {
+	warlord_development_war_planning = {
+
+		icon = GFX_decision_generic_military_parade
+
+		modifier = {
+			stability_weekly = -0.002
+			war_support_weekly = 0.003
+			planning_speed = 0.1
+		}
+
+		ai_will_do = {
+			factor = 30
+
+			modifier = {
+				factor = 0
+				has_war_support > 0.9
+			}
+		}
+
+		days_remove = 75
+
+		days_re_enable = 75
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_war_planning"
+		}
+	}
+	warlord_development_foreign_investments = {
+
+		icon = GFX_decision_generic_money
+
+		visible = {
+			NOT = {
+				tag = URL
+				tag = ORE
+				tag = MGN
+				tag = DRL
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+			consumer_goods_production_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 20
+
+			modifier = {
+				factor = 0
+				political_power_growth < 0.15
+			}
+		}
+
+		days_remove = 75
+
+		days_re_enable = 75
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_foreign_investments"
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.03 }
+				econ_state_value_change_multiply = yes
+			}
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.01 }
+				econ_state_value_change_multiply = yes
+			}
+			set_temp_variable = { temp_gdp_gained = 0.3 }
+			econ_money_reserves_change_percent_gdp = yes
+		}
+	}
+	warlord_development_foreign_investments_ural = {
+
+		icon = GFX_decision_generic_money
+
+		modifier = {
+			political_power_gain = -0.15
+			consumer_goods_production_factor = 0.1
+		}
+
+		visible = {
+			OR = {
+				tag = URL
+				tag = ORE
+				tag = MGN
+				tag = DRL
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+
+			modifier = {
+				factor = 0
+				political_power_growth < 0.15
+			}
+		}
+
+		days_remove = 75
+
+		days_re_enable = 75
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_foreign_investments"
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.01 }
+				econ_state_value_change_multiply = yes
+			}
+			set_temp_variable = { money_reserves_temp = 0.05 }
+			econ_money_reserves_change_raw_money = yes
+		}
+	}
+	warlord_development_invest_in_infrastructure = {
+
+		icon = GFX_decision_generic_infrastructure
+
+		modifier = {
+			consumer_goods_production_factor = -0.075
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = warlord_development_infrastructure_tt
+				any_owned_state = {
+					infrastructure < 10
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 35
+		}
+
+		days_remove = 75
+
+		days_re_enable = 75
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_invest_in_infrastructure"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove warlord_development_invest_in_infrastructure"
+			set_temp_variable = { temp_gdp_paid = 0.03 }
+			econ_spend_money_once_effect_GDP_percent = yes
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure < 10
+					OR = {
+						infrastructure < 5
+						NOT = {
+							owner = {
+								any_owned_state = {
+									infrastructure < 5
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			TNO_improve_safety_policy_effectiveness_low = yes
+		}
+	}
+	warlord_development_industrial_investments = {
+
+		icon = GFX_decision_factory_generic_blue
+
+		modifier = {
+			consumer_goods_production_factor = -0.1
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				num_of_factories < 5
+				factor = 10
+			}
+		}
+
+		days_remove = 60
+
+		days_re_enable = 75
+
+		cost = 75
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_industrial_investments"
+		}
+		fixed_random_seed = no
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove warlord_development_industrial_investments"
+			set_temp_variable = { pus_temp = 1 }
+            econ_pus_change = yes
+			TNO_improve_pollution_policy_effectiveness_low = yes
+		}
+	}
+	warlord_development_power_grids = {
+
+		icon = GFX_decision_generic_power
+
+		modifier = {
+			consumer_goods_production_factor = -0.1
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				power < 8
+				factor = 10
+			}
+		}
+
+		days_remove = 60
+		days_re_enable = 75
+
+		cost = 75
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_power_grids"
+		}
+		fixed_random_seed = no
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove warlord_development_power_grids"
+			random_list = {
+				65 = {
+					random_owned_controlled_state = {
+						add_resource = {
+							type = power
+							amount = 2
+						}
+					}
+				}
+				35 = {
+					random_owned_controlled_state = {
+						add_resource = {
+							type = power
+							amount = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	warlord_development_research_focus = {
+
+		icon = GFX_decision_research_generic
+
+		ai_will_do = {
+			factor = 20
+
+			modifier = {
+				factor = 0
+				political_power_growth < 0.25
+			}
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			research_speed_factor = 0.1
+		}
+
+		days_remove = 60
+
+		days_re_enable = 75
+
+		cost = 50
+
+		complete_effect = {
+			TNO_improve_academic_base_low = yes
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_research_focus"
+		}
+	}
+	warlord_development_train_troops = {
+
+		icon = GFX_decision_generic_assault
+
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+			experience_gain_army_factor = 0.05
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_manpower < 1000
+				factor = 10
+			}
+		}
+
+		days_remove = 60
+
+		days_re_enable = 75
+
+		cost = 75
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_train_troops"
+		}
+		fixed_random_seed = no
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove warlord_development_train_troops"
+			random_list = {
+				30 = {
+					TNO_improve_military_supervision_policy_effectiveness_low = yes
+				}
+				30 = {
+					TNO_improve_training_policy_effectiveness_low = yes
+				}
+				30 = {
+					TNO_improve_conscription_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_army_professionalism_low = yes
+				}
+			}
+			add_manpower = 1000
+			army_experience = 10
+		}
+	}
+	warlord_development_political_campaign = {
+
+		icon = GFX_decision_generic_propaganda
+
+		visible = {
+			always = yes
+		}
+
+		ai_will_do = {
+			factor = 30
+
+			modifier = {
+				factor = 0
+				OR = {
+					political_power_growth > 0.3
+					has_stability < 0
+					has_decision = warlord_secure_control
+				}
+			}
+		}
+
+		modifier = {
+			stability_weekly = -0.002
+			political_power_gain = 0.5
+		}
+
+		days_remove = 75
+
+		days_re_enable = 75
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_political_campaign"
+			TNO_improve_political_parties_policy_effectiveness_low = yes
+		}
+	}
+	warlord_secure_control = {
+
+		icon = GFX_decision_generic_use_force
+
+		visible = {
+			always = yes
+		}
+
+		ai_will_do = {
+			factor = 40
+
+			modifier = {
+				factor = 0
+				OR = {
+					political_power_growth < 0.2
+					has_stability > 0.9
+					has_decision = warlord_development_political_campaign
+				}
+			}
+		}
+
+		modifier = {
+			stability_weekly = 0.0025
+			political_power_gain = -0.2
+		}
+
+		days_remove = 75
+
+		days_re_enable = 75
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision warlord_development_political_campaign"
+			TNO_improve_security_policy_effectiveness_low = yes
+		}
+	}
+}
+
+regional_development_decision_category = {
+	regional_democratic_encourage_political_thought = {
+
+		icon = GFX_decision_generic_voting
+
+		available = {
+		}
+		visible = {
+			OR = {
+				has_government = authoritarian_democracy
+				has_government = social_democracy
+				has_government = liberal_democracy
+				has_government = conservative_democracy
+				AND = {
+					has_government = socialist
+					original_tag = TOM
+				}
+			}
+		}
+
+		modifier = {
+			political_power_gain = 0.5
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 60
+
+		days_re_enable = 365
+
+		cost = 65
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_democratic_encourage_political_thought"
+
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_democratic_encourage_political_thought"
+			add_stability = 0.05
+			set_temp_variable = { temp_econ_spending_amount = 0.01 }
+			econ_spend_money_once_effect_raw_money = yes
+			random_list = {
+				15 = {
+					TNO_improve_religious_rights_policy_effectiveness_med = yes
+				}
+				15 = {
+					TNO_improve_political_parties_policy_effectiveness_med = yes
+				}
+				15 = {
+					TNO_improve_public_meetings_policy_effectiveness_med = yes
+				}
+				15 = {
+					TNO_improve_vote_franchise_policy_effectiveness_med = yes
+				}
+				15 = {
+					TNO_improve_press_rights_policy_effectiveness_med = yes
+				}
+				15 = {
+					TNO_improve_vote_franchise_policy_effectiveness_med = yes
+				}
+				10 = {
+					TNO_improve_education_policy_effectiveness_med = yes
+				}
+			}
+
+
+
+			custom_effect_tooltip = regional_democratic_encourage_political_thought_tt
+			hidden_effect = {
+				add_popularity = {
+					ideology = communist
+					popularity = -0.025
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.025
+				}
+				add_popularity = {
+					ideology = ultranationalism
+					popularity = -0.025
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = -0.025
+				}
+				add_popularity = {
+					ideology = esoteric_nazism
+					popularity = -0.025
+				}
+				add_popularity = {
+					ideology = national_socialism
+					popularity = -0.025
+				}
+			}
+		}
+	}
+
+	regional_democratic_expand_state_welfare_programs = {
+
+		icon = GFX_decision_generic_political_discourse
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_development_program_ongoing_tt
+				NOT = {
+					has_country_flag = TNO_RUS_development_program_ongoing
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_government = authoritarian_democracy
+				has_government = social_democracy
+				has_government = liberal_democracy
+				has_government = conservative_democracy
+			}
+		}
+
+		modifier = {
+			consumer_goods_production_factor = 0.85
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 65
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_democratic_expand_state_welfare_programs"
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+			set_country_flag = TNO_RUS_development_program_ongoing
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_democratic_expand_state_welfare_programs"
+			random_list = {
+				25 = {
+					TNO_improve_pensions_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_pensions_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_trade_unions_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_unemployment_policy_effectiveness_med = yes
+				}
+			}
+
+			TNO_improve_poverty_low = yes
+			add_stability = 0.025
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.05 }
+			econ_GDP_boost_once_percentage = yes
+			clr_country_flag = TNO_RUS_development_program_ongoing
+		}
+	}
+
+	regional_democratic_advance_developmental_subsidies = {
+
+		icon = GFX_decision_factory_generic_blue
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_development_program_ongoing_tt
+				NOT = {
+					has_country_flag = TNO_RUS_development_program_ongoing
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_government = authoritarian_democracy
+				has_government = social_democracy
+				has_government = liberal_democracy
+				has_government = conservative_democracy
+			}
+		}
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 70
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_democratic_advance_developmental_subsidies"
+			set_temp_variable = { temp_econ_spending_amount = 0.35 }
+			econ_spend_money_once_effect_raw_money = yes
+			set_country_flag = TNO_RUS_development_program_ongoing
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_democratic_advance_developmental_subsidies"
+			random_list = {
+				20 = {
+					TNO_improve_pollution_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_trade_laws_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_unemployment_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_max_workhours_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_minimum_wage_policy_effectiveness_low = yes
+				}
+			}
+			TNO_improve_industrial_equipment_low = yes
+			clr_country_flag = TNO_RUS_development_program_ongoing
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.015 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.015 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = offices
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	regional_left_empower_workers_organizations = {
+
+		icon = GFX_decision_generic_civil_support
+
+		visible = {
+			OR = {
+				has_government = communist
+				has_government = socialist
+			}
+		}
+
+		modifier = {
+			political_power_gain = 0.35
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		days_remove = 60
+
+		days_re_enable = 365
+
+		cost = 40
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_left_empower_workers_organizations"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_left_empower_workers_organizations"
+			custom_effect_tooltip = regional_left_empower_workers_organizations_tt
+			random_list = {
+				20 = {
+					TNO_improve_religious_rights_policy_effectiveness_med = yes
+				}
+				20 = {
+					TNO_improve_trade_unions_policy_effectiveness_med = yes
+				}
+				20 = {
+					TNO_improve_safety_policy_effectiveness_med = yes
+				}
+				20 = {
+					TNO_improve_trade_laws_policy_effectiveness_med = yes
+				}
+			}
+			TNO_improve_industrial_expertise_low = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						has_government = communist
+					}
+					add_popularity = {
+						ideology = socialist
+						popularity = 0.035
+					}
+				}
+				if = {
+					limit = {
+						has_government = socialist
+					}
+					add_popularity = {
+						ideology = socialist
+						popularity = 0.035
+					}
+				}
+			}
+		}
+	}
+
+	regional_left_repurpose_soviet_infrastructure = {
+
+		icon = GFX_decision_generic_infrastructure
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_development_program_ongoing_tt
+				NOT = {
+					has_country_flag = TNO_RUS_development_program_ongoing
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_government = communist
+				has_government = socialist
+			}
+		}
+
+		modifier = {
+			consumer_goods_production_factor = -0.15
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 55
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_left_repurpose_soviet_infrastructure"
+			set_temp_variable = { temp_econ_spending_amount = 0.18 }
+			econ_spend_money_once_effect_raw_money = yes
+			set_country_flag = TNO_RUS_development_program_ongoing
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_left_repurpose_soviet_infrastructure"
+			clr_country_flag = TNO_RUS_development_program_ongoing
+			random_list = {
+				25 = {
+					TNO_improve_trade_laws_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_pollution_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_trade_laws_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_industrial_equipment_low = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_building_construction = {
+					type = offices
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = prisons
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	regional_left_escalate_land_reform_programs = {
+
+		icon = GFX_decision_mega_farm
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_development_program_ongoing_tt
+				NOT = {
+					has_country_flag = TNO_RUS_development_program_ongoing
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_government = communist
+				has_government = socialist
+			}
+		}
+
+		modifier = {
+			monthly_population = 0.15
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 55
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_left_escalate_land_reform_programs"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+			set_country_flag = TNO_RUS_development_program_ongoing
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_left_escalate_land_reform_programs"
+			clr_country_flag = TNO_RUS_development_program_ongoing
+			random_list = {
+				20 = {
+					TNO_improve_health_care_policy_effectiveness_med = yes
+				}
+				20 = {
+					TNO_improve_unemployment_policy_effectiveness_med = yes
+				}
+				20 = {
+					TNO_improve_political_parties_policy_effectiveness_med = yes
+				}
+				20 = {
+					TNO_improve_trade_unions_policy_effectiveness_med = yes
+				}
+				20 = {
+					TNO_improve_agriculture_low = yes
+				}
+			}
+			RUS_integration_cost_days_decrease = yes
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.05 }
+			econ_GDP_boost_once_percentage = yes
+		}
+	}
+
+	regional_right_revitalize_national_service_programs = {
+
+		icon = GFX_decision_generic_military_parade
+
+		available = {
+		}
+		visible = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+				has_government = ultranationalism
+				has_government = esoteric_nazism
+			}
+		}
+
+		modifier = {
+			consumer_goods_production_factor = -0.1
+			weekly_manpower = 750
+		}
+
+		ai_will_do = {
+			factor = 10
+
+		}
+
+		days_remove = 60
+
+		days_re_enable = 365
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_right_revitalize_national_service_programs"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_right_revitalize_national_service_programs"
+			random_list = {
+				20 = {
+					TNO_improve_draft_exemptions_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_military_supervision_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_military_supervision_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_training_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_conscription_policy_effectiveness_low = yes
+				}
+			}
+			add_stability = -0.025
+			add_war_support = 0.05
+			add_manpower = 10000
+		}
+	}
+	regional_right_consolidate_state_resource_corporations = {
+
+		icon = GFX_decision_oil_extraction
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_development_program_ongoing_tt
+				NOT = {
+					has_country_flag = TNO_RUS_development_program_ongoing
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+				has_government = ultranationalism
+				has_government = esoteric_nazism
+			}
+		}
+
+		modifier = {
+			consumer_goods_production_factor = -0.15
+			local_resources_factor = 0.15
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 55
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_right_consolidate_state_resource_corporations"
+			set_temp_variable = { temp_econ_spending_amount = 0.2 }
+			econ_spend_money_once_effect_raw_money = yes
+			set_country_flag = TNO_RUS_development_program_ongoing
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_right_consolidate_state_resource_corporations"
+			clr_country_flag = TNO_RUS_development_program_ongoing
+			random_list = {
+				25 = {
+					TNO_improve_pollution_policy_effectiveness_low = yes
+				}
+				25 = {
+					TNO_improve_trade_laws_policy_effectiveness_low = yes
+				}
+				25 = {
+					TNO_improve_income_taxation_policy_effectiveness_low = yes
+				}
+				25 = {
+					TNO_improve_political_parties_policy_effectiveness_low = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 5
+					has_resources_amount = {
+						resource = oil
+						amount > 1
+					}
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.025 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 5
+					has_resources_amount = {
+						resource = chromium
+						amount > 1
+					}
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.025 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					infrastructure > 5
+					has_resources_amount = {
+						resource = tungsten
+						amount > 1
+					}
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.025 }
+				econ_state_value_change_multiply = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+		}
+	}
+
+	regional_right_prioritize_military_industrial_development = {
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_development_program_ongoing_tt
+				NOT = {
+					has_country_flag = TNO_RUS_development_program_ongoing
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_government = despotism
+				has_government = fascism
+				has_government = national_socialism
+				has_government = ultranationalism
+				has_government = esoteric_nazism
+			}
+		}
+
+		modifier = {
+			consumer_goods_production_factor = -0.15
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_right_prioritize_military_industrial_development"
+			set_temp_variable = { temp_econ_spending_amount = 0.3 }
+			econ_spend_money_once_effect_raw_money = yes
+			set_country_flag = TNO_RUS_development_program_ongoing
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_right_prioritize_military_industrial_development"
+			clr_country_flag = TNO_RUS_development_program_ongoing
+			random_list = {
+				33 = {
+					TNO_improve_military_supervision_policy_effectiveness_med = yes
+				}
+				33 = {
+					TNO_improve_training_policy_effectiveness_med = yes
+				}
+				20 = {
+					TNO_improve_draft_exemptions_policy_effectiveness_med = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = barracks
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = barracks
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.03 }
+				econ_state_value_change_multiply = yes
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = prisons
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+			}
+		}
+	}
+
+	regional_invest_in_construction = {
+
+		icon = GFX_decision_generic_building
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.30
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 120
+
+		days_re_enable = 365
+
+		cost = 45
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_invest_in_construction"
+			set_temp_variable = { temp_econ_spending_amount = 0.1 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_invest_in_construction"
+		}
+	}
+
+	regional_improve_worker_training = {
+
+		icon = GFX_decision_generic_workers
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 365
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_improve_worker_training"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_improve_worker_training"
+			TNO_improve_industrial_expertise_low = yes
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 1
+				category = industry
+			}
+			random_list = {
+				75 = {
+					TNO_improve_safety_policy_effectiveness_low = yes
+					TNO_improve_pollution_policy_effectiveness_low = yes
+				}
+				20 = {
+					TNO_improve_safety_policy_effectiveness_med = yes
+					TNO_improve_pollution_policy_effectiveness_med = yes
+				}
+				5 = {
+					TNO_improve_safety_policy_effectiveness_high = yes
+					TNO_improve_pollution_policy_effectiveness_high = yes
+				}
+			}
+		}
+	}
+
+	regional_invest_in_scientific_research = {
+
+		icon = GFX_decision_research_generic
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+			research_speed_factor = 0.1
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 365
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_invest_in_scientific_research"
+			set_temp_variable = { temp_econ_spending_amount = 0.2 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_invest_in_scientific_research"
+			random_list = {
+				33 = {
+					TNO_improve_academic_base_low = yes
+				}
+				33 = {
+					TNO_improve_agriculture_low = yes
+				}
+				34 = {
+					TNO_improve_industrial_expertise_low = yes
+				}
+			}
+			TNO_improve_research_facilities_low = yes
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = offices
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+			}
+		}
+	}
+
+	regional_allocate_education_funding = {
+
+		icon = GFX_decision_generic_education
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+			research_speed_factor = 0.04
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 365
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_increase_education_funding"
+			set_temp_variable = { temp_econ_spending_amount = 0.175 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_increase_education_funding"
+			random_list = {
+				33 = {
+					TNO_improve_research_facilities_low = yes
+				}
+				33 = {
+					TNO_improve_agriculture_low = yes
+				}
+				34 = {
+					TNO_improve_industrial_expertise_low = yes
+				}
+			}
+			TNO_improve_academic_base_low = yes
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = schools
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+			}
+		}
+	}
+
+	regional_import_heavy_machinery = {
+
+		icon = GFX_decision_destroy_city
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 60
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_import_heavy_machinery"
+			set_temp_variable = { temp_econ_spending_amount = 0.175 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_import_heavy_machinery"
+			TNO_improve_industrial_equipment_med = yes
+			random_list = {
+				33 = {
+					TNO_improve_safety_policy_effectiveness_med = yes
+				}
+				33 = {
+					TNO_improve_pollution_policy_effectiveness_med = yes
+				}
+				34 = {
+					TNO_improve_max_workhours_policy_effectiveness_med = yes
+				}
+			}
+		}
+	}
+
+	regional_instate_poverty_relief_programs = {
+
+		icon = GFX_decision_generic_political_discourse
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 45
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_instate_poverty_relief_programs"
+			set_temp_variable = { temp_econ_spending_amount = 0.175 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_instate_poverty_relief_programs"
+			random_list = {
+				25 = {
+					TNO_improve_income_taxation_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_unemployment_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_trade_unions_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_minimum_wage_policy_effectiveness_med = yes
+				}
+			}
+			TNO_improve_poverty_med = yes
+			set_temp_variable = { gdp_growth_temp = 0.2 }
+			econ_gdp_growth_change = yes
+			set_temp_variable = { inflation_temp = 0.1 }
+			econ_inflation_change = yes
+		}
+	}
+
+	regional_encourage_agricultural_mechanization = {
+
+		icon = GFX_decision_industrial_farm
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 365
+
+		cost = 45
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_encourage_agricultural_mechanization"
+			set_temp_variable = { temp_econ_spending_amount = 0.145 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_encourage_agricultural_mechanization"
+			TNO_improve_agriculture_med = yes
+			random_list = {
+				25 = {
+					TNO_improve_safety_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_child_labor_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_max_workhours_policy_effectiveness_med = yes
+				}
+				25 = {
+					TNO_improve_pollution_policy_effectiveness_med = yes
+				}
+			}
+			TNO_improve_poverty_med = yes
+		}
+	}
+
+	regional_hire_foreign_instructors = {
+
+		icon = GFX_decision_generic_military_parade
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+			experience_gain_army_factor = 0.05
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 45
+
+		days_re_enable = 365
+
+		cost = 75
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_hire_foreign_instructors"
+			set_temp_variable = { temp_econ_spending_amount = 0.20 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_hire_foreign_instructors"
+			army_experience = 15
+			TNO_improve_army_professionalism_low = yes
+			random_list = {
+				15 = {
+					TNO_improve_training_policy_effectiveness_low = yes
+				}
+				15 = {
+					TNO_improve_racial_integration_policy_effectiveness_low = yes
+				}
+				15 = {
+					TNO_improve_military_supervision_policy_effectiveness_low = yes
+				}
+				15 = {
+					TNO_improve_women_policy_effectiveness_low = yes
+				}
+				15 = {
+					TNO_improve_conscription_policy_effectiveness_low = yes
+				}
+				25 = {
+					TNO_improve_draft_exemptions_policy_effectiveness_low = yes
+				}
+			}
+
+		}
+	}
+
+	regional_encourage_returning_expatriates = {
+
+		icon = GFX_COG_invitation_decision
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+			weekly_manpower = 1000
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 35
+
+		days_re_enable = 365
+
+		cost = 35
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_encourage_returning_expatriates"
+			set_temp_variable = { temp_econ_spending_amount = 0.05 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_encourage_returning_expatriates"
+			add_stability = -0.03
+			random_list = {
+				50 = {
+					TNO_improve_refugees_policy_effectiveness_low = yes
+				}
+				50 = {
+					TNO_improve_income_taxation_policy_effectiveness_low = yes
+				}
+			}
+		}
+	}
+
+	regional_initiate_propaganda_programs = {
+
+		icon = GFX_decision_generic_propaganda
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+			stability_weekly = 0.02
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 35
+
+		days_re_enable = 365
+
+		cost = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_initiate_propaganda_programs"
+			custom_effect_tooltip = regional_initiate_propaganda_programs_cost_tt
+			set_temp_variable = { temp_econ_spending_amount = 0.10 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_initiate_propaganda_programs"
+			add_war_support = 0.05
+			TNO_improve_press_rights_policy_effectiveness_med = yes
+			random_list = {
+				75 = {
+					add_manpower = 10000
+				}
+				15 = {
+					add_manpower = 25000
+				}
+				5 = {
+					add_manpower = 50000
+				}
+			}
+		}
+	}
+
+	regional_powergrid_expansion = {
+
+		icon = GFX_decision_generic_power
+
+		available = {
+		}
+		visible = {
+			always = yes
+		}
+
+		modifier = {
+			stability_weekly = 0.02
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 55
+
+		days_re_enable = 365
+
+		cost = 65
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_powergrid_expansion"
+			set_temp_variable = { temp_econ_spending_amount = 0.30 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_powergrid_expansion"
+			add_stability = 0.05
+			TNO_improve_pollution_policy_effectiveness_low = yes
+			random_owned_controlled_state = {
+				add_resource = {
+					type = power
+					amount = 4
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = power
+					amount = 4
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.03 }
+				econ_state_value_change_multiply = yes
+			}
+		}
+	}
+
+	regional_uranium_deposits = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+			has_tech = nuclear_technology_1
+			if = {
+				limit = { tag = WSR }
+				has_full_control_of_state = 753
+			}
+			if = {
+				limit = { tag = WSB }
+				has_full_control_of_state = 572
+			}
+			if = {
+				limit = { tag = CSB }
+				has_full_control_of_state = 570
+			}
+			if = {
+				limit = { tag = FST }
+				has_full_control_of_state = 563
+				has_full_control_of_state = 760
+			}
+		}
+		visible = {
+			OR = {
+				tag = WSR
+				tag = WSB
+				tag = CSB
+				tag = FST
+			}
+			NOT = { has_country_flag = regional_uranium_deposits_exploited }
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				check_variable = { debt_to_GDP_ratio > 0.95 }
+				factor = 0
+			}
+		}
+
+		days_remove = 120
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision regional_uranium_deposits"
+			set_temp_variable = { temp_econ_spending_amount = 0.2 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove regional_uranium_deposits"
+			hidden_effect = { set_country_flag = regional_uranium_deposits_exploited }
+			if = {
+				limit = { tag = WSR }
+				753 = {
+					add_resource = {
+					    type = uranium
+					    amount = 6
+					}
+					set_temp_variable = { state_value_multiplier_temp = 1.05 }
+					econ_state_value_change_multiply_specified_state = yes
+				}
+			}
+			else_if = {
+				limit = { tag = WSB }
+				572 = {
+					add_resource = {
+					    type = uranium
+					    amount = 6
+					}
+					set_temp_variable = { state_value_multiplier_temp = 1.05 }
+					econ_state_value_change_multiply_specified_state = yes
+				}
+			}
+			else_if = {
+				limit = { tag = CSB }
+				570 = {
+					add_resource = {
+					    type = uranium
+					    amount = 6
+					}
+					set_temp_variable = { state_value_multiplier_temp = 1.05 }
+					econ_state_value_change_multiply_specified_state = yes
+				}
+			}
+			else_if = {
+				limit = { tag = FST }
+				563 = {
+					add_resource = {
+					    type = uranium
+					    amount = 4
+					}
+					set_temp_variable = { state_value_multiplier_temp = 1.05 }
+					econ_state_value_change_multiply_specified_state = yes
+				}
+				760 = {
+					add_resource = {
+					    type = uranium
+					    amount = 3
+					}
+					set_temp_variable = { state_value_multiplier_temp = 1.05 }
+					econ_state_value_change_multiply_specified_state = yes
+				}
+			}
+		}
+	}
+}

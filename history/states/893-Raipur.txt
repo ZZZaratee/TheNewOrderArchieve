@@ -1,0 +1,24 @@
+state={
+	id=893
+	name="STATE_893"
+	provinces={
+		1510 1622 7465 7497 7574 8120 10401 12375 12420 12480 12490 
+	}
+	resources={
+		chromium=4
+	}
+	manpower = 8213942
+	state_category = rural
+	
+	history={
+		owner = IND
+		add_core_of = AZH
+		add_core_of = IND
+		victory_points = { 12420 5 }
+		buildings = {
+			infrastructure = 2
+			radar_station = 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

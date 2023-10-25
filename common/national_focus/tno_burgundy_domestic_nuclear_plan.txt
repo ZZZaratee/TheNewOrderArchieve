@@ -1,0 +1,300 @@
+shared_focus = {
+	id = BRG_the_true_goal
+	icon = GFX_generic_suspend_constitution
+	cost = 1
+	x = 22
+	y = 0
+	offset = {
+		x = 10
+		y = 0
+		trigger = {
+			has_country_flag = BRG_fall_ragnarchar_allowed
+		}
+	}
+	allow_branch = { has_country_flag = BRG_nuclear_plan_unlocked }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_true_goal"
+
+		custom_effect_tooltip = BRG_Globalplans_unlocked
+		
+		hidden_effect = {
+			BRG_GP_Array_Setup = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = BRG_the_fuel
+	icon = GFX_generic_suspend_constitution
+	cost = 2
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_fuel"
+	}
+	relative_position_id = BRG_the_true_goal
+	prerequisite = { focus = BRG_the_true_goal }
+}
+
+shared_focus = {
+	id = BRG_expanded_the_sites
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_expanded_the_sites"
+	}
+	relative_position_id = BRG_the_fuel
+	prerequisite = { focus = BRG_the_fuel }
+}
+
+shared_focus = {
+	id = BRG_totalstandardisierung
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_totalstandardisierung"
+	}
+	relative_position_id = BRG_the_fuel
+	prerequisite = { focus = BRG_the_fuel }
+}
+
+shared_focus = {
+	id = BRG_turn_the_dials
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_turn_the_dials"
+	}
+	relative_position_id = BRG_expanded_the_sites
+	prerequisite = { focus = BRG_expanded_the_sites }
+}
+
+shared_focus = {
+	id = BRG_raise_the_towers
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_raise_the_towers"
+	}
+	relative_position_id = BRG_totalstandardisierung
+	prerequisite = { focus = BRG_totalstandardisierung }
+}
+
+shared_focus = {
+	id = BRG_the_atom_in_our_hand
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_atom_in_our_hand"
+	}
+	relative_position_id = BRG_turn_the_dials
+	prerequisite = { focus = BRG_turn_the_dials }
+	prerequisite = { focus = BRG_raise_the_towers }
+}
+
+shared_focus = {
+	id = BRG_expanding_our_reachh
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_expanding_our_reachh"
+	}
+	relative_position_id = BRG_the_true_goal
+	prerequisite = { focus = BRG_the_true_goal }
+}
+
+shared_focus = {
+	id = BRG_across_the_air
+	icon = GFX_generic_suspend_constitution
+	cost = 2
+	x = -6
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_across_the_air"
+	}
+	relative_position_id = BRG_the_true_goal
+	prerequisite = { focus = BRG_the_true_goal }
+}
+
+shared_focus = {
+	id = BRG_across_the_seas
+	icon = GFX_generic_suspend_constitution
+	cost = 2
+	x = 6
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_across_the_seas"
+	}
+	relative_position_id = BRG_the_true_goal
+	prerequisite = { focus = BRG_the_true_goal }
+}
+
+shared_focus = {
+	id = BRG_the_dark_port
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_dark_port"
+	}
+	relative_position_id = BRG_across_the_seas
+	prerequisite = { focus = BRG_across_the_seas }
+}
+
+shared_focus = {
+	id = BRG_expand_the_facilities
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_expand_the_facilities"
+	}
+	relative_position_id = BRG_across_the_seas
+	prerequisite = { focus = BRG_across_the_seas }
+}
+
+shared_focus = {
+	id = BRG_the_silent_wolfpack
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_silent_wolfpack"
+	}
+	relative_position_id = BRG_the_dark_port
+	prerequisite = { focus = BRG_the_dark_port }
+	prerequisite = { focus = BRG_expand_the_facilities }
+}
+
+shared_focus = {
+	id = BRG_flood_the_oceans
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_flood_the_oceans"
+	}
+	relative_position_id = BRG_the_silent_wolfpack
+	prerequisite = { focus = BRG_the_silent_wolfpack }
+}
+
+shared_focus = {
+	id = BRG_crank_them_out
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_crank_them_out"
+	}
+	relative_position_id = BRG_across_the_air
+	prerequisite = { focus = BRG_across_the_air }
+}
+
+shared_focus = {
+	id = BRG_the_next_generation
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_next_generation"
+	}
+	relative_position_id = BRG_crank_them_out
+	prerequisite = { focus = BRG_crank_them_out }
+	prerequisite = { focus = BRG_the_new_methods }
+}
+
+shared_focus = {
+	id = BRG_flood_the_skies
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_flood_the_skies"
+	}
+	relative_position_id = BRG_the_next_generation
+	prerequisite = { focus = BRG_the_next_generation }
+}
+
+shared_focus = {
+	id = BRG_the_new_methods
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_new_methods"
+	}
+	relative_position_id = BRG_across_the_air
+	prerequisite = { focus = BRG_across_the_air }
+}
+
+shared_focus = {
+	id = BRG_the_silos
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_silos"
+	}
+	relative_position_id = BRG_expanding_our_reachh
+	prerequisite = { focus = BRG_expanding_our_reachh }
+}
+
+shared_focus = {
+	id = BRG_the_bunkers
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_the_bunkers"
+	}
+	relative_position_id = BRG_the_silos
+	prerequisite = { focus = BRG_the_silos }
+}
+
+shared_focus = {
+	id = BRG_cheaper_bunkers
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_cheaper_bunkers"
+	}
+	relative_position_id = BRG_the_bunkers
+	prerequisite = { focus = BRG_the_bunkers }
+}
+
+shared_focus = {
+	id = BRG_expanded_bunkers
+	icon = GFX_generic_suspend_constitution
+	cost = 4
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BRG_expanded_bunkers"
+	}
+	relative_position_id = BRG_the_bunkers
+	prerequisite = { focus = BRG_the_bunkers }
+}

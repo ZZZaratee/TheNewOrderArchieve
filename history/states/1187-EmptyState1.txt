@@ -1,0 +1,25 @@
+
+state={
+	id=1187
+	name="STATE_1187"
+
+	history={
+		owner = CAO
+		add_core_of = CAO
+		victory_points = { 8034 1 }
+		buildings = {
+			infrastructure = 2
+			13992 = {
+				naval_base = 2
+
+			}
+		}
+	}
+	
+	provinces={
+		8034 13992 13998 14010
+	}
+	manpower=2980000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

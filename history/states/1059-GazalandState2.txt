@@ -1,0 +1,26 @@
+
+state={
+	id=1059
+	name="STATE_1059"
+
+	resources={
+		aluminium=1
+	}
+
+	history={
+		owner = GRO
+		add_core_of = GRO
+		buildings = {
+			offices = 1
+			infrastructure = 2
+		}
+		victory_points = { 13708 5 }
+	}
+
+	provinces={
+    	12935 13694 13708 13717
+	}
+	manpower=673097
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

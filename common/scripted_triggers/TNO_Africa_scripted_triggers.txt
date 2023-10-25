@@ -1,0 +1,46 @@
+AFR_consider_german_regime = {
+	OR = {
+		AND = {
+			tag = COG
+			has_cosmetic_tag = COG_GER
+		}
+		AND = {
+			tag = ANG
+			has_cosmetic_tag = ANG_GER
+		}
+		AND = {
+			tag = GRO
+			OR = {
+				has_cosmetic_tag = GRO_GER
+				has_cosmetic_tag = GRO_REICHSSTAAT
+				has_cosmetic_tag = GRO_REICHSSTAAT_2
+				has_cosmetic_tag = GRO_REICHSSTAAT_3
+			}
+		}
+        tag = SFG
+        tag = AWB
+	}
+}
+
+AFR_consider_english_regime = {
+	OR = {
+		is_in_faction_with = USA
+		tag = SAF
+		AND = {
+			tag = COG
+			has_cosmetic_tag = COG_USA
+		}
+		AND = {
+			tag = ANG
+			has_cosmetic_tag = ANG_USA
+		}
+		AND = {
+			tag = MZB
+			has_cosmetic_tag = MZB_USA
+		}
+		tag = USC
+        tag = SLF
+        tag = CDL
+        tag = OSA
+	}
+}

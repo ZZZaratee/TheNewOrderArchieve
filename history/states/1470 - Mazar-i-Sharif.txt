@@ -1,0 +1,24 @@
+
+state={
+	id=1470
+	name="STATE_1470" # Mazar-i-Sharif
+	manpower = 463714
+	
+	state_category = rural
+	
+	resources={
+		tungsten=3
+	}
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+		}
+		add_core_of = AFG
+	}
+
+	provinces={
+		10852 12218 12239 12248 12314 12653 12877 13245 14748 14749 14753 14758
+	}
+}

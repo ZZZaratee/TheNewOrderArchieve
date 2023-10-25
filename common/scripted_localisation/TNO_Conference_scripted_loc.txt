@@ -1,0 +1,534 @@
+defined_text = {
+	name = CW_Conference_GetProposalsLoc
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 0 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Proposal_3
+	}
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 1 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Proposal_5
+	}
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 2 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Proposal_0
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 0 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Proposal_3
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 1 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Proposal_5
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 2 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Proposal_0
+	}
+}
+
+defined_text = {
+	name = CW_Conference_GetDecisionLoc
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 0 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Decision_4
+	}
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 1 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Decision_1
+	}
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 2 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Decision_3
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 0 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Decision_3
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 1 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Decision_5
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 2 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Decision_0
+	}
+}
+
+defined_text = {
+	name = CW_Conferences_GetProposalDesc
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 0 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Proposal_3_desc
+	}
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 1 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Proposal_5_desc
+	}
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 2 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Proposal_0_desc
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 0 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Proposal_3_desc
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 1 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Proposal_5_desc
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 2 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Proposal_0_desc
+	}
+}
+
+defined_text = {
+	name = CW_Conferences_GetDecisionDesc
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 0 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Decision_4_desc
+	}
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 1 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Decision_1_desc
+	}
+	text = {
+		trigger = {
+			tag = GER
+			check_variable = { i = 2 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_GER_Test_Decision_3_desc
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 0 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Decision_3_desc
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 1 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Decision_5_desc
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			check_variable = { i = 2 }
+			check_variable = { global.TNO_conference = 1 }
+		}
+		localization_key = CW_JAP_Test_Decision_0_desc
+	}
+}
+
+defined_text = {
+	name = CW_Conferences_GetProposal1
+	text = {
+		trigger = {
+			tag = GER
+			has_country_flag = CW_TEST_PROPOSAL_FLAG
+		}
+		localization_key = CW_Proposal1_text
+	}
+}
+
+defined_text = {
+	name = CW_Conferences_GetProposal2
+	text = {
+		trigger = {
+			tag = JAP
+			has_country_flag = CW_TEST_PROPOSAL_FLAG
+		}
+		localization_key = CW_Proposal2_text
+	}
+}
+
+defined_text = {
+	name = CW_Conferences_GetEffect1
+	text = {
+		trigger = {
+			tag = GER
+			has_country_flag = CW_TEST_PROPOSAL_FLAG
+		}
+		localization_key = CW_Effect1_text
+	}
+}
+
+defined_text = {
+	name = CW_Conferences_GetEffect2
+	text = {
+		trigger = {
+			tag = JAP
+			has_country_flag = CW_TEST_PROPOSAL_FLAG
+		}
+		localization_key = CW_Effect2_text
+	}
+}
+
+### EVENTS
+
+defined_text = {
+	name = Getconferences2_t
+	text = {
+		trigger = { }
+		localization_key = conferences.2.t.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences2_desc
+	text = {
+		trigger = { }
+		localization_key = conferences.2.desc.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences2_a
+	text = {
+		trigger = { }
+		localization_key = conferences.2.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences2EventPic
+	text = {
+		trigger = { }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Getconferences3_t
+	text = {
+		trigger = { }
+		localization_key = conferences.3.t.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences3_desc
+	text = {
+		trigger = { }
+		localization_key = conferences.3.desc.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences3_a
+	text = {
+		trigger = { }
+		localization_key = conferences.3.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences3_b
+	text = {
+		trigger = { }
+		localization_key = conferences.3.b.loc
+	}
+}
+
+
+defined_text = {
+	name = Getconferences3EventPic
+	text = {
+		trigger = { }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Getconferences4_t
+	text = {
+		trigger = { }
+		localization_key = conferences.4.t.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences4_desc
+	text = {
+		trigger = { }
+		localization_key = conferences.4.desc.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences4_a
+	text = {
+		trigger = { }
+		localization_key = conferences.4.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences4_a
+	text = {
+		trigger = { }
+		localization_key = conferences.4.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences4EventPic
+	text = {
+		trigger = { }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Getconferences5_t
+	text = {
+		trigger = { }
+		localization_key = conferences.5.t.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences5_desc
+	text = {
+		trigger = { }
+		localization_key = conferences.5.desc.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences5_a
+	text = {
+		trigger = { }
+		localization_key = conferences.5.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences5EventPic
+	text = {
+		trigger = { }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Getconferences6_t
+	text = {
+		trigger = { }
+		localization_key = conferences.6.t.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences6_desc
+	text = {
+		trigger = { }
+		localization_key = conferences.6.desc.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences6_a
+	text = {
+		trigger = { }
+		localization_key = conferences.6.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences6EventPic
+	text = {
+		trigger = { }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Getconferences7_t
+	text = {
+		trigger = { }
+		localization_key = conferences.7.t.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences7_desc
+	text = {
+		trigger = { }
+		localization_key = conferences.7.desc.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences7_a
+	text = {
+		trigger = { }
+		localization_key = conferences.7.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences7_a
+	text = {
+		trigger = { }
+		localization_key = conferences.7.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences7EventPic
+	text = {
+		trigger = { }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Getconferences8_t
+	text = {
+		trigger = { }
+		localization_key = conferences.8.t.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences8_desc
+	text = {
+		trigger = { }
+		localization_key = conferences.8.desc.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences8_a
+	text = {
+		trigger = { }
+		localization_key = conferences.8.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences8EventPic
+	text = {
+		trigger = { }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Getconferences9_t
+	text = {
+		trigger = { }
+		localization_key = conferences.9.t.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences9_desc
+	text = {
+		trigger = { }
+		localization_key = conferences.9.desc.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences9_a
+	text = {
+		trigger = { }
+		localization_key = conferences.9.a.loc
+	}
+}
+
+defined_text = {
+	name = Getconferences9EventPic
+	text = {
+		trigger = { }
+		localization_key = ""
+	}
+}

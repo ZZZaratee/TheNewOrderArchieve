@@ -1,0 +1,23 @@
+
+state={
+	id=1518
+	name="STATE_1518"
+	manpower = 264787
+	
+	state_category = rural
+
+	history={
+		owner = CHL
+		buildings = {
+			infrastructure = 5
+			schools = 1
+			offices = 1
+		}
+		add_core_of = CHL
+		victory_points = { 14834 3 }
+	}
+
+	provinces={
+		14831 14832 14834
+	}
+}

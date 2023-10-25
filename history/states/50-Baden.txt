@@ -1,0 +1,31 @@
+###POP DONE 
+state = {
+	id = 50
+	name = "STATE_50"
+
+	state_category = city
+	manpower = 4010600
+
+	resources = {
+		aluminium=7
+	}
+
+	history = {
+		owner = GER
+		add_core_of = GER
+
+		victory_points = { 9517 10 }
+
+		buildings = {
+			prisons = 3
+			infrastructure = 8
+			air_base = 3
+			radar_station = 1
+			thermoelectric_plant = 1
+		}
+	}
+
+	provinces = {
+		6555 9517 11486 13126 9655 3690 519 11499 9545
+	}
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=1364
+	name="STATE_1364"
+
+	history={
+		owner = MAN
+		buildings = {
+			infrastructure = 5
+			schools = 1
+			offices = 2
+			hospitals = 1
+			prisons = 1
+		}
+		victory_points = { 7763 15 }
+		victory_points = { 12657 5 }
+		add_core_of = MAN
+	}
+
+	provinces={
+		7763 12657
+	}
+	manpower=627865
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

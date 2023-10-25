@@ -1,0 +1,46 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = zombie_easteregg_status
+						option = ZOMBIES_ACTIVE
+					}
+				}
+				every_country = { country_event = { id = spook_news.1 days = 1 } }
+				BRG = { country_event = { id = spook_temp.1 days = 211 } }
+			}
+			else = { set_global_flag = Disable_Zombies }
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = superpower_tension_status
+						option = TENSION_DISABLED
+					}
+				}
+				set_global_flag = TENSION_DISABLED_GAME_RULE
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = superpower_tension_status
+						option = TENSION_FULLY_ENABLED
+					}
+				}
+				set_global_flag = TENSION_ENABLED_GAME_RULE
+			}
+
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = SuperMusic_status
+						option = active_music
+					}
+				}
+				set_global_flag = silence_on_SE
+			}
+		}
+	}
+}

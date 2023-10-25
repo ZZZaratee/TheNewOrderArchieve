@@ -1,0 +1,6 @@
+
+
+graphical_culture = WRS
+graphical_culture_2d = WRS
+
+color = { 124 176 167 }

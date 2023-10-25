@@ -1,0 +1,49 @@
+
+state={
+	id=366
+	name="STATE_366"
+
+	history={
+		owner = USA
+		buildings = {
+			schools = 2
+			barracks = 2
+			offices = 2
+			infrastructure = 6
+			radar_station = 3
+			air_base = 8
+			1843 = {
+				naval_base = 5
+
+			}
+			7388 = {
+				naval_base = 3
+
+			}
+			1572 = {
+				naval_base = 2
+
+			}
+			10352 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = USA
+		victory_points = { 1843 10 }
+		victory_points = { 12439 1 }
+
+	}
+
+	resources={
+		uranium = 4
+	}
+
+	provinces={
+		866 1584 1843 1913 4272 7388 9834 10489 12439 12752 1556 1572 10352 10380 10407 12353 12381 15277 
+	}
+	manpower=5050600
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

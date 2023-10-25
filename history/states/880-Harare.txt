@@ -1,0 +1,28 @@
+###POP DONE
+state={
+	id=880
+	name="STATE_880"
+	resources={
+		aluminium=4
+	}
+	provinces={
+		5212 8245 13638 13639 
+	}
+	history={
+		owner = GRO
+		add_core_of = GRO
+		victory_points = { 5212 10 }
+		victory_points = { 8245 10 }
+		buildings = {
+			barracks = 1
+			8245 = {
+				naval_base = 1
+			}
+			infrastructure = 3
+			radar_station = 2
+		}
+	}
+	state_category=town
+	manpower = 1012252
+	buildings_max_level_factor=1.000
+}

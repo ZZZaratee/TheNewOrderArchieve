@@ -1,0 +1,23 @@
+
+state={
+	id=833
+	name="STATE_833"
+
+	resources={
+		oil = 5
+	}
+
+	history={
+		owner = EWE
+		add_core_of = EWE
+		set_demilitarized_zone = yes	
+		victory_points = { 14426 1 }
+	}
+
+	provinces={
+		8039 8096 12787 14103 14426 15283 15286
+	}
+	manpower=1248200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

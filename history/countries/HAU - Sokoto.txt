@@ -1,0 +1,192 @@
+﻿capital = 1542
+
+#oob = "HAU_1962"
+
+add_ideas = {
+	WEST_AFRICA_idea_terror_bombing
+	HAU_idea_ethnic_tensions
+	HAU_idea_islamic_influences
+	HAU_Shehu_Shagari_hog
+	HAU_Adamou_Mayaki_for
+	HAU_Mamadou_Maidah_eco
+	HAU_Mamadou_Tandja_sec
+	### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	tno_refugees_vetted_entry
+
+	### MILITARY LAWS ###
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_few_regulations
+	tno_education_elite_only
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_police
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### SOCIETAL DEVELOPMENT ###
+	 
+     tno_army_professionalism_disgruntled_veterans
+     tno_industrial_expertise_nascent
+     tno_industrial_equipment_power_tools
+     tno_agriculture_basic_mechanized
+     tno_research_facilities_outdated
+     tno_academic_base_basic_literacy
+	 tno_admin_efficiency_widespread_corruption
+}
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    social_democracy = 0
+    liberal_democracy = 0
+
+    conservative_democracy = 11
+    authoritarian_democracy = 23
+    despotism = 58
+    fascism = 8
+    
+}
+
+create_country_leader = {
+	name = "Issoufou Saïdou-Djermakoye"
+	desc = "POLITICS_ISSOUFOU_SAIDOU_DJERMAKOYE_DESC"
+	picture = "Portrait_Hausaland_Issoufou_Saidou_Djermakoye.dds"
+	expire = "1965.1.1"
+	ideology = liberal_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Abubakar Tafawa Balewa"
+	desc = "POLITICS_ABUBAKAR_TAFAWA_BALEWA_DESC"
+	picture = "Portrait_Hausaland_Abubakar_Tafawa_Balewa.dds"
+	expire = "1965.1.1"
+	ideology = conservative_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mamadou Tandja"
+	desc = "POLITICS_MAMADOU_TANDJA_DESC"
+	picture = "Portrait_Hausaland_Mamadou_Tandja.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Siddiq Abubakar III"
+	desc = "POLITICS_SIDDIQ_ABUBAKAR_III_DESC"
+	picture = "Portrait_Hausaland_Siddiq_Abubakar_III.dds"
+	expire = "1965.1.1"
+	ideology = despotism_absolute_monarchy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Osman Nuhu Sharubutu"
+	desc = "POLITICS_OSMAN_NUHU_SHARUBUTU_DESC"
+	picture = "Portrait_Hausaland_Osman_Nuhu_Sharubutu.dds"
+	expire = "1965.1.1"
+	ideology = fascism_subtype
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+    name = "Siddiq Abubakar III"
+    picture = "Portrait_Hausaland_Siddiq_Abubakar_III.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Mamadou Tandja"
+    picture = "Portrait_Hausaland_Mamadou_Tandja.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Osman Nuhu Sharubutu"
+    picture = "Portrait_Hausaland_Osman_Nuhu_Sharubutu.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Ahmadu Bello"
+    picture = "Portrait_Hausaland_Ahmadu_Bello.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Shehu Shagari"
+    picture = "Portrait_Hausaland_Shehu_Shagari.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}

@@ -1,0 +1,1555 @@
+# How this file works -
+# Since you can't check subideology, we check by leader instead
+# If you want to add a leader, simply add a new has_country_leader block to the proper ideology and you'll be all good
+# Example of this:
+#
+# hasBolshevismLeader = {
+# 	OR = {
+# 		has_country_leader = { name = "Communist Guy 1" ruling_only = yes }
+# 		has_country_leader = { name = "Communist Guy 2" ruling_only = yes }
+# 		...
+# 		has_country_leader = { name = "Communist Guy Infinity" ruling_only = yes }
+# 	}
+# }
+#
+#
+# If your leader appears for two different subideologies that have different base ideologies, you can simply add then to both, as base ideology is checked first, before subideology
+# Example of this:
+#
+# hasBolshevismLeader = {
+# 	OR = {
+# 		has_country_leader = { name = "Communist Guy" ruling_only = yes } # Only appears when Communist Guy is AuthSoc, as base ideology (AuthSoc) is checked before this
+# 	}
+# }
+# 
+# hasPopularFrontismLeader = {
+# 	OR = {
+# 		has_country_leader = { name = "Communist Guy" ruling_only = yes } # Only appears when Communist Guy is LibSoc, as base ideology (LibSoc) is checked before this
+# 	}
+# }
+# 
+# 
+# If your leader appears for two different subideologies that have the same base ideology, you'll need to add an AND block around the has_country_leader, along with some sort of country flag to tell them apart
+# Example of this:
+#
+# hasBolshevismLeader = {
+# 	OR = {
+# 		has_country_leader = { name = "Communist Guy 1" ruling_only = yes }
+# 		has_country_leader = { name = "Communist Guy 2" ruling_only = yes }
+#		AND = {
+#			has_country_leader = { name = "Indecisive Communist Guy" ruling_only = yes }
+#			TAG = { has_country_flag = Indecisive_Communist_Guy_Id1 }
+#		}
+# 	}
+# }
+# 
+# hasStalinismLeader = {
+# 	OR = {
+# 		has_country_leader = { name = "Communist Guy 1" ruling_only = yes }
+# 		has_country_leader = { name = "Communist Guy 2" ruling_only = yes }
+#		AND = {
+#			has_country_leader = { name = "Indecisive Communist Guy" ruling_only = yes }
+#			TAG = { has_country_flag = Indecisive_Communist_Guy_Id2 }
+#		}
+# 	}
+# }
+# 
+
+hasBukharinismLeader = {
+	OR = {
+		has_country_leader = { name = "Vladimir Gurkin" ruling_only = yes }
+		has_country_leader = { name = "Sarry Karryev" ruling_only = yes }
+		has_country_leader = { name = "Torekul Aitmatov" ruling_only = yes }
+		has_country_leader = { name = "Salomen Morel" ruling_only = yes }
+		has_country_leader = { name = "Koçi Xoxe" ruling_only = yes }
+		has_country_leader = { name = "Charilaos Florakis" ruling_only = yes }
+		has_country_leader = { name = "Mikhail Suslov" ruling_only = yes }
+		has_country_leader = { name = "Boris Ponomaryov" ruling_only = yes }
+		has_country_leader = { name = "Genrikh Yagoda" ruling_only = yes }
+		has_country_leader = { name = "Sergey Bessonov" ruling_only = yes }
+		has_country_leader = { name = "Kliment Voroshilov" ruling_only = yes }
+		has_country_leader = { name = "Aleksandr Vasilevsky" ruling_only = yes }
+		has_country_leader = { name = "Georgy Zhukov" ruling_only = yes }
+		has_country_leader = { name = "Aimo Aaltonen" ruling_only = yes }
+		has_country_leader = { name = "Georgy Malenkov" ruling_only = yes }
+		has_country_leader = { name = "Horacio Fernández Inguanzo" ruling_only = yes }
+		has_country_leader = { name = "José María Quesada" ruling_only = yes }
+		has_country_leader = { name = "Francisco Martins Rodrigues" ruling_only = yes }
+		has_country_leader = { name = "Poda Annaorazov" ruling_only = yes }
+		has_country_leader = { name = "Kaliynur Usenbekov" ruling_only = yes }
+		has_country_leader = { name = "Aleksandar Ranković" ruling_only = yes }
+		has_country_leader = { name = "Dmitry Medvedev" ruling_only = yes }
+		has_country_leader = { name = "Simcha Zorin" ruling_only = yes }
+		has_country_leader = { name = "Ivan Sevastyanov" ruling_only = yes }
+		has_country_leader = { name = "Valentin Shashin" ruling_only = yes }
+		has_country_leader = { name = "Pavel Sudoplatov" ruling_only = yes }
+		has_country_leader = { name = "Lakshmi Sahgal" ruling_only = yes }
+		has_country_leader = { name = "Chin Peng" ruling_only = yes }
+		has_country_leader = { name = "Ho Chí Minh" ruling_only = yes }
+		has_country_leader = { name = "Jorge del Prado Chávez" ruling_only = yes }
+		has_country_leader = { name = "Salah Jadid" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Valery Sablin" ruling_only = yes }
+			has_country_flag = BRY_sablin_bukharinist
+		}
+	}
+}
+
+hasStalinismLeader = {
+	OR = {
+		has_country_leader = { name = "Lazar Kaganovich" ruling_only = yes }
+		has_country_leader = { name = "Nikita Khrushchev" ruling_only = yes }
+		has_country_leader = { name = "Pavel Meshik" ruling_only = yes }
+		has_country_leader = { name = "Mikhail Pervukhin" ruling_only = yes }
+	}
+}
+
+hasUltravisionarySocialismLeader = {
+	OR = {
+		has_country_leader = { name = "Vladimir Chelomei" ruling_only = yes }
+		has_country_leader = { name = "Nikolai Kardashev" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Andrei Zhdanov" ruling_only = yes }
+			has_country_flag = KOM_zhdanov_ultravis
+		}
+	}
+}
+
+hasLeftCommunismLeader = {
+	OR = {
+		has_country_leader = { name = "Svetlana Bukharina" ruling_only = yes }
+	}
+}
+
+hasStratocraticCommunismLeader = {
+	OR = {
+		has_country_leader = { name = "Mikhail Tukhachevsky" ruling_only = yes }
+	}
+}
+
+hasMaoismLeader = {
+	OR = {
+		has_country_leader = { name = "Stepan Valenteev" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "George Habash" ruling_only = yes }
+			NOT = { has_country_flag = PAL_APR }
+		}
+	}
+}
+
+hasMaoZedongThoughtLeader = {
+	OR = {
+		has_country_leader = { name = "Truong Chinh" ruling_only = yes }
+		has_country_leader = { name = "Ye Jianying" ruling_only = yes }
+	}
+}
+
+hasIslamicMarxismLeader = {
+	OR = {
+		has_country_leader = { name = "Ziyauddin Babakhan" ruling_only = yes }
+		has_country_leader = { name = "Fayzulla Khodzhayev" ruling_only = yes }
+		has_country_leader = { name = "Ziyauddinhan Babahan" ruling_only = yes }
+	}
+}
+
+hasAmazonismLeader = {
+	OR = {
+		has_country_leader = { name = "João Amazonas" ruling_only = yes }
+	}
+}
+
+hasArabCommunismLeader = {
+	OR = {
+		has_country_leader = { name = "Leila Khaled" ruling_only = yes }
+		has_country_leader = { name = "Layla Fakhro" ruling_only = yes }	
+		has_country_leader = { name = "Nayef Hawatmeh" ruling_only = yes }	
+		AND = {
+			has_country_leader = { name = "George Habash" ruling_only = yes }
+			has_country_flag = PAL_APR
+		}
+	}
+}
+
+hasNationalCommunismLeader = {
+	OR = {
+		has_country_leader = { name = "Josip Broz Tito" ruling_only = yes }
+		has_country_leader = { name = "Sheel Bhadra Yagee" ruling_only = yes }
+		has_country_leader = { name = "Marian Spychalski" ruling_only = yes }
+		has_country_leader = { name = "Mirsaid Sultangaliyev" ruling_only = yes }
+		has_country_leader = { name = "Bauyrzhan Momyshuly" ruling_only = yes }
+		has_country_leader = { name = "Zhambal Gomboev" ruling_only = yes }
+		has_country_leader = { name = "Luis Taruc" ruling_only = yes }
+	}
+}
+
+hasWorkerismLeader = {
+	OR = {
+		has_country_leader = { name = "PLACEHOLDER" ruling_only = yes }
+	}
+}
+
+hasAnarchoCommunismLeader = {
+	OR = {
+		has_country_leader = { name = "Siberian Soviet" ruling_only = yes }
+		has_country_leader = { name = "Workers' Council of Orenburg" ruling_only = yes } #someone wrote "worker's" instead and it didn't work :wertroll:
+		has_country_leader = { name = "Regional Councils" ruling_only = yes }
+		has_country_leader = { name = "Yevgeniya Taratuta" ruling_only = yes }
+	}
+}
+
+hasChristianSocialismLeader = {
+	OR = {
+		has_country_leader = { name = "Alexander Men" ruling_only = yes }
+	}
+}
+
+hasNeocommunismLeader = {
+	OR = {
+		has_country_leader = { name = "Enrico Berlinguer" ruling_only = yes }
+	}
+}
+
+hasRevolutionaryFrontLeader = {
+	OR = {
+		has_country_leader = { name = "Chin Peng" ruling_only = yes }
+		has_country_leader = { name = "Ahmad Boestamam" ruling_only = yes }
+		has_country_leader = { name = "James Laxer" ruling_only = yes }
+		has_country_leader = { name = "Catalonian People's Army Committee" ruling_only = yes }
+		has_country_leader = { name = "Harold Wilson" ruling_only = yes }
+		has_country_leader = { name = "Knut Løfsnes" ruling_only = yes }
+		has_country_leader = { name = "Luis Taruc" ruling_only = yes }
+		has_country_leader = { name = "Givi Javakhishvili" ruling_only = yes }
+		has_country_leader = { name = "Pietro Nenni" ruling_only = yes }
+		has_country_leader = { name = "Salvador Allende Gossens" ruling_only = yes }
+		has_country_leader = { name = "Kadyrov Abdurashit" ruling_only = yes }
+		has_country_leader = { name = "José de la Rosa Castillo" ruling_only = yes }
+		has_country_leader = { name = "Aris Velouchiotis" ruling_only = yes }
+		has_country_leader = { name = "Yevdokia Bershanskaya" ruling_only = yes }
+		has_country_leader = { name = "Maria Borchenko" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Andrei Zhdanov" ruling_only = yes }
+			NOT = { has_country_flag = KOM_zhdanov_ultravis }
+		}
+	}
+}
+
+hasAgrarianSocialismLeader = {
+	OR = {
+		has_country_leader = { name = "Mongush Buyan-Badyrgy" ruling_only = yes }
+		has_country_leader = { name = "Julius Nyerere" ruling_only = yes }
+		has_country_leader = { name = "J. B. Kripalani" ruling_only = yes }
+	}
+}
+
+hasSyndicalismLeader = {
+	OR = {
+		has_country_leader = { name = "Vitaly Kostin" ruling_only = yes }
+		has_country_leader = { name = "Behice Boran" ruling_only = yes }
+		has_country_leader = { name = "Gurudas Dasgupta" ruling_only =  yes }
+	}
+}
+
+hasUtopianSocialismLeader = {
+	OR = {
+		has_country_leader = { name = "Dmitry Shostakovich" ruling_only = yes }
+		has_country_leader = { name = "Moisey Vainberg" ruling_only = yes }
+		has_country_leader = { name = "Viktor Nekrasov" ruling_only = yes }
+	}
+}
+
+hasPanAfricanismLeader = {
+	OR = {
+		has_country_leader = { name = "Félix-Roland Moumié" ruling_only = yes }
+		has_country_leader = { name = "Djibo Bakary" ruling_only = yes }
+		has_country_leader = { name = "Kwame Nkrumah" ruling_only = yes }
+		has_country_leader = { name = "Ahmed Sékou Touré" ruling_only = yes }
+		has_country_leader = { name = "Cheikh Anta Diop" ruling_only = yes }
+		has_country_leader = { name = "Christophe Kragbé Gnagbé" ruling_only = yes }
+		has_country_leader = { name = "Abdrahamane Baba Touré" ruling_only = yes }
+		has_country_leader = { name = "Mathieu Kereko" ruling_only = yes }
+		has_country_leader = { name = "Joseph Ki-Zerbo" ruling_only = yes }
+		has_country_leader = { name = "Aoua Keïta" ruling_only = yes }
+		has_country_leader = { name = "Koumandian Keita" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Agostinho Neto" ruling_only = yes }
+			NOT = { has_country_flag = ANG_African_Socialism }
+		}
+		has_country_leader = { name = "Hans-Jürgen Massaquoi" ruling_only = yes }
+		has_country_leader = { name = "Isaac Theophilus Akunna Wallace-Johnson" ruling_only = yes }
+		has_country_leader = { name = "Edward Sokoine" ruling_only = yes }
+		has_country_leader = { name = "Abdulrahman Mohamed Babu" ruling_only = yes }
+		has_country_leader = { name = "Christophe Gbenye" ruling_only = yes }
+		has_country_leader = { name = "Marien Ngouabi" ruling_only = yes }
+		has_country_leader = { name = "Oliver R. Tambo" ruling_only = yes }
+		has_country_leader = { name = "Abel Goumba" ruling_only = yes }
+	}
+}
+
+hasBaathismLeader = {
+	OR = {
+		has_country_leader = { name = "Michel Aflaq" ruling_only = yes }
+		has_country_leader = { name = "Ahmed Hassan al-Bakr" ruling_only = yes }
+		has_country_leader = { name = "Provisional National Assembly" ruling_only = yes }
+		has_country_leader = { name = "Rashid Karami" ruling_only = yes }
+		has_country_leader = { name = "Ibrahim Kulaylat" ruling_only = yes }
+	}
+}
+
+hasLeftWingNationalismLeader = {
+	OR = {
+		has_country_leader = { name = "Song Qingling" ruling_only = yes }
+		has_country_leader = { name = "Leonel Brizola" ruling_only = yes }
+		has_country_leader = { name = "Makandal Daaga" ruling_only = yes }	# Black Power Revolution success in Trinidad
+		has_country_leader = { name = "Marcel Gargar" ruling_only = yes }	# Guadeloupe, post WIF collapse
+		has_country_leader = { name = "Marian Spychalski" ruling_only = yes }
+		has_country_leader = { name = "Ryszard Kuklinski" ruling_only = yes }
+		has_country_leader = { name = "Alexander Zvyagin" ruling_only = yes }
+		has_country_leader = { name = "Burnahuddin Al-Helmy" ruling_only = yes }
+		has_country_leader = { name = "Eduardo Mondlane" ruling_only = yes }
+		has_country_leader = { name = "François Tombalbye" ruling_only = yes }
+		has_country_leader = { name = "Abdullah al-Sallal" ruling_only = yes }
+		has_country_leader = { name = "Muammar Gaddafi" ruling_only = yes }
+		has_country_leader = { name = "Samora Machel" ruling_only = yes }
+		has_country_leader = { name = "Dobrica Ćosić" ruling_only = yes }
+		has_country_leader = { name = "Joshua Nkomo" ruling_only = yes }
+		has_country_leader = { name = "Kenneth Kaunda" ruling_only = yes }
+		has_country_leader = { name = "Sam Nujoma" ruling_only = yes }
+		has_country_leader = { name = "Jaramogi Oginga Odinga" ruling_only = yes }
+		has_country_leader = { name = "Agostinho Neto" ruling_only = yes }
+	}
+}
+
+hasGuevarismLeader = {
+	OR = {
+		has_country_leader = { name = "Ernesto 'Che' Guevara" ruling_only = yes }
+	}
+}
+
+hasNasserismLeader = {
+	OR = {
+		has_country_leader = { name = "Gamal Abdel Nasser" ruling_only = yes }
+		has_country_leader = { name = "Gaafar Nimeiry" ruling_only = yes }
+	}
+}
+
+hasDemocraticSocialismLeader = {
+	OR = {
+		has_country_leader = { name = "Olof Palme" ruling_only = yes }
+		has_country_leader = { name = "Michael Harrington" ruling_only = yes }
+		has_country_leader = { name = "Tommy Douglas" ruling_only = yes }
+		has_country_leader = { name = "Alexander Yakovlev" ruling_only = yes }
+		has_country_leader = { name = "Leonid Kantorovich" ruling_only = yes }
+		has_country_leader = { name = "Nikolai Voznesensky" ruling_only = yes }
+		has_country_leader = { name = "Pietro Nenni" ruling_only = yes }
+		has_country_leader = { name = "Giuseppe Saragat" ruling_only = yes }
+		has_country_leader = { name = "Emrys Thomas" ruling_only = yes }
+		has_country_leader = { name = "Yasser Arafat" ruling_only = yes }
+		has_country_leader = { name = "Ebenezer Joshua" ruling_only = yes }
+		has_country_leader = { name = "José de la Rosa Castillo" ruling_only = yes }
+		has_country_leader = { name = "Andreas Papandreou" ruling_only = yes }
+		has_country_leader = { name = "Léopold Sédar Senghor" ruling_only = yes }
+		has_country_leader = { name = "Achieng' Oneko" ruling_only = yes }
+		has_country_leader = { name = "Jawaharlal Nehru" ruling_only = yes }
+		has_country_leader = { name = "Lal Bahadur Shastri" ruling_only = yes }
+		has_country_leader = { name = "José Luis Romero" ruling_only = yes }
+		has_country_leader = { name = "Juan Carlos Coral" ruling_only = yes }
+		has_country_leader = { name = "Américo Ghioldi" ruling_only = yes }
+	}
+}
+
+hasProgressivismLeader = {
+	OR = {
+		has_country_leader = { name = "Robert F. Kennedy" ruling_only = yes }
+		has_country_leader = { name = "Henry M. Jackson" ruling_only = yes }
+		has_country_leader = { name = "Plácido Fernández Viagas" ruling_only = yes }
+		has_country_leader = { name = "William Wolfe" ruling_only = yes }
+		has_country_leader = { name = "Gulzarilal Nanda" ruling_only = yes }
+		has_country_leader = { name = "Komninos Pyromaglou" ruling_only = yes }
+		has_country_leader = { name = "José Figueres Ferrer" ruling_only = yes }
+		has_country_leader = { name = "Rómulo Betancourt" ruling_only = yes }
+		has_country_leader = { name = "Luis Cardoza y Aragón" ruling_only = yes }
+		has_country_leader = { name = "Uria Simango" ruling_only = yes }
+		has_country_leader = { name = "Jalal Talabani" ruling_only = yes }
+	}
+}
+
+hasLeftWingPopulismLeader = {
+	OR = {
+		has_country_leader = { name = "Viktor Astafyev" ruling_only = yes }
+		has_country_leader = { name = "Leela Roy" ruling_only = yes }
+		has_country_leader = { name = "Lyubov Lysenko" ruling_only = yes }
+		has_country_leader = { name = "João Goulart" ruling_only = yes }
+		has_country_leader = { name = "V. K. Krishna Menon" ruling_only = yes }
+		has_country_leader = { name = "Rafael Franco" ruling_only = yes }
+		has_country_leader = { name = "Errol Barrow" ruling_only = yes }	# Barbados, post WIF collapse
+		has_country_leader = { name = "Viktor Polyakov" ruling_only = yes }
+		has_country_leader = { name = "Manuel Seoane Corrales" ruling_only = yes }
+		has_country_leader = { name = "Pridi Banomyong" ruling_only = yes }
+		has_country_leader = { name = "Héctor José Cámpora" ruling_only = yes }
+		has_country_leader = { name = "Abdulrahman al Bakir" ruling_only = yes }
+		has_country_leader = { name = "Behice Boran" ruling_only = yes }
+		has_country_leader = { name = "Erdal Inönü" ruling_only = yes }
+		has_country_leader = { name = "Modesto Rodas Alvarado" ruling_only = yes }
+	}
+}
+
+hasLeftKemalismLeader = {
+	OR = {
+		has_country_leader = { name = "Ismet Inönü" ruling_only = yes }
+		has_country_leader = { name = "Fahri Koruturk" ruling_only = yes }
+	}
+}
+
+hasLaborZionismLeader = {
+	OR = {
+		has_country_leader = { name = "David Ben-Gurion" ruling_only = yes }
+		has_country_leader = { name = "Shimon Peres" ruling_only = yes }
+		has_country_leader = { name = "Golda Meir" ruling_only = yes }
+		has_country_leader = { name = "Moshe Dayan" ruling_only = yes }
+	}
+}
+
+hasPopularFrontLeader = {
+	OR = {
+		has_country_leader = { name = "Alfredo Palacios" ruling_only = yes }
+		has_country_leader = { name = "Willy Brandt" ruling_only = yes }
+		has_country_leader = { name = "Violeta Yakova Ivanka" ruling_only = yes }
+	}
+}
+
+hasSocialRadicalismLeader = {
+	OR = {
+		has_country_leader = { name = "Arturo Umberto Illia" ruling_only = yes }
+		has_country_leader = { name = "Rodolfo Martinovic" ruling_only = yes }
+	}
+}
+
+hasNationalLiberalLeader = {
+	OR = {
+		has_country_leader = { name = "Liu Yiliang" ruling_only = yes }
+		has_country_leader = { name = "Mohammad Hatta" ruling_only = yes }
+		has_country_leader = { name = "Henrique Teixeira Lott" ruling_only = yes }
+		has_country_leader = { name = "Juscelino Kubitschek" ruling_only = yes }
+		has_country_leader = { name = "José Félix Estigarribia" ruling_only = yes }
+		has_country_leader = { name = "Georgy Basharin" ruling_only = yes }
+		has_country_leader = { name = "Ibragim Mingazeyev" ruling_only = yes }
+		has_country_leader = { name = "Eric Williams" ruling_only = yes }		# Leader of independent Trinidad or Unitary, Trinidad-lead WIF
+		has_country_leader = { name = "Arturo Frondizi" ruling_only = yes }
+		has_country_leader = { name = "Lorenzo Martinez Tañada" ruling_only = yes }
+		has_country_leader = { name = "Camille Chamoun" ruling_only = yes }
+	}
+}
+
+hasChristianProgressivismLeader = {
+	OR = {
+		has_country_leader = { name = "Aldo Moro" ruling_only = yes }
+	}
+}
+
+hasLiberalRadicalismLeader = {
+	OR = {
+		has_country_leader = { name = "José María Guido" ruling_only = yes }
+		has_country_leader = { name = "Silvano Santander" ruling_only = yes }
+		has_country_leader = { name = "Ricardo Balbín" ruling_only = yes }
+		has_country_leader = { name = "Paul Chaudet" ruling_only = yes }
+	}
+}
+
+hasAgrarianismLeader = {
+	OR = {
+		has_country_leader = { name = "Jacques Rabemananjara" ruling_only = yes }
+		has_country_leader = { name = "Ferenc Nagy" ruling_only = yes }
+		has_country_leader = { name = "Vladimir Ksyanevich" ruling_only = yes }
+		has_country_leader = { name = "Buriniso Berdieva" ruling_only = yes }
+		has_country_leader = { name = "Vasily Shukshin" ruling_only = yes }
+	}
+}
+
+hasPaternalisticConservatismLeader = {
+	OR = {
+		has_country_leader = { name = "Tun Abdul Razak" ruling_only = yes }
+		has_country_leader = { name = "Boris Yeltsin" ruling_only = yes }
+		has_country_leader = { name = "Nils Svenningsen" ruling_only = yes }
+		has_country_leader = { name = "Bakhtiyar Vahabzadeh" ruling_only = yes }
+		has_country_leader = { name = "Raymond Delaporte" ruling_only = yes }
+		has_country_leader = { name = "Soukichi Takagi" ruling_only = yes }
+		has_country_leader = { name = "Morarji Desai" ruling_only = yes }
+		has_country_leader = { name = "Harold Macmillan" ruling_only = yes }
+		has_country_leader = { name = "Juan Galindo" ruling_only = yes }
+		has_country_leader = { name = "Panagiotis Kanellopoulos" ruling_only = yes }
+		has_country_leader = { name = "Konstantinos Karamanlis" ruling_only = yes }
+		has_country_leader = { name = "William Tubman" ruling_only = yes }
+		has_country_leader = { name = "Boris I" ruling_only = yes }
+		has_country_leader = { name = "Vladimir Kirpichnikov" ruling_only = yes }
+		has_country_leader = { name = "Ramón Ernesto Cruz Uclés" ruling_only = yes }
+		has_country_leader = { name = "Seretse Khama" ruling_only = yes }
+		has_country_leader = { name = "Léon M'Ba" ruling_only = yes }
+		has_country_leader = { name = "Abd al-Rahman al-Bazzaz" ruling_only = yes }
+		has_country_leader = { name = "Francisco da Costa Gomes" ruling_only = yes }
+		has_country_leader = { name = "Charles de Gaulle" ruling_only = yes }
+		has_country_leader = { name = "Cheddi Jagan" ruling_only = yes }
+		has_country_leader = { name = "Hubert Maga" ruling_only = yes }
+		has_country_leader = { name = "Sultanakhmet Kozhikov" ruling_only = yes }
+		has_country_leader = { name = "Igor Shafarevich" ruling_only = yes }
+	}
+}
+
+hasLiberalConservatismLeader = {
+	OR = {
+		has_country_leader = { name = "John Diefenbaker" ruling_only = yes }
+		has_country_leader = { name = "Manuel Fraga" ruling_only = yes }
+		has_country_leader = { name = "Sergei Bolshakov" ruling_only = yes }
+		has_country_leader = { name = "Boris Pasternak" ruling_only = yes }
+		has_country_leader = { name = "Sabit Mukanov" ruling_only = yes }
+		has_country_leader = { name = "Ibrahim Yusupov" ruling_only = yes }
+		has_country_leader = { name = "Alv Kjøs" ruling_only = yes }
+		has_country_leader = { name = "Teuvo Aura" ruling_only = yes }
+		has_country_leader = { name = "Shapour Bakhtiar" ruling_only = yes }
+		has_country_leader = { name = "John Morris" ruling_only = yes }
+		has_country_leader = { name = "Wallace F. Bennett" ruling_only = yes }
+		has_country_leader = { name = "Carlos Lacerda" ruling_only = yes }
+		has_country_leader = { name = "Herbert Blaize" ruling_only = yes }				# Grenada, post WIF collapse
+		has_country_leader = { name = "Consejo Nacional de Gobierno" ruling_only = yes }	#Herrerismo Blancos
+		has_country_leader = { name = "Celâl Bayar" ruling_only = yes }
+		has_country_leader = { name = "Yakov Panteleev" ruling_only = yes }
+		has_country_leader = { name = "Miklay Kazakov" ruling_only = yes }
+		has_country_leader = { name = "Ivan Istomin" ruling_only = yes }
+		has_country_leader = { name = "Anton Antonov-Ovseyenko" ruling_only = yes }
+		has_country_leader = { name = "Pedro Beltrán Espantoso" ruling_only = yes }		
+ 		has_country_leader = { name = "John F. Kennedy" ruling_only = yes }
+		has_country_leader = { name = "Seni Pramoj" ruling_only = yes }
+		has_country_leader = { name = "Emilio Hardoy" ruling_only = yes }
+		has_country_leader = { name = "De Viliers Graaff" ruling_only = yes }
+		has_country_leader = { name = "Keith Holyoake" ruling_only = yes }
+		has_country_leader = { name = "Ismail al-Azhari" ruling_only = yes }
+		has_country_leader = { name = "Julio César Cueto Rúa" ruling_only = yes }
+		has_country_leader = { name = "Emilio Jofré" ruling_only = yes }
+	}
+}
+
+hasChristianDemocracyLeader = {
+	OR = {
+		has_country_leader = { name = "Corneliu Coposu" ruling_only = yes }
+		has_country_leader = { name = "Vladimir III" ruling_only = yes }
+		has_country_leader = { name = "Dmitry Likhachyov" ruling_only = yes }
+		has_country_leader = { name = "Pimen" ruling_only = yes }
+		has_country_leader = { name = "Aldo Moro" ruling_only = yes }
+		has_country_leader = { name = "Amintore Fanfani" ruling_only = yes }
+		has_country_leader = { name = "Eduardo Frei Montalva" ruling_only = yes }
+		has_country_leader = { name = "John Compton" ruling_only = yes }			# Saint Lucia, post WIF collapse
+		has_country_leader = { name = "Héctor Cornejo Chávez" ruling_only = yes }
+		has_country_leader = { name = "José Napoleón Duarte" ruling_only = yes }
+		has_country_leader = { name = "Rodolfo Martínez" ruling_only = yes }
+		has_country_leader = { name = "Federico Chávez" ruling_only = yes }
+	}
+}
+
+hasIslamicDemocracyLeader = {
+	OR = {
+		has_country_leader = { name = "Sher Mohammad Marri" ruling_only = yes }
+		has_country_leader = { name = "Faizrakhman Zagafuranov" ruling_only = yes }
+		has_country_leader = { name = "Mohammad Hatta" ruling_only = yes }
+		has_country_leader = { name = "Islam Karimov" ruling_only = yes }
+		has_country_leader = { name = "Abu al-Qasim al-Khoei" ruling_only = yes }
+		has_country_leader = { name = "Necip Fazıl" ruling_only = yes }
+	}
+}
+
+hasPopulistConservatismLeader = {
+	OR = {
+		has_country_leader = { name = "Vicente Solano Lima" ruling_only = yes }
+		has_country_leader = { name = "José Emilio Visca" ruling_only = yes }
+		has_country_leader = { name = "Jânio Quadros" ruling_only = yes }
+		has_country_leader = { name = "Alexander Bustamante" ruling_only = yes }
+	}
+}
+
+hasRevisionistZionismLeader = {
+	OR = {
+		has_country_leader = { name = "Menachem Begin" ruling_only = yes }
+	}
+}
+
+hasNationalConservatismLeader = {
+	OR = {
+		has_country_leader = { name = "Curtis LeMay" ruling_only = yes }
+		has_country_leader = { name = "Alejandro Rodríguez de Valcárcel" ruling_only = yes }
+		has_country_leader = { name = "António de Spínola" ruling_only = yes }
+		has_country_leader = { name = "Rab Butler" ruling_only = yes }
+		has_country_leader = { name = "Giorgio Almirante" ruling_only = yes }
+		has_country_leader = { name = "Achille Lauro" ruling_only = yes }
+		has_country_leader = { name = "Saunders Lewis" ruling_only = yes }
+		has_country_leader = { name = "Arnulfo Arias" ruling_only = yes }
+		has_country_leader = { name = "Miguel Ydígoras Fuentes" ruling_only = yes }
+		has_country_leader = { name = "Komla Agbeli Gbedemah" ruling_only = yes }
+		has_country_leader = { name = "The Welsh Assembly" ruling_only = yes }
+		has_country_leader = { name = "Federico Chávez" ruling_only = yes }
+		has_country_leader = { name = "Alparslan Türkeş" ruling_only = yes }
+		has_country_leader = { name = "Stanisław Wachowiak" ruling_only = yes }
+		has_country_leader = { name = "Radasłaŭ Astroŭski" ruling_only = yes }
+		has_country_leader = { name = "Frank Theiß" ruling_only = yes }
+		has_country_leader = { name = "Volodymyr Kubiyovych" ruling_only = yes }
+		has_country_leader = { name = "Irakli Bagration" ruling_only = yes }
+		has_country_leader = { name = "Karl-Günther von Hase" ruling_only = yes }
+		AND = { 
+			has_country_leader = { name = "Francisco Franco" ruling_only = yes } 
+			has_country_flag = IBRAuthDemCongress 
+		}
+		AND = {
+			has_country_leader = { name = "Margaret Thatcher" ruling_only = yes }
+			NOT = { has_country_flag = ENG_leash_act_passed }
+		}
+		AND = {
+			has_country_leader = { name = "Ian Paisley" }
+			has_country_flag = ULS_Paisley_Victory
+		}
+		AND = {
+			has_country_leader = { name = "Sukarno" ruling_only = yes }
+			has_country_flag = INS_sukarno_natcon
+		}
+	}
+}
+
+hasSocialNationalismLeader = {
+	OR = {
+		has_country_leader = { name = "Subhas Chandra Bose" ruling_only = yes }
+		has_country_leader = { name = "Nedyam Raghavan" ruling_only = yes }
+		has_country_leader = { name = "Marian Spychalski" ruling_only = yes }
+		has_country_leader = { name = "Rurik II" ruling_only = yes }
+		has_country_leader = { name = "Rurik III" ruling_only = yes }
+		has_country_leader = { name = "Ivan Zavoloko" ruling_only = yes }
+		has_country_leader = { name = "Svetlana Stalina" ruling_only = yes }
+		has_country_leader = { name = "Claro M. Recto" ruling_only = yes }
+		has_country_leader = { name = "Yuriy Horlis" ruling_only = yes }
+		has_country_leader = { name = "Vlada Zečević" ruling_only = yes }
+		has_country_leader = { name = "Fidel Castro" ruling_only = yes }
+		has_country_leader = { name = "Abdulla Aliş" ruling_only = yes }
+		has_country_leader = { name = "Abd al-Karim Qasim" ruling_only = yes }
+		has_country_leader = { name = "Ähmätzäki Välidi Tuġan" ruling_only = yes }
+		has_country_leader = { name = "Joint Council of the Free Peoples" ruling_only = yes }
+		has_country_leader = { name = "Alexander Bustamante" ruling_only = yes }	# Bustamante as figurehead after bloodless coup in Jamaica
+		has_country_leader = { name = "Rafael Franco" ruling_only = yes }
+		has_country_leader = { name = "Charles Okala" ruling_only = yes }
+		has_country_leader = { name = "Gabriel Ramanantsoa" ruling_only = yes }
+		has_country_leader = { name = "Félix Malloum" ruling_only = yes }
+		has_country_leader = { name = "Mustafa Barzani" ruling_only = yes }
+		has_country_leader = { name = "Joseph Oduho" ruling_only = yes }
+		has_country_leader = { name = "Adib al-Shishakli" ruling_only = yes }
+		has_country_leader = { name = "Julián Licastro" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Jonas Savimbi" ruling_only = yes }
+			NOT = { has_idea = OFN_Observer }
+		}
+		AND = {
+			has_country_leader = { name = "Sukarno" ruling_only = yes }
+			NOT = { has_country_flag = INS_sukarno_natcon }
+			NOT = { has_country_flag = INS_sukarno_natsynd }
+		}
+	}
+}
+
+hasControlledDemocracyLeader = {
+	OR = {
+		has_country_leader = { name = "Iberian Council" ruling_only = yes }
+		has_country_leader = { name = "Vasily Ivanov" ruling_only = yes }
+		has_country_leader = { name = "Miletiy Zykov" ruling_only = yes }
+		has_country_leader = { name = "Daniil Kharms" ruling_only = yes }
+		has_country_leader = { name = "Nikolai Andreev" ruling_only = yes }
+		has_country_leader = { name = "Karl Lennart Oesch" ruling_only = yes }
+		has_country_leader = { name = "José Yulo" ruling_only = yes }
+		has_country_leader = { name = "Quentin Paredes" ruling_only = yes }
+		has_country_leader = { name = "Barend Biesheuvel" ruling_only = yes }
+		has_country_leader = { name = "Raymond Delaporte" ruling_only = yes }
+		has_country_leader = { name = "Terence O'Neill" ruling_only = yes }
+		has_country_leader = { name = "Carlos Lacerda" ruling_only = yes }
+		has_country_leader = { name = "Patrick Roland John" ruling_only = yes }		# Dominica leader, post WIF collapse
+		has_country_leader = { name = "José María Lemus" ruling_only = yes }
+		has_country_leader = { name = "Maurice Yaméogo" ruling_only = yes }
+		has_country_leader = { name = "Boris Shcherbina" ruling_only = yes }
+		has_country_leader = { name = "Nicolas Grunitzky" ruling_only = yes }
+		has_country_leader = { name = "Christophe Soglo" ruling_only = yes }
+		has_country_leader = { name = "Fily Dabo Sissoko" ruling_only = yes }
+		has_country_leader = { name = "Louis Lansana Beavogui" ruling_only = yes }
+		has_country_leader = { name = "Hamani Diori" ruling_only = yes }
+		has_country_leader = { name = "Mamadou Dia" ruling_only = yes }
+		has_country_leader = { name = "Rubén Alonso Rosales" ruling_only = yes }
+		has_country_leader = { name = "Takeo Fukuda" ruling_only = yes }
+		has_country_leader = { name = "Saïd Mohamed Jaffar" ruling_only = yes }
+		has_country_leader = { name = "Alec Douglas-Home" ruling_only = yes }
+		has_country_leader = { name = "Leonid Chernykh" ruling_only = yes }
+		has_country_leader = { name = "Didier Ratsiraka" ruling_only = yes }
+		AND = { 
+			has_country_leader = { name = "Francisco Franco" ruling_only = yes } 
+			has_country_flag = IBRDemUnion 
+		}
+		AND = {
+			has_country_leader = { name = "Andrey Vlasov" ruling_only = yes }
+			has_idea = SAM_Miletiy_Zykov_hog
+		}
+		AND = {
+			has_country_leader = { name = "Margaret Thatcher" ruling_only = yes }
+			has_country_flag = ENG_leash_act_passed
+		}
+		AND = {
+			has_country_leader = { name = "Jonas Savimbi" ruling_only = yes }
+			has_idea = OFN_Observer
+		}
+		AND = {
+			has_country_leader = { name = "Mikhail Gorbachev" ruling_only = yes }
+			has_idea = MSK_dissolution_end
+		}
+	}
+}
+
+hasStratocracyLeader = {
+	OR = {
+		has_country_leader = { name = "Jānis Mendriks" ruling_only = yes }
+		has_country_leader = { name = "Konstantin Rokossovsky" ruling_only = yes }
+		has_country_leader = { name = "Pavel Batov" ruling_only = yes }
+		has_country_leader = { name = "Valentin Purgin" ruling_only = yes }
+		has_country_leader = { name = "Alexander Medvedev" ruling_only = yes }
+		has_country_leader = { name = "Hadji-Umar Mamsurov" ruling_only = yes }
+		has_country_leader = { name = "Ivan Yumashev" ruling_only = yes }
+		has_country_leader = { name = "Mitchell WerBell III" ruling_only = yes }
+		has_country_leader = { name = "Ramon del Fierro Magsaysay" ruling_only = yes  }
+	}
+}
+
+hasOligarchyLeader = {
+	OR = {
+		has_country_leader = { name = "Jorge Pereira Jardim" ruling_only = yes }
+		has_country_leader = { name = "Aleksander Burba" ruling_only = yes }
+		has_country_leader = { name = "Alexander Pokryshkin" ruling_only = yes }
+		has_country_leader = { name = "Andreas Meyer-Landrut" ruling_only = yes }
+		has_country_leader = { name = "Werner Best" ruling_only = yes }
+		has_country_leader = { name = "Gustav Meißner" ruling_only = yes }
+		has_country_leader = { name = "Albert Speer" ruling_only = yes }
+		has_country_leader = { name = "Carlos Polístico García" ruling_only = yes }
+		has_country_leader = { name = "Sergio Osmeña Jr." ruling_only = yes }
+		has_country_leader = { name = "Moïse Tshombe" ruling_only = yes }
+		has_country_leader = { name = "Umberto La Rocca" ruling_only = yes }
+		has_country_leader = { name = "Zayed bin Sultan Al Nahyan" ruling_only = yes }
+	}
+}
+
+hasSolidarismLeader = {
+	OR = {
+		has_country_leader = { name = "Vladimir III" ruling_only = yes }
+	}
+}
+
+hasMilitaryMandateLeader = {
+	OR = {
+		has_country_leader = { name = "Guy S. Meloy" ruling_only = yes }
+		has_country_leader = { name = "Hamilton H. Howze" ruling_only = yes }
+		has_country_leader = { name = "Dwight Edward Beach" ruling_only = yes }
+		has_country_leader = { name = "Thomas Hinman Moorer" ruling_only = yes }
+		has_country_leader = { name = "Benjamín Rattenbach" ruling_only = yes }
+		has_country_leader = { name = "Adolfo Philippeaux" ruling_only = yes }
+		has_country_leader = { name = "John D. Lavelle" ruling_only = yes }
+		has_country_leader = { name = "Creighton Abrams Jr." ruling_only = yes }
+		has_country_leader = { name = "William Westmoreland" ruling_only = yes }
+		has_country_leader = { name = "Carlos de Meira Mattos" ruling_only = yes }
+		has_country_leader = { name = "Oscar Mario Aguerrondo" ruling_only = yes }
+	}
+}
+
+hasNeoconservatismLeader = {
+	OR = {
+		has_country_leader = { name = "Margaret Chase Smith" ruling_only = yes }
+		has_country_leader = { name = "Jeane Kirkpatrick" ruling_only = yes }
+	}
+}
+
+hasDixiecratLeader = {
+	OR = {
+		has_country_leader = { name = "George Wallace" ruling_only = yes }
+		has_country_leader = { name = "Strom Thurmond" ruling_only = yes }
+	}
+}
+
+hasSocialCreditLeader = {
+	OR = {
+		has_country_leader = { name = "Réal Cauoette" ruling_only = yes }
+	}
+}
+
+hasCorporatePaternalismLeader = {
+	OR = {
+		has_country_leader = { name = "Morita Akio" ruling_only = yes }
+		has_country_leader = { name = "David McDonald" ruling_only = yes }
+	}
+}
+
+hasDominantPartyDemocracyLeader = {
+	OR = {
+		has_country_leader = { name = "Seán Francis Lemass" ruling_only = yes }
+		has_country_leader = { name = "Adolfo López Mateos" ruling_only = yes }
+		has_country_leader = { name = "Gustavo Díaz Ordaz" ruling_only = yes }
+		has_country_leader = { name = "Carlos Alberto Madrazo" ruling_only = yes }
+		has_country_leader = { name = "Raúl Salinas Lozano" ruling_only = yes }
+		has_country_leader = { name = "Modibo Keïta" ruling_only = yes }
+		has_country_leader = { name = "José María Velasco Ibarra" ruling_only = yes }
+		has_country_leader = { name = "Forbes Burnham" ruling_only = yes }
+		has_country_leader = { name = "Rogelio Julio Frigerio" ruling_only = yes }
+		has_country_leader = { name = "David Dacko" ruling_only = yes }
+		has_country_leader = { name = "Nikolay Petlin" ruling_only = yes }
+		has_country_leader = { name = "Hans-Joachim Schoeps" ruling_only = yes }
+		has_country_leader = { name = "Paul Biya" ruling_only = yes }
+		has_country_leader = { name = "Willi Stoph" ruling_only = yes }
+	}
+}
+
+hasPeronismLeader = {
+	OR = {
+		has_country_leader = { name = "Epifano Mendez Fleitas" ruling_only = yes }
+		has_country_leader = { name = "Raul Matera" ruling_only = yes }
+		has_country_leader = { name = "Juan Domingo Perón" ruling_only = yes }
+		has_country_leader = { name = "Miguel Ángel Iñíguez" ruling_only = yes }
+		has_country_leader = { name = "Cipriano Reyes" ruling_only = yes }
+		has_country_leader = { name = "Carlos Saúl Menem" ruling_only = yes }
+	}
+}
+
+hasKemalismLeader = {
+	OR = {
+		has_country_leader = { name = "Ismet Inönü" ruling_only = yes }
+		has_country_leader = { name = "Cevdet Sunay" ruling_only = yes }
+	}
+}
+
+hasProvisionalGovernmentLeader = {
+	OR = {
+		has_country_leader = { name = "Emil Fieldorf" ruling_only = yes }
+		has_country_leader = { name = "Mikhail II" ruling_only = yes }
+		has_country_leader = { name = "Viktor Grigoriev" ruling_only = yes }
+		has_country_leader = { name = "Alexander Zinoviev" ruling_only = yes }
+		has_country_leader = { name = "Nikolai Artamonov" ruling_only = yes }
+		has_country_leader = { name = "Sakari Simelius" ruling_only = yes }
+		has_country_leader = { name = "Kazimierz Piechowski" ruling_only = yes }
+		has_country_leader = { name = "Telesforo Monzón" ruling_only = yes }
+		has_country_leader = { name = "Knut Møyen" ruling_only = yes }
+		has_country_leader = { name = "Viktor Kolesnikov" ruling_only = yes }
+		has_country_leader = { name = "David Dragunsky" ruling_only = yes }
+		has_country_leader = { name = "United Coalition Government" ruling_only = yes }
+		has_country_leader = { name = "Anwar Sadat" ruling_only = yes }
+		has_country_leader = { name = "Dennis Skinner" ruling_only = yes }
+		has_country_leader = { name = "Council Of Jerusalem" ruling_only = yes }
+		has_country_leader = { name = "Arrigo Bülow Boldrini" ruling_only = yes }
+		has_country_leader = { name = "Joaquín Balaguer" ruling_only = yes }
+		has_country_leader = { name = "Claude Auchinleck" ruling_only = yes }
+		has_country_leader = { name = "Menachem Begin" ruling_only = yes }
+		has_country_leader = { name = "RKNV Remnants" ruling_only = yes }
+		has_country_leader = { name = "Pavel Sudoplatov" ruling_only = yes }
+		has_country_leader = { name = "Federico Ngomo" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Mikhail Gorbachev" ruling_only = yes }
+			NOT = { has_idea = MSK_dissolution_end }
+		}
+		AND = {
+			has_country_leader = { name = "Provisional Authority" ruling_only = yes }
+			original_tag = PAR
+		}
+	}
+}
+
+hasRightWingPopulismLeader = {
+	OR = {
+		has_country_leader = { name = "Adhemar de Barros" ruling_only = yes }
+		has_country_leader = { name = "Manuel Arturo Odría" ruling_only = yes }
+		has_country_leader = { name = "Jorge Prat Echaurren" ruling_only = yes }
+		has_country_leader = { name = "Abraham Williams Calderón" ruling_only = yes }
+		has_country_leader = { name = "Ferdinand E. Marcos" ruling_only = yes }
+	}
+}
+
+hasXunZhengLeader = {
+	OR = {
+		has_country_leader = { name = "Sun Fo" ruling_only = yes }
+	}
+}
+
+hasAbsoluteMonarchyLeader = {
+	OR = {
+		has_country_leader = { name = "Co-Princes" ruling_only = yes }
+		has_country_leader = { name = "Rurik II" ruling_only = yes }
+		has_country_leader = { name = "Alexei II" ruling_only = yes }
+		has_country_leader = { name = "Boris I" ruling_only = yes }
+		has_country_leader = { name = "Hassan II" ruling_only = yes }
+		has_country_leader = { name = "Boris III" ruling_only = yes }
+		has_country_leader = { name = "Simeon II" ruling_only = yes }
+		has_country_leader = { name = "Josias I" ruling_only = yes }
+		has_country_leader = { name = "Wittekind I" ruling_only = yes }
+		has_country_leader = { name = "Mohammad Reza Pahlavi" ruling_only = yes }
+		has_country_leader = { name = "Farah Pahlavi" ruling_only = yes }
+		has_country_leader = { name = "Bào Dai" ruling_only = yes }
+		has_country_leader = { name = "Abdullah I bin Al-Hussein" ruling_only = yes }
+		has_country_leader = { name = "Hussein bin Talal" ruling_only = yes }
+		has_country_leader = { name = "Nayef bin Abdullah" ruling_only = yes }
+		has_country_leader = { name = "Intalla ag Attaher" ruling_only = yes }
+		has_country_leader = { name = "Siddiq Abubakar III" ruling_only = yes }
+		has_country_leader = { name = "Ibrahim ibn 'Umaru" ruling_only = yes }
+		has_country_leader = { name = "Mutesa II" ruling_only = yes }
+		has_country_leader = { name = "Kigeli V" ruling_only = yes }
+		has_country_leader = { name = "Mwambutsa IV" ruling_only = yes }
+		has_country_leader = { name = "Jamshid bin Abdullah" ruling_only = yes }
+		has_country_leader = { name = "Kafula Musungu Citimukulu XXXIV" ruling_only = yes }
+		has_country_leader = { name = "Mwanawina III" ruling_only = yes }
+		has_country_leader = { name = "Moshoeshoe II" ruling_only = yes }
+		has_country_leader = { name = "Sobhuza II" ruling_only = yes }
+		has_country_leader = { name = "Olimi III" ruling_only = yes }
+		has_country_leader = { name = "Husain Bey" ruling_only = yes }
+		has_country_leader = { name = "Saud bin Abdulaziz" ruling_only = yes }
+		has_country_leader = { name = "Said Bin Taimur" ruling_only = yes }
+		has_country_leader = { name = "Ahmad Bin Yahya" ruling_only = yes }
+		has_country_leader = { name = "Shakhbut bin Sultan Al Nahyan" ruling_only = yes }
+		has_country_leader = { name = "Faisal bin Abdulaziz Al Saud" ruling_only = yes }
+		has_country_leader = { name = "Omar Ali Saifuddien III" ruling_only = yes }
+		has_country_leader = { name = "Henri VI d'Orléans" ruling_only = yes }
+	}
+}
+
+hasSemiConstitutionalMonarchyLeader = {
+	OR = {
+		has_country_leader = { name = "Charlotte Louise Juliette Grimaldi" ruling_only = yes }
+		has_country_leader = { name = "Mohammad Reza Pahlavi" ruling_only = yes }
+		has_country_leader = { name = "Mohammed Zahir Shah" ruling_only = yes }
+		has_country_leader = { name = "Norodom Sihanouk" ruling_only = yes }
+		has_country_leader = { name = "Dato Onn Jaafar" ruling_only = yes }
+		has_country_leader = { name = "Tun Hussein Onn" ruling_only = yes }
+		has_country_leader = { name = "Mir Ahmad Yar Khan" ruling_only = yes }
+		has_country_leader = { name = "Qaboos bin Said Al Said" ruling_only = yes }
+	}
+}
+
+hasMilitaryJuntaLeader = {
+	OR = {
+		has_country_leader = { name = "Sun Liren" ruling_only = yes }
+		has_country_leader = { name = "Suharto" ruling_only = yes }
+		has_country_leader = { name = "Fernando de Quintanilha" ruling_only = yes }
+		has_country_leader = { name = "Sulo Nykänen" ruling_only = yes }
+		has_country_leader = { name = "Dragoslav Račić" ruling_only = yes }
+		has_country_leader = { name = "Heinrich Theodore Göring" ruling_only = yes }
+		has_country_leader = { name = "Axel von dem Bussche" ruling_only = yes }
+		has_country_leader = { name = "Otto Hitzfeld" ruling_only = yes }
+		has_country_leader = { name = "Ulrich de Maizière" ruling_only = yes }
+		has_country_leader = { name = "Fritz Bayerlein" ruling_only = yes }
+		has_country_leader = { name = "Effrem Cattelan" ruling_only = yes }
+		has_country_leader = { name = "Vladimir Kirpichnikov" ruling_only = yes }
+		has_country_leader = { name = "Stepan Bunkov" ruling_only = yes }
+		has_country_leader = { name = "Nikolai Averin" ruling_only = yes }
+		has_country_leader = { name = "Vasily Blokhin" ruling_only = yes }
+		has_country_leader = { name = "Boris Shepunov" ruling_only = yes }
+		has_country_leader = { name = "Nikita I" ruling_only = yes }
+		has_country_leader = { name = "Douglas Wimberley" ruling_only = yes }
+		has_country_leader = { name = "Ma Jiyuan" ruling_only = yes }
+		has_country_leader = { name = "Hermann von Hanneken" ruling_only = yes }	
+		has_country_leader = { name = "Mikhail II" ruling_only = yes }	
+		has_country_leader = { name = "Andrey Vlasov" ruling_only = yes }	
+		has_country_leader = { name = "Dmitry Karbyshev" ruling_only = yes }
+		has_country_leader = { name = "Dmitry Yazov" ruling_only = yes }
+		has_country_leader = { name = "Collapsed Authority" ruling_only = yes }
+		has_country_leader = { name = "James Kelly" ruling_only = yes }
+		has_country_leader = { name = "Sean McKeown" ruling_only = yes }
+		has_country_leader = { name = "Dietrich von Saucken" ruling_only = yes }
+		has_country_leader = { name = "Georg Graf von Plettenberg" ruling_only = yes }
+		has_country_leader = { name = "Reinhard Reche" ruling_only = yes }
+		has_country_leader = { name = "Kurt Andersen" ruling_only = yes }
+		has_country_leader = { name = "Eberhard Pasternack" ruling_only = yes }
+		has_country_leader = { name = "Siegfried Grabert" ruling_only = yes }
+		has_country_leader = { name = "Julian Cayo-Evans" ruling_only = yes }
+		has_country_leader = { name = "Hugo Banzer Suárez" ruling_only = yes }
+		has_country_leader = { name = "René Barrientos Ortuño" ruling_only = yes }
+		has_country_leader = { name = "Alfredo Ovando Candia" ruling_only = yes }
+		has_country_leader = { name = "NPA Military Council" ruling_only = yes }
+		has_country_leader = { name = "Humberto de Alencar Castelo Branco" ruling_only = yes }
+		has_country_leader = { name = "Alfredo Manapat Santos" ruling_only = yes }
+		has_country_leader = { name = "Kanwal Singh" ruling_only = yes }
+		has_country_leader = { name = "Raúl Alejandro Poggi" ruling_only = yes }
+		has_country_leader = { name = "Benjamín Menéndez" ruling_only = yes }
+		has_country_leader = { name = "Juan Carlos Onganía" ruling_only = yes }
+		has_country_leader = { name = "Nikolai Onoprienko" ruling_only = yes }
+		has_country_leader = { name = "Ziad al-Hariri" ruling_only = yes }
+		has_country_leader = { name = "Panama Defence Council" ruling_only = yes }
+		has_country_leader = { name = "Georgios Papadopoulos" ruling_only = yes }
+		has_country_leader = { name = "David Lansana" ruling_only = yes }
+		has_country_leader = { name = "Moussa Traoré" ruling_only = yes }
+		has_country_leader = { name = "Cemal Gürsel" ruling_only = yes }
+		has_country_leader = { name = "Cemal Tural" ruling_only = yes }
+		has_country_leader = { name = "Ricardo Pérez Godoy" ruling_only = yes }
+		has_country_leader = { name = "Johannes Steinhoff" ruling_only = yes }
+		has_country_leader = { name = "Jean-Baptiste Hachème" ruling_only = yes }
+		has_country_leader = { name = "Ulrich Wegener" ruling_only = yes }
+		has_country_leader = { name = "Otto Weidinger" ruling_only = yes }
+		has_country_leader = { name = "Thawan Thamrongnawasawat" ruling_only = yes }
+		has_country_leader = { name = "Council of the Syrian National State" ruling_only = yes }
+		has_country_leader = { name = "Yeop Mahidin" ruling_only = yes }
+		has_country_leader = { name = "Ioannis Ladas" ruling_only = yes }
+		has_country_leader = { name = "Alfredo Stroessner" ruling_only = yes }
+		has_country_leader = { name = "Zakariya Maimalari" ruling_only = yes }
+		has_country_leader = { name = "Chukwuemeka Odumegwu Ojukwu" ruling_only = yes }
+		has_country_leader = { name = "Directorio Cívico-Militar" ruling_only = yes }
+		has_country_leader = { name = "Bernard Montgomery" ruling_only = yes }
+		has_country_leader = { name = "Nusratullo Abdulkhakov" ruling_only = yes }
+		has_country_leader = { name = "Buriniso Berdieva" ruling_only = yes }
+		has_country_leader = { name = "Sher Muhammad" ruling_only = yes }
+		has_country_leader = { name = "Yakubu Gowon" ruling_only = yes }
+		has_country_leader = { name = "André Kolingba" ruling_only = yes }
+		has_country_leader = { name = "Victor Lundula" ruling_only = yes }
+		has_country_leader = { name = "Constand Viljoen" ruling_only = yes }
+		has_country_leader = { name = "Michel Micombero" ruling_only = yes }
+		has_country_leader = { name = "Ibrahim Abboud" ruling_only = yes }
+		has_country_leader = { name = "Josiah Gondo" ruling_only = yes }
+		has_country_leader = { name = "Nazaire Boulingui" ruling_only = yes }
+		has_country_leader = { name = "Alfons Rebane" ruling_only = yes }
+		has_country_leader = { name = "Roberto Marcelo Levingston" ruling_only = yes }
+		has_country_leader = { name = "Alejandro Agustín Lanusse" ruling_only = yes }
+		has_country_leader = { name = "Isaac Rojas" ruling_only = yes }
+		has_country_leader = { name = "Disorganized Cliques" ruling_only = yes }
+		has_country_leader = { name = "Nikolay Ivanovsky" ruling_only = yes }
+		has_country_leader = { name = "Sejima Ryuzo" ruling_only = yes }
+		has_country_leader = { name = "Petros Poghosyan" ruling_only = yes }
+		has_country_leader = { name = "Cevdet Sunay" ruling_only = yes }
+		has_country_leader = { name = "Oswaldo López Arellano" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Hans Speidel" ruling_only = yes }
+			NOT = { has_country_flag = speidel_in_charge }
+		}
+		AND = {
+			has_country_leader = { name = "Neil Blaney" ruling_only = yes }
+			has_country_flag = IRE_regime_of_the_brigadiers
+		}
+		AND = {
+			has_country_leader = { name = "Adolf Heusinger" ruling_only = yes }
+			NOT = { tag = GLC }
+		}
+		AND = {
+			has_country_leader = { name = "Long Yun" ruling_only = yes }
+			check_variable = { YUN_legitimate_regime = 1 }
+		}
+	}
+}
+
+hasCivilianDictatorshipLeader = {
+	OR = {
+		has_country_leader = { name = "Svetlana Stalina" ruling_only = yes }
+		has_country_leader = { name = "Sergei Bunyachenko" ruling_only = yes }
+		has_country_leader = { name = "John A. Thivy" ruling_only = yes }
+		has_country_leader = { name = "Trofim Lysenko" ruling_only = yes }
+		has_country_leader = { name = "Pedro Teotónio Pereira" ruling_only = yes }
+		has_country_leader = { name = "Marcelo Caetano" ruling_only = yes }
+		has_country_leader = { name = "Per Borten" ruling_only = yes }
+		has_country_leader = { name = "Jose Zulueta" ruling_only = yes }
+		has_country_leader = { name = "Gao Zongwu" ruling_only = yes }
+		has_country_leader = { name = "Nikola Kavaja" ruling_only = yes }
+		has_country_leader = { name = "Barend Biesheuvel" ruling_only = yes }
+		has_country_leader = { name = "Zhou Fohai" ruling_only = yes }
+		has_country_leader = { name = "Ba Maw" ruling_only = yes }
+		has_country_leader = { name = "Mohan Singh" ruling_only = yes }
+		has_country_leader = { name = "Chatichai Choonhavan" ruling_only = yes }
+		has_country_leader = { name = "Fu Zuoyi" ruling_only = yes }
+		has_country_leader = { name = "Mikhail Matkovsky" ruling_only = yes }
+		has_country_leader = { name = "Yuumjaagiin Tsedenbal" ruling_only = yes }
+		has_country_leader = { name = "Carlos Peña Romulo" ruling_only = yes }
+		has_country_leader = { name = "Forbes Burnham" ruling_only = yes }
+		has_country_leader = { name = "Luis Somoza Debayle" ruling_only = yes }
+		has_country_leader = { name = "Émile Badiane" ruling_only = yes }		
+		has_country_leader = { name = "Marcelo das Neves Caetano" ruling_only = yes }
+		has_country_leader = { name = "José María Guido" ruling_only = yes }
+		has_country_leader = { name = "Mobutu Sese Soko" ruling_only = yes }
+		has_country_leader = { name = "Aggrey Jaden" ruling_only = yes }
+		has_country_leader = { name = "Reuben Kamanga" ruling_only = yes }
+		has_country_leader = { name = "Seamus Twomey" ruling_only = yes }
+		has_country_leader = { name = "Hans-Joachim Schoeps" ruling_only = yes }
+		has_country_leader = { name = "Jean Bichelonne" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Andrey Vlasov" ruling_only = yes }
+			has_idea = SAM_Sergey_Bunyachenko_hog
+		}
+		AND = {
+			has_country_leader = { name = "Neil Blaney" ruling_only = yes }
+			NOT = { has_country_flag = IRE_regime_of_the_brigadiers }
+		}
+		AND = { 
+			has_country_leader = { name = "António de Oliveira Salazar" ruling_only = yes }		#Salazar falls under the despotism subideology when Iberia is united, in Portugal is civilian dictatorship
+			OR = { 
+				has_country_flag = POR_divorce_happened
+				has_global_flag = Iberian_Wars
+			}
+		}
+	}
+}
+
+hasTheocracyLeader = {
+	OR = {
+		has_country_leader = { name = "Mikhail Antipin" ruling_only = yes }
+		has_country_leader = { name = "Nikolai Zabelkin" ruling_only = yes }
+		has_country_leader = { name = "Tenzin Gyatso" ruling_only = yes }
+		has_country_leader = { name = "Turdakun Usubaliev" ruling_only = yes }
+		has_country_leader = { name = "Ruhollah Khomeini" ruling_only = yes }
+		has_country_leader = { name = "Ghalib Alhinai" ruling_only = yes }
+	}
+}
+
+hasPapacyLeader = {
+	OR = {
+		has_country_leader = { name = "John XXIII" ruling_only = yes }
+	}
+}
+
+hasInterimGovernmentLeader = {
+	OR = {
+		has_country_leader = { name = "Mihai I" ruling_only = yes }
+		has_country_leader = { name = "AIFB Presidium" ruling_only = yes }
+		has_country_leader = { name = "Kris Savara" ruling_only = yes }
+		has_country_leader = { name = "Wendell Fertig" ruling_only = yes }
+		has_country_leader = { name = "Zhou Longxiang" ruling_only = yes }
+		has_country_leader = { name = "Yamamoto Moichiro" ruling_only = yes }
+		has_country_leader = { name = "National Assembly" ruling_only = yes }
+		has_country_leader = { name = "Dwight Edward Beach" ruling_only = yes }
+		has_country_leader = { name = "Umberto II di Savoia" ruling_only = yes }
+		has_country_leader = { name = "Kaya Okinori" ruling_only = yes }
+		has_country_leader = { name = "Aichi Kiichi" ruling_only = yes }
+		has_country_leader = { name = "Auro de Moura Andrade" ruling_only = yes }
+		has_country_leader = { name = "Ranieri Mazzilli" ruling_only = yes }
+		has_country_leader = { name = "Dimitrios Psarros" ruling_only = yes }
+		has_country_leader = { name = "Mikhail Baganov" ruling_only = yes }
+		has_country_leader = { name = "Alexander Altunin" ruling_only = yes }
+		has_country_leader = { name = "Anatoly Sobchak" ruling_only = yes }
+		has_country_leader = { name = "David Stirling" ruling_only = yes }
+		has_country_leader = { name = "Rodolfo Cordón Cea" ruling_only = yes }
+		has_country_leader = { name = "Iraqi Command Council" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Vito Miceli" ruling_only = yes }
+			NOT = { has_country_flag = irq_miceli_cemented_power }
+		}
+		has_country_leader = { name = "Regency Council" ruling_only = yes }
+		has_country_leader = { name = "English Reconstruction Committee" ruling_only = yes }
+		has_country_leader = { name = "Welsh Reconstruction Committee" ruling_only = yes }
+		has_country_leader = { name = "Higashikuni Naruhiko" ruling_only = yes }
+		has_country_leader = { name = "National Assembly" ruling_only = yes }
+		has_country_leader = { name = "Bangkok Interim Government" ruling_only = yes }
+		has_country_leader = { name = "Sugiyama Shigeru" ruling_only = yes }
+		has_country_leader = { name = "Pierre Gaxotte" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Hans Speidel" ruling_only = yes }
+			has_country_flag = speidel_in_charge
+		}
+		AND = {
+			has_country_leader = { name = "Charles Haughey" ruling_only = yes }
+			has_country_flag = IRE_lemass_vote_of_no_confidence
+		}
+		AND = {
+			has_country_leader = { name = "Adolf Heusinger" ruling_only = yes }
+			tag = GLC
+		}
+		has_country_leader = { name = "Masazumi Inada" ruling_only = yes }
+	}
+}
+
+hasColonialGovernmentLeader = {
+	OR = {
+		has_country_leader = { name = "Italo Balbo" ruling_only = yes }
+		has_country_leader = { name = "Enrico Mattei" ruling_only = yes }
+		has_country_leader = { name = "Federico Gómez de Salazar" ruling_only = yes }
+		has_country_leader = { name = "Carlo Alberto dalla Chiesa" ruling_only = yes }
+		has_country_leader = { name = "Giuseppe Castellano" ruling_only = yes }
+		has_country_leader = { name = "Amedeo di Savoia-Aosta" ruling_only = yes }
+		has_country_leader = { name = "Enrico Cerulli" ruling_only = yes }
+		has_country_leader = { name = "Amedeo Guillet" ruling_only = yes }
+		has_country_leader = { name = "Baba Masao" ruling_only = yes }
+		has_country_leader = { name = "Takeo Kurosawa" ruling_only = yes }
+		has_country_leader = { name = "Yamamoto Moichiro" ruling_only = yes }
+		has_country_leader = { name = "Takashina Takehito" ruling_only = yes }
+		has_country_leader = { name = "José María Guzmán" ruling_only = yes }
+		has_country_leader = { name = "Adalberto di Savoia Genova" ruling_only = yes }
+		has_country_leader = { name = "Giuseppe Oriana" ruling_only = yes }
+	}
+}
+
+hasNeoBaathismLeader = {
+	OR = {
+		has_country_leader = { name = "Hafez al-Assad" ruling_only = yes }
+	}
+}
+
+hasVanguardAnarchismLeader = {
+	OR = {
+		has_country_leader = { name = "Siberian Security Council" ruling_only = yes }
+		has_country_leader = { name = "Ivan Stepanov" ruling_only = yes }
+		has_country_leader = { name = "Androniy Mishurenko" ruling_only = yes }
+	}
+}
+
+hasAristocraticConservatismLeader = {
+	OR = {
+		has_country_leader = { name = "Farouk I" ruling_only = yes }
+		has_country_leader = { name = "Aisin Gioro Pujie" ruling_only = yes }
+		has_country_leader = { name = "Syed Jaafar Albar" ruling_only = yes }
+		has_country_leader = { name = "Ahmad Barzani" ruling_only = yes }
+		has_country_leader = { name = "Demchugdongrub" ruling_only = yes }
+		has_country_leader = { name = "Dugursulong" ruling_only = yes }
+		has_country_leader = { name = "Mahendra Bir Bikram Shah" ruling_only = yes }
+		has_country_leader = { name = "Igor Shafarevich" ruling_only = yes }
+		has_country_leader = { name = "Nawabzada Shahabuddin Khan" ruling_only = yes }
+		has_country_leader = { name = "Julio Adalberto Rivera" ruling_only = yes }
+		has_country_leader = { name = "Muhammad Abdel Moneim" ruling_only = yes }
+		has_country_leader = { name = "José Félix Estigarribia" ruling_only = yes }
+		has_country_leader = { name = "Vladimir III" ruling_only = yes }
+		has_country_leader = { name = "Rogneda I" ruling_only = yes }
+		has_country_leader = { name = "Manuel de Anchorena" ruling_only = yes }
+		has_country_leader = { name = "Fidel Sánchez Hernández" ruling_only = yes }
+		has_country_leader = { name = "Carlos Humberto Romero" ruling_only = yes }
+		has_country_leader = { name = "Zvonimir II" ruling_only =  yes }
+	}
+}
+
+hasWarlordismLeader = {
+	OR = {
+		has_country_leader = { name = "Lu Han" ruling_only = yes }
+		has_country_leader = { name = "Xia Wei" ruling_only = yes }
+		has_country_leader = { name = "He Yingqin" ruling_only = yes }
+		has_country_leader = { name = "Liu Wenhui" ruling_only = yes }
+		has_country_leader = { name = "Zhang Zhizhong" ruling_only = yes }
+		has_country_leader = { name = "Seyni Kountché" ruling_only = yes }
+		has_country_leader = { name = "Nikolai Abramov" ruling_only = yes }
+		has_country_leader = { name = "Abu Khan" ruling_only = yes }
+		has_country_leader = { name = "Wolfgang Reinhold" ruling_only = yes }
+		has_country_leader = { name = "Ivan Nikishov" ruling_only = yes }
+		has_country_leader = { name = "Mkhitar Ambartsumyan" ruling_only = yes }
+		has_country_leader = { name = "Pyotr Zolin" ruling_only = yes }
+		has_country_leader = { name = "Ivan Melkikh" ruling_only = yes }
+		has_country_leader = { name = "Sepp Dietrich" ruling_only = yes }
+		has_country_leader = { name = "Jaba Ioseliani" ruling_only = yes }
+		has_country_leader = { name = "Soslanbek Apayev" ruling_only = yes }
+	}
+}
+
+hasPersonalisticDictatorshipLeader = {
+	OR = {
+		has_country_leader = { name = "François Duvalier" ruling_only = yes }
+		has_country_leader = { name = "Subhas Chandra Bose" ruling_only = yes }
+		has_country_leader = { name = "Ládòkè Akintola" ruling_only = yes }
+		has_country_leader = { name = "Murtala Mohammed" ruling_only = yes }
+		has_country_leader = { name = "Hastings Kamuzu Banda" ruling_only = yes }
+		has_country_leader = { name = "Thanom Kittikachorn" ruling_only = yes }
+		has_country_leader = { name = "Vladimir Kuroedov" ruling_only = yes }
+		has_country_leader = { name = "Jonas Savimbi" ruling_only = yes }
+		has_country_leader = { name = "Juan Domingo Perón" ruling_only = yes }
+	}
+}
+
+hasPartisanMovementLeader = {
+	OR = {
+		has_country_leader = { name = "Abba Kovner" ruling_only = yes }
+		has_country_leader = { name = "Gurzhap Ochirov" ruling_only = yes }
+		has_country_leader = { name = "Ulrike Meinhof" ruling_only = yes }
+		has_country_leader = { name = "Kazimierz Piechowski" ruling_only = yes }
+	}
+}
+
+hasNationalCatholicismLeader = {
+	OR = {
+		has_country_leader = { name = "Mario Amadeo" ruling_only = yes }
+	}
+}
+
+hasReformedNationalSocialismLeader = {
+	OR = {
+		has_country_leader = { name = "Georg Leibbrandt" ruling_only = yes }
+		has_country_leader = { name = "Albert Speer" ruling_only = yes }
+		has_country_leader = { name = "Alexis von Roenne" ruling_only = yes }
+		has_country_leader = { name = "Harald Riipalu" ruling_only = yes }
+		has_country_leader = { name = "Andrei Andreeovich Sawoniuk" ruling_only = yes }
+		has_country_leader = { name = "Adam Baworowski" ruling_only = yes }
+		has_country_leader = { name = "Yuryi Tys" ruling_only = yes }
+		has_country_leader = { name = "Karl Blessing" ruling_only = yes }
+		has_country_leader = { name = "Friedrich Klausing" ruling_only = yes }
+		has_country_leader = { name = "Ewald-Heinrich von Kleist-Schmenzin" ruling_only = yes }
+		has_country_leader = { name = "Werner Schrader" ruling_only = yes }
+		has_country_leader = { name = "Alfred Zerbel" ruling_only = yes }
+		has_country_leader = { name = "Hans Ulrich von Oertzen" ruling_only = yes }
+		has_country_leader = { name = "Helmuth von Panwitz" ruling_only = yes }
+		has_country_leader = { name = "Reinhard Gehlen" ruling_only = yes }
+	}
+}
+
+hasCorporatismLeader = {
+	OR = {
+		has_country_leader = { name = "Aisin Gioro Puyi" ruling_only = yes }
+		has_country_leader = { name = "Sergey Taboritsky" ruling_only = yes }
+		has_country_leader = { name = "Paavo Susitaival" ruling_only = yes }
+		has_country_leader = { name = "Mikhail Matkovsky" ruling_only = yes }
+		has_country_leader = { name = "Alfonso Armada" ruling_only = yes }
+		has_country_leader = { name = "Jaime Milans del Bosch" ruling_only = yes }
+		has_country_leader = { name = "Yves Guérin-Sérac" ruling_only = yes }
+		has_country_leader = { name = "Olier Mordrel" ruling_only = yes }
+		has_country_leader = { name = "Cornelis van Geelkerken" ruling_only = yes }
+		has_country_leader = { name = "Carl Popp-Madsen" ruling_only = yes }
+		has_country_leader = { name = "Béla Imrédy" ruling_only = yes }
+		has_country_leader = { name = "Rafael Trujillo" ruling_only = yes }
+		has_country_leader = { name = "Higinio Morínigo" ruling_only = yes }
+		has_country_leader = { name = "Ino Hiroya" ruling_only = yes }
+		has_country_leader = { name = "Ikeda Masanosuke" ruling_only = yes }
+		has_country_leader = { name = "Ruan Zhenduo" ruling_only = yes }
+		has_country_leader = { name = "Chen Gongbo" ruling_only = yes }
+		has_country_leader = { name = "Aquilino Boyd" ruling_only = yes }
+		has_country_leader = { name = "Luis Alberto Flores" ruling_only = yes }
+		has_country_leader = { name = "Arthur Kenneth Chesterton" ruling_only = yes }
+		has_country_leader = { name = "Shiina Etsusaburo" ruling_only = yes }
+		has_country_leader = { name = "Hans-Joachim Schoeps" ruling_only = yes }
+		has_country_leader = { name = "Gu Ciheng" ruling_only = yes }
+	}
+}
+
+hasSansepolcrismoLeader = {
+	OR = {
+		AND = {
+			has_country_leader = { name = "Carlo Scorza" ruling_only = yes }
+			has_country_flag = ita_scorza_good_boy
+		}
+	}
+}
+
+hasFascistMysticismLeader = {
+	OR = {
+		has_country_leader = { name = "Niccolò Giani" ruling_only = yes }
+	}
+}
+
+hasNationalSyndicalismLeader = {
+	OR = {
+		has_country_leader = { name = "Ramón Callís Arrigorriaga" ruling_only = yes }
+		has_country_leader = { name = "Óscar Únzaga de la Vega" ruling_only = yes }
+		has_country_leader = { name = "Bernardino Bilbao Rioja" ruling_only = yes }
+		has_country_leader = { name = "Vladimir Kibardin" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Sukarno" ruling_only = yes }
+			has_country_flag = INS_sukarno_natsynd
+		}
+	}
+}
+
+hasFascistPopulismLeader = {
+	OR = {
+		has_country_leader = { name = "Thanom Kittikachorn" ruling_only = yes }
+		has_country_leader = { name = "Juan Natalicio González" ruling_only = yes }
+		has_country_leader = { name = "Flax Katoba Musopole" ruling_only = yes }
+		has_country_leader = { name = "Pierre Poujade" ruling_only = yes }
+		has_country_leader = { name = "Juan Domingo Perón" ruling_only = yes }
+		has_country_leader = { name = "Manuel de Anchorena" ruling_only = yes }
+	}
+}
+
+hasRevolutionaryNationalismLeader = {
+	OR = {
+		has_country_leader = { name = "Plaek Phibunsongkhram" ruling_only = yes }
+		has_country_leader = { name = "Hissène Habré" ruling_only = yes }
+		has_country_leader = { name = "Ahmadou Ahidjo" ruling_only = yes }
+		has_country_leader = { name = "Grégoire Kayibanda" ruling_only = yes }
+		has_country_leader = { name = "Jean-Baptiste Bagaza" ruling_only = yes }
+		has_country_leader = { name = "Tito Okello" ruling_only = yes }
+		has_country_leader = { name = "Muto Akira" ruling_only = yes }
+	}
+}
+
+hasSlavoAryanismLeader = {
+	OR = {
+		has_country_leader = { name = "Velimir" ruling_only = yes }
+	}
+}
+
+hasEurasianismLeader = {
+	OR = {
+		has_country_leader = { name = "Lev Gumilyov" ruling_only = yes }
+	}
+}
+
+hasUltramilitarismLeader = {
+	OR = {
+		has_country_leader = { name = "Eberhard Kinzel" ruling_only = yes }
+		has_country_leader = { name = "Werner Mummert" ruling_only = yes }
+		has_country_leader = { name = "Harald von Hirschfeld" ruling_only = yes }
+		has_country_leader = { name = "Takayama Shinobu" ruling_only = yes }
+		has_country_leader = { name = "Tsuji Masanobu" ruling_only = yes }
+		has_country_leader = { name = "Dmitry Karbyshev" ruling_only = yes }
+		has_country_leader = { name = "Dmitry Yazov" ruling_only = yes }
+		has_country_leader = { name = "Collapsed Authority" ruling_only = yes }
+		has_country_leader = { name = "Evgeny Savintsev" ruling_only = yes }
+		has_country_leader = { name = "Konstantin Pastanogov" ruling_only = yes }
+		has_country_leader = { name = "Safa Gaziz" ruling_only = yes }
+		has_country_leader = { name = "Paul Touvier" ruling_only = yes }
+		has_country_leader = { name = "Bert Eriksson" ruling_only = yes }
+		has_country_leader = { name = "Léon Degrelle" ruling_only = yes }
+		has_country_leader = { name = "Sylvester Stadler" ruling_only = yes }
+		has_country_leader = { name = "Thanom Kittikachorn" ruling_only = yes }
+		has_country_leader = { name = "Francisco Macías Nguema" ruling_only = yes }
+		has_country_leader = { name = "Robert Mugabe" ruling_only = yes }
+		has_country_leader = { name = "Idi Amin Dada" ruling_only = yes }
+		has_country_leader = { name = "Hafez al-Assad" ruling_only = yes }
+		has_country_leader = { name = "Katakura Tadashi" ruling_only = yes }
+		has_country_leader = { name = "Otto Ernst Remer" ruling_only = yes }
+		has_country_leader = { name = "Petros Poghosyan" ruling_only = yes }
+		has_country_leader = { name = "José Alberto Medrano" ruling_only = yes }
+		has_country_leader = { name = "Alexander Lazarenko" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Ian Paisley" }
+			NOT = { has_country_flag = ULS_Paisley_Victory }
+		}
+		AND = {
+			has_country_leader = { name = "Long Yun" ruling_only = yes }
+			NOT = { check_variable = { YUN_legitimate_regime = 1 } }
+		}
+	}
+}
+
+hasFundamentalismLeader = {
+	OR = {
+		has_country_leader = { name = "Carlos Arias Navarro" ruling_only = yes }
+		has_country_leader = { name = "Sayyid Qutb" ruling_only = yes }
+		has_country_leader = { name = "Mawlawi Hindustoni" ruling_only = yes }
+		has_country_leader = { name = "Abaddon" ruling_only = yes }
+	}
+}
+
+hasStratocraticNazismUltranatLeader = {
+	OR = {
+		has_country_leader = { name = "Ferdinand Schörner" ruling_only = yes }
+	}
+}
+
+hasClericalFascismLeader = {
+	OR = {
+		has_country_leader = { name = "Konstantin Rodzaevsky" ruling_only = yes }
+		has_country_leader = { name = "Jozef Tiso" ruling_only = yes }
+		has_country_leader = { name = "Štefan Tiso" ruling_only = yes }
+		has_country_leader = { name = "Jure Francetić" ruling_only = yes }
+		has_country_leader = { name = "Alberto Ezcurra Uriburu" ruling_only = yes }
+		has_country_leader = { name = "Dimitrije Ljotić" ruling_only = yes }
+		has_country_leader = { name = "Pierre Sidos" ruling_only = yes }
+	}
+}
+
+hasIdiosyncraticNazismLeader = {
+	OR = {
+		has_country_leader = { name = "Theodor Oberländer" ruling_only = yes }
+		has_country_leader = { name = "Baymirza Hayit" ruling_only = yes }
+	}
+}
+
+hasStratocraticNazismLeader = {
+	OR = {
+		has_country_leader = { name = "Albert Bormann" ruling_only = yes }
+		has_country_leader = { name = "Heinz-Georg Lemm" ruling_only = yes }
+		has_country_leader = { name = "Leo Hepp" ruling_only = yes }
+		has_country_leader = { name = "João de Almeida Bruno" ruling_only = yes }
+		has_country_leader = { name = "Francisco Daniel Roxo" ruling_only = yes }
+		has_country_leader = { name = "Silvino Silvério Marques" ruling_only = yes }
+		has_country_leader = { name = "Hermann Göring" ruling_only = yes }
+		has_country_leader = { name = "Otto-Heinrich Drechsler" ruling_only = yes }
+		has_country_leader = { name = "Erich Koch" ruling_only = yes }
+		has_country_leader = { name = "Hartwig von Ludwiger" ruling_only = yes }
+		has_country_leader = { name = "Ferdinand Schörner" ruling_only = yes }
+		has_country_leader = { name = "Erhard Milch" ruling_only = yes }
+		has_country_leader = { name = "Veli Kayyum Han" ruling_only = yes }
+		has_country_leader = { name = "Mutshuito Villasboa" ruling_only = yes }
+		has_country_leader = { name = "Bronislav Kaminski" ruling_only = yes }
+		has_country_leader = { name = "Herbert Otto Gille" ruling_only = yes }
+		has_country_leader = { name = "Franz Halder" ruling_only = yes }
+		has_country_leader = { name = "Bern von Baer" ruling_only = yes }
+		has_country_leader = { name = "Theodor Tolsdorff" ruling_only = yes }
+		has_country_leader = { name = "Gerhard von Schwerin" ruling_only = yes }
+	}
+}
+
+hasReformBureaucracyLeader = {
+	OR = {
+		has_country_leader = { name = "Shiina Etsusaburo" ruling_only = yes }
+		has_country_leader = { name = "Gu Ciheng" ruling_only = yes }
+	}
+}
+
+hasTechnocraticNazismLeader = {
+	OR = {
+		has_country_leader = { name = "Paul Pleiger" ruling_only = yes }
+		has_country_leader = { name = "Karl Hanke" ruling_only = yes }
+		has_country_leader = { name = "Gerhard Schrader" ruling_only = yes }
+	}
+}
+
+hasOrdosocialismLeader = {
+	OR = {
+		has_country_leader = { name = "Ivan Serov" ruling_only = yes }
+	}
+}
+
+hasCorporateStatismLeader = {
+	OR = {
+		has_country_leader = { name = "Suzuki Teiichi" ruling_only = yes }
+		has_country_leader = { name = "Mikhail Oktan" ruling_only = yes }
+		has_country_leader = { name = "Nikolay Talberg" ruling_only = yes }
+		has_country_leader = { name = "Jean Schramme" ruling_only = yes }
+		has_country_leader = { name = "Vladimir Gil" ruling_only = yes }
+		AND = {
+			has_country_leader = { name = "Andrey Vlasov" ruling_only = yes }
+			has_idea = SAM_Mikhail_Oktan_hog
+		}
+	}
+}
+
+hasCorporatocracyLeader = {
+	OR = {
+		has_country_leader = { name = "Matsuzawa Takuji" ruling_only = yes }
+		has_country_leader = { name = "Matsushita Masaharu" ruling_only = yes }
+		has_country_leader = { name = "Ibuka Masaru" ruling_only = yes }
+		has_country_leader = { name = "Léo Pétillon" ruling_only = yes }
+		has_country_leader = { name = "Jean Schramme" ruling_only = yes }
+		has_country_leader = { name = "Léon Pétillon" ruling_only = yes }
+	}
+}
+
+hasBurgundianSystemLeader = {
+	OR = {
+		has_country_leader = { name = "Heinrich Himmler" ruling_only = yes }
+		has_country_leader = { name = "Friedrich Jeckeln" ruling_only = yes }
+		has_country_leader = { name = "Hans Hüttig" ruling_only = yes }
+		has_country_leader = { name = "Henk Feldmeijer" ruling_only = yes }
+		has_country_leader = { name = "Klaus Barbie" ruling_only = yes }
+		has_country_leader = { name = "Paul Hausser" ruling_only = yes }
+		has_country_leader = { name = "Wilhelm Mohnke" ruling_only = yes }
+		has_country_leader = { name = "Hermann Fegelein" ruling_only = yes }
+		has_country_leader = { name = "Theodor Eicke" ruling_only = yes }
+		has_country_leader = { name = "Ernst Kaltenbrunner" ruling_only = yes }
+		has_country_leader = { name = "Fritz Klingenberg" ruling_only = yes }
+	}
+}
+
+hasImperialCultLeader = {
+	OR = {
+		has_country_leader = { name = "Sergey Taboritsky" ruling_only = yes }
+		has_country_leader = { name = "Radio Silence" ruling_only = yes }
+		has_country_leader = { name = "Viktor Larionov" ruling_only = yes }
+		has_country_leader = { name = "Andrey Dikiy" ruling_only = yes }
+		has_country_leader = { name = "Yuri Evtukhovich" ruling_only = yes }
+	}
+}
+
+hasAgrarianSpartanismLeader = {
+	OR = {
+		has_country_leader = { name = "Odilo Globočnik" ruling_only = yes }
+		has_country_leader = { name = "Herbert Backe" ruling_only = yes }
+		has_country_leader = { name = "Rolando Uberti" ruling_only = yes }
+		has_country_leader = { name = "His Excellency" ruling_only = yes }
+	}
+}
+
+hasSpartanismLeader = {
+	OR = {
+		has_country_leader = { name = "Reinhard Heydrich" ruling_only = yes }
+		has_country_leader = { name = "Felix Steiner" ruling_only = yes }
+		has_country_leader = { name = "Konrad Henlein" ruling_only = yes }
+		has_country_leader = { name = "Otto Skorzeny" ruling_only = yes }
+		has_country_leader = { name = "Adolf Eichmann" ruling_only = yes }
+		has_country_leader = { name = "Joachim Peiper" ruling_only = yes }
+	}
+}

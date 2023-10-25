@@ -1,0 +1,21 @@
+
+state={
+	id=435
+	name="STATE_435"
+
+	history={
+		owner = AZH
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = AZH
+		add_core_of = IND
+	}
+
+	provinces={
+		1656 4459 10361 10878 
+	}
+	manpower=13901813
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

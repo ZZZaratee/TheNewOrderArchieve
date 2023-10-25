@@ -1,0 +1,277 @@
+defined_text = {
+	name = Get_TNO_alert_name
+	text = {
+		trigger = { check_variable = { alert_id = 1 } }
+		localization_key = TNO_alert_name_fiscal_crisis
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 2 } }
+		localization_key = TNO_alert_name_high_tension
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 4 } }
+		localization_key = TNO_alert_name_consumer_goods_empty
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 5 } }
+		localization_key = TNO_alert_name_unallocated_pu
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 6 } }
+		localization_key = TNO_alert_name_lost_pu
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 7 } }
+		localization_key = TNO_alert_name_senado_voting
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 8 } }
+		localization_key = TNO_alert_name_pres_voting
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 9 } }
+		localization_key = TNO_alert_name_pl_voting_begun
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 10 } }
+		localization_key = TNO_alert_name_development
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 11 } }
+		localization_key = TNO_alert_name_credit_rating_improved
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 12 } }
+		localization_key = TNO_alert_name_credit_rating_degraded
+	}
+
+	## Reich alerts (100-199)
+	text = {
+		trigger = { check_variable = { alert_id = 100 } }
+		localization_key = TNO_alert_name_kartenhaus_action_available
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 101 } }
+		localization_key = TNO_alert_name_armed_forces_paranoia
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 102 } }
+		localization_key = TNO_alert_name_great_game
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 103 } }
+		localization_key = TNO_alert_name_eng_election
+	}
+
+	## OFN alerts (200-299)
+	text = {
+		trigger = { check_variable = { alert_id = 201 } }
+		localization_key = TNO_alert_name_US_election
+	}
+
+	## Asia alerts (300-399)
+
+	## Triumvirate alerts (400-499)
+	text = {
+		trigger = { check_variable = { alert_id = 404 } }
+		localization_key = TNO_alert_name_aas_resources
+	}
+
+	## Russia alerts (500-599)
+
+	## LatAm alerts (600-699)
+
+	## Africa alerts (700-799)
+
+	text = {
+		localization_key = TNO_alert_name_missing
+	}
+}
+
+defined_text = {
+	name = Get_TNO_alert_description
+	text = {
+		trigger = { check_variable = { alert_id = 1 } }
+		localization_key = TNO_alert_desc_fiscal_crisis
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 2 } }
+		localization_key = TNO_alert_desc_high_tension
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 3 } }
+		localization_key = TNO_alert_desc_consumer_goods_looming_shortage
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 4 } }
+		localization_key = TNO_alert_desc_consumer_goods_empty
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 5 } }
+		localization_key = TNO_alert_desc_unallocated_pu
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 6 } }
+		localization_key = TNO_alert_desc_lost_pu
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 7 } }
+		localization_key = TNO_alert_desc_senado_voting
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 8 } }
+		localization_key = TNO_alert_desc_pres_voting
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 9 } }
+		localization_key = TNO_alert_desc_pl_voting_begun
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 10 } }
+		localization_key = TNO_alert_desc_development
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 11 } }
+		localization_key = TNO_alert_desc_credit_rating_improved
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 12 } }
+		localization_key = TNO_alert_desc_credit_rating_degraded
+	}
+
+	## Reich alerts (100-199)
+	text = {
+		trigger = { check_variable = { alert_id = 100 } }
+		localization_key = TNO_alert_desc_kartenhaus_action_available
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 101 } }
+		localization_key = TNO_alert_desc_armed_forces_paranoia
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 102 } }
+		localization_key = TNO_alert_desc_great_game
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 103 } }
+		localization_key = TNO_alert_desc_eng_election
+	}
+
+	## OFN alerts (200-299)
+	text = {
+		trigger = { check_variable = { alert_id = 201 } }
+		localization_key = TNO_alert_name_US_election
+	}
+
+	## Asia alerts (300-399)
+
+	## Triumvirate alerts (400-499)
+	text = {
+		trigger = { check_variable = { alert_id = 404 } }
+		localization_key = TNO_alert_desc_aas_resources
+	}
+
+	## Russia alerts (500-599)
+
+	## LatAm alerts (600-699)
+
+	## Africa alerts (700-799)
+
+	text = {
+		localization_key = TNO_alert_desc_missing
+	}
+}
+
+defined_text = {
+	name = Get_TNO_alert_GFX
+	text = {
+		trigger = { check_variable = { alert_id = 1 } }
+		localization_key = "GFX_TNO_custom_alert_fiscal_crisis"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 2 } }
+		localization_key = "GFX_TNO_custom_alert_high_tension"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 3 } }
+		localization_key = "GFX_TNO_custom_alert_consumer_goods_empty"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 4 } }
+		localization_key = "GFX_TNO_custom_alert_consumer_goods_empty"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 5 } }
+		localization_key = "GFX_TNO_custom_alert_unallocated_pu"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 6 } }
+		localization_key = "GFX_TNO_custom_alert_lost_pu"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 7 } }
+		localization_key = "GFX_TNO_BRA_custom_alert_senado_voting"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 8 } }
+		localization_key = "GFX_TNO_BRA_custom_alert_pres_voting"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 9 } }
+		localization_key = "GFX_TNO_BRA_custom_alert_pl_voting_begun"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 10 } }
+		localization_key = "GFX_TNO_BRA_custom_alert_development"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 11 } }
+		localization_key = "GFX_TNO_custom_alert_credit_rating_improved"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 12 } }
+		localization_key = "GFX_TNO_custom_alert_credit_rating_degraded"
+	}
+
+	## Reich alerts (100-199)
+	text = {
+		trigger = { check_variable = { alert_id = 100 } }
+		localization_key = "GFX_TNO_GER_BOR_custom_alert_kartenhaus_action_available"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 101 } }
+		localization_key = "GFX_TNO_SCO_armed_forces_paranoia"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 102 } }
+		localization_key = "GFX_TNO_custom_alert_great_game"
+	}
+	text = {
+		trigger = { check_variable = { alert_id = 103 } }
+		localization_key = "GFX_TNO_custom_alert_eng_election"
+	}
+
+	## OFN alerts (200-299)
+	text = {
+		trigger = { check_variable = { alert_id = 201 } }
+		localization_key = "GFX_TNO_custom_alert_us_elections"
+	}
+
+	## Asia alerts (300-399)
+
+	## Triumvirate alerts (400-499)
+	text = {
+		trigger = { check_variable = { alert_id = 404 } }
+		localization_key = "GFX_TNO_custom_alert_aas_resources"
+	}
+
+	## Russia alerts (500-599)
+
+	## LatAm alerts (600-699)
+
+	## Africa alerts (700-799)
+
+	text = {
+		localization_key = "GFX_TNO_custom_alert_missing"
+	}
+}

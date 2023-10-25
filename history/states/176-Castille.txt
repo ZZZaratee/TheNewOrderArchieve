@@ -1,0 +1,28 @@
+
+state={
+	id=176
+	name="STATE_176"
+
+	history={
+		owner = IBR
+		buildings = {
+			prisons = 1
+			infrastructure = 6
+			air_base = 1
+
+		}
+		victory_points = { 3887 5 }
+		
+		
+		add_core_of = IBR
+	
+
+	}
+
+	provinces={
+		857 3859 3887 9870 11766 11806  
+	}
+	manpower=354856
+	buildings_max_level_factor=1.000
+	state_category=town
+}

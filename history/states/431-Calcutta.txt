@@ -1,0 +1,25 @@
+
+state={
+	id=431
+	name="STATE_431"
+	resources={
+		steel=7.000
+		tungsten=12.000
+	}
+
+	history={
+		owner = AZH
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = AZH
+		add_core_of = IND
+	}
+
+	provinces={
+		4204 4644 7537 7593 10077 
+	}
+	manpower=33888068
+	buildings_max_level_factor=1.000
+	state_category=town
+}

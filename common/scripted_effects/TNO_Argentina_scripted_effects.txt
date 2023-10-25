@@ -1,0 +1,330 @@
+ARG_load_peron = {
+	set_popularities = {
+		communist = 0
+		socialist = 4
+		social_democracy = 8
+		liberal_democracy = 29
+		conservative_democracy = 4
+		authoritarian_democracy = 39
+		despotism = 5
+		fascism = 7
+		national_socialism = 2
+		ultranationalism = 0
+		esoteric_nazism = 2
+	}
+	set_politics = {
+		ruling_party = authoritarian_democracy
+	}
+	create_country_leader = {
+		name = "Juan Domingo Perón"
+		desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
+		picture = "Portrait_ARG_Juan_Peron.dds"
+		expire = "1965.1.1"
+		ideology = authoritarian_democracy_peronism_subtype
+		traits = {
+			el_primer_trabajador_latin
+		}
+	}
+	create_country_leader = {
+		name = "Manuel de Anchorena"
+		#desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
+		picture = "Portrait_ARG_Manuel_de_Anchorena.dds"
+		expire = "1965.1.1"
+		ideology = fascism_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Mario Amadeo"
+		#desc = "POLITICS_JUAN_DOMINGO_PERON_DESC"
+		picture = "Portrait_ARG_Mario_Amadeo.dds"
+		expire = "1965.1.1"
+		ideology = despotism_national_catholicism_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Vicente Solano Lima"
+		desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		picture = "Portrait_ARG_Vicente_Solano_Lima.dds"
+		expire = "1965.1.1"
+		ideology = conservative_democracy_populist_conservatism_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Ricardo Balbín"
+		desc = "POLITICS_BALBIN_DESC"
+		picture = "Portrait_ARG_Ricardo_Balbin.dds"
+		expire = "1965.1.1"
+		ideology = liberal_democracy_liberal_radicalism_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Héctor José Cámpora"
+		#desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		picture = "Portrait_ARG_Ricardo_Balbin.dds"
+		expire = "1965.1.1"
+		ideology = social_democracy_left_wing_populism_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Juan Carlos Coral"
+		#desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		picture = "Portrait_ARG_Juan_Carlos_Coral.dds"
+		expire = "1965.1.1"
+		ideology = socialist_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "José López Rega"
+		#desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		#picture = "ARG_Juan_Carlos_Coral.dds"
+		expire = "1965.1.1"
+		ideology = esoteric_nazism_subtype
+		traits = {
+			#
+		}
+	}
+	set_party_name = { 
+		ideology = communist 
+		long_name = ARG_communist_party_long 
+		name = ARG_communist_party 
+	}
+	set_party_name = { 
+		ideology = socialist 
+		long_name = ARG_socialist_party_long 
+		name = ARG_socialist_party 
+	}
+	set_party_name = { 
+		ideology = social_democracy 
+		long_name = ARG_social_democracy_peron_party_long 
+		name = ARG_social_democracy_peron_party 
+	}
+	set_party_name = { 
+		ideology = liberal_democracy 
+		long_name = ARG_liberal_democracy_peron_party_long 
+		name = ARG_liberal_democracy_peron_party 
+	}
+	set_party_name = { 
+		ideology = conservative_democracy 
+		long_name = ARG_conservative_democracy_peron_party_long 
+		name = ARG_conservative_democracy_peron_party 
+	}
+	set_party_name = { 
+		ideology = authoritarian_democracy 
+		long_name = ARG_authoritarian_democracy_peron_party_long 
+		name = ARG_authoritarian_democracy_peron_party 
+	}
+	set_party_name = { 
+		ideology = despotism 
+		long_name = ARG_despotism_peron_party_long 
+		name = ARG_despotism_peron_party 
+	}
+	set_party_name = { 
+		ideology = fascism 
+		long_name = ARG_fascism_peron_party_long 
+		name = ARG_fascism_peron_party 
+	}
+	set_party_name = { 
+		ideology = esoteric_nazism 
+		long_name = ARG_esoteric_nazism_peron_party_long 
+		name = ARG_esoteric_nazism_peron_party 
+	}
+	remove_all_ministers = yes
+	add_ideas = {
+		ARG_Roman_Subiza_hog
+		ARG_Mario_Amadeo_peron_for
+		ARG_Jorge_Antonio_eco
+		ARG_Miguel_Angel_Iniguez_sec
+	}
+	hidden_effect = {
+		remove_ideas = {
+			#OFN_Candidate_Member
+	        TRI_Observer
+	        #Spirits
+	        ARG_structural_unhingement
+	        ARG_greekback_lira_blues
+	        ARG_juan_domingo_el_ausente
+			ARG_anarchy_in_the_army
+			ARG_the_death_of_discipline
+			ARG_navy_controlled_army
+			ARG_reign_of_the_cavalry
+		}
+		add_ideas = {
+			tno_political_parties_controlled_opposition
+		}
+		every_country = {
+			news_event = { hours = 1 id = LATAM_news.82 }
+		}
+	}
+}
+
+ARG_load_aramburu = {
+	create_country_leader = {
+		name = "Pedro Eugenio Aramburu"
+		desc = "POLITICS_PEA_DESC"
+		picture = "Portrait_ARG_Pedro_Eugenio_Aramburu.dds"
+		expire = "1994.4.20"
+		ideology = liberal_democracy_subtype
+		traits = {
+		}
+	}
+	create_country_leader = {
+		name = "Juan Carlos Coral"
+		#desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		picture = "Portrait_ARG_Juan_Carlos_Coral.dds"
+		expire = "1965.1.1"
+		ideology = socialist_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Américo Ghioldi"
+		#desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		#picture = "Portrait_ARG_Juan_Carlos_Coral.dds"
+		expire = "1965.1.1"
+		ideology = social_democracy_democratic_socialism_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Julio César Cueto Rúa"
+		#desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		#picture = "Portrait_ARG_Juan_Carlos_Coral.dds"
+		expire = "1965.1.1"
+		ideology = conservative_democracy_liberal_conservatism_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Miguel Ángel Iñíguez"
+		#desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		#picture = "Portrait_ARG_Juan_Carlos_Coral.dds"
+		expire = "1965.1.1"
+		ideology = authoritarian_democracy_peronism_subtype
+		traits = {
+			#
+		}
+	}
+	create_country_leader = {
+		name = "Isaac Rojas"
+		desc = ""
+		picture = "Portrait_ARG_Isaac_Rojas.dds"
+		expire = "1994.4.20"
+		ideology = despotism_military_junta_subtype
+		traits = {
+		}
+	}
+	create_country_leader = {
+		name = "Mario Amadeo"
+		#desc = "POLITICS_VICENTE_SOLANO_LIMA_DESC"
+		#picture = "Portrait_ARG_Juan_Carlos_Coral.dds"
+		expire = "1965.1.1"
+		ideology = fascism_subtype
+		traits = {
+			#
+		}
+	}
+	set_party_name = { 
+		ideology = communist 
+		long_name = ARG_communist_party_long 
+		name = ARG_communist_party 
+	}
+	set_party_name = { 
+		ideology = socialist 
+		long_name = ARG_socialist_aramburu_party_long 
+		name = ARG_socialist_aramburu_party 
+	}
+	set_party_name = { 
+		ideology = social_democracy 
+		long_name = ARG_social_democracy_aramburu_party_long 
+		name = ARG_social_democracy_aramburu_party 
+	}
+	set_party_name = { 
+		ideology = liberal_democracy 
+		long_name = ARG_liberal_democracy_aramburu_party_long 
+		name = ARG_liberal_democracy_aramburu_party 
+	}
+	set_party_name = { 
+		ideology = conservative_democracy 
+		long_name = ARG_conservative_democracy_aramburu_party_long 
+		name = ARG_conservative_democracy_aramburu_party 
+	}
+	set_party_name = { 
+		ideology = authoritarian_democracy 
+		long_name = ARG_authoritarian_democracy_aramburu_party_long 
+		name = ARG_authoritarian_democracy_aramburu_party 
+	}
+	set_party_name = { 
+		ideology = despotism 
+		long_name = ARG_despotism_aramburu_party_long 
+		name = ARG_despotism_aramburu_party 
+	}
+	set_party_name = { 
+		ideology = fascism 
+		long_name = ARG_fascism_aramburu_party_long 
+		name = ARG_fascism_aramburu_party 
+	}
+	set_party_name = { 
+		ideology = national_socialism 
+		long_name = ARG_national_socialism_aramburu_party_long 
+		name = ARG_national_socialism_aramburu_party 
+	}
+	set_party_name = { 
+		ideology = esoteric_nazism 
+		long_name = ARG_esoteric_nazism_aramburu_party_long 
+		name = ARG_esoteric_nazism_aramburu_party 
+	}
+	set_popularities = {
+		communist = 0
+		socialist = 2
+		social_democracy = 22
+		liberal_democracy = 29
+		conservative_democracy = 2
+		authoritarian_democracy = 25
+		despotism = 16
+		fascism = 2
+		national_socialism = 2
+		ultranationalism = 0
+		esoteric_nazism = 0
+	}
+	set_politics = {
+		ruling_party = liberal_democracy
+	}
+	add_ideas = {
+		ARG_Hector_Sandler_hog
+		ARG_Americo_Ghioldi_aramburu_for
+		ARG_Raul_Ondarts_eco
+		ARG_Bernardino_Labayru_sec
+	}
+	hidden_effect = {
+		remove_ideas = {
+	        TRI_Observer
+			ARG_anarchy_in_the_army
+			ARG_the_death_of_discipline
+			ARG_reign_of_the_cavalry
+		}
+		add_ideas = {
+			ARG_navy_controlled_army
+			tno_political_parties_controlled_opposition
+		}
+		hidden_effect = {
+			every_country = {
+				news_event = { hours = 1 id = LATAM_news.104 }
+			}
+		}
+	}
+}

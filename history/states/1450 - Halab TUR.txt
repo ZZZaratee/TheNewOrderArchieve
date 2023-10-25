@@ -1,0 +1,18 @@
+###POP DONE 
+state={
+	id=1450
+	name="STATE_1450"
+	manpower = 425467
+	state_category = rural
+	history={
+		owner = TUR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SYR
+	}
+
+	provinces={
+		14684 14686 14687
+	}
+}

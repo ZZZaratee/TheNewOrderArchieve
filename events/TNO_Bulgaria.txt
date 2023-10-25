@@ -1,0 +1,26 @@
+﻿add_namespace = BUL
+
+# Boris gets dabbed on
+country_event = {
+	id = BUL.1
+	title = BUL.1.t
+	desc = BUL.1.d
+	picture = GFX_report_event_BULgarian_soldiers
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BUL.1" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BUL.1.a
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Simeon II"
+			desc = "POLITICS_DESC_SIMEON_II"
+			picture = "Portrait_Bulgaria_Simeon_II.dds"
+			expire = "1999.1.1"
+			ideology = despotism_absolute_monarchy_subtype
+		}
+	}
+}

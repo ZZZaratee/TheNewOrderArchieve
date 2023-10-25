@@ -1,0 +1,27 @@
+MCW_SE_helldorff_takeover_demil_N_states = {
+	MCW = {
+		while_loop_effect = {
+			limit = { check_variable = { N > 0 } }
+			random_owned_state = {
+				limit = { is_demilitarized_zone = no }
+				set_demilitarized_zone = yes
+			}
+			add_to_temp_variable = { N = -1 }
+		}
+	}
+}
+
+MCW_dynamic_modifiers_setup = {
+	set_variable = { MCW_monthly_population = -0.001 }
+	set_variable = { MCW_recruitable_population_factor = -0.8 }
+	set_variable = { MCW_slavery_policy_monthly_rate = 0.02 }
+	add_dynamic_modifier = { modifier = MCW_generalplan_moskowien_and_its_fruits_dynamic_modifier }
+	set_variable = { MCW_max_command_power = 25 }
+	set_variable = { MCW_gdp_growth_modifier = 0.02 }
+	set_variable = { MCW_production_units_to_GDP_ratio_modifier = 0.025 }
+	add_dynamic_modifier = { modifier = MCW_totalrekonstruktion_and_what_lead_to_it_dynamic_modifier }
+	set_variable = { MCW_political_power_gain = 0.5 }
+	set_variable = { MCW_command_power_gain = 0.5 }
+	set_variable = { MCW_political_parties_policy_monthly_rate = -0.01 }
+	add_dynamic_modifier = { modifier = MCW_ostvolkrat_and_its_rats_dynamic_modifier }
+}

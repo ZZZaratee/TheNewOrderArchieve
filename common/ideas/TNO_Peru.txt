@@ -1,0 +1,182 @@
+ideas = {
+	head_of_government = {
+		PRU_Carlos_Moreyra_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PRU_Carlos_Moreyra_hog"}
+			picture = PRU_Carlos_Moreyra_hog
+			allowed = {
+				original_tag = PRU
+			}
+			available = {
+			}
+			traits = {
+				PRU_head_pcm
+				PRU_second_vp
+				conservative_democracy
+				hog_silent_workhorse
+				PRU_Carlos_Moreyra_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+   foreign_minister = {
+		PRU_Alvarado_Garrido_pol = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PRU_Alvarado_Garrido_pol"}
+			picture = PRU_Alvarado_Garrido_pol
+			allowed = {
+				original_tag = PRU
+			}
+			available = {
+
+			}
+			traits = {
+				PRU_head_minex
+				conservative_democracy
+				for_seasoned_ambassador
+				PRU_Alvarado_Garrido_pol_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	economy_minister = {
+		PRU_Gallo_Porras_eco = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PRU_Gallo_Porras_eco"}
+			picture = PRU_Gallo_Porras_eco
+			allowed = {
+				original_tag = PRU
+			}
+			available = {
+
+			}
+			traits = {
+				PRU_head_mineco
+				PRU_first_vp
+				conservative_democracy
+				eco_bank_president
+				PRU_Gallo_Porras_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	security_minister = {
+		PRU_Ricardo_Elias_sec = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PRU_Ricardo_Elias_sec"}
+			picture = PRU_Ricardo_Elias_sec
+			allowed = {
+				original_tag = PRU
+			}
+			available = {
+
+			}
+			traits = {
+				PRU_head_minpol
+				conservative_democracy
+				sec_silent_lawyer
+				PRU_Ricardo_Elias_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	country = {
+		###The False Dream
+		PRU_idea_fake_democratic_dream = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.05
+				war_support_factor = -0.03
+			}
+			picture = PRU_Fake_Dream
+		}
+		###The Silent Liberation
+		PRU_idea_silent_liberation = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.02
+				conscription_factor = -0.06
+			}
+			picture = PRU_silent_liberation_idea
+		}
+		###Two Superpowers, One Economy
+		PRU_idea_two_super_powers_one_economy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.03
+				annual_gdp_growth_factor = 0.06
+				consumer_goods_use_modifier = 0.04
+			}
+			picture = PRU_Two_SPPW_One_Economy
+		}
+		###Peru diverse, diverse problems
+		PRU_idea_peru_diverse_problems = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.08
+			}
+			picture = PRU_Diverse_Country_Problems
+		}
+		###Peruvian Armed Forces
+		PRU_idea_peruvian_armed_forces = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.20
+				conscription_factor = -0.02
+			}
+			picture = PRU_Peruvian_Armed_Forces
+		}
+		###Death of the Dream
+		PRU_idea_death_of_dream = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.07
+			}
+			picture = PRU_Death_of_Dream
+		}
+	}
+}

@@ -1,0 +1,55 @@
+###POP DONE 
+state={
+	id=19
+	name="STATE_19"
+	manpower = 1936514
+	resources={
+		steel=40
+		aluminium=18
+	}
+	
+	state_category = city
+
+	history={
+		owner = FRA
+		victory_points = { 9737 20 }
+		victory_points = { 743 5 }
+		victory_points = { 6777 3 }
+		buildings = {
+			infrastructure = 6
+			dockyard = 1
+			air_base = 3
+			radar_station = 1
+			thermoelectric_plant = 2
+			prisons = 1 
+			barracks = 1
+			schools = 1
+			hospitals = 1
+			offices = 1
+			9737 = {
+				naval_base = 3
+				coastal_bunker = 2
+			}
+			743 = {
+				coastal_bunker = 2
+			}
+			9710 = {
+				coastal_bunker = 2
+			}
+			6777 = {
+				coastal_bunker = 2
+			}
+			6621 = {
+				coastal_bunker = 2
+			}
+			15250 = {
+				coastal_bunker = 2
+			}
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		743 6621 6762 6777 9710 9737 9717 6759 3740 11697 15244 15245 15246 15247 15248 15249 15250
+	}
+}

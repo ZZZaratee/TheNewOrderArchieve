@@ -1,0 +1,24 @@
+#POP DONE
+state={
+	id=789
+	name="STATE_789"
+	state_category = town
+	provinces={
+		3594 9607 9609 13369 
+	}
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 5
+			offices = 1
+			barracks = 1
+			hospitals = 1
+		}
+		add_core_of = FRA
+		set_demilitarized_zone = yes
+		victory_points = { 3594 5 }
+		victory_points = { 9609 1 }
+	}
+	manpower=424924
+	buildings_max_level_factor=1.000
+}

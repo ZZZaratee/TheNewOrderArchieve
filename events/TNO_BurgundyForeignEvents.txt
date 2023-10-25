@@ -1,0 +1,3364 @@
+﻿ ############################
+## Burgundy Events
+############################
+
+add_namespace = BRG_gcw
+add_namespace = BRG_focus
+add_namespace = BRG_kondor
+add_namespace = BRG_wolf
+add_namespace = BRG_puma
+add_namespace = BRG_adler
+add_namespace = BRG
+
+#   _____  _     ___________  ___   _     ______ _       ___   _   _  _____
+#  |  __ \| |   |  _  | ___ \/ _ \ | |    | ___ \ |     / _ \ | \ | |/  ___|
+#  | |  \/| |   | | | | |_/ / /_\ \| |    | |_/ / |    / /_\ \|  \| |\ `--.
+#  | | __ | |   | | | | ___ \  _  || |    |  __/| |    |  _  || . ` | `--. \
+#  | |_\ \| |___\ \_/ / |_/ / | | || |____| |   | |____| | | || |\  |/\__/ /
+#   \____/\_____/\___/\____/\_| |_/\_____/\_|   \_____/\_| |_/\_| \_/\____/
+#
+#
+
+###################################################################
+###############
+############### KONDOR 
+###############
+###################################################################
+
+country_event = { #event for infiltrating Iberia, explaing the situation and giving PP to represent the intel network to manipulate them
+	id = BRG_kondor.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.1"}
+	title = BRG_kondor.1.t
+	desc = BRG_kondor.1.desc
+	picture = GFX_report_event_BRG_event1
+
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_kondor.1.a
+		add_political_power = 100
+	}
+}
+
+country_event = { #Kondor phase 2 is unlocked
+	id = BRG_kondor.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.2"}
+	title = BRG_kondor.2.t
+	desc = BRG_kondor.2.desc
+	picture = GFX_report_event_BRG_event16
+
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_kondor.2.a
+		custom_effect_tooltip = BRG_unlock_kondor_phase
+		hidden_effect = {
+			set_country_flag = BRG_kondor_phase_2
+			if = {
+				limit = { check_variable = { BRG_GP_Kondor_Status_Var = 2 } }
+				TNO_BRG_main_tree_swap = yes
+			}
+		}
+	}
+}
+
+country_event = { #Provides info about the escelating situation in Iberia and how it provides oppurtunities for chaos and mayhem, perhaps introduces the puppet communists?
+	id = BRG_kondor.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.3"}
+	title = BRG_kondor.3.t
+	desc = BRG_kondor.3.desc
+	picture = GFX_report_event_BRG_event10
+
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_kondor.3.a
+		add_political_power = 25
+	}
+}
+
+country_event = { #Iberia notified one of their terorrists just got stronger
+	id = BRG_kondor.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.4"}
+	title = BRG_kondor.4.t
+	desc = {
+		text = BRG_kondor.4.desc.cnt
+		trigger = { BRG = { has_country_flag = BRG_smuggled_to_cnt } }
+	}
+	desc = {
+		text = BRG_kondor.4.desc.fslp
+		trigger = { BRG = { has_country_flag = BRG_smuggled_to_fslp } }
+	}
+	desc = {
+		text = BRG_kondor.4.desc.tba
+		trigger = { BRG = { has_country_flag = BRG_smuggled_to_tba } }
+	}
+	desc = {
+		text = BRG_kondor.4.desc.eta
+		trigger = { BRG = { has_country_flag = BRG_smuggled_to_eta } }
+	}
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event13
+
+	option = {
+		name = BRG_kondor.4.a
+		if = {
+			limit = { BRG = { has_country_flag = BRG_smuggled_to_cnt } }
+			custom_effect_tooltip = IBR_add_cnt_supplies_small_tt
+			add_to_variable = { IBR_CNT_Resources = 1 }
+			clr_country_flag = BRG_smuggled_to_cnt
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_smuggled_to_fslp } }
+			custom_effect_tooltip = IBR_add_fslp_supplies_small_tt
+			add_to_variable = { IBR_FSLP_Resources = 1 }
+			clr_country_flag = BRG_smuggled_to_fslp
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_smuggled_to_tba } }
+			custom_effect_tooltip = IBR_add_tba_supplies_small_tt
+			add_to_variable = { IBR_TBA_Resources = 1.5 } #More affected due to being puppets
+			clr_country_flag = BRG_smuggled_to_tba
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_smuggled_to_eta } }
+			custom_effect_tooltip = IBR_add_eta_supplies_small_tt
+			add_to_variable = { IBR_ETA_Resources = 1 }
+			clr_country_flag =  BRG_smuggled_to_eta
+		}
+	}
+}
+country_event = { #Iberia notified one of their terorrists just got significantly stronger
+	id = BRG_kondor.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.5"}
+	title = BRG_kondor.5.t
+	desc = {
+		text = BRG_kondor.5.desc.cnt
+		trigger = { BRG = { has_country_flag = BRG_smuggled_to_cnt } }
+	}
+	desc = {
+		text = BRG_kondor.5.desc.fslp
+		trigger = { BRG = { has_country_flag = BRG_smuggled_to_fslp } }
+	}
+	desc = {
+		text = BRG_kondor.5.desc.tba
+		trigger = { BRG = { has_country_flag = BRG_smuggled_to_tba } }
+	}
+	desc = {
+		text = BRG_kondor.5.desc.eta
+		trigger = { BRG = { has_country_flag = BRG_smuggled_to_eta } }
+	}
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event8
+
+	option = {
+		name = BRG_kondor.5.a
+		if = {
+			limit = { BRG = { has_country_flag = BRG_smuggled_to_cnt } }
+			custom_effect_tooltip = IBR_add_cnt_supplies_mid_tt
+			add_to_variable = { IBR_CNT_Resources = 2 }
+			clr_country_flag = BRG_smuggled_to_cnt
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_smuggled_to_fslp } }
+			custom_effect_tooltip = IBR_add_fslp_supplies_mid_tt
+			add_to_variable = { IBR_FSLP_Resources = 2 }
+			clr_country_flag = BRG_smuggled_to_fslp
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_smuggled_to_tba } }
+			custom_effect_tooltip = IBR_add_tba_supplies_mid_tt
+			add_to_variable = { IBR_TBA_Resources = 2.5 } #More affected due to being puppets
+			clr_country_flag = BRG_smuggled_to_tba
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_smuggled_to_eta } }
+			custom_effect_tooltip = IBR_add_eta_supplies_mid_tt
+			add_to_variable = { IBR_ETA_Resources = 2 }
+			clr_country_flag =  BRG_smuggled_to_eta
+		}
+	}
+}
+
+country_event = { #Iberia notified one of their terorrists just got stronger
+	id = BRG_kondor.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.6"}
+	title = BRG_kondor.6.t
+	desc = {
+		text = BRG_kondor.6.desc.cnt
+		trigger = { BRG = { has_country_flag = BRG_incitied_cnt } }
+	}
+	desc = {
+		text = BRG_kondor.6.desc.fslp
+		trigger = { BRG = { has_country_flag = BRG_incitied_fslp } }
+	}
+	desc = {
+		text = BRG_kondor.6.desc.tba
+		trigger = { BRG = { has_country_flag = BRG_incitied_tba } }
+	}
+	desc = {
+		text = BRG_kondor.6.desc.eta
+		trigger = { BRG = { has_country_flag = BRG_incitied_eta } }
+	}
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = {
+		name = BRG_kondor.6.a
+		if = {
+			limit = { BRG = { has_country_flag = BRG_incitied_cnt } }
+			custom_effect_tooltip = IBR_add_cnt_activity_small_tt
+			add_to_variable = { IBR_CNT_Activity = 1 }
+			clr_country_flag = BRG_incitied_cnt
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_incited_fslp } }
+			custom_effect_tooltip = IBR_add_fslp_activity_small_tt
+			add_to_variable = { IBR_FSLP_Activity = 1 }
+			clr_country_flag = BRG_incited_fslp
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_incited_tba } }
+			custom_effect_tooltip = IBR_add_tba_activity_small_tt
+			add_to_variable = { IBR_TBA_Activity = 1.5 } #More affected due to being puppets
+			clr_country_flag = BRG_incited_tba
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_incited_eta } }
+			custom_effect_tooltip = IBR_add_eta_activity_small_tt
+			add_to_variable = { IBR_ETA_Activity = 1 }
+			clr_country_flag =  BRG_incited_eta
+		}
+	}
+}
+country_event = { #Iberia notified one of their terorrists just got significantly stronger
+	id = BRG_kondor.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.7"}
+	title = BRG_kondor.7.t
+	desc = {
+		text = BRG_kondor.7.desc.cnt
+		trigger = { BRG = { has_country_flag = BRG_incited_cnt } }
+	}
+	desc = {
+		text = BRG_kondor.7.desc.fslp
+		trigger = { BRG = { has_country_flag = BRG_incited_fslp } }
+	}
+	desc = {
+		text = BRG_kondor.7.desc.tba
+		trigger = { BRG = { has_country_flag = BRG_incited_tba } }
+	}
+	desc = {
+		text = BRG_kondor.7.desc.eta
+		trigger = { BRG = { has_country_flag = BRG_incited_eta } }
+	}
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event14
+
+	option = {
+		name = BRG_kondor.7.a
+		if = {
+			limit = { BRG = { has_country_flag = BRG_incited_cnt } }
+			custom_effect_tooltip = IBR_add_cnt_activity_mid_tt
+			add_to_variable = { IBR_CNT_Activity = 2 }
+			clr_country_flag = BRG_incited_cnt
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_incited_fslp } }
+			custom_effect_tooltip = IBR_add_fslp_activity_mid_tt
+			add_to_variable = { IBR_FSLP_Activity = 2 }
+			clr_country_flag = BRG_incited_fslp
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_incited_tba } }
+			custom_effect_tooltip = IBR_add_tba_activity_mid_tt
+			add_to_variable = { IBR_TBA_Activity = 2.5 } #More affected due to being puppets
+			clr_country_flag = BRG_incited_tba
+		}
+		else_if = {
+			limit = { BRG = { has_country_flag = BRG_incited_eta } }
+			custom_effect_tooltip = IBR_add_eta_activity_mid_tt
+			add_to_variable = { IBR_ETA_Activity = 2 }
+			clr_country_flag =  BRG_incited_eta
+		}
+	}
+}
+
+country_event = { #Major false flag attack by burgundy on Iberia
+	id = BRG_kondor.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.8"}
+	title = BRG_kondor.8.t
+	desc = BRG_kondor.8.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event15
+
+	option = {
+		name = BRG_kondor.8.a
+		custom_effect_tooltip = IBR_add_cnt_support_mid_tt
+		custom_effect_tooltip = IBR_add_tba_support_mid_tt
+		custom_effect_tooltip = IBR_add_eta_support_mid_tt
+		custom_effect_tooltip = IBR_add_fslp_support_mid_tt
+		hidden_effect = {
+			add_to_variable = { IBR_CNT_Support = 2 }
+			add_to_variable = { IBR_TBA_Support = 2.5 } #More affected due to being puppets
+			add_to_variable = { IBR_ETA_Support = 2 }
+			add_to_variable = { IBR_FSLP_Support = 2 }
+		}
+	}
+}
+
+country_event = { #Halelujah the wars have begun
+	id = BRG_kondor.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.9"}
+	title = BRG_kondor.9.t
+	desc = BRG_kondor.9.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event14
+
+	option = {
+		name = BRG_kondor.9.a
+	}
+}
+
+country_event = { #Burgundy sabotages Portugal
+	id = BRG_kondor.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.10"}
+	title = BRG_kondor.10.t
+	desc = BRG_kondor.10.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event10
+
+	option = {
+		name = BRG_kondor.10.a
+		add_timed_idea = {
+			days = 180
+			idea = BRG_iberian_wars_cripple
+		}
+	}
+}
+country_event = { #Burgundy sabotages Falange
+	id = BRG_kondor.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.11"}
+	title = BRG_kondor.11.t
+	desc = BRG_kondor.11.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = {
+		name = BRG_kondor.11.a
+		add_timed_idea = {
+			days = 180
+			idea = BRG_iberian_wars_cripple
+		}
+	}
+}
+country_event = { #Iberian faction receives equipment from their sugar daddy
+	id = BRG_kondor.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.12"}
+	title = BRG_kondor.12.t
+	desc = BRG_kondor.12.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event15
+
+	option = { #Thanks Himmler
+		name = BRG_kondor.12.a
+		random_list = {
+			33 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+					producer = GER
+				 }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 500
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 250
+					producer = GER
+				}
+			}
+			33 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+					producer = USA
+				 }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 500
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 250
+					producer = USA
+				}
+			}
+			33 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+					producer = ITA
+				 }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 500
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 250
+					producer = ITA
+				}
+			}
+		}
+	}
+}
+country_event = { #Major Iberian faction receives equipment from their sugar daddy
+	id = BRG_kondor.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.13"}
+	title = BRG_kondor.13.t
+	desc = BRG_kondor.13.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = { #Thanks Himmler
+		name = BRG_kondor.13.a
+		random_list = {
+			33 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
+					producer = GER
+				 }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1250
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 500
+					producer = GER
+				}
+			}
+			33 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
+					producer = USA
+				 }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1250
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 500
+					producer = USA
+				}
+			}
+			33 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
+					producer = ITA
+				 }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1250
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 500
+					producer = ITA
+				}
+			}
+		}
+	}
+}
+country_event = { #Kondor phase 3 is unlocked
+	id = BRG_kondor.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.14"}
+	title = BRG_kondor.14.t
+	desc = BRG_kondor.14.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event10
+
+	option = {
+		name = BRG_kondor.14.a
+		custom_effect_tooltip = BRG_unlock_kondor_phase
+		hidden_effect = {
+			set_country_flag = BRG_kondor_phase_3
+			if = {
+				limit = { check_variable = { BRG_GP_Kondor_Status_Var = 2 } }
+				TNO_BRG_main_tree_swap = yes
+			}
+		}
+	}
+}
+country_event = { #Event explaining why Burgundy likes Salazar
+	id = BRG_kondor.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.15"}
+	title = BRG_kondor.15.t
+	desc = BRG_kondor.15.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event17
+
+	option = {
+		name = BRG_kondor.15.a
+	}
+}
+country_event = { #Event explaining how Burgundy wants to fuck Iberia (terrorism and lots of it)
+	id = BRG_kondor.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.16"}
+	title = BRG_kondor.16.t
+	desc = BRG_kondor.16.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event17
+
+	option = {
+		name = BRG_kondor.16.a
+	}
+}
+country_event = { #Insight into how Burgundy exploits terrorists, particularly the Asturian dudes
+	id = BRG_kondor.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.17"}
+	title = BRG_kondor.17.t
+	desc = BRG_kondor.17.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = {
+		name = BRG_kondor.17.a
+	}
+}
+country_event = { #Focuses on how fragile the situation is in Iberia and how little trust there is in the concept. Should that lasty shred of trust be incineratedi t would certianly do great things
+	id = BRG_kondor.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.18"}
+	title = BRG_kondor.18.t
+	desc = BRG_kondor.18.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event13
+
+	option = {
+		name = BRG_kondor.18.a
+	}
+}
+country_event = { #More insight into Burgundy-Asturias relationship, why they are supported and why hardliners still disagree about it
+	id = BRG_kondor.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.19"}
+	title = BRG_kondor.19.t
+	desc = BRG_kondor.19.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = {
+		name = BRG_kondor.19.a
+	}
+}
+country_event = { #Burgundy leaves Iberia, all that is needed has been done and the resulting chaos should make it easier to acomplish the plan
+	id = BRG_kondor.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.20"}
+	title = BRG_kondor.20.t
+	desc = BRG_kondor.20.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = {
+		name = BRG_kondor.20.a
+	}
+}
+country_event = { #Burgundy fucks with the dam
+	id = BRG_kondor.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.21"}
+	title = BRG_kondor.21.t
+	desc = BRG_kondor.21.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = {
+		name = BRG_kondor.21.a
+		subtract_from_variable = { IBR_dam_workers = 0.65 }
+	}
+}
+country_event = { #Burgundy does shit in Morocco
+	id = BRG_kondor.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.22"}
+	title = BRG_kondor.22.t
+	desc = BRG_kondor.22.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event12
+
+	option = {
+		name = BRG_kondor.22.a
+		custom_effect_tooltip = IBR_sub_stability_big_tt
+		custom_effect_tooltip = IBR_worsen_franco_natives_tt
+		IBR_check_caudillo_popularity = yes
+		subtract_from_variable = { IBRIberiaStability = 2 }
+		subtract_from_variable = { IBR_native_alignment = 2 }
+
+	}
+}
+country_event = { #Burgundy digs up old skeletons
+	id = BRG_kondor.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.23"}
+	title = BRG_kondor.23.t
+	desc = BRG_kondor.23.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event8
+
+	option = {
+		name = BRG_kondor.23.a
+		custom_effect_tooltip = IBR_sub_stability_small_tt
+		subtract_from_variable = { IBRIberiaStability = 1 }
+
+	}
+}
+country_event = { #Salazar gets more support
+	id = BRG_kondor.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.24"}
+	title = BRG_kondor.24.t
+	desc = BRG_kondor.24.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event1
+
+	option = {
+		name = BRG_kondor.24.a
+		if = {
+			limit = { has_country_flag = BRG_bribing_business }
+			custom_effect_tooltip = IBR_improve_salazar_businessmen_tt
+			subtract_from_variable = { IBR_business_alignment = 3 }
+			IBR_check_caudillo_popularity = yes
+			clr_country_flag = BRG_bribing_business
+		}
+		else_if = {
+			if = {
+				limit = { has_country_flag = BRG_bribing_regionals }
+				custom_effect_tooltip = IBR_improve_salazar_regional_tt
+				subtract_from_variable = { IBR_regional_alignment = 3 }
+				IBR_check_caudillo_popularity = yes
+				clr_country_flag = BRG_bribing_regionals
+			}
+		}
+
+	}
+}
+country_event = { #Iberia recieves news about Italian treachery from Burg agents
+	id = BRG_kondor.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.25"}
+	title = BRG_kondor.25.t
+	desc = BRG_kondor.25.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event16
+
+	option = {
+		name = BRG_kondor.25.a
+		set_country_flag = BRG_false_flagged
+
+	}
+}
+
+# Would like to do further with Algeria stuff if Iberia wins with Yves by manipulating them to go to war, but no time for that currently + have to find new leader for Iberian Algeria
+country_event = { #BRG_algerian_opportunities action event, three different options based on outcome of Algerian war, either side winning means Burgundy messes with Iberians in the region and the oil while planting blame on Italy to worsen relations, the peace option causes Burgundy to steal some oil and plant blame on both for tension
+	id = BRG_kondor.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.31"}
+	title = BRG_kondor.31.t
+	desc = BRG_kondor.31.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = { #Iberian Victory
+		name = BRG_kondor.31.a
+		country_event = BRG_kondor.34
+		trigger = {
+			SLG = {
+				has_country_leader = {
+					name = "Yves Guérin-Sérac"
+					ruling_only = yes
+				}
+			}
+		}
+	}
+
+	option = { # Algerian Mandate
+		name = BRG_kondor.31.b
+		country_event = BRG_kondor.32
+		trigger = {
+			ILG = {
+				has_country_leader = {
+					name = "Messali Hadj"
+					ruling_only = yes
+				}
+			}
+		}
+	}
+
+	option = { # Italian Victory
+		name = BRG_kondor.31.c
+		country_event = BRG_kondor.33
+		trigger = {
+			OR = {
+				ILG = {
+					has_country_leader = {
+						name = "Said Boualam"
+						ruling_only = yes
+					}
+				}
+				ILG = {
+					has_country_leader = {
+						name = "Ferhat Abbas"
+						ruling_only = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Italian Victory in Algeria, Burgundy false flags attacks on remaining Iberians in the region planting blame on Italy to cause tensions
+	id = BRG_kondor.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.32"}
+	title = BRG_kondor.32.t
+	desc = BRG_kondor.32.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event2
+
+	option = {
+		name = BRG_kondor.32.a
+		ILG = {
+			add_stability = -0.05
+			add_manpower = -500
+		}
+		IBR = {
+			country_event = BRG_kondor.103
+		}
+		ITA = {
+			country_event = BRG_kondor.103
+		}
+	}
+}
+
+country_event = { #Algerian Mandate, Burgundy siphons some money and oil, blaming it on both sides to heighten tension between Iberia and Italy
+	id = BRG_kondor.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.33"}
+	title = BRG_kondor.33.t
+	desc = BRG_kondor.33.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = {
+		name = BRG_kondor.33.a
+		add_to_variable = {
+			misc_income = 2000
+		}
+		add_resource = {
+			type = oil
+			amount = 3
+			state = 29
+		}
+		IBR = {
+			country_event = BRG_kondor.104
+		}
+		ITA = {
+			country_event = BRG_kondor.104
+		}
+	}
+}
+
+country_event = { #Iberian Victory in Algeria, for now Burgundy false flags attacks on Iberians in the region planting blame on Italy to cause tensions
+	id = BRG_kondor.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.34"}
+	title = BRG_kondor.34.t
+	desc = BRG_kondor.34.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event2
+
+	option = {
+		name = BRG_kondor.34.a
+		SLG = {
+			add_stability = -0.05
+			add_manpower = -500
+		}
+		IBR = {
+			country_event = BRG_kondor.105
+		}
+		ITA = {
+			country_event = BRG_kondor.105
+		}
+	}
+}
+
+country_event = { #BRG_exploit_spanish_arrogance action event
+	id = BRG_kondor.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.40"}
+	title = BRG_kondor.40.t
+	desc = BRG_kondor.40.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = { #siphoning some money away from Iberia and hiding it in their byzantine laws
+		name = BRG_kondor.40.a
+		add_to_variable = {
+			misc_income = 2000
+		}
+		set_country_flag = BRG_kondor_spainish_option_a
+		trigger = {
+			NOT = {
+				has_country_flag = BRG_kondor_spainish_option_a
+			}
+		}
+	}
+
+	option = { #stoking spanish regional tensions
+		name = BRG_kondor.40.b
+		subtract_from_variable = {
+			IBRIberiaStability = 1
+		}
+		set_country_flag = BRG_kondor_spainish_option_b
+		trigger = {
+			NOT = {
+				has_country_flag = BRG_kondor_spainish_option_b
+			}
+		}
+	}
+
+	option = { #covertly damage the dam, forcing them to spend more on maintaining it
+		name = BRG_kondor.40.c
+		set_country_flag = BRG_kondor_spainish_option_c
+		IBR = {
+			add_to_variable = {
+				misc_costs = 5000
+				national_debt = 10000
+			}
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = BRG_kondor_spainish_option_c
+			}
+		}
+	}
+}
+
+country_event = { #BRG_weaponize_portuguese_idiocy action event
+	id = BRG_kondor.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.41"}
+	title = BRG_kondor.41.t
+	desc = BRG_kondor.41.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = { #spreading disparaging rumours about the portuguese clergy to drive a rift between them and their Iberian counterparts
+		name = BRG_kondor.41.a
+		set_country_flag = BRG_kondor_portuguese_option_a
+		subtract_from_variable = {
+			IBRIberiaStability = 1
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = BRG_kondor_portuguese_option_a
+			}
+		}
+	}
+
+	option = { #sabotage military hardware from Portugal, reducing confidence in Portuguese military to deal with issues
+		name = BRG_kondor.41.b
+		set_country_flag = BRG_kondor_portuguese_option_b
+		IBR = {
+			add_stability = 0.02
+			add_war_support = 0.02
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = BRG_kondor_portuguese_option_b
+			}
+		}
+	}
+
+	option = { #causing chaos between Portuguese and Spainish bueacracy, which considering how byzantine Iberian bueracracy is goes quiet well with little effort spreading rumours and sending wrong documents
+		name = BRG_kondor.41.c
+		set_country_flag = BRG_kondor_portuguese_option_c
+		IBR = {
+			add_political_power = -200
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = BRG_kondor_portuguese_option_c
+			}
+		}
+	}
+}
+
+country_event = { #Aftermath of Burgundy releasing skeletons Iberia kept hidden to preserve the union
+	id = BRG_kondor.42
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.42"}
+	title = BRG_kondor.42.t
+	desc = BRG_kondor.42.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event16
+
+	option = { #Excellent
+		name = BRG_kondor.42.a
+		trigger = { TAG = BRG }
+	}
+	option = { #Oh fuck
+		name = BRG_kondor.42.b
+		subtract_from_variable = {
+			IBRIberiaStability = 1
+		}
+		add_stability = -0.05
+		add_political_power = -200
+		set_country_flag = Kondor_Iberias_skeletons_revealed
+		trigger = { TAG = IBR }
+	}
+}
+
+country_event = { #Skeletons in the closet event, happens during Iberian divorce, Burgundy uses knowledge dug up to further cause chaos between Spain and Portugal as they part
+	id = BRG_kondor.43
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.43"}
+	title = BRG_kondor.43.t
+	desc = BRG_kondor.43.desc
+
+	trigger = {
+		tag = BRG
+		has_country_flag = BRG_skeletons_in_the_closet_flag
+		IBR = {
+			has_completed_focus = IBR_letting_go
+		}
+	}
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event13
+
+	option = { #focus on distruption with previous infomation
+		name = BRG_kondor.43.a
+		add_political_power = -50
+		add_to_variable = {
+			var = IBRPortugalAnger
+			value = 2
+		}
+		add_to_variable = {
+			var = IBRSpainAnger
+			value = 2
+		}
+	}
+
+	option = { # focus on gaining stuff from the confusion using Iberian knowledge
+		name = BRG_kondor.43.b
+		add_political_power = -50
+		add_to_variable = {
+			money_reserves = 10000
+		}
+		subtract_from_variable = {
+			IBREconomicStrength = 2
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = IBR
+		}
+	}
+}
+
+country_event = { #BRG_ignite_the_powder_keg event, Operation Tinderbox, not sure about the name, culmination operation of experience messing with Iberia as part of Kondor, this sets in motion a major event in Iberia, need to consult about for suggestions
+	id = BRG_kondor.44
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.44"}
+	title = BRG_kondor.44.t
+	desc = BRG_kondor.44.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event1
+
+	option = {
+		name = BRG_kondor.44.a
+		country_event = {
+			id = BRG_kondor.45
+			days = 30
+		}
+		IBR = {
+			country_event = {
+				id = BRG_kondor.46
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { #Aftermath of Operation Tinderbox from Burgundy's perspective, burgundy snatches some rich assets
+	id = BRG_kondor.45
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.45"}
+	title = BRG_kondor.45.t
+	desc = BRG_kondor.45.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event17
+
+	option = {
+		name = BRG_kondor.45.a
+		add_to_variable = {
+			money_reserves = 10000
+		}
+	}
+}
+
+country_event = { #Aftermath of Operation Tinderbox from Iberia's perspective, majorly decreases stability, however would like this to be a major event chain for an Iberian flashpoint, but would need to ask permission and would be a long event chain
+	id = BRG_kondor.46
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.46"}
+	title = BRG_kondor.46.t
+	desc = BRG_kondor.46.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = { #for now stability penality
+		name = BRG_kondor.46
+		add_stability = -0.1
+		add_war_support = -0.1
+		subtract_from_variable = {
+			IBRIberiaStability = 2
+		}
+	}
+}
+
+
+country_event = { #Iberia being informed the AAS was heavily sabotaged
+	id = BRG_kondor.101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.101"}
+	title = BRG_kondor.101.t
+	desc = BRG_kondor.101.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event1
+
+	option = {
+		name = BRG_kondor.101.a
+
+	}
+}
+
+country_event = { #Aftermath of Burgundy causing false flag attacks in Morocco to destabilise the area, Iberia and Burgundy gets this
+	id = BRG_kondor.102
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.102"}
+	title = BRG_kondor.102.t
+	desc = BRG_kondor.102.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = { # Wunderbar
+		name = BRG_kondor.102.a
+		custom_effect_tooltip = BRG_finally_done_it_tt
+		trigger = { TAG = BRG }
+	}
+	option = { # Oh god oh fuck
+		name = BRG_kondor.102.b
+		custom_effect_tooltip = BRG_finally_done_it_tt
+		trigger = { TAG = IBR }
+	}
+}
+
+country_event = { #Aftermath of Burgundy causing false flag attacks in Algeria against Iberians after Italian victory there
+	id = BRG_kondor.103
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.103"}
+	title = BRG_kondor.103.t
+	desc = BRG_kondor.103.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event3
+
+	option = { # Damn Italians
+		name = BRG_kondor.103.a
+		add_opinion_modifier = {
+			target = ITA
+			modifier = BRG_Iberian_Algerians_Attacked
+		}
+		trigger = { TAG = IBR }
+	}
+	option = { # What the hell
+		name = BRG_kondor.103.b
+		add_opinion_modifier = {
+			target = IBR
+			modifier = BRG_Falsely_Accused_Of_Attacks
+		}
+		trigger = { TAG = ITA }
+	}
+}
+
+country_event = { #Aftermath of Burgundy siphoning oil and money from Algerian Mandate, both sides blame the other
+	id = BRG_kondor.104
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.104"}
+	title = BRG_kondor.104.t
+	desc = BRG_kondor.104.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event13
+
+	option = { # Damn Italians
+		name = BRG_kondor.103.a
+		add_opinion_modifier = {
+			target = ITA
+			modifier = BRG_Falsely_Accused_Of_Stealing
+		}
+		trigger = { TAG = IBR }
+	}
+	option = { # Damn Iberians
+		name = BRG_kondor.103.b
+		add_opinion_modifier = {
+			target = IBR
+			modifier = BRG_Falsely_Accused_Of_Stealing
+		}
+		trigger = { TAG = ITA }
+	}
+}
+
+country_event = { #Aftermath of Burgundy causing false flag attacks in Morocco to destabilise the area, Iberia and Burgundy gets this
+	id = BRG_kondor.105
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_kondor.105"}
+	title = BRG_kondor.105.t
+	desc = BRG_kondor.105.desc
+
+	is_triggered_only = yes
+	picture = GFX_report_event_BRG_event15
+
+	option = { # Damn Italians
+		name = BRG_kondor.105.a
+		add_opinion_modifier = {
+			target = ITA
+			modifier = BRG_Iberian_Algerians_Attacked
+		}
+		trigger = { TAG = IBR }
+	}
+	option = { # What the hell
+		name = BRG_kondor.105.b
+		add_opinion_modifier = {
+			target = IBR
+			modifier = BRG_Falsely_Accused_Of_Attacks
+		}
+		trigger = { TAG = ITA }
+	}
+}
+
+
+###################################################################
+###############
+############### WOLF 
+###############
+###################################################################
+
+country_event = { #Globalplan Wolf is activated by Himmler. Very formal, like a briefing. See Lysenko descs for inspiration.
+	id = BRG_wolf.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_wolf.1"}
+	title = BRG_wolf.1.t
+	desc = BRG_wolf.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = {
+		name = BRG_wolf.1.a
+	}
+}
+
+country_event = { #Eyes on Egypt gonna kill Farouk
+	id = BRG_wolf.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.2" }
+	title = BRG_wolf.2.t
+	desc = BRG_wolf.2.desc
+	picture = GFX_report_event_BRG_event13
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event2
+
+	option = { #
+		name = BRG_wolf.2.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { #Get farouk to throw ever more lavish parties.
+	id = BRG_wolf.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.3" }
+	title = BRG_wolf.3.t
+	desc = BRG_wolf.3.desc
+	picture = GFX_report_event_BRG_event3
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = BRG_wolf.3.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = BRG_wolf_ten_mil_tt
+		EGY = {
+			add_to_variable = { misc_costs = 0.01 } #already converted to billion
+		}
+		BRG = {
+			add_to_variable = { misc_income = 0.01 } #already converted to billion
+		}
+
+	}
+}
+
+country_event = { #Correntia Flavor
+	id = BRG_wolf.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.4" }
+	title = BRG_wolf.4.t
+	desc = BRG_wolf.4.desc
+	picture = GFX_report_event_BRG_event15
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = BRG_wolf.4.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+country_event = { #Oid crisis flavor
+	id = BRG_wolf.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.5" }
+	title = BRG_wolf.5.t
+	desc = BRG_wolf.5.desc
+	picture = GFX_report_event_BRG_event5
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Sweet
+		name = BRG_wolf.5.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = { #An Iranian faction has won and we backed them, yay us
+	id = BRG_wolf.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.6" }
+	title = BRG_wolf.6.t
+	desc = BRG_wolf.6.desc
+	picture = GFX_report_event_BRG_event8
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG_wolf.6.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				OR = {
+					country_exists = IRI
+					country_exists = IRC
+				}
+			}
+			custom_effect_tooltip = BRG_cheaper_saudi_intervention
+			divide_variable = { BRG_saudi_support_cost_medium = 2 }
+			divide_variable = { BRG_saudi_support_cost_big = 2 }
+		}
+		else = {
+			custom_effect_tooltip = BRG_cheaper_uar_intervention
+			divide_variable = { BRG_uar_support_cost_medium = 2 }
+			divide_variable = { BRG_uar_support_cost_big = 2 }
+		}
+	}
+}
+
+country_event = { #Informs the player that a new phase of Burg content is doable 2: Electric boogaloo
+	id = BRG_wolf.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.8" }
+	title = BRG_wolf.8.t
+	desc = BRG_wolf.8.desc
+	picture = GFX_report_event_BRG_event5
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG_wolf.8.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			if = {
+				limit = { check_variable = { BRG_GP_Wolf_Status_Var = 2 } }
+				TNO_BRG_main_tree_swap = yes
+			}
+		}
+	}
+}
+
+country_event = { #Some issues with our bureaucracy we'll need to fix
+	id = BRG_wolf.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.100" }
+	title = BRG_wolf.100.t
+	desc = BRG_wolf.100.desc
+	picture = GFX_report_event_BRG_event13
+
+	is_triggered_only = yes
+
+	option = { #Fuck
+		name = BRG_wolf.100.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+country_event = { #Sabotaged infrastructure
+	id = BRG_wolf.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.101" }
+	title = BRG_wolf.101.t
+	desc = BRG_wolf.101.desc
+	picture = GFX_report_event_BRG_event8
+
+	is_triggered_only = yes
+
+	option = { #Probably the turks
+		name = BRG_wolf.101.a
+		ai_chance = { factor = 1 }
+		random_owned_state = { damage_building = { type = infrastructure damage = 2 } }
+
+	}
+}
+
+country_event = { #Arms smuggling
+	id = BRG_wolf.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.102" }
+	title = BRG_wolf.102.t
+	desc = BRG_wolf.102.desc
+	picture = GFX_report_event_BRG_event1
+
+	is_triggered_only = yes
+
+	option = { #Thanks
+		name = BRG_wolf.102.a
+		ai_chance = { factor = 1 }
+		random_list = {
+			50 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 750
+					producer = GER
+				 }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 100
+					producer = GER
+				}
+			}
+			50 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 750
+					producer = USA
+				 }
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 100
+					producer = USA
+				}
+			}
+		}
+
+	}
+}
+
+country_event = { #trigger for old globalplan wolf
+	id = BRG_wolf.1000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_wolf.1000" }
+	title = BRG_wolf.1000.t
+	desc = BRG_wolf.1000.desc
+	picture = GFX_report_event_BRG_event6
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG_wolf.1000.a
+		set_country_flag = old_gp_wolf
+	}
+
+	option = {
+		name = BRG_wolf.1000.b
+		clr_country_flag = old_gp_wolf
+	}
+}
+
+
+
+###################################################################
+###############
+############### BAR
+###############
+###################################################################
+
+
+
+country_event = { #### intro to everything, shits good in the hood and we're going to infiltrate Vyatka and get our shit done.
+	id = BRG.5000
+	title = BRG.5000.t
+	desc = BRG.5000.d
+	picture = GFX_report_event_BRG_event14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5000" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ## Fuck you slavs
+		name = BRG.5000.a
+		set_country_flag = BRG_bar_opening_decisions_flag
+	}
+}
+
+country_event = { ## Our stockpiles have been sabatoged! What the fuck!?!?!
+	id = BRG.5001
+	title = BRG.5001.t
+	desc = BRG.5001.d
+	picture = GFX_report_event_BRG_event7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5001" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5001.a
+		add_war_support = -0.01
+		add_equipment_to_stockpile = { type = infantry_equipment amount = -100 }
+		add_equipment_to_stockpile = { type = support_equipment amount = -15 }
+	}
+}
+
+country_event = { ### We've got guys coming in giving us info and supplies, saying theyre refugees. This is great!
+	id = BRG.5002
+	title = BRG.5002.t
+	desc = BRG.5002.d
+	picture = GFX_report_event_BRG_event14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5002" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5002.a
+		add_manpower = 750
+		add_tech_bonus = {
+    	bonus = 0.1
+    	uses = 1
+    	category = land_doctrine
+		}
+	}
+}
+
+country_event = { ### Burgundy begins helping out Vyatka, funding their port city construction
+	id = BRG.5003
+	title = BRG.5003.t
+	desc = BRG.5003.d
+	picture = GFX_report_event_BRG_event13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5003" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5003.a
+	}
+}
+
+country_event = { ### Burgundy prepares a freikports, Vyatka just thinks theyre really awesome. Dumbasses
+	id = BRG.5004
+	title = BRG.5004.t
+	desc = BRG.5004.d
+	picture = GFX_report_event_BRG_event11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5004" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5004.a
+	}
+}
+
+country_event = { #### Burgundy sets up shop with some guy in Burgundy, begins creating propaganda/campaign ads for the rightists by stoking fear in them about Vyatka.
+	id = BRG.5005
+	title = BRG.5005.t
+	desc = BRG.5005.d
+	picture = GFX_report_event_BRG_event1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5005" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ##All according to plan
+		name = BRG.5005.a
+
+	}
+}
+
+country_event = { #### From Komi's view: God damn why do people love the rightists more and more?!?!?!
+	id = BRG.5007
+	title = BRG.5007.t
+	desc = BRG.5007.d
+	picture = GFX_report_event_BRG_event5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5007" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5007.a
+	}
+}
+
+country_event = { ## AB's like what the fuck why's our army shit now.
+	id = BRG.5008
+	title = BRG.5008.t
+	desc = BRG.5008.d
+	picture = GFX_report_event_BRG_event6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5008" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5005.a
+	}
+}
+
+country_event = { ## Sabatoge AB's slave industry time - works for both of them
+	id = BRG.5009
+	title = BRG.5009.t
+	desc = BRG.5009.d
+	picture = GFX_report_event_BRG_event3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5009" }
+	is_triggered_only = yes
+
+	option = {
+		name = BRG.5009.a
+	}
+}
+
+country_event = { ### Time to infiltrate Sammara
+	id = BRG.5010
+	title = BRG.5010.t
+	desc = BRG.5010.d
+	picture = GFX_report_event_BRG_event9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5010" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5010.a
+	}
+}
+
+country_event = { ### One last push for Vyatka
+	id = BRG.5011
+	title = BRG.5011.t
+	desc = BRG.5011.d
+	picture = GFX_report_event_BRG_event1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5011" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5011.a
+	}
+}
+
+country_event = { ### Man people really love us!!! - Vyatkas perspective
+	id = BRG.5012
+	title = BRG.5012.t
+	desc = BRG.5012.d
+	picture = GFX_report_event_BRG_event5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5012" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5012.a
+	}
+}
+
+country_event = { ### Opening to Black Bar, shits starting to unify, we've got to get behind this.
+	id = BRG.5013
+	title = BRG.5013.t
+	desc = BRG.5013.d
+	picture = GFX_report_event_BRG_event6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5013" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5013.a
+	}
+}
+
+country_event = { ### We can now reach out into siberia and start tearing down fucking buchkarins greatest achievement
+	id = BRG.5014
+	title = BRG.5014.t
+	desc = BRG.5014.d
+	picture = GFX_report_event_BRG_event10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5014" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5014.a
+	}
+}
+
+country_event = { ### Our man in the urals is on the job of lowing/raising influence, have it be the trader from the Vyatka events
+	id = BRG.5015
+	title = BRG.5015.t
+	desc = BRG.5015.d
+	picture = GFX_report_event_BRG_event5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5015" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5015.a
+	}
+}
+
+country_event = { #### Western sib country, man people really hate us waah, we're loosing stability and shit
+	id = BRG.5016
+	title = BRG.5016.t
+	desc = BRG.5016.d
+	picture = GFX_report_event_BRG_event17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5016" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5016.a
+		add_political_power = -50
+	}
+}
+
+country_event = { ### Western sib god damnout our arms stockpile blew up with a lot of equipment and shit. FUCK
+	id = BRG.5017
+	title = BRG.5017.t
+	desc = BRG.5017.d
+	picture = GFX_report_event_BRG_event11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5017" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5017.a
+	}
+}
+
+country_event = { ### River trader is happy that his bets have payed off, happy to fuck shit up even more now
+	id = BRG.5018
+	title = BRG.5018.t
+	desc = BRG.5018.d
+	picture = GFX_report_event_BRG_event12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5018" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5018.a
+	}
+}
+
+country_event = { #United Russia is time to get crazy up in here.
+	id = BRG.5100
+	title = BRG.5100.t
+	desc = BRG.5100.d
+	picture = GFX_report_event_BRG_event10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5100" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5100.a
+	}
+}
+
+country_event = { #Himmler gets ready for Russia War 2
+	id = BRG.5157
+	title = BRG.5157.t
+	desc = BRG.5157.d
+	picture = GFX_report_event_BRG_event12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5157" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5157.a
+	}
+}
+
+country_event = { #Decision Stuff
+	id = BRG.5200
+	title = BRG.5200.t
+	desc = BRG.5200.d
+	picture = GFX_report_event_BRG_event13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5200" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG.5200.a
+		set_country_flag = BRG_GP_Bar_flag
+		TNO_BRG_main_tree_swap = yes
+	}
+}
+
+country_event = { #Bar Unlock 1
+	id = BRG.5400
+	title = BRG.5400.t
+	desc = BRG.5400.d
+	picture = GFX_report_event_BRG_event3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5200" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRG
+		country_exists = WSR
+	}
+
+	option = {
+		name = BRG.4200.a
+	}
+}
+
+country_event = { #Bar Unlock 2
+	id = BRG.5401
+	title = BRG.5401.t
+	desc = BRG.5401.d
+	picture = GFX_report_event_BRG_event10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG.5200" }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRG
+		country_exists = RUS
+	}
+
+	option = {
+		name = BRG.5401.a
+	}
+}
+
+###################################################################
+###############
+############### PUMA 
+###############
+###################################################################
+
+#Globalplan Puma Events
+#1-49 utility events, 50-99 main tree events, 100-149 RFK, etc in this order for presidents: Bennett, LBJ, Wallace, Harrington, Goldwater, Glenn, MCS.
+#first half of the 50 is used for burgundy side events, 2nd half for american/forgien side
+
+country_event = { #Informing player RFK has been elected and taken power and as such globalplan puma's central branch has been changed
+	id = BRG_puma.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.1"}
+	title = BRG_puma.1.t
+	desc = BRG_puma.1.desc
+	picture = GFX_report_event_BRG_event14
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG_puma.1.a
+	}
+}
+
+country_event = { #Informing player Bennett has been elected and taken power and as such globalplan puma's central branch has been changed
+	id = BRG_puma.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.2"}
+	title = BRG_puma.2.t
+	desc = BRG_puma.2.desc
+	picture = GFX_report_event_BRG_event3
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG_puma.2.a
+	}
+}
+
+country_event = { #Informing player LBJ has been elected and taken power and as such globalplan puma's central branch has been changed
+	id = BRG_puma.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.3"}
+	title = BRG_puma.3.t
+	desc = BRG_puma.3.desc
+	picture = GFX_report_event_BRG_event14
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG_puma.3.a
+	}
+}
+
+country_event = { #Informing player Wallace has been elected and taken power and as such globalplan puma's central branch has been changed
+	id = BRG_puma.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.4"}
+	title = BRG_puma.4.t
+	desc = BRG_puma.4.desc
+	picture = GFX_report_event_BRG_event15
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = BRG_puma.4.a
+	}
+}
+
+country_event = { #Informing player 68 Prez
+	id = BRG_puma.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.4"}
+	title = BRG_puma.5.t
+	desc = BRG_puma.5.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = {
+		name = BRG_puma.5.a
+	}
+}
+
+country_event = { #Informing player about overall view of Puma with it's intracisies and Burgundy's goals here
+	id = BRG_puma.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.50"}
+	title = BRG_puma.50.t
+	desc = BRG_puma.50.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event16
+
+	option = {
+		name = BRG_puma.50.a
+		hidden_effect = { country_event = { id = BRG_puma.501 } }
+	}
+}
+
+country_event = { #Puma intro pt2
+	id = BRG_puma.501
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.501"}
+	title = BRG_puma.501.t
+	desc = BRG_puma.501.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event16
+
+	option = {
+		name = BRG_puma.501.a
+	}
+}
+
+country_event = { #Burgundian election interference is a go.
+	id = BRG_puma.51
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.51"}
+	title = BRG_puma.51.t
+	desc = BRG_puma.51.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event8
+
+	option = {
+		name = BRG_puma.51.a
+	}
+}
+
+country_event = { #Fires every once and a while for the US player, saying the elections have been interfered with, rise in dark money groups
+	id = BRG_puma.52
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.52"}
+	title = BRG_puma.52.t
+	desc = BRG_puma.52.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event3
+
+	option = {
+		name = BRG_puma.52.a
+	}
+}
+
+country_event = { #Burgundy begins infiltrating the Klan, makes contact with Edward Dawson
+	id = BRG_puma.53
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.53"}
+	title = BRG_puma.53.t
+	desc = BRG_puma.53.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = { #start of something beatiful
+		name = BRG_puma.53.a
+		hidden_effect = { country_event = { id = BRG_puma.51 days = 14 } }
+	}
+}
+
+country_event = { #Agent talks more with FBI Agent Edward Dawson, they become "friends"
+	id = BRG_puma.54
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.54"}
+	title = BRG_puma.54.t
+	desc = BRG_puma.54.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = {
+		name = BRG_puma.54.a
+	}
+}
+
+country_event = { #Militant KKK, will fire for RFK, LBJ, Wallace, people invested in racial progress once Burgundy has radizalied the Klan
+	id = BRG_puma.75
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.75"}
+	title = BRG_puma.75.t
+	desc = BRG_puma.75.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event14
+
+	option = {
+		name = BRG_puma.75.a
+		add_stability = -0.02
+		add_political_power = -50
+	}
+}
+
+country_event = { #militant KKK part 2, happens when shits getting really bad.
+	id = BRG_puma.76
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.76"}
+	title = BRG_puma.76.t
+	desc = BRG_puma.76.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = { #WIP effects
+		name = BRG_puma.76.a
+		add_stability = -0.03
+		add_political_power = -75
+	}
+}
+
+country_event = { ## Thompson still thinks he's working for the SD, he allows Burgundy to begin moving into the American buisness community
+	id = BRG_puma.78
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.78"}
+	title = BRG_puma.78.t
+	desc = BRG_puma.78.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event12
+
+	option = { #WIP effects
+		name = BRG_puma.78.a
+	}
+}
+
+country_event = { #
+	id = BRG_puma.100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.100"}
+	title = BRG_puma.100.t
+	desc = BRG_puma.100.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event16
+
+	option = {
+		name = BRG_puma.100.a
+	}
+}
+
+country_event = { #Dawson is given the equipment to fake the photo of Hoover and is given orders to expose COINTELPRO to RFK
+	id = BRG_puma.125
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.125"}
+	title = BRG_puma.125.t
+	desc = BRG_puma.125.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event14
+
+	option = {
+		name = BRG_puma.125.a
+		set_country_flag = BRG_disinfomation_abound_flag
+	}
+}
+
+country_event = { #RFK gets a memo sensing new grassroots support for the Civil Rights
+	id = BRG_puma.126
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.126"}
+	title = BRG_puma.126.t
+	desc = BRG_puma.126.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event17
+
+	option = {
+		name = BRG_puma.126.a
+	}
+}
+
+country_event = { #RFK informed about the party actually starting to work together
+	id = BRG_puma.127
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.127"}
+	title = BRG_puma.127.t
+	desc = BRG_puma.127.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event14
+
+	option = {
+		name = BRG_puma.127.a
+	}
+}
+
+country_event = { #Goldwater Anti-Uni healthcare ad campaign (fires for the US)
+	id = BRG_puma.128
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.128"}
+	title = BRG_puma.128.t
+	desc = BRG_puma.128.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event2
+
+	option = {
+		name = BRG_puma.128.a
+	}
+}
+
+country_event = { #Goldwater Anti-Uni healthcare ad campaign (fires for the US)
+	id = BRG_puma.129
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.129"}
+	title = BRG_puma.129.t
+	desc = BRG_puma.129.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event12
+
+	option = {
+		name = BRG_puma.129.a
+
+		every_owned_state = {
+			limit = { check_variable = { nationality = 86 } } #SouthWest
+			set_temp_variable = { popularity_bonus = 0.03 }
+			add_to_variable = { NPP_FR_bonus_popularity = popularity_bonus }
+			add_to_variable = { NPP_popularity = popularity_bonus }
+			subtract_from_variable = { RD_popularity = popularity_bonus }
+			}
+
+			every_owned_state = {
+				limit = { check_variable = { nationality = 83 } } #SouthWest
+				set_temp_variable = { popularity_bonus = 0.03 }
+				add_to_variable = { NPP_FR_bonus_popularity = popularity_bonus }
+				add_to_variable = { NPP_popularity = popularity_bonus }
+				subtract_from_variable = { RD_popularity = popularity_bonus }
+				}
+
+				every_owned_state = {
+					limit = { check_variable = { nationality = 87 } } #SouthWest
+					set_temp_variable = { popularity_bonus = 0.03 }
+					add_to_variable = { NPP_FR_bonus_popularity = popularity_bonus }
+					add_to_variable = { NPP_popularity = popularity_bonus }
+					subtract_from_variable = { RD_popularity = popularity_bonus }
+					}
+	}
+}
+
+
+country_event = { #Wallace gets a memo talkign about increased support form Segregationists for anti-civil rights shit, led by the dude from Arkansas
+	id = BRG_puma.175
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.175"}
+	title = BRG_puma.175.t
+	desc = BRG_puma.175.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = { ### Awesome!
+		name = BRG_puma.175.a
+
+		every_owned_state = {
+			limit = {
+			can_have_elections_in_state = yes
+			OR = {
+			check_variable = { nationality = 83 } #Dixie
+			check_variable = { nationality = 85 } #Steel Belt
+			check_variable = { nationality = 88 } #Pacific
+				}
+			}
+			add_to_variable = { NPP_FR_bonus_popularity = 0.02 }
+			add_to_variable = { NPP_Y_bonus_popularity = 0.01 }
+			add_to_variable = { NPP_popularity = 0.03 }
+			subtract_from_variable = { RD_R_bonus_popularity = 0.03 }
+			subtract_from_variable = { RD_popularity = 0.03 }
+			}
+	}
+}
+
+country_event = { #Wallace notices people don't love him as much
+	id = BRG_puma.176
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.176"}
+	title = BRG_puma.176.t
+	desc = BRG_puma.176.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	picture = GFX_report_event_BRG_event1
+	option = {
+		name = BRG_puma.176.a
+		add_political_power = -50
+	}
+}
+
+country_event = { #Pushing LeMay to be moderate
+	id = BRG_puma.177
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.177"}
+	title = BRG_puma.177.t
+	desc = BRG_puma.177.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event15
+
+	option = { #Wallace is like what the fuck dude?
+		name = BRG_puma.177.a
+		set_country_flag  = BRG_Puma_LeMay_Moderate
+	}
+}
+
+country_event = { #Niagara bombing event US and Canada get
+	id = BRG_puma.178
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.178"}
+	title = BRG_puma.178.t
+	desc = BRG_puma.178.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = { # What the hell
+		name = BRG_puma.178.a
+
+	}
+}
+
+country_event = { #Bennett acceds to public opionion and denounces the suspect lack of Canadian competence preventing these bombings
+	id = BRG_puma.179
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.179"}
+	title = BRG_puma.179.t
+	desc = BRG_puma.179.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event16
+
+	option = { # need to look up state ids/nationalities for worse pop loss around niagara/the borders
+		name = BRG_puma.179.a
+		trigger = { TAG = USA }
+		every_owned_state = {
+			add_to_variable = { RD_D_bonus_popularity = 0.01}
+		}
+		add_opinion_modifier = {
+			target = CAN
+			modifier = BRG_Niagara_Attacked_Calmed
+		}
+		subtract_from_variable = {
+			OFN_Unity = 2
+		}
+	}
+
+	option = { #look up possible special OFN relations mechanics?
+		name = BRG_puma.179.b
+		trigger = { TAG = CAN }
+		add_opinion_modifier = {
+			target = USA
+			modifier = BRG_Niagara_Attacked_Blamed_Hard
+		}
+	}
+}
+
+country_event = { #Isolationist groups across OFN countries have started increasing in funding and gaining prominance as a consensuse, hurts investment in US as well as OFN unity
+	id = BRG_puma.180
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.177"}
+	title = BRG_puma.180.t
+	desc = BRG_puma.180.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = {
+		name = BRG_puma.180.a
+		custom_effect_tooltip = USA_subtract_OFN_unity
+		subtract_from_variable = {
+			OFN_Unity = 1
+		}
+		subtract_from_variable = {
+			GDP_growth = 0.005
+		}
+	}
+}
+
+country_event = { #coffee-gate
+	id = BRG_puma.181
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.181"}
+	title = BRG_puma.181.t
+	desc = BRG_puma.181.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event1
+
+	option = {
+		name = BRG_puma.181.a
+		custom_effect_tooltip = WFB_Mormon_Relationship_lower
+	}
+}
+
+country_event = { #BRG_corrupt_the_youth event for US about southern influnenced education, damaging his education reforms
+	id = BRG_puma.225
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.225"}
+	title = BRG_puma.225.t
+	desc = BRG_puma.225.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event2
+
+	option = {
+		name = BRG_puma.225.a
+		subtract_from_variable = {
+			LBJ_education_strength = 2
+		}
+		set_country_flag = BRG_corrupt_the_youth_flag
+	}
+}
+
+country_event = { #BRG_individualist_indignance event for US about economic anger over welfare stuff damaging them and interest rates
+	id = BRG_puma.226
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.226"}
+	title = BRG_puma.226.t
+	desc = BRG_puma.226.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event16
+
+	option = {
+		name = BRG_puma.226.a
+		subtract_from_variable = {
+			LBJ_welfare_strength = 1
+		}
+		add_to_variable = {
+			interest_rates = 0.01
+		}
+	}
+}
+
+country_event = { #BRG_march_against_washington event for US about small regional racist groups in US to cause a day of country-wide marches/riots, small scale but everywhere. Hurts LBJ's credibility due to various state servants like police participating in them
+	id = BRG_puma.227
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.227"}
+	title = BRG_puma.227.t
+	desc = BRG_puma.227.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = {
+		name = BRG_puma.227.a
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+			}
+			subtract_from_variable = { RD_popularity = 0.075 }
+			subtract_from_variable = { RD_R_bonus_popularity = 0.075 }
+		}
+		add_political_power = -100
+		add_stability = -0.05
+	}
+}
+
+country_event = { #BRG_planting_the_seeds event for Burgundy if Wallace gets impeached, bit of flavour about their plans coming to fruition and how they're continuing radiclization yet also NPP unity to better the chance of more NPP or Yockeys getting elected
+	id = BRG_puma.250
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.250"}
+	title = BRG_puma.250.t
+	desc = BRG_puma.250.desc
+
+	trigger = {
+		tag = BRG
+		USA = {
+			has_country_leader = {
+				name = "Curtis LeMay"
+				ruling_only = yes
+			}
+			has_country_flag = BRG_planting_the_seeds_flag
+		}
+	}
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event8
+
+	option = {
+		name = BRG_puma.250.a
+		USA = {
+			every_owned_state = {
+				limit = {
+					can_have_elections_in_state = yes
+				}
+				add_to_variable = { NPP_Y_bonus_popularity = 0.025 }
+			}
+			add_to_variable = {
+				USA_NPP_Unity = 2
+			}
+		}
+	}
+}
+
+country_event = { #BRG_bad_for_business event for US about business ties to wallace leaked to public and progressive anger against said businesses making them rethink supporting wallace
+	id = BRG_puma.275
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.275"}
+	title = BRG_puma.275.t
+	desc = BRG_puma.275.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = {
+		name = BRG_puma.275.a
+		add_political_power = -50
+	}
+}
+
+country_event = { #BRG_georgia_burns event for US, large african-american riots across the south, especially damaging in georgia destroying a factory
+	id = BRG_puma.276
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.276"}
+	title = BRG_puma.276.t
+	desc = BRG_puma.276.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event5
+
+	option = {
+		name = BRG_puma.276.a
+		365 = {
+			add_manpower = 1000
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+		}
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+				OR = {
+					check_variable = { nationality = 86 } #Southwestern
+					check_variable = { nationality = 83 } #Dixie
+					check_variable = { nationality = 84 } #African American
+				}
+			}
+			subtract_from_variable = { NPP_popularity = 0.15 }
+			subtract_from_variable = { NPP_FR_bonus_popularity = 0.15 }
+			add_to_variable = { NPP_Y_bonus_popularity = 0.05 }
+			add_manpower = 100
+		}
+		USA_wallace_impeachment_support_increase = yes
+	}
+}
+
+country_event = { #BRG_turn_up_the_heat event for US, extremist civil rights groups to cause havoc, targets factories owned by Wallace's business friends and damages them
+	id = BRG_puma.277
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.277"}
+	title = BRG_puma.277.t
+	desc = BRG_puma.277.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = {
+		name = BRG_puma.277.a
+		random_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { nationality = 86 } #Southwestern
+					check_variable = { nationality = 83 } #Dixie
+					check_variable = { nationality = 84 } #African American
+				}
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+		}
+		random_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { nationality = 86 } #Southwestern
+					check_variable = { nationality = 83 } #Dixie
+					check_variable = { nationality = 84 } #African American
+				}
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+		}
+		USA_wallace_impeachment_support_small_increase = yes
+		subtract_from_variable = {
+			WAL64_Business = 2
+		}
+	}
+}
+
+country_event = { #BRG_getting_what_you_wanted event for Wallace about how people are liking his more segregationist and racist side from what seems grassroots support, and how he should do more of that
+	id = BRG_puma.278
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.278"}
+	title = BRG_puma.278.t
+	desc = BRG_puma.278.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event13
+
+	option = {
+		name = BRG_puma.278.a
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+				OR = {
+					check_variable = { nationality = 86 } #Southwestern
+					check_variable = { nationality = 83 } #Dixie
+					check_variable = { nationality = 84 } #African American
+				}
+			}
+			add_to_variable = { NPP_popularity = 0.05 }
+			add_to_variable = { NPP_FR_bonus_popularity = 0.05 }
+		}
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+			}
+			add_to_variable = { NPP_popularity = 0.05 }
+			add_to_variable = { NPP_FR_bonus_popularity = 0.05 }
+		}
+		subtract_from_variable = {
+			WAL_STATES_RIGHTS_expectation = 1
+		}
+		subtract_from_variable = {
+			WAL_SEGREGATION_expectation = 1
+		}
+	}
+}
+
+country_event = { #BRG_refuge_in_audacity event for Wallace about how people are taking more of a hardline stance lately and expecting even more segregationism and states rights, with them drifting to the NPP-Y seemingly disasstisfied
+	id = BRG_puma.279
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.279"}
+	title = BRG_puma.279.t
+	desc = BRG_puma.279.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = {
+		name = BRG_puma.279.a
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+				OR = {
+					check_variable = { nationality = 86 } #Southwestern
+					check_variable = { nationality = 83 } #Dixie
+					check_variable = { nationality = 84 } #African American
+				}
+			}
+			subtract_from_variable = { NPP_FR_bonus_popularity = 0.025 }
+			add_to_variable = { NPP_Y_bonus_popularity = 0.025 }
+		}
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+			}
+			subtract_from_variable = { NPP_FR_bonus_popularity = 0.025 }
+			add_to_variable = { NPP_Y_bonus_popularity = 0.025 }
+		}
+		add_to_variable = {
+			WAL_STATES_RIGHTS_expectation = 3
+		}
+		add_to_variable = {
+			WAL_SEGREGATION_expectation = 3
+		}
+	}
+}
+
+country_event = { #BRG_planting_the_seeds event for US if Georgia riots happen while Burgundy propaganda machine is in place, further radicalises people after seeing the riots
+	id = BRG_puma.280
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.280"}
+	title = BRG_puma.280.t
+	desc = BRG_puma.280.desc
+
+	trigger = {
+		tag = USA
+		has_country_flag = BRG_planting_the_seeds_flag
+		has_country_flag = BRG_georgia_burns_flag
+	}
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = {
+		name = BRG_puma.280.a
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+				OR = {
+					check_variable = { nationality = 86 } #Southwestern
+					check_variable = { nationality = 83 } #Dixie
+					check_variable = { nationality = 84 } #African American
+				}
+			}
+			add_to_variable = { NPP_Y_bonus_popularity = 0.025 }
+		}
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+			}
+			add_to_variable = { NPP_Y_bonus_popularity = 0.025 }
+		}
+	}
+}
+
+country_event = { #BRG_welfare_woes event for US over NPP-FR getting angry and hurting the party over excessive welfare spending
+	id = BRG_puma.325
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.325"}
+	title = BRG_puma.325.t
+	desc = BRG_puma.325.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event17
+
+	option = {
+		name = BRG_puma.325.a
+		add_political_power = -100
+	}
+}
+
+country_event = { #BRG_anger_over_their_burdens event for US over rich and middle class people getting angry over their tax burdens and increasing influence to stem it
+	id = BRG_puma.326
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.326"}
+	title = BRG_puma.326.t
+	desc = BRG_puma.326.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	picture = GFX_report_event_BRG_event11
+	option = {
+		name = BRG_puma.326.a
+		add_political_power = -50
+	}
+}
+
+country_event = { #BRG_doesnt_he_look_tired event for US over recent whispering among the populace of harrington being worn out and impotent leading to lack of enthusiasm over him
+	id = BRG_puma.327
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.327"}
+	title = BRG_puma.327.t
+	desc = BRG_puma.327.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event2
+
+	option = {
+		name = BRG_puma.327.a
+		add_war_support = -0.075
+	}
+}
+
+country_event = { #BRG_corruption_runs_deep event for US about some low level corruption in R-Ds being leaked eroding trust in them, event encourages player to go self hard on corruption
+	id = BRG_puma.375
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.375"}
+	title = BRG_puma.375.t
+	desc = BRG_puma.375.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event8
+
+	option = {
+		name = BRG_puma.375.a
+		add_political_power = -100
+		every_owned_state = {
+			limit = {
+				can_have_elections_in_state = yes
+			}
+			subtract_from_variable = { RD_popularity = 0.03 }
+			subtract_from_variable = { RD_D_bonus_popularity = 0.03 }
+			subtract_from_variable = { RD_R_bonus_popularity = 0.02 }
+		}
+	}
+}
+
+country_event = { #BRG_willful_ignorance event for US bigging up the threat of the NPP-FR and yockeys due to burgundy false flag disturbances painted as caused by the far right
+	id = BRG_puma.376
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.376"}
+	title = BRG_puma.376.t
+	desc = BRG_puma.376.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event10
+
+	option = {
+		name = BRG_puma.376.a
+
+	}
+}
+
+country_event = { #BRG_willful_ignorance event for US bigging up the threat of the NPP-L due to burgundy false flag disturbances painted as caused by the far left
+	id = BRG_puma.377
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.377"}
+	title = BRG_puma.377.t
+	desc = BRG_puma.377.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event17
+
+	option = {
+		name = BRG_puma.377.a
+		set_country_flag = BRG_blackness_blinds_all_flag
+	}
+}
+
+country_event = { #BRG_a_bloated_military event for US about various smaller companies rising to the challange of arms production and backing mcnamara's mass conscription ideas, showing proof of their handiwork via arms
+	id = BRG_puma.378
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.378"}
+	title = BRG_puma.378.t
+	desc = BRG_puma.378.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event1
+
+	option = {
+		name = BRG_puma.378.a
+	}
+}
+
+country_event = { #BRG_fudging_their_numbers event for US saying why nasa budget has been decreased by 100 million, some scandal or something? Money is infact being siphoned to burgundy
+	id = BRG_puma.425
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.425"}
+	title = BRG_puma.425.t
+	desc = BRG_puma.425.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event13
+
+	option = {
+		name = BRG_puma.425.a
+	}
+}
+
+country_event = { #BRG_fickle_nature_of_the_public event for US, public support hit same as negative effects giving nasa large budget boost, flavour about above scandal being revealed + false rumours spread about NASA
+	id = BRG_puma.426
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.426"}
+	title = BRG_puma.426.t
+	desc = BRG_puma.426.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = {
+		name = BRG_puma.426.a
+	}
+}
+
+country_event = { #BRG_academic_espionage event for US for large leak of glenn's jet lab work, sets it back and opens door to future leaks
+	id = BRG_puma.427
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.427"}
+	title = BRG_puma.427.t
+	desc = BRG_puma.427.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event11
+
+	option = {
+		name = BRG_puma.427.a
+		add_political_power = -50
+		add_to_variable = { USA_GLN_Public_Support = -5 }
+	}
+}
+
+country_event = { #BRG_a_hurtful_hand event for US over public getting into a frenzy over denuclearization plans being partly leaked hurting popularity and boosting the right of the NPP
+	id = BRG_puma.428
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.428"}
+	title = BRG_puma.428.t
+	desc = BRG_puma.428.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event13
+
+	option = {
+		name = BRG_puma.428.a
+		add_political_power = -50
+	}
+}
+
+country_event = { #BRG_lost_forever_in_the_stars event for US about major sabotage of NASA in various testing, kills astronauts, sets back a lot of progress and reduces public support
+	id = BRG_puma.429
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.428"}
+	title = BRG_puma.428.t
+	desc = BRG_puma.428.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event5
+
+	option = { #fuck
+		name = BRG_puma.428.a
+		add_political_power = -100
+		add_manpower = -3
+		add_stability = -0.05
+	}
+}
+
+country_event = { #jap more nukes
+	id = BRG_puma.431
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.431"}
+	title = BRG_puma.431.t
+	desc = BRG_puma.431.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event7
+
+	option = { #fuck
+		name = BRG_puma.431.a
+	}
+}
+
+country_event = { #ger more nukes
+	id = BRG_puma.430
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.430"}
+	title = BRG_puma.430.t
+	desc = BRG_puma.430.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event3
+
+	option = { #fuck
+		name = BRG_puma.430.a
+	}
+}
+
+country_event = { #BRG_point_of_weakness flavour event for Burgundy corrupting H.Keith Thompson as prelude to influencing MCS's hawkishness
+	id = BRG_puma.450
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.450"}
+	title = BRG_puma.450.t
+	desc = BRG_puma.450.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event8
+
+	option = {
+		name = BRG_puma.450.a
+	}
+}
+
+country_event = { #MCS has taken the bait/blundered into riling up US against Japan, Burgundy using contacts in government plots to throw airliner carrying US defence secretary into Japanese airspace via electronic warfare to get it shot down and cause the crisis
+	id = BRG_puma.451
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.451"}
+	title = BRG_puma.451.t
+	desc = BRG_puma.451.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event14
+
+	option = {
+		name = BRG_puma.451.a
+	}
+}
+
+country_event = { #Mission sucessful, submarine veered them into japanese airspace and they got shot down, shortly shit will hit the fan and hopefully nuclear war breaks out
+	id = BRG_puma.452
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.452"}
+	title = BRG_puma.452.t
+	desc = BRG_puma.452.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event9
+
+	option = {
+		name = BRG_puma.452.a
+	}
+}
+
+country_event = { #BRG_infighting_over_purity event for US about infighting in the NPP about MCS being a possible closet progressive, affects NPP-unity and saps political support
+	id = BRG_puma.475  #aims to push the player further with their hawkishness with the tone it is written in
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.475"}
+	title = BRG_puma.475.t
+	desc = BRG_puma.475.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event17
+
+	option = {
+		name = BRG_puma.475.a
+	}
+}
+
+country_event = { #BRG_an_oxymoronic_alliance event for US about NPP-C seeing support losses from supporting MCS and getting angry
+	id = BRG_puma.476  #written to annoy the player about the NPP-C so they're more disposed to target them
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.476"}
+	title = BRG_puma.476.t
+	desc = BRG_puma.476.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event6
+
+	option = {
+		name = BRG_puma.476.a
+	}
+}
+
+country_event = { #BRG_their_patriotic_duty event for US about NPP-FR supporting public getting riled up over their NPP-C support, written as such to push player against harrington and portrayed as untrustworthy
+	id = BRG_puma.477
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.477"}
+	title = BRG_puma.477.t
+	desc = BRG_puma.477.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event1
+
+	option = {
+		name = BRG_puma.477.a
+	}
+}
+
+country_event = { #BRG_whispering_poision_into_their_ears event for US about false info putting wallace in a bad light, painted as untrustworthy and undermining, written to push player against wallace or co-operation
+	id = BRG_puma.478
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_puma.478"}
+	title = BRG_puma.478.t
+	desc = BRG_puma.478.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	picture = GFX_report_event_BRG_event13
+
+	option = {
+		name = BRG_puma.478.a
+	}
+}
+
+
+###################################################################
+###############
+############### GCW 
+###############
+###################################################################
+
+
+### GCW EVENTS ###
+
+# Level 2 Volunteers for Heydrich
+country_event = {
+	id = BRG_gcw.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_gcw.1"}
+	title = BRG_gcw.1.t
+	desc = BRG_gcw.1.d
+	picture = GFX_report_event_BRG_event5
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = BRG_gcw.1.a
+	}
+}
+
+# Level 3 Volunteers for Heydrich
+country_event = {
+	id = BRG_gcw.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_gcw.2"}
+	title = BRG_gcw.2.t
+	desc = BRG_gcw.2.d
+	picture = GFX_report_event_BRG_event6
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = BRG_gcw.2.a
+	}
+}
+
+# Level 4 Volunteers for Heydrich
+country_event = {
+	id = BRG_gcw.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_gcw.3"}
+	title = BRG_gcw.3.t
+	desc = BRG_gcw.3.d
+	picture = GFX_report_event_BRG_event16
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = BRG_gcw.3.a
+	}
+}
+
+# Officer assassinations in the GCW
+country_event = {
+	id = BRG_gcw.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_gcw.4"}
+	title = BRG_gcw.4.t
+	desc = BRG_gcw.4.d
+	picture = GFX_report_event_BRG_event6
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #
+		name = BRG_gcw.4.a
+		add_timed_idea = {
+			idea = BRG_GCW_officer_assassinations
+			days = 120
+		}
+	}
+}
+
+# Generic targetting GCW civ industry
+country_event = {
+	id = BRG_gcw.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_gcw.5"}
+	title = BRG_gcw.5.t
+	desc = BRG_gcw.5.d
+	picture = GFX_report_event_BRG_event3
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #
+		name = BRG_gcw.5.a
+		random_owned_controlled_state = {
+			set_temp_variable = { state_value_multiplier_temp = 0.98 }
+			econ_state_value_change_multiply = yes
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+	}
+}
+
+# Generic targetting GCW mil industry
+country_event = {
+	id = BRG_gcw.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_gcw.6"}
+	title = BRG_gcw.6.t
+	desc = BRG_gcw.6.d
+	picture = GFX_report_event_BRG_event11
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #
+		name = BRG_gcw.6.a
+		random_owned_controlled_state = {
+			set_temp_variable = { state_value_multiplier_temp = 0.995 }
+			econ_state_value_change_multiply = yes
+			damage_building = {
+				type = anti_air
+				damage = 1
+			}
+			damage_building = {
+				type = radar_station
+				damage = 1
+			}
+		}
+	}
+}
+
+# Generic targetting GCW infrastructure
+country_event = {
+	id = BRG_gcw.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_gcw.7"}
+	title = BRG_gcw.7.t
+	desc = BRG_gcw.7.d
+	picture = GFX_report_event_BRG_event2
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #
+		name = BRG_gcw.7.a
+		random_owned_controlled_state = {
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+			set_temp_variable = { state_value_multiplier_temp = 0.99 }
+			econ_state_value_change_multiply = yes
+		}
+	}
+}
+
+# Schorner assassination attempt - Goring version
+country_event = {
+	id = BRG_gcw.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_gcw.8"}
+	title = BRG_gcw.8.t
+	desc = BRG_gcw.8.d
+	picture = GFX_report_event_BRG_event5
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = BRG_gcw.8.a
+		GGR = {
+			every_unit_leader = {
+				limit = { has_id = 122 }
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 90
+				}
+			}
+		}
+	}
+}
+
+#########
+##ADLER##
+#########
+
+#Speer Events 1-6
+country_event = {
+	id = BRG_adler.1 #Establishing connections, Flick, loose ends, etc
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.1"}
+	title = BRG_adler.1.t
+	desc = BRG_adler.1.d
+	picture = GFX_report_event_BRG_event15
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.1.a
+
+	}
+}
+
+country_event = {
+	id = BRG_adler.3 #the smear
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.3.t
+	desc = BRG_adler.3.d
+	picture = GFX_report_event_BRG_event16
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.3.a
+		increase_conservative_leaning_medium = yes
+		add_stability = -0.05
+		decrease_regime_stab_small = yes
+	}
+}
+
+country_event = {
+	id = BRG_adler.4 #Using Flick
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.4.t
+	desc = BRG_adler.4.d
+	picture = GFX_report_event_BRG_event13
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.4.a
+
+	}
+}
+
+country_event = {
+	id = BRG_adler.5 #Establishing connections to help schroner
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.5.t
+	desc = BRG_adler.5.d
+	picture = GFX_report_event_BRG_event6
+	trigger = { has_global_flag = SGR_Slave_Revolt }
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.5.a
+
+	}
+}
+
+
+#Goering Events 7-12
+
+
+country_event = {
+	id = BRG_adler.8 #The Plan of how to stop Warplan B
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.8.t
+	desc = BRG_adler.8.d
+	picture = GFX_report_event_BRG_event15
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.8.a
+
+	}
+}
+
+country_event = {
+	id = BRG_adler.11 #Scattering for Attack
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.11.t
+	desc = BRG_adler.11.d
+	picture = GFX_report_event_BRG_event16
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.11.a
+
+	}
+}
+
+country_event = {
+	id = BRG_adler.12 #Spies in Germany
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.12.t
+	desc = BRG_adler.12.d
+	picture = GFX_report_event_BRG_event13
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.12.a
+
+	}
+}
+#Bormann Events
+country_event = {
+	id = BRG_adler.13 #gaining ins on the party
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.13.t
+	desc = BRG_adler.13.d
+	picture = GFX_report_event_BRG_event15
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.13.a
+
+	}
+}
+
+country_event = {
+	id = BRG_adler.14 #gaining ins on the party - ger
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.14.t
+	desc = BRG_adler.14.d
+	picture = GFX_report_event_BRG_event5
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.14.a
+			GER = {
+				set_variable = { BOR_SIG_AP_i = 0 }
+				set_variable = { BOR_SIG_AL_fi = 0 }
+				set_variable = { BOR_SIG_AP_v = -3 }
+				BOR_SIG_AddLoyalty = yes
+				custom_effect_tooltip = BOR_SIG_AL_0_3_1_tt
+				set_variable = { BOR_SIG_AP_i = 0 }
+				set_variable = { BOR_SIG_AL_fi = 1 }
+				set_variable = { BOR_SIG_AP_v = 3 }
+				BOR_SIG_AddLoyalty = yes
+		}
+	}
+}
+
+country_event = {
+	id = BRG_adler.15 #infiltrate industry
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.15.t
+	desc = BRG_adler.15.d
+	picture = GFX_report_event_BRG_event1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.15.a
+
+	}
+}
+
+country_event = {
+	id = BRG_adler.16 #infiltrate intelligence - ger
+	immediate = {log = "[GetDateText]: [Root.GetName]: event BRG_education.3"}
+	title = BRG_adler.16.t
+	desc = BRG_adler.16.d
+	picture = GFX_report_event_BRG_event8
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = BRG_adler.16.a
+		GER = {
+			set_variable = { BOR_SIG_AP_i = 2 }
+			set_variable = { BOR_SIG_AP_v = -5 }
+			BOR_SIG_AddPower = yes
+			custom_effect_tooltip = BOR_SIG_AP_2_3_tt
+		}
+	}
+}

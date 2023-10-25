@@ -1,0 +1,3393 @@
+﻿############################
+#  		Turkey Events	   #
+############################
+add_namespace = CA_Conclusion_Event
+add_namespace = central_asia
+add_namespace = CA_Speer
+add_namespace = CA_Bormann
+add_namespace = CA_US
+add_namespace = CA_JAP
+add_namespace = CA_TK_Events
+###########################
+#### a) Turkmen Events ####
+###########################
+
+#Turkmenistan Regime Change
+country_event = {
+	id = central_asia.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = central_asia.1.t
+	desc = central_asia.1.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = central_asia.1.a
+		if = {
+			limit = { USA = { has_country_flag = TNO_CA_US_NOT_INTERESTED }  }
+			random_list = {
+				1 = { Turkmenistan_Regime_Change_A1 = yes }
+				1 = { Turkmenistan_Regime_Change_A2 = yes }
+				1 = { Turkmenistan_Regime_Change_A3 = yes }
+			}
+		}
+	}
+}
+
+
+#Kyrgyzstan Regime Change
+country_event = {
+	id = central_asia.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.2"}
+	title = central_asia.2.t
+	desc = central_asia.2.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = central_asia.2.a
+		random_list = {
+			1 = { Kyrgyzstan_Regime_Change_A1 = yes }
+			1 = { Kyrgyzstan_Regime_Change_A2 = yes }
+		}
+	}
+}
+
+
+
+
+# Karakalpakstan Regime Change
+country_event = {
+	id = central_asia.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.3"}
+	title = central_asia.4.t
+	desc = central_asia.4.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = central_asia.4.a
+		random_list = {
+			1 = { Karakalpak_Regime_Change_A1 = yes }
+			1 = { set_cosmetic_tag = KRK_United_Socialist }
+		}
+	}
+}
+
+country_event = { #Uzbekistan Regime Change
+	id = central_asia.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.3"}
+	title = central_asia.5.t
+	desc = central_asia.5.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = central_asia.5.a
+		random_list = {
+			1 = { Uzbekistan_Regime_Change_A1 = yes }
+			1 = { } #Nothing Happens
+		}
+		country_event = {
+			id = central_asia.6
+			days = 60
+		}
+	}
+}
+
+
+country_event = { #Uzbekistan - Karakalpakstan Unification
+	id = central_asia.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.3"}
+	title = central_asia.6.t
+	desc = central_asia.6.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = central_asia.6.a
+		if = {
+			limit = {
+				UZB = {
+					has_government = conservative_democracy
+				}
+				KRK = {
+					has_government = conservative_democracy
+				}
+			}
+			UZB = {
+				add_state_core = 750
+				annex_country = {
+					target = KRK
+					transfer_troops = yes
+				}
+				set_country_flag = UZB_Path_Election_Underway
+				set_cosmetic_tag = UZB_VictoriousDemocrat
+				country_event = {
+					id = central_asia.14
+					days = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				UZB = {
+					has_government = communist
+				}
+				KRK = {
+					has_government = socialist
+				}
+			}
+			UZB = {
+				add_state_core = 750
+				annex_country = {
+					target = KRK
+					transfer_troops = yes
+				}
+				set_country_flag = UZB_Path_Election_Underway
+				set_cosmetic_tag = UZB_VictoriousCommie
+				country_event = {
+					id = central_asia.14
+					days = 2
+				}
+			}
+		}
+		else = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 750
+					num_provinces = 3
+					on_win = central_asia.12
+					on_lose = central_asia.13
+				}
+				defender = {
+					state = 585
+					num_provinces = 4
+				}
+			}
+			KYR = { transfer_state = 1467 }
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.7
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event central_asia.7"
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 1468
+				num_provinces = 4
+				on_win = central_asia.8
+				on_lose = central_asia.11
+			}
+
+			defender = {
+				state = 405
+				num_provinces = 1
+			}
+		}
+	}
+	title = central_asia.7.t
+	desc = central_asia.7.desc
+	is_triggered_only = yes
+
+	hidden = yes
+	option = {
+		name = central_asia.7.a
+		GER = {
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Albert Speer"
+						ruling_only = yes
+					}
+				}
+				country_event = {
+					id = CA_Speer.9
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.8
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event central_asia.8"
+		UTL = { transfer_state = 405 }
+	}
+	title = central_asia.8.t
+	desc = central_asia.8.desc
+	is_triggered_only = yes
+
+	hidden = yes
+	option = {
+		name = central_asia.8.a
+		GER = {
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Albert Speer"
+						ruling_only = yes
+					}
+				}
+				if = {
+					limit = {
+						GER = {
+							has_country_flag = TNO_CA_SPEER_WORKING_WITH_KORSIMAT
+						}
+					}
+					country_event = {
+						id = CA_Speer.10
+						days = 1
+					}
+				}
+				else_if = {
+					limit = {
+						GER = {
+							has_country_flag = TNO_CA_SPEER_WORKING_WITH_BAYMIRZA
+						}
+					}
+					country_event = {
+						id = CA_Speer.17
+						days = 1
+					}
+				}
+				else_if = {
+					limit = {
+						GER = {
+							has_country_flag = TNO_CA_SPEER_WORKING_WITH_VELLI
+						}
+					}
+					country_event = {
+						id = CA_Speer.20
+						days = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						name = "Martin Bormann"
+						ruling_only = yes
+					}
+				}
+				GER = {
+					if = {
+						limit = {
+							UTL = {
+								has_country_leader = {
+									name = "Sher Muhammad"
+									ruling_only = yes
+								}
+							}
+						}
+						country_event = {
+							id = CA_Bormann.9
+						}
+					}
+					else_if = {
+						limit = {
+							UTL = {
+								has_country_leader = {
+									name = "Baymirza Hayit"
+									ruling_only = yes
+								}
+							}
+						}
+						country_event = {
+							id = CA_Bormann.10
+						}
+					}
+					if = {
+						limit = {
+							UTL = {
+								has_country_leader = {
+									name = "Veli Kayyum Han"
+									ruling_only = yes
+								}
+							}
+						}
+						country_event = {
+							id = CA_Bormann.11
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Tajikistan Regime Change
+	id = central_asia.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.9"}
+	title = central_asia.9.t
+	desc = central_asia.9.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = central_asia.9.a
+		random_list = {
+			1 = { Tajikistan_Regime_Change_A1 = yes }
+			1 = { Tajikistan_Regime_Change_A2 = yes }
+			1 = { Tajikistan_Regime_Change_A3 = yes }
+		}
+	}
+}
+
+country_event = { #Anti-Agression Pakt
+	id = central_asia.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.10"}
+	title = central_asia.10.t
+	desc = central_asia.10.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		KYR = {
+			create_faction = Kyrgz_Tajik_Pact
+			add_to_faction = TAJ
+			hidden_effect = {
+				add_manpower = 200000
+				TAJ = {
+					add_manpower = 200000
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.11
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event central_asia.11"
+	}
+	title = central_asia1.11.t
+	desc = central_asia.11.desc
+	is_triggered_only = yes
+
+	hidden = yes
+	option = {
+		name = central_asia.11.a
+		GER = {
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Albert Speer"
+						ruling_only = yes
+					}
+				}
+				GER = {
+					country_event = {
+						id = CA_Speer.15
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						name = "Martin Bormann"
+						ruling_only = yes
+					}
+				}
+				GER = {
+					country_event = {
+						id = CA_Bormann.13
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.12
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event central_asia.12"
+		UZB = { drop_cosmetic_tag = yes }
+	}
+	title = central_asia.12.t
+	desc = central_asia.12.desc
+	is_triggered_only = yes
+
+	hidden = yes
+	option = {
+		name = central_asia.12.a
+		UZB = {
+			add_state_core = 750
+			annex_country = {
+				target = KRK
+				transfer_troops = yes
+			}
+			if = {
+				limit = {
+					UZB = {
+						has_government = communist
+					}
+				}
+				set_cosmetic_tag = UZB_VictoriousCommie
+			}
+			else_if = {
+				limit = {
+					UZB = {
+						has_government = conservative_democracy
+					}
+				}
+				set_cosmetic_tag = UZB_VictoriousDemocrat
+			}
+			country_event = {
+				id = central_asia.14
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.13
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event central_asia.13"
+		KRK = { drop_cosmetic_tag = yes }
+	}
+	title = central_asia.13.t
+	desc = central_asia.13.desc
+	is_triggered_only = yes
+
+	hidden = yes
+	option = {
+		name = central_asia.13.a
+		KRK = {
+			add_state_core = 585
+			add_state_core = 405
+			annex_country = {
+				target = UZB
+				transfer_troops = yes
+			}
+			if = {
+				limit = {
+					KRK = {
+						has_government = socialist
+					}
+				}
+				set_cosmetic_tag = KRK_VictoriousCommie
+			}
+			else_if = {
+				limit = {
+					KRK = {
+						has_government = conservative_democracy
+					}
+				}
+				set_cosmetic_tag = KRK_VictoriousDemocrat
+			}
+			country_event = {
+				id = central_asia.17
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event central_asia.14" }
+	title = central_asia.14.t
+	desc = central_asia.14.desc
+	is_triggered_only = yes
+
+	hidden = yes
+	option = {
+		name = central_asia.14.a
+		UZB = {
+			if = {
+				limit = {
+					UZB = { has_government = communist }
+					KYR = { has_government = communist }
+				}
+				country_event = {
+					id = central_asia.16
+					days = 2
+				}
+			}
+			else_if = {
+				limit = {
+					UZB = { has_government = conservative_democracy }
+					KYR = { has_government = despotism }
+				}
+				country_event = {
+					id = central_asia.15
+					days = 2
+				}
+			}
+			else = {
+				###border war here
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event central_asia.15" }
+	title = central_asia.15.t
+	desc = central_asia.15.desc
+	is_triggered_only = yes
+
+	option = {
+		name = central_asia.15.a
+		1467 = {
+			set_demilitarized_zone = no
+		}
+		if = {
+			limit = {
+				KYR = { is_in_faction_with = TAJ }
+			}
+			KYR = { add_to_faction = UZB }
+			UZB = { transfer_state = 1467 }
+			random_list = {
+				1 = {
+					UZB = {
+						add_state_core = 1466
+						transfer_state = 1466
+					}
+				}
+				1 = { # Nothing happens
+				}
+			}
+		}
+		else = {
+			random_list = {
+				1 = {
+					UZB = {
+						add_state_core = 1466
+						add_state_core = 586
+						add_state_core = 732
+						annex_country = {
+							target = KYR
+							transfer_troops = yes
+						}
+						set_cosmetic_tag = UZB_KYRGYZ_ANNEX_DEM
+					}
+				}
+				1 = {	
+					KYR = {
+						add_state_core = 1467
+						add_state_core = 405
+						add_state_core = 585
+						add_state_core = 750
+						annex_country = {
+							target = UZB
+							transfer_troops = yes
+						}
+						set_cosmetic_tag = KYR_UZBEK_ANNEX_DEM
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event central_asia.16" }
+	title = central_asia.16.t
+	desc = central_asia.16.desc
+	is_triggered_only = yes
+
+	option = {
+		name = central_asia.16.a
+		1467 = {
+			set_demilitarized_zone = no
+		}
+		if = {
+			limit = {
+				KYR = { is_in_faction_with = TAJ }
+			}
+			KYR = { add_to_faction = UZB }
+			UZB = { transfer_state = 1467 }
+			random_list = {
+				1 = {
+					UZB = {
+						add_state_core = 1466
+						transfer_state = 1466
+					}
+				}
+				1 = { # Nothing happens
+				}
+			}
+		}
+		else = {
+			random_list = {
+				1 = {
+					UZB = {
+						add_state_core = 1466
+						add_state_core = 586
+						add_state_core = 732
+						annex_country = {
+							target = KYR
+							transfer_troops = yes
+						}
+						set_cosmetic_tag = UZB_KYRGYZ_ANNEX_COM
+					}
+				}
+				1 = {	
+					KYR = {
+						add_state_core = 1467
+						add_state_core = 405
+						add_state_core = 585
+						add_state_core = 750
+						annex_country = {
+							target = UZB
+							transfer_troops = yes
+						}
+						set_cosmetic_tag = KYR_UZBEK_ANNEX_COM
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event central_asia.17" }
+	title = central_asia.17.t
+	desc = central_asia.17.desc
+	is_triggered_only = yes
+
+	hidden = yes
+	option = {
+		name = central_asia.17.a
+		KRK = {
+			if = {
+				limit = {
+					KRK = { has_government = socialist }
+					KYR = { has_government = communist }
+				}
+				country_event = {
+					id = central_asia.18
+				}
+			}
+			else_if = {
+				limit = {
+					KRK = { has_government = conservative_democracy }
+					KYR = { has_government = despotism }
+				}
+				country_event = {
+					id = central_asia.19
+				}
+			}
+			else = {
+				###border war here
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event central_asia.18" }
+	title = central_asia.18.t
+	desc = central_asia.18.desc
+	is_triggered_only = yes
+
+	option = {
+		name = central_asia.18.a
+		1467 = {
+			set_demilitarized_zone = no
+		}
+		if = {
+			limit = {
+				KYR = { is_in_faction_with = TAJ }
+			}
+			KYR = { add_to_faction = KRK }
+			KRK = {
+				add_state_core = 1467
+				transfer_state = 1467
+			}
+			random_list = {
+				1 = {
+					KRK = {
+						add_state_core = 1466
+						transfer_state = 1466
+					}
+				}
+				1 = { # Nothing happens
+				}
+			}
+		}
+		else = {
+			random_list = {
+				1 = {
+					KRK = {
+						add_state_core = 1466
+						add_state_core = 586
+						add_state_core = 732
+						annex_country = {
+							target = KYR
+							transfer_troops = yes
+						}
+						set_cosmetic_tag = KRK_KYRGYZ_ANNEX_DEM
+					}
+				}
+				1 = {
+					KYR = {
+						add_state_core = 1467
+						add_state_core = 405
+						add_state_core = 585
+						add_state_core = 750
+						annex_country = {
+							target = KRK
+							transfer_troops = yes
+						}
+						set_cosmetic_tag = KYR_KARAKALPAK_ANNEX_DEM
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = central_asia.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event central_asia.19" }
+	title = central_asia.19.t
+	desc = central_asia.19.desc
+	is_triggered_only = yes
+
+	option = {
+		name = central_asia.19.a
+		1467 = {
+			set_demilitarized_zone = no
+		}
+		if = {
+			limit = {
+				KYR = { is_in_faction_with = TAJ }
+			}
+			KYR = { add_to_faction = KRK }
+			KRK = { 
+				add_state_core = 1467
+				transfer_state = 1467
+			}
+			random_list = {
+				1 = {
+					KRK = {
+						add_state_core = 1466
+						transfer_state = 1466
+					}
+				}
+				1 = {
+				}
+			}
+		}
+		else = {
+			random_list = {
+				1 = {
+					KRK = {
+						add_state_core = 1466
+						add_state_core = 586
+						add_state_core = 732
+						annex_country = {
+							target = KYR
+							transfer_troops = yes
+						}
+						set_cosmetic_tag = KRK_KYRGYZ_ANNEX_DEM
+					}
+				}
+				1 = {
+					KYR = {
+						add_state_core = 1467
+						add_state_core = 405
+						add_state_core = 585
+						add_state_core = 750
+						annex_country = {
+							target = KRK
+							transfer_troops = yes
+						}
+						set_cosmetic_tag = KYR_KARAKALPAK_ANNEX_DEM
+					}
+				}
+			}
+		}
+	}
+}
+
+###########################
+#### a) Bormann Events ####
+###########################
+country_event = { #RND Receives Reports
+	id = CA_Bormann.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.1"}
+	title = CA_Bormann.1.t
+	desc = CA_Bormann.1.desc
+	picture = GFX_CA_Generic_Legion
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.1.a
+		country_event = {
+			id = CA_Bormann.2
+			days = 52
+		}
+	}
+}
+
+country_event = { #Legion Lives On
+	id = CA_Bormann.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.2"}
+	title = CA_Bormann.2.t
+	desc = CA_Bormann.2.desc
+	picture = GFX_CA_Generic_Legion_Kurbashi
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.2.a
+		country_event = {
+			id = CA_Bormann.3
+			days = 15
+		}
+	}
+}
+
+country_event = { #Veli & RND Meeting
+	id = CA_Bormann.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.3"}
+	title = CA_Bormann.3.t
+	desc = CA_Bormann.3.desc
+	picture = GFX_CA_Generic_Veli_Kayyum
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.3.a
+		country_event = {
+			id = CA_Bormann.4
+			days = 5
+		}
+	}
+}
+
+country_event = { #Bormann Choose Your Dog
+	id = CA_Bormann.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.4"}
+	title = CA_Bormann.4.t
+	desc = CA_Bormann.4.desc
+	picture = GFX_CA_Generic_Turkmen_Legion
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Veli
+		name = CA_Bormann.4.a
+		set_country_flag = TNO_CA_BORMANN_WORKING_WITH_VEYUUM
+		custom_effect_tooltip = TNO_GER_Missions_Available
+		#random_list = {
+		#	1 = {
+		#		country_event = {
+		#			id = CA_Bormann.5 #Korşirmat#
+		#			days = 10
+		#		}
+		#	}
+		#	1 = {
+		#		country_event = {
+		#			id = CA_Bormann.6 #Baymirza#
+		#			days = 10
+		#		}
+		#	}
+		#}
+	}
+	option = { #Korşirmat
+		name = CA_Bormann.4.b
+		set_country_flag = TNO_CA_BORMANN_WORKING_WITH_KORSIMAT
+		custom_effect_tooltip = TNO_GER_Missions_Available
+		#random_list = {
+		#	1 = {
+		#		country_event = {
+		#			id = CA_Bormann.7 #Veli#
+		#			days = 10
+		#		}
+		#	}
+		#	1 = {
+		#		country_event = {
+		#			id = CA_Bormann.6 #Baymirza#
+		#			days = 10
+		#		}
+		#	}
+		#}
+	}
+	option = { #Baymirza
+		name = CA_Bormann.4.c
+		set_country_flag = TNO_CA_BORMANN_WORKING_WITH_BAYMIRZA
+		custom_effect_tooltip = TNO_GER_Missions_Available
+		#random_list = {
+		#	1 = {
+		#		country_event = {
+		#			id = CA_Bormann.7 #Veli#
+		#			days = 10
+		#		}
+		#	}
+		#	1 = {
+		#		country_event = {
+		#			id = CA_Bormann.5 #Korşirmat#
+		#			days = 10
+		#		}
+		#	}
+		#}
+	}
+}
+
+country_event = { #Korşirmat fucking dies lmao
+	id = CA_Bormann.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.5"}
+	title = CA_Bormann.5.t
+	desc = CA_Bormann.5.desc
+	picture = GFX_CA_Generic_Korsirmat
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ###MAKE KORŞIRMAT REMOVED WITH THIS EVENT###
+		name = CA_Bormann.5.a
+		set_country_flag = TNO_CA_BORMANN_KORSIMAT_DEAD
+		country_event = {
+			id = CA_Bormann.8
+			days = 12
+		}
+	}
+}
+
+country_event = { #Baymirza dies oh no
+	id = CA_Bormann.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.6"}
+	title = CA_Bormann.6.t
+	desc = CA_Bormann.6.desc
+	picture = GFX_CA_Generic_Baymirza
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ###MAKE BAYMIRZA REMOVED WITH THIS EVENT###
+		name = CA_Bormann.6.a
+		set_country_flag = TNO_CA_BORMANN_BAYMIRZA_DEAD
+		country_event = {
+			id = CA_Bormann.8
+			days = 12
+		}
+	}
+}
+
+country_event = { #Veli goes bye bye
+	id = CA_Bormann.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.7"}
+	title = CA_Bormann.7.t
+	desc = CA_Bormann.7.desc
+	picture = GFX_Blood_Bed
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.7.a
+		set_country_flag = TNO_CA_BORMANN_VEYUUM_DEAD
+		country_event = {
+			id = CA_Bormann.8
+			days = 12
+		}
+		UTL = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Power Vacuum"
+				desc = ""
+				picture = "Portrait_Madagascar_Power_Vacuum.dds"
+				expire = "1965.1.1"
+				ideology = national_socialism_subtype
+				traits = { }
+			}	
+		}
+	}
+}
+
+country_event = { #Legion attack Samarqand
+	id = CA_Bormann.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.8"}
+	title = CA_Bormann.8.t
+	desc = CA_Bormann.8.desc
+	picture = GFX_CA_Generic_Bandits
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.8.a
+		country_event = {
+			id = central_asia.7
+			days = 12
+		}
+	}
+}
+
+country_event = { #Victory - Korshirmat
+	id = CA_Bormann.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.9"}
+	title = CA_Bormann.9.t
+	desc = CA_Bormann.9.desc
+	picture = GFX_CA_Generic_Bandits_Victorious
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.9.a
+		add_political_power = 50
+		UTL = {
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = despotism
+			}
+			set_popularities = {
+				communist = 0
+				ultranationalism = 5
+				socialist = 0
+				social_democracy = 0
+				liberal_democracy = 0
+				conservative_democracy = 0
+				authoritarian_democracy = 12
+				despotism = 63
+				fascism = 5
+				national_socialism = 10
+				
+			}
+			create_country_leader = {
+				name = "Sher Muhamamd Korsirmat"
+				desc = ""
+				picture = "Portrait_Sher_Muhammad.dds"
+				expire = "1965.1.1"
+				ideology = despotism_personalistic_dictatorship_subtype
+				traits = { }
+			}	
+		}
+		country_event = {
+			id = central_asia.16
+			days = 12
+		}
+	}
+}
+
+country_event = { #Victory - Baymirza
+	id = CA_Bormann.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.10"}
+	title = CA_Bormann.10.t
+	desc = CA_Bormann.10.desc
+	picture = GFX_CA_Generic_Bandits_Victorious
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.10.a
+		add_political_power = 50
+		UTL = {
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = fascism
+			}
+			set_popularities = {
+				communist = 0
+				ultranationalism = 5
+				socialist = 0
+				social_democracy = 0
+				liberal_democracy = 0
+				conservative_democracy = 0
+				authoritarian_democracy = 12
+				despotism = 5
+				fascism = 43
+				national_socialism = 30
+				
+			}
+			create_country_leader = {
+				name = "Baymirza Hayit"
+				desc = ""
+				picture = "Portrait_Uzbekistan_Baymirza_Hayit.dds"
+				expire = "1965.1.1"
+				ideology = fascism_subtype
+				traits = { }
+			}	
+		}
+		country_event = {
+			id = central_asia.16
+			days = 12
+		}
+	}
+}
+
+country_event = { #Victory - Veli
+	id = CA_Bormann.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.11"}
+	title = CA_Bormann.11.t
+	desc = CA_Bormann.11.desc
+	picture = GFX_CA_Generic_Celebration
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.11.a
+		add_political_power = 50
+		country_event = {
+			id = central_asia.12
+			days = 5
+		}
+	}
+}
+
+country_event = { #Veli post Red Wedding
+	id = CA_Bormann.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.12"}
+	title = CA_Bormann.12.t
+	desc = CA_Bormann.12.desc
+	picture = GFX_CA_Generic_Veli_Kayyum
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.12.a
+		UTL = {
+			set_popularities = {
+				communist = 0
+				ultranationalism = 2
+				socialist = 0
+				social_democracy = 0
+				liberal_democracy = 0
+				conservative_democracy = 0
+				authoritarian_democracy = 2
+				despotism = 3
+				fascism = 3
+				national_socialism = 90
+				
+			}
+		}
+		country_event = {
+			id = central_asia.16
+			days = 5
+		}
+	}
+}
+
+country_event = { #Offensive Fails
+	id = CA_Bormann.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.13"}
+	title = CA_Bormann.13.t
+	desc = CA_Bormann.13.desc
+	picture = GFX_CA_Generic_Bandits
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.13.a
+		country_event = { ##KILL
+			id = central_asia.14
+			days = 5
+		}
+	}
+	option = {
+		name = CA_Bormann.13.b
+		country_event = { ##Spare
+			id = central_asia.15
+			days = 5
+		}
+	}
+}
+
+country_event = { #Kill
+	id = CA_Bormann.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.14"}
+	title = CA_Bormann.14.t
+	desc = CA_Bormann.14.desc
+	picture = GFX_CA_Generic_Legion
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.14.a
+		UTL = {
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = despotism
+			}
+			set_popularities = {
+				communist = 0
+				ultranationalism = 13
+				socialist = 0
+				social_democracy = 0
+				liberal_democracy = 0
+				conservative_democracy = 0
+				authoritarian_democracy = 0
+				despotism = 18
+				fascism = 28
+				national_socialism = 28
+				
+			}
+			create_country_leader = {
+				name = "Ruzi Nazar"
+				desc = ""
+				picture = "Portrait_Turkestan_Ruzi_Nazar.dds"
+				expire = "1965.1.1"
+				ideology = despotism_military_junta_subtype
+				traits = { }
+			}	
+		}
+		country_event = {
+			id = central_asia.16
+			days = 5
+		}
+	}
+}
+
+country_event = { #Spare
+	id = CA_Bormann.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.15"}
+	title = CA_Bormann.15.t
+	desc = CA_Bormann.15.desc
+	picture = GFX_CA_Generic_Legion
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.15.a
+		country_event = {
+			id = central_asia.16
+			days = 5
+		}
+	}
+}
+
+country_event = { #Kenesh Start
+	id = CA_Bormann.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_Bormann.16"}
+	title = CA_Bormann.16.t
+	desc = CA_Bormann.16.desc
+	picture = GFX_CA_Generic_Legion_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = CA_Bormann.16.a
+	}
+}
+
+####################################################################
+# UNITED STATES OF AMERICA - CENTRAL ASIAN BUREAU OF INVESTIGATION #
+####################################################################
+#ADD NIL'S CA_US.1 EVENT, NO LOC AT THE TIME BEING (27.07.2021) DEEPLY CONCERNED !
+#1966 - Poda
+country_event = {
+	id = CA_US.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.2"}
+	title = CA_US.1.t
+	desc = CA_US.1.desc
+	picture = GFX_CA_Generic_Poda
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_US.1.a
+		hidden_effect = {
+			country_event = {
+				id = CA_US.2
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = CA_US.2.b ###Skip to election results
+		set_country_flag = TNO_CA_US_NOT_INTERESTED
+	}
+}
+country_event = {
+	id = CA_US.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.2"}
+	title = CA_US.2.t
+	desc = CA_US.2.desc
+	picture = GFX_CA_Generic_Poda
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_US.2.a
+		hidden_effect = {
+			country_event = {
+				id = CA_US.3
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = CA_US.2.b ###Skip to election results
+	}
+}
+country_event = { #Election Interference
+	id = CA_US.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.3"}
+	title = CA_US.3.t
+	desc = CA_US.3.desc
+	picture = GFX_CA_Generic_Teke_Tribes
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_US.3.a #Poda
+		set_country_flag = SUPPORTED_PODA
+		random_list = {
+			1 = {
+				country_event = {
+					id = CA_US.4
+					days = 5
+				}
+			}
+			1 = {
+				country_event = {
+					id = CA_US.5
+					days = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = CA_US.3.b #Babakhan
+		set_country_flag = SUPPORTED_BABAKHAN
+		random_list = {
+			1 = {
+				country_event = {
+					id = CA_US.4
+					days = 5
+				}
+			}
+			1 = {
+				country_event = {
+					id = CA_US.5
+					days = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = CA_US.3.c #Galiyev
+		set_country_flag = SUPPORTED_GALIYEV
+		random_list = {
+			1 = {
+				country_event = {
+					id = CA_US.4
+					days = 5
+				}
+			}
+			1 = {
+				country_event = {
+					id = CA_US.5
+					days = 5
+				}
+			}
+		}
+	}
+}
+country_event = { #Failure
+	id = CA_US.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.4"}
+	title = CA_US.4.t
+	desc = CA_US.4.desc
+	picture = GFX_CA_Generic_Turkmen_Volunteer
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.4.a
+		hidden_effect = {
+			country_event = {
+				id = CA_US.5
+				days = 5
+			}
+		}
+	}
+}
+country_event = { #Elections
+	id = CA_US.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event CA_US.5"
+		hidden_effect = {
+			TRK = { US_ELECTION_CA_INTERVERENCE_CALCULATOR = yes }
+		}
+	}
+	title = CA_US.5.t
+	desc = CA_US.5.desc
+	picture = GFX_CA_Generic_Teke_Tribes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.5.a
+	}
+}
+country_event = { #Poda - Coup?
+	id = CA_US.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.6"}
+	title = CA_US.6.t
+	desc = CA_US.6.desc
+	picture = GFX_CA_Generic_Poda
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.6.a
+		US_COUP_PODA_HURR_DURR = yes
+	}
+	option = {
+		name = CA_US.6.b
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Successfull Coup - Wallace NEEDS LOC
+	id = CA_US.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.7"}
+	title = CA_US.7.t
+	desc = CA_US.7.desc
+	picture = GFX_CA_Generic_Karryev
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.7.a
+		TRK = { add_ideas = OFN_Observer }
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Successfull Coup - LeMay
+	id = CA_US.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.8"}
+	title = CA_US.8.t
+	desc = CA_US.8.desc
+	picture = GFX_CA_Generic_Karryev
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.8.a
+		TRK = { add_ideas = OFN_Observer }
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Successfull Coup - Goldwater
+	id = CA_US.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.9"}
+	title = CA_US.9.t
+	desc = CA_US.9.desc
+	picture = GFX_CA_Generic_Karryev
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.9.a
+		TRK = { add_ideas = OFN_Observer }
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Successfull Coup - MCS Girlboss
+	id = CA_US.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.10"}
+	title = CA_US.10.t
+	desc = CA_US.10.desc
+	picture = GFX_CA_Generic_Karryev
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.10.a
+		TRK = { add_ideas = OFN_Observer }
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Poda Election Victory
+	id = CA_US.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.11"}
+	title = CA_US.11.t
+	desc = CA_US.11.desc
+	picture = GFX_CA_Generic_Poda
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.11.a
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Galiyev - Coup?
+	id = CA_US.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.12"}
+	title = CA_US.12.t
+	desc = CA_US.12.desc
+	picture = GFX_CA_Generic_Galiyev
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.12.a
+		US_COUP_PODA_HURR_DURR = yes
+	}
+	option = {
+		name = CA_US.12.b
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Galiyev Victory
+	id = CA_US.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.13"}
+	title = CA_US.13.t
+	desc = CA_US.13.desc
+	picture = GFX_CA_Generic_Galiyev
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.13.a
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Babakhan - Coup?
+	id = CA_US.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.14"}
+	title = CA_US.14.t
+	desc = CA_US.14.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.14.a
+		US_COUP_PODA_HURR_DURR = yes
+	}
+	option = {
+		name = CA_US.14.b
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+country_event = { #Babakhan
+	id = CA_US.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.15"}
+	title = CA_US.15.t
+	desc = CA_US.15.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.15.a
+		hidden_effect = {
+			country_event = {
+				id = CA_US.16
+				days = 8
+			}
+		}
+	}
+}
+
+country_event = { #Bukhara Kenes soon
+	id = CA_US.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_US.16"}
+	title = CA_US.16.t
+	desc = CA_US.16.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_US.16.a
+	}
+}
+
+#################################################
+# YOU ARE NOW ENTERING THE JAPANESE EMPIRE ZONE #
+#################################################
+
+country_event = { #Japanese Intelligence Department investigating CA
+	id = CA_JAP.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.1"}
+	title = CA_JAP.1.t
+	desc = CA_JAP.1.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.1.a
+		hidden_effect = {
+			set_variable = {success_counter = 0}
+			country_event = {
+				id = CA_JAP.2
+				days = 22
+			}
+		}
+	}
+}
+
+country_event = { #oh god oh fuck Uyghurs SHIT FUCK OH GOD OH FUCK
+	id = CA_JAP.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.2"}
+	title = CA_JAP.2.t
+	desc = CA_JAP.2.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.2.a
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.3
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #Ahmad Shah Khan receives blackpill
+	id = CA_JAP.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.3"}
+	title = CA_JAP.3.t
+	desc = CA_JAP.3.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.3.a
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						KYR = { is_in_faction_with = TAJ }
+						NOT = { country_exists = TAJ }
+					}
+				}
+				country_event = {
+					id = CA_JAP.4
+					days = 7
+				}
+			}
+			else = {
+				country_event = {
+					id = CA_JAP.5
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Tajikistan and Kyrgyzstan is an union, build your terrorism time !
+	id = CA_JAP.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.4"}
+	title = CA_JAP.4.t
+	desc = CA_JAP.4.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.4.a
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.6 
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #Tajikistan is alone
+	id = CA_JAP.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.5"}
+	title = CA_JAP.5.t
+	desc = CA_JAP.5.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.5.a 
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.6
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #Japan and Afhanistan best fwends
+	id = CA_JAP.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.6"}
+	title = CA_JAP.6.t
+	desc = CA_JAP.6.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.6.a
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.7
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #the mountains are scary but we can go through them i think oh wai is that a gueri-? OnO
+	id = CA_JAP.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.7"}
+	title = CA_JAP.7.t
+	desc = CA_JAP.7.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.7.a
+		add_political_power = -10 #replace the cost with something else
+		random_list = {
+			25 = {
+				country_event = {
+					id = CA_JAP.8
+					days = 7
+				}
+			}
+			75 = {
+				country_event = {
+					id = CA_JAP.9
+					days = 7
+				}
+			}
+		}
+	}
+
+	option = {
+		name = CA_JAP.7.b
+		add_political_power = -25
+		random_list = {
+			50 = {
+				country_event = {
+					id = CA_JAP.8
+					days = 7
+				}
+			}
+			50 = {
+				country_event = {
+					id = CA_JAP.9
+					days = 7
+				}
+			}
+		}
+	}
+	option = {
+		name = CA_JAP.7.c
+		add_political_power = -50
+		random_list = {
+			75 = {
+				country_event = {
+					id = CA_JAP.8
+					days = 7
+				}
+			}
+			25 = {
+				country_event = {
+					id = CA_JAP.9
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #success
+	id = CA_JAP.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.8"}
+	title = CA_JAP.8.t
+	desc = CA_JAP.8.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.8.a
+		hidden_effect = {
+			add_to_variable = { success_counter = 1 }
+			country_event = {
+				id = CA_JAP.10
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #loss
+	id = CA_JAP.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.9"}
+	title = CA_JAP.9.t
+	desc = CA_JAP.9.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.9.a
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.10
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #interview refugees
+	id = CA_JAP.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.10"}
+	title = CA_JAP.10.t
+	desc = CA_JAP.10.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.10.a
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.11
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = CA_JAP.10.b
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.12
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { #wrong
+	id = CA_JAP.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.11"}
+	title = CA_JAP.11.t
+	desc = CA_JAP.11.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.11.a
+		hidden_effect = {
+			country_event ={
+				id = CA_JAP.13
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #right
+	id = CA_JAP.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.12"}
+	title = CA_JAP.12.t
+	desc = CA_JAP.12.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.12.a
+		hidden_effect = {
+			add_to_variable = { success_counter = 1 }
+			country_event = {
+				id = CA_JAP.13
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #investigate xinjiang
+	id = CA_JAP.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.13"}
+	title = CA_JAP.13.t
+	desc = CA_JAP.13.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.13.a
+		add_political_power = -10
+		random_list = {
+			25 = {
+				country_event = {
+					id = CA_JAP.14
+					days = 7
+				}
+			}
+			75 = {
+				country_event = {
+					id = CA_JAP.15
+					days = 7
+				}
+			}
+		}
+	}
+	option = {
+		name = CA_JAP.13.b
+		add_political_power = -25
+		random_list = {
+			50 = {
+				country_event = {
+					id = CA_JAP.14
+					days = 7
+				}
+			}
+			50 = {
+				country_event = {
+					id = CA_JAP.15
+					days = 7
+				}
+			}
+		}
+	}
+	option = {
+		name = CA_JAP.13.c
+		add_political_power = -50
+		random_list = {
+			75 = {
+				country_event = {
+					id = CA_JAP.14
+					days = 7
+				}
+			}
+			25 = {
+				country_event = {
+					id = CA_JAP.15
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #success
+	id = CA_JAP.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.14"}
+	title = CA_JAP.14.t
+	desc = CA_JAP.14.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.14.a
+		hidden_effect = {
+			add_to_variable = { succes_counter = 1 }
+			country_event = {
+				id = CA_JAP.16
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #failure
+	id = CA_JAP.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.15"}
+	title = CA_JAP.15.t
+	desc = CA_JAP.15.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.15.a
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.16
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #create tajik contacts
+	id = CA_JAP.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.16"}
+	title = CA_JAP.16.t
+	desc = CA_JAP.16.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.16.a
+		hidden_effect = {
+			random_list = {
+				50 = {
+					country_event = {
+						id = CA_JAP.17
+						days = 7
+					}
+				}
+				50 = {
+					country_event = {
+						id = CA_JAP.18
+						days = 7
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #success
+	id = CA_JAP.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.17"}
+	title = CA_JAP.17.t
+	desc = CA_JAP.17.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.17.a
+		hidden_effect = {
+			add_to_variable = { success_counter = 1 }
+			country_event = {
+				id = CA_JAP.19
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #failure
+	id = CA_JAP.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.18"}
+	title = CA_JAP.18.t
+	desc = CA_JAP.18.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.18.a
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.19
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = { #moment of truth 
+	id = CA_JAP.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.19"}
+	title = CA_JAP.19.t
+	desc = CA_JAP.19.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.19.a
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { success_counter > 1 }
+				}
+				country_event = {
+					id = CA_JAP.20
+					days = 7
+				}
+			}
+			else = {
+				country_event = {
+					id = CA_JAP.21 #you failed haha
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #keep going/union or alone
+	id = CA_JAP.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.20"}
+	title = CA_JAP.20.t
+	desc = CA_JAP.20.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.20.a
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						KYR = { is_in_faction_with = TAJ }
+						NOT = { country_exists = TAJ }
+					}
+				}
+				country_event = {
+					id = CA_JAP.22
+					days = 7
+				}
+			}
+			else = {
+				country_event = {
+					id = CA_JAP.23
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #you lose turkestan will now unite
+	id = CA_JAP.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.21"}
+	title = CA_JAP.21.t
+	desc = CA_JAP.21.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.21.a
+	}
+}
+
+country_event = { #union
+	id = CA_JAP.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.22"}
+	title = CA_JAP.22.t
+	desc = CA_JAP.22.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.22.a #not a backstab haha (add effects here)
+		hidden_effect = {
+            country_event = {
+			    id = CA_JAP.24
+			    days = 20
+			}
+		}
+	}
+	option = {
+		name = CA_JAP.22.b #sure but sincere (effects ig)
+		hidden_effect = {
+		    country_event = {
+			    id = CA_JAP.24
+			    days = 20
+			}
+		}
+	}
+}
+
+country_event = { #alone
+	id = CA_JAP.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.23"}
+	title = CA_JAP.23.t
+	desc = CA_JAP.23.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.23.a #play along for now (add effects plox)
+		hidden_effect = {
+		    country_event = {
+			    id = CA_JAP.25
+			    days = 20
+			}
+		}
+	}
+    option = {
+		name = CA_JAP.23.b #islamism = pan asianism (and effects and stuff)
+		hidden_effect = {
+		    country_event = {
+			    id = CA_JAP.25
+			    days = 20
+			}
+		}
+	}
+}
+
+country_event = { #union second to last event
+	id = CA_JAP.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.24"}
+	title = CA_JAP.24.t
+	desc = CA_JAP.24.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.24.a
+		hidden_effect = {
+		    country_event = {
+			    id = CA_JAP.26
+			    days = 7
+			}
+		}
+	}
+}
+
+country_event = { #alone second to last event
+	id = CA_JAP.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.25"}
+	title = CA_JAP.25.t
+	desc = CA_JAP.25.desc
+	picture = GFX_CA_Generic_Babakhan
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.25.a
+		hidden_effect = {
+			country_event = {
+				id = CA_JAP.26
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { #final turkes kanes event
+	id = CA_JAP.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event CA_JAP.26"}
+	title = CA_JAP.26.t
+	desc = CA_JAP.26.desc
+	picture = GFX_CA_Generic_Babakhan 
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_JAP.26.a #add some effects or smth idk
+	}
+}
+
+##############################################################
+country_event = { #US The Council Begins
+	id = central_asia.100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.100"}
+	title = central_asia.100.t
+	desc = central_asia.100.desc
+	picture = GFX_report_event_nazi_moon
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = central_asia.100
+
+		#TNO_setup_CA_Conference = yes
+	}
+}
+
+# Reload event
+country_event = {
+	id = central_asia.200
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.200"}
+	title = central_asia.200.t
+	desc = central_asia.200.desc
+	is_triggered_only = yes
+
+	trigger = {
+		TRK = {
+			has_country_flag = TRK_DC_Happening
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {has_global_flag = TNO_TURKES_KENES_OVER_OVER}
+			}
+			TRK = {
+				TNO_CA_Conference_daily_tick = yes
+			}
+			country_event = {
+				id = central_asia.200
+				days = 1
+			}
+		}
+	}
+
+	hidden = yes
+
+
+}
+
+
+############################
+#  	Espionage Events	   #
+############################
+add_namespace = CA_RND_UVH
+add_namespace = CA_CIA
+
+country_event = { # The guns are delivered safely.
+	id = CA_RND_UVH.101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.2"}
+	title = CA_RND_UVH.101.t
+	desc = CA_RND_UVH.101.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CA_RND_UVH.101.a
+		PER = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 1000
+				target = GER
+			}
+		}
+	}
+}
+
+country_event = { #During the treck to the Legion territory, the caravan was attacked by Afghan bandits. While we could deliver most of the package, there is a certain tension if words spread.
+	id = CA_RND_UVH.102
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.2"}
+	title = CA_RND_UVH.101.t
+	desc = CA_RND_UVH.101.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CA_RND_UVH.101.a
+		PER = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 500
+				target = GER
+			}
+		}
+	}
+}
+
+country_event = { # Korsimat was successfully assasinated
+	id = CA_RND_UVH.201
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.2"}
+	title = CA_RND_UVH.101.t
+	desc = CA_RND_UVH.101.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CA_RND_UVH.101.a
+		UTL = {
+			set_country_flag = TNO_UTL_Korsimat_Dead
+			add_manpower = -1
+		}
+	}
+}
+
+country_event = { #Korsimat survived the murder attempt. While we managed to cover our tracks, the man has grown paranoid. We won't have another chance.
+	id = CA_RND_UVH.202
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.2"}
+	title = CA_RND_UVH.101.t
+	desc = CA_RND_UVH.101.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = CA_RND_UVH.101.a
+	}
+}
+
+############################
+#  	Speer Zone	   #
+############################
+
+country_event = { #
+	id = CA_Speer.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.1" }
+	title = CA_Speer.1.t
+	desc = CA_Speer.1.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.1.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.2
+			days = 52
+		}	
+	}
+}
+
+country_event = { #
+	id = CA_Speer.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.2" }
+	title = CA_Speer.2.t
+	desc = CA_Speer.2.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.2.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.3
+			days = 15
+		}	
+	}
+}
+
+country_event = { #
+	id = CA_Speer.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.3" }
+	title = CA_Speer.3.t
+	desc = CA_Speer.3.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.3.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.4
+			days = 15
+		}	
+	}
+}
+
+country_event = { #
+	id = CA_Speer.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.4" }
+	title = CA_Speer.4.t
+	desc = CA_Speer.4.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.4.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = { #
+		name = CA_Speer.4.b
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.5
+			days = 15
+		}	
+	}
+}
+
+country_event = { #
+	id = CA_Speer.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.5" }
+	title = CA_Speer.5.t
+	desc = CA_Speer.5.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.5.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.6
+			days = 3
+		}
+	}
+	option = { #
+		name = CA_Speer.5.b
+		ai_chance = { factor = 1 }
+		set_country_flag = TNO_CA_SPEER_WORKING_WITH_KORSIMAT
+		country_event = {
+			id = CA_Speer.25
+			days = 1
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.6" }
+	title = CA_Speer.6.t
+	desc = CA_Speer.6.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.6.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.7
+		}
+	}
+	option = { #
+		name = CA_Speer.6.b
+		ai_chance = { factor = 1 }
+		set_country_flag = TNO_CA_SPEER_WORKING_WITH_KORSIMAT
+		country_event = {
+			id = CA_Speer.25
+			days = 1
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.7" }
+	title = CA_Speer.7.t
+	desc = CA_Speer.7.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.7.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.8
+		}
+	}
+	option = { #
+		name = CA_Speer.7.b
+		ai_chance = { factor = 1 }
+		set_country_flag = TNO_CA_SPEER_WORKING_WITH_BAYMIRZA
+		country_event = {
+			id = CA_Speer.26
+			days = 1
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.8" }
+	title = CA_Speer.8.t
+	desc = CA_Speer.8.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.8.a
+		ai_chance = { factor = 1 }
+		set_country_flag = TNO_CA_SPEER_WORKING_WITH_VELLI
+		country_event = {
+			id = CA_Speer.27
+			days = 1
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.9" }
+	title = CA_Speer.9.t
+	desc = CA_Speer.9.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.9.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = { #
+		name = CA_Speer.9.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.10" }
+	title = CA_Speer.10.t
+	desc = CA_Speer.10.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.10.a
+		ai_chance = { factor = 1 }
+		UTL = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Power Vacuum"
+				desc = ""
+				picture = "Portrait_Madagascar_Power_Vacuum.dds"
+				expire = "1965.1.1"
+				ideology = national_socialism_subtype
+				traits = { }
+			}	
+		}
+		country_event = {
+			id = CA_Speer.11
+			days = 10
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.11" }
+	title = CA_Speer.11.t
+	desc = CA_Speer.11.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.11.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.12
+			days = 30
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.12" }
+	title = CA_Speer.12.t
+	desc = CA_Speer.12.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.12.a
+		ai_chance = { factor = 1 }
+		add_political_power = 100
+		set_variable = { GER_TK_Weight = 3 }
+		UTL = {
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = despotism
+			}
+			set_popularities = {
+				communist = 0
+				ultranationalism = 5
+				socialist = 0
+				social_democracy = 0
+				liberal_democracy = 0
+				conservative_democracy = 0
+				authoritarian_democracy = 12
+				despotism = 63
+				fascism = 5
+				national_socialism = 10
+				
+			}
+			create_country_leader = {
+				name = "Sher Muhamamd Korsirmat"
+				desc = ""
+				picture = "Portrait_Sher_Muhammad.dds"
+				expire = "1965.1.1"
+				ideology = despotism_personalistic_dictatorship_subtype
+				traits = { }
+			}
+			hidden_effect = {
+				country_event = {
+					id = central_asia.16
+					days = 12
+				}
+			}	
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.13" }
+	title = CA_Speer.13.t
+	desc = CA_Speer.13.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.13.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = { #
+		name = CA_Speer.13.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.14" }
+	title = CA_Speer.14.t
+	desc = CA_Speer.14.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.14.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = { #
+		name = CA_Speer.14.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.15" }
+	title = CA_Speer.15.t
+	desc = CA_Speer.15.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.15.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			random_list = {
+				25 = {
+					country_event = {
+						id = CA_Speer.16
+						days = 2
+					}
+				}
+				25 = {
+					country_event = {
+						id = CA_Speer.23
+						days = 2
+					}
+				}
+				50 = {
+					country_event = {
+						id = CA_Speer.24
+						days = 2
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.16" }
+	title = CA_Speer.16.t
+	desc = CA_Speer.16.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.16.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.17" }
+	title = CA_Speer.17.t
+	desc = CA_Speer.17.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.17.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.18" }
+	title = CA_Speer.18.t
+	desc = CA_Speer.18.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.18.a
+		ai_chance = { factor = 1 }
+		UTL = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Power Vacuum"
+				desc = ""
+				picture = "Portrait_Madagascar_Power_Vacuum.dds"
+				expire = "1965.1.1"
+				ideology = national_socialism_subtype
+				traits = { }
+			}	
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.19" }
+	title = CA_Speer.19.t
+	desc = CA_Speer.19.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.19.a
+		ai_chance = { factor = 1 }
+		add_political_power = 100
+		set_variable = { GER_TK_Weight = 3 }
+		hidden_effect = {
+			country_event = {
+				id = central_asia.16
+				days = 12
+			}
+		}
+		UTL = {
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = fascism
+			}
+			set_popularities = {
+				communist = 0
+				ultranationalism = 5
+				socialist = 0
+				social_democracy = 0
+				liberal_democracy = 0
+				conservative_democracy = 0
+				authoritarian_democracy = 12
+				despotism = 5
+				fascism = 43
+				national_socialism = 30
+				
+			}
+			create_country_leader = {
+				name = "Baymirza Hayit"
+				desc = ""
+				picture = "Portrait_Uzbekistan_Baymirza_Hayit.dds"
+				expire = "1965.1.1"
+				ideology = fascism_subtype
+				traits = { }
+			}	
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.20" }
+	title = CA_Speer.20.t
+	desc = CA_Speer.20.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.20.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.21
+			days = 2
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.21" }
+	title = CA_Speer.21.t
+	desc = CA_Speer.21.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.21.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = CA_Speer.22
+			days = 2
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.22" }
+	title = CA_Speer.22.t
+	desc = CA_Speer.22.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.22.a
+		ai_chance = { factor = 1 }
+		add_political_power = 100
+		set_country_flag = TNO_CA_BORMANN_BAYMIRZA_DEAD
+		set_country_flag = TNO_CA_BORMANN_KORSIMAT_DEAD
+		set_variable = { GER_TK_Weight = 3 }
+		hidden_effect = {
+			country_event = {
+				id = central_asia.16
+				days = 12
+			}
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.23" }
+	title = CA_Speer.23.t
+	desc = CA_Speer.23.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.23.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.24" }
+	title = CA_Speer.24.t
+	desc = CA_Speer.24.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.24.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.25" }
+	title = CA_Speer.25.t
+	desc = CA_Speer.25.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.25.a
+		ai_chance = { factor = 1 }
+		GER = {
+			set_country_flag = TNO_CA_SPEER_WORKING_WITH_KORSIMAT
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.26" }
+	title = CA_Speer.26.t
+	desc = CA_Speer.26.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.26.a
+		ai_chance = { factor = 1 }
+		GER = {
+			set_country_flag = TNO_CA_SPEER_WORKING_WITH_BAYMIRZA
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.27" }
+	title = CA_Speer.27.t
+	desc = CA_Speer.27.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.27.a
+		ai_chance = { factor = 1 }
+		GER = {
+			set_country_flag = TNO_CA_SPEER_WORKING_WITH_BAYMIRZA
+		}
+	}
+}
+
+country_event = { #
+	id = CA_Speer.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.28" }
+	title = CA_Speer.28.t
+	desc = CA_Speer.28.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.28.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = { #
+		name = CA_Speer.28.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.29" }
+	title = CA_Speer.29.t
+	desc = CA_Speer.29.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.29.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = { #
+		name = CA_Speer.29.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = CA_Speer.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CA_Speer.30" }
+	title = CA_Speer.30.t
+	desc = CA_Speer.30.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = CA_Speer.30.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = { #
+		name = CA_Speer.30.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = { # Japan First Warning
+	id = CA_TK_Events.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.1.t
+	desc = CA_TK_Events.1.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.1.a
+		
+	}
+}
+
+country_event = { # USA things are sus
+	id = CA_TK_Events.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.2.t
+	desc = CA_TK_Events.2.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.2.a
+		
+	}
+}
+
+country_event = { # GER things are sus
+	id = CA_TK_Events.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.3.t
+	desc = CA_TK_Events.3.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.3.a
+		
+	}
+}
+
+country_event = { # Japan Second Warning
+	id = CA_TK_Events.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.4.t
+	desc = CA_TK_Events.4.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.4.a
+		
+	}
+}
+
+country_event = { # USA things are hella sus
+	id = CA_TK_Events.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.5.t
+	desc = CA_TK_Events.5.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.5.a
+		
+	}
+}
+
+country_event = { # GER things are hella sus
+	id = CA_TK_Events.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.6.t
+	desc = CA_TK_Events.6.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.6.a
+		
+	}
+}
+
+country_event = { # American Agents Meet with German Agents. Truce to reveal the Japanese involvement
+	id = CA_TK_Events.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.7.t
+	desc = CA_TK_Events.7.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.7.a
+		if = {
+			limit = { USA = { is_ai = no } }
+			country_event = {
+				id = CA_TK_Events.8
+				days = 5
+			}
+		}
+		else_if = {
+			limit = { GER = { is_ai = no } }
+			country_event = {
+				id = CA_TK_Events.8
+				days = 5
+			}
+		}
+		else = {
+			JAP = {
+				country_event = {
+					id = CA_TK_Events.9
+					days = 15
+				}
+			}
+			USA = {
+				country_event = {
+					id = CA_TK_Events.10
+					days = 15
+				}
+			}
+			GER = {
+				country_event = {
+					id = CA_TK_Events.10
+					days = 15
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Local media shows the extent of their interference, plans, collab with goddamn Afghanistan
+	id = CA_TK_Events.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.8.t
+	desc = CA_TK_Events.8.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.8.a
+		JAP = {
+			country_event = {
+				id = CA_TK_Events.9
+				days = 5
+			}
+		}
+		USA = {
+			country_event = {
+				id = CA_TK_Events.10
+				days = 5
+			}
+		}
+		GER = {
+			country_event = {
+				id = CA_TK_Events.10
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # Japan representatives are sent packing, tension at borders but this is the extent of their interference, RIP Japan
+	id = CA_TK_Events.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.9.t
+	desc = CA_TK_Events.9.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+	immediate = {
+		JAP = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+	}
+
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.9.a
+		add_political_power = -100
+	}
+}
+
+country_event = { # Japan representatives are sent packing, tension at borders but this is the extent of their interference, RIP Japan - USA and GER POV
+	id = CA_TK_Events.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event central_asia.1"}
+	title = CA_TK_Events.10.t
+	desc = CA_TK_Events.10.desc
+	picture = GFX_report_event_nazi_moon
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CA_TK_Events.9.a
+		add_political_power = 100
+	}
+}
+
+
+

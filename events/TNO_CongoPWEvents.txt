@@ -1,0 +1,1492 @@
+
+add_namespace = COG_PW
+
+country_event = { # Congolese Civil War - set up non COG and GRO war decs here
+	id = COG_PW.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.1"}
+	title = COG_PW.1.t
+	desc = COG_PW.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = COG_PW.1.a
+		set_global_flag = CONGO_PW_HAPPENING
+		AZD = {
+			declare_war_on = {
+				target = CFS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CPR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KTG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KSI
+				type = annex_everything
+			}
+			every_owned_state = {
+				add_state_modifier = {
+					modifier = {
+						local_supplies = 4
+					}
+				}
+			}
+		}
+		CFS = {
+			declare_war_on = {
+				target = AZD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CPR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KTG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KSI
+				type = annex_everything
+			}
+			every_owned_state = {
+				add_state_modifier = {
+					modifier = {
+						local_supplies = 4
+					}
+				}
+			}
+		}
+		CPR = {
+			declare_war_on = {
+				target = AZD
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CFS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KTG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KSI
+				type = annex_everything
+			}
+			every_owned_state = {
+				add_state_modifier = {
+					modifier = {
+						local_supplies = 4
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = COG_PW.2 days = 14 }
+			country_event = { id = COG_PW.15 days = 45 }
+			USA = { country_event = { id = COG_PW.11 days = 1 } }
+			USA = { # Flavor Events
+				country_event = { id = COG_PW.100 days = 35 }
+				country_event = { id = COG_PW.101 days = 125 }
+				country_event = { id = COG_PW.103 days = 78 }
+			}
+			JAP = { country_event = { id = COG_PW.12  days = 1} }
+			news_event = { id = WORLD.18200 }
+		}
+	}
+}
+
+country_event = { # America notified
+	id = COG_PW.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.11"}
+	title = COG_PW.11.t
+	desc = COG_PW.11.desc
+
+	picture = GFX_report_event_south_african_war_us_soldier11
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = COG_PW.11.a
+		if = { 
+			limit = { 
+				has_country_flag = US_aid_CFS
+			}
+			custom_effect_tooltip = COG_PW_USA_intervene_tt
+		}
+		else = {
+			custom_effect_tooltip = COG_PW_USA_intervene_tt_2
+		}
+		TNO_fopo_add_congo_civil_war_tab = yes
+	}
+}
+
+country_event = { # Japan notified
+	id = COG_PW.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.12"}
+	title = COG_PW.12.t
+	desc = COG_PW.12.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = COG_PW.12.a
+		custom_effect_tooltip = COG_PW_JAP_intervene_tt
+		TNO_fopo_add_congo_civil_war_tab = yes
+	}
+}
+
+country_event = {
+	id = COG_PW.2 #Rest get involved
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.2"}
+	title = COG_PW.2.t
+	desc = COG_PW.2.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = COG_PW.2.a
+
+		clr_global_flag = COG_PW_GRO_or_COG_in
+
+		if = {
+			limit = {
+				AND = {
+					country_exists = GRO
+					has_global_flag = congo_crisis_reichsstaat
+				}
+			}
+			set_global_flag = COG_PW_GRO_or_COG_in
+			if = {
+				limit = { 
+					GRO = { # Cabal pounces on Congo
+						has_country_flag = GRO_cabal_victorious
+					}
+				}
+				GRO = {
+					declare_war_on = {
+						target = AZD
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = CFS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = CPR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = KTG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = KSI
+						type = annex_everything
+					}
+					every_owned_state = {
+						add_state_modifier = {
+							modifier = {
+								local_supplies = 4
+							}
+						}
+					}
+				}
+				GER = { country_event = { id = COG_PW.21 days = 1 } }
+			}
+			else = { # Congo invades Abwehrfront
+				GRO = {
+					every_owned_state = {
+						add_state_modifier = {
+							modifier = {
+								local_supplies = 4
+							}
+						}
+					}
+					declare_war_on = {
+						target = KTG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = KSI
+						type = annex_everything
+					}
+				}
+				GER = { country_event = { id = COG_PW.21 days = 1 } }
+				AZD = {
+					declare_war_on = {
+						target = GRO
+						type = annex_everything
+					}
+				}
+				CPR = {
+					declare_war_on = {
+						target = GRO
+						type = annex_everything
+					}
+				}
+				CFS = {
+					declare_war_on = {
+						target = GRO
+						type = annex_everything
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					country_exists = COG
+					has_global_flag = congo_mandate_collapsed
+				}
+			}
+			set_global_flag = COG_PW_GRO_or_COG_in
+			COG = {
+				declare_war_on = {
+					target = AZD
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = CFS
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = CPR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = KTG
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = KSI
+					type = annex_everything
+				}
+				every_owned_state = {
+					add_state_modifier = {
+						modifier = {
+							local_supplies = 4
+						}
+					}
+				}
+			}
+		}
+		TNO_CCW_Set_Majors = yes
+	}
+}
+
+country_event = { # Germany notification event (Cabal hit)
+	id = COG_PW.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.21"}
+	title = COG_PW.21.t
+	desc = COG_PW.21.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = COG_PW.21.a
+		custom_effect_tooltip = COG_PW_cabal_tt
+		TNO_fopo_add_congo_civil_war_tab = yes
+		set_temp_variable = { target = GRO }
+		TNO_increase_volunteer_cap_1 = yes
+		GER = { #flavor events
+			country_event = { id = COG_PW.102 days = 35 }
+			country_event = { id = COG_PW.105 days = 56 }
+		}
+	}
+}
+
+country_event = { # Germany notification event (Cabal not hit)
+	id = COG_PW.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.22"}
+	title = COG_PW.22.t
+	desc = COG_PW.22.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = COG_PW.22.a
+	}
+}
+
+country_event = { #CFS Victory
+	id = COG_PW.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.3"}
+	title = COG_PW.3.t
+	desc = COG_PW.3.desc
+
+	picture = GFX_CFS_Lumumba_Generic
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.3.a
+		clr_global_flag = CONGO_PW_HAPPENING
+		if = {
+			limit = {
+				USA = { has_country_flag = US_aid_CFS }
+			}
+			USA = { add_to_faction = CFS }
+			add_to_array = {
+				global.OFN_members = CFS
+			}
+			CFS = {
+				econ_join_sphere_USA = yes
+				add_ideas = OFN_Dependent_Member
+				hidden_effect = {
+					ROOT = {
+						every_owned_state = {
+							remove_core_of = GRO
+							remove_core_of = COG
+							remove_core_of = CFS
+							remove_core_of = CPR
+							remove_core_of = AZD
+							remove_core_of = KTG
+							remove_core_of = KSI
+							remove_core_of = XIK
+							add_core_of = PREV
+						}
+					}
+				}
+			}
+			add_political_power = 100
+			hidden_effect = {
+				USA = {
+					set_temp_variable = { Victory_ID = 24 }
+					set_temp_variable = { Victory_Outcome = 5 }
+					set_temp_variable = { Victory_Points = 125 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+				GER = {
+					set_temp_variable = { Victory_ID = 24 }
+					set_temp_variable = { Victory_Outcome = 1 }
+					set_temp_variable = { Victory_Points = -125 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+				JAP = {
+					set_temp_variable = { Victory_ID = 24 }
+					set_temp_variable = { Victory_Outcome = 1 }
+					set_temp_variable = { Victory_Points = -125 }
+					Cold_War_GUI_ManipulateVictory = yes
+				}
+			}
+		}
+		else = {
+			USA = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+		hidden_effect = {
+			CAF = {
+			    add_state_core = 1182
+				add_state_core = 1183
+			    add_state_core = 1185
+				transfer_state = 1182
+				transfer_state = 1183
+				transfer_state = 1185
+			}
+			news_event = { id = WORLD.18202 }
+		}
+	}
+}
+
+country_event = { #CPR Victory
+	id = COG_PW.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.4"}
+	title = COG_PW.4.t
+	desc = COG_PW.4.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.4.a
+		clr_global_flag = CONGO_PW_HAPPENING
+		set_country_flag = CPR_convenient_PALF_check
+		news_event = { id = WORLD.18203 }
+		hidden_effect = {
+			JAP = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			USA = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+		hidden_effect = {
+			ROOT = {
+				every_owned_state = {
+					remove_core_of = GRO
+					remove_core_of = COG
+					remove_core_of = CFS
+					remove_core_of = CPR
+					remove_core_of = AZD
+					remove_core_of = KTG
+					remove_core_of = KSI
+					remove_core_of = XIK
+					add_core_of = PREV
+				}
+			}
+		}
+		country_event = { id = COG_PW.17 days = 30 }
+		country_event = { id = COG_PW.30 days = 200 } # Join PALF check
+	}
+}
+
+country_event = { #GRO Victory - Abwehrfront
+	id = COG_PW.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.5"}
+	title = COG_PW.5.t
+	desc = COG_PW.5.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.5.a
+		clr_global_flag = CONGO_PW_HAPPENING
+		TNO_fopo_remove_congo_civil_war_tab = yes
+		GER = { add_to_faction = GRO }
+		GER = { 
+			add_to_faction = COG
+			hidden_effect = {
+				country_event = {
+					days = 25
+					id = COG_PW.104
+				}
+			}
+		}
+		GRO = {
+			add_ideas = Pakt_Bundnispartner
+			if = {
+				limit = { has_global_flag = german_civil_war_speervic }
+				join_zollverein = yes
+			}
+			econ_join_sphere_GER = yes
+			hidden_effect = {
+				ROOT = {
+					every_owned_state = {
+						remove_core_of = GRO
+						remove_core_of = COG
+						remove_core_of = CFS
+						remove_core_of = CPR
+						remove_core_of = AZD
+						remove_core_of = KTG
+						remove_core_of = KSI
+						remove_core_of = XIK
+						add_core_of = PREV
+					}
+				}
+			}
+		}
+		COG = {
+			add_ideas = Pakt_Bundnispartner
+			if = {
+				limit = { has_global_flag = german_civil_war_speervic }
+				join_zollverein = yes
+			}
+			econ_join_sphere_GER = yes
+			hidden_effect = {
+				ROOT = {
+					every_owned_state = {
+						remove_core_of = GRO
+						remove_core_of = COG
+						remove_core_of = CFS
+						remove_core_of = CPR
+						remove_core_of = AZD
+						remove_core_of = KTG
+						remove_core_of = KSI
+						add_core_of = PREV
+					}
+				}
+				transfer_state = 1174
+				transfer_state = 1173
+				transfer_state = 1172
+				transfer_state = 1177
+				transfer_state = 1168
+				transfer_state = 1175
+				transfer_state = 1176
+				transfer_state = 718
+				transfer_state = 1170
+				transfer_state = 1180
+				transfer_state = 1178
+				transfer_state = 1185
+				transfer_state = 1183
+				transfer_state = 1182
+				retire_country_leader = yes
+				set_politics = {
+					ruling_party = despotism
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+				set_popularities = {
+					despotism = 57
+					fascism = 19
+					national_socialism = 24
+				}
+				set_cosmetic_tag = GER_COG_int
+				create_country_leader = {
+					name = "Léon Pétillon"
+					desc = ""
+					picture = "Portrait_Congo_Leon_Petillon.dds"
+					expire = "1999.1.23"
+					ideology = despotism_corporatocracy_subtype
+					traits = {
+
+					}
+				}
+				load_focus_tree = OST_empty #to clear away Müller's foci
+				news_event = { id = WORLD.18204 }
+			}
+		}
+		
+		hidden_effect = {
+			GER = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 5 }
+				set_temp_variable = { Victory_Points = 125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			USA = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+	}
+}
+
+country_event = { #GRO Victory - Cabal
+	id = COG_PW.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.6"}
+	title = COG_PW.6.t
+	desc = COG_PW.6.desc
+	picture = GFX_report_event_GRO_african_cabal
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.6.a
+
+		
+		clr_global_flag = CONGO_PW_HAPPENING
+		TNO_fopo_remove_congo_civil_war_tab = yes
+		GER = { add_to_faction = GRO }
+		GER = { 
+			add_to_faction = COG
+			hidden_effect = {
+				country_event = {
+					days = 25
+					id = COG_PW.104
+				}
+			}
+		}
+		GRO = {
+			add_ideas = Pakt_Bundnispartner
+			if = {
+				limit = { has_global_flag = german_civil_war_speervic }
+				join_zollverein = yes
+			}
+			econ_join_sphere_GER = yes
+			hidden_effect = {
+				news_event = { id = WORLD.18205 }
+				ROOT = {
+					every_owned_state = {
+						remove_core_of = GRO
+						remove_core_of = COG
+						remove_core_of = CFS
+						remove_core_of = CPR
+						remove_core_of = AZD
+						remove_core_of = KTG
+						remove_core_of = KSI
+						add_core_of = PREV
+					}
+				}
+			}
+		}
+		COG = {
+			add_ideas = Pakt_Bundnispartner
+			if = {
+				limit = { has_global_flag = german_civil_war_speervic }
+				join_zollverein = yes
+			}
+			econ_join_sphere_GER = yes
+			hidden_effect = {
+				ROOT = {
+					every_owned_state = {
+						remove_core_of = GRO
+						remove_core_of = COG
+						remove_core_of = CFS
+						remove_core_of = CPR
+						remove_core_of = AZD
+						remove_core_of = KTG
+						remove_core_of = KSI
+						add_core_of = PREV
+					}
+				}
+				transfer_state = 1174
+				transfer_state = 1173
+				transfer_state = 1172
+				transfer_state = 1177
+				transfer_state = 1168
+				transfer_state = 1175
+				transfer_state = 1176
+				transfer_state = 718
+				transfer_state = 1170
+				transfer_state = 1180
+				transfer_state = 1178
+				transfer_state = 1185
+				transfer_state = 1183
+				transfer_state = 1182
+				retire_country_leader = yes
+				set_politics = {
+					ruling_party = despotism
+				}
+				every_owned_state = {
+					add_core_of = PREV
+				}
+				set_popularities = {
+					despotism = 57
+					fascism = 19
+					national_socialism = 24
+				}
+				set_cosmetic_tag = GER_COG_int
+				create_country_leader = {
+					name = "Léon Pétillon"
+					desc = ""
+					picture = "Portrait_Congo_Leon_Petillon.dds"
+					expire = "1999.1.23"
+					ideology = despotism_corporatocracy_subtype
+					traits = {
+
+					}
+				}
+				load_focus_tree = OST_empty #to clear away Müller's foci
+			}
+		}
+		hidden_effect = {
+			GER = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 5 }
+				set_temp_variable = { Victory_Points = 125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			USA = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+	}
+}
+
+country_event = { #KSI-KTG Last Remaining
+	id = COG_PW.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.7"}
+	title = COG_PW.7.t
+	desc = COG_PW.7.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.7.a
+		clr_global_flag = CONGO_PW_HAPPENING
+		KTG = {
+			annex_country = {
+				target = KSI
+				transfer_troops = yes
+			}
+			hidden_effect = {
+				retire_country_leader = yes
+				set_politics = {
+					ruling_party = despotism
+					last_election = "1966.6.23"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					despotism = 73
+					fascism = 17
+					authoritarian_democracy = 10
+				}
+				create_country_leader = {
+					name = "Jean Schramme"
+					desc = "POLITICS_JEAN_SCHRAMME_DESC"
+					picture = "Portrait_Katanga_Jean_Schramme.dds"
+					expire = "1999.1.23"
+					ideology = despotism_corporatocracy_subtype
+					traits = {
+
+					}
+				}
+				set_cosmetic_tag = KTG_Congo
+			}
+			hidden_effect = {
+				ROOT = {
+					every_owned_state = {
+						remove_core_of = GRO
+						remove_core_of = COG
+						remove_core_of = CFS
+						remove_core_of = CPR
+						remove_core_of = AZD
+						remove_core_of = KTG
+						remove_core_of = KSI
+						remove_core_of = XIK
+						add_core_of = PREV
+					}
+				}
+			}
+		}
+		news_event = { id = WORLD.18206 }
+		hidden_effect = {
+			GER = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			USA = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+	}
+}
+
+country_event = { #KSI Last Remaining what the fuc-
+	id = COG_PW.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.8"}
+	title = COG_PW.8.t
+	desc = COG_PW.8.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.8.a
+		clr_global_flag = CONGO_PW_HAPPENING
+		news_event = { id = WORLD.18207 }
+		hidden_effect = {
+			GER = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			USA = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			CAF = {
+			    add_state_core = 1182
+				add_state_core = 1183
+			    add_state_core = 1185
+				transfer_state = 1182
+				transfer_state = 1183
+				transfer_state = 1185
+			}
+		}
+		hidden_effect = {
+			ROOT = {
+				every_owned_state = {
+					remove_core_of = GRO
+					remove_core_of = COG
+					remove_core_of = CFS
+					remove_core_of = CPR
+					remove_core_of = AZD
+					remove_core_of = KTG
+					remove_core_of = KSI
+					remove_core_of = XIK
+					add_core_of = PREV
+				}
+			}
+		}
+	}
+}
+
+country_event = { #AZD - backed by japan now
+	id = COG_PW.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.9"}
+	title = COG_PW.9.t
+	desc = COG_PW.9.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.9.a
+		clr_global_flag = CONGO_PW_HAPPENING
+		add_political_power = 100
+		AZD = { 
+			econ_join_sphere_JAP = yes
+			hidden_effect = {
+				ROOT = {
+					every_owned_state = {
+						remove_core_of = GRO
+						remove_core_of = COG
+						remove_core_of = CFS
+						remove_core_of = CPR
+						remove_core_of = AZD
+						remove_core_of = KTG
+						remove_core_of = KSI
+						remove_core_of = XIK
+						add_core_of = PREV
+					}
+				}
+			}
+		}
+		
+		hidden_effect = {
+			news_event = { id = WORLD.18208 }
+			GER = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			USA = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 5 }
+				set_temp_variable = { Victory_Points = 125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+		}
+	}
+}
+
+country_event = { #Federal Republic of the Congo Winning
+	id = COG_PW.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.100"}
+	title = COG_PW.15.t
+	desc = COG_PW.15.d
+	picture = GFX_report_event_cog_native_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.15.a
+		USA = { add_to_faction = COG }
+		clr_global_flag = CONGO_PW_HAPPENING
+		add_to_array = {
+			global.OFN_members = COG
+		}
+		COG = {
+			econ_join_sphere_USA = yes
+			add_ideas = OFN_Dependent_Member
+			hidden_effect = {
+				ROOT = {
+					every_owned_state = {
+						remove_core_of = GRO
+						remove_core_of = COG
+						remove_core_of = CFS
+						remove_core_of = CPR
+						remove_core_of = AZD
+						remove_core_of = KTG
+						remove_core_of = KSI
+						remove_core_of = XIK
+						add_core_of = PREV
+					}
+				}
+			}
+		}
+		
+		add_political_power = 100
+		hidden_effect = {
+			news_event = { id = WORLD.18209 }
+			USA = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 5 }
+				set_temp_variable = { Victory_Points = 125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			GER = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			JAP = {
+				set_temp_variable = { Victory_ID = 24 }
+				set_temp_variable = { Victory_Outcome = 1 }
+				set_temp_variable = { Victory_Points = -125 }
+				Cold_War_GUI_ManipulateVictory = yes
+			}
+			CAF = {
+			    add_state_core = 1182
+				add_state_core = 1183
+			    add_state_core = 1185
+				transfer_state = 1182
+				transfer_state = 1183
+				transfer_state = 1185
+			}
+		}
+	}
+}
+
+country_event = { # CAF joins the fold!
+	id = COG_PW.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.100"}
+	title = COG_PW.15.t
+	desc = COG_PW.15.d
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.15.a
+		CAF = {
+			declare_war_on = {
+				target = AZD
+				type = annex_everything
+			}
+			country_event = { id = COG_PW.16 days = 180 }
+			set_global_flag = congo_PW_CAF_joined
+		}
+	}
+}
+
+country_event = { # CAF peace check with AZD
+	id = COG_PW.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.100"}
+	title = COG_PW.16.t
+	desc = COG_PW.16.d
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.16.a
+		if = {
+			limit = {
+				country_exists = AZD
+			}
+			CAF = {
+				white_peace = AZD
+			}
+			clr_global_flag = congo_PW_CAF_joined
+		}
+	}
+}
+
+country_event = { # CPR fights CAF
+	id = COG_PW.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.100"}
+	title = COG_PW.17.t
+	desc = COG_PW.17.d
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.17.a
+		CPR = {
+			declare_war_on = {
+				target = CAF
+				type = annex_everything
+			}
+			country_event = { id = COG_PW.18 days = 120 }
+		}
+	}
+}
+
+country_event = { # CAF peace check with CPR
+	id = COG_PW.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.100"}
+	title = COG_PW.18.t
+	desc = COG_PW.18.d
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.18.a
+		if = {
+			limit = {
+				country_exists = CAF
+			}
+			CPR = {
+				white_peace = CAF
+			}
+		}
+	}
+}
+
+country_event = { # CAF is defeated by CPR
+	id = COG_PW.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.100"}
+	title = COG_PW.19.t
+	desc = COG_PW.19.d
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.19.a
+		CPR = {
+		    set_autonomy = {
+		        target = CAF
+		        autonomy_state = autonomy_puppet
+		    }
+		}
+		CAF = {
+			set_cosmetic_tag = CAF_CPR_puppet
+			add_state_core = 538
+			transfer_state = 538
+			add_state_core = 1171
+			transfer_state = 1171
+			add_state_core = 1181
+			transfer_state = 1181
+			add_state_core = 1184
+			transfer_state = 1184
+			add_state_core = 1182
+			add_state_core = 1183
+			add_state_core = 1185
+			transfer_state = 1182
+			transfer_state = 1183
+			transfer_state = 1185
+			retire_country_leader = yes
+			set_politics = {
+				ruling_party = socialist
+				last_election = "1966.6.23"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				socialist = 75
+				communist = 15
+				authoritarian_democracy = 10
+			}
+			create_country_leader = {
+				name = "Abel Goumba"
+				desc = "POLITICS_ABEL_GOUMBA_DESC"
+				picture = "Portrait_Beafrika_Abel_Goumba.dds"
+				expire = "1999.1.23"
+				ideology = socialist_panafricanism_subtype
+				traits = {
+				}
+			}
+			econ_leave_sphere = yes
+			remove_ideas = OFN_Observer
+			remove_from_array = {
+				global.OFN_members = CAF
+			}
+		}
+	}
+}
+
+country_event = { # PALF joining check
+	id = COG_PW.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.100"}
+	title = COG_PW.30.t
+	desc = COG_PW.30.d
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.30.a
+		if = {
+			limit = {
+				CAO = { # PACMEA has formed
+					has_country_flag = HAS_ECON_SPHERE
+				}
+			}
+			CAO = {
+				add_to_faction = CPR
+			}
+			CPR = {
+				add_ideas = WEST_AFRICA_idea_economic_reconstruction
+				econ_join_sphere_CAO = yes
+				set_country_flag = PALF_MEMBER
+				hidden_effect = {
+					remove_faction_status = yes
+					add_ideas = PALF_Faction_peace
+				}
+			}
+			if = {
+				limit = {
+					CAF = {
+						has_government = socialist
+					}
+				}
+				CAO = {
+					add_to_faction = CAF
+				}
+				CAF = {
+					add_ideas = WEST_AFRICA_idea_economic_reconstruction
+					econ_join_sphere_CAO = yes
+					set_country_flag = PALF_MEMBER
+					hidden_effect = {
+						remove_faction_status = yes
+						add_ideas = PALF_Satellite_peace
+					}
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = west_african_crisis_news.21
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Orungu campaign begins
+	id = COG_PW.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.40"}
+	title = COG_PW.40.t
+	desc = COG_PW.40.d
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.40.a
+		CPR = { # make sure they have a strong army
+			load_oob = Congo_Mandate_Collapse_CPR
+			random_owned_controlled_state = {
+				add_resource = {
+					type = power
+					amount = 5
+				}
+			}
+			set_temp_variable = { pus_temp = 4 }
+			econ_pus_change = yes
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 2000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 400
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment_2
+				amount = 400
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_2
+				amount = 400
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = mbt_equipment_2
+				amount = 200
+				producer = JAP
+			}
+		}
+		# Only Orungu is left
+		if = {
+			limit = {
+				CPR = {
+					has_subject = CAF
+				}
+			}
+			GAB = { # make them strong lol
+				load_oob = GAB_AC
+				load_oob = GAB_AC
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 500
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_2
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_2
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = mbt_equipment_2
+					amount = 50
+					producer = USA
+				}
+			}
+			CPR = {
+				declare_war_on = {
+					target = GAB
+					type = annex_everything
+				}
+				every_country = {
+					limit = { is_in_faction_with = CPR }
+					add_to_war = {
+						targeted_alliance = CPR
+						enemy = GAB
+					}
+				}
+			}
+		}
+		# Orungu + Beafrika
+		else = {
+			set_global_flag = orungu_conflict_CAF
+			GAB = {
+				load_oob = GAB_AC
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 500
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_2
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_2
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = mbt_equipment_2
+					amount = 50
+					producer = USA
+				}
+				create_faction = Orungu_Alliance
+				add_to_faction = CAF
+			}
+			CAF = {
+				load_oob = CAF_AC
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 500
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_2
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_2
+					amount = 100
+					producer = USA
+				}
+				add_equipment_to_stockpile = {
+					type = mbt_equipment_2
+					amount = 50
+					producer = USA
+				}
+			}
+			CPR = {
+				declare_war_on = {
+					target = CAF
+					type = annex_everything
+				}
+				every_country = {
+					limit = { is_in_faction_with = CPR }
+					add_to_war = {
+						targeted_alliance = CPR
+						enemy = CAF
+					}
+				}
+				declare_war_on = {
+					target = GAB
+					type = annex_everything
+				}
+				every_country = {
+					limit = { is_in_faction_with = CPR }
+					add_to_war = {
+						targeted_alliance = CPR
+						enemy = GAB
+					}
+				}
+			}
+		}
+		USA = {
+			TNO_fopo_add_orungu_campaign_tab = yes
+		}
+		JAP = {
+			TNO_fopo_add_orungu_campaign_tab = yes
+		}
+	}
+}
+
+# Flavor Events 
+
+country_event = { # Like Sheep to the Slaughter
+	id = COG_PW.100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.100"}
+	title = COG_PW.100.t
+	desc = COG_PW.100.d
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.100.a
+	}
+}
+
+country_event = { # Bongo, Bongo, Bongo
+	id = COG_PW.101
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.101"}
+	title = COG_PW.101.t
+	desc = COG_PW.101.d
+
+	picture = GFX_event_pic_card_game
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.101.a
+	}
+}
+
+country_event = { # Technical Issues
+	id = COG_PW.102
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.102"}
+	title = COG_PW.102.t
+	desc = COG_PW.102.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.102.a
+	}
+}
+
+country_event = { # A Slice of the Congo
+	id = COG_PW.103
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.102"}
+	title = COG_PW.103.t
+	desc = COG_PW.103.d
+
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.103.a
+	}
+}
+
+country_event = { # Turning in the chips
+	id = COG_PW.104
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.104"}
+	title = COG_PW.104.t
+	desc = COG_PW.104.d
+	trigger = {
+		GER = {
+			has_country_leader = {
+				name = "Albert Speer"
+				ruling_only = yes
+			}
+		}
+	}
+
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.104.a
+	}
+}
+
+country_event = { # Defeat From the Jaws of Victory
+	id = COG_PW.105
+	immediate = {log = "[GetDateText]: [Root.GetName]: event COG_PW.104"}
+	title = COG_PW.105.t
+	desc = COG_PW.105.d
+
+	picture = GFX_report_event_south_african_war_us_soldier2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = COG_PW.105.a
+	}
+}

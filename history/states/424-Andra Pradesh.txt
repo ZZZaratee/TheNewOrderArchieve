@@ -1,0 +1,29 @@
+###POP DONE###
+state={
+	id=424
+	name="STATE_424" # Madras
+	manpower = 12155560
+	state_category = town
+	resources={
+		steel=19
+		uranium = 4
+	}
+	
+	history = {
+		owner = IND
+		add_core_of = AZH
+		add_core_of = IND
+		victory_points = {
+			10255 15 #Vishakhapatnam# 
+		}
+		buildings = {
+			infrastructure = 4
+			radar_station = 1
+			10255 = { naval_base = 2 }
+		}
+	}
+
+	provinces={
+		1228 1344 1430 4237 4321 4365 4414 7297 7310 7340 10001 10152 10255 10296 10756 10897 12180 12779
+	}
+}

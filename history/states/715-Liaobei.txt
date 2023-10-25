@@ -1,0 +1,30 @@
+state={
+	id=715
+	name="STATE_715"
+	manpower=5644620
+
+	resources={
+		oil = 4
+	}
+	
+	state_category = town
+
+	history={
+		owner = MAN
+		add_core_of = MAN
+		
+		buildings = {
+			infrastructure = 5
+			air_base = 1
+		}
+		victory_points = { 14629 5 }
+		victory_points = { 13150 5 }
+		victory_points = { 1627 5 }
+		victory_points = { 10612 5 }
+		victory_points = { 7873 5 }
+	}
+
+	provinces={
+		1508 1558 1627 1638 3877 3978 7812 10429 11903 12337 12469 12478 10499 14626 14631 12485 4876 7894 10567 7873 1776 7697 14623 10638 4745 4852 13150 7743 12690 10612 1502 14629 1847 4561 14630 4633 1499 930
+	}
+}

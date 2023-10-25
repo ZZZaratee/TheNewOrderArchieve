@@ -1,0 +1,39 @@
+
+state={
+	id=989
+	name="STATE_989"
+
+	resources={
+		aluminium=16
+		oil=93
+		uranium = 6
+	}
+	history={
+		owner = USA
+		add_core_of = USA
+		buildings = {
+			schools = 1
+			prisons = 3
+			barracks = 3
+			offices = 1
+			infrastructure = 5
+			air_base = 1
+			6785 = {
+				naval_base = 1
+
+			}
+		}
+		
+		victory_points = { 10740 1 }
+		victory_points = { 12782 2 }
+		victory_points = { 12369 1 }
+
+	}
+
+	provinces={
+		1954 1998 2019 2042 4884 4955 5038 5061 6785 6798 8064 10740 10894 12369 12728 6987 1927 12782 
+	}
+	manpower=2343493
+	buildings_max_level_factor=1.000
+	state_category = city
+}

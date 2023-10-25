@@ -1,0 +1,135 @@
+ideas = {
+	#############
+    ## SPIRITS ##
+	#############
+	country = {
+		URG_switzerland_mirage_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea URG_switzerland_mirage_1" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = no }
+			picture = URG_switzerland_mirage_1
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		URG_switzerland_mirage_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea URG_switzerland_mirage_2" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = no }
+			#picture = URG_switzerland_mirage_2
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		URG_switzerland_mirage_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea URG_switzerland_mirage_3" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = no }
+			#picture = URG_switzerland_mirage_3
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		URG_blancos_colorados_colegiado = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea URG_blancos_colorados_colegiado" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = no }
+			picture = URG_blancos_colorados_colegiado
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		URG_shadow_war = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea URG_shadow_war" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = no }
+			picture = URG_shadow_war
+			removal_cost = -1
+			modifier = {
+			}
+		}
+    }
+	#######################
+	###### Uruguay time
+	###### Starting peeps
+    head_of_government = {
+		URG_Victor_Haedo_hog = {
+			allowed = {
+				original_tag = URG
+				has_government = conservative_democracy
+			}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea URG_Victor_Haedo_hog"}
+			picture = GFX_idea_URG_Victor_Haedo_hog
+			available = {
+				has_government = conservative_democracy
+			}
+			traits = {
+				head_of_government
+				conservative_democracy
+				hog_popular_negotiator
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	foreign_minister = {
+		URG_Homero_Martinez_pol = {
+		allowed = {
+				has_government = conservative_democracy
+				original_tag = URG
+			}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea URG_Homero_Martinez_pol"}
+			picture = GFX_idea_URG_Homero_Martinez_pol
+			available = {
+				has_government = conservative_democracy
+			}
+			traits = {
+				foreign_minister
+				conservative_democracy
+				for_ideological_crusader
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	economy_minister = {
+		URG_Juan_Eduardo_Azzini_eco = {
+			allowed = {
+				has_government = conservative_democracy
+				original_tag = URG
+			}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea URG_Juan_Eduardo_Azzini_eco"}
+			picture = GFX_idea_URG_Juan_Eduardo_Azzini_eco
+			available = {
+				has_government = conservative_democracy
+			}
+			traits = {
+				economy_minister
+				conservative_democracy
+				eco_reformer
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	security_minister = {
+		URG_Nicolas_Storace_sec = {
+			allowed = {
+				original_tag = URG
+				has_government = conservative_democracy
+			}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea URG_Nicolas_Storace_sec"}
+			picture = GFX_idea_URG_Nicolas_Storace_sec
+			available = {
+				has_government = conservative_democracy
+			}
+			traits = {
+				security_minister
+				conservative_democracy
+				sec_political_appointment
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+}

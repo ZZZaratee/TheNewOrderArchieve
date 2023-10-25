@@ -1,0 +1,22 @@
+state = {
+	id=1427
+	name = "STATE_1427"
+	
+	manpower = 191723
+	state_category = town
+	
+	history = {
+		owner = UKR
+		add_core_of = UKR
+
+
+		victory_points = { 9506 1 }
+		buildings = {
+			infrastructure = 5
+		}
+	}
+
+	provinces = {
+		238 6589 14538 546 14536 9249 489 3507 3568 9506 14534 3542 14539
+	}
+}

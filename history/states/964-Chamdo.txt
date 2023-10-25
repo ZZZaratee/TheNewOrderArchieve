@@ -1,0 +1,21 @@
+state={
+	id=964
+	name="STATE_964"
+	history={
+		owner = XIK
+		add_core_of = XIK
+		buildings = {
+			barracks = 1
+			thermoelectric_plant = 1
+			infrastructure = 1
+		}
+		victory_points = { 12724 1 }
+		victory_points = { 10856 10 }
+	}
+	provinces={
+		4407 8104 10856 12724 12837
+	}
+	manpower=402984
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,31 @@
+###POP DONE 
+state = {
+	id = 59
+	name = "STATE_59"
+
+	manpower = 2299911
+	state_category = large_city
+
+	resources = {
+		oil = 1
+	}
+
+	history = {
+		owner = GER
+		add_core_of = GER
+
+		victory_points = { 526 10 }
+
+		buildings = {
+			hospitals = 1
+			radar_station = 2
+			infrastructure = 8
+			enrichment_plant = 1
+			thermoelectric_plant = 2
+		}
+	}
+
+	provinces = {
+		3234 3395 526 9375 11468 11402 11493 6513
+	}
+}

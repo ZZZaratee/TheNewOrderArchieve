@@ -1,0 +1,361 @@
+﻿capital = 49
+
+add_manpower = 300000
+
+oob = "TUR_1962"
+
+set_convoys = 200
+add_stability = 0.40
+add_war_support = 0.10
+set_research_slots = 3
+
+if = {
+	limit = { 
+		OR = { 
+			has_dlc = "Together for Victory" 
+			has_dlc = "Man the Guns" 
+		}
+	}
+	set_autonomy = { target = SNS autonomy_state = autonomy_puppet }
+	set_autonomy = { target = BKU autonomy_state = autonomy_integrated_puppet }
+
+	else = {
+		puppet = BKU
+		puppet = SNS
+	}
+}
+
+set_technology = {
+	# shipbuild_basics = 1
+	electronic_mechanical_engineering = 1
+	
+	transport = 1
+	motorized_infantry = 1
+	support_weapons = 1
+	tech_engineers = 1
+	tech_recon = 1
+	early_fighter = 1
+
+	artillery4 = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	building_construction_1 = 1
+	administration_construction_1 = 1
+	ww2_destroyer = 1
+	ww2_cruiser = 1
+	ww2_battleship = 1
+	ww2_submarine = 1
+	ww2_carrier = 1
+	
+	##INFANTRY##
+	# infantry_equipment_0 = 1
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	infantry_at = 1
+	motorized_infantry = 1
+	marines = 1
+	tech_mountaineers = 1
+	paratroopers = 1
+	
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_engineers_flamethrowers_1 = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_maintenance_company2 = 1
+	tech_field_hospital = 1
+	tech_field_hospital2 = 1
+	tech_logistics_company = 1
+	
+	##ARMOR##
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+
+	APC_1950 = 1
+	APC_1950_basic_turret = 1
+	#APC_1950_basic_engine = 1
+	APC_1950_basic_armor = 1
+	APC_1960 = 1
+
+	IFV_1950 = 1
+	IFV_1950_basic_turret = 1
+	IFV_1950_basic_armor = 1
+	#IFV_1950_basic_engine = 1
+	
+	MBT_1950 = 1
+	MBT_1950_basic_turret = 1
+	#MBT_1950_basic_engine = 1
+	
+	##ARTY##
+	antiair5 = 1
+	antiair_1950 = 1
+	SPAA_1950 = 1
+	artillery4 = 1
+	artillery_1950 = 1
+	artillery_1950_soft_attack = 1
+	SPART_1950 = 1
+	SPART_1950_soft_attack = 1
+	#SPART_1950_speed = 1
+	
+	##LAND DOCTRINE##
+	strategic_theorem = 1
+	
+	##NAVAL##
+	ww2_destroyer = 1
+	ww2_cruiser = 1
+	ww2_battleship = 1
+	ww2_submarine = 1
+	basic_submarine = 1
+	improved_submarine = 1
+	transport = 1
+	
+	##NAVAL DOCTRINE##
+	
+	##HELICOPTERS##
+	very_early_helicopter = 1
+	early_helicopter = 1
+	
+	##LIGHT AIR##
+	early_fighter = 1
+	interceptor_1945 = 1
+	interceptor_1950 = 1
+	fighter_1945 = 1
+	fighter_1950 = 1
+	CAS_1945 = 1
+	CAS_1950 = 1
+	
+	##HEAVY AIR##
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	tac_air_1950 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	heavy_air_1950 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+	
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	computing_machine_1950 = 1
+	helicopter_engines = 1
+	jet_engines = 1
+	jet_engines_bombers = 1
+	
+	##INDUSTRY##
+	##INDUSTRY TECHS ARE WIP##
+}
+
+set_politics = {	
+	ruling_party = authoritarian_democracy
+	last_election = "1958.1.8"
+	election_frequency = 96
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 0
+	socialist = 0
+	social_democracy = 3
+	liberal_democracy = 0
+	conservative_democracy = 23
+	authoritarian_democracy = 74
+	despotism = 0
+	fascism = 0
+	national_socialism = 0
+	ultranationalism = 0
+	
+}
+
+##LEADERS##
+
+create_country_leader = {
+	name = "Ismet Inönü"
+	desc = "POLITICS_ISMET_INONU_DESC"
+	picture = "Portrait_Turkey_Ismet_Inonu.dds"
+	expire = "1999.1.1"
+	ideology = authoritarian_democracy_kemalism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Celâl Bayar"
+	desc = "POLITICS_CELAL_BAYAR_DESC"
+	picture = "Portrait_Turkey_Celal_Bayar.dds"
+	expire = "1999.1.1"
+	ideology = conservative_democracy_liberal_conservatism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Behice Boran"
+	desc = "POLITICS_BEHICE_BORAN_DESC"
+	picture = "Portrait_Turkey_Behice_Boran.dds"
+	expire = "1999.1.1"
+	ideology = social_democracy_left_wing_populism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Behice Boran"
+	picture = "Portrait_Turkey_Behice_Boran.dds"
+	expire = "1999.1.1"
+	ideology = socialist_syndicalism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Turkan Akyol"
+	picture = "Portrait_Turkey_Turkan_Akyol.dds"
+	expire = "1999.1.1"
+	ideology = liberal_democracy_subtype
+	traits = {
+	}
+}
+
+create_country_leader = { #turan...
+	name = "Alparslan Türkeş"
+	desc = "POLITICS_ALPARSLAN_TURKES_DESC"
+	picture = "Portrait_Turkey_Alparslan_Turkes.dds"
+	expire = "1999.1.1"
+	ideology = fascism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Cemal Gürsel"
+	desc = "POLITICS_CEMAL_GURSEL_DESC"
+	picture = "Portrait_Turkey_Cemal_Gursel.dds"
+	expire = "1999.1.1"
+	ideology = despotism_military_junta_subtype
+	traits = {
+	}
+}
+
+##COMMANDERS##
+
+create_field_marshal = {
+	name = "Cemal Gürsel"
+	picture = "Portrait_Turkey_Cemal_Gursel.dds"
+	traits = { trait_cautious organizer fast_planner }
+	skill = 4
+	id = 530
+	attack_skill = 2
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Rüştü Erdelhun"
+	picture = "Portrait_Turkey_Rustu_Erdelhun.dds"
+	traits = { old_guard war_hero aggressive_assaulter }
+	skill = 3
+	id = 531
+	attack_skill = 3
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Kenan Evren"
+	picture = "Portrait_Turkey_Kenan_Evren.dds"
+	traits = { media_personality guerilla_fighter }
+	skill = 2
+	id = 532
+	attack_skill = 1
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Cemal Tural"
+	picture = "Portrait_Turkey_Cemal_Tural.dds"
+	traits = { infantry_expert }
+	skill = 2
+	id = 533
+	attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Memduh Tağmaç"
+	picture = "Portrait_Turkey_Memduh_Tagmac.dds"
+	traits = { panzer_leader }
+	skill = 1
+	id = 534
+	attack_skill = 3
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+add_ideas = {
+	TRI_Founder_TR
+	#STARTING
+	TUR_economic_stagnation
+	TUR_italo_turkish_tension
+	TUR_inspectorate_generals
+	#MINISTERS
+	TUR_Fahri_Koruturk_hog
+	TUR_Cemal_Gursel_sec
+	TUR_Ferit_Melen_eco
+	TUR_Feridun_Cemal_for
+	
+	#POLITICAL
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_nonsocialist_allowed
+	tno_immigration_closed_borders
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_universal
+	tno_refugees_vetted_entry
+	#SOCIAL
+	tno_safety_limited_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_few_regulations
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_oppression
+	tno_security_data_cohesion
+	#MILITARY
+	tno_conscription_two_year_draft
+	tno_women_military_assistance
+	tno_military_supervision_kill_em_all
+	tno_training_combat_schooling
+	tno_racial_integration_none
+	tno_draft_exemptions_none
+	#ECONOMIC
+	tno_trade_laws_limited_exports
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_no_subsidies
+}

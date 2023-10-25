@@ -1,0 +1,355 @@
+#ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK ATTACK
+#force the different german factions to constantly attack each other and bleed each other out
+GER_GCW_los_los_los = {
+	allowed = {
+		OR = {
+			tag = HGR
+			tag = SGR
+			tag = BGR
+			tag = GGR
+			#tag = GER
+			#tag = RNW
+		}
+	}
+	enable = {
+		OR = {
+			tag = HGR
+			tag = SGR
+			tag = BGR
+			tag = GGR
+			#tag = GER
+			#tag = RNW
+		}
+		has_global_flag = german_civil_war
+		has_idea = GCW_hidden_holy_shit_win_already
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = GGR
+		tag = HGR
+		tag = SGR
+		tag = BGR
+		#tag = GER
+		#tag = RNW
+		execution_type = rush
+		execute_order = yes
+		manual_attack = no
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = GGR
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = HGR
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = SGR
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = BGR
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = GGR
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = HGR
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = SGR
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = BGR
+		value = 1000
+	}
+}
+
+GER_SRT_strat = {
+	allowed = {
+		tag = GER
+	}
+
+	enable = {
+		country_exists = SRT
+		MCW = {
+			is_subject = no
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = MCW
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = MCW
+		value = 150
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = MCW
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = MCW
+		value = 1000
+	}
+}
+
+GER_BRG_collapse_strat = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = FRA
+		}
+	}
+
+	enable = {
+		GER = {
+			OR = {
+				has_active_mission = GER_Bormann_Foreign_Policy_Burgundy_Collapse_Intervention
+				has_active_mission = GER_Speer_Foreign_Policy_Burgundy_Collapse_Intervention
+			}
+		}
+		is_in_faction_with = GER
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = BRG
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = PIC
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BEL
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = FLR
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = RPY
+		value = 1000
+	}
+}
+
+GER_MOS_strat = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		OR = {
+			has_active_mission = SGR_Take_Moskowien
+			has_active_mission = BGR_Take_Moskowien
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = OKB
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = RSB
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = KAG
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = PSK
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = PSK
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = DFK
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BBB
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = MOS
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SMO
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = LAK
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ZLB
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = RDC
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = TAM
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = POS
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = PEN
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = PAU
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = FRP
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = MZL
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SKR
+		value = 1000
+	}
+}
+
+FRA_Fall_Rollo = {
+	allowed = {
+		tag = FRA
+	}
+
+	enable = {
+		GER = {
+			OR = {
+				has_active_mission = SGR_Invasion_of_Brittany
+				has_active_mission = BOR_Invasion_of_Brittany
+			}
+		}
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = BRT
+		value = 1000
+	}
+}
+
+GER_Fall_Rollo = {
+	allowed = {
+		tag = GER
+	}
+
+	enable = {
+		GER = {
+			OR = {
+				AND = {
+					has_country_flag = SGR_France_Germany_Allied
+					has_active_mission = SGR_Invasion_of_Brittany
+				}
+				has_active_mission = BOR_Invasion_of_Brittany
+			}
+		}
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = BRT
+		value = 1000
+	}
+}
+
+GER_defend_the_north_atlantic = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		is_in_faction_with = NOR
+		has_war = no
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.02
+		#area = europe
+		states = {
+			94 142 
+		}
+		subtract_invasions_from_need = yes
+		#subtract_fronts_from_need = yes
+	}
+}

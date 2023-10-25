@@ -1,0 +1,25 @@
+
+state={
+	id=220
+	name="STATE_220"
+
+	history={
+		owner = MCW
+		victory_points = { 11048 10 }
+		victory_points = { 39 5 }
+		buildings = {
+			infrastructure = 4
+			air_base = 1
+
+		}
+		add_core_of = MCW
+
+	}
+
+	provinces={
+		39 71 194 3110 6035 9060 9153 9177 11048 
+	}
+	manpower=209029
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,114 @@
+ideas = {
+    #Spirits
+    country = {
+		TDF_navy_fiefdom = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TDF_navy_fiefdom" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = TDF_navy_fiefdom
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		TDF_conflict_zone = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TDF_conflict_zone" }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			#picture = TDF_conflict_zone
+			removal_cost = -1
+			modifier = {
+			}
+		}
+    }
+
+    #Ministers
+    head_of_government = {
+        TDF_ernesto_manuel_campos_hog = { #
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TDF_ernesto_manuel_campos_hog"}
+			#picture = TDF_ernesto_manuel_campos_hog
+			allowed = {
+				original_tag = TDF
+			}
+			available = {
+
+			}
+			traits = {
+				head_of_government
+				liberal_democracy
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+    }
+
+    foreign_minister = {
+        TDF_gregorio_lloret_for = { #
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TDF_gregorio_lloret_for"}
+			#picture = TDF_gregorio_lloret_for
+			allowed = {
+				original_tag = TDF
+			}
+			available = {
+
+			}
+			traits = {
+				foreign_minister
+				despotism
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+    }
+
+    economy_minister = {
+       TDF_tirso_ranulfo_brizuela_eco = { #
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TDF_tirso_ranulfo_brizuela_eco"}
+			#picture = TDF_tirso_ranulfo_brizuela_eco
+			allowed = {
+				original_tag = TDF
+			}
+			available = {
+
+			}
+			traits = {
+				economy_minister
+				despotism
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}  
+    }
+
+
+    security_minister = {
+        TDF_jose_maria_guzman_sec = { #fuck you im not writing the name with accents
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TDF_jose_maria_guzman_sec"}
+			#picture = TDF_jose_maria_guzman_sec
+			allowed = {
+				original_tag = TDF
+			}
+			available = {
+
+			}
+			traits = {
+				security_minister
+				despotism
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

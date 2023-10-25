@@ -1,0 +1,722 @@
+TNO_fopo_should_display_homefront = {
+	OR = {
+		AND = {
+			tag = USA
+			OR = {
+				check_variable = { selected_conflict_id = 1 } # SAW
+				check_variable = { selected_conflict_id = 2 } # Indonesia
+			}
+		}
+		AND = {
+			tag = GER
+			always = no
+		}
+		AND = {
+			tag = JAP
+			always = no
+		}
+	}
+}
+
+TNO_fopo_wac_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 8 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 8 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_indonesia_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 2 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 2 }
+			is_ai = yes
+		}
+	}
+}
+TNO_fopo_indonesia_selected_speer = {
+	TNO_fopo_indonesia_selected = yes
+	has_global_flag = german_civil_war_speervic
+}
+
+TNO_fopo_malaysia_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 6 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 6 }
+			is_ai = yes
+		}
+	}
+}
+
+
+TNO_fopo_iran_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 5 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 5 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_indonesia_homefront_selected = {
+	TNO_fopo_indonesia_selected = yes
+    check_variable = { TNO_fopo_selected_front = 2 }
+}
+TNO_fopo_indonesia_frontlines_selected = {
+	TNO_fopo_indonesia_selected = yes
+    check_variable = { TNO_fopo_selected_front = 1 }
+}
+
+TNO_fopo_saw_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 1 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 1 }
+			is_ai = yes
+		}
+	}
+}
+TNO_fopo_saw_selected_bormann = {
+	TNO_fopo_saw_selected = yes
+	has_global_flag = german_civil_war_bormannvic
+}
+TNO_fopo_saw_selected_speer = {
+	TNO_fopo_saw_selected = yes
+	has_global_flag = german_civil_war_speervic
+}
+TNO_fopo_saw_selected_goring = {
+	TNO_fopo_saw_selected = yes
+	has_global_flag = german_civil_war_goeringvic
+}
+TNO_fopo_saw_homefront_selected = {
+	TNO_fopo_saw_selected = yes
+    check_variable = { TNO_fopo_selected_front = 2 }
+}
+TNO_fopo_saw_frontlines_selected = {
+	TNO_fopo_saw_selected = yes
+    check_variable = { TNO_fopo_selected_front = 1 }
+}
+
+TNO_fopo_jamaican_referendum_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 3 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 3 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_jamaican_crisis_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 4 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 4 }
+			is_ai = yes
+		}
+	}
+}
+
+
+TNO_fopo_congo_civil_war_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 7 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 7 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_IBW_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 11 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 11 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_angola_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 9 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 9 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_baathism_support_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 10 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 10 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_srilanka_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 12 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 12 }
+			is_ai = yes
+		}
+	}
+}
+		
+TNO_fopo_trinidad_bpr_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 13 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 13 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_turkes_kenes_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 14 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 14 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_gazaland_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 15 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 15 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_philippines_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 16 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 16 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_malayan_reconstruction_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 17 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 17 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_philippines_war_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 18 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 18 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_mengjiang_conflict_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 19 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 19 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_saf_reconstruction_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 20 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 20 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_madagascar_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 21 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 21 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_philippines_reconstruction_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 22 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 22 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_manu_campaign_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 23 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 23 }
+			is_ai = yes
+		}
+	}
+}
+
+TNO_fopo_orungu_campaign_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = 24 }
+		AND = {
+			is_in_array = { TNO_active_conflicts = 24 }
+			is_ai = yes
+		}
+	}
+}
+
+## Conflict ##
+TNO_Germany_Italy_has_conflict = {
+	OR = {
+		has_global_flag = german_civil_war
+		GER = { has_war = yes }
+		ITA = { has_war = yes }
+	}
+}
+
+TNO_Balkans_has_conflict = {
+	OR = {
+		ROM = { has_war = yes }
+		HUN = { has_war = yes }
+		SER = { has_war = yes }
+	}
+}
+
+TNO_France_Burgundy_Iberia_has_conflict = {
+	OR = {
+		has_global_flag = iberian_wars
+		BRG = { has_war_with = FRA }
+		BRT = { has_war_with = FRA }
+	}
+}
+
+TNO_Ostland_Moscow_has_conflict = {
+	OR = {
+		has_global_flag = Ostland_war
+		check_variable = { global.MSK_dissolution_ongoing = 1 }
+		CAU = { has_war = yes }
+	}
+}
+
+TNO_West_Russia_has_conflict = {
+	OR = {
+		WRS = { has_war = yes }
+		VOR = { has_war = yes }
+		ONG = { has_war = yes }
+		VYT = { has_war = yes }
+		UKH = { has_war = yes }
+		KOM = { has_war = yes }
+		VOL = { has_war = yes }
+		KST = { has_war = yes }
+		GAY = { has_war = yes }
+		MAR = { has_war = yes }
+		PLS = { has_war = yes }
+		TAR = { has_war = yes }
+		ALD = { has_war = yes }
+		PRM = { has_war = yes }
+		SAM = { has_war = yes }
+		ORE = { has_war = yes }
+		URL = { has_war = yes }
+		DRL = { has_war = yes }
+		BKR = { has_war = yes }
+		MGN = { has_war = yes }
+		GOR = { has_war = yes }
+	}
+}
+
+TNO_Central_Asia_has_conflict = {
+	OR = {
+		NPL = { has_war = yes }
+		ARL = { has_war = yes }
+		DER = { has_war = yes }
+		KOK = { has_war = yes }
+		PAV = { has_war = yes }
+		KAZ = { has_war = yes }
+		AKT = { has_war = yes }
+		KRK = { has_war = yes }
+		TRK = { has_war = yes }
+		UZB = { has_war = yes }
+		TAJ = { has_war = yes }
+		KYR = { has_war = yes }
+		UTL = { has_war = yes }
+	}
+}
+
+TNO_Central_Siberia_has_conflict = {
+	OR = {
+		YGR = { has_war = yes }
+		ZLT = { has_war = yes }
+		FAV = { has_war = yes }
+		SVR = { has_war = yes }
+		TYM = { has_war = yes }
+		OMS = { has_war = yes }
+		TOM = { has_war = yes }
+		NOV = { has_war = yes }
+		ALT = { has_war = yes }
+		KEM = { has_war = yes }
+		KRS = { has_war = yes }
+		SBA = { has_war = yes }
+		PRC = { has_war = yes }
+		IRK = { has_war = yes }
+		BRY = { has_war = yes }
+	}
+}
+
+TNO_Far_Eastern_Russia_has_conflict = {
+	OR = {
+		CHT = { has_war = yes }
+		YAK = { has_war = yes }
+		AMR = { has_war = yes }
+		MAG = { has_war = yes }
+		KMC = { has_war = yes }
+		OMO = { has_war = yes }		
+	}
+}
+
+TNO_Scandinavia_has_conflict = {
+	OR = {
+		FIN = { has_war = yes }
+		NOR = { has_war = yes }
+		SWE = { has_war = yes }	
+	}
+}
+
+TNO_Madagascar_has_conflict = {
+	OR = {
+		MAD = { has_war = yes }
+	}
+}
+
+TNO_England_has_conflict = {
+	OR = {
+		ENG = { has_war = yes }
+		CRN = { has_war = yes }
+		SCO = { has_war = yes }
+		IRE = { has_war = yes }
+	}
+}
+
+TNO_North_SAM_has_conflict = {
+	OR = {
+		GUY = { has_war_with = USA }
+	}
+}
+
+TNO_South_SAM_has_conflict = {
+	OR = {
+		has_global_flag = SAM_christmas_war
+	}
+}
+
+TNO_Caribbean_has_conflict = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Indonesia_has_conflict = {
+	OR = {
+		INS = { has_war_with = FRI }
+	}
+}
+
+TNO_Australia_has_conflict = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_USA_Canada_has_conflict = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Mexico_Central_has_conflict = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_South_East_Asia_has_conflict = {
+	OR = {
+		BUR = { has_war = yes }
+		MLY = { has_war = yes }
+		SHO = { has_war = yes }
+		UPH = { has_war = yes }
+		SPH = { has_war = yes }
+		PHI = { has_war = yes }
+		FGB = { has_war = yes }
+	}
+}
+
+TNO_China_has_conflict = {
+	OR = {
+		YUN = { has_war = yes }
+		CHI = { has_war_with = JAP }
+		MEN = { has_war = yes }
+	}
+}
+
+TNO_India_has_conflict = {
+	OR = {
+		IND = { has_war = yes }
+		AZH = { has_war = yes }
+	}
+}
+
+TNO_Egypt_has_conflict = {
+	OR = {
+		EGY = { has_war = yes }
+	}
+}
+
+TNO_North_Africa_has_conflict = {
+	OR = {
+		SLG = { has_war_with = ILG }
+	}
+}
+
+TNO_West_Africa_has_conflict = {
+	OR = {
+		CAO = { has_war = yes }
+		FFR = { has_war = yes }
+		WOL = { has_war = yes }
+	}
+}
+
+TNO_East_Africa_has_conflict = {
+	OR = {
+		IEA = { has_war = yes }
+		SUD = { has_war = yes }
+	}
+}
+
+TNO_South_Africa_has_conflict = {
+	OR = {
+		has_global_flag = south_african_war
+		MZB = { has_war = yes }
+		GRO = { has_war = yes }
+		USC = { has_war = yes }
+		SAF = { has_war = yes }
+		CAO = { has_war = yes }
+		CFS = { has_war = yes }
+		CPR = { has_war = yes }
+		ANG = { has_war = yes }
+		COG = { has_war = yes }
+		BTS = { has_war = yes }
+		ZIM = { has_war = yes }
+		ZZB = { has_war = yes }
+		ZAM = { has_war = yes }
+		RWA = { has_war = yes }
+		UGD = { has_war = yes }
+		TNZ = { has_war = yes }
+		NAM = { has_war = yes }
+		KEN = { has_war = yes }
+	}
+}
+
+TNO_Middle_East_has_conflict = {
+	OR = {
+		IME = { has_war_with = TUR }
+	}
+}
+
+## Proxy ##
+TNO_Germany_Italy_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Balkans_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_France_Burgundy_Iberia_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Ostland_Moscow_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_West_Russia_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Central_Asia_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Central_Siberia_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Far_Eastern_Russia_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Scandinavia_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Madagascar_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_England_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_North_SAM_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_South_SAM_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Caribbean_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Indonesia_has_proxy = {
+	OR = {
+		INS = { has_war_with = FRI }
+	}
+}
+
+TNO_Australia_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_USA_Canada_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Mexico_Central_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_South_East_Asia_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_China_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_India_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_Egypt_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_North_Africa_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_West_Africa_has_proxy = {
+	OR = {
+		has_global_flag = west_african_war
+		has_global_flag = manu_campaign_ongoing
+	}
+}
+
+TNO_East_Africa_has_proxy = {
+	OR = {
+		always = no
+	}
+}
+
+TNO_South_Africa_has_proxy = {
+	OR = {
+		has_global_flag = south_african_war
+	}
+}
+
+TNO_Middle_East_has_proxy = {
+	OR = {
+		YEM = { has_war = yes }
+		IRI = { has_war = yes }
+		IRL = { has_war = yes }
+		IRC = { has_war = yes }
+		IRN = { has_war = yes }
+		IRB = { has_war = yes }
+		IKR = { has_war = yes }
+		IRA = { has_war = yes }
+	}
+}

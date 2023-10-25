@@ -1,0 +1,44 @@
+CHL_elect_zepeda = {
+    CHL = {
+        country_event = {
+            id = LATAM.2
+            days = 1037
+        }
+    }
+}
+
+CHL_elect_philippi = {
+    CHL = {
+        country_event = {
+            id = LATAM.3
+            days = 1037
+        }
+    }
+}
+
+CHL_elect_prat = {
+    CHL = {
+        country_event = {
+            id = LATAM.4
+            days = 1037
+        }
+    }
+}
+
+CHL_elect_frei = {
+    CHL = {
+        country_event = {
+            id = LATAM.5
+            days = 1037
+        }
+    }
+}
+
+CHL_elect_allende = {
+    CHL = {
+        country_event = {
+            id = LATAM.6
+            days = 1037
+        }
+    }
+}

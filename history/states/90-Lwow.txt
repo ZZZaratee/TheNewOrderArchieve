@@ -1,0 +1,25 @@
+state = {
+	id = 90
+	name = "STATE_90" # Kielce/Weichselland
+	manpower = 482743
+	
+	state_category = town
+	
+	resources = { steel = 11 }
+
+	history = {
+		owner = GGN
+		add_core_of = GGN
+
+		victory_points = { 3497 10 }
+		
+
+		buildings = {
+			infrastructure = 6
+		}
+	}
+
+	provinces = {
+		11430 6416 3497 562
+	}
+}

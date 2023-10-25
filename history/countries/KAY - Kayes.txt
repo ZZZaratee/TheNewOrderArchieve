@@ -1,0 +1,197 @@
+﻿capital = 1604
+
+oob = "KAY_1962"
+
+add_ideas = {
+	WEST_AFRICA_idea_obliterated_infrastructures
+	KAY_idea_islamic_influences
+	KAY_idea_decentralized_high_command
+
+	KAY_Kissima_Doukara_hog
+	KAY_Abdoulaye_Soumare_for
+	KAY_Moussa_Traore_eco
+	KAY_Yoro_Diakite_sec
+	### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	tno_refugees_vetted_entry
+
+	### MILITARY LAWS ###
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_few_regulations
+	tno_education_elite_only
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_police
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### SOCIETAL DEVELOPMENT ###
+	
+    tno_army_professionalism_disgruntled_veterans
+    tno_industrial_expertise_nascent
+    tno_industrial_equipment_power_tools
+    tno_agriculture_basic_mechanized
+    tno_research_facilities_outdated
+    tno_academic_base_basic_literacy
+	tno_admin_efficiency_widespread_corruption
+}
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 1
+    socialist = 1
+    social_democracy = 2
+    liberal_democracy = 0
+
+    conservative_democracy = 6
+    authoritarian_democracy = 19
+    despotism = 58
+    fascism = 9
+    national_socialism = 0
+    ultranationalism = 4
+    
+}
+
+create_country_leader = {
+	name = "Bakara Diallo"
+	desc = "POLITICS_BAKARA_DIALLO_DESC"
+	picture = "Portrait_Kayes_Bakara_Diallo.dds"
+	expire = "1965.1.1"
+	ideology = communist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fily Dabo Sissoko"
+	desc = "POLITICS_FILY_DABO_SISSOKO_DESC"
+	picture = "Portrait_Kayes_Fily_Dabo_Sissoko.dds"
+	expire = "1965.1.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Boubacar Traoré"
+	desc = "POLITICS_BOUBACAR_TRAORE_DESC"
+	picture = "Portrait_Kayes_Boubacar_Traore.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Seydina Oumar Sy"
+	desc = "POLITICS_SEYDINA_OUMAR_SY_DESC"
+	picture = "Portrait_Kayes_Seydina_Oumar_Sy.dds"
+	expire = "1965.1.1"
+	ideology = conservative_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yoro Diakité"
+	desc = "POLITICS_YORO_DIAKITE_DESC"
+	picture = "Portrait_Kayes_Yoro_Diakite.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Moussa Traoré"
+	desc = "POLITICS_MOUSSA_TRAORE_DESC"
+	picture = "Portrait_Kayes_Moussa_Traore.dds"
+	expire = "1965.1.1"
+	ideology = despotism_military_junta_subtype
+	traits = {
+		#
+	}
+}
+
+
+create_corps_commander = {
+    name = "Moussa Traoré"
+    picture = "Portrait_Kayes_Moussa_Traore.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Yoro Diakité"
+    picture = "Portrait_Kayes_Yoro_Diakite.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Abdoulaye Soumaré"
+    picture = "Portrait_Kayes_Abdoulaye_Soumare.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Tiécoro Bagayoko"
+    picture = "Portrait_Kayes_Tiecoro_Bagayoko.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+TNO_startup_nation = yes 

@@ -1,0 +1,20 @@
+state={
+	id=980
+	name="STATE_980"
+		history={
+		owner = IND
+		add_core_of = AZH
+		add_core_of = IND
+		buildings = {
+			infrastructure = 6
+			air_base = 4
+		}
+		victory_points = { 2086 50 }
+	}
+	provinces={
+		2086 
+	}
+	manpower=2658612
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

@@ -1,0 +1,176 @@
+﻿capital = 118
+set_country_flag = is_iberian_nation
+
+set_war_support = 0.8
+set_stability = 0.9
+
+
+oob = "GIB_1962"
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1933.2.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    social_democracy = 0
+    liberal_democracy = 0
+
+    conservative_democracy = 0
+    authoritarian_democracy = 30
+    despotism = 70
+    fascism = 0
+    
+}
+
+add_ideas = {
+    #ministers#
+	GIB_Fernando_Dias_hog
+	GIB_Vasco_Lopes_mil
+	GIB_Albano_Rodrigues_for
+	GIB_Alvaro_Fontoura_eco
+	#political#
+	tno_political_parties_one_party_state
+	tno_religious_rights_secularism
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_no_voting
+	tno_refugees_vetted_entry
+	#military#
+	tno_conscription_volunteer_only
+	tno_women_banned
+	tno_military_supervision_no_supervision
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_free_trade
+	tno_income_taxation_tax_havens
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_child_labor_legal
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+	#social#
+	tno_safety_no_regulations
+	tno_health_care_not_applicable
+	tno_pollution_no_controls
+	tno_education_elite_only
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_gender_equality
+	tno_minorities_equal_rights
+	tno_security_anarchic
+}
+
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_health_care_effectiveness = 0 }
+
+# ECONOMIC LAWS
+set_variable = { tno_trade_laws_effectiveness = 50 }
+set_variable = { tno_income_taxation_effectiveness = 50 }
+set_variable = { tno_minimum_wage_effectiveness = 50 }
+set_variable = { tno_max_workhours_effectiveness = 50 }
+set_variable = { tno_child_labor_effectiveness = 50 }
+set_variable = { tno_pensions_effectiveness = 50 }
+set_variable = { tno_unemployment_effectiveness = 50 }
+
+# SOCIAL LAWS
+set_variable = { tno_safety_effectiveness = 50 }
+set_variable = { tno_health_care_effectiveness = 0 }
+set_variable = { tno_pollution_effectiveness = 50 }
+set_variable = { tno_education_effectiveness = 50 }
+set_variable = { tno_penal_system_effectiveness = 50 }
+set_variable = { tno_lgbt_rights_effectiveness = 50 }
+set_variable = { tno_gender_rights_effectiveness = 50 }
+set_variable = { tno_minorities_effectiveness = 50 }
+set_variable = { tno_security_effectiveness = 50 }
+
+# POLITICAL LAWS
+set_variable = { tno_political_parties_effectiveness = 50 }
+set_variable = { tno_religious_rights_effectiveness = 50 }
+set_variable = { tno_trade_unions_effectiveness = 50 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 50 }
+set_variable = { tno_public_meetings_effectiveness = 50 }
+set_variable = { tno_press_rights_effectiveness = 50 }
+set_variable = { tno_vote_franchise_effectiveness = 50 }
+set_variable = { tno_refugees_effectiveness = 50 }
+
+# MILITARY LAWS
+set_variable = { tno_conscription_effectiveness = 50 }
+set_variable = { tno_women_effectiveness = 50 }
+set_variable = { tno_military_supervision_effectiveness = 50 }
+set_variable = { tno_training_effectiveness = 50 }
+set_variable = { tno_racial_integration_effectiveness = 50 }
+set_variable = { tno_draft_exemptions_effectiveness = 50 }
+
+create_country_leader = {
+	name = "Fernando de Quintanilha"
+	desc = "POLITICS_FERNANDO_DIAS_DESC"
+	picture = "Portrait_Gibraltar_Ferdinando_Dias.dds"
+	expire = "1999.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fernando de Quintanilha"
+	desc = "POLITICS_FERNANDO_DIAS_DESC"
+	picture = "Portrait_Gibraltar_Ferdinando_Dias.dds"
+	expire = "1999.1.1"
+	ideology = despotism_military_junta_subtype
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = { 
+	name = "Fernando de Quintanilha e Mendonça Dias"
+	portrait_path = "gfx/leaders/GIB/Portrait_Gibraltar_Ferdinando_Dias.dds"
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	traits = { 
+	    
+	}
+	id = 1321
+}
+
+create_corps_commander = { 
+	name = "Manuel António Vassalo e Silva"
+	portrait_path = "gfx/leaders/GIB/Portrait_Gibraltar_Manuel_Antonio_Vassalo_e_Silva.dds"
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+	traits = {
+	    organizer
+	}
+	id = 1322
+}
+
+create_navy_leader = { 
+	name = "Admiral Fernando"
+	portrait_path = "gfx/leaders/GIB/Portrait_Gibraltar_Ferdinando_Dias.dds"
+	skill = 3
+	traits = {
+	} 
+	id = 1323
+}
+
+TNO_startup_nation = yes 

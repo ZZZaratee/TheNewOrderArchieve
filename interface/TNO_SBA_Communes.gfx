@@ -1,0 +1,280 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Outline"
+		texturefile = "gfx/interface/SBA/Outline.dds"
+	}
+	spriteType = {
+		name = "GFX_Motions_Button"
+		texturefile = "gfx/interface/SBA/SBA_Motions_Button.dds"
+	}
+	spriteType = {
+		name = "GFX_Motion_Button"
+		texturefile = "gfx/interface/SBA/Motion_Button.dds"
+	}
+	spriteType = {
+		name = "GFX_Murmansk"
+		texturefile = "gfx/interface/SBA/Murmansk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Karelia"
+		texturefile = "gfx/interface/SBA/Karelia.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Amur"
+		texturefile = "gfx/interface/SBA/Amur.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Amur2"
+		texturefile = "gfx/interface/SBA/Amur2.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Arkhangelsk"
+		texturefile = "gfx/interface/SBA/Arkhangelsk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Barnaul"
+		texturefile = "gfx/interface/SBA/Barnaul.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Bashkiria"
+		texturefile = "gfx/interface/SBA/Bashkiria.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Buryatia"
+		texturefile = "gfx/interface/SBA/Buryatia.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Chelyabinsk"
+		texturefile = "gfx/interface/SBA/Chelyabinsk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_East_Siberia"
+		texturefile = "gfx/interface/SBA/East_Siberia.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Gorky"
+		texturefile = "gfx/interface/SBA/Gorky.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Irkutsk"
+		texturefile = "gfx/interface/SBA/Irkutsk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Kamchatka"
+		texturefile = "gfx/interface/SBA/Kamchatka.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Kansk"
+		texturefile = "gfx/interface/SBA/Kansk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Kazan"
+		texturefile = "gfx/interface/SBA/Kazan.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Kemerovo"
+		texturefile = "gfx/interface/SBA/Kemerovo.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Komi"
+		texturefile = "gfx/interface/SBA/Komi.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Krasnoyarsk"
+		texturefile = "gfx/interface/SBA/Krasnoyarsk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Kuybyshev"
+		texturefile = "gfx/interface/SBA/Kuybyshev.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Magadan"
+		texturefile = "gfx/interface/SBA/Magadan.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Nizhniy_Tagil"
+		texturefile = "gfx/interface/SBA/Nizhniy_Tagil.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_North_Urals"
+		texturefile = "gfx/interface/SBA/North_Urals.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Novosibirsk"
+		texturefile = "gfx/interface/SBA/Novosibirsk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Omsk"
+		texturefile = "gfx/interface/SBA/Omsk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Orenburg"
+		texturefile = "gfx/interface/SBA/Orenburg.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Perm"
+		texturefile = "gfx/interface/SBA/Perm.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Rykov"
+		texturefile = "gfx/interface/SBA/Rykov.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Sakha"
+		texturefile = "gfx/interface/SBA/Sakha.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_South_Urals"
+		texturefile = "gfx/interface/SBA/South_Urals.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Sverdlovsk"
+		texturefile = "gfx/interface/SBA/Sverdlovsk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Syktyvkar"
+		texturefile = "gfx/interface/SBA/Syktyvkar.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Tomsk"
+		texturefile = "gfx/interface/SBA/Tomsk.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Tuva"
+		texturefile = "gfx/interface/SBA/Tuva.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Tuva2"
+		texturefile = "gfx/interface/SBA/Tuva2.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Tyumen"
+		texturefile = "gfx/interface/SBA/Tyumen.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_Vologda"
+		texturefile = "gfx/interface/SBA/Vologda.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_North_Kazakhstan"
+		texturefile = "gfx/interface/SBA/North_Kazakhstan.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_South_Kazakhstan"
+		texturefile = "gfx/interface/SBA/South_Kazakhstan.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_East_Kazakhstan"
+		texturefile = "gfx/interface/SBA/East_Kazakhstan.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_West_Kazakhstan"
+		texturefile = "gfx/interface/SBA/West_Kazakhstan.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_SBA_motion_bar_frame"
+		texturefile = "gfx/interface/SBA/SBA_bar_frame.dds"
+	}
+	progressbartype = {
+		name = "GFX_SBA_motion_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/SBA/SBA_bar_1.dds"
+		textureFile2 = "gfx/interface/SBA/SBA_bar_2.dds"
+		size = { x = 374 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_SBA_influence_bar_frame"
+		texturefile = "gfx/interface/SBA/SBA_influence_bar_frame.dds"
+	}
+	progressbartype = {
+		name = "GFX_SBA_influence_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/SBA/SBA_influence_bar_1.dds"
+		textureFile2 = "gfx/interface/SBA/SBA_influence_bar_2.dds"
+		size = { x = 374 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

@@ -1,0 +1,1431 @@
+Turkmenistan_Regime_Change_A2 = {
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = communist
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communist = 20
+		ultranationalism = 0
+		socialist = 0
+		social_democracy = 0
+		liberal_democracy = 0
+
+		conservative_democracy = 20
+		authoritarian_democracy = 0
+		despotism = 10
+		fascism = 20
+		national_socialism = 10
+		
+	}
+	create_country_leader = {
+		name = "Ziyauddinhan Babahan"
+		desc = "POLITICS_BABAKHAN_DESC"
+		picture = "Portrait_Turkmenistan_Ziyauddinhan_Babahan.dds"
+		expire = "1999.1.23"
+		ideology = communist_islamic_marxism_subtype
+		traits = {
+
+		}
+	}
+	remove_ideas = {
+		TRK_Question_Of_Identity
+		TRK_Fragmented_Tribes
+		TRK_Sukhan_Babayev_hog
+		TRK_Annamukhamed_Klychev_for
+		TRK_Oraz_Orazmukhamedov_eco
+		TRK_Anna_Kareyev_sec
+	}
+	add_ideas = {
+		TRK_Sobir_Rakhimovo_hog
+		TRK_Batyr_Kurbanovich_Sarjaev_for
+		TRK_Batyrkair_Kaskabasov_eco
+		TRK_Shamsuddin_Babakhan_sec
+	}
+	set_cosmetic_tag = TRK_Islamic
+}
+Turkmenistan_Regime_Change_A1 = {
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = communist
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communist = 0
+		ultranationalism = 0
+		socialist = 0
+		social_democracy = 0
+		liberal_democracy = 0
+
+		conservative_democracy = 20
+		authoritarian_democracy = 40
+		despotism = 10
+		fascism = 20
+		national_socialism = 10
+		
+	}
+	create_country_leader = {
+		name = "Mirsaid Sultangaliyev"
+		desc = "POLITICS_GALIYEV_DESC"
+		picture = "Portrait_Turkmenistan_Mirsaid_Sultangaliyev.dds"
+		expire = "1999.1.23"
+		ideology = communist_national_communism_subtype
+		traits = {
+
+		}
+	}
+	remove_ideas = {
+		TRK_Question_Of_Identity
+		TRK_Fragmented_Tribes
+		TRK_Annamukhamed_Klychev_for
+		TRK_Oraz_Orazmukhamedov_eco
+		TRK_Anna_Kareyev_sec
+	}
+	add_ideas = {
+		TRK_Guwanch_Myratlyev_sec
+		TRK_Bajramov_Nurberdy_eco
+		TRK_Mamazhan_Dadazhanovc_for
+	}
+	set_cosmetic_tag = TRK_Basmachi
+}
+Turkmenistan_Regime_Change_A3 = {
+	remove_ideas = {
+		TRK_Question_Of_Identity
+		TRK_Fragmented_Tribes
+	}
+}
+
+Kyrgyzstan_Regime_Change_A1 = {
+	remove_ideas = {
+		KYR_Stabilization_Regime
+		KYR_Turdakun_Usulbaliev_hog
+		KYR_Zurakan_Imankalykova_for
+		KYR_Sultan_Ibraimov_eco
+		KYR_Kaliynur_Usenbekov_sec
+	}
+	add_ideas = {
+		KYR_Abbas_Jumagulov_for
+		KYR_Kalima_Amankulova_eco
+		KYR_Abdukadyr_Urazbekov_sec
+		KYR_Temirlan_Alibievich_Dzhangildin_hog
+	}
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = despotism
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communist = 33
+		socialist = 0
+		social_democracy = 0
+		liberal_democracy = 0
+	
+		despotism = 67
+		conservative_democracy = 0
+		authoritarian_democracy = 0
+		fascism = 0
+		national_socialism = 0
+		ultranationalism = 0
+		
+	}
+	create_country_leader = {
+		name = "Turdakun Usubaliev"
+		desc = "POLITICS_TURDAKUN_USUBALIEV_DESC"
+		picture = "Portrait_Kyrgyzstan_Turdakun_Usulbaliev.dds"
+		expire = "1999.1.23"
+		ideology = despotism_theocracy_subtype
+		traits = {
+		}
+	}
+	set_cosmetic_tag = KYR_Talas
+}
+
+Kyrgyzstan_Regime_Change_A2 = {
+	remove_ideas = {
+		KYR_Turdakun_Usulbaliev_hog
+	}
+	add_ideas = {
+		KYR_Kaliynur_Usenbekov_hog
+	}
+	if = {
+		limit = {
+			NOT = {
+				TAJ = {
+					has_government = ultranationalism
+				}
+			}
+		}
+		country_event = {
+			id = central_asia.10
+			days = 180
+		}
+	}
+}
+
+Tajikistan_Regime_Change_A3 = {
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = conservative_democracy
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_cosmetic_tag = TAJ_ConDem
+}
+Tajikistan_Regime_Change_A2 = {
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = despotism
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	create_country_leader = {
+		name = "Nusratullo Abdulkhakov"
+		desc = "POLITICS_NUSRATULLO_DESC"
+		picture = "Portrait_Tajikistan_Nusratullo_Abdulkhakov.dds"
+		expire = "1999.1.1"
+		ideology = despotism_military_junta_subtype
+	}
+	set_cosmetic_tag = TAJ_Hardliner
+}
+Tajikistan_Regime_Change_A1 = {
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = ultranationalism
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communist = 11
+		socialist = 0
+		social_democracy = 0
+		liberal_democracy = 0
+	
+		despotism = 10
+		conservative_democracy = 6
+		authoritarian_democracy = 10
+		fascism = 3
+		national_socialism = 0
+		ultranationalism = 60
+	}
+	create_country_leader = {
+		name = "Mawlawi Hindustoni"
+		desc = "POLITICS_HINDUSTONI_DESC"
+		picture = "Portrait_Tajikistan_Mawlawi_Hindustoni.dds"
+		expire = "1999.1.1"
+		ideology = ultranationalism_fundamentalism_subtype
+	}
+	remove_ideas = { TAJ_Jabbor_Rasulov_hog }
+	add_ideas = { TAJ_Abdulkerim_Osmanoglu_hog }
+	set_cosmetic_tag = TAJ_Islam
+}
+
+
+Karakalpak_Regime_Change_A1 = {
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = conservative_democracy
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		communist = 20
+		ultranationalism = 0
+		socialist = 22
+		social_democracy = 20
+		liberal_democracy = 0
+		conservative_democracy = 38
+		authoritarian_democracy = 0
+		despotism = 0
+		fascism = 0
+		national_socialism = 0
+		
+	}
+	set_cosmetic_tag = KRK_United_Democratic
+}
+
+UTL_Regime_Change_A1 = {
+	kill_country_leader = yes
+	set_politics = {
+		ruling_party = national_socialism
+	}
+	create_country_leader = {
+		name = "Baymirza Hayit"
+		desc = "POLITICS_BAYMIRZA_HAYIT_DESC"
+		picture = "Portrait_Uzbekistan_Baymirza_Hayit.dds"
+		expire = "1999.1.23"
+		ideology = national_socialism_idiosyncratic_nazism_subtype
+		traits = {
+		}
+	}
+	set_popularities = {
+		communist = 10
+		ultranationalism = 20
+		socialist = 0
+		social_democracy = 0
+		liberal_democracy = 0
+		conservative_democracy = 20
+		authoritarian_democracy = 0
+		despotism = 0
+		fascism = 0
+		national_socialism = 50
+		
+	}
+	set_cosmetic_tag = UTL_Baymirza_Legion
+}
+
+UTL_Regime_Change_A2 = {
+	kill_country_leader = yes
+	set_politics = {
+		ruling_party = despotism
+	}
+	create_country_leader = {
+		name = "Sher Muhammad"
+		desc = "POLITICS_SHER_MUHAMMAD_DESC"
+		picture = "Portrait_Sher_Muhammad.dds"
+		expire = "1999.1.23"
+		ideology = despotism_military_junta_subtype
+		traits = {
+			mad_dog
+		}
+	}
+	set_popularities = {
+		communist = 10
+		ultranationalism = 20
+		socialist = 0
+		social_democracy = 0
+		liberal_democracy = 0
+		conservative_democracy = 20
+		authoritarian_democracy = 0
+		despotism = 0
+		fascism = 0
+		national_socialism = 50
+		
+	}
+	set_cosmetic_tag = UTL_Korsimat
+}
+
+Uzbekistan_Regime_Change_A1 = {
+	retire_country_leader = yes
+	set_politics = {
+		ruling_party = conservative_democracy
+		last_election = "1933.3.5"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	swap_ideas = {
+		remove_idea = UZB_Rise_of_Discontent
+		add_idea = UZB_The_Oligarchy
+	}
+	create_country_leader = {
+		name = "Islam Karimov"
+		desc = "POLITICS_ISLAM_KARIMOV_DESC"
+		picture = "Portrait_Uzbekistan_Islam_Karimov.dds"
+		expire = "1999.1.23"
+		ideology = conservative_democracy_islamic_democracy_subtype
+		traits = {
+		}
+	}
+	
+	set_popularities = {
+		communist = 8
+		ultranationalism = 0
+		socialist = 3
+		social_democracy = 17
+		liberal_democracy = 16
+		conservative_democracy = 21
+		authoritarian_democracy = 23
+		despotism = 0
+		fascism = 7
+		national_socialism = 5
+		
+	}
+	set_cosmetic_tag = UZB_Democratic
+}
+
+TNO_arrange_CA_conference_seats = {
+	TRK = {
+	
+		clear_array = CA_Conference_seat_x
+		clear_array = CA_Conference_seat_y
+
+		set_temp_variable = { outer_x = 45 }
+		set_temp_variable = { outer_y = 13 }
+
+		set_temp_variable = { inner_x = 25 }
+		set_temp_variable = { inner_y = 74 }
+
+		for_loop_effect = {
+			start = 0
+			end = 41
+			value = j
+			
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							check_variable = { j > 14 }
+							check_variable = { j < 17 }
+						}
+						AND = {
+							check_variable = { j > 24 }
+							check_variable = { j < 27 }
+						}
+					}
+				}
+
+				set_temp_variable = { last_outer_x = outer_x }
+
+				if = {
+					limit = { check_variable = { j < 31 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = -4 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 32 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = -4 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 33 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = -3 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 34 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = -6 }
+				add_to_temp_variable = { outer_y = 10 }
+
+				if = {
+					limit = { check_variable = { j < 36 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = -3 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 38 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = -3 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 39 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = -2 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 40 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = -2 }
+				add_to_temp_variable = { outer_y = 5 }
+				add_to_array = { CA_Conference_seat_x = outer_x }
+				add_to_array = { CA_Conference_seat_y = outer_y }
+				add_to_temp_variable = { outer_x = -2 }
+				add_to_temp_variable = { outer_y = 5 }
+				add_to_array = { CA_Conference_seat_x = outer_x }
+				add_to_array = { CA_Conference_seat_y = outer_y }
+				add_to_temp_variable = { outer_y = 67 }
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						check_variable = { j < 2 }
+						AND = {
+							check_variable = { j > 16 } 
+							check_variable = { j < 19 } 
+						}
+						AND = {
+							check_variable = { j > 28 } 
+							check_variable = { j < 31 } 
+						}
+					}
+						
+				}
+			
+				set_temp_variable = { last_inner_x = inner_x }
+				
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_x = -1 }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_x = -1 }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_x = 1 }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				add_to_temp_variable = { inner_x = 1 }
+				add_to_temp_variable = { inner_y = 5 }
+				add_to_array = { CA_Conference_seat_x = inner_x }
+				add_to_array = { CA_Conference_seat_y = inner_y }
+				
+				set_temp_variable = { inner_y = 74 }
+				set_temp_variable = { inner_x = last_inner_x }
+				add_to_temp_variable = { inner_x = 6 }
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							check_variable = { j > 14 }
+							check_variable = { j < 17 }
+						}
+						AND = {
+							check_variable = { j > 24 }
+							check_variable = { j < 27 }
+						}
+					}
+				}
+				
+				add_to_array = { CA_Conference_seat_x = outer_x }
+				add_to_array = { CA_Conference_seat_y = outer_y }
+				add_to_temp_variable = { outer_x = 2 }
+				add_to_temp_variable = { outer_y = 5 }
+				add_to_array = { CA_Conference_seat_x = outer_x }
+				add_to_array = { CA_Conference_seat_y = outer_y }
+				add_to_temp_variable = { outer_x = 2 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 40 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = 2 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 39 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = 3 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 38 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = 3 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 36 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = 6 }
+				add_to_temp_variable = { outer_y = 10 }
+				
+				if = {
+					limit = { check_variable = { j < 34 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = 3 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 33 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = 4 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 32 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+				add_to_temp_variable = { outer_x = 4 }
+				add_to_temp_variable = { outer_y = 5 }
+				if = {
+					limit = { check_variable = { j < 31 } }
+					add_to_array = { CA_Conference_seat_x = outer_x }
+					add_to_array = { CA_Conference_seat_y = outer_y }
+				}
+
+				set_temp_variable = { outer_y = 13 }
+				set_temp_variable = { outer_x = last_outer_x }
+				add_to_temp_variable = { outer_x = 6 }
+			}
+
+			if = {
+				limit = { check_variable = { j = 6 } }
+				add_to_temp_variable = { outer_x = 10 }
+				add_to_temp_variable = { inner_x = 10 }
+			}
+			if = {
+				limit = { check_variable = { j = 16 } }
+				add_to_temp_variable = { outer_x = 10 }
+				add_to_temp_variable = { inner_x = 10 }
+			}
+			if = {
+				limit = { check_variable = { j = 26 } }
+				add_to_temp_variable = { outer_x = 10 }
+			}
+			if = {
+				limit = { check_variable = { j = 30 } }
+				add_to_temp_variable = { inner_x = 10 }
+			}
+		}
+
+		clear_array = CA_Conference_indices
+		for_loop_effect = {
+			start = 0
+			end = 1000
+			value = j
+
+			add_to_array = { CA_Conference_indices = j }
+		}
+
+		for_loop_effect = {
+			start = 0
+			end = 1000
+			value = j
+
+			set_temp_variable = { k = random }
+			multiply_temp_variable = { k = 1000 }
+			round_temp_variable = k
+
+			set_temp_variable = { tmp_CA = CA_Conference_indices^k }
+			set_variable = { CA_Conference_indices^k = CA_Conference_indices^j }
+			set_variable = { CA_Conference_indices^j = tmp_CA }
+		}
+
+	}
+}
+
+TNO_setup_CA_Conference = {
+	USA = {
+		TNO_fopo_add_ca_conference_tab = yes
+	}
+	JAP = {
+		TNO_fopo_add_ca_conference_tab = yes       
+	} 
+	GER = {
+		TNO_fopo_add_ca_conference_tab = yes			
+	}
+	TRK = {
+		set_country_flag = TRK_DC_Happening
+		set_variable = { non_aligned_delegates = 500 }
+		set_variable = { OFN_aligned_delegates = 200 }
+		set_variable = { GER_aligned_delegates = 300 }
+		set_variable = { CA_Conference_tension = 50 }
+		set_variable = { CA_Conference_suspicion = 30 }
+
+		# add_to_variable = { CA_Conference_tension = CA_Conference_tension_extra }
+		# This variable isn't set yet? @Fetti
+
+		TNO_arrange_CA_conference_seats = yes
+		TNO_update_CA_conference_display = yes
+
+		set_variable = { CA_Conference_days_left = 190 }
+		set_variable = { CA_Conference_months_left = CA_Conference_days_left }
+		divide_variable = { CA_Conference_months_left = 30 }
+		subtract_from_variable = { CA_Conference_months_left = 0.5 }
+		round_variable = CA_Conference_months_left
+
+		country_event = {
+			id = central_asia.200
+			days = 1
+		}
+
+		
+	}
+}
+TNO_Turkes_kenes_results = {
+	if = {
+		limit = { has_global_flag = TNO_TURKES_KENES_OVER_USA_WINS }
+		if = {
+			limit = { 
+				AND = {
+					check_variable = { TRK.OFN_aligned_delegates > 599 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = KRK
+				}
+				TRK = {
+					annex_country = {
+						target = KRK
+						transfer_troops = yes
+					}
+				}
+			}
+			else = {
+				TRK = {
+					add_state_core = 750
+					transfer_state = 750
+				}
+			}
+		}
+		if = {
+			limit = { 
+				AND = {
+					check_variable = { TRK.OFN_aligned_delegates > 699 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = UZB
+				}
+				TRK = {
+					annex_country = {
+						target = UZB
+						transfer_troops = yes
+					}
+				}
+			}
+			else = {
+				TRK = {
+					add_state_core = 585
+					transfer_state = 585
+					add_state_core = 405
+					transfer_state = 405
+					add_state_core = 1467
+					transfer_state = 1467
+				}
+			}
+		}
+		if = {
+			limit = { 
+				AND = {
+					check_variable = { TRK.OFN_aligned_delegates > 749 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = TAJ
+				}
+				TRK = {
+					annex_country = {
+						target = TAJ
+						transfer_troops = yes
+					}
+				}
+			}
+			else = {
+				TRK = {
+					add_state_core = 742
+					transfer_state = 742
+				}
+			}
+		}
+		if = {
+			limit = { 
+				AND = {
+					check_variable = { TRK.OFN_aligned_delegates > 849 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = KYR
+				}
+				TRK = {
+					annex_country = {
+						target = KYR
+						transfer_troops = yes
+					}
+				}
+			}
+			else = {
+				TRK = {
+					add_state_core = 732
+					transfer_state = 732
+					add_state_core = 586
+					transfer_state = 586
+					add_state_core = 1466
+					transfer_state = 1466
+				}
+			}	
+		}
+		every_country = {
+			news_event = { id = WORLD.30050 }
+		}
+	}
+	else_if = {
+		limit = { has_global_flag = TNO_TURKES_KENES_OVER_GER_WINS }
+		every_country = {
+			news_event = { id = WORLD.30051 }
+		}
+		every_country = {
+			limit = { AND = {
+				has_country_flag = IS_CA_NATION
+				NOT = { tag = UTL }
+				}
+			}
+			add_timed_idea = {
+				idea = CA_Turkes_Kenes_Infighting
+				days = 270
+			}
+		}
+		UTL = {
+			declare_war_on = {
+				target = TRK
+				type = annex_everything
+			}
+		}
+	}
+	else_if = {
+		limit = { has_global_flag = TNO_TURKES_KENES_OVER_NEUTRALITY }
+		every_country = {
+			news_event = { id = WORLD.30052 }
+		}
+		every_country = {
+			limit = { AND = {
+				has_country_flag = IS_CA_NATION
+				NOT = { is_in_faction_with = KYR }
+				}
+			}
+			add_ideas = {
+				CA_Turkes_Kenes_Apathy
+			}
+		}
+		UTL = {
+			declare_war_on = {
+				target = KYR
+				type = annex_everything
+			}
+		}
+	}
+	set_global_flag = TNO_TURKES_KENES_OVER_OVER
+}
+
+TNO_update_CA_conference_display = {
+	TRK = {
+		clear_array = CA_Conference_alignment
+		resize_array = { array = CA_Conference_alignment value = 1 size = OFN_aligned_delegates }
+		set_temp_variable = { total = OFN_aligned_delegates }
+		add_to_temp_variable = { total = non_aligned_delegates }
+		#add_to_temp_variable = { total = GER_aligned_delegates }
+		resize_array = { array = CA_Conference_alignment value = 2 size = total }
+		resize_array = { array = CA_Conference_alignment value = 3 size = 1000 }
+	}
+}
+
+TNO_CA_Conference_daily_tick = {
+	subtract_from_variable = { CA_Conference_days_left = 1 }
+	set_variable = { CA_Conference_months_left = CA_Conference_days_left }
+	divide_variable = { CA_Conference_months_left = 30 }
+	subtract_from_variable = { CA_Conference_months_left = 0.5 }
+	round_variable = CA_Conference_months_left
+	# Big line of checks, wish there was a more efficient way.
+	if = {
+		limit = { OR = {
+			check_variable = { OFN_aligned_delegates > 850 }
+			AND = { 
+				check_variable = { CA_Conference_days_left = 0 }
+				check_variable = { OFN_aligned_delegates > 599 } 
+				}
+	 		}
+		}
+		set_global_flag = TNO_TURKES_KENES_OVER_USA_WINS
+		USA = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		GER = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		JAP = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		TNO_Turkes_kenes_results = yes
+	} 
+	else_if = {
+		limit = { OR = {
+			check_variable = { GER_aligned_delegates > 850 }
+			AND = { check_variable = { CA_Conference_days_left = 0 } check_variable = { GER_aligned_delegates > 499 } }
+			}
+			check_variable = { CA_Conference_tension > 98 }
+	 	}
+		set_global_flag = TNO_TURKES_KENES_OVER_GER_WINS
+		USA = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		GER = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		JAP = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		TNO_Turkes_kenes_results = yes
+	} 
+	else_if = {
+		limit = { OR = {
+			check_variable = { non_aligned_delegates > 850 }
+			AND = { check_variable = { CA_Conference_days_left = 0 } check_variable = { non_aligned_delegates > 599 } }
+			}
+	 	}
+		set_global_flag = TNO_TURKES_KENES_OVER_NEUTRALITY
+		USA = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		GER = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		JAP = {
+			TNO_fopo_remove_ca_conference_tab = yes
+		}
+		TNO_Turkes_kenes_results = yes
+	}
+	else = {
+		# Set the random value
+		randomize_temp_variable = {
+			var = throwaway_temp_value
+			distribution = uniform
+			min = 0
+			max = 10
+		}
+		# Slap on daily delegation variation
+
+
+		set_variable = { TRK_daily_delegation_variation = throwaway_temp_value }
+
+		## Tension removes delegates willing to budge from their position
+		set_temp_variable = { temp_tension_variable = CA_Conference_tension }
+		divide_temp_variable = { temp_tension_variable = 10 }
+		subtract_from_variable = { TRK_daily_delegation_variation = temp_tension_variable }
+		clamp_variable = {
+			var = TRK_daily_delegation_variation
+			min = 0
+			max = 10
+		}
+
+		## Suspicion increases delegates willing to budge from their position
+		set_temp_variable = { temp_suspicion_variable = CA_Conference_suspicion }
+		divide_temp_variable = { temp_suspicion_variable = 10 }
+		add_to_variable = { TRK_daily_delegation_variation = temp_tension_variable }
+		clamp_variable = {
+			var = TRK_daily_delegation_variation
+			min = 0
+			max = 10
+		}
+		if = { # Japan gets yeeted
+			limit = { check_variable = { CA_Conference_days_left > 15 } }
+			if = {
+				limit = {
+					AND = {
+					   check_variable = { CA_Conference_suspicion > 70 } 
+					   check_variable = { CA_Conference_days_left > 0 }
+					   has_country_flag = TNO_CA_WARNING_1
+					   NOT = {
+						   OR = {
+								JAP = { has_country_flag = TNO_CA_WARNING_1 }
+								JAP = { has_country_flag = TNO_CA_WARNING_2 }
+						   }
+					   }
+				   }
+			   }
+			   JAP = {
+					country_event = {
+						id = CA_TK_Events.1
+					}
+					set_country_flag = TNO_CA_WARNING_1
+				}
+				USA = {
+					country_event = {
+						id = CA_TK_Events.2
+					}
+				}
+				GER = {
+					country_event = {
+						id = CA_TK_Events.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					 AND = {
+						check_variable = { CA_Conference_suspicion > 85 } 
+						check_variable = { CA_Conference_days_left > 0 }
+						JAP = { has_country_flag = TNO_CA_WARNING_1 }
+						NOT = {
+							JAP = { has_country_flag = TNO_CA_WARNING_2 }
+						}
+					}
+				}
+				JAP = {
+					country_event = {
+						id = CA_TK_Events.4
+					}
+					set_country_flag = TNO_CA_WARNING_2
+				}
+				USA = {
+					country_event = {
+						id = CA_TK_Events.5
+					}
+				}
+				GER = {
+					country_event = {
+						id = CA_TK_Events.6
+					}
+				}
+			}
+			else_if = { #Japan yeeted
+				limit = {
+					 AND = {
+						check_variable = { CA_Conference_suspicion > 95 } 
+						check_variable = { CA_Conference_days_left > 0 }
+						JAP = { has_country_flag = TNO_CA_WARNING_2 }
+					}
+				}
+				USA = {
+					country_event = {
+						id = CA_TK_Events.7
+					}
+				}
+				GER = {
+					country_event = {
+						id = CA_TK_Events.7
+					}
+				}
+			}
+		}
+
+		round_variable = TRK_daily_delegation_variation
+
+		random_list = {
+			25 = { # OFN Bonus
+				add_to_variable = { OFN_aligned_delegates = TRK_daily_delegation_variation }
+				if = {
+					limit = { 
+						check_variable = { non_aligned_delegates > TRK_daily_delegation_variation }
+						check_variable = { GER_aligned_delegates > TRK_daily_delegation_variation }
+					}
+					TRK_TNO_dailyOFN_bonus = yes
+				}
+				else_if = {
+					limit = { check_variable = { non_aligned_delegates > TRK_daily_delegation_variation } }
+					subtract_from_variable = { non_aligned_delegates = TRK_daily_delegation_variation }
+				}
+				else = {
+					subtract_from_variable = { GER_aligned_delegates = TRK_daily_delegation_variation }
+				}
+			}
+			25 = { # GER Bonus
+				add_to_variable = { GER_aligned_delegates = TRK_daily_delegation_variation }
+				if = {
+					limit = { 
+						check_variable = { non_aligned_delegates > TRK_daily_delegation_variation }
+						check_variable = { OFN_aligned_delegates > TRK_daily_delegation_variation }
+					}
+					TRK_TNO_dailyGER_bonus = yes
+				}
+				else_if = {
+					limit = { check_variable = { non_aligned_delegates > TRK_daily_delegation_variation } }
+					subtract_from_variable = { non_aligned_delegates = TRK_daily_delegation_variation }
+				}
+				else = {
+					subtract_from_variable = { OFN_aligned_delegates = TRK_daily_delegation_variation }
+				}
+			}
+			25 = { # CPS Bonus
+				add_to_variable = { GER_aligned_delegates = TRK_daily_delegation_variation }
+				if = {
+					limit = { 
+						check_variable = { OFN_aligned_delegates > TRK_daily_delegation_variation }
+						check_variable = { GER_aligned_delegates > TRK_daily_delegation_variation }
+					}
+					TRK_TNO_dailyCPS_bonus = yes
+				}
+				else_if = {
+					limit = { check_variable = { OFN_aligned_delegates > TRK_daily_delegation_variation } }
+					subtract_from_variable = { OFN_aligned_delegates = TRK_daily_delegation_variation }
+				}
+				else = {
+					subtract_from_variable = { GER_aligned_delegates = TRK_daily_delegation_variation }
+				}
+			}
+			25 = {
+				# nobody wins
+			}
+		}
+	}
+	TNO_update_CA_conference_display = yes
+}
+
+
+TRK_TNO_dailyOFN_bonus = {
+	random_list = {
+		1 = {
+			subtract_from_variable = { non_aligned_delegates = TRK_daily_delegation_variation }
+		}
+		1 = {
+			subtract_from_variable = { GER_aligned_delegates = TRK_daily_delegation_variation }
+		}
+	}
+	TNO_update_CA_conference_display = yes
+}
+
+TRK_TNO_dailyGER_bonus = {
+	random_list = {
+		1 = {
+			subtract_from_variable = { non_aligned_delegates = TRK_daily_delegation_variation }
+		}
+		1 = {
+			subtract_from_variable = { OFN_aligned_delegates = TRK_daily_delegation_variation }
+		}
+	}
+	TNO_update_CA_conference_display = yes
+}
+
+TRK_TNO_dailyCPS_bonus = {
+	random_list = {
+		1 = {
+			subtract_from_variable = { OFN_aligned_delegates = TRK_daily_delegation_variation }
+		}
+		1 = {
+			subtract_from_variable = { GER_aligned_delegates = TRK_daily_delegation_variation }
+		}
+	}
+	TNO_update_CA_conference_display = yes
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KRK_TNO_election_scripted_effect = {
+	random_list = {
+		1 = {
+			set_politics = {
+				ruling_party = conservative_democracy
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		1 = {
+			set_politics = {
+				ruling_party = socialist
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+}
+
+UZB_TNO_Coup_scripted_effect = { 
+	random_list = {
+		1 = {
+			set_politics = {
+				ruling_party = communist
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		1 = {
+			set_politics = {
+				ruling_party = liberal_democracy
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+}
+UTL_TNO_Coup_scripted_effect = { 
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "Baymirza Hayit"
+		desc = "POLITICS_BAYMIRZA_HAYIT_DESC"
+		picture = "Portrait_Uzbekistan_Baymirza_Hayit.dds"
+		expire = "1999.1.23"
+		ideology = national_socialism_idiosyncratic_nazism_subtype
+		traits = {
+		}
+	}
+}
+
+UZB_KRK_TNO_UNIFICATION_scripted_effect = {
+	if = {
+		limit = {
+			UZB = {
+				has_government = conservative_democracy
+			}
+			KRK = {
+				has_government = conservative_democracy
+			}
+		}
+		UZB = {
+			annex_country = {
+				target = KRK
+				transfer_troops = yes
+			}
+			set_country_flag = UZB_Path_Election_Underway
+		}
+	}
+	else_if = {
+		limit = {
+			UZB = {
+				has_government = communist
+			}
+			KRK = {
+				has_government = socialist
+			}
+		}
+		UZB = {
+			annex_country = {
+				target = KRK
+				transfer_troops = yes
+			}
+			set_country_flag = UZB_Path_Election_Underway
+		}
+	}
+	else = {
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 750
+				num_provinces = 3
+				on_win = central_asia.12
+				on_lose = central_asia.13
+			}
+			defender = {
+				state = 585
+				num_provinces = 4
+			}
+		}
+		KYR = { transfer_state = 1467 }
+		country_event = {
+			id = central_asia.7
+		}
+	}
+}
+
+US_ELECTION_CA_INTERVERENCE_CALCULATOR = {
+	if = {
+		limit = {
+			USA = { has_country_flag = SUPPORTED_PODA }
+		}
+		randomize_temp_variable = {
+			var = throwaway_temp_value
+			distribution = uniform
+			min = 1
+			max = 5
+		}
+		round_temp_variable = throwaway_temp_value
+		
+		if = {
+			limit = {
+				check_variable = {throwaway_temp_value = 1} ###Babakhan Won
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_leader = {
+							name = "George Wallace"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "Curtis LeMay"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "Margaret Chase Smith"
+							ruling_only = yes
+						}
+						has_country_leader = {
+							name = "Barry Goldwater"
+							ruling_only = yes
+						}
+					}
+				}
+				country_event = {
+					id = CA_US.14
+					days = 5
+				}
+			}
+			else = {
+				country_event = {
+					id = CA_US.15
+					days = 5
+				}
+			}
+		}
+		Turkmenistan_Regime_Change_A2 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {throwaway_temp_value = 2} ###Galiyev Won
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_leader = {
+						name = "George Wallace"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Curtis LeMay"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Margaret Chase Smith"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Barry Goldwater"
+						ruling_only = yes
+					}
+				}
+			}
+			country_event = {
+				id = CA_US.12
+				days = 5
+			}
+		}
+		else = {
+			country_event = {
+				id = CA_US.13
+				days = 5
+			}
+		}
+		Turkmenistan_Regime_Change_A1 = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {throwaway_temp_value > 2} ###Elections Rigged, Poga Won
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_leader = {
+						name = "George Wallace"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Curtis LeMay"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Margaret Chase Smith"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Barry Goldwater"
+						ruling_only = yes
+					}
+				}
+			}
+			country_event = {
+				id = CA_US.6
+				days = 5
+			}
+		}
+		else = {
+			country_event = {
+				id = CA_US.11
+				days = 5
+			}
+		}
+		Turkmenistan_Regime_Change_A3 =  yes
+	}
+}
+
+US_COUP_PODA_HURR_DURR = {
+	if = {
+		limit = {
+			has_country_leader = {
+				name = "George Wallace"
+				ruling_only = yes
+			}
+		}
+		country_event = {
+			id = CA_US.7
+			days = 5
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Curtis LeMay"
+				ruling_only = yes
+			}
+		}
+		country_event = {
+			id = CA_US.8
+			days = 5
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Barry Goldwater"
+				ruling_only = yes
+			}
+		}
+		country_event = {
+			id = CA_US.9
+			days = 5
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				name = "Margaret Chase Smith"
+				ruling_only = yes
+			}
+		}
+		country_event = {
+			id = CA_US.10
+			days = 5
+		}
+	}
+}

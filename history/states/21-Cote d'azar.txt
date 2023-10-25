@@ -1,0 +1,47 @@
+
+state={
+	id=21
+	name="STATE_21"
+	resources={
+		aluminium=120.000
+	}
+
+	history={
+		owner = FRA
+		victory_points = { 11834 20 }
+		victory_points = { 15193 10 }
+		victory_points = { 958 10 }
+		victory_points = { 11875 5 }
+		victory_points = { 13581 10 }
+		buildings = {
+			infrastructure = 6
+			air_base = 1
+			dockyard = 2
+			schools = 1
+			offices = 1
+			hospitals = 1 
+			barracks = 1
+			thermoelectric_plant = 2
+			13580 = {
+				naval_base = 4
+			}
+			9736 = {
+				bunker = 2
+			}
+			3961 = {
+				bunker = 2
+			}
+			13581 = {
+				bunker = 2
+			}
+		}
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		958 3762 3961 9736 11834 11849 11875 13580 13581 13582 15189 15190 15193 15194 15195 15196 15234 15235 15236
+	}
+	manpower=2043597
+	buildings_max_level_factor=1.000
+	state_category=city
+}

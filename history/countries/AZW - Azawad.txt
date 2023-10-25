@@ -1,0 +1,184 @@
+﻿capital = 1539
+
+#oob = "AZW_1962"
+
+add_ideas = {
+	WEST_AFRICA_idea_terror_bombing
+	AZW_idea_tuareg_heritage
+	AZW_idea_saharan_nomads
+
+	AZW_Intalla_ag_Attaher_hog
+	AZW_Bey_ag_Akhamouk_for
+	AZW_Zodi_Ikhia_eco
+	AZW_Intalla_ag_Attaher_sec
+	### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	tno_refugees_vetted_entry
+
+	### MILITARY LAWS ###
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_few_regulations
+	tno_education_elite_only
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_police
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### SOCIETAL DEVELOPMENT ###
+	 
+     tno_army_professionalism_disgruntled_veterans
+     tno_industrial_expertise_nascent
+     tno_industrial_equipment_power_tools
+     tno_agriculture_basic_mechanized
+     tno_research_facilities_outdated
+     tno_academic_base_basic_literacy
+	 tno_admin_efficiency_widespread_corruption
+}
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    social_democracy = 0
+    liberal_democracy = 0
+
+    conservative_democracy = 6
+    authoritarian_democracy = 23
+    despotism = 68
+    fascism = 3
+    
+}
+
+set_country_flag = TNO_eliminate_military_spending
+
+create_country_leader = {
+	name = "Zodi Ikhia"
+	desc = "POLITICS_ZODI_IKHIA_DESC"
+	picture = "Portrait_Azawad_Zodi_Ikhia.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Intalla ag Attaher"
+	desc = "POLITICS_INTALLA_AG_ATTAHER_DESC"
+	picture = "Portrait_Azawad_Intalla_Ag_Attaher.dds"
+	expire = "1965.1.1"
+	ideology = despotism_absolute_monarchy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Bey ag Akhamouk"
+	desc = "POLITICS_BEY_AG_AKHAMOUK_DESC"
+	picture = "Portrait_Azawad_Bey_ag_Akhamouk.dds"
+	expire = "1965.1.1"
+	ideology = fascism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Hamid Algabid"
+	desc = "POLITICS_HAMID_ALGABID_DESC"
+	picture = "Portrait_Azawad_Hamid_Algabid.dds"
+	expire = "1965.1.1"
+	ideology = ultranationalism_subtype
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+    name = "Bey ag Akhamouk"
+    picture = "Portrait_Azawad_Bey_ag_Akhamouk.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_field_marshal = {
+    name = "Intalla ag Attaher"
+    picture = "Portrait_Azawad_Intalla_Ag_Attaher.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Zeïd ag Attaher"
+    picture = "Portrait_Azawad_Zeid_ag_Attaher.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Alladi ag Alla"
+    picture = "Portrait_Azawad_Alladi_ag_Alla.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Hadj Moussa ag Akhamouk"
+    picture = "Portrait_Azawad_Hadj_Moussa_ag_Akhamouk.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}

@@ -1,0 +1,96 @@
+add_namespace = MCW_helldorff_takeover # Events for Helldorff taking over Moskowien prior to Dissolution
+
+country_event = {
+	id = MCW_helldorff_takeover.1
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MCW_helldorff_takeover.1" }
+	option = {
+		MCW = {
+			set_temp_variable = { N = 4 }
+			MCW_SE_helldorff_takeover_demil_N_states = yes
+			country_event = { id = MCW_helldorff_takeover.2 days = 3 }
+		}
+	}
+}
+country_event = {
+	id = MCW_helldorff_takeover.2
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MCW_helldorff_takeover.2" }
+	option = {
+		MCW = {
+			set_temp_variable = { N = 6 }
+			MCW_SE_helldorff_takeover_demil_N_states = yes
+			country_event = { id = MCW_helldorff_takeover.3 days = 3 }
+		}
+	}
+}
+country_event = {
+	id = MCW_helldorff_takeover.3
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MCW_helldorff_takeover.3" }
+	option = {
+		MCW = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Wolf-Heinrich Helldorff"
+				desc = "POLITICS_WOLF_HEINRICH_GRAF_VON_HELLDORFF_DESC"
+				picture = "Portrait_Moskowien_Wolf_Heinrich_von_Helldorff.dds"
+				expire = "1999.1.1"
+				ideology = national_socialism_subtype
+				traits = { }
+			}
+			remove_all_ministers = yes
+			add_ideas = {
+				MCW_Gottfried_Graf_von_Bismarck_Schonhausen_hog
+				MCW_Wilfried_Strik_Strikfeld_for
+				MCW_Harald_Quandt_eco
+				MCW_Helmuth_von_Pannwitz_sec
+			}
+			#remove_ideas = MCW_the_ostvolk_council
+			set_cosmetic_tag = MCW_helldorff_takeover
+			country_event = { id = MCW_helldorff_takeover.4 days = 3 }
+		}
+	}
+}
+country_event = {
+	id = MCW_helldorff_takeover.4
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MCW_helldorff_takeover.4" }
+	option = {
+		MCW = {
+			set_temp_variable = { N = 8 }
+			MCW_SE_helldorff_takeover_demil_N_states = yes
+			country_event = { id = MCW_helldorff_takeover.5 days = 3 }
+		}
+	}
+}
+country_event = {
+	id = MCW_helldorff_takeover.5
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MCW_helldorff_takeover.5" }
+	option = {
+		MCW = {
+			every_owned_state = {
+				limit = { is_demilitarized_zone = no }
+				set_demilitarized_zone = yes
+			}
+			243 = { set_demilitarized_zone = no }
+			set_capital = 243
+			delete_unit_template_and_units = { division_template = "Infanterie Abteilung" disband = yes }
+			delete_unit_template_and_units = { division_template = "Leichte Infanterie Abteilung" disband = yes }
+			delete_unit_template_and_units = { division_template = "Motorisierte Abteilung" disband = yes }
+			delete_unit_template_and_units = { division_template = "Panzer Abteilung" disband = yes }
+			country_event = { id = MSK_dissolution.1 days = 3 }
+		}
+	}
+}

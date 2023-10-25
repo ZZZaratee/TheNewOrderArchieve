@@ -1,0 +1,347 @@
+
+# Adds `conflict_id` to the list of active conflicts
+TNO_add_fopo_conflict_tab = {
+	if = {
+		limit = { NOT = { is_in_array = { TNO_active_conflicts = conflict_id } } }
+		add_to_array = { TNO_active_conflicts = conflict_id }
+
+		set_variable = { selected_conflict_id = conflict_id }
+		clear_array = world_conflict_guis
+		add_to_array = { world_conflict_guis = selected_conflict_id }
+
+		clear_array = TNO_world_conflict_selected
+		resize_array = { array = TNO_world_conflict_selected value = 1 size = 50 }
+		set_variable = { TNO_world_conflict_selected^selected_conflict_id = 2 }
+		set_variable = { TNO_fopo_selected_front = 1 }
+	}
+}
+
+# Removes `conflict_id` from the list of active conflicts
+TNO_remove_fopo_conflict_tab = {
+	if = {
+		limit = { is_in_array = { TNO_active_conflicts = conflict_id } }
+		remove_from_array = { array = TNO_active_conflicts value = conflict_id }
+	}
+
+	if = {
+		limit = { check_variable = { selected_conflict_id = conflict_id } }
+
+		set_variable = { selected_conflict_id = -1 }
+
+		if = {
+			limit = { check_variable = { TNO_active_conflicts^num > 0 } }
+
+			set_temp_variable = { next_conflict_idx = TNO_active_conflicts^num }
+			subtract_from_temp_variable = { next_conflict_idx = 1 }
+			set_variable = { selected_conflict_id = TNO_active_conflicts^next_conflict_idx }
+
+			clear_array = world_conflict_guis
+			add_to_array = { world_conflict_guis = selected_conflict_id }
+
+			clear_array = TNO_world_conflict_selected
+			resize_array = { array = TNO_world_conflict_selected value = 1 size = 50 }
+			set_variable = { TNO_world_conflict_selected^selected_conflict_id = 2 }
+			set_variable = { TNO_fopo_selected_front = 1 }
+		}
+	}
+}
+
+set_flooded = {
+	set_border_war = yes
+}
+
+
+set_not_flooded = {
+	set_border_war = no
+}
+
+
+set_border_war_all_owned = {
+	owner = {
+		every_owned_state = {
+			set_border_war = yes
+		}
+	}
+}
+
+clear_border_war_all_owned = {
+	owner = {
+		every_owned_state = {
+			set_border_war = no
+		}
+	}
+}
+
+
+# Add/remove Indonesian Civil War
+TNO_fopo_add_indonesia_tab = {
+	set_temp_variable = { conflict_id = 2 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_indonesia_tab = {
+	set_temp_variable = { conflict_id = 2 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove South African War
+TNO_fopo_add_saw_tab = {
+	set_temp_variable = { conflict_id = 1 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_saw_tab = {
+	set_temp_variable = { conflict_id = 1 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Jamaican Referendum
+TNO_fopo_add_jamaican_referendum_tab = {
+	set_temp_variable = { conflict_id = 3 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_jamaican_referendum_tab = {
+	set_temp_variable = { conflict_id = 3 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Jamaican Crisis
+
+TNO_fopo_add_jamaican_crisis_tab = {
+	set_temp_variable = { conflict_id = 4 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_jamaican_crisis_tab = {
+	set_temp_variable = { conflict_id = 4 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Iran Civil War
+
+TNO_fopo_add_iran_civil_war_tab = {
+	set_temp_variable = { conflict_id = 5 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_iran_civil_war_tab = {
+	set_temp_variable = { conflict_id = 5 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Malayan Civil War
+
+TNO_fopo_add_malaysia_civil_war_tab = {
+	set_temp_variable = { conflict_id = 6 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_malaysia_civil_war_tab = {
+	set_temp_variable = { conflict_id = 6 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Congo Civil War
+TNO_fopo_add_congo_civil_war_tab = {
+	set_temp_variable = { conflict_id = 7 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_congo_civil_war_tab = {
+	set_temp_variable = { conflict_id = 7 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+
+# Add/remove West African Crisis
+TNO_fopo_add_wac_tab = {
+	set_temp_variable = { conflict_id = 8 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_wac_tab = {
+	set_temp_variable = { conflict_id = 8 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove angola Civil War
+TNO_fopo_add_angola_civil_war_tab = {
+	set_temp_variable = { conflict_id = 9 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_angola_civil_war_tab = {
+	set_temp_variable = { conflict_id = 9 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Ba'athism Support
+TNO_fopo_add_baathism_support_tab = {
+	set_temp_variable = { conflict_id = 10 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_baathism_support_tab = {
+	set_temp_variable = { conflict_id = 10 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Iberian Wars
+TNO_fopo_add_IBW_tab = {
+	set_temp_variable = { conflict_id = 11 }
+    TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_IBW_tab = {
+	set_temp_variable = { conflict_id = 11 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Sri Lanka Crisis
+TNO_fopo_add_srilanka_crisis_tab = {
+	set_temp_variable = { conflict_id = 12 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_srilanka_crisis_tab = {
+	set_temp_variable = { conflict_id = 12 }
+	TNO_add_fopo_conflict_tab = yes
+}
+
+# Add/remove Trinidad Black Power Revolution
+TNO_fopo_add_trinidad_bpr_tab = {
+	set_temp_variable = { conflict_id = 13 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_trinidad_bpr_tab = {
+	set_temp_variable = { conflict_id = 13 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove CA_Conference Reunification 
+TNO_fopo_add_ca_conference_tab = {
+	set_temp_variable = { conflict_id = 14 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_ca_conference_tab = {
+	set_temp_variable = { conflict_id = 14 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Gazaland Civil War
+TNO_fopo_add_gazaland_civil_war_tab = {
+	set_temp_variable = { conflict_id = 15 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_gazaland_civil_war_tab = {
+	set_temp_variable = { conflict_id = 15 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Philippines
+TNO_fopo_add_philippines_tab = {
+	set_temp_variable = { conflict_id = 16 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_philippines_tab = {
+	set_temp_variable = { conflict_id = 16 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Malayan Reconstruction
+
+TNO_fopo_add_malayan_reconstruction_tab = {
+	set_temp_variable = { conflict_id = 17 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_malayan_reconstruction_tab = {
+	set_temp_variable = { conflict_id = 17 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove The War for the Philippines
+
+TNO_fopo_add_war_for_philippines_tab = {
+	set_temp_variable = { conflict_id = 18 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_war_for_philippines_tab = {
+	set_temp_variable = { conflict_id = 18 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Mengjiang Conflift
+
+TNO_fopo_add_mengjiang_conflict_tab = {
+	set_temp_variable = { conflict_id = 19 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_mengjiang_conflict_tab = {
+	set_temp_variable = { conflict_id = 19 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove the SAF Reconstruction Mechanic 
+
+TNO_fopo_add_saf_reconstruction_conflict_tab = {
+	set_temp_variable = { conflict_id = 20 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_saf_reconstruction_conflict_tab = {
+	hidden_effect = {
+		set_temp_variable = { conflict_id = 20 }
+		TNO_remove_fopo_conflict_tab = yes
+		USA_SAW_Insurgency_Clear_Ideas = yes
+		remove_mission = USA_Fatigue_Cooldown
+	}
+}
+# Add/remove the Madagascar Civil War
+TNO_fopo_add_madagascar_conflict_tab = {
+	set_temp_variable = { conflict_id = 21 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_madagascar_conflict_tab = {
+	set_temp_variable = { conflict_id = 21 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove philippines reconstruction
+TNO_fopo_add_philippines_reconstruction_tab = {
+	custom_effect_tooltip = PHI_fopo_begin_reconstruction_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				original_tag = USA
+				country_exists = UPH
+			}
+			activate_mission = USA_USFIP_recon_timeout
+		}
+		else_if = {
+			limit = {
+				original_tag = USA
+				country_exists = SPH
+			}
+			activate_mission = USA_SPH_recon_timeout
+		}
+		else_if = {
+			limit = {
+				original_tag = JAP
+			}
+			activate_mission = JAP_PHI_recon_timeout
+		}
+	}
+	set_temp_variable = { conflict_id = 22 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_philippines_reconstruction_tab = {
+	set_temp_variable = { conflict_id = 22 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+
+# Add/remove Manu Campaign
+TNO_fopo_add_manu_campaign_tab = {
+	set_temp_variable = { conflict_id = 23 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_manu_campaign_tab = {
+	set_temp_variable = { conflict_id = 23 }
+	TNO_remove_fopo_conflict_tab = yes
+}
+#Orungu
+TNO_fopo_add_orungu_campaign_tab = {
+	set_temp_variable = { conflict_id = 24 }
+	TNO_add_fopo_conflict_tab = yes
+}
+TNO_fopo_remove_orungu_campaign_tab = {
+	set_temp_variable = { conflict_id = 24 }
+	TNO_remove_fopo_conflict_tab = yes
+}

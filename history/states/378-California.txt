@@ -1,0 +1,68 @@
+
+state={
+	id=378
+	name="STATE_378"
+	resources={
+		oil=45 #was 95
+		aluminium=11.000
+	}
+
+	history={
+		owner = USA
+		add_extra_state_shared_building_slots = 1
+		buildings = {
+			schools = 1
+			hospitals = 1
+			prisons = 1
+			barracks = 1
+			offices = 2
+			infrastructure = 7
+			dockyard = 3
+			air_base = 10
+			nuclear_reactor = 1
+			radar_station = 2
+			610 = {
+				naval_base = 1
+			}
+			3678 = {
+				naval_base = 1
+			}
+			9671 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		victory_points = { #Fresno
+			6876 5 
+		}
+		victory_points = { #San Francisco
+			9671 25
+		}
+		victory_points = { #San Jose
+			14635 15
+		}
+		victory_points = { #Oakland
+			3678 5
+		}
+		victory_points = { #Sacramento
+			9713 10
+		}
+		victory_points = { #Redding
+			3588 5 
+		}
+		victory_points = { #Santa Rosa
+			6681 5 
+		}
+		victory_points = { #Eureka
+			610 5 
+		}
+
+	}
+
+	provinces={
+		941 1432 1651 4518 6694 6876 7667 9911 11763 610 710 766 768 781 1601 3588 3644 4331 6482 6665 6681 6745 6757 6772 9697 9730 10159 11698 677 3677 3678 6699 9671 9713 11658 986 3784 3840 6861 6881 9637 11876 10387 14635
+	}
+	manpower=7966241
+	buildings_max_level_factor=1.000
+	state_category = megalopolis
+}

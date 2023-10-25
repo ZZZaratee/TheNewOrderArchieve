@@ -1,0 +1,39 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#Variable Initialization
+			GNG = {
+				set_variable = { GNG_status_dynmod_stab = -0.40 }
+				set_variable = { GNG_status_dynmod_warsup = -0.40 }
+				set_variable = { GNG_status_dynmod_pp = -0.25 }
+				set_variable = { GNG_general_status_var = 0 }
+
+				set_variable = { GNG_corruption_monthly_corruption = 1.2 }
+				set_variable = { GNG_corruption_republic_of_china_support_cap = -10 }
+				set_variable = { GNG_corruption_pp_impact = -0.2 }
+				set_variable = { GNG_corruption_status_var = 0 }
+
+				set_variable = { GNG_fiscal_pp_gain = 0.1 }
+				set_variable = { GNG_fiscal_credit_rating = 8 }
+				set_variable = { GNG_fiscal_japanese_opinion = 0 }
+				set_variable = { GNG_fiscal_status_var = 0 }
+				
+				set_variable = { GNG_security_non_japanese_support_cap = -20 }
+				set_variable = { GNG_security_republic_of_china_support_cap = -30 }
+				set_variable = { GNG_security_kenpeitai_support_cap = 0 }
+				set_variable = { GNG_security_police_support_cap = -60 }
+				set_variable = { GNG_kenpeitai_status_var = 0 }
+				set_country_flag = GNG_startup
+				add_dynamic_modifier = {
+					modifier = GNG_status_dynmod
+				}
+				add_dynamic_modifier = {
+					modifier = GNG_corruption_dynmod
+				}
+				add_dynamic_modifier = {
+					modifier = GNG_fiscal_dynmod
+				}
+            }
+        }
+    }
+}

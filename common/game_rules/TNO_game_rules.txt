@@ -1,0 +1,89 @@
+#|===============| TNO Game Rules |===============|#
+
+### Halloween event
+zombie_easteregg_status = {
+	name = "ZOMBIE_EASTEREGG_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = ZOMBIES_DEFAULT
+		text = "RULE_OPTION_DEFAULT_ZOMBIES"
+		desc = "RULE_OPTION_DEFAULT_ZOMBIES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ZOMBIES_ACTIVE
+		text = "RULE_OPTION_ZOMBIES_ACTIVE"
+		desc = "RULE_OPTION_ZOMBIES_ACTIVE_DESC"
+		allow_achievements = no
+	}
+}
+
+#Force silent music on super event
+
+SuperMusic_status = {
+	name = "SuperMusic_status"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = active_music
+		text = "RULE_OPTION_DEFAULT_SuperSilent"
+		desc = "RULE_OPTION_DEFAULT_SuperSilent_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = No_Silence_Super
+		text = "RULE_OPTION_No_Silence"
+		desc = "RULE_OPTION_No_Silence_DESC"
+		allow_achievements = yes
+	}
+}
+
+
+### Superpower Tension
+
+superpower_tension_status = {
+	name = "SUPERPOWER_TENSION_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = TENSION_DEFAULT
+		text = "RULE_OPTION_TENSION_DEFAULT"
+		desc = "RULE_OPTION_TENSION_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TENSION_FULLY_ENABLED
+		text = "RULE_OPTION_TENSION_TENSION_FULLY_ENABLED"
+		desc = "RULE_OPTION_TENSION_TENSION_FULLY_ENABLED_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = TENSION_DISABLED
+		text = "RULE_OPTION_TENSION_DISABLED"
+		desc = "RULE_OPTION_TENSION_DISABLED_DESC"
+		allow_achievements = no
+	}
+}
+
+### Burgundian Collapse
+
+burgundy_collapse_status = {
+	name = "BURGUNDY_COLLAPSE_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = BURGUNDY_COLLAPSE_DEFAULT
+		text = "BURGUNDY_COLLAPSE_DEFAULT"
+		desc = "BURGUNDY_COLLAPSE_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BURGUNDY_COLLAPSE_ENSURED
+		text = "BURGUNDY_COLLAPSE_ENSURED"
+		desc = "BURGUNDY_COLLAPSE_ENSURED_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = BURGUNDY_COLLAPSE_DISABLED
+		text = "BURGUNDY_COLLAPSE_DISABLED"
+		desc = "BURGUNDY_COLLAPSE_DISABLED_DESC"
+		allow_achievements = no
+	}
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=226
+	name="STATE_226" # Dnipropertovsk
+	manpower = 3199570
+
+	resources = {
+		oil=2
+	}
+	
+	state_category = city
+	history={
+		owner = UKR
+		victory_points = { 11437 10 }
+		victory_points = { 11561 1 }
+		victory_points = { 9419 1 }
+		buildings = {
+			infrastructure = 6
+			air_base = 2
+		}
+		
+		add_core_of = UKR
+	}
+
+	provinces={
+		6423 9419 9433 11422 11437 11561 
+	}
+}

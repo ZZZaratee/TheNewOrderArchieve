@@ -1,0 +1,227 @@
+﻿capital = 945
+
+MDM = {
+ 	set_cosmetic_tag = MDM_FIXED
+}
+
+oob = "MDM_1962"
+
+add_ideas = {
+	##POLITICAL LAWS##
+	tno_political_parties_one_party_state
+	tno_religious_rights_secularism
+	tno_trade_unions_state_controlled
+	tno_immigration_open_immigration
+	tno_slavery_corvee
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	tno_refugees_skilled
+
+	#Military
+	tno_conscription_disarmed_nation
+	tno_women_banned
+	tno_military_supervision_no_supervision
+	tno_training_basic_training
+	tno_racial_integration_none
+	tno_draft_exemptions_none
+
+	#Economic
+	tno_trade_laws_export_focus
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_child_labor_legal
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+
+	#Social
+	tno_safety_no_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_no_controls
+	tno_education_elite_only
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_oppression
+	tno_security_police
+
+	#Societal Development
+	tno_army_professionalism_reluctant_conscripts
+	tno_industrial_expertise_incompetent
+	tno_industrial_equipment_power_tools
+	tno_agriculture_centralized
+	tno_research_facilities_basic
+	tno_academic_base_mass_illiteracy
+	tno_admin_efficiency_widespread_corruption
+
+	#Economy - #construction Spending
+	##construction_level_8
+}
+
+set_country_flag = tno_defined_startup_effectiveness
+
+# ECONOMIC LAWS
+set_variable = { tno_trade_laws_effectiveness = 90 }
+set_variable = { tno_income_taxation_effectiveness = 60 }
+set_variable = { tno_minimum_wage_effectiveness = 40 }
+set_variable = { tno_max_workhours_effectiveness = 60 }
+set_variable = { tno_child_labor_effectiveness = 65 }
+set_variable = { tno_pensions_effectiveness = 50 }
+set_variable = { tno_unemployment_effectiveness = 40 }
+
+# SOCIAL LAWS
+set_variable = { tno_safety_effectiveness = 60 }
+set_variable = { tno_health_care_effectiveness = 40 }
+set_variable = { tno_pollution_effectiveness = 40 }
+set_variable = { tno_education_effectiveness = 35 }
+set_variable = { tno_penal_system_effectiveness = 60 }
+set_variable = { tno_lgbt_rights_effectiveness = 65 }
+set_variable = { tno_gender_rights_effectiveness = 35 }
+set_variable = { tno_minorities_effectiveness = 60 }
+set_variable = { tno_security_effectiveness = 65 }
+
+# POLITICAL LAWS
+set_variable = { tno_political_parties_effectiveness = 70 }
+set_variable = { tno_religious_rights_effectiveness = 65 }
+set_variable = { tno_trade_unions_effectiveness = 75 }
+set_variable = { tno_immigration_effectiveness = 55 }
+set_variable = { tno_slavery_effectiveness = 65 }
+set_variable = { tno_public_meetings_effectiveness = 70 }
+set_variable = { tno_press_rights_effectiveness = 40 }
+set_variable = { tno_vote_franchise_effectiveness = 70 }
+set_variable = { tno_refugees_effectiveness = 65 }
+
+# MILITARY LAWS
+set_variable = { tno_conscription_effectiveness = 75 }
+set_variable = { tno_women_effectiveness = 80 }
+set_variable = { tno_military_supervision_effectiveness = 40 }
+set_variable = { tno_training_effectiveness = 70 }
+set_variable = { tno_racial_integration_effectiveness = 65 }
+set_variable = { tno_draft_exemptions_effectiveness = 75 }
+
+set_politics = {	
+	ruling_party = authoritarian_democracy
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 3
+    social_democracy = 4
+    liberal_democracy = 8
+
+    conservative_democracy = 2
+    authoritarian_democracy = 46
+    despotism = 37
+    fascism = 0
+    national_socialism = 0
+    
+}
+
+create_country_leader = {
+	name = "Richard Andriamanjato"
+	picture = "Portrait_Madagascar_Richard_Andriamanjato.dds"
+	expire = "1972.2.6"
+	desc = "POLITICS_RICHARD_ANDRIAMANJATO_DESC"
+	ideology = communist_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Charles Ravoajanahary"
+	picture = "Portrait_Madagascar_Charles_Ravoajanahary.dds"
+	expire = "1972.2.6"
+	desc = "POLITICS_CHARLES_RAVOAJANAHARY_DESC"
+	ideology = socialist_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Philibert Tsiranana"
+	picture = "Portrait_Madagascar_Philibert_Tsiranana.dds"
+	expire = "1972.2.6"
+	desc = "POLITICS_PHILIBERT_TSIRANANA_DESC"
+	ideology = social_democracy_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Monja Jaona"
+	picture = "Portrait_Madagascar_Monja_Jaona.dds"
+	expire = "1972.2.6"
+	desc = "POLITICS_MONJA_JAONA_DESC"
+	ideology = liberal_democracy_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Jacques Rabemananjara"
+	picture = "Portrait_Madagascar_Jacques_Rabemananjara.dds"
+	expire = "1972.2.6"
+	desc = "POLITICS_JACQUES_RABEMANANJARA_DESC"
+	ideology = conservative_democracy_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Gabriel Ramanantsoa"
+	picture = "Portrait_Madagascar_Gabriel_Ramanantsoa.dds"
+	expire = "1972.2.6"
+	desc = "POLITICS_GABRIEL_RAMANANTSOA_DESC"
+	ideology = authoritarian_democracy_social_nationalism_subtype
+	traits = {
+		
+	}
+}
+
+create_corps_commander = {
+	name = "Richard Ratsimandrava"
+	picture = "Portrait_Madagascar_Richard_Ratsimandrava.dds"
+	traits = { media_personality politically_connected jungle_rat }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Gilles Andriamahazo"
+	picture = "Portrait_Madagascar_Gilles_Andriamahazo.dds"
+	traits = { desert_fox trait_engineer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+
+create_navy_leader = {
+	name = "Didier Ratsiraka"
+	picture = "Portrait_Madagascar_Didier_Ratsiraka.dds"
+	traits = { seawolf }
+	id = 4031
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}
+
+TNO_startup_nation = yes 

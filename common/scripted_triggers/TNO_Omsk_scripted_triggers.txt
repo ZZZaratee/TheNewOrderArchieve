@@ -1,0 +1,77 @@
+OMS_has_neighboring_base = { # State 581 is wedged between Vorkuta and the rest of west siberia.
+	custom_trigger_tooltip = {
+		tooltip = OMS_trigger_is_neighbor_to_base
+		if = {
+			limit = {
+				check_variable = { OMS_map_grid_array^insurgency_state_selected_i = 863 }
+			}
+			581 = {
+				any_neighbor_state = {
+					check_variable = { base_status = 2 }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:OMS_map_grid_array^insurgency_state_selected_i = {
+					NOT = { state = 863 }
+					any_neighbor_state = { state = 581 }
+				}
+			}
+			OR = {
+				863 = { check_variable = { base_status = 2 } }
+				var:OMS_map_grid_array^insurgency_state_selected_i = {
+					any_neighbor_state = {
+						check_variable = { base_status = 2 }
+					}
+				}
+			}
+		}
+		else = {
+			var:OMS_map_grid_array^insurgency_state_selected_i = {
+				any_neighbor_state = {
+					check_variable = { base_status = 2 }
+				}
+			}
+		}
+	}
+}
+
+OMS_has_neighboring_enemy_base = {
+	custom_trigger_tooltip = {
+		tooltip = OMS_trigger_has_neighbor_enemy_base
+		if = {
+			limit = {
+				check_variable = { OMS_map_grid_array^insurgency_state_selected_i = 863 }
+			}
+			581 = {
+				any_neighbor_state = {
+					check_variable = { base_status = 3 }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:OMS_map_grid_array^insurgency_state_selected_i = {
+					NOT = { state = 863 }
+					any_neighbor_state = { state = 581 }
+				}
+			}
+			OR = {
+				863 = { check_variable = { base_status = 2 } }
+				var:OMS_map_grid_array^insurgency_state_selected_i = {
+					any_neighbor_state = {
+						check_variable = { base_status = 3 }
+					}
+				}
+			}
+		}
+		else = {
+			var:OMS_map_grid_array^insurgency_state_selected_i = {
+				any_neighbor_state = {
+					check_variable = { base_status = 3 }
+				}
+			}
+		}
+	}
+}

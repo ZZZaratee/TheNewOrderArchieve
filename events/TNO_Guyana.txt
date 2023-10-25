@@ -1,0 +1,193 @@
+﻿############################
+## Guyana Events
+############################
+
+add_namespace = GUY
+
+country_event = { #mmm national security act
+	id = GUY.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event GUY.1"}
+	title = GUY.1.t
+	desc = GUY.1.desc
+	picture = GFX_report_event_ostsonne
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GUY.1.a
+		add_ideas = GUY_national_security_act
+		add_popularity = {
+			ideology = authoritarian_democracy
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+		USA = {
+			country_event = {
+				id = USA.1100
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { #US pressure to repeal act
+	id = GUY.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event GUY.2"}
+	title = GUY.2.t
+	desc = GUY.2.desc
+	picture = GFX_report_event_ostsonne
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #ok fine
+		name = GUY.2.a
+		remove_ideas = GUY_national_security_act
+		add_stability = -0.10
+		add_popularity = {
+			ideology = authoritarian_democracy
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.05
+		}
+		USA = {
+			country_event = { id = USA.1104 days = 7 }
+		}
+	}
+	option = { #nah
+		name = GUY.2.b
+		USA = {
+			country_event = { id = USA.1103 days = 7 }
+		}
+	}
+}
+
+country_event = { #US repeals the act for us
+	id = GUY.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event GUY.3"}
+	title = GUY.3.t
+	desc = GUY.3.desc
+	picture = GFX_report_event_ostsonne
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #WTF
+		name = GUY.3.a
+		remove_ideas = GUY_national_security_act
+		add_stability = -0.15
+		add_popularity = {
+			ideology = authoritarian_democracy
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.05
+		}
+		USA = {
+			country_event = { id = USA.1105 days = 7 }
+		}
+	}
+}
+
+country_event = { #Burnham replaced by Jagan
+	id = GUY.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event GUY.4"}
+	title = GUY.4.t
+	desc = GUY.4.desc
+	picture = GFX_report_event_ostsonne
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #WTF
+		name = GUY.4.a
+ 		#replace leaders
+		set_politics = {
+			ruling_party = conservative_democracy
+		}
+
+		set_popularities = {
+			communist = 4
+			ultranationalism = 0
+			socialist = 8
+			social_democracy = 15
+			liberal_democracy = 15
+
+			conservative_democracy = 40
+			authoritarian_democracy = 18
+			despotism = 0
+			fascism = 0
+			
+		}
+		hidden_effect = {
+			country_event = { id = GUY.5 days = 7 random = 200 }
+		}
+	}
+}
+
+country_event = { #Burnham coups Jagan
+	id = GUY.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event GUY.5"}
+	title = GUY.5.t
+	desc = GUY.5.desc
+	picture = GFX_report_event_ostsonne
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #WTF
+		name = GUY.5.a
+ 		#replace leaders (again)
+		load_OOB = GUY_Revolt
+		leave_faction = yes
+		USA = {
+			end_puppet = GUY
+			country_event = { id = USA.1107 }
+		}
+		set_politics = {
+			ruling_party = despotism
+		}
+
+		set_popularities = {
+			communist = 4
+			ultranationalism = 0
+			socialist = 8
+			social_democracy = 5
+			liberal_democracy = 10
+
+			conservative_democracy = 10
+			authoritarian_democracy = 23
+			despotism = 40
+			fascism = 0
+			
+		}
+	}
+}
+
+country_event = { #dab on the US we won
+	id = GUY.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event GUY.6"}
+	title = GUY.6.t
+	desc = GUY.6.desc
+	picture = GFX_report_event_ostsonne
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #yeet we won
+		name = GUY.6.a
+		add_stability = 0.1
+		add_political_power = 100
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.15
+		}
+	}
+}

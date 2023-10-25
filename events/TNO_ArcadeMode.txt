@@ -1,0 +1,243 @@
+add_namespace = ArcadeMode
+
+# Fake WW3 chooser event
+country_event = {
+	id = ArcadeMode.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ArcadeMode.1"}
+	title = ArcadeMode.1.t
+	desc = ArcadeMode.1.desc
+	picture = GFX_report_event_south_african_war_us_bomber
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Just the supers
+		name = ArcadeMode.1.a
+		custom_effect_tooltip = ArcadeMode.1.a.tt
+		hidden_effect = {
+			set_global_flag = nukes_disabled
+			set_global_flag = TNO_world_tension_WW3
+			ZZZ = {
+				add_named_threat = {
+					threat = 100
+					name = threat.45.t
+				}
+			}
+
+			# Superpowers
+			USA = {
+				declare_war_on = { target = GER type = annex_everything }
+				declare_war_on = { target = JAP type = annex_everything }
+				load_focus_tree = USA_WW3
+			}
+			GER = {
+				declare_war_on = { target = USA type = annex_everything }
+				declare_war_on = { target = JAP type = annex_everything }
+				load_focus_tree = GER_WW3_speer_bormann
+			}
+			JAP = {
+				declare_war_on = { target = USA type = annex_everything }
+				declare_war_on = { target = GER type = annex_everything }
+				set_country_flag = JAP_WW3_tree
+				load_focus_tree = japan_WW3
+			}
+
+			# Wipe focus trees for every country & unlock divisions
+			every_country = {
+				limit = {
+					NOT = {
+						tag = GER
+						tag = JAP
+						tag = USA
+					}
+				}
+				load_focus_tree = generic_focus
+				country_lock_all_division_template = no
+			}
+		}
+	}
+	option = { # Supers + WRW2
+		name = ArcadeMode.1.b
+		trigger = { has_global_flag = RUS_national_unification }
+		custom_effect_tooltip = ArcadeMode.1.b.tt
+		hidden_effect = {
+			set_global_flag = nukes_disabled
+			set_global_flag = TNO_world_tension_WW3
+			ZZZ = {
+				add_named_threat = {
+					threat = 100
+					name = threat.45.t
+				}
+			}
+
+			# Superpowers
+			USA = {
+				declare_war_on = { target = GER type = annex_everything }
+				declare_war_on = { target = JAP type = annex_everything }
+				load_focus_tree = USA_WW3
+			}
+			GER = {
+				declare_war_on = { target = USA type = annex_everything }
+				declare_war_on = { target = JAP type = annex_everything }
+				load_focus_tree = GER_WW3_speer_bormann
+			}
+			JAP = {
+				declare_war_on = { target = USA type = annex_everything }
+				declare_war_on = { target = GER type = annex_everything }
+				set_country_flag = JAP_WW3_tree
+				load_focus_tree = japan_WW3
+			}
+
+			# Russia
+			RUS = { declare_war_on = { target = GER type = annex_everything } }
+
+			# Wipe focus trees for every country & unlock divisions
+			every_country = {
+				limit = {
+					NOT = {
+						tag = GER
+						tag = JAP
+						tag = USA
+					}
+				}
+				load_focus_tree = generic_focus
+				country_lock_all_division_template = no
+			}
+		}
+	}
+	option = { # Supers + GAW
+		name = ArcadeMode.1.c
+		trigger = { CHI = { has_completed_focus = CHI_The_Conference } }
+		custom_effect_tooltip = ArcadeMode.1.c.tt
+		hidden_effect = {
+			set_global_flag = nukes_disabled
+			set_global_flag = TNO_world_tension_WW3
+			ZZZ = {
+				add_named_threat = {
+					threat = 100
+					name = threat.45.t
+				}
+			}
+
+			# Superpowers
+			USA = {
+				declare_war_on = { target = GER type = annex_everything }
+				declare_war_on = { target = JAP type = annex_everything }
+				load_focus_tree = USA_WW3
+			}
+			GER = {
+				declare_war_on = { target = USA type = annex_everything }
+				declare_war_on = { target = JAP type = annex_everything }
+				load_focus_tree = GER_WW3_speer_bormann
+			}
+			JAP = {
+				declare_war_on = { target = USA type = annex_everything }
+				declare_war_on = { target = GER type = annex_everything }
+				set_country_flag = JAP_WW3_tree
+				load_focus_tree = japan_WW3
+			}
+
+			# China
+			CHI = {
+				leave_faction = yes
+				remove_faction_status = yes
+				create_faction = CHI_THE_NATIONAL_LIBERATION_FRONT
+				annex_country = { target = YUN transfer_troops = yes }
+				annex_country = { target = GUX transfer_troops = yes }
+				annex_country = { target = GUZ transfer_troops = yes }
+				annex_country = { target = SIC transfer_troops = yes }
+				annex_country = { target = SHX transfer_troops = yes }
+				every_owned_state = { add_core_of = PREV }
+				GNG = {
+					leave_faction = yes
+					remove_faction_status = yes
+				}
+				declare_war_on = { target = JAP type = annex_everything }
+			}
+
+			# Wipe focus trees for every country & unlock divisions
+			every_country = {
+				limit = {
+					NOT = {
+						tag = GER
+						tag = JAP
+						tag = USA
+					}
+				}
+				load_focus_tree = generic_focus
+				country_lock_all_division_template = no
+			}
+		}
+	}
+	option = { # The whole package (supers + WRW2 + GAW)
+		name = ArcadeMode.1.d
+		trigger = {
+			has_global_flag = RUS_national_unification
+			CHI = { has_completed_focus = CHI_The_Conference }
+		}
+		custom_effect_tooltip = ArcadeMode.1.d.tt
+		hidden_effect = {
+			set_global_flag = nukes_disabled
+			set_global_flag = TNO_world_tension_WW3
+			ZZZ = {
+				add_named_threat = {
+					threat = 100
+					name = threat.45.t
+				}
+			}
+
+			# Superpowers
+			USA = {
+				declare_war_on = { target = GER type = annex_everything }
+				declare_war_on = { target = JAP type = annex_everything }
+				load_focus_tree = USA_WW3
+			}
+			GER = {
+				declare_war_on = { target = USA type = annex_everything }
+				declare_war_on = { target = JAP type = annex_everything }
+				load_focus_tree = GER_WW3_speer_bormann
+			}
+			JAP = {
+				declare_war_on = { target = USA type = annex_everything }
+				declare_war_on = { target = GER type = annex_everything }
+				set_country_flag = JAP_WW3_tree
+				load_focus_tree = japan_WW3
+			}
+
+			# Russia
+			RUS = { declare_war_on = { target = GER type = annex_everything } }
+
+			# China
+			CHI = {
+				leave_faction = yes
+				remove_faction_status = yes
+				create_faction = CHI_THE_NATIONAL_LIBERATION_FRONT
+				annex_country = { target = YUN transfer_troops = yes }
+				annex_country = { target = GUX transfer_troops = yes }
+				annex_country = { target = GUZ transfer_troops = yes }
+				annex_country = { target = SIC transfer_troops = yes }
+				annex_country = { target = SHX transfer_troops = yes }
+				every_owned_state = { add_core_of = PREV }
+				GNG = { leave_faction = yes }
+				remove_faction_status = yes
+				declare_war_on = { target = JAP type = annex_everything }
+			}
+
+			# Wipe focus trees for every country & unlock divisions
+			every_country = {
+				limit = {
+					NOT = {
+						tag = GER
+						tag = JAP
+						tag = USA
+					}
+				}
+				load_focus_tree = generic_focus
+				country_lock_all_division_template = no
+			}
+		}
+	}
+	option = { # Cancel
+		name = ArcadeMode.1.e
+	}
+}

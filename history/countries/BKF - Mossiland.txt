@@ -1,0 +1,223 @@
+﻿capital = 1541
+
+#oob = "BKF_1962"
+
+add_ideas = {
+	WEST_AFRICA_idea_terror_bombing
+	BKF_idea_remnant_francophilia
+	BKF_idea_relative_democracy
+
+	BKF_Maurice_Yameogo_hog
+	BKF_Moussa_Kargougou_for
+	BKF_Gerard_Kango_Ouedraogo_eco
+	BKF_Aboubacar_Sangoule_Lamizana_sec
+		#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	tno_refugees_skilled
+	#military#
+	tno_conscription_service_by_requirement
+	tno_women_military_assistance
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_generous_subsidies
+	#social#
+	tno_safety_acceptable_regulations
+	tno_health_care_low_income_protections
+	tno_pollution_some_regulations
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_police 
+	#social development 
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+set_politics = {	
+	ruling_party = authoritarian_democracy
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 10
+    socialist = 3
+    social_democracy = 2
+    liberal_democracy = 1
+
+    conservative_democracy = 14
+    authoritarian_democracy = 52
+    despotism = 15
+    fascism = 3
+    national_socialism = 0
+    ultranationalism = 0
+    
+}
+
+create_country_leader = {
+	name = "Henri Zongo"
+	desc = "POLITICS_HENRI_ZONGO_DESC"
+	picture = "Portrait_Burkina_Faso_Henri_Zongo.dds"
+	expire = "1965.1.1"
+	ideology = communist_subtype
+	traits = {
+		#
+	}
+}
+
+#create_country_leader = {
+#	name = "Joseph Ki-Zerbo"
+#	desc = "POLITICS_JOSEPH_KI_ZERBO_DESC"
+#	picture = "Portrait_Burkina_Faso_Joseph_Ki_Zerbo.dds"
+#	expire = "1965.1.1"
+#	ideology = socialist_subtype
+#	traits = {
+#		#
+#	}
+#}
+
+create_country_leader = {
+	name = "Joseph Ouédraogo"
+	desc = "POLITICS_JOSEPH_OUEDRAOGO_DESC"
+	picture = "Portrait_Burkina_Faso_Joseph_Ouedraogo.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Macaire Ouédraogo"
+	desc = "POLITICS_MAURICE_OUEDRAOGO_DESC"
+	picture = "Portrait_Burkina_Faso_Macaire_Ouedraogo.dds"
+	expire = "1965.1.1"
+	ideology = liberal_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Maurice Yaméogo"
+	desc = "POLITICS_MAURICE_YAMEOGO_DESC"
+	picture = "Portrait_Burkina_Faso_Maurice_Yameogo.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_controlled_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Naaba Kougri"
+	desc = "POLITICS_NAABA_KOUGRI_DESC"
+	picture = "Portrait_Burkina_Faso_Naaba_Kougri.dds"
+	expire = "1965.1.1"
+	ideology = despotism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Aboubacar Sangoulé Lamizana"
+	desc = "POLITICS_ABOUBACAR_SANGOULE_LAMIZANA_DESC"
+	picture = "Portrait_Burkina_Faso_Aboubacar_Sangoule_Lamizana.dds"
+	expire = "1965.1.1"
+	ideology = fascism_subtype
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+    name = "Aboubacar Sangoulé Lamizana"
+    picture = "Portrait_Burkina_Faso_Aboubacar_Sangoule_Lamizana.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_field_marshal = {
+    name = "Jean-Baptiste Boukary Lingani"
+    picture = "Portrait_Burkina_Faso_Jean_Baptiste_Boukary_Lingani.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Jean-Baptiste Ouédraogo"
+    picture = "Portrait_Burkina_Faso_Jean_Baptiste_Ouedraogo.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Yaoua Marcel Tamini"
+    picture = "Portrait_Burkina_Faso_Yaoua_Marcel_Tamini.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Saye Zerbo"
+    picture = "Portrait_Burkina_Faso_Saye_Zerbo.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Kango Ouédraogo"
+    picture = "Portrait_Burkina_Faso_Kango_Ouedraogo.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}

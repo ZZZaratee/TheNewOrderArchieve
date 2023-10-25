@@ -1,0 +1,70 @@
+﻿capital = 241
+
+add_ideas = {
+	# Ministers
+		Generic_Vacant_hog
+		Generic_Vacant_for
+		Generic_Vacant_eco
+		Generic_Vacant_sec
+	# Political Laws
+		tno_political_parties_one_party_state
+		tno_religious_rights_pluralism
+		tno_trade_unions_state_controlled
+		tno_immigration_closed_borders
+		tno_slavery_outlawed
+		tno_public_meetings_regulated
+		tno_press_rights_state_press_only
+		tno_vote_franchise_no_voting
+		tno_refugees_banned
+	# Military Laws
+		tno_conscription_service_by_requirement
+		tno_women_military_assistance
+		tno_military_supervision_no_supervision
+		tno_training_basic_training
+		tno_racial_integration_integrated_military
+		tno_draft_exemptions_none
+	# Economic Laws
+		tno_trade_laws_closed_economy
+		tno_income_taxation_low_income_weighted
+		tno_minimum_wage_no_minimum_wage
+		tno_max_workhours_12_hour_work_day
+		tno_child_labor_restricted
+		tno_pensions_no_pensions
+		tno_unemployment_no_subsidies
+	# Social Laws
+		tno_safety_no_regulations
+		tno_health_care_support_for_emergencies
+		tno_pollution_no_controls
+		tno_education_elite_only 
+		tno_penal_system_penal_labor
+		tno_lgbt_rights_lgbt_outlawed
+		tno_gender_rights_traditional_roles
+		tno_minorities_equal_rights
+		tno_security_anarchic
+	# Societal Development
+		tno_academic_base_basic_literacy
+		tno_research_facilities_basic
+		tno_agriculture_mass_mechanized
+		tno_industrial_equipment_manufacturing_lines
+		tno_industrial_expertise_incompetent
+		tno_army_professionalism_political_interference
+		
+}
+set_politics = {
+	ruling_party = despotism
+	last_election = "1941.4.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = { despotism = 100 }
+create_country_leader = {
+	name = "Pyotr Zolin"
+	expire = "1999.1.1"
+	desc = "MSK_DISSOLUTION_ZLB_LEADER_DESC"
+	picture = "gfx/leaders/Moskowien/ZLB.dds"
+	ideology = despotism_warlordism_subtype
+	traits = {}
+}
+
+set_variable = {TNO_economy_type = 3}
+set_variable = {TNO_economy_subtype = 8}

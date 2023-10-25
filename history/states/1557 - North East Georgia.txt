@@ -1,0 +1,25 @@
+###POP DONE 
+state={
+	id=1557
+	name="STATE_1557"
+
+	history={
+		owner = CAU
+		buildings = {
+			infrastructure = 4
+			air_base = 1
+
+		}
+		
+		add_core_of = GEO
+		add_core_of = CAU
+
+	}
+
+	provinces={
+		4534 4605 6436 12309
+	}
+	manpower=2102800
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

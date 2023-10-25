@@ -1,0 +1,26 @@
+state={
+	id=1611
+	name="STATE_1611"
+	
+	history={
+		owner = FRA
+		add_core_of = FRA
+		victory_points = { 6775 5 }
+		victory_points = { 9734 5 }
+		victory_points = { 11565 3 }
+		victory_points = { 9751 5 }
+		buildings = {
+			infrastructure = 6
+			11565 = {
+				coastal_bunker = 2
+			}
+		}
+	}
+
+	provinces={
+		6775 6792 9734 9751 11565 11720 14621 15210 15211 15212 15213 15214 15215
+	}
+	manpower=1122628
+	buildings_max_level_factor=1.000
+	state_category=town
+}

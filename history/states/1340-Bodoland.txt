@@ -1,0 +1,22 @@
+state={
+	id=1340
+	name="STATE_1340"
+	provinces={
+		7455 10349 
+	}
+	resources={
+		oil=2
+	}
+	history={
+		owner = AZH
+		victory_points = { 10349 3 }
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = AZH
+		add_core_of = IND
+	}
+	manpower=121733
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,48 @@
+ideas = {
+	country = {
+		# Starting Ideas
+		MAN_Chained_To_Rising_Sun = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MAN_Chained_To_Rising_Sun"}
+
+			allowed = { always = no }
+			picture = MAN_Chained_To_The_Rising_Sun
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				stability_factor = 0.15
+			}
+		}
+		MAN_Vices_Of_Modernity = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MAN_Chained_To_Rising_Sun"}
+
+			allowed = { always = no }
+			picture = MAN_Opium
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.30
+				war_support_factor = -0.25
+				army_org_factor = -0.25
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+			}
+		}
+		MAN_Kwantung_Army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MAN_Chained_To_Rising_Sun"}
+
+			allowed = { always = no }
+			picture = MAN_Kwantung_Army
+			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = MAN_Kwantung_Army_tt
+				army_org_factor = 0.15
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				experience_gain_army = 0.01
+				consumer_goods_use_modifier = 0.10
+			}
+		}
+	}
+}

@@ -1,0 +1,134 @@
+﻿MAR_Infantry = {
+	name = "Tsarskiye Zashchitniki"
+
+	for_countries = { MAR }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%dya Tsarskiye Zashchitniki"
+
+	ordered = {
+		1 = { "%dya Tsarskiye Zashchitniki" }
+		2 = { "%dya Tsarskiye Zashchitniki" }
+		3 = { "%dya Tsarskiye Zashchitniki" }
+		4 = { "%dya Tsarskiye Zashchitniki" }
+		5 = { "%dya Tsarskiye Zashchitniki" }
+		6 = { "%dya Tsarskiye Zashchitniki" }
+		7 = { "%dya Tsarskiye Zashchitniki" }
+		8 = { "%dya Tsarskiye Zashchitniki" }
+		9 = { "%dya Tsarskiye Zashchitniki" }
+		10 = { "%dya Tsarskiye Zashchitniki" }
+		11 = { "%dya Tsarskiye Zashchitniki" }
+		12 = { "%dya Tsarskiye Zashchitniki" }
+		13 = { "%dya Tsarskiye Zashchitniki" }
+		14 = { "%dya Tsarskiye Zashchitniki" }
+		15 = { "%dya Tsarskiye Zashchitniki" }
+		16 = { "%dya Tsarskiye Zashchitniki" }
+		17 = { "%dya Tsarskiye Zashchitniki" }
+		18 = { "%dya Tsarskiye Zashchitniki" }
+		19 = { "%dya Tsarskiye Zashchitniki" }
+		20 = { "%dya Tsarskiye Zashchitniki" }
+		21 = { "%dya Tsarskiye Zashchitniki" }
+		22 = { "%dya Tsarskiye Zashchitniki" }
+		23 = { "%dya Tsarskiye Zashchitniki" }
+		24 = { "%dya Tsarskiye Zashchitniki" }
+		25 = { "%dya Tsarskiye Zashchitniki" }
+		26 = { "%dya Tsarskiye Zashchitniki" }
+		27 = { "%dya Tsarskiye Zashchitniki" }
+		28 = { "%dya Tsarskiye Zashchitniki" }
+		29 = { "%dya Tsarskiye Zashchitniki" }
+		30 = { "%dya Tsarskiye Zashchitniki" }
+	}
+}
+
+MAR_Conscripts = {
+	name = "Narodnoye Opolcheniye"
+
+	for_countries = { MAR }
+
+	can_use = { always = yes }
+
+	division_types = { "light_infantry" }
+
+	fallback_name = "%dya Narodnoye Opolcheniye"
+
+	ordered = {
+		1 = { "%dya Narodnoye Opolcheniye" }
+		2 = { "%dya Narodnoye Opolcheniye" }
+		3 = { "%dya Narodnoye Opolcheniye" }
+		4 = { "%dya Narodnoye Opolcheniye" }
+		5 = { "%dya Narodnoye Opolcheniye" }
+		6 = { "%dya Narodnoye Opolcheniye" }
+		7 = { "%dya Narodnoye Opolcheniye" }
+		8 = { "%dya Narodnoye Opolcheniye" }
+		9 = { "%dya Narodnoye Opolcheniye" }
+		10 = { "%dya Narodnoye Opolcheniye" }
+		11 = { "%dya Narodnoye Opolcheniye" }
+		12 = { "%dya Narodnoye Opolcheniye" }
+		13 = { "%dya Narodnoye Opolcheniye" }
+		14 = { "%dya Narodnoye Opolcheniye" }
+		15 = { "%dya Narodnoye Opolcheniye" }
+		16 = { "%dya Narodnoye Opolcheniye" }
+		17 = { "%dya Narodnoye Opolcheniye" }
+		18 = { "%dya Narodnoye Opolcheniye" }
+		19 = { "%dya Narodnoye Opolcheniye" }
+		20 = { "%dya Narodnoye Opolcheniye" }
+		21 = { "%dya Narodnoye Opolcheniye" }
+		22 = { "%dya Narodnoye Opolcheniye" }
+		23 = { "%dya Narodnoye Opolcheniye" }
+		24 = { "%dya Narodnoye Opolcheniye" }
+		25 = { "%dya Narodnoye Opolcheniye" }
+		26 = { "%dya Narodnoye Opolcheniye" }
+		27 = { "%dya Narodnoye Opolcheniye" }
+		28 = { "%dya Narodnoye Opolcheniye" }
+		29 = { "%dya Narodnoye Opolcheniye" }
+		30 = { "%dya Narodnoye Opolcheniye" }
+	}
+}
+
+MAR_Motorized = {
+	name = "Motorizovannaya Pekhotnaya Div."
+
+	for_countries = { MAR }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	fallback_name = "%dya Motorizovannaya Pekhotnaya Div."
+
+	ordered = {
+		1 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		2 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		3 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		4 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		5 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		6 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		7 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		8 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		9 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		10 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		11 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		12 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		13 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		14 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		15 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		16 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		17 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		18 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		19 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		20 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		21 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		22 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		23 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		24 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		25 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		26 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		27 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		28 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		29 = { "%dya Motorizovannaya Pekhotnaya Div." }
+		30 = { "%dya Motorizovannaya Pekhotnaya Div." }
+	}
+}

@@ -1,0 +1,30 @@
+###POP DONE 
+state={
+	id=1626
+	name="STATE_1626"
+	manpower = 1346798
+	
+	state_category = town
+	resources={
+		steel=56
+		aluminium=11
+	}
+
+	history={
+		owner = BRG
+		buildings = {
+			barracks = 1
+			prisons = 1
+			infrastructure = 8
+			11420 = {
+				coastal_bunker = 3
+			}
+		}
+		add_core_of = FRA
+		add_core_of = BRG
+	}
+
+	provinces={
+		454 3402 6585 9561 11420 11549 
+	}
+}

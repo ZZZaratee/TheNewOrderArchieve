@@ -1,0 +1,20 @@
+state = {
+	id=1437
+	name = "STATE_1437"
+	
+	manpower = 69820
+	state_category = pastoral
+	
+	history = {
+		owner = IME
+		add_core_of = IME
+
+		buildings = {
+			infrastructure = 5
+		}
+	}
+
+	provinces = {
+		14456 7176 1015
+	}
+}

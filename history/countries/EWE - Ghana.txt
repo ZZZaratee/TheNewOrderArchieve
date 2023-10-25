@@ -1,0 +1,370 @@
+﻿capital = 827
+
+#econtype
+set_variable = { TNO_economy_subtype = 10 }
+set_variable = { TNO_economy_type = 2 }
+
+add_ideas = {
+### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	tno_refugees_vetted_entry
+
+	### MILITARY LAWS ###
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_few_regulations
+	tno_education_elite_only
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_police
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### SOCIETAL DEVELOPMENT ###
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_widespread_corruption
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+set_technology = {
+	# Infantry
+ 	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+ 	basic_infantry_equipment = 1
+	support_weapons = 1
+	infantry_at = 1
+	infantry_at2 = 1
+	motorized_infantry = 1
+	#infantry_aa = 1
+	#infantry_aa2 = 1
+
+	# Support
+ 	tech_support = 1
+ 	tech_engineers = 1
+	tech_engineers_flamethrowers_1 = 1
+	tech_recon = 1
+	tech_recon2 = 1
+
+	# Artillery
+	artillery4 = 1
+	antiair5 = 1
+
+	# Armor
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+
+	APC_1950 = 1
+	APC_1950_basic_turret = 1
+	#APC_1950_basic_engine = 1
+
+	IFV_1950 = 1
+	
+	MBT_1950 = 1
+
+	# Aircraft
+	early_fighter = 1
+	fighter_1945 = 1
+	interceptor_1945 = 1
+	CAS_1945 = 1
+
+	# Heavy Aircraft
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+
+	# Engineering
+	electronic_mechanical_engineering = 1
+	radio = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+
+	# Industry
+	ww2_line_production = 1
+	building_construction_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	administration_construction_1 = 1
+	military_construction_1 = 1
+	resource_extraction_methods = 1
+
+	# Doctrine
+	strategic_theorem = 1
+
+	air_superiority = 1
+
+	green_water_navy = 1
+}
+
+set_major = yes
+
+add_manpower = 500000
+
+add_ideas = {
+	WEST_AFRICA_idea_terror_bombing
+	#EWE_idea_language_barrier
+	EWE_idea_bloated_high_command
+
+	EWE_Edward_Akufo_Addo_hog
+	EWE_Ebenezer_Ako_Adjei_for
+	EWE_Emmanuel_Obetsebi_Lamptey_eco
+	EWE_Ignatius_Kutu_Acheampong_sec
+}
+
+oob = "EWE_1962"
+
+set_politics = {	
+	ruling_party = authoritarian_democracy
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    social_democracy = 0
+    liberal_democracy = 0
+
+    conservative_democracy = 4
+    authoritarian_democracy = 68
+    despotism = 15
+    fascism = 13
+    
+}
+
+create_country_leader = {
+	name = "Kwame Nkrumah"
+	desc = "POLITICS_KWAME_NKRUMAH_DESC"
+	picture = "Portrait_Ewe_Kwame_Nkrumah.dds"
+	expire = "1965.1.1"
+	ideology = socialist_panafricanism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Edward Akufo-Addo"
+	desc = "POLITICS_EDWARD_AKUFO_ADDO_DESC"
+	picture = "Portrait_Ewe_Edward_Akufo_Addo.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Sylvanus Olympio"
+	desc = "POLITICS_SYLVANUS_OLYMPIO_DESC"
+	picture = "Portrait_Ewe_Sylvanus_Olympio.dds"
+	expire = "1965.1.1"
+	ideology = liberal_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Nicolas Grunitzky"
+	desc = "POLITICS_NICOLAS_GRUNITZKY_DESC"
+	picture = "Portrait_Ewe_Nicolas_Grunitzky.dds"
+	expire = "1965.1.1"
+	ideology = conservative_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Komla Agbeli Gbedemah"
+	desc = "POLITICS_KOMLA_AGBELI_GBEDEMAH_DESC"
+	picture = "Portrait_Ewe_Komla_Agbeli_Gbedemah.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_national_conservatism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fred Akuffo"
+	desc = "POLITICS_FRED_AKUFFO_DESC"
+	picture = "Portrait_Ewe_Fred_Akuffo.dds"
+	expire = "1965.1.1"
+	ideology = despotism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gnassingbé Eyadema"
+	desc = "POLITICS_GNASSINGBE_EYADEMA_DESC"
+	picture = "Portrait_Ewe_Gnassingbe_Eyadema.dds"
+	expire = "1965.1.1"
+	ideology = despotism_subtype
+	traits = {
+		#
+	}
+}
+
+create_field_marshal  = {
+    name = "Ignatius Kutu Acheampong"
+    picture = "Portrait_Ewe_Ignatius_Kutu_Acheampong.dds"
+    traits = {  }
+    skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+create_field_marshal  = {
+    name = "Gnassingbé Eyadema"
+    picture = "Portrait_Ewe_Gnassingbe_Eyadema.dds"
+    traits = {  }
+    skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 2
+}
+
+create_field_marshal  = {
+    name = "Emmanuel Bodjollé"
+    picture = "Portrait_Ewe_Emmanuel_Bodjolle.dds"
+    traits = {  }
+    skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Kléber Dadjo"
+    picture = "Portrait_Ewe_Kleber_Dadjo.dds"
+    traits = {  }
+    skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+    name = "Fred Akuffo"
+    picture = "Portrait_Ewe_Fred_Akuffo.dds"
+    traits = {  }
+    skill = 3
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 4
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+    name = "Joseph Arthur Ankrah"
+    picture = "Portrait_Ewe_Joseph_Arthur_Ankrah.dds"
+    traits = {  }
+    skill = 2
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Akwasi Afrifa"
+    picture = "Portrait_Ewe_Akwasi_Afrifa.dds"
+    traits = {  }
+    skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+    name = "Albert Kwesi Ocran"
+    picture = "Portrait_Ewe_Albert_Kwesi_Ocran.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+    name = "Emmanuel Kwasi Kotoka"
+    picture = "Portrait_Ewe_Emmanuel_Kwasi_Kotoka.dds"
+    traits = {  }
+    skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_navy_leader = {
+    name = "Joy K. Amedume"
+    picture = "Portrait_Ewe_Joy_K_Amedume.dds"
+    traits = {  }
+    skill = 2
+}
+
+create_navy_leader = {
+    name = "Chemogoh Kevin Dzang"
+    picture = "Portrait_Ewe_Chemogoh_Kevin_Dzang.dds"
+    traits = {  }
+    skill = 1
+}
+
+create_navy_leader = {
+    name = "David Animle Hansen"
+    picture = "Portrait_Ewe_David_Animle_Hansen.dds"
+    traits = {  }
+    skill = 2
+}

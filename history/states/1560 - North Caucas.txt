@@ -1,0 +1,26 @@
+###POP DONE 
+state={
+	id=1560
+	name="STATE_1560"
+	resources={
+		chromium=5.000
+	}
+
+	history={
+		owner = CAU
+		buildings = {
+			infrastructure = 4
+
+		}	
+		victory_points = { 11614 3 }
+		add_core_of = CAU
+		add_core_of = ADY
+	}
+
+	provinces={
+		685 11614
+	}
+	manpower=719193
+	buildings_max_level_factor=1.000
+	state_category=town
+}

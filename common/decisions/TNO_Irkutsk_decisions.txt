@@ -1,0 +1,2365 @@
+IRK_reforms_category = {
+	IRK_appease_party_faction = {
+		icon = GFX_decision_generic_shake_hands
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_appease_party_faction_tt
+				check_variable = { IRK_state_balance > 49.99 }
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+			NOT = {
+				has_country_flag = IRK_party_influence_locked_in
+				has_country_flag = IRK_state_influence_locked_in
+			}
+		}
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 60
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_appease_party_faction"
+			IRK_increase_party_influence_low = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+
+		}
+	}
+	IRK_appease_state_faction = {
+		icon = GFX_decision_generic_shake_hands
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_appease_state_faction_tt
+				check_variable = { IRK_party_balance > 49.99 }
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+			NOT = {
+				has_country_flag = IRK_party_influence_locked_in
+				has_country_flag = IRK_state_influence_locked_in
+			}
+		}
+		cost = 25
+		fire_only_once = no
+		days_re_enable = 60
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_appease_state_faction"
+			IRK_increase_nkvd_influence_low = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	IRK_persuade_party_faction = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_appease_party_faction_tt
+				check_variable = { IRK_state_balance > 49.99 }
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+			NOT = {
+				has_country_flag = IRK_party_influence_locked_in
+				has_country_flag = IRK_state_influence_locked_in
+			}
+		}
+		cost = 30
+		fire_only_once = no
+		days_re_enable = 60
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_persuade_party_faction"
+			IRK_increase_nkvd_influence_low = yes
+			add_stability = -0.02
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+	IRK_persuade_state_faction = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_appease_state_faction_tt
+				check_variable = { IRK_party_balance > 49.99 }
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+			NOT = {
+				has_country_flag = IRK_party_influence_locked_in
+				has_country_flag = IRK_state_influence_locked_in
+			}
+		}
+		cost = 30
+		fire_only_once = no
+		days_re_enable = 60
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_persuade_state_faction"
+			IRK_increase_party_influence_low = yes
+			add_stability = 0.02
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+	###PARTY REFORMS
+	IRK_elect_new_premier = {
+		icon = GFX_decision_generic_voting
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_elect_new_premier_tt
+				check_variable = { IRK_party_balance > 74.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_elect_new_premier"
+			custom_effect_tooltip = IRK_elect_new_premier_effect_tt
+			IRK_increase_party_influence_high = yes
+			set_country_flag = IRK_party_influence_locked_in
+			country_event = {
+				id = IRK.24
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+	IRK_strengthen_the_red_army = {
+		icon = GFX_decision_generic_military_parade
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_strengthen_the_red_army_tt
+				check_variable = { IRK_party_balance > 54.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_strengthen_the_red_army"
+			custom_effect_tooltip = IRK_strengthen_the_red_army_effect_tt
+			hidden_effect = {
+				IRK_weaken_securocracy = yes
+			}
+			IRK_increase_party_influence_low = yes
+			if = {
+				limit = {
+					has_idea = IRK_additional_army_commissars
+				}
+				swap_ideas = {
+					remove_idea = IRK_additional_army_commissars
+					add_idea = IRK_empowered_red_army
+				}
+			}
+			else = {
+				add_ideas = IRK_empowered_red_army
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+	IRK_establish_the_kgb = {
+		icon = GFX_decision_document_socialism
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_establish_the_kgb_tt
+				check_variable = { IRK_party_balance > 59.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_establish_the_kgb"
+			custom_effect_tooltip = IRK_establish_the_kgb_effect_tt
+			hidden_effect = {
+				IRK_weaken_securocracy = yes
+			}
+			IRK_increase_party_influence_med = yes
+			add_ideas = IRK_the_kgb
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+	IRK_weaken_ministry_powers = {
+		icon = GFX_decision_generic_political_action
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_weaken_ministry_powers_tt
+				check_variable = { IRK_party_balance > 49.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_weaken_ministry_powers"
+			custom_effect_tooltip = IRK_weaken_ministry_powers_effect_tt
+			hidden_effect = {
+				tno_pollution_improve = yes
+				subtract_from_variable = { tno_pollution_effectiveness = 10 }
+				TNO_improve_pollution_policy_effectiveness_monthly_low = yes
+				tno_safety_improve = yes
+				subtract_from_variable = { tno_safety_effectiveness = 10 }
+				TNO_improve_safety_policy_effectiveness_monthly_med = yes
+			}
+			IRK_increase_party_influence_low = yes
+			if = {
+				limit = {
+					has_idea = IRK_strengthened_ministries
+				}
+				swap_ideas = {
+					remove_idea = IRK_strengthened_ministries
+					add_idea = IRK_ministry_reorganizations
+				}
+			}
+			else = {
+				add_ideas = IRK_ministry_reorganizations
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+	IRK_relax_media_censorship = {
+		icon = GFX_decision_generic_propaganda_off
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_relax_media_censorship_tt
+				check_variable = { IRK_party_balance > 54.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_relax_media_censorship"
+			custom_effect_tooltip = IRK_relax_media_censorship_effect_tt
+			swap_ideas = {
+				remove_idea = tno_press_rights_state_press_only
+				add_idea = tno_press_rights_censored_press
+			}
+			subtract_from_variable = { tno_press_rights_effectiveness = 15 }
+			TNO_improve_press_rights_policy_effectiveness_monthly_low = yes
+			add_stability = 0.05
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+
+	#TIER TWO REFORMS
+
+	IRK_party_reform_1 = { #Removing Yagoda from his position
+		icon = GFX_decision_target_document
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_party_reform_1_tt
+				check_variable = { IRK_party_balance > 89.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_party_reform_1"
+			custom_effect_tooltip = IRK_party_reform_1_effect_tt
+			country_event = {
+				id = IRK.62
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+
+	IRK_party_reform_2 = { #Expand the Regional Councils	
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_party_reform_2_tt
+				check_variable = { IRK_party_balance > 84.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_party_reform_2"
+			custom_effect_tooltip = IRK_party_reform_2_effect_tt
+			tno_safety_improve = yes
+			subtract_from_variable = { tno_safety_effectiveness = 10 }
+			add_popularity = {
+				ideology = socialist
+				popularity = 0.05
+			}
+			country_event = {
+				id = IRK.63
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+
+	IRK_party_reform_3 = { #Promote the Young Bureaucrats
+		icon = GFX_decision_generic_shake_hands
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_party_reform_3_tt
+				check_variable = { IRK_party_balance > 79.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_party_reform_3"
+			custom_effect_tooltip = IRK_party_reform_3_effect_tt
+			TNO_improve_academic_base_low = yes
+			TNO_improve_poverty_low = yes
+			add_political_power = 50
+			country_event = {
+				id = IRK.64
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+
+	IRK_party_reform_4 = { #Instate Universal Identification
+		icon = GFX_decision_generic_investigate
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_party_reform_4_tt
+				check_variable = { IRK_party_balance > 74.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_party_reform_4"
+			custom_effect_tooltip = IRK_party_reform_4_effect_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							has_state_category = large_city
+							has_state_category = metropolis
+						}
+					}
+					add_manpower = 60000
+					add_extra_state_shared_building_slots = 1
+				}
+				every_state = {
+					limit = {
+						OR = {
+							has_state_category = city
+						}
+					}
+					add_manpower = 95000
+					add_extra_state_shared_building_slots = 3
+				}
+				every_state = {
+					limit = {
+						OR = {
+							has_state_category = large_town
+						}
+					}
+					add_manpower = 75000
+					add_extra_state_shared_building_slots = 2
+				}
+				every_state = {
+					limit = {
+						NOT = {
+							has_state_category = city
+							has_state_category = large_city
+							has_state_category = large_town
+							has_state_category = metropolis
+						}
+					}
+					add_manpower = -45000
+				}
+			}
+			country_event = {
+				id = IRK.67
+				days = 1
+			}
+			add_to_variable = { national_debt = 0.12 } #already converted to billion
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+
+	IRK_party_reform_5 = { #Encourage Socialist Egalitarianism
+		icon = GFX_decision_generic_propaganda
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_party_reform_5_tt
+				check_variable = { IRK_party_balance > 74.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_party_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_party_reform_5"
+			custom_effect_tooltip = IRK_party_reform_5_effect_tt
+			tno_gender_rights_improve = yes
+			subtract_from_variable = { tno_gender_rights_effectiveness = 10 }
+			TNO_improve_gender_rights_policy_effectiveness_high = yes
+			TNO_improve_women_policy_effectiveness_high = yes
+			country_event = {
+				id = IRK.69
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_YAGODA
+				factor = 0
+			}
+		}
+	}
+
+	#STATE REFORMS
+	IRK_strengthen_general_secretary_powers = {
+		icon = GFX_decision_document_building
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_strengthen_general_secretary_powers_tt
+				check_variable = { IRK_state_balance > 74.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_strengthen_general_secretary_powers"
+			custom_effect_tooltip = IRK_strengthen_general_secretary_powers_effect_tt
+			country_event = {
+				id = IRK.25
+				days = 1
+			}
+			set_country_flag = IRK_state_influence_locked_in
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+	IRK_expand_nkvd_jurisdiction = {
+		icon = GFX_decision_generic_investigate
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_expand_nkvd_jurisdiction_tt
+				check_variable = { IRK_state_balance > 64.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_expand_nkvd_jurisdiction"
+			custom_effect_tooltip = IRK_expand_nkvd_jurisdiction_effect_tt
+			IRK_increase_nkvd_influence_low = yes
+			hidden_effect = {
+				IRK_strengthen_securocracy = yes
+				load_oob = IRK_NKVD_more
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+	IRK_strengthen_ministry_powers = {
+		icon = GFX_decision_generic_political_action
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_strengthen_ministry_powers_tt
+				check_variable = { IRK_state_balance > 59.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_strengthen_ministry_powers"
+			custom_effect_tooltip = IRK_strengthen_ministry_powers_effect_tt
+			IRK_increase_nkvd_influence_low = yes
+			if = {
+				limit = {
+					has_idea = IRK_ministry_reorganizations
+				}
+				swap_ideas = {
+					remove_idea = IRK_ministry_reorganizations
+					add_idea = IRK_strengthened_ministries
+				}
+			}
+			else = {
+				add_ideas = IRK_strengthened_ministries
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+	IRK_appoint_army_commissars = {
+		icon = GFX_decision_generic_military_parade
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_appoint_army_commissars_tt
+				check_variable = { IRK_state_balance > 49.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_appoint_army_commissars"
+			custom_effect_tooltip = IRK_appoint_army_commissars_effect_tt
+			IRK_increase_nkvd_influence_med = yes
+			hidden_effect = {
+				IRK_strengthen_securocracy = yes
+				TNO_improve_military_supervision_policy_effectiveness_med = yes
+			}
+			if = {
+				limit = {
+					has_idea = IRK_empowered_red_army
+				}
+				swap_ideas = {
+					remove_idea = IRK_empowered_red_army
+					add_idea = IRK_additional_army_commissars
+				}
+			}
+			else = {
+				add_ideas = IRK_additional_army_commissars
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+	IRK_expand_rehabiliatory_labor_system = {
+		icon = GFX_decision_generic_workers
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_expand_rehabiliatory_labor_system_tt
+				check_variable = { IRK_state_balance > 54.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_expand_rehabiliatory_labor_system"
+			custom_effect_tooltip = IRK_expand_rehabiliatory_labor_system_effect_tt
+			add_ideas = IRK_expanded_the_gulag
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+				TNO_improve_penal_system_policy_effectiveness_monthly_low = yes
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+
+	#TIER TWO REFORMS
+	IRK_state_reform_1 = { #Purge the Party Faction
+		icon = GFX_decision_document_target
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_state_reform_1_tt
+				check_variable = { IRK_state_balance > 89.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_state_reform_1"
+			custom_effect_tooltip = IRK_state_reform_1_effect_tt
+			country_event = {
+				id = IRK.55
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+
+	IRK_state_reform_2 = { #Escalate Anti-Corruption Campaigns
+		icon = GFX_decision_arrest
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_state_reform_2_tt
+				check_variable = { IRK_state_balance > 84.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_state_reform_2"
+			custom_effect_tooltip = IRK_state_reform_2_effect_tt
+			add_timed_idea = { idea = IRK_state_reform_2_misc_costs days = 90 }
+			add_political_power = 50
+			TNO_improve_poverty_low = yes
+			TNO_improve_admin_efficiency_med = yes
+			country_event = {
+				id = IRK.56
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+
+	IRK_state_reform_3 = { #Escalate Foreign Censorship
+		icon = GFX_decision_document_cancel
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_state_reform_3_tt
+				check_variable = { IRK_state_balance > 74.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_state_reform_3"
+			custom_effect_tooltip = IRK_state_reform_3_effect_tt
+			add_ideas = IRK_foreign_censorship_increased
+			TNO_improve_press_rights_policy_effectiveness_med = yes
+			add_popularity = {
+				ideology = socialist
+				popularity = -0.1
+			}
+			country_event = {
+				id = IRK.59
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+
+	IRK_state_reform_4 = { #Professionalize the Judiciary
+		icon = GFX_decision_generic_political_action
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_state_reform_4_tt
+				check_variable = { IRK_state_balance > 74.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_state_reform_4"
+			custom_effect_tooltip = IRK_state_reform_4_effect_tt
+			TNO_improve_academic_base_med = yes
+			add_stability = 0.025
+			country_event = {
+				id = IRK.60
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+
+	IRK_state_reform_5 = { #Reform Industrial Efficiency
+		icon = GFX_decision_generic_industry
+		allowed = {
+			tag = IRK
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IRK_state_reform_5_tt
+				check_variable = { IRK_state_balance > 69.99 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = IRK_reform_timer_tt
+				NOT = {
+					has_idea = IRK_reformed
+				}
+			}
+		}
+		visible = {
+			check_variable = { IRK_state_balance > 49.99 }
+			has_country_flag = UNLOCK_TIER_TWO_REFORM
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_state_reform_5"
+			custom_effect_tooltip = IRK_state_reform_5_effect_tt
+			set_temp_variable = { temp_econ_GDP_boost_flat  = 0.35 } #already converted to billion
+			econ_GDP_boost_once_flat = yes
+			set_temp_variable = { gdp_growth_temp = 0.04 }
+		    econ_gdp_growth_change = yes
+			country_event = {
+				id = IRK.61
+				days = 1
+			}
+			hidden_effect = {
+				add_timed_idea = { idea = IRK_reformed days = 180 }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				has_country_flag = IRK_AI_REFORM
+				factor = 0
+			}
+		}
+	}
+
+}
+
+IRK_five_year_plans = {
+	IRK_begin_the_eigth_five_year_plan = {
+		icon = GFX_decision_document_socialism
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		cost = 15
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_begin_the_eigth_five_year_plan"
+			set_variable = { IRK_plan_number = 8 }
+			set_variable = { IRK_econ_construction_speed = 0.05 }
+			add_dynamic_modifier = { modifier = IRK_eighth_five_year_plan }
+			set_variable = { IRK_five_year_plans_phase = 1 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	IRK_encourage_international_volunteers = {
+		icon = GFX_decision_generic_civil_support
+		available = {
+			
+		}
+		visible = {
+			
+		}
+		cost = 35
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_encourage_international_volunteers"
+			set_variable = { IRK_econ_weekly_manpower = 200 }
+			add_dynamic_modifier = { modifier = IRK_international_volunteers }
+			force_update_dynamic_modifier = yes
+			set_temp_variable = { temp_econ_spending_amount = 0.035 }
+			econ_spend_money_once_effect_raw_money = yes
+			TNO_improve_training_policy_effectiveness_low = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	IRK_repair_the_baikal_highway = {
+		icon = GFX_decision_generic_workers
+		available = {
+			
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 0 }
+		}
+		cost = 35
+		fire_only_once = yes
+		days_remove = 80
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_repair_the_baikal_highway"
+			set_temp_variable = { temp_econ_spending_amount = 0.04 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_repair_the_baikal_highway"
+			random_owned_controlled_state = {
+				limit = { state = 566 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 564 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 886 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			add_to_variable = { IRK_phase_1_count = 1 }
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	IRK_finish_the_amur_highway = {
+		icon = GFX_decision_generic_workers
+		available = {
+			
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 0 }
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 60
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_finish_the_amur_highway"
+			random_owned_controlled_state = {
+				limit = { state = 561 }
+				add_manpower = -3500
+			}
+			set_temp_variable = { temp_econ_spending_amount = 0.04 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_finish_the_amur_highway"
+			random_owned_controlled_state = {
+				limit = { state = 561 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 563 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 886 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			set_country_flag = IRK_amur_highway_finished
+			add_to_variable = { IRK_phase_1_count = 1 }
+		}
+	}
+
+	IRK_complete_the_magadan_connection = {
+		icon = GFX_decision_generic_infrastructure
+		available = {
+			has_country_flag = IRK_amur_highway_finished
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 0 }
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 60
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_complete_the_magadan_connection"
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				add_manpower = -3500
+			}
+			set_temp_variable = { temp_econ_spending_amount = 0.04 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_complete_the_magadan_connection"
+			random_owned_controlled_state = {
+				limit = { state = 574 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { temp_state_value_addition = 0.025 }
+				econ_state_value_change_addition = yes
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_temp_variable = { temp_state_value_addition = 0.04 }
+				econ_state_value_change_addition = yes
+				set_temp_variable = { state_value_multiplier_temp = 1.02 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.35 } }
+			}
+			clr_country_flag = IRK_amur_highway_finished # don't need anymore
+			add_to_variable = { IRK_phase_1_count = 1 }
+		}
+	}
+
+	IRK_restoration_of_irkutsk_hps = {
+		icon = GFX_decision_gibraltar_dam
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 0 }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 75
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_restoration_of_irkutsk_hps"
+			set_temp_variable = { temp_econ_spending_amount = 0.08 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_restoration_of_irkutsk_hps"
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+			random_owned_controlled_state = {
+				limit = { state = 566 }
+				add_resource = {
+					type = power
+					amount = 6
+				}
+				set_temp_variable = { temp_state_value_addition = 0.05 }
+				econ_state_value_change_addition = yes
+			}
+			add_to_variable = { IRK_phase_1_count = 1 }
+		}
+	}
+
+	IRK_revive_amurs_agricultural_sector = {
+		icon = GFX_decision_industrial_farm
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 0 }
+		}
+		cost = 60
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_revive_amurs_agricultural_sector"
+			set_temp_variable = { temp_econ_spending_amount = 0.08 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_revive_amurs_agricultural_sector"
+			TNO_improve_agriculture_med = yes
+			TNO_improve_poverty_med = yes
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_population_growth_add_N = yes
+			random_owned_controlled_state = {
+				limit = { state = 561 }
+				set_temp_variable = { temp_state_value_addition = 0.06 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.2 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 1364 }
+				set_temp_variable = { temp_state_value_addition = 0.04 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.2 } }
+			}
+			add_to_variable = { IRK_phase_1_count = 1 }
+		}
+	}
+
+	IRK_expand_the_port_of_magadan = {
+		icon = GFX_decision_shipyard
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { IRK_phase_1_count > 4 }
+				tooltip = IRK_phase_1_finished_decisions_tt
+			}
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 0 }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_expand_the_port_of_magadan"
+			set_temp_variable = { temp_econ_spending_amount = 0.08 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_expand_the_port_of_magadan"
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				set_temp_variable = { temp_state_value_addition = 0.06 }
+				econ_state_value_change_addition = yes
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1 } }				
+			}
+			clear_variable = IRK_phase_1_count
+			IRK_advance_plan_phase = yes
+		}
+	}
+
+	IRK_rapid_factory_modernization = {
+		icon = GFX_decision_factory_generic_blue
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 1 }
+		}
+		cost = 80
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_rapid_factory_modernization"
+			set_temp_variable = { temp_econ_spending_amount = 0.18 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_rapid_factory_modernization"
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_factory_output_add_N = yes
+			IRK_econ_dockyard_output_add_N = yes
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				set_temp_variable = { temp_state_value_addition = 0.03 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 637 }
+				set_temp_variable = { temp_state_value_addition = 0.03 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 563 }
+				set_temp_variable = { temp_state_value_addition = 0.045 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 1364 }
+				set_temp_variable = { temp_state_value_addition = 0.045 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 564 }
+				set_temp_variable = { temp_state_value_addition = 0.05 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }
+			}
+			add_to_variable = { IRK_phase_2_count = 1 }
+		}
+	}
+
+	IRK_revive_the_mining_industry = {
+		icon = GFX_decision_mining
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 1 }
+		}
+		cost = 80
+		fire_only_once = yes
+		days_remove = 80
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_revive_the_mining_industry"
+			set_temp_variable = { temp_econ_spending_amount = 0.18 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_revive_the_mining_industry"
+			set_temp_variable = { N = 0.1 }
+			IRK_econ_resource_gain_add_N = yes
+			set_temp_variable = { N = 0.075 }
+			IRK_econ_5yp_misc_econ_add_N = yes
+			random_owned_controlled_state = {
+				limit = { state = 574 }
+				set_temp_variable = { temp_state_value_addition = 0.035 }
+				econ_state_value_change_addition = yes
+				add_resource = { type = power amount = 4 }
+				add_resource = { type = steel amount = 6 }
+				add_resource = { type = tungsten amount = 2 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }				
+			}
+			random_owned_controlled_state = {
+				limit = { state = 561 }
+				set_temp_variable = { temp_state_value_addition = 0.035 }
+				econ_state_value_change_addition = yes
+				add_resource = { type = steel amount = 4 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }				
+			}
+			add_to_variable = { IRK_phase_2_count = 1 }
+		}
+	}
+
+	IRK_trade_with_the_developing_world = {
+		icon = GFX_decision_generic_supply
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 1 }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 100
+		modifier = { free_production_units_modifier = -2 }
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_trade_with_the_developing_world"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_trade_with_the_developing_world"
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_5yp_misc_econ_add_N = yes
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.02 }
+			econ_GDP_boost_once_percentage = yes
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+			add_to_variable = { IRK_phase_2_count = 1 }
+		}
+	}
+
+	IRK_modernizing_the_irkutsk_hps = {
+		icon = GFX_decision_generic_power
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 1 }
+		}
+		cost = 85
+		fire_only_once = yes
+		days_remove = 120
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_modernizing_the_irkutsk_hps"
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_modernizing_the_irkutsk_hps"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.04 }
+			econ_GDP_boost_once_percentage = yes
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+			random_owned_controlled_state = {
+				limit = { state = 566 }
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 2
+					instant_build = yes
+				}	
+				add_extra_state_shared_building_slots = 2	
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { IRK_phase_2_count = 1 }
+		}
+	}
+
+	IRK_the_economic_heart_of_siberia = {
+		icon = GFX_decision_generic_heavy_industry
+		available = {
+			has_completed_focus = IRK_regional_the_paris_of_siberia
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 1 }
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 85
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_economic_heart_of_siberia"
+			set_temp_variable = { temp_econ_spending_amount = 0.15 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_economic_heart_of_siberia"
+			random_owned_controlled_state = {
+				limit = { state = 561 }
+				set_temp_variable = { temp_state_value_addition = 0.1 }
+				econ_state_value_change_addition = yes
+				add_building_construction = {
+					type = offices
+					level = 1
+					instant_build = yes
+				}
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.5 } }				
+			}
+			TNO_improve_admin_efficiency_med = yes
+			add_to_variable = { IRK_phase_2_count = 1 }
+		}
+	}
+
+	IRK_the_open_coastal_city_of_magadan = {
+		icon = GFX_decision_shipyard
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { IRK_phase_2_count > 4 }
+				tooltip = IRK_phase_2_finished_decisions_tt
+			}
+			has_completed_focus = IRK_regional_a_transitional_approach
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 1 }
+			NOT = { has_completed_focus = IRK_regional_echoes_of_the_siberian_plan }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_open_coastal_city_of_magadan"
+			set_temp_variable = { temp_econ_spending_amount = 0.14 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_open_coastal_city_of_magadan"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.02 }
+			econ_GDP_boost_once_percentage = yes
+			add_dynamic_modifier = { modifier = IRK_open_and_reformed_economy }
+			set_temp_variable = { N = 0.1 }
+			IRK_econ_open_misc_econ_add_N = yes
+			set_temp_variable = { N = 1 }
+			IRK_econ_credit_rating_progress_add_N = yes
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 3 } }				
+			}
+			clear_variable = IRK_phase_2_count
+			IRK_advance_plan_phase = yes
+		}
+	}
+
+	IRK_the_industrial_harbor_of_magadan = {
+		icon = GFX_decision_shipyard
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { IRK_phase_2_count > 4 }
+				tooltip = IRK_phase_2_finished_decisions_tt
+			}
+			has_completed_focus = IRK_regional_echoes_of_the_siberian_plan
+		}
+		visible = {
+			NOT = { has_completed_focus = IRK_regional_a_transitional_approach }
+			check_variable = { IRK_five_year_plans_phase > 1 }
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 70
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_industrial_harbor_of_magadan"
+			set_temp_variable = { temp_econ_spending_amount = 0.12 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_industrial_harbor_of_magadan"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.025 }
+			econ_GDP_boost_once_percentage = yes
+			add_dynamic_modifier = { modifier = IRK_building_up_socialism }
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_building_socialism_misc_income_add_N = yes
+			set_temp_variable = { N = 0.025 }
+			IRK_econ_building_socialism_factory_output_add_N = yes
+			random_owned_controlled_state = {
+				limit = { state = 562 }
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}			
+			}
+			clear_variable = IRK_phase_2_count
+			IRK_advance_plan_phase = yes
+		}
+	}
+
+	IRK_the_second_industrialization_wave = {
+		icon = GFX_decision_factory_generic_red
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+		}
+		cost = 100
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_second_industrialization_wave"
+			set_temp_variable = { temp_econ_spending_amount = 0.24 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_second_industrialization_wave"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.025 }
+			econ_GDP_boost_once_percentage = yes
+			set_temp_variable = { N = 2 }
+			IRK_add_production_units_fyp = yes
+			TNO_improve_industrial_equipment_med = yes
+			TNO_improve_industrial_expertise_med = yes
+			TNO_worsen_pollution_policy_effectiveness_med = yes
+			add_to_variable = { IRK_phase_3_yag_count = 1 }
+		}
+	}
+
+	IRK_expand_brigade_recruitment = {
+		icon = GFX_decision_generic_military_parade
+		available = {
+			
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_international_volunteers }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_expand_brigade_recruitment"
+			set_temp_variable = { temp_econ_spending_amount = 0.065 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_expand_brigade_recruitment"
+			set_temp_variable = { N = 400 }
+			IRK_econ_weekly_manpower_add_N = yes
+		}
+	}
+
+	IRK_special_economic_sector = {
+		icon = GFX_decision_generic_building
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_open_and_reformed_economy }
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_special_economic_sector"
+			set_temp_variable = { temp_econ_spending_amount = 0.2 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_special_economic_sector"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.05 }
+			econ_GDP_boost_once_percentage = yes
+			TNO_improve_admin_efficiency_med = yes
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_open_misc_econ_add_N = yes
+			random_owned_controlled_state = {
+				limit = { state = 566 }
+				set_temp_variable = { temp_state_value_addition = 0.15 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 2.5 } }				
+			}
+			add_to_variable = { IRK_phase_3_yag_count = 1 }
+		}
+	}
+
+	IRK_yakutia_special_economic_province = {
+		icon = GFX_decision_generic_building
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_open_and_reformed_economy }
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_yakutia_special_economic_province"
+			set_temp_variable = { temp_econ_spending_amount = 0.2 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_yakutia_special_economic_province"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.05 }
+			econ_GDP_boost_once_percentage = yes
+			TNO_improve_industrial_expertise_med = yes
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_open_misc_econ_add_N = yes
+			random_owned_controlled_state = {
+				limit = { state = 574 }
+				set_temp_variable = { temp_state_value_addition = 0.125 }
+				econ_state_value_change_addition = yes
+				add_resource = { type = steel amount = 4 }
+				add_resource = { type = tungsten amount = 2 }
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 2.5 } }				
+			}
+			add_to_variable = { IRK_phase_3_yag_count = 1 }
+		}
+	}
+
+	IRK_blagoveshchensk_special_economic_sector = {
+		icon = GFX_decision_generic_building
+		available = {
+			has_completed_focus = IRK_regional_increase_japanese_cooperation
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_open_and_reformed_economy }
+			NOT = { has_completed_focus = IRK_regional_across_the_pacific }
+		}
+		cost = 80
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_blagoveshchensk_special_economic_sector"
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_blagoveshchensk_special_economic_sector"
+			TNO_improve_industrial_equipment_med = yes
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_open_misc_econ_add_N = yes
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+			TNO_worsen_pollution_policy_effectiveness_low = yes
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = { state = 1364 }
+				set_temp_variable = { temp_state_value_addition = 0.15 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 4 } }				
+			}
+			add_to_variable = { IRK_phase_3_yag_count = 1 }
+		}
+	}
+
+	IRK_petropavlovsk_kamchatsky_open_coastal_city = {
+		icon = GFX_decision_shipyard
+		available = {
+			has_completed_focus = IRK_regional_across_the_pacific
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_open_and_reformed_economy }
+			NOT = { has_completed_focus = IRK_regional_increase_japanese_cooperation }
+		}
+		cost = 80
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_petropavlovsk_kamchatsky_open_coastal_city"
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_petropavlovsk_kamchatsky_open_coastal_city"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.01 }
+			econ_GDP_boost_once_percentage = yes
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_open_misc_econ_add_N = yes
+			TNO_improve_research_facilities_med = yes
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+			random_owned_controlled_state = {
+				limit = { state = 637 }
+				set_temp_variable = { temp_state_value_addition = 0.125 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 4 } }				
+			}
+			add_to_variable = { IRK_phase_3_yag_count = 1 }
+		}
+	}
+
+	IRK_the_ninth_five_year_plan_state = {
+		icon = GFX_decision_document_socialism
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { IRK_phase_3_yag_count > 3 }
+				tooltip = IRK_phase_3_yagoda_finished_decisions_tt
+			}
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_open_and_reformed_economy }
+		}
+		cost = 40
+		fire_only_once = yes
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_ninth_five_year_plan_state"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_ninth_five_year_plan_state"
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_construction_speed_add_N = yes
+			TNO_improve_poverty_med = yes
+			IRK_advance_plan_year = yes
+			clear_variable = IRK_phase_3_yag_count
+			IRK_advance_plan_phase = yes
+		}
+	}
+
+	IRK_third_industrialization_wave = {
+		icon = GFX_decision_factory_generic_blue
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_building_up_socialism }
+		}
+		cost = 100
+		fire_only_once = yes
+		days_remove = 120
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_third_industrialization_wave"
+			set_temp_variable = { temp_econ_spending_amount = 0.28 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_third_industrialization_wave"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.03 }
+			econ_GDP_boost_once_percentage = yes
+			set_temp_variable = { N = 2 }
+			IRK_add_production_units_fyp = yes
+			TNO_improve_industrial_equipment_med = yes
+			TNO_improve_industrial_expertise_med = yes
+			TNO_worsen_pollution_policy_effectiveness_med = yes
+			add_to_variable = { IRK_phase_3_party_count = 1 }
+		}
+	}
+
+	IRK_coal_mining_boom = {
+		icon = GFX_decision_mining
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_building_up_socialism }
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 100
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_coal_mining_boom"
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_coal_mining_boom"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.02 }
+			random_owned_controlled_state = {
+				limit = { state = 574 }
+				add_building_construction = {
+					type = thermoelectric_plant
+					level = 2
+					instant_build = yes
+				}		
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1.5 } }	
+			}
+			add_to_variable = { IRK_phase_3_party_count = 1 }
+		}
+	}
+
+	IRK_increase_production_quotas = {
+		icon = GFX_decision_generic_political_action
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_building_up_socialism }
+		}
+		cost = 65
+		fire_only_once = yes
+		days_remove = 50
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_increase_production_quotas"
+			set_temp_variable = { temp_econ_spending_amount = 0.1 }
+			econ_spend_money_once_effect_raw_money = yes
+			add_stability = -0.05
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_increase_production_quotas"
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.015 }
+			TNO_improve_max_workhours_policy_effectiveness_med = yes
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_building_socialism_dockyard_output_add_N = yes
+			IRK_econ_building_socialism_factory_output_add_N = yes
+			add_to_variable = { IRK_phase_3_party_count = 1 }
+		}
+	}
+
+	IRK_increase_industrial_trade = {
+		icon = GFX_decision_generic_supply
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_building_up_socialism }
+		}
+		cost = 100
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_increase_industrial_trade"
+			set_temp_variable = { temp_econ_spending_amount = 0.075 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_increase_industrial_trade"
+			set_temp_variable = { N = 0.075 }
+			IRK_econ_building_socialism_misc_income_add_N = yes
+			set_temp_variable = { gdp_growth_temp = 1 }
+			econ_gdp_growth_change = yes
+			add_to_variable = { IRK_phase_3_party_count = 1 }
+		}
+	}
+
+	IRK_the_ninth_five_year_plan_party = {
+		icon = GFX_decision_document_socialism
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { IRK_phase_3_party_count > 3 }
+				tooltip = IRK_phase_3_party_finished_decisions_tt
+			}
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 2 }
+			has_dynamic_modifier = { modifier = IRK_building_up_socialism }
+		}
+		cost = 40
+		fire_only_once = yes
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_ninth_five_year_plan_party"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_ninth_five_year_plan_party"
+			set_temp_variable = { N = 0.05 }
+			IRK_econ_efficiency_cap_add_N = yes
+			IRK_econ_efficiency_retention_add_N = yes
+			IRK_advance_plan_year = yes	
+			IRK_advance_plan_phase = yes
+		}
+	}
+
+	IRK_the_great_siberian_highway_project = {
+		icon = GFX_decision_generic_infrastructure
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 3 }
+		}
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		complete_effect ={
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_great_siberian_highway_project"
+			set_temp_variable = { temp_econ_spending_amount = 0.4 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_the_great_siberian_highway_project"
+			random_owned_controlled_state = {
+				limit = { state = 567 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 568 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 757 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 569 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 578 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+			random_owned_controlled_state = {
+				limit = { state = 570 }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 0.25 } }
+			}
+		}
+	}
+
+	IRK_novosibirsk_special_economic_sector = {
+		icon = GFX_decision_generic_building
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 3 }
+			has_dynamic_modifier = { modifier = IRK_open_and_reformed_economy }
+		}
+		cost = 125
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_novosibirsk_special_economic_sector"
+			set_temp_variable = { temp_econ_spending_amount = 0.4 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_novosibirsk_special_economic_sector"
+			set_temp_variable = { gdp_growth_temp = 0.5 }
+			econ_gdp_growth_change = yes
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = air_equipment
+			}
+			set_temp_variable = { N = 0.1 }
+			IRK_econ_open_misc_econ_add_N = yes
+			random_owned_controlled_state = {
+				limit = { state = 570 }
+				set_temp_variable = { temp_state_value_addition = 0.2 }
+				econ_state_value_change_addition = yes
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 4 } }
+			}
+		}
+	}
+
+	IRK_kemerovos_palaces_of_industry = {
+		icon = GFX_decision_generic_heavy_industry
+		available = {
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 3 }
+			has_dynamic_modifier = { modifier = IRK_building_up_socialism }
+		}
+		cost = 125
+		fire_only_once = yes
+		days_remove = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_kemerovos_palaces_of_industry"
+			set_temp_variable = { temp_econ_spending_amount = 0.4 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_kemerovos_palaces_of_industry"
+			TNO_improve_industrial_equipment_med = yes
+			TNO_improve_industrial_expertise_med = yes
+			set_temp_variable = { N = 2 }
+			IRK_add_production_units_fyp = yes
+			TNO_worsen_pollution_policy_effectiveness_med = yes
+			random_owned_controlled_state = {
+				limit = { state = 569 }
+				set_temp_variable = { state_value_multiplier_temp = 1.05 }
+				econ_state_value_change_multiply = yes
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}	
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1.5 } }
+			}
+		}
+	}
+
+	IRK_western_companies_in_tomsk = {
+		icon = GFX_decision_generic_shake_hands
+		available = {
+			has_completed_focus = IRK_regional_across_the_pacific
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 3 }
+			NOT = { has_completed_focus = IRK_regional_increase_japanese_cooperation }
+		}
+		cost = 100
+		fire_only_once = yes
+		days_remove = 75
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_western_companies_in_tomsk"
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_western_companies_in_tomsk"
+			TNO_improve_research_facilities_low = yes
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = hospital_tech
+			}
+			random_owned_controlled_state = {
+				limit = { state = 578 }
+				set_temp_variable = { state_value_multiplier_temp = 1.05 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1.5 } }
+			}
+		}
+	}
+
+	IRK_zaibatsu_in_krasnoyarsk = {
+		icon = GFX_decision_generic_shake_hands
+		available = {
+			has_completed_focus = IRK_regional_increase_japanese_cooperation
+		}
+		visible = {
+			check_variable = { IRK_five_year_plans_phase > 3 }
+			NOT = { has_completed_focus = IRK_regional_across_the_pacific }
+		}
+		cost = 100
+		fire_only_once = yes
+		days_remove = 75
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_kemerovos_palaces_of_industry"
+			set_temp_variable = { temp_econ_spending_amount = 0.25 }
+			econ_spend_money_once_effect_raw_money = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision IRK_kemerovos_palaces_of_industry"
+			add_tech_bonus = {
+				bonus = 2
+				uses = 1
+				category = motorized_equipment
+			}
+			random_owned_controlled_state = {
+				limit = { state = 757 }
+				set_temp_variable = { state_value_multiplier_temp = 1.05 }
+				econ_state_value_change_multiply = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 1.5 } }
+			}
+		}
+	}
+}
+

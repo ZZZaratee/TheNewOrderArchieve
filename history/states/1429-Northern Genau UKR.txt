@@ -1,0 +1,20 @@
+state = {
+	id=1429
+	name = "STATE_1429"
+	
+	manpower = 109820
+	state_category = pastoral
+	
+	history = {
+		owner = UKR
+		add_core_of = UKR
+
+		buildings = {
+			infrastructure = 4
+		}
+	}
+
+	provinces = {
+		14544 215 3293 6319 3203
+	}
+}

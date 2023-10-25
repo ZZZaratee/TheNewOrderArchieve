@@ -1,0 +1,24 @@
+#POP DONE
+state={
+	id=788
+	name="STATE_788"
+	state_category = rural
+	provinces={
+		6949 11491 11518 
+	}
+	history={
+		owner = BRG
+		victory_points = { 6949 5 }
+		victory_points = { 11491 1 }
+		victory_points = { 11518 1 }
+		buildings = {
+			offices = 2
+			infrastructure = 6
+		}
+		add_core_of = FRA
+		add_core_of = BRG
+	}
+
+	manpower=448453
+	buildings_max_level_factor=1.000
+}

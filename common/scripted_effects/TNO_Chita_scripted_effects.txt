@@ -1,0 +1,109 @@
+#####CHITA SCRIPTED EFFECTS########
+#####BY DROZDOVITE#################
+WHC_tax_conflict_towards_military = {
+	add_to_variable = { CHT_budget_bias_pro_civilian_var = -0.01 }
+	add_to_variable = { CHT_budget_bias_pro_military_var = 0.01 }
+	add_to_variable = { CHT_spending_slider_scale = 1 }
+	if = {
+		limit = {
+			check_variable = {
+				var = CHT_spending_slider_scale 
+				value = 3
+				compare = greater_than_or_equals
+			}
+		}
+		set_variable = { CHT_spending_slider_scale = 0 }
+		army_funding_maximal_increase_low = yes
+		social_funding_maximal_decrease_low = yes
+	}
+}
+
+WHC_tax_conflict_towards_civilians = {
+	add_to_variable = { CHT_budget_bias_pro_civilian_var = 0.01 }
+	add_to_variable = { CHT_budget_bias_pro_military_var = -0.01 }
+	add_to_variable = { CHT_spending_slider_scale = -1 }
+	if = {
+		limit = {
+			check_variable = {
+				var = CHT_spending_slider_scale 
+				value = -3
+				compare = less_than_or_equals
+			}
+		}
+		set_variable = { CHT_spending_slider_scale = 0 }
+		army_funding_maximal_decrease_low = yes
+		social_funding_maximal_increase_low = yes
+	}
+}
+
+CHT_military_influence_increase_low = {
+	add_to_variable = { CHT_military_influence = 2 }
+	clamp_variable = { var = CHT_military_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_military_influence_increase_low_tt
+}
+
+CHT_military_influence_increase_medium = {
+	add_to_variable = { CHT_military_influence = 3 }
+	clamp_variable = { var = CHT_military_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_military_influence_increase_medium_tt
+}
+
+CHT_military_influence_increase_high = {
+	add_to_variable = { CHT_military_influence = 5 }
+	clamp_variable = { var = CHT_military_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_military_influence_increase_high_tt
+}
+
+CHT_military_influence_decrease_low = {
+	add_to_variable = { CHT_military_influence = -2 }
+	clamp_variable = { var = CHT_military_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_military_influence_decrease_low_tt
+}
+
+CHT_military_influence_decrease_medium = {
+	add_to_variable = { CHT_military_influence = -3 }
+	clamp_variable = { var = CHT_military_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_military_influence_decrease_medium_tt
+}
+
+CHT_military_influence_decrease_high = {
+	add_to_variable = { CHT_military_influence = -5 }
+	clamp_variable = { var = CHT_military_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_military_influence_decrease_high_tt
+}
+
+CHT_civilian_influence_increase_low = {
+	add_to_variable = { CHT_civilian_influence = 2 }
+	clamp_variable = { var = CHT_civilian_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_civilian_influence_increase_low_tt
+}
+
+CHT_civilian_influence_increase_medium = {
+	add_to_variable = { CHT_civilian_influence = 3 }
+	clamp_variable = { var = CHT_civilian_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_civilian_influence_increase_medium_tt
+}
+
+CHT_civilian_influence_increase_high = {
+	add_to_variable = { CHT_civilian_influence = 5 }
+	clamp_variable = { var = CHT_civilian_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_civilian_influence_increase_high_tt
+}
+
+CHT_civilian_influence_decrease_low = {
+	add_to_variable = { CHT_civilian_influence = -2 }
+	clamp_variable = { var = CHT_civilian_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_civilian_influence_decrease_low_tt
+}
+
+CHT_civilian_influence_decrease_medium = {
+	add_to_variable = { CHT_civilian_influence = -3 }
+	clamp_variable = { var = CHT_civilian_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_civilian_influence_decrease_medium_tt
+}
+
+CHT_civilian_influence_decrease_high = {
+	add_to_variable = { CHT_civilian_influence = -5 }
+	clamp_variable = { var = CHT_civilian_influence min = 0 max = 30 }
+	custom_effect_tooltip = CHT_civilian_influence_decrease_high_tt
+}

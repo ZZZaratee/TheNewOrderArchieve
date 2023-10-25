@@ -1,0 +1,2064 @@
+ideas = {
+	#############
+    ## SPIRITS ##
+	#############
+	country = {
+		
+		ARG_reign_of_the_cavalry = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_reign_of_the_cavalry" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = ARG_Reign_of_the_Cavalry
+
+			removal_cost = -1
+
+			modifier = {
+				#army_org_factor = -0.2
+				#army_professionalism_monthly_rate = -0.3
+				#max_command_power_mult = -0.5
+
+				army_armor_attack_factor = 0.1
+				army_armor_speed_factor = 0.1
+				army_artillery_attack_factor = 0.1
+
+				army_infantry_attack_factor = -0.15
+				army_infantry_defence_factor = -0.15
+
+				naval_coordination = -0.2
+			}
+		}
+		ARG_anarchy_in_the_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_anarchy_in_the_army" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = ARG_Anarchy_in_the_Army
+
+			removal_cost = -1
+
+			modifier = {
+				#army_org_factor = -0.2
+				#army_professionalism_monthly_rate = -0.3
+				#max_command_power_mult = -0.5
+			}
+		}
+		ARG_navy_controlled_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_navy_controlled_army" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = ARG_Navy_Controlled_Army
+
+			removal_cost = -1
+
+			modifier = {
+				#army_org_factor = -0.2
+				#army_professionalism_monthly_rate = -0.3
+				#max_command_power_mult = -0.5
+			}
+		}		
+		ARG_the_death_of_discipline = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_the_death_of_discipline" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = ARG_Armed_Forces_The_Death_of_Discipline
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.2
+				army_professionalism_monthly_rate = -0.3
+				max_command_power_mult = -0.5
+			}
+		}
+		ARG_structural_unhingement = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_structural_unhingement" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = ARG_Structural_Unhingment
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = 0.50
+			}
+		}
+		ARG_greekback_lira_blues = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_greekback_lira_blues" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = ARG_Greenback_Lira_Blues
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_credit_rating_progress = -2.5
+				#custom_modifier_tooltip = ARG_greekback_lira_blues_tt
+			}
+		}
+		ARG_juan_domingo_el_ausente = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_juan_domingo_el_ausente" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = ARG_Juan_Domingo_el_Ausente
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				authoritarian_democracy_drift = -0.02
+				#custom_modifier_tooltip = ARG_juan_domingo_el_ausente_tt
+			}
+		}
+		ARG_peronist_resistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_peronist_resistance" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = GFX_idea_ARG_peronist_resistance
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.15
+				political_power_gain = -0.5
+				industrial_capacity_factory	= -0.15
+			}
+		}
+		ARG_azules_and_colorados = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_azules_and_colorados" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = GFX_idea_ARG_azules_and_colorados
+
+			removal_cost = -1
+
+			modifier = {
+				army_infantry_attack_factor = -0.10
+				army_infantry_defence_factor = -0.10
+			}
+		}
+		ARG_anti_americanism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_anti_americanism" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = GFX_idea_ARG_anti_americanism
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		ARG_economic_woes = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ARG_economic_woes" }
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+
+			picture = GFX_idea_ARG_economic_woes
+
+			removal_cost = -1
+
+			modifier = {
+                gdp_growth_modifier = -0.015
+				civilian_annual_cost = -0.2
+				taxable_population_modifier = -0.1
+				poverty_monthly_rate = -1
+			}
+		}
+	}
+	#######################
+	###### ARGENTINA TIME
+	###### FRONDIZI STARTING POSITION
+	#######################
+	###### Ministers for Frondizi
+	#######################
+	head_of_government = {
+		ARG_Ricardo_Balbin_hog = { #Frondizi VP 1962-1964
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Ricardo_Balbin_hog"}
+			picture = ARG_Ricardo_Balbin_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				vice_president
+				liberal_democracy
+				hog_silent_workhorse
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Alfredo_Roque_Vitolo_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Alfredo_Roque_Vitolo_hog"}
+			picture = ARG_Alfredo_Vitolo_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_liberal_democracy_liberal_radicalism
+				hog_silent_workhorse
+				ARG_Alfredo_Roque_Vitolo_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Mariano_Grondona_hog = { #Frigerio HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Mariano_Grondona_hog"}
+			picture = ARG_Mariano_Grondona_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				conservative_democracy
+				hog_naive_optimist
+				ARG_Mariano_Grondona_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_Palmero_hog = { #Illia HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_Palmero_hog"}
+			picture = ARG_Juan_Palmero_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_liberal_democracy_liberal_radicalism
+				hog_political_protege
+				ARG_Juan_Palmero_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Pablo_Gonzales_Berges_hog = { #Hardoy HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Pablo_Gonzales_Berges_hog"}
+			picture = ARG_Pablo_Gonzales_Berges_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_conservative_democracy_liberal_conservatism
+				hog_pragmatic_statesman
+				ARG_Pablo_Gonzales_Berges_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_Carlos_Coral_hog = { #Romero HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_Carlos_Coral_hog"}
+			picture = ARG_Juan_Carlos_Coral_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_social_democracy_democratic_socialism
+				hog_devoted_follower
+				ARG_Juan_Carlos_Coral_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Silvano_Santander_hog = { #UD II HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Silvano_Santander_hog"}
+			picture = ARG_Silvano_Santander_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				vice_president
+				minister_liberal_democracy_liberal_radicalism
+				hog_compromise_candidate
+				ARG_Silvano_Santander_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Ernesto_Sanmartino_hog = { #UD II HoG2
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Ernesto_Sanmartino_hog"}
+			picture = ARG_Ernesto_Sanmartino_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_liberal_democracy_liberal_radicalism
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Mariano_Grondona_martinez_hog = { #Martinez HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Mariano_Grondona_martinez_hog"}
+			picture = ARG_Mariano_Grondona_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				conservative_democracy
+				hog_political_protege
+				ARG_Mariano_Grondona_martinez_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Alberto_Maria_Fonrouge_hog = { #Solano Lima HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Alberto_Maria_Fonrouge_hog"}
+			picture = ARG_Alberto_Maria_Fonrouge_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_conservative_democracy_populist_conservatism
+				hog_political_protege
+				ARG_Alberto_Maria_Fonrouge_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Isaac_Rojas_hog = { #Menendez HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Isaac_Rojas_hog"}
+			picture = ARG_Isaac_Rojas_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_despotism_military_junta
+				hog_old_admiral
+				ARG_Isaac_Rojas_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Junta_Militar_hog = { #Poggi HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Junta_Militar_hog"}
+			picture = ARG_Junta_Militar_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				legislature_power
+				minister_despotism_military_junta
+				hog_junta_militar_latin
+				ARG_Junta_Militar_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Rodolfo_Martinez_hog = { #Guido VP 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Rodolfo_Martinez_hog"}
+			picture = ARG_Rodolfo_Martinez_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_conservative_democracy_christian_democracy
+				ARG_Rodolfo_Martinez_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Rodolfo_Decker_hog = { #Visca HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Rodolfo_Decker_hog"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_authoritarian_democracy_peronism
+				ARG_Rodolfo_Decker_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Roman_Subiza_hog = { #Peron HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Roman_Subiza_hog"}
+			picture = ARG_Roman_Subiza_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior_and_political_affairs
+				minister_authoritarian_democracy_peronism
+				hog_el_interventor_latin
+				ARG_Roman_Subiza_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Italo_Luder_hog = { #Menem HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Italo_Luder_hog"}
+			#picture =
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_authoritarian_democracy_peronism
+				ARG_Italo_Luder_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Alberto_Eduardo_Ottalagano_hog = { #Anchorena HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Alberto_Eduardo_Ottalagano_hog"}
+			#picture = 
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_fascism_fascist_populism
+				ARG_Alberto_Eduardo_Ottalagano_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Jose_Lopez_Rega_hog = { #Isabel HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Jose_Lopez_Rega_hog"}
+			#picture = 
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_social_welfare
+				esoteric_nazism
+				ARG_Jose_Lopez_Rega_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Julio_Barbaro_hog = { #Licastro HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Julio_Barbaro_hog"}
+			#picture = 
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_authoritarian_democracy_peronism
+				ARG_Julio_Barbaro_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Carlos_Alconada_Aramburu_hog = { #Balbin HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Julio_Barbaro_hog"}
+			picture = ARG_Carlos_Alconada_Aramburu_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				liberal_democracy
+				ARG_Carlos_Alconada_Aramburu_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Hector_Sandler_hog = { #Aramburu HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Hector_Sandler_hog"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				liberal_democracy
+				hog_naive_optimist
+				ARG_Hector_Sandler_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Guillermo_Borda_hog = { #Ongania HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Guillermo_Borda_hog"}
+			picture = ARG_Guillermo_Borda_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_despotism_aristocratic_conservatism
+				ARG_Guillermo_Borda_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Francisco_Manrique_hog = { #Levingston HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Francisco_Manrique_hog"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_conservative_democracy_liberal_conservatism
+				ARG_Francisco_Manrique_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Arturo_Mor_Roig_hog = { #Lanusse HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Arturo_Mor_Roig_hog"}
+			picture = ARG_Arturo_Mor_Roig_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_liberal_democracy_liberal_radicalism
+				ARG_Arturo_Mor_Roig_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Francisco_Gabrielli_hog = { #Jofre HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Francisco_Gabrielli_hog"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_conservative_democracy_liberal_conservatism
+				ARG_Francisco_Gabrielli_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Eugenio_Conde_hog = { #Martinovich HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Eugenio_Conde_hog"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_social_democracy_social_radicalism
+				ARG_Eugenio_Conde_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Augusto_Vandor_hog = { #Reyes HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Augusto_Vandor_hog"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_authoritarian_democracy_peronism
+				ARG_Augusto_Vandor_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Guillermo_Estevez_Boero_hog = { #Coral HoG
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Guillermo_Estevez_Boero_hog"}
+			picture = ARG_Guillermo_Estevez_Boero_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_interior
+				minister_social_democracy_democratic_socialism
+				hog_devoted_follower
+				ARG_Guillermo_Estevez_Boero_hog_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_vacant_hog = { #vacant hog
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_vacant_hog"}
+			picture = Generic_Position_Vacant
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				#none
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	foreign_minister = {
+		ARG_Carlos_Florit_for = { #Frondizi ForMin 1962-1964
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Carlos_Florit_pol"}
+			picture = ARG_Carlos_Florit_pol
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				for_ideological_crusader
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Miguel_Carcano_for = { #Frondizi ForMin 2 1962-1964
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Miguel_Carcano_for"}
+			picture = ARG_Miguel_Angel_Carcano_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_conservative_democracy_liberal_conservatism
+				for_seasoned_ambassador
+				ARG_Miguel_Carcano_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Mario_Amadeo_for = { #Frigerio ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Mario_Amadeo_for"}
+			picture = ARG_Mario_Amadeo_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_despotism_national_catholicism
+				for_seasoned_ambassador
+				ARG_Mario_Amadeo_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Miguel_Angel_Zavala_Ortiz_for = { #Illia ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Miguel_Angel_Zavala_Ortiz_for"}
+			picture = ARG_Miguel_Angel_Zavala_Ortiz_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_liberal_democracy_liberal_radicalism
+				for_political_appointment
+				ARG_Miguel_Angel_Zavala_Ortiz_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Adolfo_Vicchi_for = { #Hardoy ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Adolfo_Vicchi_for"}
+			picture = ARG_Adolfo_Vicchi_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_despotism_aristocratic_conservatism
+				for_seasoned_ambassador
+				ARG_Adolfo_Vicchi_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Miguel_Carcano_hardoy_for = { #Hardoy ForMin 2
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Miguel_Carcano_hardoy_for"}
+			picture = ARG_Miguel_Angel_Carcano_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				conservative_democracy
+				for_seasoned_ambassador
+				ARG_Miguel_Carcano_hardoy_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Americo_Ghioldi_for = { #Romero ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Americo_Ghioldi_for"}
+			picture = ARG_Americo_Ghioldi_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_social_democracy_democratic_socialism
+				for_biased_intellectual
+				ARG_Americo_Ghioldi_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Adolfo_Vicchi_ud_ii_for = { #UD II ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Adolfo_Vicchi_for"}
+			picture = ARG_Adolfo_Vicchi_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_despotism_aristocratic_conservatism
+				for_seasoned_ambassador
+				ARG_Adolfo_Vicchi_ud_ii_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Jose_Maria_Guido_for = { #Martinez ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Jose_Maria_Guido_for"}
+			picture = ARG_Jose_Maria_Guido_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_liberal_democracy_liberal_radicalism
+				for_great_compromiser
+				ARG_Jose_Maria_Guido_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Ernesto_Sanmartino_for = { #Menendez ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Ernesto_Sanmartino_for"}
+			picture = ARG_Ernesto_Sanmartino_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_liberal_democracy_liberal_radicalism
+				for_political_appointment
+				ARG_Ernesto_Sanmartino_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Armando_P_Martineja_for = { #Poggi ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Armando_P_Martineja_for"}
+			picture = ARG_Armando_P_Martineja_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				chief_of_the_economic_council
+				minister_despotism_military_junta
+				eco_military_entrepreneur
+				ARG_Armando_P_Martineja_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Mariano_Jose_Drago_for = { #Guido ForMin 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Mariano_Jose_Drago_for"}
+			picture = ARG_Mariano_Jose_Drago_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				conservative_democracy
+				ARG_Mariano_Jose_Drago_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Mario_Amadeo_peron_for = { #Peron ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Mario_Amadeo_peron_for"}
+			picture = ARG_Mario_Amadeo_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_despotism_national_catholicism
+				for_seasoned_ambassador
+				ARG_Mario_Amadeo_peron_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Antonio_Cafiero_for = { #Menem ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Antonio_Cafiero_for"}
+			picture = ARG_Antonio_Cafiero_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_authoritarian_democracy_peronism
+				ARG_Antonio_Cafiero_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Oscar_Ivanissevich_for = { #Anchorena ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Oscar_Ivanissevich_for"}
+			picture = ARG_Oscar_Ivanissevich_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_fascism_fascist_populism
+				ARG_Oscar_Ivanissevich_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Alberto_Vignes_for = { #Isabel ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Alberto_Vignes_for"}
+			picture = ARG_Alberto_Vignes_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_authoritarian_democracy_peronism
+				ARG_Alberto_Vignes_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_Carlos_Puig_for = { #Licastro ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_Carlos_Puig_for"}
+			picture = ARG_Juan_Carlos_Puig_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_authoritarian_democracy_social_nationalism
+				ARG_Juan_Carlos_Puig_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Carlos_Humberto_Perrette_for = { #Balbin ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Carlos_Humberto_Perrette_for"}
+			picture = ARG_Carlos_Humberto_Perrette_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_liberal_democracy_liberal_radicalism
+				ARG_Carlos_Humberto_Perrette_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Americo_Ghioldi_aramburu_for = { #Aramburu ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Americo_Ghioldi_aramburu_for"}
+			picture = ARG_Americo_Ghioldi_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_social_democracy_democratic_socialism
+				for_political_appointment
+				ARG_Americo_Ghioldi_aramburu_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Nicanor_Costa_Mendez_for = { #Ongania ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Nicanor_Costa_Mendez_for"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_despotism_national_catholicism
+				ARG_Nicanor_Costa_Mendez_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Luis_Maria_de_Pablo_Pardo_for = { #Levingston ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Luis_Maria_de_Pablo_Pardo_for"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_despotism_national_catholicism
+				ARG_Luis_Maria_de_Pablo_Pardo_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Eduardo_Mc_Loughlin_for = { #Lanusse ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Eduardo_Mc_Loughlin_for"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_despotism_interim_government
+				ARG_Eduardo_Mc_Loughlin_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_Ramon_Aguirre_Lanari_for = { #Jofre ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_Ramon_Aguirre_Lanari_for"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_conservative_democracy_paternalistic_conservatism
+				ARG_Juan_Ramon_Aguirre_Lanari_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Victor_H_Martinez_for = { #Martinovich ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Victor_H_Martinez_for"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_social_democracy_social_radicalism
+				ARG_Victor_H_Martinez_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Leopoldo_Bravo_for = { #Reyes ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Leopoldo_Bravo_for"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_social_democracy_social_radicalism
+				ARG_Leopoldo_Bravo_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Victor_Garcia_Costa_for = { #Coral ForMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Victor_Garcia_Costa_for"}
+			picture = ARG_Victor_Garcia_Costa_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_foreign_affairs
+				minister_social_democracy_democratic_socialism
+				for_ideological_crusader
+				ARG_Victor_Garcia_Costa_for_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_vacant_for = { #vacant for
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_vacant_for"}
+			picture = Generic_Position_Vacant
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				#none
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	economy_minister = {
+		#ARG_Rogelio_Frigerio_eco = { #Frondizi EconMin 1 1962-1964
+		#	on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Rogelio_Frigerio_eco"}
+		#	picture = ARG_Rogelio_Frigerio_eco
+		#	allowed = {
+		#		original_tag = ARG
+		#	}
+		#	available = {
+
+		#	}
+		#	traits = {
+		#		economy_minister
+		#		liberal_democracy
+		#		eco_reformer
+		#	}
+		#	cancel_if_invalid = yes
+		#	ledger = civilian
+		#}
+		ARG_Alvaro_Alsogaray_eco = { #Frondizi EconMin 2 1962-1964
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Alvaro_Alsogaray_eco"}
+			picture = ARG_Alvaro_Alsogaray_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				liberal_democracy
+				eco_union_buster
+				ARG_Alvaro_Alsogaray_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_E_Guglialmelli_eco = { #Frigerio EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_E_Guglialmelli_eco"}
+			picture = ARG_Juan_E_Guglialmelli_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_planning
+				minister_liberal_democracy_national_liberalism
+				eco_industrialiser
+				ARG_Juan_E_Guglialmelli_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_Carlos_Pugliese_eco = { #Illia EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_Carlos_Pugliese_eco"}
+			picture = ARG_Juan_Carlos_Pugliese_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				liberal_democracy
+				eco_keynesian_economy
+				ARG_Juan_Carlos_Pugliese_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Raul_Prebisch_eco = { #Hardoy EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Raul_Prebish_eco"}
+			picture = ARG_Raul_Prebisch_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				conservative_democracy
+				eco_industrialiser
+				ARG_Raul_Prebisch_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Torcuato_S_Di_Tella_eco = { #Romero EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Torcuato_S_Di_Tella_eco"}
+			picture = ARG_Torcuato_S_Di_Tella_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_social_democracy_democratic_socialism
+				eco_big_spender
+				ARG_Torcuato_S_Di_Tella_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Aldo_Ferrer_eco = { #UD II EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Aldo_Ferrer_eco"}
+			picture = ARG_Aldo_Ferrer_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_social_democracy_social_radicalism
+				eco_big_spender
+				ARG_Aldo_Ferrer_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_E_Guglialmelli_martinez_eco = { #Martinez EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_E_Guglialmelli_martinez_eco"}
+			picture = ARG_Juan_E_Guglialmelli_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_planning
+				minister_liberal_democracy_national_liberalism
+				eco_industrialiser
+				ARG_Juan_E_Guglialmelli_martinez_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Rogelio_Frigerio_eco = { #Solano Lima EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Rogelio_Frigerio_eco"}
+			picture = ARG_Rogelio_Frigerio_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_liberal_democracy_national_liberalism
+				eco_industrialiser
+				ARG_Rogelio_Frigerio_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Arturo_Mathov_eco = { #Menendez EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Arturo_Mathov_eco"}
+			picture = ARG_Arturo_Mathov_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_finance
+				minister_liberal_democracy_liberal_radicalism
+				eco_anti_reform
+				ARG_Arturo_Mathov_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Adolfo_Vicchi_poggi_eco = { #Poggi EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Adolfo_Vicchi_poggi_eco"}
+			picture = ARG_Adolfo_Vicchi_for
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_finance
+				minister_despotism_aristocratic_conservatism
+				for_seasoned_ambassador
+				ARG_Adolfo_Vicchi_poggi_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Federico_Pinedo_eco = { #Guido EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Federico_Pinedo_eco"}
+			picture = ARG_Federico_Pinedo_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_finance
+				conservative_democracy
+				ARG_Federico_Pinedo_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Jorge_Antonio_eco = { #Peron EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Jorge_Antonio_eco"}
+			picture = ARG_Jorge_Antonio_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				president_of_the_central_bank_and_institute_for_foreign_exchange
+				minister_authoritarian_democracy_peronism
+				eco_the_mage_of_finances_latin
+				ARG_Jorge_Antonio_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Alvaro_Alsogaray_menem_eco = { #Menem EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Alvaro_Alsogaray_menem_eco"}
+			picture = ARG_Alvaro_Alsogaray_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				liberal_democracy
+				eco_union_buster
+				ARG_Alvaro_Alsogaray_menem_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Alfredo_Gomez_Morales_eco = { #Anchorena EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Alfredo_Gomez_Morales_eco"}
+			picture = ARG_Alfredo_Gomez_Morales_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_authoritarian_democracy_peronism
+				ARG_Alfredo_Gomez_Morales_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Celestino_Rodrigo_eco = { #Isabel EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Celestino_Rodrigo_eco"}
+			picture = ARG_Celestino_Rodrigo_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_authoritarian_democracy_peronism
+				ARG_Celestino_Rodrigo_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_CTP_eco = { #Licastro EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_CTP_eco"}
+			picture = ARG_Junta_Militar_hog
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				eco_ctp_latin
+				minister_authoritarian_democracy_social_nationalism
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Raul_Prebisch_balbin_eco = { #Balbin EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Raul_Prebisch_balbin_eco"}
+			picture = ARG_Raul_Prebisch_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				head_of_the_second_prebisch_commission
+				minister_liberal_democracy_national_liberalism
+				ARG_Raul_Prebisch_balbin_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Raul_Ondarts_eco = { #Aramburu EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Raul_Ondarts_eco"}
+			picture = ARG_Raul_Ondarts_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				liberal_democracy
+				eco_laissez_faire_capitalist
+				ARG_Raul_Ondarts_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Adalbert_Krieger_Vassena_eco = { #Ongania EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Adalbert_Krieger_Vassena_eco"}
+			picture = ARG_Adalbert_Krieger_Vassena_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_conservative_democracy_liberal_conservatism
+				ARG_Adalbert_Krieger_Vassena_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Aldo_Ferrer_levingston_eco = { #Levingston EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Aldo_Ferrer_levingston_eco"}
+			picture = ARG_Aldo_Ferrer_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_social_democracy_social_radicalism
+				ARG_Aldo_Ferrer_levingston_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Cayetano_Antonio_Licciardo_eco = { #Lanusse EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Cayetano_Antonio_Licciardo_eco"}
+			#picture = 
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				liberal_democracy
+				ARG_Cayetano_Antonio_Licciardo_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Felipe_Yofre_eco = { #Jofre EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Felipe_Yofre_eco"}
+			#picture = 
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_conservative_democracy_liberal_conservatism
+				ARG_Felipe_Yofre_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Eduardo_Gamond_eco = { #Martinovic EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Eduardo_Gamond_eco"}
+			#picture = 
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_social_democracy_social_radicalism
+				ARG_Eduardo_Gamond_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Oreste_Popescu_eco = { #Reyes EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Oreste_Popescu_eco"}
+			#picture = 
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_liberal_democracy_national_liberalism
+				ARG_Oreste_Popescu_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Leopoldo_Portnoy_eco = { #Coral EconMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Leopoldo_Portnoy_eco"}
+			picture = ARG_Leopoldo_Portnoy_eco
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_economy
+				minister_social_democracy_democratic_socialism
+				eco_big_spender
+				ARG_Leopoldo_Portnoy_eco_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_vacant_eco = { #vacant eco
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_vacant_eco"}
+			picture = Generic_Position_Vacant
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				#none
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+	security_minister = {
+		ARG_Raul_Poggi_sec = { #Frondizi SecMin Colorado 1962-1964
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Raul_Poggi_sec"}
+			picture = ARG_Raul_Poggi_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				security_minister
+				despotism
+				sec_crooked_kleptocrat
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Rosendo_Fraga_sec = { #Frondizi SecMin 2 1962-1964
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Rosendo_Fraga_sec"}
+			picture = ARG_Rosendo_Fraga_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				secretary_of_war
+				minister_conservative_democracy_liberal_conservatism
+				sec_retired_general
+				ARG_Rosendo_Fraga_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_C_Rosas_sec = { #Frigerio SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_C_Rosas_sec"}
+			picture = ARG_Jose_C_Rosas_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				secretary_of_war
+				despotism
+				sec_retired_general
+				ARG_Juan_C_Rosas_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Ignacio_Avalos_sec = { #Illia SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Ignacio_Avalos_sec"}
+			picture = ARG_Ignacio_Avalos_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				secretary_of_war
+				despotism
+				sec_retired_general
+				ARG_Ignacio_Avalos_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Rosendo_Fraga_hardoy_sec = { #Hardoy SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Rosendo_Fraga_hardoy_sec"}
+			picture = ARG_Rosendo_Fraga_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				secretary_of_war
+				minister_conservative_democracy_liberal_conservatism
+				sec_retired_general
+				ARG_Rosendo_Fraga_hardoy_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Juan_C_Rosas_romero_sec = { #Romero SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Juan_C_Rosas_romero_sec"}
+			picture = ARG_Jose_C_Rosas_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				secretary_of_war
+				despotism
+				sec_retired_general
+				ARG_Juan_C_Rosas_romero_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Eduardo_R_Castro_Sanchez_sec = { #UD II SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Eduardo_R_Castro_Sanchez_sec"}
+			picture = ARG_Eduardo_R_Castro_Sanchez_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				secretary_of_war
+				despotism
+				sec_steadfast_defender
+				ARG_Eduardo_R_Castro_Sanchez_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Benjamin_Rattenbach_sec = { #Martinez SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Benjamin_Rattenbach_sec"}
+			picture = ARG_Benjamin_Rattenbach_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				secretary_of_war
+				minister_despotism_national_catholicism
+				sec_retired_general
+				ARG_Benjamin_Rattenbach_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Manuel_Reimundes_sec = { #Solano Lima SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Manuel_Reimundes_sec"}
+			picture = ARG_Manuel_Reimundes_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				secretary_of_war
+				despotism
+				sec_green_dragon_latin
+				ARG_Manuel_Reimundes_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Pedro_Eugenio_Aramburu_sec = { #Menendez SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Pedro_Eugenio_Aramburu_sec"}
+			picture = ARG_Pedro_Eugenio_Aramburu_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				minister_despotism_military_junta
+				sec_back_stabber
+				ARG_Pedro_Eugenio_Aramburu_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Carlos_Eugenio_Moori_Koening_sec = { #Poggi SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Carlos_Eugenio_Moori_Koening_sec"}
+			picture = ARG_Carlos_Eugenio_Moori_Koenig_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				minister_despotism_military_junta
+				sec_necrophile_colonel_latin
+				ARG_Carlos_Eugenio_Moori_Koening_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Miguel_Angel_Iniguez_sec = { #Peron SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Miguel_Angel_Iniguez_sec"}
+			picture = ARG_Miguel_Angel_Iniguez_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				minister_authoritarian_democracy_peronism
+				hog_old_general
+				ARG_Miguel_Angel_Iniguez_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Jorge_Carcagno_sec = { #Menem SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Jorge_Carcagno_sec"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				despotism
+				ARG_Jorge_Carcagno_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Fernando_Amadeo_Baldrich_sec = { #Anchorena SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Fernando_Amadeo_Baldrich_sec"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				despotism
+				ARG_Fernando_Amadeo_Baldrich_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Jorge_Rafael_Videla_sec = { #Isabel SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Jorge_Rafael_Videla_sec"}
+			picture = ARG_Jorge_Rafael_Videla_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				army_commander_in_chief
+				despotism
+				ARG_Jorge_Rafael_Videla_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Jose_Luis_Fernandez_Valoni_sec = { #Licastro SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Jose_Luis_Fernandez_Valoni_sec"}
+			picture = ARG_Jose_Luis_Fernandez_Valoni_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				minister_authoritarian_democracy_social_nationalism
+				ARG_Jose_Luis_Fernandez_Valoni_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Hector_Hidalgo_Sola_sec = { #Balbin SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Hector_Hidalgo_Sola_sec"}
+			picture = ARG_Hector_Hidalgo_Sola_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_defense
+				liberal_democracy
+				ARG_Hector_Hidalgo_Sola_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Bernardino_Labayru_sec = { #Aramburu SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Bernardino_Labayru_sec"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				despotism
+				hog_old_general
+				ARG_Bernardino_Labayru_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Eduardo_Senorans_sec = { #Ongania SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Eduardo_Senorans_sec"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				head_of_side
+				minister_despotism_national_catholicism
+				ARG_Eduardo_Senorans_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Jose_Rafael_Caceres_Monie_sec = { #Levingston SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Eduardo_Senorans_sec"}
+			picture = x
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_defense
+				minister_liberal_democracy_national_liberalism
+				ARG_Jose_Rafael_Caceres_Monie_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Ezequiel_Alfredo_Martinez_sec = { #Lanusse SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Eduardo_Senorans_sec"}
+			picture = ARG_Ezequiel_Alfredo_Martinez_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				minister_despotism_military_junta
+				ARG_Ezequiel_Alfredo_Martinez_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Eduardo_Juan_Uriburu_sec = { #Jofre SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Eduardo_Senorans_sec"}
+			picture = ARG_Eduardo_Juan_Uriburu_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				minister_despotism_national_catholicism
+				ARG_Eduardo_Juan_Uriburu_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_Osiris_Guillermo_Villegas_sec = { #Martinovic/Reyes/Coral SecMin
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_Osiris_Guillermo_Villegas_sec"}
+			picture = ARG_Osiris_Guillermo_Villegas_sec
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				minister_of_war
+				despotism
+				ARG_Osiris_Guillermo_Villegas_sec_desc
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+		ARG_vacant_sec = { #vacant sec
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ARG_vacant_sec"}
+			picture = Generic_Position_Vacant
+			allowed = {
+				original_tag = ARG
+			}
+			available = {
+
+			}
+			traits = {
+				#none
+			}
+			cancel_if_invalid = yes
+			ledger = civilian
+		}
+	}
+}

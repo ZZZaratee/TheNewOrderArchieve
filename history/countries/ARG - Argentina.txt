@@ -1,0 +1,606 @@
+﻿capital = 1511
+
+if = {
+	limit = { NOT = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		ww2_submarine = 1
+		ww2_destroyer = 1
+		ww2_frigate = 1
+		basic_frigate = 1
+		ww2_cruiser = 1
+		ww2_battleship = 1
+		transport = 1
+	}
+	set_naval_oob = "ARG_1962_naval"
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+
+		early_ship_hull_very_light = 1
+
+		early_ship_hull_more_light = 1
+
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+
+		early_ship_hull_submarine = 1
+
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+
+		early_ship_hull_heavy = 1
+
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		dp_secondary_battery = 1
+
+		basic_torpedo = 1
+
+		basic_depth_charges = 1
+
+		basic_secondary_battery = 1
+		mtg_transport = 1
+
+		antiair_1950 = 1
+
+		basic_fire_control_system = 1
+
+		sonar = 1
+
+	}
+	create_equipment_variant = {
+		name = "Clase Balao"
+		type = ship_hull_submarine_1
+		parent_version = 0
+		modules = {
+			fixed_ship_engine_slot = sub_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Flower Canadiense"
+		type = ship_hull_very_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_torpedo_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Muratore"
+		type = ship_hull_very_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_torpedo_slot = empty
+			fixed_ship_radar_slot = empty 
+			fixed_ship_engine_slot = light_ship_engine_1
+			mid_1_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_mine_sweeper_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Mendoza"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_radar_slot = empty
+			mid_1_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Churruca"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Buenos Aires"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = empty
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_torpedo_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Brooklyn"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			front_1_custom_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Azopardo"
+		type = ship_hull_more_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Hercules EE.UU"
+		type = ship_hull_more_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = dp_light_battery
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+	}
+	set_naval_oob = "ARG_1962_naval_mtg"
+}
+
+
+## POLITICAL GUI INIT
+oob = "ARG_1962"
+ 
+set_variable = { trade_opinion_embargo@GER = 1 }
+set_variable = { trade_opinion_embargo@GGR = 1 }
+set_variable = { trade_opinion_embargo@BGR = 1 }
+set_variable = { trade_opinion_embargo@HGR = 1 }
+set_variable = { trade_opinion_embargo@SGR = 1 }
+set_variable = { trade_opinion_embargo@CZE = 1 }
+set_variable = { trade_opinion_embargo@GGN = 1 }
+set_variable = { trade_opinion_embargo@SLO = 1 }
+set_variable = { trade_opinion_embargo@UKR = 1 }
+set_variable = { trade_opinion_embargo@MCW = 1 }
+set_variable = { trade_opinion_embargo@OST = 1 }
+set_variable = { trade_opinion_embargo@COG = 1 }
+set_variable = { trade_opinion_embargo@CAU = 1 }
+set_variable = { trade_opinion_embargo@SER = 1 }
+set_variable = { trade_opinion_embargo@DEN = 1 }
+set_variable = { trade_opinion_embargo@HOL = 1 }
+set_variable = { trade_opinion_embargo@NOR = 1 }
+set_variable = { trade_opinion_embargo@CRN = 1 }
+set_variable = { trade_opinion_embargo@MAD = 1 }
+set_variable = { trade_opinion_embargo@GRO = 1 }
+set_variable = { trade_opinion_embargo@ANG = 1 }
+set_variable = { trade_opinion_embargo@HOL = 1 }
+set_variable = { trade_opinion_embargo@BRG = 1 }
+set_variable = { trade_opinion_embargo@BUL = 1 }
+set_variable = { trade_opinion_embargo@ENG = 1 }
+set_variable = { trade_opinion_embargo@FRA = 1 }
+set_variable = { trade_opinion_embargo@BRT = 1 }
+set_variable = { trade_opinion_embargo@IRE = 1 }
+
+set_variable = { trade_opinion_embargo@JAP = 1 }
+set_variable = { trade_opinion_embargo@CHI = 1 }
+set_variable = { trade_opinion_embargo@PHI = 1 }
+set_variable = { trade_opinion_embargo@INS = 1 }
+set_variable = { trade_opinion_embargo@BUR = 1 }
+set_variable = { trade_opinion_embargo@THA = 1 }
+set_variable = { trade_opinion_embargo@CAM = 1 }
+set_variable = { trade_opinion_embargo@LAO = 1 }
+set_variable = { trade_opinion_embargo@VIN = 1 }
+set_variable = { trade_opinion_embargo@GAN = 1 }
+set_variable = { trade_opinion_embargo@GUX = 1 }
+set_variable = { trade_opinion_embargo@MAN = 1 }
+set_variable = { trade_opinion_embargo@SIC = 1 }
+set_variable = { trade_opinion_embargo@GUZ = 1 }
+set_variable = { trade_opinion_embargo@SHX = 1 }
+set_variable = { trade_opinion_embargo@GNG = 1 }
+set_variable = { trade_opinion_embargo@YUN = 1 }
+set_variable = { trade_opinion_embargo@BHU = 1 }
+
+set_politics = {	
+	ruling_party = liberal_democracy
+	last_election = "1958.2.23"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 1
+    ultranationalism = 0
+    socialist = 3
+    social_democracy = 5
+    liberal_democracy = 34
+    #market_liberal = 0
+    conservative_democracy = 11
+    authoritarian_democracy = 27
+    despotism = 15
+    fascism = 0
+	national_socialism = 4
+}
+
+set_autonomy = {
+	target = TDF
+	autonomy_state = autonomy_military_government
+}
+
+add_ideas = {
+	#Faction Status
+	#OFN_Candidate_Member
+	TRI_Observer
+	#Spirits
+	ARG_the_death_of_discipline
+	ARG_structural_unhingement
+	ARG_greekback_lira_blues
+	ARG_juan_domingo_el_ausente
+	#ARG_political_radicalization
+	#ARG_Union_Civica_Radical
+	#ARG_peron_uno
+	#Ministers
+	ARG_Alfredo_Roque_Vitolo_hog
+	ARG_Miguel_Carcano_for
+	ARG_Alvaro_Alsogaray_eco
+	ARG_Rosendo_Fraga_sec
+	#POLITICAL
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_encouraged_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	tno_refugees_open
+	#MILITARY
+	tno_conscription_two_year_draft
+	tno_women_noncombat_only
+	tno_military_supervision_rules_of_engagement
+	tno_training_combat_schooling
+	tno_racial_integration_not_applicable
+	tno_draft_exemptions_none
+	#SOCIAL
+	tno_safety_excellent_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_few_regulations
+	tno_education_public_higher_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_gender_equality
+	tno_minorities_equal_rights
+	tno_security_police
+	#ECONOMIC
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_good_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_generous_subsidies
+	#SOCIETAL DEVELOPMENT
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_factory_complexes
+	tno_agriculture_mass_mechanized
+	tno_research_facilities_modern
+	tno_academic_base_secondary_schooling
+	tno_admin_efficiency_widespread_corruption
+}
+
+### Policy Effectiveness
+
+set_country_flag = tno_defined_startup_effectiveness
+
+# ECONOMIC LAWS
+set_variable = { tno_trade_laws_effectiveness = 20 }
+set_variable = { tno_income_taxation_effectiveness = 60 }
+set_variable = { tno_minimum_wage_effectiveness = 70 }
+set_variable = { tno_max_workhours_effectiveness = 80 }
+set_variable = { tno_child_labor_effectiveness = 100 }
+set_variable = { tno_pensions_effectiveness = 70 }
+set_variable = { tno_unemployment_effectiveness = 60 }
+
+# SOCIAL LAWS
+set_variable = { tno_safety_effectiveness = 90 }
+set_variable = { tno_health_care_effectiveness = 55 }
+set_variable = { tno_pollution_effectiveness = 80 }
+set_variable = { tno_education_effectiveness = 70 }
+set_variable = { tno_penal_system_effectiveness = 70 }
+set_variable = { tno_lgbt_rights_effectiveness = 30 }
+set_variable = { tno_gender_rights_effectiveness = 40 }
+set_variable = { tno_minorities_effectiveness = 70 }
+set_variable = { tno_security_effectiveness = 60 }
+
+# POLITICAL LAWS
+set_variable = { tno_political_parties_effectiveness = 50 }
+set_variable = { tno_religious_rights_effectiveness = 80 }
+set_variable = { tno_trade_unions_effectiveness = 100 }
+set_variable = { tno_immigration_effectiveness = 80 }
+set_variable = { tno_slavery_effectiveness = 100 }
+set_variable = { tno_public_meetings_effectiveness = 70 }
+set_variable = { tno_press_rights_effectiveness = 90 }
+set_variable = { tno_vote_franchise_effectiveness = 80 }
+set_variable = { tno_refugees_effectiveness = 70 }
+
+# MILITARY LAWS
+set_variable = { tno_conscription_effectiveness = 65 }
+set_variable = { tno_women_effectiveness = 90 }
+set_variable = { tno_military_supervision_effectiveness = 80 }
+set_variable = { tno_training_effectiveness = 60 }
+set_variable = { tno_racial_integration_effectiveness = 100 }
+set_variable = { tno_draft_exemptions_effectiveness = 90 }
+
+create_country_leader = {
+	name = "Arturo Frondizi"
+	desc = "POLITICS_AF_DESC"
+	picture = "Portrait_Argentina_Arturo_Frondizi.dds"
+	expire = "1994.4.20"
+	ideology = liberal_democracy_national_liberal_subtype
+	traits = {
+		paper_mache_machiavellian_latin
+	}
+}
+
+create_country_leader = {
+	name = "Emilio Hardoy"
+	desc = "POLITICS_EMILIO_HARDOY_DESC"
+	picture = "Portrait_ARG_Emilio_Hardoy.dds"
+	expire = "1994.4.20"
+	ideology = conservative_democracy_liberal_conservatism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "José Luis Romero"
+	desc = "POLITICS_JLR_DESC"
+	picture = "Portrait_Argentina_Jose_Luis_Romero.dds"
+	expire = "1994.4.20"
+	ideology = social_democracy_democratic_socialism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "José Luis Romero"
+	desc = "POLITICS_JLR_DESC"
+	picture = "Portrait_Argentina_Jose_Luis_Romero.dds"
+	expire = "1994.4.20"
+	ideology = socialist_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Raul Matera"
+	#desc = "POLITICS_AnF_DESC"
+	#picture = "Portrait_Argentina_Andres_Framini.dds"
+	expire = "1994.4.20"
+	ideology = authoritarian_democracy_peronism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Raúl Alejandro Poggi"
+	desc = "POLITICS_RAUL_POGGI_DESC"
+	picture = "Portrait_Argentina_Poggi.dds"
+	expire = "1994.4.20"
+	ideology = despotism_military_junta_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Alberto Ezcurra Uriburu"
+	#desc = "POLITICS_RAUL_POGGI_DESC"
+	#picture = "Portrait_Argentina_Poggi.dds"
+	expire = "1994.4.20"
+	ideology = national_socialism_clerical_fascism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Partido Communista"
+	#desc = "POLITICS_AF_DESC"
+	#picture = "Portrait_Argentina_Arturo_Frondizi.dds"
+	expire = "1994.4.20"
+	ideology = communist_subtype
+	traits = {
+	}
+}
+
+set_technology = {
+	##INFANTRY##
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+	infantry_weapons_3 = 1
+	infantry_weapons_improvements_5 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	night_vision_1 = 1
+	support_weapons2 = 1
+	support_weapons3 = 1
+	night_vision_2 = 1
+	infantry_at = 1
+	infantry_at2 = 1
+	infantry_at3 = 1
+	
+	motorized_infantry = 1
+	motorized_rocket_unit = 1
+	motorized_infantry_1 = 1
+	marines = 1
+	marines2 = 2
+	tech_mountaineers = 1
+	tech_mountaineers2 = 1
+	tech_mountaineers3 = 1
+	paratroopers = 1
+
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_engineers_flamethrowers_1 = 1
+	tech_engineers2 = 1
+	tech_engineers_flamethrowers_2 = 1
+	tech_engineers3 = 1
+	tech_engineers_flamethrowers_3 = 1
+	tech_recon = 1
+	tech_recon2 = 1
+	tech_military_police = 1
+	tech_military_police2 = 1
+	tech_military_police3 = 1
+	tech_maintenance_company = 1
+	tech_maintenance_company2 = 1
+	tech_field_hospital = 1
+	tech_field_hospital2 = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+	tech_signal_company2 = 1
+	tech_scout_helicopter_company = 1
+	tech_transport_helicopter_company = 1
+	
+	##ARMOR##
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+	APC_1950 = 1
+	APC_1950_basic_turret = 1
+	#APC_1950_basic_engine = 1
+	APC_1950_basic_armor = 1
+	APC_1960 = 1
+	MBT_1950 = 1
+	MBT_1950_basic_turret = 1
+	#MBT_1950_basic_engine = 1
+	MBT_1950_basic_armor = 1
+	
+	##ARTILLERY##
+	
+	antiair5 = 1
+	antiair_1950 = 1
+	light_SPAA_1950 = 1
+	light_SPAA_1960 = 1
+	SPAA_1950 = 1
+	artillery4 = 1
+	artillery_1950 = 1
+	light_SPART_1950 = 1
+	light_SPART_1950_soft_attack = 1
+	SPART_1950 = 1
+	SPART_1950_soft_attack = 1
+
+	###AERIAL###
+
+	early_fighter = 1
+	jet_engines = 1
+	jet_engines_bombers = 1
+	fighter_1945 = 1
+	cv_1945_fighter = 1
+	fighter_1950 = 1
+	cv_1950_fighter = 1
+	fighter_1960 = 1
+	interceptor_1945 = 1
+	interceptor_1950 = 1
+	CAS_1945 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	heavy_air_1950 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	tac_air_1950 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+	transport_air_1960 = 1
+	scout_plane_1945 = 1
+
+	###HELICOPTERS##
+	very_early_helicopter = 1
+	early_helicopter = 1
+	scout_helicopter_1960 = 1
+	transport_helicopter_1960 = 1
+
+	###MISC###
+	helicopter_engines = 1
+
+	#### ENGINEERING ####
+	electronic_mechanical_engineering = 1
+
+	radio = 1
+	radio_detection = 1
+
+	decimetric_radar = 1
+	centimetric_radar = 1
+
+	mechanical_computing = 1
+	computing_machine = 1
+	improved_computing_machine = 1
+	advanced_computing_machine = 1
+
+	#### INDUSTRY ####
+
+	ww2_line_production = 1
+
+	building_construction_1 = 1
+
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	administration_construction_1 = 1
+	military_construction_1 = 1
+
+	resource_extraction_methods = 1
+
+}
+set_research_slots = 3
+
+add_equipment_to_stockpile = {
+	type = convoy_1
+	amount = 24
+	producer = ARG
+}

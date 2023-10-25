@@ -1,0 +1,29 @@
+#POP DONE
+state = {
+	id = 569
+	name = "STATE_569"
+	resources = {
+		steel = 30
+		tungsten = 14
+		oil = 9
+	}
+	history = {
+		owner = KEM
+		buildings = {
+			infrastructure = 5
+			thermoelectric_plant = 2
+			barracks = 1
+			offices = 1
+			hospitals = 2
+		}
+		victory_points = { 4789 20 }
+		victory_points = { 1685 15 }
+		add_core_of = KEM
+	}
+	provinces = {
+		1685 1702 4789 4793 7822 12631 13299 13306 13311
+	}
+	manpower = 2549000
+	buildings_max_level_factor = 1.000
+	state_category = city
+}

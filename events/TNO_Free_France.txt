@@ -1,0 +1,49 @@
+﻿############################
+## French Events
+############################
+
+add_namespace = free_france
+
+#### INTRO EVENTS ###
+## France intro
+
+country_event = { #annexing land yeet
+	id = free_france.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event free_france.2"}
+	title = free_france.2.t
+	desc = free_france.2.desc
+	picture = GFX_report_event_ostsonne
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = free_france.2.a
+		FFR = {
+			780 = {
+				set_demilitarized_zone = no
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1209 = {
+				set_demilitarized_zone = no
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1208 = {
+				set_demilitarized_zone = no
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=1618
+	name="STATE_1618"
+	manpower = 259069
+	
+	state_category = rural
+	
+	history={
+		owner = PAR
+		add_core_of = PAR
+		victory_points = { 2194 15 }
+		victory_points = { 15262 10 }
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces={
+		2194 15262 15263
+	}
+	
+}

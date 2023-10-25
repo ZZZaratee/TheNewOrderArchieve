@@ -1,0 +1,23 @@
+
+state={
+	id=1473
+	name="STATE_1473" #Hazarajat
+	manpower = 1437140
+	
+	state_category = rural
+	
+	resources={
+		tungsten=1
+	}
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = AFG
+	}
+
+	provinces={
+		1995 2078 5064 8090 10789 12788 14757
+	}
+}

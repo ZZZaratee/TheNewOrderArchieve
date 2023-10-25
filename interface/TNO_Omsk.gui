@@ -1,0 +1,159 @@
+guiTypes = {
+	containerWindowType = {
+		name = "OMS_GUI_insurgency"
+		size = { width = 482 height = 700 }
+		position = { x = 0 y = 0 }
+		containerWindowType = {
+			name = "top_bar"
+			size = { width = 482 height = 50 }
+			position = { x = 11 y = -6 }
+			iconType = {
+				name = "top_bar_bg"
+				spriteType = "GFX_OMS_insurgency_top_bar_bg"
+			}
+			instantTextBoxType = {
+				name = "top_bar_strength_ttl"
+				position = { x = 0 y = 8 }
+				maxWidth = 345
+				maxHeight = 20
+				format = center
+				font = "aldrich_24_outline"
+				text = "National Insurgency Strength"
+			}
+			iconType = {
+				name = "top_bar_strength_bar"
+				position = { x = 0 y = 37 }
+				spriteType = "GFX_OMS_insurgency_top_bar_strength_bar"
+				pdx_tooltip = OMS_insurgency_top_bar_strength_bar
+			}
+			instantTextBoxType = {
+				name = "top_bar_bases_ttl"
+				position = { x = 343 y = 8 }
+				maxWidth = 139
+				maxHeight = 40
+				format = center
+				font = "aldrich_24_outline"
+				text = "Av. Bases"
+				pdx_tooltip = OMS_insurgency_top_bar_bases_bar
+			}
+			instantTextBoxType = {
+				name = "top_bar_bases_show"
+				position = { x = 343 y = 40 }
+				maxWidth = 139
+				maxHeight = 50
+				format = center
+				font = "aldrich_48_outline"
+				text = "[?AVAILABLE_BASES|Y0]"
+				pdx_tooltip = OMS_insurgency_top_bar_bases_bar
+			}
+		}
+		containerWindowType = {
+			name = "map"
+			size = { width = 462 height = 506 }
+			position = { x = 21 y = 102 }
+			#iconType = {
+			#	name = "map_bg"
+			#	spriteType = "GFX_OMS_insurgency_map_bg"
+			#}
+			iconType = {
+				name = "map_state_754_selected"
+				position = { x = 73 y = 440 }
+				spriteType = "GFX_OMS_insurgency_map_state_754_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_653_selected"
+				position = { x = 85 y = 293 }
+				spriteType = "GFX_OMS_insurgency_map_state_653_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_573_selected"
+				position = { x = 41 y = 346 }
+				spriteType = "GFX_OMS_insurgency_map_state_573_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_572_selected"
+				position = { x = 98 y = 382 }
+				spriteType = "GFX_OMS_insurgency_map_state_572_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_580_selected"
+				position = { x = 157 y = 199 }
+				spriteType = "GFX_OMS_insurgency_map_state_580_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_403_selected"
+				position = { x = 190 y = 280 }
+				spriteType = "GFX_OMS_insurgency_map_state_403_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_571_selected"
+				position = { x = 292 y = 330 }
+				spriteType = "GFX_OMS_insurgency_map_state_571_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_871_selected"
+				position = { x = 40 y = 210 }
+				spriteType = "GFX_OMS_insurgency_map_state_871_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_863_selected"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_OMS_insurgency_map_state_863_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_756_selected"
+				position = { x = 71 y = 43 }
+				spriteType = "GFX_OMS_insurgency_map_state_756_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_844_selected"
+				position = { x = 187 y = 32 }
+				spriteType = "GFX_OMS_insurgency_map_state_844_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_579_selected"
+				position = { x = 212 y = 33 }
+				spriteType = "GFX_OMS_insurgency_map_state_579_selected"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "map_state_845_selected"
+				position = { x = 80 y = 191 }
+				spriteType = "GFX_OMS_insurgency_map_state_845_selected"
+				alwaystransparent = yes
+			}
+			gridboxtype = {
+				name = "map_gridbox"
+				slotsize = { width = 0 height = 0 }
+			}
+		}
+		instantTextBoxType = {
+			name = "selected_state_ttl"
+			position = { x = 21 y = 626 }
+			maxWidth = 462
+			maxHeight = 46
+			format = center
+			font = "aldrich_32_outline"
+			text = "OMS_insurgency_selected_state_ttl"
+		}
+	}
+	containerWindowType = {
+		name = "OMS_map_entry"
+		buttonType = {
+			name = "map_state"
+			spriteType = "GFX_blank"
+			pdx_tooltip = OMS_insurgency_map_state_tt
+		}
+	}
+}

@@ -1,0 +1,1073 @@
+capital = 279
+
+oob = "CHL_1962"
+set_stability = 0.56
+set_war_support = 0.15
+
+PRU = { add_opinion_modifier = { target = CHL modifier = SOUTHAM_war_pacific } }
+BOL = { add_opinion_modifier = { target = CHL modifier = SOUTHAM_war_pacific } }
+
+add_opinion_modifier = { target = ARG modifier = SOUTHAM_beagle }
+ARG = { add_opinion_modifier = { target = CHL modifier = SOUTHAM_beagle } }
+
+add_ideas = {
+	## Spirits
+	CHL_idea_social_question
+	CHL_idea_political_fragmentation_alessandri_1
+	CHL_idea_economic_subservience
+	CHL_idea_agrarian_timebomb
+
+	# Ministers
+	CHL_Sotero_del_Rio_hog
+	CHL_Arturo_Maschke_pol
+	CHL_Julio_Philippi_eco
+	CHL_Carlos_Vial_sec
+
+
+	### LAWS ###
+	# POLITICAL
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_naturalization
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	tno_refugees_open
+
+	# MILITARY
+	tno_conscription_one_year_draft
+	tno_women_noncombat_only
+	tno_military_supervision_military_policing
+	tno_training_combat_schooling
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_educational_deferment
+
+	# ECONOMIC
+	tno_trade_laws_free_trade
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_10_hour_work_day
+	tno_child_labor_illegal
+	tno_unemployment_no_subsidies
+	tno_pensions_trinket_pensions
+
+	# SOCIAL
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_police
+
+	# SOCIETAL DEVELOPMENT
+	tno_army_professionalism_professional
+	tno_industrial_expertise_incompetent
+	tno_industrial_equipment_manufacturing_lines
+	tno_admin_efficiency_functional_administrative_systems
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_basic
+	tno_academic_base_basic_literacy
+}
+
+
+# Policy effectivness
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_political_parties_effectiveness = 86 }
+set_variable = { tno_religious_rights_effectiveness = 90 }
+set_variable = { tno_trade_unions_effectiveness = 100 }
+set_variable = { tno_immigration_effectiveness = 100 }
+set_variable = { tno_slavery_effectiveness = 100 }
+set_variable = { tno_public_meetings_effectiveness = 72 }
+set_variable = { tno_press_rights_effectiveness = 94 }
+set_variable = { tno_vote_franchise_effectiveness = 90 }
+set_variable = { tno_refugees_effectiveness = 100 }
+
+set_variable = { tno_conscription_effectiveness = 100 }
+set_variable = { tno_women_effectiveness = 100 }
+set_variable = { tno_military_supervision_effectiveness = 80 }
+set_variable = { tno_training_effectiveness = 100 }
+set_variable = { tno_racial_integration_effectiveness = 100 }
+set_variable = { tno_draft_exemptions_effectiveness = 70 }
+
+set_variable = { tno_trade_laws_effectiveness = 90 }
+set_variable = { tno_income_taxation_effectiveness = 70 }
+set_variable = { tno_minimum_wage_effectiveness = 78 }
+set_variable = { tno_max_workhours_effectiveness = 48 }
+set_variable = { tno_child_labor_effectiveness = 65 }
+set_variable = { tno_pensions_effectiveness = 92 }
+set_variable = { tno_unemployment_effectiveness = 100 }
+
+set_variable = { tno_safety_effectiveness = 38 }
+set_variable = { tno_health_care_effectiveness = 48 }
+set_variable = { tno_pollution_effectiveness = 100 }
+set_variable = { tno_education_effectiveness = 77 }
+set_variable = { tno_penal_system_effectiveness = 86 }
+set_variable = { tno_lgbt_rights_effectiveness = 56 }
+set_variable = { tno_gender_rights_effectiveness = 62 }
+set_variable = { tno_minorities_effectiveness = 78 }
+set_variable = { tno_security_effectiveness = 92 }
+
+add_manpower = 70000
+
+set_technology = {
+	##INFANTRY##
+	# infantry_equipment_0 = 1
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+	infantry_weapons_3 = 1
+	infantry_weapons_improvements_5 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	night_vision_1 = 1
+	support_weapons3 = 1
+	support_weapons4 = 1
+	infantry_at = 1
+	infantry_at2 = 1
+	infantry_at3 = 1
+	
+	motorized_infantry = 1
+	motorized_rocket_unit = 1
+	motorized_infantry_1 = 1
+	marines = 1
+	tech_mountaineers = 1
+	tech_mountaineers2 = 1
+	tech_mountaineers3 = 1
+	paratroopers = 1
+
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_engineers_flamethrowers_1 = 1
+	tech_engineers2 = 1
+	tech_engineers_flamethrowers_2 = 1
+	tech_engineers3 = 1
+	tech_engineers_flamethrowers_3 = 1
+	tech_recon = 1
+	tech_recon2 = 1
+	tech_military_police = 1
+	tech_military_police2 = 1
+	tech_military_police3 = 1
+	tech_maintenance_company = 1
+	tech_maintenance_company2 = 1
+	tech_field_hospital = 1
+	tech_field_hospital2 = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+	tech_signal_company2 = 1
+	tech_scout_helicopter_company = 1
+	tech_transport_helicopter_company = 1
+	
+	##ARMOR##
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+	APC_1950 = 1
+	APC_1950_basic_turret = 1
+	#APC_1950_basic_engine = 1
+	APC_1950_basic_armor = 1
+	APC_1960 = 1
+	IFV_1950 = 1
+	IFV_1950_basic_turret = 1
+	IFV_1950_basic_armor = 1
+	#IFV_1950_basic_engine = 1
+	IFV_1960 = 1
+	MBT_1950 = 1
+	MBT_1950_basic_turret = 1
+	#MBT_1950_basic_engine = 1
+	MBT_1950_basic_armor = 1
+	
+	##ARTILLERY##
+	antiair5 = 1
+	antiair_1950 = 1
+	light_SPAA_1950 = 1
+	light_SPAA_1960 = 1
+	SPAA_1950 = 1
+	artillery4 = 1
+	artillery_1950 = 1
+	light_SPART_1950 = 1
+	light_SPART_1950_soft_attack = 1
+	SPART_1950 = 1
+	SPART_1950_soft_attack = 1
+
+	###AERIAL###
+	early_fighter = 1
+	jet_engines = 1
+	jet_engines_bombers = 1
+	fighter_1945 = 1
+	cv_1945_fighter = 1
+	fighter_1950 = 1
+	cv_1950_fighter = 1
+	fighter_1960 = 1
+	interceptor_1945 = 1
+	interceptor_1950 = 1
+	CAS_1945 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	heavy_air_1950 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	tac_air_1950 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+	transport_air_1960 = 1
+	scout_plane_1945 = 1
+
+	###HELICOPTERS##
+	very_early_helicopter = 1
+	early_helicopter = 1
+	scout_helicopter_1960 = 1
+	transport_helicopter_1960 = 1
+
+	###MISC###
+	helicopter_engines = 1
+
+	#### ENGINEERING ####
+	electronic_mechanical_engineering = 1
+	radio = 1
+
+	radio_detection = 1
+	decimetric_radar = 1
+	centimetric_radar = 1
+	radar_1950 = 1
+	flight_radar_1950 = 1
+	naval_radar_1950 = 1
+
+	mechanical_computing = 1
+	computing_machine = 1
+	improved_computing_machine = 1
+	advanced_computing_machine = 1
+
+	#### INDUSTRY ####
+	ww2_line_production = 1
+	building_construction_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	administration_construction_1 = 1
+	military_construction_1 = 1
+	resource_extraction_methods = 1
+
+	### DOCTRINE ###
+	strategic_theorem = 1
+	prepared_defense = 1
+
+	air_superiority = 1
+
+	green_water_navy = 1
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+
+		early_ship_hull_very_light = 1
+		basic_ship_hull_very_light = 1
+		improved_ship_hull_very_light = 1
+
+		early_ship_hull_more_light = 1
+		basic_ship_hull_more_light = 1
+		improved_ship_hull_more_light = 1
+
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		improved_ship_hull_light = 1
+
+		missile_corvette_1960 = 1
+
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		improved_ship_hull_cruiser = 1
+
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_secondary_battery = 1
+		basic_medium_battery = 1
+		improved_secondary_battery = 1
+		dp_secondary_battery = 1
+		basic_heavy_battery = 1
+
+		basic_torpedo = 1
+
+		basic_depth_charges = 1
+		improved_depth_charges = 1
+
+		basic_secondary_battery = 1
+		mtg_transport = 1
+
+		antiair_1950 = 1
+
+		basic_fire_control_system = 1
+		improved_fire_control_system = 1
+
+		sonar = 1
+		improved_sonar = 1
+	}
+
+	## Almirante Latorre ##
+	create_equipment_variant = {
+		name = "Clase Almirante Latorre"
+		type = ship_hull_heavy_1
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_2
+			mid_1_custom_slot = ship_secondaries_2
+			mid_2_custom_slot = ship_secondaries_2
+			rear_1_custom_slot = ship_heavy_battery_2
+		}
+	}
+
+	## Cruisers ##
+	create_equipment_variant = {
+		name = "Clase Crucero Ligero"
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_missile_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			front_1_custom_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_anti_air_1
+		}
+	}
+
+	## Destroyers ##
+	create_equipment_variant = {
+		name = "Clase Almirante"
+		type = ship_hull_light_2
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_missile_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_radar_slot = ship_radar_1
+			mid_1_custom_slot = ship_light_battery_2
+			rear_1_custom_slot = ship_light_battery_2
+		}
+	}
+	create_equipment_variant = {
+		name = "Clase Blanco Encalada"
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_radar_slot = ship_radar_1
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_light_battery_1
+		}
+	}
+
+	## Frigates ##
+	create_equipment_variant = {
+		name = "Clase Iquique"
+		type = ship_hull_more_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_missile_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_anti_air_missile_battery_1
+		}
+	}
+
+	## Corvettes ##
+	create_equipment_variant = {
+		name = "Clase Papudo"
+		type = ship_hull_very_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_missile_battery_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_radar_slot = ship_sonar_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_depth_charge_2
+		}
+	}
+
+	## Submarines ##
+	create_equipment_variant = {
+		name = "Clase Simpson"
+		type = ship_hull_submarine_1
+		modules = {
+			fixed_ship_engine_slot = sub_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			rear_1_custom_slot = ship_torpedo_sub_2
+    	}
+	}
+
+	set_naval_oob = "CHL_1962_naval_mtg"
+}
+
+if = {
+	limit = { NOT = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		ww2_destroyer = 1
+		basic_destroyer = 1
+		improved_destroyer = 1
+		ww2_cruiser = 1
+		basic_cruiser = 1
+		improved_cruiser = 1
+		ww2_battleship = 1
+		ww2_submarine = 1
+		basic_submarine = 1
+		improved_submarine = 1
+		transport = 1
+		landing_craft = 1
+	}
+
+	create_equipment_variant = {
+		name = "Clase Almirante Latorre"
+		type = battleship_1
+	}
+	create_equipment_variant = {
+		name = "Clase Crucero Ligero"
+		type = light_cruiser_2
+	}
+	create_equipment_variant = {
+		name = "Clase Almirante"
+		type = destroyer_2
+	}
+	create_equipment_variant = {
+		name = "Clase Blanco Encalada"
+		type = destroyer_1
+	}
+	create_equipment_variant = {
+		name = "Clase Iquique"
+		type = frigate_1
+	}
+	create_equipment_variant = {
+		name = "Clase Papudo"
+		type = frigate_1
+	}
+	create_equipment_variant = {
+		name = "Clase Simpson"
+		type = submarine_1
+	}
+
+	set_naval_oob = "CHL_1962_naval"
+}
+
+set_politics = {
+	ruling_party = liberal_democracy
+	last_election = "1958.9.4"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 10
+    socialist = 14
+    social_democracy = 6
+    liberal_democracy = 26
+    conservative_democracy = 21
+    authoritarian_democracy = 19
+    fascism = 4
+}
+
+create_country_leader = {
+	name = "Jorge Alessandri"
+	picture = "Portrait_Chile_Jorge_Alessandri.dds"
+	expire = "1964.9.4"
+	ideology = liberal_democracy_subtype
+	desc = "POLITICS_ALESSANDRI_DESC"
+	traits = {
+		el_paleta_latin
+	}
+}
+create_country_leader = {
+	name = "Eduardo Frei Montalva"
+	picture = "Portrait_Chile_Frei_Montalva.dds"
+	expire = "1964.9.4"
+	ideology = conservative_democracy_christian_democracy_subtype
+	desc = "POLITICS_FREI_MONTALVA_DESC"
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Disorganized Radicals"
+	picture = "Portrait_Chile_Jorge_Alessandri.dds"
+	expire = "1964.9.4"
+	ideology = social_democracy_subtype
+	desc = "POLITICS_ALESSANDRI_DESC"
+	traits = {
+		el_paleta_latin
+	}
+}
+create_country_leader = {
+	name = "Jorge Prat Echaurren"
+	picture = "Portrait_Chile_Jorge_Prat.dds"
+	expire = "1999.9.4"
+	ideology = authoritarian_democracy_right_wing_populism_subtype
+	desc = "POLITICS_JORGE_PRAT_DESC"
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ramón Callís Arrigorriaga"
+	picture = "Portrait_Chile_Ramon_Callis.dds"
+	expire = "1999.9.4"
+	ideology = fascism_national_syndicalism_subtype
+	desc = "POLITICS_SALVADOR_ALLENDE_DESC"
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Salvador Allende Gossens"
+	picture = "Portrait_Chile_Salvador_Allende.dds"
+	expire = "1999.9.4"
+	ideology = socialist_revolutionary_frontism_subtype
+	desc = "POLITICS_SALVADOR_ALLENDE_DESC"
+	traits = {
+		#
+	}
+}
+
+# Army
+create_field_marshal = {
+	name = "Óscar Izurieta Molina"
+	#picture = "Portrait_Chile_Oscar_Izurieta.dds"
+	traits = { organisational_leader career_officer politically_connected }
+
+	skill = 4
+	id = 12551
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Bernardino Parada Moreno"
+	picture = "Portrait_Chile_Bernardino_Parada_Moreno.dds"
+	traits = { thorough_planner inflexible_strategist }
+
+	skill = 4
+	id = 12552
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Luis Miqueles"
+	#picture = "Portrait_Chile_Luis_Miqueles.dds"
+	traits = { skilled_staffer career_officer }
+
+	skill = 3
+	id = 12553
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Félix Guerrero Salcedo"
+	#picture = "Portrait_Chile_Guerrero_Salcedo.dds"
+	traits = { organizer }
+
+	skill = 3
+	id = 12566
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "René Cabrera Soto"
+	#picture = "Portrait_Chile_Cabrera_Soto.dds"
+	traits = { }
+
+	skill = 3
+	id = 12567
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Carlos Pollarolo"
+	#picture = "Portrait_Chile_Carlos_Pollarolo.dds"
+	traits = { infantry_officer }
+
+	skill = 3
+	id = 12568
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Carlos Hepp"
+	picture = "Portrait_Chile_Carlos_Hepp.dds"
+	traits = { infantry_officer }
+
+	skill = 3
+	id = 12569
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Tulio Marambio"
+	picture = "Portrait_Chile_Tulio_Marambio.dds"
+	traits = { career_officer trait_cautious }
+
+	skill = 2
+	id = 12554
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Sergio Castillo Aránguiz"
+	#picture = "Portrait_Chile_Castillo_Aranguiz.dds"
+	traits = { career_officer politically_connected }
+
+	skill = 2
+	id = 12555
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Tomás Opazo Santander"
+	#picture = "Portrait_Chile_Opazo_Santander.dds"
+	traits = { bearer_of_artillery }
+
+	skill = 2
+	id = 12556
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Ramón Valdes Martínez"
+	#picture = "Portrait_Chile_Valdes_Martinez.dds"
+	traits = { }
+
+	skill = 2
+	id = 12557
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "René Schneider"
+	#picture = "Portrait_Chile_Rene_Schneider.dds"
+	traits = { career_officer }
+
+	skill = 2
+	id = 12558
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Héctor Martínez Amaro"
+	#picture = "Portrait_Chile_Hector_Martinez.dds"
+	traits = { }
+
+	skill = 2
+	id = 12559
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Carlos Prats"
+	picture = "Portrait_Chile_Carlos_Prats.dds"
+	traits = { career_officer }
+
+	skill = 2
+	id = 12560
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Manuel Pinochet"
+	#picture = "Portrait_Chile_Manuel_Pinochet.dds"
+	traits = { harsh_leader }
+
+	skill = 2
+	id = 12561
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Camilo Valenzuela"
+	#picture = "Portrait_Chile_Camilo_Valenzuela.dds"
+	traits = { trait_reckless }
+
+	skill = 2
+	id = 12562
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 4
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Augusto Pinochet"
+	picture = "Portrait_Chile_Augusto_Pinochet.dds"
+	traits = { career_officer }
+
+	skill = 2
+	id = 12563
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Roberto Viaux"
+	picture = "Portrait_Chile_Roberto_Viaux.dds"
+	traits = { bearer_of_artillery infantry_officer }
+
+	skill = 2
+	id = 12564
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Manuel Torres de la Cruz"
+	#picture = "Portrait_Chile_Torres_Cruz.dds"
+	traits = { bearer_of_artillery }
+
+	skill = 2
+	id = 12565
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Lisandro Contreras Tapia"
+	#picture = "Portrait_Chile_Contreras_Tapia.dds"
+	traits = { }
+
+	skill = 1
+	id = 12570
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Roberto Souper Onfray"
+	#picture = "Portrait_Chile_Souper_Onfray.dds"
+	traits = { armor_officer trickster }
+
+	skill = 1
+	id = 12571
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+# Marine Corps
+create_corps_commander = {
+	name = "Pablo Wunderlich Piderit"
+	#picture = "Portrait_Chile_Wunderlich_Piderit.dds"
+	traits = { naval_invader harsh_leader }
+
+	skill = 2
+	id = 12572
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Fernando Bascuñan Arancibia"
+	#picture = "Portrait_Chile_Bascunan_Arancibia.dds"
+	traits = { naval_invader }
+
+	skill = 2
+	id = 12573
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Luis Urzúa Merino"
+	#picture = "Portrait_Chile_Urzua_Merino.dds"
+	traits = { naval_invader }
+
+	skill = 2
+	id = 12574
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Sergio Huidobro Justiniano"
+	picture = "Portrait_Chile_Sergio_Huidobro_Justiniano.dds"
+	traits = { naval_invader }
+
+	skill = 2
+	id = 12575
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Sergio Cid Araya"
+	#picture = "Portrait_Chile_Cid_Araya.dds"
+	traits = { naval_invader inflexible_strategist }
+
+	skill = 2
+	id = 12576
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+# Navy
+create_navy_leader = {
+	name = "Hernán Cubillos Leiva"
+	#picture = "Portrait_Chile_Cubillos_Leiva.dds"
+	traits = { }
+
+	skill = 4
+	id = 12577
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+create_navy_leader = {
+	name = "Jacobo Neumann Etienne"
+	#picture = "Portrait_Chile_Neumann_Etienne.dds"
+	traits = { }
+
+	skill = 3
+	id = 12578
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Fernando Porta Angulo"
+	#picture = "Portrait_Chile_Porta_Angulo.dds"
+	traits = { }
+
+	skill = 3
+	id = 12579
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Raúl Montero Cornejo"
+	picture = "Portrait_Chile_Montero_Cornejo.dds"
+	traits = { }
+
+	skill = 2
+	id = 12580
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "José Toribio Merino"
+	#picture = "Portrait_Chile_Toribio_Merino.dds"
+	traits = { }
+
+	skill = 2
+	id = 12581
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "José Costa Francke"
+	#picture = "Portrait_Chile_Costa_Francke.dds"
+	traits = { }
+
+	skill = 3
+	id = 12582
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 4
+}
+create_navy_leader = {
+	name = "Ramón Barros González"
+	#picture = "Portrait_Chile_Barros_Gonzalez.dds"
+	traits = { }
+
+	skill = 3
+	id = 12583
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Alberto Khan Wiegand"
+	#picture = "Portrait_Chile_Khan_Wiegand.dds"
+	traits = { }
+
+	skill = 2
+	id = 12584
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Óscar Ferrari Chaigneau"
+	#picture = "Portrait_Chile_Ferrari_Chaigneau.dds"
+	traits = { }
+
+	skill = 2
+	id = 12585
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Raúl del Solar Grove"
+	#picture = "Portrait_Chile_Solar_Grove.dds"
+	traits = { }
+
+	skill = 2
+	id = 12586
+	attack_skill = 1
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = "Jorge Swett Madge"
+	#picture = "Portrait_Chile_Swett_Madge.dds"
+	traits = { }
+
+	skill = 2
+	id = 12587
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Juan Agustín Rodríguez"
+	#picture = "Portrait_Chile_Agustin_Rodriguez.dds"
+	traits = { }
+
+	skill = 2
+	id = 12588
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = "Raúl López Silva"
+	#picture = "Portrait_Chile_Lopez_Silva.dds"
+	traits = { }
+
+	skill = 1
+	id = 12589
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Hugo Cabezas Videla"
+	#picture = "Portrait_Chile_Cabezas_Videla.dds"
+	traits = { }
+
+	skill = 1
+	id = 12590
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+#Starting Equipment
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 2000
+	producer = CHL
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_3
+	amount = 500
+	producer = CHL
+}
+
+add_equipment_to_stockpile = {
+	type = convoy_1
+	amount = 24
+	producer = CHL
+}

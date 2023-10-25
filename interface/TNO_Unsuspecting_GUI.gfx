@@ -1,0 +1,406 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_BG"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_BG.dds"
+	}
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Info_Button"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Info_Button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_Mark"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_Mark.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_NA"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_NA.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_AF"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_AF.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_AU"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_AU.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_EA"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_EA.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_EU"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_EU.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_ME"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_ME.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_RU"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_RU.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_SA"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_SA.dds"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_NA_outline"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_NA_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_AF_outline"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_AF_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_AU_outline"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_AU_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_EA_outline"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_EA_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_EU_outline"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_EU_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_ME_outline"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_ME_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_RU_outline"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_RU_outline.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_Foreign_GUI_World_Map_SA_outline"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_World_Map_SA_outline.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_Africa"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Africa.dds"
+		transparencecheck = yes
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_0"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Africa_Egypt.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_1"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Africa_SAW.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_Europe"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Europe.dds"
+		transparencecheck = yes
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_2"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Europe_Britain.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_3"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Europe_Spain.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_4"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Europe_Ostland.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_5"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Europe_Moskowein.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_6"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Europe_Italy.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_7"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Europe_Germany.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_Middle_East"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Middle_East.dds"
+		transparencecheck = yes
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_8"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Middle_East_IME.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_9"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Middle_East_Turkey.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_North_America"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_North_America.dds"
+		transparencecheck = yes
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_10"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_North_America_Mexico.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_11"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_North_America_Canada.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_12"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_North_America_USA.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_Oceania"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Oceania.dds"
+		transparencecheck = yes
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_13"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Oceania_Austrailia.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_Russia"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Russia.dds"
+		transparencecheck = yes
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_14"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Russia_West_Russia.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_15"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Russia_West_Siberia.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_16"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Russia_Central_Siberia.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_17"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_Russia_Far_East.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_East_Asia"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_East_Asia.dds"
+		transparencecheck = yes
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_18"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_East_Asia_Japan.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_19"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_East_Asia_China.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_20"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_East_Asia_Guangdong.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_SA"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_SA.dds"
+		transparencecheck = yes
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_21"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_SA_Brazil.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_22"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_SA_Chile.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_Foreign_GUI_Large_Map_23"
+		texturefile = "gfx/interface/burgundy_gui/BRG_Foreign_GUI_Large_Map_SA_Argentina.dds"
+		transparencecheck = yes
+		noOfFrames = 2
+	}
+	
+	SpriteType = {
+		name = "GFX_BRG_CoverageProgressBarEnd"
+		texturefile = "gfx/interface/burgundy_gui/BRG_CoverageProgressBarEnd.dds"
+	}
+	progressbartype = {
+		name = "GFX_BRG_CoverageProgressBar"
+		textureFile1 = "gfx/interface/burgundy_gui/BRG_CoverageProgressBar.dds"
+		textureFile2 = "gfx/interface/burgundy_gui/BRG_CoverageProgressBar_Empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 467
+			y = 15
+		} 
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}	
+
+	spriteType = {
+		name = "GFX_BRG_GP_BG"
+		texturefile = "gfx/interface/burgundy_gui/BRG_GP_BG.dds"
+	}
+	spriteType = {
+		name = "GFX_BRG_CloseUp_Tier_BG"
+		texturefile = "gfx/interface/burgundy_gui/BRG_CloseUp_Tier_BG.dds"
+	}
+	progressbartype = {
+		name = "GFX_BRG_NukeCoverageClose_Prog"
+		textureFile1 = "gfx/interface/burgundy_gui/BRG_CoverageProgressBarClose.dds"
+		textureFile2 = "gfx/interface/burgundy_gui/BRG_CoverageProgressBarClose_Empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 147
+			y = 146
+		} 
+		effectFile = "gfx/FX/progress_vertical.lua"
+		steps = 100
+	}	
+	progressbartype = {
+		name = "GFX_BRG_InfluenceBarClose_Prog"
+		textureFile1 = "gfx/interface/burgundy_gui/BRG_TierProgressBarClose.dds"
+		textureFile2 = "gfx/interface/burgundy_gui/BRG_TierProgressBarClose_Empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		size = { 
+			x = 11
+			y = 300
+		} 
+		steps = 100
+		effectFile = "gfx/FX/progress_vertical.lua"
+	}
+	spriteType = {
+		name = "GFX_BRG_CloseUp_Tier_Selected"
+		texturefile = "gfx/interface/burgundy_gui/BRG_CloseUp_Tier_Selected.dds"
+	}	
+	spriteType = {
+		name = "GFX_BRG_CloseUp_Tier_NotSelected"
+		texturefile = "gfx/interface/burgundy_gui/BRG_CloseUp_Tier_NotSelected.dds"
+	}
+
+
+
+	# Old stuff
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Plan_Header_Wolf"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Plan_Header_Wolf.dds"
+	}
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Plan_Header_Adler"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Plan_Header_Adler.dds"
+	}
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Plan_Header_Bar"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Plan_Header_Bar.dds"
+	}
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Plan_Header_Drache"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Plan_Header_Drache.dds"
+	}
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Plan_Header_Kondor"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Plan_Header_Kondor.dds"
+	}
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Plan_Header_Lowe"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Plan_Header_Lowe.dds"
+	}
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Plan_Header_Puma"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Plan_Header_Puma.dds"
+	}
+	spriteType = {
+		name = "GFX_Burgundy_GUI_Plan_Header_Sonne"
+		texturefile = "gfx/interface/burgundy_gui/Burgundy_GUI_Plan_Header_Sonne.dds"
+	}
+}

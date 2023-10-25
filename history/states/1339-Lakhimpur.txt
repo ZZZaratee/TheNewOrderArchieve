@@ -1,0 +1,19 @@
+state={
+	id=1339
+	name="STATE_1339"
+	provinces={
+		1116 12322 
+	}
+	history={
+		owner = AZH
+		add_core_of = AZH
+		add_core_of = IND
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+	}
+	manpower=252750
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

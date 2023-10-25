@@ -1,0 +1,13 @@
+AMR_labor_unto_redemption_dynamic_modifier = {
+
+	enable = {always = yes}
+	monthly_population = AMR_rodz_econ_pop_debuff
+	misc_income_modifier = AMR_rodz_econ_labor_income
+}
+
+AMR_oil_for_food_dynamic_modifier = {
+	enable = { always = yes }
+	monthly_population = AMR_rodz_pop_growth_oil_for_food
+	poverty_monthly_rate = AMR_rodz_poverty_oil_for_food
+	fuel_gain = AMR_rodz_fuel_gain_oil_for_food
+}

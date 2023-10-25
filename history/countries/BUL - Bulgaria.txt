@@ -1,0 +1,256 @@
+﻿capital = 48
+
+#oob = "BUL_1962"
+
+add_ideas = {
+	Pakt_Bundnispartner
+	
+	BUL_Dobri_Bozhilov_hog
+	BUL_Asen_Hristoforov_eco
+	BUL_Dimitar_Peshev_for
+	
+	BUL_the_tsars_government
+	BUL_german_forged_shackles
+	BUL_the_fatherland_front
+
+	tno_security_police
+	### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	tno_refugees_vetted_entry
+
+	### MILITARY LAWS ###
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_safety_minimal_regulations
+	tno_health_care_support_for_emergencies
+	tno_pollution_few_regulations
+	tno_education_elite_only
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_police
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### SOCIETAL DEVELOPMENT ###
+	 
+     tno_army_professionalism_disgruntled_veterans
+     tno_industrial_expertise_nascent
+     tno_industrial_equipment_power_tools
+     tno_agriculture_basic_mechanized
+     tno_research_facilities_outdated
+     tno_academic_base_basic_literacy
+	 tno_admin_efficiency_widespread_corruption
+}
+set_technology = {
+	electronic_mechanical_engineering = 1
+	
+	transport = 1
+	basic_infantry_equipment = 1
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	motorized_infantry = 1
+	motorized_infantry_1 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	early_fighter = 1
+	advanced_light_tank = 1
+	advanced_medium_tank = 1
+	artillery4 = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	building_construction_1 = 1
+	administration_construction_1 = 1
+	ww2_destroyer = 1
+	ww2_cruiser = 1
+	ww2_battleship = 1
+	ww2_submarine = 1
+	ww2_carrier = 1
+}
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1931.6.21"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    socialist = 0
+    social_democracy = 0
+    liberal_democracy = 0
+
+    conservative_democracy = 20
+    authoritarian_democracy = 5
+    despotism = 64
+    fascism = 6
+	national_socialism = 5
+	ultranationalism = 0
+    
+}
+
+create_country_leader = {
+	name = "Traicho Kostov"
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Traicho_Kostov.dds"
+	expire = "1999.1.1"
+	ideology = communist_subtype
+}
+
+create_country_leader = {
+	name = "Petar Mladenov"
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Petar_Mladenov.dds"
+	expire = "1999.1.1"
+	ideology = socialist_subtype
+}
+
+create_country_leader = {
+	name = "Petar Dertliev"
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Petar_Dertliev.dds"
+	expire = "1999.1.1"
+	ideology = social_democracy_subtype
+}
+
+create_country_leader = {
+	name = "Alexi Ivanov"
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Alexi_Ivanov.dds"
+	expire = "1999.1.1"
+	ideology = liberal_democracy_subtype
+}
+
+create_country_leader = {
+	name = "Boris Kyurkchiev"
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Boris_Kyurkchiev.dds"
+	expire = "1999.1.1"
+	ideology = conservative_democracy_subtype
+}
+
+create_country_leader = {
+	name = "Kimon Georgiev"
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Kimon_Georgiev.dds"
+	expire = "1999.1.1"
+	ideology = authoritarian_democracy_subtype
+}
+
+create_country_leader = {
+	name = "Boris III"
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Boris_III.dds"
+	expire = "1999.1.1"
+	ideology = despotism_absolute_monarchy_subtype
+}
+
+create_country_leader = {
+	name = "Ivan Dochev"
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Ivan_Dochev.dds"
+	expire = "1999.1.1"
+	ideology = fascism_subtype
+}
+
+create_country_leader = {
+	name = "Petar Gabrovski "
+	desc = "POLITICS_BORIS_III_DESC"
+	picture = "Portrait_Bulgaria_Petar_Gabrovski .dds"
+	expire = "1999.1.1"
+	ideology = national_socialism_subtype
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = BUL_mtg_navy_1962
+	create_equipment_variant = {
+		name = "Zerstörer 1944"
+		type = ship_hull_light_1
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_anti_air_2
+    	}
+	}
+	create_equipment_variant = {
+		name = "Zerstörer 1950"
+		type = ship_hull_light_1
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_radar_slot = ship_radar_2
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_2
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_anti_air_2
+    	}
+	}
+	create_equipment_variant = {
+		name = "Type XXI-Class"
+		type = ship_hull_submarine_1
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_engine_slot = sub_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+    	}
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_naval_oob = BUL_navy_1962
+	create_equipment_variant = {
+		name = "Zerstörer 1944"
+		type = destroyer_1
+		name_group = GER_DD_HISTORICAL
+	}
+	create_equipment_variant = {
+		name = "Zerstörer 1950"
+		type = destroyer_1
+		name_group = GER_DD_HISTORICAL
+	}
+	create_equipment_variant = {
+		name = "Type XXI-Class"
+		type = submarine_1
+		name_group = GER_SS_HISTORICAL
+	}
+}

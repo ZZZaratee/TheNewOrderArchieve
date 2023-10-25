@@ -1,0 +1,150 @@
+	
+#schools is weighted on pop and land for coverage
+calculate_school_bonus_state = {
+	set_temp_variable = {percent_pop = state_population_k}
+	multiply_temp_variable = {percent_pop = PREV.num_owned_states}
+	divide_temp_variable = {percent_pop = PREV.max_manpower_k}
+}
+increase_schools_bonus_calc = {
+	calculate_school_bonus_state = yes
+	add_to_variable = {PREV.schools_country_effect = percent_pop}
+	add_to_variable = {PREV.schools_country_effect = 1}
+}
+
+#offices is weighted on GDP and land for coverage
+
+calculate_offices_bonus_state = {
+	set_temp_variable = {percent_GDP = state_value}
+	divide_temp_variable = {percent_GDP = PREV.GDP}
+	multiply_temp_variable = {percent_GDP = PREV.num_owned_states}
+	divide_temp_variable = {percent_GDP = 1000}
+}
+
+increase_offices_bonus_calc = {
+	calculate_offices_bonus_state = yes	
+	add_to_variable = {PREV.offices_country_effect = percent_GDP}
+	add_to_variable = {PREV.offices_country_effect = 1}
+}
+
+#Hospitals are weighted on GDP, pop and land for coverage
+calculate_hospitals_bonus_state = {
+	set_temp_variable = {percent_GDP = state_value}
+	divide_temp_variable = {percent_GDP = PREV.GDP}
+	multiply_temp_variable = {percent_GDP = PREV.num_owned_states}
+	divide_temp_variable = {percent_GDP = 1000}
+	set_temp_variable = {percent_pop = state_population_k}
+	multiply_temp_variable = {percent_pop = PREV.num_owned_states}
+	divide_temp_variable = {percent_pop = PREV.max_manpower_k}
+}
+
+increase_hospitals_bonus_calc = {
+	calculate_hospitals_bonus_state = yes
+	add_to_variable = {PREV.hospitals_country_effect = percent_pop}
+	add_to_variable = {PREV.hospitals_country_effect = percent_GDP}
+	add_to_variable = {PREV.hospitals_country_effect = 1}
+}
+
+#Prisons are based on land for coverage
+increase_prisons_bonus_calc = {
+	add_to_variable = {PREV.prisons_country_effect = 1}
+}
+
+#Barracks are based on land for coverage
+increase_barracks_bonus_calc = {
+	add_to_variable = {PREV.barracks_country_effect = 1}
+}
+
+
+
+schools_research_modifier_calc = {
+	set_temp_variable = {a = 12.5}
+	set_variable = {schools_research_modifier = -5}
+	multiply_temp_variable = {a = schools_country_effect}
+	add_to_variable = {schools_research_modifier = a}
+	divide_variable = {schools_research_modifier = 100}
+	set_temp_variable = {tech_cov_bonus = 1}
+	add_to_temp_variable = {tech_cov_bonus = modifier@schools_coverage_modifier}
+	multiply_variable = {schools_research_modifier = tech_cov_bonus}
+	multiply_variable = {school_in_best_state_bonus = 12.5}
+	multiply_variable = {school_in_best_state_bonus = tech_cov_bonus}
+	divide_variable = {school_in_best_state_bonus = 100}
+}
+
+offices_PP_modifier_calc = {
+	set_temp_variable = {a = 12.5}
+	set_variable = {offices_PP_modifier = -2.5}
+	multiply_temp_variable = {a = offices_country_effect}
+	add_to_variable = {offices_PP_modifier = a}
+	divide_variable = {offices_PP_modifier = 100}
+	set_temp_variable = {tech_cov_bonus = 1}
+	add_to_temp_variable = {tech_cov_bonus = modifier@offices_coverage_modifier}
+	multiply_variable = {offices_PP_modifier = tech_cov_bonus}	
+	multiply_variable = {office_in_best_state_bonus = 12.5}
+	multiply_variable = {office_in_best_state_bonus = tech_cov_bonus }
+	divide_variable = {office_in_best_state_bonus = 100}
+}
+
+hospitals_pop_growth_modifier_calc = {
+	set_temp_variable = {a = 25}
+	set_variable = {hospitals_pop_growth_modifier = -5}
+	multiply_temp_variable = {a = hospitals_country_effect}
+	add_to_variable = {hospitals_pop_growth_modifier = a}
+	divide_variable = {hospitals_pop_growth_modifier = 100}
+	set_temp_variable = {tech_cov_bonus = 1}
+	add_to_temp_variable = {tech_cov_bonus = modifier@hospitals_coverage_modifier}
+	multiply_variable = {hospitals_pop_growth_modifier = tech_cov_bonus}
+	multiply_variable = {hospital_in_best_state_bonus = 25}
+	multiply_variable = {hospital_in_best_state_bonus = tech_cov_bonus }
+	divide_variable = {hospital_in_best_state_bonus = 100}
+}
+
+barracks_modifier_calc = {
+	set_temp_variable = {a = 17.5}
+	set_variable = {barracks_manpower_modifier = -2.5}
+	multiply_temp_variable = {a = barracks_country_effect}
+	add_to_variable = {barracks_manpower_modifier = a}
+	divide_variable = {barracks_manpower_modifier = 100}
+	set_temp_variable = {a = 12.5}
+	set_variable = {barracks_org_modifier = -2.5}
+	multiply_temp_variable = {a = barracks_country_effect}
+	add_to_variable = {barracks_org_modifier = a}
+	divide_variable = {barracks_org_modifier = 100}
+	set_temp_variable = {tech_cov_bonus = 1}
+	add_to_temp_variable = {tech_cov_bonus = modifier@barracks_coverage_modifier}
+	multiply_variable = {barracks_org_modifier = tech_cov_bonus}	
+	multiply_variable = {barracks_manpower_modifier = tech_cov_bonus}	
+	set_variable = { one_racks_coverage = 1}
+	divide_variable = {one_racks_coverage = num_owned_states}
+	multiply_variable = {one_racks_coverage = tech_cov_bonus}
+	set_variable = {one_racks_coverage_mp = 17.5}
+	multiply_variable = {one_racks_coverage_mp = one_racks_coverage}
+	divide_variable = {one_racks_coverage_mp = 100}
+	set_variable = {one_racks_coverage_org = 12.5}
+	multiply_variable = {one_racks_coverage_org = one_racks_coverage}
+	divide_variable = {one_racks_coverage_org = 100}
+	clear_variable = one_racks_coverage	
+}
+
+prisons_stab_modifier_calc = {
+	set_temp_variable = {a = 25}
+	set_variable = {prisons_stab_modifier = -5}
+	multiply_temp_variable = {a = prisons_country_effect}
+	add_to_variable = {prisons_stab_modifier = a}
+	divide_variable = {prisons_stab_modifier = 100}
+	set_temp_variable = {tech_cov_bonus = 1}
+	add_to_temp_variable = {tech_cov_bonus = modifier@prisons_coverage_modifier}
+	multiply_variable = {prisons_stab_modifier = tech_cov_bonus}
+	set_variable = { one_prison_coverage = 1}
+	divide_variable = {one_prison_coverage = num_owned_states}
+	multiply_variable = {one_prison_coverage = 25}
+	multiply_variable = {one_prison_coverage = tech_cov_bonus}
+	divide_variable = {one_prison_coverage = 100}
+}
+
+update_buildings_modifier = {
+	prisons_stab_modifier_calc = yes
+	barracks_modifier_calc = yes
+	hospitals_pop_growth_modifier_calc = yes
+	offices_PP_modifier_calc = yes
+	schools_research_modifier_calc = yes
+}

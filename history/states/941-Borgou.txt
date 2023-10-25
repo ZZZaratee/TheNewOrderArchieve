@@ -1,0 +1,18 @@
+
+state={
+	id=941
+	name="STATE_941"
+
+	history={
+		owner = GBE
+		add_core_of = GBE
+		set_demilitarized_zone = yes			
+	}
+
+	provinces={
+		12843 12874 12785
+	}
+	manpower=446000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

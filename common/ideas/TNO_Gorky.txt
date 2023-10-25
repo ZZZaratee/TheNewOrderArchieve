@@ -1,0 +1,119 @@
+ideas = {
+	country = {
+		GOR_armor_expertise = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GOR_armor_expertise"}
+			allowed = {
+				always = no
+			}
+            cancel = { has_country_flag = RUS_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				has_government = despotism
+			}
+			removal_cost = -1
+			picture = GOR_Armor_Expertise
+			modifier = {
+				army_armor_attack_factor = 0.3
+				army_armor_speed_factor = 0.05
+			}
+		}
+		GOR_mobile_bandits = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GOR_mobile_bandits"}
+			allowed = {
+				always = no
+			}
+            cancel = { has_country_flag = RUS_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				has_government = despotism
+			}
+			removal_cost = -1
+			picture = GOR_Mobile_Bandits
+			modifier = {
+				army_speed_factor = 0.1
+				out_of_supply_factor = -0.5
+				max_dig_in = -2
+			}
+		}
+		GOR_mad_marxists = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GOR_mad_marxists"}
+			allowed = {
+				always = no
+			}
+            cancel = { has_country_flag = RUS_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GOR_Mad_Marxists
+			modifier = {
+				army_speed_factor = 0.1
+				army_org_Factor = 0.1
+			}
+		}
+		GOR_Sabotage = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GOR_Sabotage"}
+			allowed = {
+				always = no
+			}
+            cancel = { has_country_flag = RUS_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				has_government = despotism
+			}
+			removal_cost = -1
+			picture = GFX_idea_DRL_band_exhausted
+			modifier = {
+				army_armor_defence_factor = -0.05
+				army_armor_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+			}
+		}
+
+		GOR_work_at_night_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GOR_work_at_night_idea"}
+			allowed = {
+				always = no
+			}
+            cancel = { has_country_flag = RUS_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				has_government = despotism
+			}
+			removal_cost = -1
+			picture = GOR_Work_at_night
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+
+		GOR_careful_raids = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GOR_careful_raids"}
+			allowed = {
+				always = no
+			}
+            cancel = { has_country_flag = RUS_cancel_all_ideas }
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				has_government = despotism
+			}
+			removal_cost = -1
+			#picture =
+			modifier = {
+				max_planning = 0.1
+				army_attack_factor = -0.03
+			}
+		}
+	}
+}

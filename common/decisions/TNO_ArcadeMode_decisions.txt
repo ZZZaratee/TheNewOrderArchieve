@@ -1,0 +1,118 @@
+#############################
+#      Arcade Decisions     #
+#############################
+TNO_ArcadeMode_category = {
+	TNO_ArcadeMode_Disable = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TNO_ArcadeMode_Disable"
+			clr_country_flag = TNO_ArcadeMode_enable
+			custom_effect_tooltip = TNO_ArcadeMode_Disable_tt
+		}
+	}
+
+	TNO_ArcadeMode_DisableNuclearArsenals = {
+		icon = GFX_decision_generic_ignite_civil_war
+		available = { NOT = { has_global_flag = nukes_disabled } }
+
+		days_re_enable = 0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TNO_ArcadeMode_DisableNuclearArsenals"
+			set_global_flag = nukes_disabled
+			custom_effect_tooltip = TNO_ArcadeMode_DisableNuclearArsenals_tt
+		}
+	}
+
+	TNO_ArcadeMode_EnableNuclearArsenals = {
+		icon = GFX_decision_generic_ignite_civil_war
+		available = { has_global_flag = nukes_disabled }
+
+		days_re_enable = 0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TNO_ArcadeMode_EnableNuclearArsenals"
+			clr_global_flag = nukes_disabled
+			custom_effect_tooltip = TNO_ArcadeMode_EnableNuclearArsenals_tt
+		}
+	}
+
+	TNO_ArcadeMode_WW3 = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TNO_ArcadeMode_WW3"
+			country_event = ArcadeMode.1
+		}
+	}
+
+	TNO_ArcadeMode_BattleRoyale = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TNO_ArcadeMode_BattleRoyale"
+			every_country = {
+				limit = { is_faction_leader = yes }
+				dismantle_faction = yes
+			}
+			for_each_scope_loop = {
+				array = countries
+				for_each_scope_loop = {
+					array = countries
+					if = {
+						limit = {
+							NOT = {
+								tag = PREV
+								is_subject_of = PREV
+								has_war_with = PREV
+							}
+						}
+						declare_war_on = { target = PREV type = annex_everything }
+					}
+				}
+			}
+		}
+	}
+
+	TNO_ArcadeMode_BreakSeal = {
+		icon = GFX_decision_generic_ignite_civil_war
+		available = { country_exists = BRG }
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TNO_ArcadeMode_BreakSeal"
+			# every_country = { country_event = spook_news.1 }
+			BRG = { country_event = spook_temp.1 }
+		}
+	}
+
+	TNO_ArcadeMode_OpenRift = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TNO_ArcadeMode_OpenRift"
+			country_event = cau.788
+		}
+	}
+
+	TNO_ArcadeMode_SummonHoff = {
+		icon = GFX_decision_generic_ignite_civil_war
+
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TNO_ArcadeMode_SummonHoff"
+			country_event = bormann.42069
+		}
+	}
+}

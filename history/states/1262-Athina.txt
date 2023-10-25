@@ -1,0 +1,36 @@
+
+state={
+	id=1262
+	name="STATE_1262"
+
+	resources = {
+		aluminium=20
+		tungsten=6
+		chromium=3
+	}
+
+	history={
+		owner = GRE
+		victory_points = { 4109 25 }
+		victory_points = { 1109 5 }
+		victory_points = { 1205 5 }
+		buildings = {
+			infrastructure = 7
+			air_base = 4
+			4109 = {
+				naval_base = 9
+
+			}
+
+		}
+		add_core_of = GRE
+
+	}
+
+	provinces={
+		1109 4109 7127 14445 976 11895 1205
+	}
+	manpower=3356918
+	buildings_max_level_factor=1.000
+	state_category=city
+}

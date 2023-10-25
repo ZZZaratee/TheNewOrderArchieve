@@ -1,0 +1,460 @@
+##USE SUPER_EVENT_MAKER_GUI IN USEFUL PYTHON PROGRAMS TO MAKE NEW SUPER EVENTS##
+#Mute tracks (silence_...) exists on 25/30/40/45/60/80 seconds. Pick the one that is at least 3 seconds longer than your SE
+TNO_fire_super_event = {
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { TNO_temp_super_event = 1 } }
+			ZZZ = { set_variable = { TNO_super_event = TNO_temp_super_event } }
+			scoped_sound_effect = "tno_se_nuclear_war"
+			if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_80" }
+		}
+		else_if = {
+			limit = { NOT = { has_global_flag = TNO_my_world_is_on_fire_how_about_yours } }
+			set_variable = { TNO_super_event = TNO_temp_super_event }
+			if = {
+				limit = { check_variable = { TNO_temp_super_event = 2 } }
+				scoped_sound_effect = "tno_se_german_civil_war"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 3 } }
+				scoped_sound_effect = "tno_se_ww3"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_45" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 4 } }
+				scoped_sound_effect = "tno_se_south_african_war"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 5 } }
+				scoped_sound_effect = "tno_se_japanese_economic_war"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 6 } }
+				scoped_sound_effect = "tno_se_shoot_them_down"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 7 } }
+				scoped_sound_effect = "tno_se_the_yockey_presidency"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 8 } }
+				scoped_sound_effect = "tno_se_mars_landing"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 9 } }
+				scoped_sound_effect = "tno_se_indonesian_war"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 10 } check_variable = { YUN.YUN_legitimacy_cap = 100 } }
+				scoped_sound_effect = "tno_se_great_asian_war"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_45" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 10 } check_variable = { YUN.YUN_legitimacy_cap < 100 } }
+				scoped_sound_effect = "tno_se_great_asian_war_2"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_60" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 11 } }
+				scoped_sound_effect = "tno_se_italy_pf"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 12 } }
+				scoped_sound_effect = "tno_se_german_italian_invasion"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 13 } }
+				scoped_sound_effect = "tno_se_iberian_wars"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 14 } }
+				scoped_sound_effect = "tno_se_oil_crisis"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 15 } }
+				scoped_sound_effect = "tno_se_order_44"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			#else_if = {
+				#limit = { check_variable = { TNO_temp_super_event = 16 } }
+				## Blank, manually reuse this for other super later
+			#}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 17 } }
+				scoped_sound_effect = "tno_se_slave_revolt"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 18 } }
+				scoped_sound_effect = "tno_se_june_of_deceit"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 19 } }
+				scoped_sound_effect = "tno_se_june_of_deceit"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 20 } }
+				scoped_sound_effect = "tno_se_russian_unification_sverdlovsk_batov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 21 } }
+				scoped_sound_effect = "tno_se_russian_unification_wrrf_thuka"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 22 } }
+				scoped_sound_effect = "tno_se_russian_unification_chita_shepunov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 23 } }
+				scoped_sound_effect = "tno_se_russian_unification_amur"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 24 } }
+				scoped_sound_effect = "tno_se_russian_unification_magadan_matkovsky"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 25 } }
+				scoped_sound_effect = "tno_se_russian_unification_magadan_petlin"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 26 } }
+				scoped_sound_effect = "tno_se_russian_unification_chita_mikhail"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 27 } }
+				scoped_sound_effect = "tno_british_reunification"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 28 } }
+				scoped_sound_effect = "tno_se_russian_unification_wrrf_zhukov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 29 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_tabby"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_80" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 30 } }
+				scoped_sound_effect = "tno_se_russian_unification_vyatka_gul"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 31 } }
+				scoped_sound_effect = "tno_se_russian_unification_vyatka_shulgin"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 32 } }
+				scoped_sound_effect = "tno_se_russian_unification_vyatka_solzh"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 33 } }
+				scoped_sound_effect = "tno_se_russian_unification_ab_vagner"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 34 } }
+				scoped_sound_effect = "tno_se_russian_unification_ab_yemelyanov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 35 } }
+				scoped_sound_effect = "tno_se_russian_unification_samara_zykov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 36 } }
+				scoped_sound_effect = "tno_se_russian_unification_samara_bunya"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 37 } }
+				scoped_sound_effect = "tno_se_russian_unification_samara_oktan"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 38 } }
+				scoped_sound_effect = "tno_se_russian_unification_father"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 39 } }
+				scoped_sound_effect = "tno_se_russian_unification_buryatia_libsoc"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 40 } }
+				scoped_sound_effect = "tno_se_russian_unification_buryatia_authsoc"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 41 } }
+				scoped_sound_effect = "tno_se_russian_unification_yagoda_party"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 42 } }
+				scoped_sound_effect = "tno_se_russian_unification_yagoda_state"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 43 } }
+				scoped_sound_effect = "tno_se_russian_unification_omsk"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 44 } }
+				scoped_sound_effect = "tno_se_russian_unification_tomsk_humanists"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 45 } }
+				scoped_sound_effect = "tno_se_russian_unification_kemerovo"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 46 } }
+				scoped_sound_effect = "tno_se_russian_unification_kemerovo"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 47 } }
+				scoped_sound_effect = "tno_se_russian_unification_sba_despot"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 48 } }
+				scoped_sound_effect = "tno_se_russian_unification_sba_libsoc"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 49 } }
+				scoped_sound_effect = "tno_se_russian_unification_tyumen_kaganovich"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 50 } }
+				scoped_sound_effect = "tno_se_russian_unification_tyumen_khrushchev"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 51 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_zhdanov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 52 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_stalina"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 53 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_bukharina"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 54 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_gumilyov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 55 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_shafa"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 56 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_serov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 57 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_suslov"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 58 } }
+				scoped_sound_effect = "tno_se_russian_unification_komi_democratic"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 59 } }
+				scoped_sound_effect = "tno_se_russian_unification_sverdlovsk_yeltsin"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 60 } }
+				scoped_sound_effect = "tno_se_russian_unification_tomsk_bastillards"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 61 } }
+				scoped_sound_effect = "tno_se_russian_unification_tomsk_modernists"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 62 } }
+				scoped_sound_effect = "tno_se_russian_unification_tomsk_decembrists"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 63 } }
+				scoped_sound_effect = "tno_se_german_warlord_era"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 64 } }
+				scoped_sound_effect = "tno_se_fallrockwell"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_45" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 65 } }
+				scoped_sound_effect = "tno_se_fallschwarz"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 66 } }
+				scoped_sound_effect = "tno_se_huttig_collapse"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 67 } }
+				scoped_sound_effect = "tno_se_fallrot"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 68 } }
+				scoped_sound_effect = "tno_se_falldammerung"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_45" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 69 } }
+				scoped_sound_effect = "tno_se_british_reunification_thatcher"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 70 } }
+				scoped_sound_effect = "tno_se_british_reunification_supermac"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 71 } }
+				scoped_sound_effect = "tno_se_british_reunification_maudling"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 72 } }
+				scoped_sound_effect = "tno_se_british_reunification_chesterton"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 73 } }
+				scoped_sound_effect = "tno_se_british_reunification_wilson"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 74 } }
+				scoped_sound_effect = "tno_se_british_reunification_birch"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 75 } }
+				scoped_sound_effect = "tno_se_british_reunification_jellicoe"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 76 } }
+				scoped_sound_effect = "tno_se_british_reunification_stirling"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 77 } }
+				scoped_sound_effect = "tno_se_russian_unification_novosibirsk_pokryshkin"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 78 } }
+				scoped_sound_effect = "tno_se_russian_unification_novosibirsk_shukshin"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 79 } }
+				scoped_sound_effect = "tno_se_russian_unification_prc"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 80 } }
+				scoped_sound_effect = "tno_se_russian_unification_magadan_werbell"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_45" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 81 } }
+				scoped_sound_effect = "tno_se_the_african_devastation"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_45" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 82 } }
+				scoped_sound_effect = "tno_se_african_crisis"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_45" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 83 } }
+				scoped_sound_effect = "tno_se_african_crisis"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 84 } has_global_flag = WAC_scenario_1 }
+				scoped_sound_effect = "tno_se_west_african_war_1"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 84 } has_global_flag = WAC_scenario_2 }
+				scoped_sound_effect = "tno_se_west_african_war_2"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_25" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 84 } has_global_flag = WAC_scenario_3 }
+				scoped_sound_effect = "tno_se_west_african_war_3"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_30" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 85 } }
+				scoped_sound_effect = "tno_se_jushin_coup"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+			else_if = {
+				limit = { check_variable = { TNO_temp_super_event = 86 } }
+				scoped_sound_effect = "tno_se_mutos_coup"
+				if = { limit = { has_global_flag = silence_on_SE } scoped_play_song = "silence_40" }
+			}
+		}
+	}
+}
+
+d_fire_super_event = {
+	set_temp_variable = { TNO_temp_super_event = args^0 }
+	TNO_fire_super_event = yes
+}

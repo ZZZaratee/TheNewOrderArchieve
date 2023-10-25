@@ -1,0 +1,25 @@
+
+state={
+	id=556
+	name="STATE_556"
+	resources={
+		rubber=17.000
+	}
+
+	history={
+		owner = SUS
+		add_core_of = SUS
+		set_demilitarized_zone = yes
+	}
+
+	resources={
+		uranium = 2
+	}
+
+	provinces={
+	    12802 14152 
+	}
+	manpower=199143
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

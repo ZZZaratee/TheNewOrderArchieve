@@ -1,0 +1,34 @@
+clear_sabotaged_resources_if_necesary = {
+	if = {
+		limit = {
+			not = {
+				has_dynamic_modifier = {
+					modifier = sabotaged_resources
+				}
+			}
+		}
+
+		clear_variable = sabotaged_oil
+		clear_variable = sabotaged_aluminium
+		clear_variable = sabotaged_rubber
+		clear_variable = sabotaged_tungsten
+		clear_variable = sabotaged_steel
+		clear_variable = sabotaged_chromium
+	}
+}
+
+log_the_bug_chungus_pp = {
+	every_country = {
+		log = "[THIS.GetTag] political_power_gain: [?modifier@political_power_gain] political_power_factor: [?modifier@political_power_factor] political_power_cost: [?modifier@political_power_cost]"
+	}
+}
+
+add_core_effect = {
+	every_owned_state = {
+		add_core_of = PREV
+	}
+}
+
+leave_faction_effect = {
+	leave_faction = yes
+}

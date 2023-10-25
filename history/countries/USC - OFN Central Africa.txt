@@ -1,0 +1,94 @@
+capital = 544
+
+#oob = "BFR_1962"
+
+###Playable
+set_country_flag = tno_playable_country
+
+set_research_slots = 1
+
+set_politics = {
+	ruling_party = authoritarian_democracy
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communist = 20
+	ultranationalism = 0
+	socialist = 10
+	social_democracy = 0
+	liberal_democracy = 0
+
+	conservative_democracy = 0
+	authoritarian_democracy = 30
+	despotism = 10
+	fascism = 20
+	national_socialism = 10
+	
+}
+
+create_country_leader = {
+	name = "Various Revolutionary Movements"
+	desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+	expire = "1999.1.23"
+	ideology = communist_subtype
+}
+create_country_leader = {
+	name = "Various Revolutionary Movements"
+	desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+	expire = "1999.1.23"
+	ideology = socialist_subtype
+}
+create_country_leader = {
+	name = "William Westmoreland"
+	desc = "POLITICS_WILLIAM_WESTMORELAND_DESC"
+	picture = "Portrait_Ostafrika_William_Westmoreland.dds"
+	expire = "1999.1.23"
+	ideology = authoritarian_democracy_subtype
+}
+create_country_leader = {
+	name = "Various Warlord Cliques"
+	desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+	expire = "1999.1.23"
+	ideology = despotism_subtype
+}
+create_country_leader = {
+	name = "Various Warlord Cliques"
+	desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+	expire = "1999.1.23"
+	ideology = fascism_subtype
+}
+create_country_leader = {
+	name = "German Remnants"
+	desc = "POLITICS_EAST_AFRICA_DUMMY_DESC"
+	expire = "1999.1.23"
+	ideology = national_socialism_subtype
+}
+add_ideas = {
+	MZB_USA_William_R_Peers_hog
+	MZB_USA_Kenneth_Rush_for
+	MZB_USA_Paul_Nitze_eco
+	MZB_USA_Paul_D_Harkins_sec
+}
+
+create_corps_commander = {
+	name = "William R. Peers"
+	picture = "Portrait_Ostafrika_William_R_Peers.dds"
+	traits = {  }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Paul D. Harkins"
+	picture = "Portrait_Ostafrika_Paul_D_Harkins.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}

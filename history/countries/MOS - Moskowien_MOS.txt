@@ -1,0 +1,73 @@
+﻿capital = 1442
+
+add_ideas = {
+	# Ministers
+		MOS_hog
+		MOS_for
+		MOS_eco
+		MOS_sec
+	# Political Laws
+		tno_political_parties_one_party_state
+		tno_religious_rights_state_atheism
+		tno_trade_unions_illegal
+		tno_immigration_closed_borders
+		tno_slavery_corvee
+		tno_public_meetings_outlawed
+		tno_press_rights_state_press_only
+		tno_vote_franchise_no_voting
+		tno_refugees_banned
+	# Military Laws
+		tno_conscription_service_by_requirement
+		tno_women_banned
+		tno_military_supervision_kill_em_all
+		tno_training_basic_training
+		tno_racial_integration_segregated_regiments
+		tno_draft_exemptions_none
+	# Economic Laws
+		tno_trade_laws_closed_economy
+		tno_income_taxation_flat_taxes
+		tno_minimum_wage_trinket_minimum_wage
+		tno_max_workhours_14_hour_work_day
+		tno_child_labor_restricted
+		tno_pensions_low_pensions
+		tno_unemployment_no_subsidies
+	# Social Laws
+		tno_safety_no_regulations
+		tno_health_care_support_for_emergencies
+		tno_pollution_no_controls
+		tno_education_elite_only
+		tno_penal_system_penal_slavery
+		tno_lgbt_rights_lgbt_outlawed
+		tno_gender_rights_traditional_roles
+		tno_minorities_segregation
+		tno_security_security_service
+	# Social Development
+		
+		tno_army_professionalism_cronyism
+		tno_industrial_expertise_nascent
+		tno_industrial_equipment_factory_complexes
+		tno_agriculture_mass_mechanized
+		tno_research_facilities_outdated
+		tno_academic_base_basic_literacy
+		tno_admin_efficiency_widespread_corruption
+}
+set_politics = {	
+	ruling_party = national_socialism
+	last_election = "1941.4.17"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = { national_socialism = 100 }
+create_country_leader = {
+	name = "Bronislav Kaminski"
+	desc = "MSK_DISSOLUTION_MOS_LEADER_DESC"
+	picture = "gfx/leaders/Moskowien/MOS.dds"
+	expire = "1999.10.12"
+	ideology = national_socialism_stratocratic_nazism_subtype
+	traits = {
+		terrorizer
+	}
+}
+
+set_variable = {TNO_economy_type = 3}
+set_variable = {TNO_economy_subtype = 6}

@@ -1,0 +1,31 @@
+###POP DONE 
+state={
+	id=32
+	name="STATE_32" 
+	manpower = 1033550
+	
+	state_category = town
+	
+	resources={
+		steel=56
+		aluminium=58
+	}
+
+	history={
+		owner = BRG
+		buildings = {
+			schools = 1
+			infrastructure = 4
+			radar_station = 2
+		}
+		victory_points = { 3768 5 }
+		victory_points = { 6784 5 }
+		victory_points = { 780 2 }
+		add_core_of = FRA
+		add_core_of = BRG
+	}
+
+	provinces={
+		762 764 780 3589 3768 6784 11713 
+	}
+}

@@ -1,0 +1,144 @@
+﻿capital = 277
+
+#econtype
+set_variable = { TNO_economy_subtype = 10 }
+set_variable = { TNO_economy_type = 2 }
+
+oob = "MEX_1962"
+
+set_politics = {
+	ruling_party = authoritarian_democracy
+	last_election = "1958.7.6"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+set_popularities = {
+    socialist = 4
+    fascism = 5
+	authoritarian_democracy = 64
+    conservative_democracy = 26
+	communist = 1
+}
+
+set_stability = 0.8
+
+add_ideas = {
+
+	MEX_Economic_Battlefield
+	MEX_Fraying_Ideals
+
+	### Ministers
+
+	MEX_Luis_Echeverria_pol
+	MEX_Raul_Lozano_eco
+	MEX_Gustavo_Ordaz_mil
+	MEX_Adolfo_Mateos_dep
+
+	### LAWS ###
+	# POLITICAL
+	tno_political_parties_multiparty_system
+	tno_religious_rights_state_atheism
+	tno_trade_unions_all_allowed
+	tno_immigration_naturalization
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_registered_voting
+	tno_refugees_open
+
+	# MILITARY
+	tno_conscription_one_year_draft
+	tno_women_noncombat_only
+	tno_military_supervision_no_supervision
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_religious_deferment
+
+	# ECONOMIC
+	tno_trade_laws_export_focus
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_unemployment_low_subsidies
+	tno_pensions_acceptable_pensions
+
+	# SOCIAL
+	tno_safety_acceptable_regulations
+	tno_health_care_free_universal_care
+	tno_pollution_few_regulations
+	tno_education_free_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_preemptive_security
+
+	# SOCIETAL DEVELOPMENT
+	tno_army_professionalism_professional
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_factory_complexes
+	tno_admin_efficiency_widespread_corruption
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+
+# Policy effectivness
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_political_parties_effectiveness = 14 }
+set_variable = { tno_religious_rights_effectiveness = 5 }
+set_variable = { tno_trade_unions_effectiveness = 27 }
+set_variable = { tno_immigration_effectiveness = 100 }
+set_variable = { tno_slavery_effectiveness = 100 }
+set_variable = { tno_public_meetings_effectiveness = 65 }
+set_variable = { tno_press_rights_effectiveness = 74 }
+set_variable = { tno_vote_franchise_effectiveness = 21 }
+set_variable = { tno_refugees_effectiveness = 100 }
+
+set_variable = { tno_conscription_effectiveness = 100 }
+set_variable = { tno_women_effectiveness = 44 }
+set_variable = { tno_military_supervision_effectiveness = 59 }
+set_variable = { tno_training_effectiveness = 62 }
+set_variable = { tno_racial_integration_effectiveness = 88 }
+set_variable = { tno_draft_exemptions_effectiveness = 90 }
+
+set_variable = { tno_trade_laws_effectiveness = 80 }
+set_variable = { tno_income_taxation_effectiveness = 80 }
+set_variable = { tno_minimum_wage_effectiveness = 48 }
+set_variable = { tno_max_workhours_effectiveness = 48 }
+set_variable = { tno_child_labor_effectiveness = 68 }
+set_variable = { tno_pensions_effectiveness = 58 }
+set_variable = { tno_unemployment_effectiveness = 66 }
+
+set_variable = { tno_safety_effectiveness = 68 }
+set_variable = { tno_health_care_effectiveness = 38 }
+set_variable = { tno_pollution_effectiveness = 17 }
+set_variable = { tno_education_effectiveness = 14 }
+set_variable = { tno_penal_system_effectiveness = 73 }
+set_variable = { tno_lgbt_rights_effectiveness = 19 }
+set_variable = { tno_gender_rights_effectiveness = 58 }
+set_variable = { tno_minorities_effectiveness = 58 }
+set_variable = { tno_security_effectiveness = 92 }
+
+create_country_leader = {
+	name = "Adolfo López Mateos"
+	desc = "POLITICS_ADOLFO_LOPEZ_MATEOS_DESC"
+	picture = "Portrait_Mexico_Adolfo_Lopez_Mateos.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy_dominant_party_democracy_subtype
+}
+
+create_country_leader = {
+	name = "Lucio Cabañas"
+	desc = "POLITICS_ADOLFO_LOPEZ_MATEOS_DESC"
+	picture = "Portrait_Mexico_Adolfo_Lopez_Mateos.dds"
+	expire = "1965.1.1"
+	ideology = communist_subtype
+	traits = {
+		#
+	}
+}

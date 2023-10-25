@@ -1,0 +1,739 @@
+### TNO Laws
+### Military Laws
+### ALL LAW EFFECTS MOVED TO DYNAMIC MODIFIERS
+ideas = {
+
+	tno_conscription = {
+		law = yes
+		tno_conscription_scraping_the_barrel = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_conscription_scraping_the_barrel"
+				set_variable = { tno_modifier_conscription_policy_army_morale_factor = -0.40 }
+				set_variable = { tno_modifier_conscription_policy_army_org_factor = -0.40 }
+				set_variable = { tno_modifier_conscription_policy_army_professionalism_monthly_rate = -1.5 }
+				set_variable = { tno_modifier_conscription_policy_conscription = 0.25 }
+				set_variable = { tno_modifier_conscription_policy_experience_gain_army = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_dockyard = -0.45 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_factory = -0.45 }
+				set_variable = { tno_modifier_conscription_policy_political_power_gain = -1.50 }
+				set_variable = { tno_modifier_conscription_policy_production_speed_buildings_factor = -0.45 }
+				set_variable = { tno_modifier_conscription_policy_research_speed_factor = -0.10 }
+				set_variable = { tno_modifier_conscription_policy_stability_factor = -0.30 }
+				set_variable = { tno_modifier_conscription_policy_war_support_factor = -0.30 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_conscription_all_adults_serve = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_conscription_all_adults_serve"
+				set_variable = { tno_modifier_conscription_policy_army_morale_factor = -0.25 }
+				set_variable = { tno_modifier_conscription_policy_army_org_factor = -0.25 }
+				set_variable = { tno_modifier_conscription_policy_army_professionalism_monthly_rate = -1 }
+				set_variable = { tno_modifier_conscription_policy_conscription = 0.2 } #20%
+				set_variable = { tno_modifier_conscription_policy_experience_gain_army = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_dockyard = -0.3 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_factory = -0.3 }
+				set_variable = { tno_modifier_conscription_policy_political_power_gain = -1.0 }
+				set_variable = { tno_modifier_conscription_policy_production_speed_buildings_factor = -0.3 }
+				set_variable = { tno_modifier_conscription_policy_research_speed_factor = -0.075 }
+				set_variable = { tno_modifier_conscription_policy_stability_factor = -0.25 }
+				set_variable = { tno_modifier_conscription_policy_war_support_factor = -0.25 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_conscription_service_by_requirement = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_conscription_service_by_requirement"
+				set_variable = { tno_modifier_conscription_policy_army_morale_factor = -0.15 }
+				set_variable = { tno_modifier_conscription_policy_army_org_factor = -0.15 }
+				set_variable = { tno_modifier_conscription_policy_army_professionalism_monthly_rate = 0 }
+				set_variable = { tno_modifier_conscription_policy_conscription = 0.1 }
+				set_variable = { tno_modifier_conscription_policy_experience_gain_army = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_dockyard = -0.2 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_factory = -0.2 }
+				set_variable = { tno_modifier_conscription_policy_political_power_gain = -0.5 }
+				set_variable = { tno_modifier_conscription_policy_production_speed_buildings_factor = -0.2 }
+				set_variable = { tno_modifier_conscription_policy_research_speed_factor = -0.05 }
+				set_variable = { tno_modifier_conscription_policy_stability_factor = -0.2 }
+				set_variable = { tno_modifier_conscription_policy_war_support_factor = -0.2 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_conscription_four_year_draft = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_conscription_four_year_draft"
+				set_variable = { tno_modifier_conscription_policy_army_morale_factor = -0.10 }
+				set_variable = { tno_modifier_conscription_policy_army_org_factor = -0.10 }
+				set_variable = { tno_modifier_conscription_policy_army_professionalism_monthly_rate = 0 }
+				set_variable = { tno_modifier_conscription_policy_conscription = 0.05 }
+				set_variable = { tno_modifier_conscription_policy_experience_gain_army = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_dockyard = -0.10 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_factory = -0.10 }
+				set_variable = { tno_modifier_conscription_policy_political_power_gain = -0.2 }
+				set_variable = { tno_modifier_conscription_policy_production_speed_buildings_factor = -0.10 }
+				set_variable = { tno_modifier_conscription_policy_research_speed_factor = -0.025 }
+				set_variable = { tno_modifier_conscription_policy_stability_factor = -0.15 }
+				set_variable = { tno_modifier_conscription_policy_war_support_factor = -0.15 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_conscription_two_year_draft = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_conscription_two_year_draft"
+				set_variable = { tno_modifier_conscription_policy_army_morale_factor = -0.05 }
+				set_variable = { tno_modifier_conscription_policy_army_org_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_army_professionalism_monthly_rate = 0 }
+				set_variable = { tno_modifier_conscription_policy_conscription = 0.035 }
+				set_variable = { tno_modifier_conscription_policy_experience_gain_army = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_dockyard = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_factory = 0 }
+				set_variable = { tno_modifier_conscription_policy_political_power_gain = -0.1 }
+				set_variable = { tno_modifier_conscription_policy_production_speed_buildings_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_research_speed_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_stability_factor = -0.1 }
+				set_variable = { tno_modifier_conscription_policy_war_support_factor = -0.1 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_conscription_one_year_draft = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_conscription_one_year_draft"
+				set_variable = { tno_modifier_conscription_policy_army_morale_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_army_org_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_army_professionalism_monthly_rate = 0 }
+				set_variable = { tno_modifier_conscription_policy_conscription = 0.025 }
+				set_variable = { tno_modifier_conscription_policy_experience_gain_army = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_dockyard = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_factory = 0 }
+				set_variable = { tno_modifier_conscription_policy_political_power_gain = -0.05 }
+				set_variable = { tno_modifier_conscription_policy_production_speed_buildings_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_research_speed_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_stability_factor = -0.05 }
+				set_variable = { tno_modifier_conscription_policy_war_support_factor = -0.05 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_conscription_volunteer_only = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_conscription_volunteer_only"
+				set_variable = { tno_modifier_conscription_policy_army_morale_factor = 0.10 }
+				set_variable = { tno_modifier_conscription_policy_army_org_factor = 0.10 }
+				set_variable = { tno_modifier_conscription_policy_army_professionalism_monthly_rate = 0 }
+				set_variable = { tno_modifier_conscription_policy_conscription = 0.012 }
+				set_variable = { tno_modifier_conscription_policy_experience_gain_army = -0.02 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_dockyard = 0 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_factory = 0 }
+				set_variable = { tno_modifier_conscription_policy_political_power_gain = 0 }
+				set_variable = { tno_modifier_conscription_policy_production_speed_buildings_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_research_speed_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_stability_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_war_support_factor = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_conscription_disarmed_nation = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_conscription_disarmed_nation"
+				set_variable = { tno_modifier_conscription_policy_army_morale_factor = -0.20 }
+				set_variable = { tno_modifier_conscription_policy_army_org_factor = -0.20 }
+				set_variable = { tno_modifier_conscription_policy_army_professionalism_monthly_rate = -1.5 }
+				set_variable = { tno_modifier_conscription_policy_conscription = 0.002 }
+				set_variable = { tno_modifier_conscription_policy_experience_gain_army = -0.05 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_dockyard = -0.15 }
+				set_variable = { tno_modifier_conscription_policy_industrial_capacity_factory = -0.15 }
+				set_variable = { tno_modifier_conscription_policy_political_power_gain = 0.25 }
+				set_variable = { tno_modifier_conscription_policy_production_speed_buildings_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_research_speed_factor = 0 }
+				set_variable = { tno_modifier_conscription_policy_stability_factor = 0.10 }
+				set_variable = { tno_modifier_conscription_policy_war_support_factor = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+	}
+	tno_women = {
+		law = yes
+		tno_women_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_women_not_applicable"
+				set_variable = { tno_modifier_women_policy_conscription_factor = 0 }
+				set_variable = { tno_modifier_women_policy_stability_factor = 0 }
+				set_variable = { tno_modifier_women_policy_war_support_factor = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = { has_idea = tno_conscription_disarmed_nation }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_women_banned = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_women_banned"
+				set_variable = { tno_modifier_women_policy_conscription_factor = 0 }
+				set_variable = { tno_modifier_women_policy_stability_factor = 0.025 }
+				set_variable = { tno_modifier_women_policy_war_support_factor = 0.05 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = {
+				NOT = {
+					has_idea = tno_gender_rights_gender_equality
+					has_idea = tno_gender_rights_promoted_equality
+				}
+			}
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_women_military_assistance = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_women_military_assistance"
+				set_variable = { tno_modifier_women_policy_conscription_factor = 0.10 }
+				set_variable = { tno_modifier_women_policy_stability_factor = -0.02 }
+				set_variable = { tno_modifier_women_policy_war_support_factor = -0.04 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = {
+				OR = {
+					has_idea = tno_gender_rights_women_in_the_workplace
+					has_idea = tno_gender_rights_gender_equality
+					has_idea = tno_gender_rights_promoted_equality
+				}
+			}
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_women_noncombat_only = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_women_noncombat_only"
+				set_variable = { tno_modifier_women_policy_conscription_factor = 0.20 }
+				set_variable = { tno_modifier_women_policy_stability_factor = -0.03 }
+				set_variable = { tno_modifier_women_policy_war_support_factor = -0.06 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = {
+				OR = {
+					has_idea = tno_gender_rights_women_in_the_workplace
+					has_idea = tno_gender_rights_gender_equality
+					has_idea = tno_gender_rights_promoted_equality
+				}
+			}
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_women_combat_roles = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_women_combat_roles"
+				set_variable = { tno_modifier_women_policy_conscription_factor = 0.35 }
+				set_variable = { tno_modifier_women_policy_stability_factor = -0.04 }
+				set_variable = { tno_modifier_women_policy_war_support_factor = -0.08 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = {
+				OR = {
+					has_idea = tno_gender_rights_gender_equality
+					has_idea = tno_gender_rights_promoted_equality
+				}
+			}
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_women_total_equality = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_women_total_equality"
+				set_variable = { tno_modifier_women_policy_conscription_factor = 0.50 }
+				set_variable = { tno_modifier_women_policy_stability_factor = -0.05 }
+				set_variable = { tno_modifier_women_policy_war_support_factor = -0.10 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = {
+				has_idea = tno_gender_rights_promoted_equality
+			}
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+	}
+	tno_military_supervision = {
+		law = yes
+		tno_military_supervision_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_military_supervision_not_applicable"
+				set_variable = { tno_modifier_military_supervision_policy_army_attack_factor = 0 }
+				set_variable = { tno_modifier_military_supervision_policy_experience_gain_factor = 0 }
+				set_variable = { tno_modifier_military_supervision_policy_war_support_factor = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = { has_idea = tno_conscription_disarmed_nation }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_military_supervision_kill_em_all = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_military_supervision_kill_em_all"
+				set_variable = { tno_modifier_military_supervision_policy_army_attack_factor = 0.10 }
+				set_variable = { tno_modifier_military_supervision_policy_experience_gain_factor = -0.20 }
+				set_variable = { tno_modifier_military_supervision_policy_war_support_factor = -0.1 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_military_supervision_no_supervision = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_military_supervision_no_supervision"
+				set_variable = { tno_modifier_military_supervision_policy_army_attack_factor = 0.05 }
+				set_variable = { tno_modifier_military_supervision_policy_experience_gain_factor = -0.10 }
+				set_variable = { tno_modifier_military_supervision_policy_war_support_factor = -0.05 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_military_supervision_military_policing = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_military_supervision_military_policing"
+				set_variable = { tno_modifier_military_supervision_policy_army_attack_factor = 0 }
+				set_variable = { tno_modifier_military_supervision_policy_experience_gain_factor = 0 }
+				set_variable = { tno_modifier_military_supervision_policy_war_support_factor = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_military_supervision_rules_of_engagement = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_military_supervision_rules_of_engagement"
+				set_variable = { tno_modifier_military_supervision_policy_army_attack_factor = -0.025 }
+				set_variable = { tno_modifier_military_supervision_policy_experience_gain_factor = 0.05 }
+				set_variable = { tno_modifier_military_supervision_policy_war_support_factor = 0.025 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_military_supervision_watchdog_groups = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_military_supervision_watchdog_groups"
+				set_variable = { tno_modifier_military_supervision_policy_army_attack_factor = -0.05 }
+				set_variable = { tno_modifier_military_supervision_policy_experience_gain_factor = 0.1 }
+				set_variable = { tno_modifier_military_supervision_policy_war_support_factor = 0.05 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_military_supervision_total_supervision = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_military_supervision_total_supervision"
+				set_variable = { tno_modifier_military_supervision_policy_army_attack_factor = -0.10 }
+				set_variable = { tno_modifier_military_supervision_policy_experience_gain_factor = 0.2 }
+				set_variable = { tno_modifier_military_supervision_policy_war_support_factor = 0.075 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+	}
+	tno_training = {
+		law = yes
+		tno_training_none = { #trial by fire
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_training_none"
+				set_variable = { tno_modifier_training_policy_army_attack_factor = -0.20 }
+				set_variable = { tno_modifier_training_policy_army_defence_factor = -0.20 }
+				set_variable = { tno_modifier_training_policy_army_org_factor = -0.20 }
+				set_variable = { tno_modifier_training_policy_army_professionalism_monthly_rate = -1.5 }
+				set_variable = { tno_modifier_training_policy_minimum_training_level = -0.2 }
+				set_variable = { tno_modifier_training_policy_mobilization_speed = 2.00 }
+				set_variable = { tno_modifier_training_policy_training_time_army_factor = -1.00 }
+				set_variable = { tno_modifier_training_policy_personnel_cost_modifier = 0.20 }
+				set_variable = { tno_modifier_training_policy_air_accidents_factor = 0.2 }
+				set_variable = { tno_modifier_training_policy_air_weather_penalty = 0.2 }
+				set_variable = { tno_modifier_training_policy_static_anti_air_hit_chance_factor = -0.2 }
+				set_variable = { tno_modifier_training_policy_experience_gain_army_factor = -0.1 }
+				set_variable = { tno_modifier_training_policy_experience_gain_air_factor = -0.1 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_training_minimal_training = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_training_minimal_training"
+				set_variable = { tno_modifier_training_policy_army_attack_factor = -0.10 }
+				set_variable = { tno_modifier_training_policy_army_defence_factor = -0.10 }
+				set_variable = { tno_modifier_training_policy_army_org_factor = -0.10 }
+				set_variable = { tno_modifier_training_policy_army_professionalism_monthly_rate = -0.5 }
+				set_variable = { tno_modifier_training_policy_minimum_training_level = -0.1 }
+				set_variable = { tno_modifier_training_policy_mobilization_speed = 1.00 }
+				set_variable = { tno_modifier_training_policy_training_time_army_factor = -0.50 }
+				set_variable = { tno_modifier_training_policy_personnel_cost_modifier = 0.40 }
+				set_variable = { tno_modifier_training_policy_air_accidents_factor = 0.1 }
+				set_variable = { tno_modifier_training_policy_air_weather_penalty = 0.1 }
+				set_variable = { tno_modifier_training_policy_static_anti_air_hit_chance_factor = -0.1 }
+				set_variable = { tno_modifier_training_policy_experience_gain_army_factor = -0.05 }
+				set_variable = { tno_modifier_training_policy_experience_gain_air_factor = -0.05 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_training_basic_training = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_training_basic_training"
+				set_variable = { tno_modifier_training_policy_army_attack_factor = 0 }
+				set_variable = { tno_modifier_training_policy_army_defence_factor = 0 }
+				set_variable = { tno_modifier_training_policy_army_org_factor = 0 }
+				set_variable = { tno_modifier_training_policy_army_professionalism_monthly_rate = 0 }
+				set_variable = { tno_modifier_training_policy_minimum_training_level = 0 }
+				set_variable = { tno_modifier_training_policy_mobilization_speed = 0 }
+				set_variable = { tno_modifier_training_policy_training_time_army_factor = 0 }
+				set_variable = { tno_modifier_training_policy_personnel_cost_modifier = 0.60 }
+				set_variable = { tno_modifier_training_policy_air_accidents_factor = 0 }
+				set_variable = { tno_modifier_training_policy_air_weather_penalty = 0 }
+				set_variable = { tno_modifier_training_policy_static_anti_air_hit_chance_factor = 0 }
+				set_variable = { tno_modifier_training_policy_experience_gain_army_factor = 0 }
+				set_variable = { tno_modifier_training_policy_experience_gain_air_factor = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_training_combat_schooling = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_training_combat_schooling"
+				set_variable = { tno_modifier_training_policy_army_attack_factor = 0.05 }
+				set_variable = { tno_modifier_training_policy_army_defence_factor = 0.05 }
+				set_variable = { tno_modifier_training_policy_army_org_factor = 0 }
+				set_variable = { tno_modifier_training_policy_army_professionalism_monthly_rate = 1 }
+				set_variable = { tno_modifier_training_policy_minimum_training_level = 0.1 }
+				set_variable = { tno_modifier_training_policy_mobilization_speed = -0.20 }
+				set_variable = { tno_modifier_training_policy_training_time_army_factor = 0 }
+				set_variable = { tno_modifier_training_policy_personnel_cost_modifier = 0.80 }
+				set_variable = { tno_modifier_training_policy_air_accidents_factor = -0.05 }
+				set_variable = { tno_modifier_training_policy_air_weather_penalty = -0.05 }
+				set_variable = { tno_modifier_training_policy_static_anti_air_hit_chance_factor = 0.1 }
+				set_variable = { tno_modifier_training_policy_experience_gain_army_factor = 0.05 }
+				set_variable = { tno_modifier_training_policy_experience_gain_air_factor = 0.05 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_training_advanced_training_methods = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_training_advanced_training_methods"
+				set_variable = { tno_modifier_training_policy_army_attack_factor = 0.125 }
+				set_variable = { tno_modifier_training_policy_army_defence_factor = 0.125 }
+				set_variable = { tno_modifier_training_policy_army_org_factor = 0.1 }
+				set_variable = { tno_modifier_training_policy_army_professionalism_monthly_rate = 2 }
+				set_variable = { tno_modifier_training_policy_minimum_training_level = 0.2 }
+				set_variable = { tno_modifier_training_policy_mobilization_speed = -0.40 }
+				set_variable = { tno_modifier_training_policy_training_time_army_factor = 0.20 }
+				set_variable = { tno_modifier_training_policy_personnel_cost_modifier = 1.00 }
+				set_variable = { tno_modifier_training_policy_air_accidents_factor = -0.1 }
+				set_variable = { tno_modifier_training_policy_air_weather_penalty = -0.1 }
+				set_variable = { tno_modifier_training_policy_static_anti_air_hit_chance_factor = 0.15 }
+				set_variable = { tno_modifier_training_policy_experience_gain_army_factor = 0.1 }
+				set_variable = { tno_modifier_training_policy_experience_gain_air_factor = 0.1 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+	}
+	tno_racial_integration = {
+		law = yes
+		tno_racial_integration_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_racial_integration_not_applicable"
+				set_variable = { tno_modifier_racial_integration_policy_army_morale_factor = 0 }
+				set_variable = { tno_modifier_racial_integration_policy_army_org_factor = 0 }
+				set_variable = { tno_modifier_racial_integration_policy_conscription_factor = 0 }
+				set_variable = { tno_modifier_racial_integration_policy_non_core_manpower = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = { }
+			cancel_if_invalid = no
+		}
+		tno_racial_integration_none = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_racial_integration_none"
+				set_variable = { tno_modifier_racial_integration_policy_army_morale_factor = 0.05 }
+				set_variable = { tno_modifier_racial_integration_policy_army_org_factor = 0.05 }
+				set_variable = { tno_modifier_racial_integration_policy_conscription_factor = -0.10 }
+				set_variable = { tno_modifier_racial_integration_policy_non_core_manpower = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_racial_integration_segregated_regiments = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_racial_integration_segregated_regiments"
+				set_variable = { tno_modifier_racial_integration_policy_army_morale_factor = 0.025 }
+				set_variable = { tno_modifier_racial_integration_policy_army_org_factor = 0.025 }
+				set_variable = { tno_modifier_racial_integration_policy_conscription_factor = -0.05 }
+				set_variable = { tno_modifier_racial_integration_policy_non_core_manpower = 0.01 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_racial_integration_integrated_military = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_racial_integration_integrated_military"
+				set_variable = { tno_modifier_racial_integration_policy_army_morale_factor = 0 }
+				set_variable = { tno_modifier_racial_integration_policy_army_org_factor = 0 }
+				set_variable = { tno_modifier_racial_integration_policy_conscription_factor = 0.05 }
+				set_variable = { tno_modifier_racial_integration_policy_non_core_manpower = 0.025 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_racial_integration_enforced_integration = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_racial_integration_enforced_integration"
+				set_variable = { tno_modifier_racial_integration_policy_army_morale_factor = -0.025 }
+				set_variable = { tno_modifier_racial_integration_policy_army_org_factor = -0.025 }
+				set_variable = { tno_modifier_racial_integration_policy_conscription_factor = 0.10 }
+				set_variable = { tno_modifier_racial_integration_policy_non_core_manpower = 0.04 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+	}
+	tno_draft_exemptions = {
+		law = yes
+		tno_draft_exemptions_not_applicable = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_not_applicable"
+				set_variable = { tno_modifier_draft_exemptions_policy_academic_base_monthly_rate = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_conscription_factor = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_political_power_gain = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_research_speed_factor = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_stability_factor = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_war_support_factor = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = { has_idea = tno_conscription_disarmed_nation }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_draft_exemptions_none = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_none"
+				set_variable = { tno_modifier_draft_exemptions_policy_academic_base_monthly_rate = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_conscription_factor = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_political_power_gain = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_research_speed_factor = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_stability_factor = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_war_support_factor = -0.10 }
+				TNO_update_policy_effectiveness = yes
+			}
+			default = yes
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_draft_exemptions_educational_deferment = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_educational_deferment"
+				set_variable = { tno_modifier_draft_exemptions_policy_academic_base_monthly_rate = 0.10 }
+				set_variable = { tno_modifier_draft_exemptions_policy_conscription_factor = -0.05 }
+				set_variable = { tno_modifier_draft_exemptions_policy_political_power_gain = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_research_speed_factor = 0.025 }
+				set_variable = { tno_modifier_draft_exemptions_policy_stability_factor = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_war_support_factor = -0.05 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_draft_exemptions_civil_service_deferment = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_civil_service_deferment"
+				set_variable = { tno_modifier_draft_exemptions_policy_academic_base_monthly_rate = 0.10 }
+				set_variable = { tno_modifier_draft_exemptions_policy_conscription_factor = -0.10 }
+				set_variable = { tno_modifier_draft_exemptions_policy_political_power_gain = 0.05 }
+				set_variable = { tno_modifier_draft_exemptions_policy_research_speed_factor = 0.025 }
+				set_variable = { tno_modifier_draft_exemptions_policy_stability_factor = 0 }
+				set_variable = { tno_modifier_draft_exemptions_policy_war_support_factor = 0 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+		tno_draft_exemptions_religious_deferment = { #now generous exemptions
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea tno_draft_exemptions_religious_deferment"
+				set_variable = { tno_modifier_draft_exemptions_policy_academic_base_monthly_rate = 0.10 }
+				set_variable = { tno_modifier_draft_exemptions_policy_conscription_factor = -0.15 }
+				set_variable = { tno_modifier_draft_exemptions_policy_political_power_gain = 0.05 }
+				set_variable = { tno_modifier_draft_exemptions_policy_research_speed_factor = 0.025 }
+				set_variable = { tno_modifier_draft_exemptions_policy_stability_factor = 0.025 }
+				set_variable = { tno_modifier_draft_exemptions_policy_war_support_factor = 0.05 }
+				TNO_update_policy_effectiveness = yes
+			}
+			available = { always = no }
+
+			removal_cost = -1
+			ledger = civilian
+			modifier = {  }
+			cancel_if_invalid = no
+		}
+	}
+}
