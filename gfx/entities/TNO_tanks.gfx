@@ -1,0 +1,656 @@
+objectTypes = {
+	
+	pdxmesh = {
+		name = "GENERIC_tank_mesh"
+		file = "gfx/models/units/tanks/GENERIC_tank_M46.mesh"
+
+		animation = { id = "attack"			type = "USA_tank_heavy_attack_animation" }
+		animation = { id = "idle"			type = "USA_tank_heavy_idle_animation" }
+		animation = { id = "move"			type = "USA_tank_heavy_moving_animation" }
+		scale = 0.5
+		
+	}
+	pdxmesh = {
+		name = "PT76_ifv_mesh"
+		file = "gfx/models/units/tanks/PT76.mesh"
+
+		animation = { id = "attack"			type = "PT76_attack_animation" }
+		animation = { id = "idle"			type = "PT76_idle_animation" }
+		animation = { id = "move"			type = "PT76_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "BMP1_ifv_mesh"
+		file = "gfx/models/units/tanks/BMP1.mesh"
+
+		animation = { id = "attack"			type = "BMP1_attack_animation" }
+		animation = { id = "idle"			type = "BMP1_idle_animation" }
+		animation = { id = "move"			type = "BMP1_moving_animation" }
+		
+		scale = 1.2
+		
+	}
+	pdxmesh = {
+		name = "BMP1P_ifv_mesh"
+		file = "gfx/models/units/tanks/BMP1P.mesh"
+
+		animation = { id = "attack"			type = "BMP1_attack_animation" }
+		animation = { id = "idle"			type = "BMP1_idle_animation" }
+		animation = { id = "move"			type = "BMP1_moving_animation" }
+		
+		scale = 1.2
+		
+	}
+	
+	pdxmesh = {
+		name = "LEO_tank_mesh"
+		file = "gfx/models/units/tanks/Leopard1.mesh"
+
+		animation = { id = "attack"			type = "LEO_attack_animation" }
+		animation = { id = "idle"			type = "LEO_idle_animation" }
+		animation = { id = "move"			type = "LEO_moving_animation" }
+		
+		scale = 1.9
+		
+	}
+	pdxmesh = {
+		name = "M60_tank_mesh"
+		file = "gfx/models/units/tanks/M60.mesh"
+
+		animation = { id = "attack"			type = "M60_attack_animation" }
+		animation = { id = "idle"			type = "M60_idle_animation" }
+		animation = { id = "move"			type = "M60_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "M60_BRA_tank_mesh"
+		file = "gfx/models/units/tanks/M60.mesh"
+
+		animation = { id = "attack"			type = "M60_attack_animation" }
+		animation = { id = "idle"			type = "M60_idle_animation" }
+		animation = { id = "move"			type = "M60_moving_animation" }
+		
+		scale = 0.6
+
+		meshsettings = {
+   		 name = "Cube.009"
+   		 index = 0
+   		 texture_diffuse = "M60_BRA_diffuse.dds"
+		 texture_normal = "M60_normal.dds"
+   		 texture_specular = "M60_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+	}
+
+	pdxmesh = {
+		name = "M60_AST_tank_mesh"
+		file = "gfx/models/units/tanks/M60.mesh"
+
+		animation = { id = "attack"			type = "M60_attack_animation" }
+		animation = { id = "idle"			type = "M60_idle_animation" }
+		animation = { id = "move"			type = "M60_moving_animation" }
+		
+		scale = 0.6
+
+		meshsettings = {
+   		 name = "Cube.009"
+   		 index = 0
+   		 texture_diffuse = "M60_AST_diffuse.dds"
+		 texture_normal = "M60_normal.dds"
+   		 texture_specular = "M60_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+	}
+
+	pdxmesh = {
+		name = "M60_OFN_tank_mesh"
+		file = "gfx/models/units/tanks/M60.mesh"
+
+		animation = { id = "attack"			type = "M60_attack_animation" }
+		animation = { id = "idle"			type = "M60_idle_animation" }
+		animation = { id = "move"			type = "M60_moving_animation" }
+		
+		scale = 0.6
+
+		meshsettings = {
+   		name = "Cube.009"
+   		index = 0
+   		texture_diffuse = "M60_OFN_diffuse.dds"
+		texture_normal = "M60_normal.dds"
+   		texture_specular = "M60_specular.dds"
+   		shader = PdxMeshAdvanced
+		}
+   	}
+		
+	pdxmesh = {
+		name = "M60A1_tank_mesh"
+		file = "gfx/models/units/tanks/M60A1.mesh"
+
+		animation = { id = "attack"			type = "M60_attack_animation" }
+		animation = { id = "idle"			type = "M60_idle_animation" }
+		animation = { id = "move"			type = "M60_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "BRG_LEO_tank_mesh"
+		file = "gfx/models/units/tanks/Leopard1.mesh"
+
+		animation = { id = "attack"			type = "LEO_attack_animation" }
+		animation = { id = "idle"			type = "LEO_idle_animation" }
+		animation = { id = "move"			type = "LEO_moving_animation" }
+
+		scale = 1.9
+	
+		meshsettings = {
+   		 name = "Cube.001"
+   		 index = 0
+   		 texture_diffuse = "Leopard1_BRG_diffuse.dds"
+		 texture_normal = "Leopard1_normal.dds"
+   		 texture_specular = "Leopard1_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+	}
+	pdxmesh = {
+		name = "KugelPanzer_mesh"
+		file = "gfx/models/units/tanks/KugelPanzer.mesh"
+
+		animation = { id = "attack"			type = "KugelPanzer_attack_animation" }
+		animation = { id = "idle"			type = "KugelPanzer_idle_animation" }
+		animation = { id = "move"			type = "KugelPanzer_moving_animation" }
+		
+		scale = 1.5
+		
+	}
+	pdxmesh = {
+		name = "T64_tank_mesh"
+		file = "gfx/models/units/tanks/T64.mesh"
+
+		animation = { id = "attack"			type = "T64_attack_animation" }
+		animation = { id = "idle"			type = "T64_idle_animation" }
+		animation = { id = "move"			type = "T64_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "T55_tank_mesh"
+		file = "gfx/models/units/tanks/T55.mesh"
+
+		animation = { id = "attack"			type = "T55_attack_animation" }
+		animation = { id = "idle"			type = "T55_idle_animation" }
+		animation = { id = "move"			type = "T55_moving_animation" }
+		
+		scale = 0.7
+		
+	}
+	pdxmesh = {
+		name = "ZSU572_SPAA_mesh"
+		file = "gfx/models/units/tanks/ZSU572.mesh"
+
+		animation = { id = "attack"			type = "ZSU572_attack_animation" }
+		animation = { id = "idle"			type = "ZSU572_idle_animation" }
+		animation = { id = "move"			type = "ZSU572_moving_animation" }
+		
+		scale = 0.7
+		
+	}
+	pdxmesh = {
+		name = "M8_IFV_mesh"
+		file = "gfx/models/units/tanks/M8.mesh"
+
+		animation = { id = "attack"			type = "M8_attack_animation" }
+		animation = { id = "idle"			type = "M8_idle_animation" }
+		animation = { id = "move"			type = "M8_moving_animation" }
+		
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "M8_BRA_IFV_mesh"
+		file = "gfx/models/units/tanks/M8.mesh"
+
+		animation = { id = "attack"			type = "M8_attack_animation" }
+		animation = { id = "idle"			type = "M8_idle_animation" }
+		animation = { id = "move"			type = "M8_moving_animation" }
+		
+		scale = 1.0
+
+		meshsettings = {
+   		 name = "Cube.003"
+   		 index = 0
+   		 texture_diffuse = "M8_BRA_diffuse.dds"
+		 texture_normal = "M8_normal.dds"
+   		 texture_specular = "M8_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 }
+		
+	}
+	pdxmesh = {
+		name = "M55_tank_mesh"
+		file = "gfx/models/units/tanks/FIATM55.mesh"
+
+		animation = { id = "attack"			type = "M55_attack_animation" }
+		animation = { id = "idle"			type = "M55_idle_animation" }
+		animation = { id = "move"			type = "M55_moving_animation" }
+		
+		scale = 0.4
+		
+	}
+	pdxmesh = {
+		name = "M55_ARG_tank_mesh"
+		file = "gfx/models/units/tanks/FIATM55.mesh"
+
+		animation = { id = "attack"			type = "M55_attack_animation" }
+		animation = { id = "idle"			type = "M55_idle_animation" }
+		animation = { id = "move"			type = "M55_moving_animation" }
+		
+		scale = 0.4
+
+		meshsettings = {
+   		 name = "Cylinder.005"
+   		 index = 0
+   		 texture_diffuse = "FIATM55_ARG_diffuse.dds"
+		 texture_normal = "FIATM55_normal.dds"
+   		 texture_specular = "FIATM55_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 }
+		
+	}
+	pdxmesh = {
+		name = "commando_IFV_mesh"
+		file = "gfx/models/units/tanks/commando.mesh"
+
+		animation = { id = "attack"			type = "commando_attack_animation" }
+		animation = { id = "idle"			type = "commando_idle_animation" }
+		animation = { id = "move"			type = "commando_moving_animation" }
+		
+		scale = 0.6
+	}
+	pdxmesh = {
+		name = "commando_OFN_IFV_mesh"
+		file = "gfx/models/units/tanks/commando.mesh"
+
+		animation = { id = "attack"			type = "commando_attack_animation" }
+		animation = { id = "idle"			type = "commando_idle_animation" }
+		animation = { id = "move"			type = "commando_moving_animation" }
+		
+		scale = 0.6
+
+		meshsettings = {
+   		 texture_diffuse = "commando_OFN_diffuse.dds"
+		 texture_normal = "commando_normal.dds"
+   		 texture_specular = "commando_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 }
+		
+	}
+	pdxmesh = {
+		name = "commandov150_IFV_mesh"
+		file = "gfx/models/units/tanks/commandov150.mesh"
+
+		animation = { id = "attack"			type = "commandov150_attack_animation" }
+		animation = { id = "idle"			type = "commandov150_idle_animation" }
+		animation = { id = "move"			type = "commandov150_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "Saladin_IFV_mesh"
+		file = "gfx/models/units/tanks/Saladin.mesh"
+
+		animation = { id = "attack"			type = "Saladin_attack_animation" }
+		animation = { id = "attack_coax"	type = "Saladin_attack_coax_animation" }
+		animation = { id = "idle"			type = "Saladin_idle_animation" }
+		animation = { id = "move"			type = "Saladin_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "Saladin_SCO_IFV_mesh"
+		file = "gfx/models/units/tanks/Saladin.mesh"
+
+		animation = { id = "attack"			type = "Saladin_attack_animation" }
+		animation = { id = "attack_coax"	type = "Saladin_attack_coax_animation" }
+		animation = { id = "idle"			type = "Saladin_idle_animation" }
+		animation = { id = "move"			type = "Saladin_moving_animation" }
+		
+		scale = 0.6
+
+		meshsettings = {
+   		 texture_diffuse = "Saladin_SCO_diffuse.dds"
+   	 	}
+		
+	}
+	pdxmesh = {
+		name = "Type34_tank_mesh"
+		file = "gfx/models/units/tanks/Type34.mesh"
+
+		animation = { id = "attack"			type = "Type34_attack_animation" }
+		animation = { id = "idle"			type = "Type34_idle_animation" }
+		animation = { id = "move"			type = "Type34_moving_animation" }
+		
+		scale = 0.8
+		
+	}
+	pdxmesh = {
+		name = "Centurion2_tank_mesh"
+		file = "gfx/models/units/tanks/Centurion2.mesh"
+
+		animation = { id = "attack"			type = "Centurion2_attack_animation" }
+		animation = { id = "idle"			type = "Centurion2_idle_animation" }
+		animation = { id = "move"			type = "Centurion2_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "Centurion2_SAF_tank_mesh"
+		file = "gfx/models/units/tanks/Centurion2.mesh"
+
+		animation = { id = "attack"			type = "Centurion2_attack_animation" }
+		animation = { id = "idle"			type = "Centurion2_idle_animation" }
+		animation = { id = "move"			type = "Centurion2_moving_animation" }
+		
+		scale = 0.6
+
+		meshsettings = {
+   		 name = "Cube.001"
+   		 index = 0
+   		 texture_diffuse = "Centurion2_SAF_diffuse.dds"
+		 texture_normal = "Centurion2_normal.dds"
+   		 texture_specular = "Centurion2_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+		
+	}
+	pdxmesh = {
+		name = "Centurion2_CAN_tank_mesh"
+		file = "gfx/models/units/tanks/Centurion2.mesh"
+
+		animation = { id = "attack"			type = "Centurion2_attack_animation" }
+		animation = { id = "idle"			type = "Centurion2_idle_animation" }
+		animation = { id = "move"			type = "Centurion2_moving_animation" }
+		
+		scale = 0.6
+
+		meshsettings = {
+   		 name = "Cube.001"
+   		 index = 0
+   		 texture_diffuse = "Centurion2_CAN_diffuse.dds"
+		 texture_normal = "Centurion2_normal.dds"
+   		 texture_specular = "Centurion2_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+		
+	}
+	pdxmesh = {
+		name = "Centurion2_SCO_tank_mesh"
+		file = "gfx/models/units/tanks/Centurion2.mesh"
+
+		animation = { id = "attack"			type = "Centurion2_attack_animation" }
+		animation = { id = "idle"			type = "Centurion2_idle_animation" }
+		animation = { id = "move"			type = "Centurion2_moving_animation" }
+		
+		scale = 0.6
+
+		meshsettings = {
+   		 name = "Cube.001"
+   		 index = 0
+   		 texture_diffuse = "Centurion2_SCO_diffuse.dds"
+		 texture_normal = "Centurion2_normal.dds"
+   		 texture_specular = "Centurion2_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+		
+	}
+	pdxmesh = {
+		name = "Olifant1A_tank_mesh"
+		file = "gfx/models/units/tanks/Olifant1A.mesh"
+
+		animation = { id = "attack"			type = "Centurion2_attack_animation" }
+		animation = { id = "idle"			type = "Centurion2_idle_animation" }
+		animation = { id = "move"			type = "Centurion2_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "Chieftain_tank_mesh"
+		file = "gfx/models/units/tanks/Chieftain.mesh"
+
+		animation = { id = "attack"			type = "Chieftain_attack_animation" }
+		animation = { id = "idle"			type = "Chieftain_idle_animation" }
+		animation = { id = "move"			type = "Chieftain_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "Chieftain_SCO_tank_mesh"
+		file = "gfx/models/units/tanks/Chieftain.mesh"
+
+		animation = { id = "attack"			type = "Chieftain_attack_animation" }
+		animation = { id = "idle"			type = "Chieftain_idle_animation" }
+		animation = { id = "move"			type = "Chieftain_moving_animation" }
+		
+		scale = 0.6
+		
+	meshsettings = {
+   		 name = "Cube.003"
+   		 index = 0
+   		 texture_diffuse = "Chieftain_SCO_diffuse.dds"
+   	 	}
+
+	}
+	pdxmesh = {
+		name = "Gepard_SPAA_mesh"
+		file = "gfx/models/units/tanks/Gepard.mesh"
+
+		animation = { id = "attack"			type = "Gepard_attack_animation" }
+		animation = { id = "idle"			type = "Gepard_idle_animation" }
+		animation = { id = "move"			type = "Gepard_moving_animation" }
+		
+		scale = 1.9
+		
+	}
+	pdxmesh = {
+		name = "Marder_IFV_mesh"
+		file = "gfx/models/units/tanks/Marder.mesh"
+		
+		animation = { id = "idle"			type = "Marder_idle_animation" }
+		animation = { id = "move"			type = "Marder_moving_animation" }
+		animation = { id = "attack"			type = "Marder_attack_animation" }
+
+		scale = 0.8
+	}
+	pdxmesh = {
+		name = "maus_mesh"
+		file = "gfx/models/units/tanks/Maus.mesh"
+
+		animation = { id = "attack"			type = "Maus_attack_animation" }
+		animation = { id = "attack_coax"	type = "Maus_attack_coax_animation" }
+		animation = { id = "idle"			type = "Maus_idle_animation" }
+		animation = { id = "move"			type = "Maus_moving_animation" }
+		scale = 1.00
+	}	
+	pdxmesh = {
+		name = "flakmaus_mesh"
+		file = "gfx/models/units/tanks/FlakMaus.mesh"
+
+		animation = { id = "attack"			type = "FlakMaus_attack_animation" }
+		animation = { id = "idle"			type = "Maus_idle_animation" }
+		animation = { id = "move"			type = "Maus_moving_animation" }
+		scale = 1.00
+	}	
+	pdxmesh = {
+		name = "SU152G_arty_mesh"
+		file = "gfx/models/units/tanks/SU152G.mesh"
+
+		animation = { id = "attack"			type = "SU152G_attack_animation" }
+		animation = { id = "idle"			type = "SU152G_idle_animation" }
+		animation = { id = "move"			type = "SU152G_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+	pdxmesh = {
+		name = "Shzatie_SPAA_mesh"
+		file = "gfx/models/units/tanks/Shzatie.mesh"
+
+		animation = { id = "attack"			type = "Shzatie_attack_animation" }
+		animation = { id = "idle"			type = "T64_idle_animation" }
+		animation = { id = "move"			type = "T64_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+
+	pdxmesh = {
+		name = "A13_tank_mesh"
+		file = "gfx/models/units/tanks/A13.mesh"
+
+		animation = { id = "attack"			type = "A13_attack_animation" }
+		animation = { id = "idle"			type = "A13_idle_animation" }
+		animation = { id = "move"			type = "A13_moving_animation" }
+		scale = 0.85
+	}
+	pdxmesh = {
+		name = "A13_SCO_tank_mesh"
+		file = "gfx/models/units/tanks/A13.mesh"
+
+		animation = { id = "attack"			type = "A13_attack_animation" }
+		animation = { id = "idle"			type = "A13_idle_animation" }
+		animation = { id = "move"			type = "A13_moving_animation" }
+		scale = 0.85
+
+		meshsettings = {
+   		 name = "Cube.001"
+   		 index = 0
+   		 texture_diffuse = "A13_SCO_diffuse.dds"
+		 texture_normal = "A13_normal.dds"
+   		 texture_specular = "A13_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+	}
+	pdxmesh = {
+		name = "A13_WAL_tank_mesh"
+		file = "gfx/models/units/tanks/A13.mesh"
+
+		animation = { id = "attack"			type = "A13_attack_animation" }
+		animation = { id = "idle"			type = "A13_idle_animation" }
+		animation = { id = "move"			type = "A13_moving_animation" }
+		scale = 0.85
+
+		meshsettings = {
+   		 name = "Cube.001"
+   		 index = 0
+   		 texture_diffuse = "A13_WAL_diffuse.dds"
+		 texture_normal = "A13_normal.dds"
+   		 texture_specular = "A13_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+	}
+	pdxmesh = {
+		name = "M3955_tank_mesh"
+		file = "gfx/models/units/tanks/M3955.mesh"
+
+		animation = { id = "attack"			type = "M3955_attack_animation" }
+		animation = { id = "idle"			type = "M3955_idle_animation" }
+		animation = { id = "move"			type = "M3955_moving_animation" }
+		
+		scale = 0.7
+		
+	}
+	pdxmesh = {
+		name = "M3955_ARG_tank_mesh"
+		file = "gfx/models/units/tanks/M3955.mesh"
+
+		animation = { id = "attack"			type = "M3955_attack_animation" }
+		animation = { id = "idle"			type = "M3955_idle_animation" }
+		animation = { id = "move"			type = "M3955_moving_animation" }
+		
+		scale = 0.7
+
+		meshsettings = {
+   		 name = "Cylinder"
+   		 index = 0
+   		 texture_diffuse = "M3955_ARG_diffuse.dds"
+		 texture_normal = "M3955_normal.dds"
+   		 texture_specular = "M3955_specular.dds"
+   		 shader = PdxMeshAdvanced
+   	 	}
+		meshsettings = {
+   		 name = "Cube.011"
+   		 index = 0
+   		 texture_diffuse = "M3955_ARG_diffuse.dds"
+		 texture_normal = "M3955_normal.dds"
+   		 texture_specular = "M3955_specular.dds"
+   		 shader = PdxMeshAdvancedAlpha
+   	 	}
+	}
+	pdxmesh = {
+		name = "M4061_tank_mesh"
+		file = "gfx/models/units/tanks/M4061.mesh"
+
+		animation = { id = "attack"			type = "M3955_attack_animation" }
+		animation = { id = "idle"			type = "M3955_idle_animation" }
+		animation = { id = "move"			type = "M3955_moving_animation" }
+		
+		scale = 0.7
+		
+	}
+	pdxmesh = {
+		name = "M1_tank_mesh"
+		file = "gfx/models/units/tanks/M1.mesh"
+
+		animation = { id = "attack"			type = "M1_attack_animation" }
+		animation = { id = "idle"			type = "M1_idle_animation" }
+		animation = { id = "move"			type = "M1_moving_animation" }
+		
+		scale = 0.6
+		
+	}
+
+	pdxmesh = {
+		name = "S35_tank_mesh"
+		file = "gfx/models/units/tanks/S35.mesh"
+
+		animation = { id = "attack"			type = "S35_attack_animation" }
+		animation = { id = "idle"			type = "S35_idle_animation" }
+		animation = { id = "move"			type = "S35_moving_animation" }
+		
+		scale = 0.5
+		
+	}
+
+	pdxmesh = {
+		name = "S51_tank_mesh"
+		file = "gfx/models/units/tanks/S51.mesh"
+
+		animation = { id = "attack"			type = "S35_attack_animation" }
+		animation = { id = "idle"			type = "S35_idle_animation" }
+		animation = { id = "move"			type = "S35_moving_animation" }
+		
+		scale = 0.5
+		
+	}
+
+	pdxmesh = {
+		name = "Liberte_tank_mesh"
+		file = "gfx/models/units/tanks/Liberte.mesh"
+
+		animation = { id = "attack"			type = "Liberte_attack_animation" }
+		animation = { id = "idle"			type = "Liberte_idle_animation" }
+		animation = { id = "move"			type = "Liberte_moving_animation" }
+		
+		scale = 1.2
+		
+	}
+}

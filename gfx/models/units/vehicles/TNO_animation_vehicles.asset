@@ -1,0 +1,104 @@
+animation = {
+	name = "BTR60_idle_animation"
+	file = "BTR60_idle.anim"
+}
+animation = {
+	name = "BTR60_move_animation"
+	file = "BTR60_moving.anim"
+}
+animation = {
+	name = "BTR152_idle_animation"
+	file = "BTR152_idle.anim"
+}
+animation = {
+	name = "BTR152_move_animation"
+	file = "BTR152_moving.anim"
+}
+animation = {
+	name = "Unimog_idle_animation"
+	file = "Unimog_idle.anim"
+}
+animation = {
+	name = "Unimog_move_animation"
+	file = "Unimog_moving.anim"
+}
+animation = {
+	name = "M113_idle_animation"
+	file = "M113_idle.anim"
+}
+animation = {
+	name = "M113_move_animation"
+	file = "M113_moving.anim"
+}
+animation = {
+	name = "M113_attack_animation"
+	file = "M113_attack.anim"
+}
+animation = {
+	name = "Saracen_idle_animation"
+	file = "Saracen_idle.anim"
+}
+animation = {
+	name = "Saracen_move_animation"
+	file = "Saracen_moving.anim"
+}
+animation = {
+	name = "Saracen_attack_animation"
+	file = "Saracen_attack.anim"
+}
+animation = {
+	name = "S55_idle_animation"
+	file = "S55_idle.anim"
+}
+animation = {
+	name = "S55_move_animation"
+	file = "S55_moving.anim"
+}
+animation = {
+	name = "SdKfz2345_idle_animation"
+	file = "SdKfz2345_idle.anim"
+}
+animation = {
+	name = "SdKfz2345_move_animation"
+	file = "SdKfz2345_moving.anim"
+}
+animation = {
+	name = "SdKfz2345_attack_animation"
+	file = "SdKfz2345_attack.anim"
+}
+animation = {
+	name = "Type20_idle_animation"
+	file = "Type20_idle.anim"
+}
+animation = {
+	name = "Type20_move_animation"
+	file = "Type20_moving.anim"
+}
+animation = {
+	name = "Type20_attack_animation"
+	file = "Type20_attack.anim"
+}
+animation = {
+	name = "M35_move_animation"
+	file = "M35_moving.anim"
+}
+animation = {
+	name = "M35_idle_animation"
+	file = "M35_idle.anim"
+}
+animation = {
+	name = "Type11Truck_move_animation"
+	file = "Type11Truck_moving.anim"
+}
+animation = {
+	name = "Type11Truck_idle_animation"
+	file = "Type11Truck_idle.anim"
+}
+animation = {
+	name = "AB62_move_animation"
+	file = "AB62_moving.anim"
+}
+animation = {
+	name = "AB62_idle_animation"
+	file = "AB62_idle.anim"
+}

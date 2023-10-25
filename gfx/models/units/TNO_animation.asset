@@ -1,0 +1,61 @@
+#### Weapons with pistol grips, Full Auto.
+animation = {
+	name = "TNO_infantry_ar_idle_animation"
+	file = "TNO_infantry_idle_ar.anim"
+}
+animation = {
+	name = "TNO_infantry_ar_attack_animation"
+	file = "TNO_infantry_attack_stand_ar.anim"
+}
+animation = {
+	name = "TNO_infantry_ar_support_attack_animation"
+	file = "TNO_infantry_attack_crouch_ar.anim"
+}
+animation = {
+	name = "TNO_infantry_ar_charge_shoot_animation"
+	file = "TNO_infantry_charge_ar_shoot.anim"
+}
+animation = {
+	name = "TNO_infantry_ar_charge_animation"
+	file = "TNO_infantry_charge_ar.anim"
+}
+
+#### Weapons with pistol grips, Semiautomatic.
+animation = {
+	name = "TNO_infantry_semi_attack_animation"
+	file = "TNO_infantry_attack_stand_semi.anim"
+}
+animation = {
+	name = "TNO_infantry_semi_support_attack_animation"
+	file = "TNO_infantry_attack_crouch_semi.anim"
+}
+animation = {
+	name = "TNO_infantry_semi_charge_shoot_animation"
+	file = "TNO_infantry_charge_semi_shoot.anim"
+}
+animation = {
+	name = "TNO_infantry_semi_charge_animation"
+	file = "TNO_infantry_charge_semi.anim"
+}
+
+#### Bullpup Rifles, Full Auto.
+animation = {
+	name = "TNO_infantry_bullpup_idle_animation"
+	file = "TNO_infantry_idle_bullpup.anim"
+}
+animation = {
+	name = "TNO_infantry_bullpup_attack_animation"
+	file = "TNO_infantry_attack_stand_bullpup.anim"
+}
+animation = {
+	name = "TNO_infantry_bullpup_support_attack_animation"
+	file = "TNO_infantry_attack_crouch_bullpup.anim"
+}
+animation = {
+	name = "TNO_infantry_bullpup_charge_shoot_animation"
+	file = "TNO_infantry_charge_bullpup_shoot.anim"
+}
+animation = {
+	name = "TNO_infantry_bullpup_charge_animation"
+	file = "TNO_infantry_charge_bullpup.anim"
+}

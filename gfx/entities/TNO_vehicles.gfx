@@ -1,0 +1,324 @@
+objectTypes = {
+pdxmesh = {
+		name = "BTR60_mesh"
+		file = "gfx/models/units/vehicles/BTR60.mesh"
+		
+		animation = { id = "idle"			type = "BTR60_idle_animation" }
+		animation = { id = "move"			type = "BTR60_move_animation" }
+	}
+}
+objectTypes = {
+pdxmesh = {
+		name = "BTR152_mesh"
+		file = "gfx/models/units/vehicles/BTR152.mesh"
+		
+		animation = { id = "idle"			type = "BTR152_idle_animation" }
+		animation = { id = "move"			type = "BTR152_move_animation" }
+	}
+}
+objectTypes = {
+pdxmesh = {
+		name = "Unimog_mesh"
+		file = "gfx/models/units/vehicles/Unimog.mesh"
+		
+		animation = { id = "idle"			type = "Unimog_idle_animation" }
+		animation = { id = "move"			type = "Unimog_move_animation" }
+	}
+}
+objectTypes = {
+pdxmesh = {
+		name = "Unimog_BRG_mesh"
+		file = "gfx/models/units/vehicles/Unimog.mesh"
+		
+		animation = { id = "idle"			type = "Unimog_idle_animation" }
+		animation = { id = "move"			type = "Unimog_move_animation" }
+
+		meshsettings = {
+			texture_diffuse = "Unimog_BRG_diffuse.dds"
+			texture_normal = "Unimog_normal.dds"
+			texture_specular = "Unimog_specular.dds"
+		}
+	}
+}
+objectTypes = {
+pdxmesh = {
+		name = "Type11Truck_mesh"
+		file = "gfx/models/units/vehicles/Type11Truck.mesh"
+		
+		animation = { id = "idle"			type = "Type11Truck_idle_animation" }
+		animation = { id = "move"			type = "Type11Truck_move_animation" }
+	}
+} 
+objectTypes = {
+pdxmesh = {
+		name = "M113_mesh"
+		file = "gfx/models/units/vehicles/M113.mesh"
+		
+		animation = { id = "idle"			type = "M113_idle_animation" }
+		animation = { id = "move"			type = "M113_move_animation" }
+		animation = { id = "attack"			type = "M113_attack_animation" }
+
+		scale = 0.8
+	}
+	pdxmesh = {
+		name = "M113_BRA_mesh"
+		file = "gfx/models/units/vehicles/M113.mesh"
+		
+		animation = { id = "idle"			type = "M113_idle_animation" }
+		animation = { id = "move"			type = "M113_move_animation" }
+		animation = { id = "attack"			type = "M113_attack_animation" }
+
+		scale = 0.8
+
+		meshsettings = {
+   		 name = "Cylinder.001"
+   		 index = 0
+   		 texture_diffuse = "M113_BRA_diffuse.dds"
+		 texture_normal = "M113_normal.dds"
+   		 texture_specular = "M113_specular.dds"
+   		 shader = PdxMeshAdvanced
+   		}
+	}
+	pdxmesh = {
+		name = "M113_OFN_mesh"
+		file = "gfx/models/units/vehicles/M113.mesh"
+		
+		animation = { id = "idle"			type = "M113_idle_animation" }
+		animation = { id = "move"			type = "M113_move_animation" }
+		animation = { id = "attack"			type = "M113_attack_animation" }
+
+		scale = 0.8
+
+		meshsettings = {
+   		 name = "Cylinder.001"
+   		 index = 0
+   		 texture_diffuse = "M113_OFN_diffuse.dds"
+		 texture_normal = "M113_normal.dds"
+   		 texture_specular = "M113_specular.dds"
+   		 shader = PdxMeshAdvanced
+   		}
+	}
+}
+objectTypes = {
+pdxmesh = {
+		name = "M113A1_mesh"
+		file = "gfx/models/units/vehicles/M113A1.mesh"
+		
+		animation = { id = "idle"			type = "M113_idle_animation" }
+		animation = { id = "move"			type = "M113_move_animation" }
+		animation = { id = "attack"			type = "M113_attack_animation" }
+
+		scale = 0.8
+	}
+}
+objectTypes = {
+	pdxmesh = {
+		name = "Saracen_mesh"
+		file = "gfx/models/units/vehicles/Saracen.mesh"
+		
+		animation = { id = "idle"			type = "Saracen_idle_animation" }
+		animation = { id = "move"			type = "Saracen_move_animation" }
+		animation = { id = "attack"			type = "Saracen_attack_animation" }
+
+		scale = 1.7
+	}
+	pdxmesh = {
+		name = "Saracen_SCO_mesh"
+		file = "gfx/models/units/vehicles/Saracen.mesh"
+		
+		animation = { id = "idle"			type = "Saracen_idle_animation" }
+		animation = { id = "move"			type = "Saracen_move_animation" }
+		animation = { id = "attack"			type = "Saracen_attack_animation" }
+
+		scale = 1.7
+
+		meshsettings = {
+   		 name = "Cube.008"
+   		 index = 0
+   		 texture_diffuse = "saracen_SCO_diffuse.dds"
+   		}
+	}
+}
+
+objectTypes = {
+pdxmesh = {
+		name = "S55_mesh"
+		file = "gfx/models/units/vehicles/S55.mesh"
+		
+		animation = { id = "idle"			type = "S55_idle_animation" }
+		animation = { id = "move"			type = "S55_move_animation" }
+
+		scale = 1.0
+	}
+pdxmesh = {
+		name = "S55_ARG_mesh"
+		file = "gfx/models/units/vehicles/S55.mesh"
+		
+		animation = { id = "idle"			type = "S55_idle_animation" }
+		animation = { id = "move"			type = "S55_move_animation" }
+
+		scale = 1.0
+
+		meshsettings = {
+			texture_diffuse = "S55_ARG_diffuse.dds"
+			texture_normal = "S55_normal.dds"
+			texture_specular = "S55_specular.dds"
+		}
+	}
+}
+objectTypes = {
+pdxmesh = {
+		name = "SdKfz2345_mesh"
+		file = "gfx/models/units/vehicles/SdKfz2345.mesh"
+		
+		animation = { id = "idle"			type = "SdKfz2345_idle_animation" }
+		animation = { id = "move"			type = "SdKfz2345_move_animation" }
+		animation = { id = "attack"			type = "SdKfz2345_attack_animation" }
+
+		scale = 1.0
+	}
+}
+objectTypes = {
+pdxmesh = {
+		name = "SdKfz2345_BRG_mesh"
+		file = "gfx/models/units/vehicles/SdKfz2345.mesh"
+		
+		animation = { id = "idle"			type = "SdKfz2345_idle_animation" }
+		animation = { id = "move"			type = "SdKfz2345_move_animation" }
+		animation = { id = "attack"			type = "SdKfz2345_attack_animation" }
+
+		scale = 1.0
+
+		meshsettings = {
+			texture_diffuse = "SdKfz2345_BRG_diffuse.dds"
+			texture_normal = "SdKfz2345_normal.dds"
+			texture_specular = "SdKfz2345_specular.dds"
+		}
+	}
+}
+objectTypes = {
+	pdxmesh = {
+		name = "Type20_mesh"
+		file = "gfx/models/units/vehicles/Type20.mesh"
+		
+		animation = { id = "idle"			type = "Type20_idle_animation" }
+		animation = { id = "move"			type = "Type20_move_animation" }
+		animation = { id = "attack"			type = "Type20_attack_animation" }
+
+		scale = 0.8
+	}
+	pdxmesh = {
+		name = "Type20_CHI_mesh"
+		file = "gfx/models/units/vehicles/Type20.mesh"
+		
+		animation = { id = "idle"			type = "Type20_idle_animation" }
+		animation = { id = "move"			type = "Type20_move_animation" }
+		animation = { id = "attack"			type = "Type20_attack_animation" }
+
+		scale = 0.8
+
+		meshsettings = {
+   		 name = "Cube.001"
+   		 index = 0
+   		 texture_diffuse = "Type20_CHI_diffuse.dds"
+		 texture_normal = "Type20_normal.dds"
+   		 texture_specular = "Type20_specular.dds"
+   		 shader = PdxMeshAdvanced
+   		}
+	}
+}
+objectTypes = {
+	pdxmesh = {
+		name = "M35_mesh"
+		file = "gfx/models/units/vehicles/M35.mesh"
+		
+		animation = { id = "idle"			type = "M35_idle_animation" }
+		animation = { id = "move"			type = "M35_move_animation" }
+	}
+
+	pdxmesh = {
+		name = "M35_SAF_mesh"
+		file = "gfx/models/units/vehicles/M35.mesh"
+		
+		animation = { id = "idle"			type = "M35_idle_animation" }
+		animation = { id = "move"			type = "M35_move_animation" }
+
+		meshsettings = {
+   		 texture_diffuse = "M35_SAF_diffuse.dds"
+		 texture_normal = "M35_normal.dds"
+   		 texture_specular = "M35_specular.dds"
+   		 shader = PdxMeshAdvanced
+   		}
+	}
+
+	pdxmesh = {
+		name = "M35_OFN_mesh"
+		file = "gfx/models/units/vehicles/M35.mesh"
+		
+		animation = { id = "idle"			type = "M35_idle_animation" }
+		animation = { id = "move"			type = "M35_move_animation" }
+
+		meshsettings = {
+   		 texture_diffuse = "M35_OFN_diffuse.dds"
+		 texture_normal = "M35_normal.dds"
+   		 texture_specular = "M35_specular.dds"
+   		 shader = PdxMeshAdvanced
+   		}
+	}
+}
+objectTypes = {
+	pdxmesh = {
+		name = "AB62_mesh"
+		file = "gfx/models/units/vehicles/AB62.mesh"
+		
+		animation = { id = "idle"			type = "AB62_idle_animation" }
+		animation = { id = "move"			type = "AB62_move_animation" }
+
+		scale = 1.2
+	}
+	pdxmesh = {
+		name = "AB62Treads_mesh"
+		file = "gfx/models/units/vehicles/AB62Treads.mesh"
+		
+		animation = { id = "idle"			type = "AB62_idle_animation" }
+		animation = { id = "move"			type = "AB62_move_animation" }
+
+		scale = 1.2
+	}
+	pdxmesh = {
+		name = "AB62Treads_ARG_mesh"
+		file = "gfx/models/units/vehicles/AB62Treads.mesh"
+		
+		animation = { id = "idle"			type = "AB62_idle_animation" }
+		animation = { id = "move"			type = "AB62_move_animation" }
+
+		scale = 1.2
+
+		meshsettings = {
+   		 name = "Cube"
+   		 index = 0
+   		 texture_diffuse = "AB62_ARG_diffuse.dds"
+		 texture_normal = "AB62_normal.dds"
+   		 texture_specular = "AB62_specular.dds"
+   		 shader = PdxMeshAdvanced
+   		}
+
+		meshsettings = {
+   		 name = "Cube.004"
+   		 index = 0
+   		 texture_diffuse = "AB62Treads_ARG_diffuse.dds"
+		 texture_normal = "AB62Treads_normal.dds"
+   		 texture_specular = "AB62Treads_specular.dds"
+   		 shader = PdxMeshAdvanced
+   		}
+
+		meshsettings = {
+   		 name = "Cylinder.004"
+   		 index = 0
+   		 texture_diffuse = "AB62Treads_ARG_diffuse.dds"
+		 texture_normal = "AB62Treads_normal.dds"
+   		 texture_specular = "AB62Treads_specular.dds"
+   		 shader = PdxMeshAdvanced
+   		}
+	}
+}

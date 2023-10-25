@@ -1,0 +1,376 @@
+animation = {
+	name = "LEO_attack_animation"
+	file = "LEO_attack.anim"
+}
+
+animation = {
+	name = "LEO_idle_animation"
+	file = "LEO_idle.anim"
+}
+
+animation = {
+	name = "LEO_moving_animation"
+	file = "LEO_moving.anim"
+}
+animation = {
+	name = "KugelPanzer_idle_animation"
+	file = "KugelPanzer_idle.anim"
+}
+animation = {
+	name = "KugelPanzer_moving_animation"
+	file = "KugelPanzer_moving.anim"
+}
+animation = {
+	name = "KugelPanzer_attack_animation"
+	file = "KugelPanzer_attack.anim"
+}
+animation = {
+	name = "T44_attack_animation"
+	file = "T44_attack.anim"
+}
+
+animation = {
+	name = "T44_idle_animation"
+	file = "T44_idle.anim"
+}
+
+animation = {
+	name = "T44_moving_animation"
+	file = "T44_moving.anim"
+}
+animation = {
+	name = "PT76_attack_animation"
+	file = "PT76_attack.anim"
+}
+
+animation = {
+	name = "PT76_idle_animation"
+	file = "PT76_idle.anim"
+}
+
+animation = {
+	name = "PT76_moving_animation"
+	file = "PT76_moving.anim"
+}
+animation = {
+	name = "T64_attack_animation"
+	file = "T64_attack.anim"
+}
+
+animation = {
+	name = "T64_idle_animation"
+	file = "T64_idle.anim"
+}
+
+animation = {
+	name = "T64_moving_animation"
+	file = "T64_moving.anim"
+}
+animation = {
+	name = "M60_attack_animation"
+	file = "M60_attack.anim"
+}
+
+animation = {
+	name = "M60_idle_animation"
+	file = "M60_idle.anim"
+}
+
+animation = {
+	name = "M60_moving_animation"
+	file = "M60_moving.anim"
+}
+
+animation = {
+	name = "M8_attack_animation"
+	file = "M8_attack.anim"
+}
+
+animation = {
+	name = "M8_idle_animation"
+	file = "M8_idle.anim"
+}
+
+animation = {
+	name = "M8_moving_animation"
+	file = "M8_moving.anim"
+}
+animation = {
+	name = "M55_attack_animation"
+	file = "M55_attack.anim"
+}
+
+animation = {
+	name = "M55_idle_animation"
+	file = "M55_idle.anim"
+}
+
+animation = {
+	name = "M55_moving_animation"
+	file = "M55_moving.anim"
+}
+animation = {
+	name = "commando_attack_animation"
+	file = "commando_attack.anim"
+}
+
+animation = {
+	name = "commando_idle_animation"
+	file = "commando_idle.anim"
+}
+
+animation = {
+	name = "commando_moving_animation"
+	file = "commando_moving.anim"
+}
+animation = {
+	name = "commandov150_attack_animation"
+	file = "commandov150_attack.anim"
+}
+
+animation = {
+	name = "commandov150_idle_animation"
+	file = "commandov150_idle.anim"
+}
+
+animation = {
+	name = "commandov150_moving_animation"
+	file = "commandov150_moving.anim"
+}
+animation = {
+	name = "Saladin_attack_animation"
+	file = "Saladin_attack.anim"
+}
+animation = {
+	name = "Saladin_attack_coax_animation"
+	file = "Saladin_attack_coax.anim"
+}
+
+animation = {
+	name = "Saladin_idle_animation"
+	file = "Saladin_idle.anim"
+}
+
+animation = {
+	name = "Saladin_moving_animation"
+	file = "Saladin_moving.anim"
+}
+animation = {
+	name = "Type34_attack_animation"
+	file = "Type34_attack.anim"
+}
+
+animation = {
+	name = "Type34_idle_animation"
+	file = "Type34_idle.anim"
+}
+
+animation = {
+	name = "Type34_moving_animation"
+	file = "Type34_moving.anim"
+}
+animation = {
+	name = "T55_attack_animation"
+	file = "T55_attack.anim"
+}
+
+animation = {
+	name = "T55_idle_animation"
+	file = "T55_idle.anim"
+}
+
+animation = {
+	name = "T55_moving_animation"
+	file = "T55_moving.anim"
+}
+animation = {
+	name = "Centurion2_attack_animation"
+	file = "Centurion2_attack.anim"
+}
+
+animation = {
+	name = "Centurion2_idle_animation"
+	file = "Centurion2_idle.anim"
+}
+
+animation = {
+	name = "Centurion2_moving_animation"
+	file = "Centurion2_moving.anim"
+}
+animation = {
+	name = "Chieftain_attack_animation"
+	file = "Chieftain_attack.anim"
+}
+
+animation = {
+	name = "Chieftain_idle_animation"
+	file = "Chieftain_idle.anim"
+}
+
+animation = {
+	name = "Chieftain_moving_animation"
+	file = "Chieftain_moving.anim"
+}
+animation = {
+	name = "Gepard_attack_animation"
+	file = "Gepard_attack.anim"
+}
+
+animation = {
+	name = "Gepard_idle_animation"
+	file = "Gepard_idle.anim"
+}
+
+animation = {
+	name = "Gepard_moving_animation"
+	file = "Gepard_moving.anim"
+}
+animation = {
+	name = "Marder_attack_animation"
+	file = "Marder_attack.anim"
+}
+animation = {
+	name = "Marder_attack_coax_animation"
+	file = "Marder_attack_coax.anim"
+}
+animation = {
+	name = "Marder_idle_animation"
+	file = "Marder_idle.anim"
+}
+
+animation = {
+	name = "Marder_moving_animation"
+	file = "Marder_moving.anim"
+}
+
+animation = {
+	name = "Maus_attack_animation"
+	file = "Maus_attack.anim"
+}
+animation = {
+	name = "Maus_attack_coax_animation"
+	file = "Maus_attack_coax.anim"
+}
+animation = {
+	name = "FlakMaus_attack_animation"
+	file = "FlakMaus_attack.anim"
+}
+animation = {
+	name = "Maus_idle_animation"
+	file = "Maus_idle.anim"
+}
+animation = {
+	name = "Maus_moving_animation"
+	file = "Maus_moving.anim"
+}
+animation = {
+	name = "BMP1_attack_animation"
+	file = "BMP1_attack.anim"
+}
+animation = {
+	name = "BMP1_idle_animation"
+	file = "BMP1_idle.anim"
+}
+animation = {
+	name = "BMP1_moving_animation"
+	file = "BMP1_moving.anim"
+}
+animation = {
+	name = "ZSU572_attack_animation"
+	file = "ZSU572_attack.anim"
+}
+
+animation = {
+	name = "ZSU572_idle_animation"
+	file = "ZSU572_idle.anim"
+}
+animation = {
+	name = "ZSU572_moving_animation"
+	file = "ZSU572_moving.anim"
+}
+animation = {
+	name = "SU152G_attack_animation"
+	file = "SU152G_attack.anim"
+}
+animation = {
+	name = "SU152G_idle_animation"
+	file = "SU152G_idle.anim"
+}
+animation = {
+	name = "SU152G_moving_animation"
+	file = "SU152G_moving.anim"
+}
+
+animation = {
+	name = "Shzatie_attack_animation"
+	file = "Shzatie_attack.anim"
+}
+
+animation = {
+	name = "A13_attack_animation"
+	file = "A13_attack.anim"
+}
+animation = {
+	name = "A13_idle_animation"
+	file = "A13_idle.anim"
+}
+animation = {
+	name = "A13_moving_animation"
+	file = "A13_moving.anim"
+}
+
+animation = {
+	name = "M3955_attack_animation"
+	file = "M3955_attack.anim"
+}
+animation = {
+	name = "M3955_idle_animation"
+	file = "M3955_idle.anim"
+}
+animation = {
+	name = "M3955_moving_animation"
+	file = "M3955_moving.anim"
+}
+
+animation = {
+	name = "M1_attack_animation"
+	file = "M1_attack.anim"
+}
+animation = {
+	name = "M1_idle_animation"
+	file = "M1_idle.anim"
+}
+animation = {
+	name = "M1_moving_animation"
+	file = "M1_moving.anim"
+}
+
+animation = {
+	name = "S35_attack_animation"
+	file = "S35_attack.anim"
+}
+
+animation = {
+	name = "S35_idle_animation"
+	file = "S35_idle.anim"
+}
+
+animation = {
+	name = "S35_moving_animation"
+	file = "S35_moving.anim"
+}
+
+animation = {
+	name = "Liberte_attack_animation"
+	file = "Liberte_attack.anim"
+}
+
+animation = {
+	name = "Liberte_idle_animation"
+	file = "Liberte_idle.anim"
+}
+
+animation = {
+	name = "Liberte_moving_animation"
+	file = "Liberte_moving.anim"
+}

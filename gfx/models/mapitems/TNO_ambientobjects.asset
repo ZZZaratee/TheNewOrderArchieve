@@ -1,0 +1,4 @@
+animation = {
+	name = "basin_idle_animation"
+	file = "basin_idle.anim"
+}
